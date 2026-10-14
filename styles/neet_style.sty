@@ -1,0 +1,151 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neet_style}[2026/10/14 NEET 2027 Study Materials Package]
+
+% --- Core Geometry & Layout ---
+\RequirePackage[top=2.0cm, bottom=2.0cm, left=1.8cm, right=1.8cm, headheight=16pt, headsep=12pt, footskip=14pt]{geometry}
+
+% --- Math & Symbols ---
+\RequirePackage{amsmath,amssymb,amsfonts,mathtools,bm}
+\RequirePackage{siunitx}
+\sisetup{detect-all, separate-uncert=true}
+
+% --- Tables & Arrays ---
+\RequirePackage{booktabs,tabularx,longtable,array,colortbl,multirow}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% --- Colors ---
+\RequirePackage[dvipsnames]{xcolor}
+\definecolor{primarydark}{RGB}{15, 34, 64}       % Deep Navy
+\definecolor{accentblue}{RGB}{28, 93, 153}      % Crisp Blue
+\definecolor{formulablue}{RGB}{23, 70, 162}     % Formula Box Frame
+\definecolor{formulabg}{RGB}{243, 247, 255}     % Formula Light Blue
+\definecolor{traprange}{RGB}{186, 24, 27}       % Alert Red / Trap Frame
+\definecolor{trapbg}{RGB}{255, 244, 244}        % Trap Light Pink
+\definecolor{usecasegreen}{RGB}{20, 108, 67}    % Use-case Green Frame
+\definecolor{usecasebg}{RGB}{240, 249, 244}     % Use-case Light Green
+\definecolor{ncertgold}{RGB}{180, 83, 9}        % NCERT Gold / Amber
+\definecolor{ncertbg}{RGB}{255, 251, 235}       % NCERT Amber Light
+\definecolor{darkcharcoal}{RGB}{33, 37, 41}
+\definecolor{subtleline}{RGB}{222, 226, 230}
+
+% --- Callout Boxes (tcolorbox) ---
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% Formula Box (Rigorous mathematical equations, limits, variables)
+\newtcolorbox{formulabox}[1][Master Formula \& Governing Equation]{
+  enhanced,
+  breakable,
+  colback=formulabg,
+  colframe=formulablue,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  separator style={draw=none}
+}
+
+% Use Case & Application Box (Assumptions, valid domains, edge cases, shortcuts)
+\newtcolorbox{usecasebox}[1][Application Regime, Boundary Conditions \& Shortcuts]{
+  enhanced,
+  breakable,
+  colback=usecasebg,
+  colframe=usecasegreen,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% Exam Trap & Pitfall Box (Sign mistakes, units, tricky exceptions, A/R traps)
+\newtcolorbox{trapbox}[1][NEET Trap / Common Pitfall / Tricky Exception]{
+  enhanced,
+  breakable,
+  colback=trapbg,
+  colframe=traprange,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% NCERT High-Yield Box (Direct lines, figures, tables, assertion-reason anchors)
+\newtcolorbox{ncertbox}[1][Direct NCERT Line / High-Yield Extraction]{
+  enhanced,
+  breakable,
+  colback=ncertbg,
+  colframe=ncertgold,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% Concept Definition Box
+\newtcolorbox{conceptbox}[1][Core Principle / Theoretical Postulate]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=primarydark,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% --- Headers & Footers ---
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textbf{\color{primarydark}\leftmark}}
+\chead{}
+\rhead{\small\textbf{\color{accentblue}Prepared by Satya Prakash}}
+\lfoot{\footnotesize\color{gray}NEET UG 2027 Master Material Series}
+\cfoot{\small\textbf{\thepage}}
+\rfoot{\footnotesize\color{primarydark}\textbf{Satya Prakash}}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Fix for headrule color
+\renewcommand{\headrule}{\hbox to\headwidth{\color{accentblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{subtleline}\leaders\hrule height \footrulewidth\hfill}}
+
+% --- Typography & Spacing ---
+\RequirePackage{microtype}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 2pt minus 1pt}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=2pt, parsep=0pt, topsep=2pt}
+\setlist[enumerate]{leftmargin=1.4em, itemsep=2pt, parsep=0pt, topsep=2pt}
+
+\titleformat{\section}
+  {\Large\bfseries\color{primarydark}}
+  {\thesection}{0.8em}{}
+  [{\color{accentblue}\titlerule[1.2pt]}]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{accentblue}}
+  {\thesubsection}{0.6em}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{primarydark}}
+  {\thesubsubsection}{0.5em}{}
+
+% --- Hyperref ---
+\RequirePackage[hidelinks,colorlinks=true,linkcolor=accentblue,urlcolor=accentblue,citecolor=accentblue]{hyperref}
+
+\endinput

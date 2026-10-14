@@ -1,0 +1,262 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% --- Document Header Banner ---
+\begin{center}
+  {\huge\bfseries\color{primarydark} NEET UG 2027: Physics Formula Compendium}\\[6pt]
+  {\Large\bfseries\color{accentblue} Module 01: Kinematics, Dynamics, Work-Energy \& Collisions}\\[8pt]
+  {\normalsize\textbf{Author:} Satya Prakash \quad\textbar\quad \textbf{Subject:} Physics (Units 2, 3 \& 4)}\\[4pt]
+  {\footnotesize\color{gray} Strict NCERT \& NMC Alignment \quad\textbar\quad Complete Mathematical Variations, Use-Cases \& Traps}
+\end{center}
+\vspace{-2pt}
+\hrule height 1.2pt
+\vspace{8pt}
+
+% =========================================================================
+% SECTION 1: KINEMATICS IN 1D & 2D
+% =========================================================================
+\section{Kinematics (Motion in a Straight Line \& Plane)}
+
+\subsection{Rectilinear Motion under Uniform Acceleration}
+
+\begin{formulabox}[Master Kinematic Equations (Constant Acceleration $a = \text{const}$)]
+\begin{align}
+  v &= u + at \\
+  s &= ut + \frac{1}{2}at^2 \\
+  v^2 &= u^2 + 2as \\
+  s_n &= u + \frac{a}{2}(2n - 1) \quad \text{(Displacement in the $n$-th second)} \\
+  s &= \left(\frac{u + v}{2}\right)t
+\end{align}
+\textbf{Parameter Specification:}
+\begin{itemize}
+  \item $u$: Initial velocity vector at $t=0$ $[\si{m.s^{-1}}]$
+  \item $v$: Instantaneous velocity vector at time $t$ $[\si{m.s^{-1}}]$
+  \item $a$: Constant acceleration vector $[\si{m.s^{-2}}]$
+  \item $s$: Net displacement vector from origin $[\si{m}]$
+  \item $s_n$: Displacement accumulated strictly between $t = (n-1)$ and $t = n$ $[\si{m}]$
+\end{itemize}
+\end{formulabox}
+
+\begin{usecasebox}[Applicability Conditions \& Shortcuts]
+\begin{itemize}
+  \item \textbf{Criterion of Validity:} Strictly applicable \textbf{only} when acceleration $a$ is constant in both magnitude and direction. If $a = f(t)$ or $a = f(x)$, kinematic equations fail; one must integrate:
+  \begin{equation*}
+    v = \int a\,dt, \quad s = \int v\,dt, \quad \int v\,dv = \int a\,dx
+  \end{equation*}
+  \item \textbf{Galileo's Law of Odd Numbers:} For a body starting from rest ($u=0$) under constant acceleration, the distances traversed in equal successive intervals of time $\Delta t$ follow the ratio:
+  \begin{equation*}
+    s_1 : s_2 : s_3 : \dots : s_n = 1 : 3 : 5 : \dots : (2n - 1)
+  \end{equation*}
+  \item \textbf{Stopping Distance \& Stopping Time:}
+  \begin{equation*}
+    d_{\text{stop}} = \frac{u^2}{2a} \implies d_{\text{stop}} \propto u^2, \qquad t_{\text{stop}} = \frac{u}{a} \implies t_{\text{stop}} \propto u
+  \end{equation*}
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Traps: Distance vs. Displacement \& Turning Points]
+\begin{itemize}
+  \item \textbf{Trap 1 (Distance vs Displacement):} The formula $s = ut + \frac{1}{2}at^2$ calculates \textbf{displacement}, NOT total distance traveled. If velocity changes sign ($v=0$ at some $t_{\text{turn}} < t_{\text{total}}$), distance must be calculated piecewise:
+  \begin{equation*}
+    \text{Distance} = |s(0 \to t_{\text{turn}})| + |s(t_{\text{turn}} \to t_{\text{total}})|
+  \end{equation*}
+  \item \textbf{Trap 2 ($n$-th Second Dimensionality):} In $s_n = u + \frac{a}{2}(2n-1)$, $u$ is multiplied by an implicit $(1\text{ s})$, preserving dimensional homogeneity ($[L] = [LT^{-1} \cdot T] = [L]$). Do not drop signs for $u$ and $a$.
+\end{itemize}
+\end{trapbox}
+
+\subsection{Projectile Motion in a Uniform Gravitational Field}
+
+\begin{formulabox}[Oblique Projectile Motion (Launch angle $\theta$ with horizontal)]
+\begin{align}
+  T &= \frac{2u\sin\theta}{g} = \frac{2u_y}{g} && \text{[Total Time of Flight]} \\
+  H_{\max} &= \frac{u^2\sin^2\theta}{2g} = \frac{u_y^2}{2g} && \text{[Maximum Height]} \\
+  R &= \frac{u^2\sin 2\theta}{g} = \frac{2u_x u_y}{g} && \text{[Horizontal Range]} \\
+  y &= x\tan\theta - \frac{g x^2}{2u^2\cos^2\theta} = x\tan\theta\left(1 - \frac{x}{R}\right) && \text{[Trajectory Equation]}
+\end{align}
+\end{formulabox}
+
+\begin{usecasebox}[High-Yield Variations & Relations]
+\begin{itemize}
+  \item \textbf{Relation Between $H_{\max}$ and $R$:}
+  \begin{equation*}
+    \frac{H_{\max}}{R} = \frac{\tan\theta}{4} \implies R\tan\theta = 4H_{\max}
+  \end{equation*}
+  When launch angle $\theta = 45^\circ$, $R_{\max} = 4H_{\max}$.
+  \item \textbf{Complementary Angles of Projection:} For identical launch speed $u$, angles $\theta$ and $(90^\circ - \theta)$ yield identical horizontal ranges ($R_1 = R_2$). The corresponding flight times $T_1, T_2$ and heights $H_1, H_2$ satisfy:
+  \begin{equation*}
+    R = \frac{1}{2}g T_1 T_2 = 4\sqrt{H_1 H_2}
+  \end{equation*}
+  \item \textbf{Velocity at Highest Point:} $v_{\text{top}} = u_x = u\cos\theta$ (purely horizontal, acceleration $g$ is perpendicular: $\mathbf{a} \perp \mathbf{v}$).
+  \item \textbf{Radius of Curvature:} At apex: $\rho_{\text{apex}} = \frac{u^2\cos^2\theta}{g}$; At launch: $\rho_{\text{launch}} = \frac{u^2}{g\cos\theta}$.
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[Common Projectile Traps]
+\begin{itemize}
+  \item \textbf{Kinetic Energy at Apex:} If initial KE is $K_0 = \frac{1}{2}mu^2$, KE at highest point is \textbf{not zero}; it is $K_{\text{apex}} = K_0 \cos^2\theta$. For $\theta=60^\circ$, $K_{\text{apex}} = \frac{1}{4}K_0$.
+  \item \textbf{Angle Given with Vertical:} If problem states "projected at angle $\alpha$ to the vertical", replace $\theta$ with $(90^\circ - \alpha)$. Always double check the reference axis!
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 2: LAWS OF MOTION & FRICTION
+% =========================================================================
+\section{Laws of Motion \& Friction}
+
+\subsection{Newton's Second Law, Momentum \& Impulse}
+
+\begin{formulabox}[Momentum, Force \& Impulse Formulations]
+\begin{align}
+  \mathbf{F}_{\text{net}} &= \frac{d\mathbf{p}}{dt} = m\frac{d\mathbf{v}}{dt} + \mathbf{v}_{\text{rel}}\frac{dm}{dt} \\
+  \mathbf{J} &= \int_{t_1}^{t_2} \mathbf{F}\,dt = \Delta\mathbf{p} = \mathbf{p}_2 - \mathbf{p}_1 \quad \text{[Impulse-Momentum Theorem]}
+\end{align}
+\textbf{Variable Mass System (Rocket Propulsion):}
+\begin{equation}
+  v = u + v_{\text{rel}}\ln\left(\frac{m_0}{m}\right) - gt, \qquad F_{\text{thrust}} = v_{\text{rel}}\left(-\frac{dm}{dt}\right)
+\end{equation}
+\end{formulabox}
+
+\subsection{Friction Mechanics}
+
+\begin{formulabox}[Static, Limiting \& Kinetic Friction Laws]
+\begin{align}
+  f_s &\le f_{s,\max} = \mu_s N && \text{[Static Friction: Self-Adjusting, $0 \le f_s \le \mu_s N$]} \\
+  f_k &= \mu_k N && \text{[Kinetic Friction: Constant for given surfaces, $\mu_k \le \mu_s$]} \\
+  \tan\lambda &= \mu_s && \text{[Angle of Friction $\lambda$]} \\
+  \theta_r &= \lambda = \tan^{-1}(\mu_s) && \text{[Angle of Repose $\theta_r$]}
+\end{align}
+\end{formulabox}
+
+\begin{usecasebox}[Motion on an Inclined Plane of Inclination $\theta$]
+\begin{itemize}
+  \item If $\theta \le \theta_r$: Block remains at rest on incline; static friction $f_s = mg\sin\theta$.
+  \item If $\theta > \theta_r$: Block accelerates downward:
+  \begin{equation*}
+    a_{\text{down}} = g(\sin\theta - \mu_k\cos\theta)
+  \end{equation*}
+  \item If projected upward along incline:
+  \begin{equation*}
+    a_{\text{up}} = g(\sin\theta + \mu_k\cos\theta) \implies a_{\text{up}} > a_{\text{down}} \implies t_{\text{up}} < t_{\text{down}}
+  \end{equation*}
+  \item \textbf{Ratio of Times ($n$-times longer down a rough plane vs smooth plane):}
+  \begin{equation*}
+    \mu = \tan\theta\left(1 - \frac{1}{n^2}\right)
+  \end{equation*}
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[Friction Calculation Traps]
+\begin{itemize}
+  \item \textbf{Normal Reaction Modification:} $N \ne mg$ in general! On incline: $N = mg\cos\theta$. When pulling at angle $\alpha$: $N = mg - F\sin\alpha$. When pushing at angle $\alpha$: $N = mg + F\sin\alpha$. (Hence pulling is always easier than pushing).
+  \item \textbf{Static Friction is NOT Always $\mu_s N$:} $\mu_s N$ is the \textbf{maximum limit} (impending motion). If applied force $F_{\text{applied}} < \mu_s N$, the friction force is exactly equal to $F_{\text{applied}}$, NOT $\mu_s N$.
+\end{itemize}
+\end{trapbox}
+
+\subsection{Circular Dynamics \& Highway Banking}
+
+\begin{formulabox}[Vehicle Dynamics on Circular Tracks]
+\begin{align}
+  v_{\max,\text{flat}} &= \sqrt{\mu_s g R} && \text{[Unbanked Flat Road]} \\
+  v_{\text{opt}} &= \sqrt{g R \tan\theta} && \text{[Banked Road, Zero Friction Needed]} \\
+  v_{\max,\text{banked}} &= \sqrt{g R \left(\frac{\mu_s + \tan\theta}{1 - \mu_s\tan\theta}\right)} && \text{[Banked Road with Friction, Upper Speed Limit]} \\
+  v_{\min,\text{banked}} &= \sqrt{g R \left(\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}\right)} && \text{[Banked Road with Friction, Lower Speed Limit]}
+\end{align}
+\end{formulabox}
+
+\newpage
+
+% =========================================================================
+% SECTION 3: WORK, ENERGY, POWER & COLLISIONS
+% =========================================================================
+\section{Work, Energy, Power \& Collisions}
+
+\subsection{Work-Energy Theorem \& Potential Energy}
+
+\begin{formulabox}[Fundamental Work & Potential Relations]
+\begin{align}
+  W_{\text{net}} &= \Delta K = K_f - K_i = \frac{1}{2}m v_f^2 - \frac{1}{2}m v_i^2 && \text{[Universal Work-Energy Theorem]} \\
+  W_{\text{cons}} &= -\Delta U = -(U_f - U_i) && \text{[Conservative Force Definition]} \\
+  \mathbf{F} &= -\boldsymbol{\nabla} U = -\left(\frac{\partial U}{\partial x}\hat{\mathbf{i}} + \frac{\partial U}{\partial y}\hat{\mathbf{j}} + \frac{\partial U}{\partial z}\hat{\mathbf{k}}\right) && \text{[Force-Potential Gradient Relation]}
+\end{align}
+\textbf{Spring Elastic Potential Energy:}
+\begin{equation}
+  U_{\text{spring}} = \frac{1}{2}k x^2, \qquad W_{\text{spring}} = -\frac{1}{2}k(x_f^2 - x_i^2)
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Equilibrium Criteria from Potential Function $U(x)$]
+\begin{itemize}
+  \item \textbf{Equilibrium Condition:} $\frac{dU}{dx} = 0$ (Force $F=0$).
+  \item \textbf{Stable Equilibrium:} $\frac{d^2 U}{dx^2} > 0$ (Potential energy is minimum; restoring force acts on perturbation; SHM possible).
+  \item \textbf{Unstable Equilibrium:} $\frac{d^2 U}{dx^2} < 0$ (Potential energy is maximum; destabilizing force acts on perturbation).
+  \item \textbf{Neutral Equilibrium:} $\frac{d^2 U}{dx^2} = 0$ (Potential energy is locally constant).
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Vertical Circular Motion (Mass $m$ on Inextensible String Length $L$)}
+
+\begin{formulabox}[Critical Velocity & Tension Conditions]
+\begin{align}
+  v_{\text{bottom},\min} &= \sqrt{5gL} && \text{[Condition to complete full circle]} \\
+  v_{\text{top},\min} &= \sqrt{gL} && \text{[Velocity at top for non-slack string ($T_{\text{top}} \ge 0$)]} \\
+  v_{\text{horizontal}} &= \sqrt{3gL} && \text{[Velocity when string is horizontal]} \\
+  T_{\text{bottom}} - T_{\text{top}} &= 6mg && \text{[Tension difference is independent of launch speed!]}
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[String vs Light Rigid Rod in Vertical Circle]
+\begin{itemize}
+  \item \textbf{String (can slack):} Minimum velocity at bottom to complete circle is $\sqrt{5gL}$; minimum velocity at apex is $\sqrt{gL}$.
+  \item \textbf{Light Rigid Rod (cannot slack):} Velocity at highest point can drop to \textbf{zero} ($v_{\text{top}} = 0$). Hence minimum velocity at bottom is:
+  \begin{equation*}
+    v_{\text{bottom},\min} = \sqrt{4gL} = 2\sqrt{gL}
+  \end{equation*}
+  Never confuse the string case with the rigid rod / sphere on track case!
+\end{itemize}
+\end{trapbox}
+
+\subsection{1D & 2D Collisions}
+
+\begin{formulabox}[Coefficient of Restitution & Collision Velocities]
+\begin{equation}
+  e = \frac{v_{\text{sep}}}{v_{\text{app}}} = \frac{v_2 - v_1}{u_1 - u_2} \quad (0 \le e \le 1)
+\end{equation}
+\textbf{1D Head-On Collision Velocities ($m_1$ moving with $u_1$, $m_2$ moving with $u_2$):}
+\begin{align}
+  v_1 &= \left(\frac{m_1 - e m_2}{m_1 + m_2}\right)u_1 + \frac{(1 + e)m_2}{m_1 + m_2}u_2 \\
+  v_2 &= \frac{(1 + e)m_1}{m_1 + m_2}u_1 + \left(\frac{m_2 - e m_1}{m_1 + m_2}\right)u_2
+\end{align}
+\textbf{Loss of Kinetic Energy in Inelastic Collision ($\Delta K$):}
+\begin{equation}
+  \Delta K_{\text{loss}} = \frac{1}{2}\left(\frac{m_1 m_2}{m_1 + m_2}\right)(u_1 - u_2)^2 (1 - e^2) = \frac{1}{2}\mu v_{\text{rel}}^2 (1 - e^2)
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Special Elastic Collision Limits ($e=1$)]
+\begin{itemize}
+  \item \textbf{Equal Masses ($m_1 = m_2$):} Velocities simply interchange after collision:
+  \begin{equation*}
+    v_1 = u_2, \qquad v_2 = u_1
+  \end{equation*}
+  \item \textbf{Heavy Target at Rest ($m_2 \gg m_1, u_2 = 0$):} $v_1 \approx -u_1$ (rebounds with same speed), $v_2 \approx 0$.
+  \item \textbf{Heavy Projectile against Light Target ($m_1 \gg m_2, u_2 = 0$):} $v_1 \approx u_1$, $v_2 \approx 2u_1$ (target launched at twice projectile speed).
+  \item \textbf{Rebound from Floor (Floor $m_2 \to \infty, u_2 = 0$):}
+  \begin{equation*}
+    v_n = e^n v_0, \qquad h_n = e^{2n} h_0, \qquad t_{\text{total}} = t_0\left(\frac{1 + e}{1 - e}\right), \qquad H_{\text{total}} = h_0\left(\frac{1 + e^2}{1 - e^2}\right)
+  \end{equation*}
+\end{itemize}
+\end{usecasebox}
+
+\vspace{15pt}
+\begin{center}
+  \rule{0.6\textwidth}{0.8pt}\\[6pt]
+  {\small\textbf{\color{primarydark}End of Module 01 Formula Handbook}}\\[2pt]
+  {\footnotesize\color{accentblue}Prepared by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
+\end{center}
+
+\end{document}

@@ -1,0 +1,24 @@
+# LaTeX Auxiliary Files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.lof
+*.lot
+*.dvi
+*.xdv
+
+# Editor / OS Files
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+*~

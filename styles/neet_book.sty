@@ -4,18 +4,19 @@
 \PassOptionsToPackage{dvipsnames}{xcolor}
 \RequirePackage[dvipsnames]{xcolor}
 
-% --- Core Geometry & Layout (Optimized for Comprehensive Print-on-Demand & Twoside Binding) ---
+% --- Core Geometry & Layout (Standard 6in x 9in Trade Textbook & Twoside Binding) ---
 \RequirePackage[
-  a4paper,
-  top=2.2cm,
-  bottom=2.2cm,
-  inner=2.4cm,
-  outer=2.0cm,
-  headheight=24pt,
-  headsep=14pt,
-  footskip=16pt,
+  paperwidth=6in,
+  paperheight=9in,
+  top=0.7in,
+  bottom=0.7in,
+  inner=0.75in,
+  outer=0.55in,
+  headheight=14pt,
+  headsep=12pt,
+  footskip=18pt,
   twoside,
-  bindingoffset=4mm
+  bindingoffset=0.15in
 ]{geometry}
 
 % --- Math & Physics Symbols ---
@@ -155,6 +156,7 @@
 
 % --- Headers & Footers (Two-Sided Academic Book Standard) ---
 \RequirePackage{fancyhdr}
+\RequirePackage[breakall]{truncate}
 \pagestyle{fancy}
 \fancyhf{}
 
@@ -167,15 +169,14 @@
 \fancyhead[RE]{\small\textbf{\color{primarydark}NEET UG 2027 Master Reference Series}}
 
 % Odd Pages (Right / Recto):
-% Left: Chapter / Section Mark. Right: Page number
-\fancyhead[LO]{\small\textbf{\color{accentblue}\nouppercase{\leftmark}}}
+% Left: Chapter / Section Mark (Truncated for 6x9 margins). Right: Page number
+\fancyhead[LO]{\small\textbf{\color{accentblue}\truncate{0.70\headwidth}{\nouppercase{\leftmark}}}}
 \fancyhead[RO]{\small\textbf{\color{primarydark}\thepage}}
 
-% Footers:
-\fancyfoot[LE]{\footnotesize\color{gray}Authored by Satya Prakash $\cdot$ \href{mailto:spdedsec@hotmail.com}{spdedsec@hotmail.com}}
-\fancyfoot[RO]{\footnotesize\color{gray}Master Reference Edition $\cdot$ Strictly NMC Calibrated}
+\fancyfoot[LE]{\scriptsize\color{gray}Authored by Satya Prakash $\cdot$ \href{mailto:spdedsec@hotmail.com}{spdedsec@hotmail.com}}
+\fancyfoot[RO]{\scriptsize\color{gray}Master Reference Series $\cdot$ Strictly NMC Calibrated}
 
-\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \renewcommand{\headrule}{\hbox to\headwidth{\color{accentblue}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\footrule}{\hbox to\headwidth{\color{subtleline}\leaders\hrule height \footrulewidth\hfill}}

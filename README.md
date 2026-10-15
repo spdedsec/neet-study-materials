@@ -21,17 +21,17 @@ The repository features three comprehensive, unabridged master textbook volumes 
 
 ### Master Book Series Overview
 
-| Volume Title | Scope & Curriculum Architecture | LaTeX Manuscript | Compiled PDF | Verified Metrics |
-| :--- | :--- | :--- | :--- | :---: |
-| **Volume 1: NEET UG Physics Master Book** | Parts I–VI + Appendix: Mechanics, Rotational Dynamics, Gravitation, Fluids, Heat, Thermodynamics, Waves, Electrodynamics, Optics, Modern Physics, all 18 NMC Lab Practicals & High-Yield Formulas | [`books/physics_master_book.tex`](books/physics_master_book.tex) | [`books/physics_master_book.pdf`](books/physics_master_book.pdf) | **147 Pages** (851 KB) |
-| **Volume 2: NEET UG Chemistry Master Book** | Parts I–VI + Appendix: Physical Chemistry Foundations, Advanced Solutions/Electro/Kinetics, Inorganic Bonding/CFT, Organic Theory, Reaction Mechanisms Handbook, Qualitative Lab Manual & Formulas | [`books/chemistry_master_book.tex`](books/chemistry_master_book.tex) | [`books/chemistry_master_book.pdf`](books/chemistry_master_book.pdf) | **171 Pages** (997 KB) |
-| **Volume 3: NEET UG Biology Master Book** | Parts I–VII + Appendix: Cell Biology, Structural Diversity, 7 NMC Plant Families, Comparative Anatomy (Frog/Cockroach), Plant & Human Physiology, Reproduction, Genetics, Ecology & Quantitative Diagnostics | [`books/biology_master_book.tex`](books/biology_master_book.tex) | [`books/biology_master_book.pdf`](books/biology_master_book.pdf) | **103 Pages** (510 KB) |
+| Volume Title | Scope & Curriculum Architecture | ISBN-13 | LaTeX Manuscript | Compiled PDF | Verified Metrics (6" $\times$ 9") |
+| :--- | :--- | :---: | :--- | :--- | :---: |
+| **Volume 1: NEET UG Physics Master Book** | Parts I–VI + Appendix: Mechanics, Rotational Dynamics, Gravitation, Fluids, Heat, Thermodynamics, Waves, Electrodynamics, Optics, Modern Physics, all 18 NMC Lab Practicals & High-Yield Formulas | `979-8-1626-5967-9` | [`books/physics_master_book.tex`](books/physics_master_book.tex) | [`books/physics_master_book.pdf`](books/physics_master_book.pdf) | **215 Pages** (918 KB) |
+| **Volume 2: NEET UG Chemistry Master Book** | Parts I–VI + Appendix: Physical Chemistry Foundations, Advanced Solutions/Electro/Kinetics, Inorganic Bonding/CFT, Organic Theory, Reaction Mechanisms Handbook, Qualitative Lab Manual & Formulas | `979-8-1626-6110-8` | [`books/chemistry_master_book.tex`](books/chemistry_master_book.tex) | [`books/chemistry_master_book.pdf`](books/chemistry_master_book.pdf) | **249 Pages** (1.04 MB) |
+| **Volume 3: NEET UG Biology Master Book** | Parts I–VII + Appendix: Cell Biology, Structural Diversity, 7 NMC Plant Families, Comparative Anatomy (Frog/Cockroach), Plant & Human Physiology, Reproduction, Genetics, Ecology & Quantitative Diagnostics | *Pending Assignment* | [`books/biology_master_book.tex`](books/biology_master_book.tex) | [`books/biology_master_book.pdf`](books/biology_master_book.pdf) | **135 Pages** (551 KB) |
 
 ---
 
 ### Detailed Volume Architectural Specifications
 
-#### Volume 1: NEET UG Physics Master Book (147 Pages)
+#### Volume 1: NEET UG Physics Master Book (215 Pages)
 - **LaTeX Source:** [`books/physics_master_book.tex`](books/physics_master_book.tex) | **Compiled PDF:** [`books/physics_master_book.pdf`](books/physics_master_book.pdf)
 - **Curriculum Architecture (Parts I–VI + Appendix):**
   - **Part I: Classical Mechanics & Dynamics:** Kinematics ($1\text{D}/2\text{D}$ calculus, projectile trajectories, relative velocity), Newton's Laws with constrained pulley dynamics, static and kinetic friction, circular motion banking, Work-Energy Theorem, variable mass rocket systems, and 1D/2D oblique collisions.
@@ -43,7 +43,7 @@ The repository features three comprehensive, unabridged master textbook volumes 
   - **Appendix: High-Yield Physics Formula & Equation Compendium:** Comprehensive formula matrices and dimension tables covering mechanics, thermal physics, electromagnetism, optics, and modern physics.
 - **Syllabus Exclusions:** 100% strictly aligned with the revised NMC syllabus; zero deleted topics presented as active curriculum.
 
-#### Volume 2: NEET UG Chemistry Master Book (171 Pages)
+#### Volume 2: NEET UG Chemistry Master Book (249 Pages)
 - **LaTeX Source:** [`books/chemistry_master_book.tex`](books/chemistry_master_book.tex) | **Compiled PDF:** [`books/chemistry_master_book.pdf`](books/chemistry_master_book.pdf)
 - **Curriculum Architecture (Parts I–VI + Appendix):**
   - **Part I: Physical Chemistry Foundations:** Mole concept, stoichiometric balancing, atomic structure and quantum mechanics (de Broglie hypothesis, Heisenberg uncertainty principle, radial wavefunctions, quantum numbers), Chemical Thermodynamics derivations (First and Second Laws, Hess's law, Gibbs free energy $\Delta G = \Delta H - T\Delta S$), and Chemical & Ionic Equilibrium (Le Chatelier's principle, Henderson-Hasselbalch buffer calculations, salt hydrolysis, and solubility product $K_{sp}$).
@@ -55,7 +55,7 @@ The repository features three comprehensive, unabridged master textbook volumes 
   - **Appendix: Comprehensive Chemistry Formula, Named Reaction & Reagent Matrices:** Complete reference matrices for thermodynamics, kinetics, electrochemistry, named organic transformations, and synthetic reagent profiles.
 - **Syllabus Exclusions:** 100% strictly aligned with the revised NMC syllabus; zero deleted topics (Solid state, States of matter, Hydrogen, s-block, Metallurgy, Surface chemistry, Polymers, and Chemistry in everyday life strictly excluded).
 
-#### Volume 3: NEET UG Biology Master Book (103 Pages)
+#### Volume 3: NEET UG Biology Master Book (135 Pages)
 - **LaTeX Source:** [`books/biology_master_book.tex`](books/biology_master_book.tex) | **Compiled PDF:** [`books/biology_master_book.pdf`](books/biology_master_book.pdf)
 - **Curriculum Architecture (Parts I–VII + Appendix):**
   - **Part I: Cell Biology, Biomolecules & Cell Division:** Cell theory, prokaryotic vs eukaryotic ultrastructure, endomembrane system, enzyme kinetics (Michaelis-Menten kinetics, $K_m$, competitive and non-competitive enzyme inhibition), Cell cycle phases ($G_1, S, G_2, M$), mitotic stages, and meiotic recombination (pachytene crossing over, synaptonemal complex).
@@ -74,31 +74,32 @@ The repository features three comprehensive, unabridged master textbook volumes 
 
 The master book series is built on a custom, professional book publishing framework defined in [`styles/neet_book.sty`](styles/neet_book.sty) (architectural specification: `styles/neet_book_style.sty`). Designed specifically for professional two-sided print-on-demand requirements, this system enforces publication-grade academic standards across all three volumes:
 
-1. **Two-Sided Academic Book Layout & Geometry:**
+1. **Two-Sided Academic Book Layout & Standard 6" $\times$ 9" Trade Geometry:**
    - Document class: `\documentclass[10pt,twoside,openright]{book}`.
    - Geometry parameters via `geometry`:
      ```latex
      \RequirePackage[
-       a4paper,
-       top=2.2cm,
-       bottom=2.2cm,
-       inner=2.4cm,
-       outer=2.0cm,
-       headheight=24pt,
-       headsep=14pt,
-       footskip=16pt,
+       paperwidth=6in,
+       paperheight=9in,
+       top=0.7in,
+       bottom=0.7in,
+       inner=0.75in,
+       outer=0.55in,
+       headheight=14pt,
+       headsep=12pt,
+       footskip=18pt,
        twoside,
-       bindingoffset=4mm
+       bindingoffset=0.15in
      ]{geometry}
      ```
-   - Total inner gutter of 2.8 cm ensures comfortable readability when bound in paperback or hardcover without spine-pinch or equation clipping.
+   - Standard 6" $\times$ 9" Trade Paperback format with a 0.90 in (inner + binding offset) spine allowance ensures optimal readability when bound in paperback or hardcover without spine-pinch or equation clipping.
    - Even (verso) and odd (recto) pages mirror margins and headers correctly, adhering to trade and academic publishing guidelines.
 
 2. **Standard Academic Publishing Front Matter:**
    Each master book incorporates a complete, standard publishing front matter sequence structured with `\frontmatter`:
    - **Half-Title Page:** Clean, minimalist presentation of the book title and master reference series designation.
    - **Full Title Page:** Complete title, subtitle (*"Complete Master Theory, Formulas & Experimental Compendium strictly aligned with NEET UG 2027 NMC Syllabus"*), author declaration (*Authored by Satya Prakash*), syllabus calibration statement, and examination target.
-   - **Professional Copyright Page:** Copyright declaration (All Rights Reserved © 2026–2027 Satya Prakash), author contact and editorial feedback email (`spdedsec@hotmail.com`), repository errata link, First Edition October 2026 notice, publishing imprint details, ISBN-13 placeholders for Paperback and Hardcover editions, printing location notices, and an exhaustive medical entrance examination academic and legal disclaimer.
+   - **Professional Copyright Page:** Copyright declaration (All Rights Reserved © 2026–2027 Satya Prakash), author contact and editorial feedback email (`spdedsec@hotmail.com`), repository errata link, First Edition October 2026 notice, publishing imprint details, official ISBN-13 registrations (Physics: `979-8-1626-5967-9`, Chemistry: `979-8-1626-6110-8`, Biology: pending assignment), printing location notices, and an exhaustive medical entrance examination academic and legal disclaimer.
    - **Dedication Page:** Dignified, personal tribute to parents, mentors, and aspirants preparing in the quiet hours of the night.
    - **Acknowledgements:** Sincere recognition of family, physics/chemistry/biology educators, student peer study circles, and the open-source $\mathrm{\LaTeX}$ and Tectonic engineering communities.
    - **Author's Preface:** Scholarly, pedagogical orientation to the NEET UG rationalized curriculum, analytical first-principles thinking, learning psychology, active recall, and error log analysis (strictly free of promotional filler, AI buzzwords, or ungrounded claims).

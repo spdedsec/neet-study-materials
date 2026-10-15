@@ -97,7 +97,7 @@ def check_pdfinfo(pdf_path):
 
 
 def extract_pages(pdf_path):
-    out = subprocess.check_output(["pdftotext", str(pdf_path), "-"]).decode("utf-8", errors="replace")
+    out = subprocess.check_output(["pdftotext", "-layout", str(pdf_path), "-"]).decode("utf-8", errors="replace")
     pages = out.split("\x0c")
     if pages and pages[-1] == "":
         pages = pages[:-1]

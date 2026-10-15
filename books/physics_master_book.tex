@@ -55,8 +55,8 @@
 \textbf{First Edition:} October 2026\\
 \textbf{Publishing Imprint:} Independent Academic Publishing / Satya Prakash Editorial Imprint\\
 \textbf{Target Cycle:} NEET UG 2027 (Undergraduate Medical Admissions Entrance Examination)\\
-\textbf{ISBN-13 (Paperback):} 979-8-XXXXXXXXX (Placeholder for Official Assigned ISBN)\\
-\textbf{ISBN-13 (Hardcover):} 979-8-XXXXXXXXX (Placeholder for Official Assigned ISBN)\\[10pt]
+\textbf{ISBN-13 (Paperback):} 979-8-1626-5967-9\\
+\textbf{ISBN-13 (Hardcover):} 979-8-1626-5967-9 (Reference Library Edition)\\[10pt]
 
 \textbf{All Rights Reserved.} No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means---electronic, mechanical, photocopying, recording, scanning, or otherwise---without the prior written permission of the author, except for brief quotations embodied in critical reviews or scholarly analysis as permitted under copyright law.\\[8pt]
 
@@ -159,11 +159,12 @@ The National Eligibility cum Entrance Test (NEET UG 2027) follows the curriculum
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\textwidth}{l c c c Y}
 \toprule
-\textbf{Component} & \textbf{Compulsory Questions} & \textbf{Marks} & \textbf{Pace Budget} & \textbf{Question Typology} \\
+\textbf{Component} & \textbf{Compulsory Qs} & \textbf{Marks} & \textbf{Pace Budget} & \textbf{Question Typology} \\
 \midrule
 \textbf{Physics} & 45 (All Compulsory) & 180 & 45--50 min & Single Choice MCQs, Numerical Calculations, \\
 \textbf{Exam Total} & 180 Compulsory & 720 & 180 min (3h) & Assertion-Reason, Statement I/II, Matrix Match \\
@@ -216,20 +217,21 @@ Candidates must note that legacy textbooks and coaching modules contain several 
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\textwidth}{L c c}
 \toprule
-\textbf{Physics Domain} & \textbf{Typical Questions} & \textbf{Marks Weightage} \\
+\textbf{Physics Domain} & \textbf{Typical Qs} & \textbf{Marks Weightage} \\
 \midrule
-Classical Mechanics (Kinematics, Dynamics, Work-Energy, Rotation, Gravitation, Fluids) & 16--18 & 64--72 Marks \\
+Classical Mechanics (Kinematics, Dynamics, Energy, Rotation, Gravity, Fluids) & 16--18 & 64--72 Marks \\
 Thermal Physics, Thermodynamics, Kinetic Theory \& Oscillations & 6--8 & 24--32 Marks \\
 Electrodynamics, Magnetism, EMI \& AC Circuits & 11--13 & 44--52 Marks \\
 Optics (Ray \& Wave Optics) & 4--5 & 16--20 Marks \\
 Modern Physics \& Semiconductors (Dual Nature, Atoms, Nuclei, Diodes/Gates) & 6--8 & 24--32 Marks \\
 Experimental Skills (Unit 20 Laboratory Practicals) & 2--3 & 8--12 Marks \\
 \midrule
-\textbf{Total Physics Paper} & \textbf{45 Questions (All Compulsory)} & \textbf{180 Marks} \\
+\textbf{Total Physics Paper} & \textbf{45 Qs (Compulsory)} & \textbf{180 Marks} \\
 \bottomrule
 \end{tabularx}
 \caption{Empirical Question Distribution in Recent NEET UG Papers.}
@@ -3032,7 +3034,10 @@ Energy flux vector: $\mathbf{S = \frac{1}{\mu_0}(\mathbf{E} \times \mathbf{B})}$
   \item $X_C = \frac{1}{\omega C} = \frac{1}{100 \times 100 \times 10^{-6}} = \frac{1}{10^{-2}} = \mathbf{100\,\Omega}$.
   \item Total impedance $Z$:
   \begin{equation}
-    Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{10^2 + (10 - 100)^2} = \sqrt{100 + (-90)^2} = \sqrt{100 + 8100} = \sqrt{8200} \approx \mathbf{90.55\,\Omega}
+  \begin{aligned}
+    Z &= \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{10^2 + (10 - 100)^2} \\
+      &= \sqrt{100 + 8100} = \sqrt{8200} \approx \mathbf{90.55\,\Omega}
+  \end{aligned}
   \end{equation}
   Circuit is strongly capacitive ($X_C > X_L$), current leads voltage.
   \item Peak current: $I_0 = \frac{V_0}{Z} = \frac{200}{90.55} \approx \mathbf{2.21\,\mathrm{A}}$.
@@ -5391,9 +5396,9 @@ Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790
 \begin{align}
   n_e n_h &= n_i^2 && [\text{Law of Mass Action}] \\
   n_e &= n_h = n_i && [\text{Intrinsic Semiconductor}] \\
-  n_e &\approx N_d \gg n_h && [\text{n-Type: Pentavalent Donor Doping (P, As)}] \\
-  n_h &\approx N_a \gg n_e && [\text{p-Type: Trivalent Acceptor Doping (B, Al)}] \\
-  \sigma &= e(n_e \mu_e + n_h \mu_h), \qquad I = e A E(n_e \mu_e + n_h \mu_h)
+  n_e &\approx N_d \gg n_h && [\text{n-Type: Pentavalent Doping}] \\
+  n_h &\approx N_a \gg n_e && [\text{p-Type: Trivalent Doping}] \\
+  \sigma &= e(n_e \mu_e + n_h \mu_h), && I = e A E(n_e \mu_e + n_h \mu_h)
 \end{align}
 \end{formulabox}
 
@@ -5401,9 +5406,9 @@ Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790
 
 \begin{formulabox}[Diode Dynamic Resistance \& Rectifier Efficiencies]
 \begin{align}
-  r_d &= \frac{\Delta V}{\Delta I} && [\text{Dynamic Resistance: } r_f \sim 10-100\,\Omega,\ r_r > 1\,\mathrm{M}\Omega] \\
-  \eta_{\text{half-wave}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.406 R_L}{r_f + R_L} \implies \eta_{\max} = 40.6\%, \qquad \nu_{\text{ripple}} = \nu_{\text{input}} \\
-  \eta_{\text{full-wave}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.812 R_L}{r_f + R_L} \implies \eta_{\max} = 81.2\%, \qquad \nu_{\text{ripple}} = 2\nu_{\text{input}}
+  r_d &= \frac{\Delta V}{\Delta I} && [\text{Dynamic: } r_f \sim 10\text{--}100\,\Omega,\ r_r > 1\,\mathrm{M}\Omega] \\
+  \eta_{\text{HW}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.406 R_L}{r_f + R_L} \implies \eta_{\max} = 40.6\%, \quad \nu_{\text{rip}} = \nu_{\text{in}} \\
+  \eta_{\text{FW}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.812 R_L}{r_f + R_L} \implies \eta_{\max} = 81.2\%, \quad \nu_{\text{rip}} = 2\nu_{\text{in}}
 \end{align}
 \end{formulabox}
 

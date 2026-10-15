@@ -1,0 +1,284 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% --- Document Header Banner ---
+\begin{center}
+  {\huge\bfseries\color{primarydark} NEET UG 2027: Physics Formula Compendium}\\[6pt]
+  {\Large\bfseries\color{accentblue} Module 03: Electrodynamics, Magnetism, EMI, AC \& EM Waves}\\[8pt]
+  {\normalsize\textbf{Prepared, Compiled \& Authored by Satya Prakash} \quad\textbar\quad \textbf{Subject:} Physics (Units 11, 12, 13, 14 \& 15)}\\[4pt]
+  {\footnotesize\color{gray} Strict NCERT \& NMC Alignment \quad\textbar\quad Complete Mathematical Variations, Use-Cases \& Traps}
+\end{center}
+\vspace{-2pt}
+\hrule height 1.2pt
+\vspace{8pt}
+
+% =========================================================================
+% SECTION 1: ELECTROSTATICS \& CAPACITORS
+% =========================================================================
+\section{Electrostatics \& Capacitance (Unit 11)}
+
+\subsection{Coulomb's Law, Electric Field \& Dipoles}
+
+\begin{formulabox}[Coulomb's Law, Medium Effect \& Dipole Dynamics]
+\begin{align}
+  \mathbf{F}_{12} &= \frac{1}{4\pi\varepsilon_0}\frac{q_1 q_2}{r^2}\hat{\mathbf{r}}_{12}, \qquad F_{\text{medium}} = \frac{F_{\text{vacuum}}}{\kappa} = \frac{F_0}{\varepsilon_r} && \left[\frac{1}{4\pi\varepsilon_0} = 8.988\times 10^9\,\si{N.m^2.C^{-2}}\right] \\
+  \mathbf{p} &= q(2\mathbf{a}), \qquad \boldsymbol{\tau} = \mathbf{p}\times\mathbf{E}, \qquad U = -\mathbf{p}\cdot\mathbf{E} && [\mathbf{p} \text{ directed from } -q \text{ to } +q] \\
+  E_{\text{axial}} &= \frac{1}{4\pi\varepsilon_0}\frac{2pr}{(r^2-a^2)^2} \approx \frac{2kp}{r^3} && [r \gg a; \text{ direction parallel to } \mathbf{p}] \\
+  E_{\text{equatorial}} &= \frac{1}{4\pi\varepsilon_0}\frac{p}{(r^2+a^2)^{3/2}} \approx \frac{kp}{r^3} && [r \gg a; \text{ direction antiparallel to } \mathbf{p}] \\
+  E(r,\theta) &= \frac{kp}{r^3}\sqrt{1 + 3\cos^2\theta}, \qquad \tan\alpha = \frac{1}{2}\tan\theta && [\theta = \text{angle with dipole axis}]
+\end{align}
+\textbf{Work Done in Rotating an Electric Dipole from $\theta_1$ to $\theta_2$:}
+\begin{equation}
+  W = U_f - U_i = pE(\cos\theta_1 - \cos\theta_2) \implies W_{0 \to 180^\circ} = 2pE \quad \text{[Max work; unstable equilibrium]}
+\end{equation}
+\end{formulabox}
+
+\subsection{Gauss's Law \& Symmetrical Charge Distributions}
+
+\begin{formulabox}[Gauss's Theorem \& Canonical Field Formulations]
+\begin{equation}
+  \Phi_E = \oint \mathbf{E}\cdot d\mathbf{A} = \frac{q_{\text{enclosed}}}{\varepsilon_0}
+\end{equation}
+\textbf{Symmetrical Electric Field Solutions:}
+\begin{align}
+  E_{\text{line}} &= \frac{\lambda}{2\pi\varepsilon_0 r} = \frac{2k\lambda}{r} && \text{[Infinitely Long Uniform Line Charge]} \\
+  E_{\text{sheet}} &= \frac{\sigma}{2\varepsilon_0} && \text{[Infinite Non-Conducting Plane Sheet (independent of $r$)]} \\
+  E_{\text{conductor}} &= \frac{\sigma}{\varepsilon_0} && \text{[Just outside any charged conducting surface]} \\
+  E_{\text{shell}}(r) &= \begin{cases} 0 & (r < R) \\ \frac{kq}{R^2} & (r = R) \\ \frac{kq}{r^2} & (r > R) \end{cases}, \qquad V_{\text{shell}}(r) = \begin{cases} \frac{kq}{R} & (r \le R) \\ \frac{kq}{r} & (r > R) \end{cases} && \text{[Thin Spherical Shell of Radius } R\text{]}
+\end{align}
+\textbf{Uniformly Charged Solid Non-Conducting Sphere (Total Charge $q$, Radius $R$):}
+\begin{equation}
+  E_{\text{inside}}(r) = \frac{k q r}{R^3} = \frac{\rho r}{3\varepsilon_0}, \qquad V_{\text{inside}}(r) = \frac{kq}{2R^3}(3R^2 - r^2) \implies V_{\text{center}} = \frac{3}{2}\frac{kq}{R} = 1.5\,V_{\text{surface}}
+\end{equation}
+\end{formulabox}
+
+\subsection{Capacitance, Dielectric Insertion \& Stored Energy}
+
+\begin{formulabox}[Capacitance, Energy Density \& Force between Plates]
+\begin{align}
+  C_0 &= \frac{\varepsilon_0 A}{d}, \qquad C_{\text{dielectric}} = \frac{\varepsilon_0 A}{d - t\left(1 - \frac{1}{\kappa}\right)}, \qquad C_{\text{conducting slab}} = \frac{\varepsilon_0 A}{d - t} \\
+  U &= \frac{1}{2}CV^2 = \frac{Q^2}{2C} = \frac{1}{2}QV, \qquad u_E = \frac{U}{\text{Volume}} = \frac{1}{2}\varepsilon_0 E^2 \quad [\si{J.m^{-3}}] \\
+  F_{\text{attraction}} &= \frac{Q^2}{2\varepsilon_0 A} = \frac{1}{2}QE = \frac{1}{2}\varepsilon_0 A E^2, \qquad P_{\text{electrostatic}} = \frac{F}{A} = \frac{1}{2}\varepsilon_0 E^2
+\end{align}
+\textbf{Common Potential \& Heat Dissipation on Connecting Two Capacitors:}
+\begin{equation}
+  V_{\text{common}} = \frac{C_1 V_1 + C_2 V_2}{C_1 + C_2}, \qquad \Delta U_{\text{loss}} = \frac{C_1 C_2}{2(C_1 + C_2)}(V_1 - V_2)^2
+\end{equation}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c}
+\toprule
+\textbf{Physical Parameter} & \textbf{Case A: Battery REMAINING CONNECTED} & \textbf{Case B: Battery DISCONNECTED} \\
+\midrule
+Capacitance ($C$) & Increases by $\kappa$ ($C = \kappa C_0$) & Increases by $\kappa$ ($C = \kappa C_0$) \\
+Potential Difference ($V$) & Remains Constant ($V = V_0$) & Decreases by $\kappa$ ($V = V_0/\kappa$) \\
+Electric Field ($E = V/d$) & Remains Constant ($E = E_0$) & Decreases by $\kappa$ ($E = E_0/\kappa$) \\
+Stored Charge ($Q$) & Increases by $\kappa$ ($Q = \kappa Q_0$) & Remains Constant ($Q = Q_0$) \\
+Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\kappa$ ($U = U_0/\kappa$) \\
+\bottomrule
+\end{tabularx}
+\caption{Effect of Inserting a Dielectric Slab ($\kappa$) into a Parallel Plate Capacitor.}
+\end{table}
+
+\begin{trapbox}[Capacitor Traps: Force between Plates \& Common Potential]
+\begin{itemize}
+  \item \textbf{Factor of $1/2$ in Plate Force:} $F = \frac{1}{2}QE$, NOT $QE$. One plate experiences the field produced strictly by the \textbf{other} plate ($E/2 = \frac{\sigma}{2\varepsilon_0}$), not the total field $E$.
+  \item \textbf{Opposite Polarity Connection:} If positive plate of $C_1$ is connected to negative plate of $C_2$, the numerator of common potential becomes $(C_1 V_1 - C_2 V_2)$ and energy loss is $\frac{C_1 C_2}{2(C_1 + C_2)}(V_1 + V_2)^2$.
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 2: CURRENT ELECTRICITY
+% =========================================================================
+\section{Current Electricity (Unit 12)}
+
+\subsection{Microscopic Conduction, Drift Velocity \& Resistance}
+
+\begin{formulabox}[Microscopic Drift, Ohm's Law \& Temperature Dependence]
+\begin{align}
+  I &= n e A v_d, \qquad v_d = \frac{e E \tau}{m} = \frac{e V \tau}{m L}, \qquad J = \frac{I}{A} = n e v_d = \sigma E = \frac{E}{\rho} \\
+  \mu &= \frac{v_d}{E} = \frac{e\tau}{m} \quad [\si{m^2.V^{-1}.s^{-1}}], \qquad \rho = \frac{m}{n e^2 \tau}, \qquad R = \rho\frac{L}{A} \\
+  R_T &= R_0(1 + \alpha\Delta T), \qquad \rho_T = \rho_0(1 + \alpha\Delta T) \quad [\alpha > 0 \text{ metals; } \alpha < 0 \text{ semiconductors}]
+\end{align}
+\textbf{Stretching of Wires (Constant Volume $V = A\cdot L = \text{const}$):}
+\begin{equation}
+  R \propto L^2 \propto \frac{1}{A^2} \propto \frac{1}{r^4} \implies \text{If } L \to nL, \quad R' = n^2 R; \quad \text{For small } \%\Delta L < 5\%, \quad \frac{\Delta R}{R} \approx 2\frac{\Delta L}{L}
+\end{equation}
+\end{formulabox}
+
+\subsection{Cells, Internal Resistance \& Power Transfer}
+
+\begin{formulabox}[Terminal EMF, Cell Combinations \& Max Power Theorem]
+\begin{align}
+  V &= \mathcal{E} - Ir \quad \text{[Discharging; } V < \mathcal{E}\text{]}, \qquad V = \mathcal{E} + Ir \quad \text{[Charging; } V > \mathcal{E}\text{]} \\
+  r &= R\left(\frac{\mathcal{E}}{V} - 1\right) = R\left(\frac{l_1 - l_2}{l_2}\right) && \text{[Internal Resistance Formulation]} \\
+  \mathcal{E}_{\text{eq, parallel}} &= \frac{\frac{\mathcal{E}_1}{r_1} + \frac{\mathcal{E}_2}{r_2}}{\frac{1}{r_1} + \frac{1}{r_2}} = \frac{\mathcal{E}_1 r_2 + \mathcal{E}_2 r_1}{r_1 + r_2}, \qquad r_{\text{eq, parallel}} = \frac{r_1 r_2}{r_1 + r_2}
+\end{align}
+\textbf{Maximum Power Transfer Theorem (Load $R$ connected to cell $\mathcal{E}, r$):}
+\begin{equation}
+  P_{\text{load}} = I^2 R = \frac{\mathcal{E}^2 R}{(R + r)^2} \implies P = P_{\max} \iff R = r \implies P_{\max} = \frac{\mathcal{E}^2}{4r}
+\end{equation}
+\end{formulabox}
+
+\subsection{Bridge Circuits \& Electrical Instruments}
+
+\begin{formulabox}[Wheatstone Bridge \& Metre Bridge Balance Equations]
+\begin{equation}
+  \frac{P}{Q} = \frac{R}{S} \iff I_G = 0 \quad \text{[Wheatstone Balance Condition: Galv. current is null]}
+\end{equation}
+\textbf{Metre Bridge Unknown Resistance $S$ (Balance length $l$ from left):}
+\begin{equation}
+  \frac{R}{S} = \frac{l}{100 - l} \implies S = R\left(\frac{100 - l}{l}\right)
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[Current Electricity Traps: Cell Grouping \& Terminal Voltage]
+\begin{itemize}
+  \item \textbf{Reversed Cell in Series Battery:} In a combination of $n$ identical cells each of EMF $\mathcal{E}$ and internal resistance $r$, if $m$ cells are connected with reversed polarity:
+  \begin{equation*}
+    \mathcal{E}_{\text{net}} = (n - 2m)\mathcal{E}, \qquad r_{\text{net}} = n r \quad (\text{Internal resistances always add!})
+  \end{equation*}
+  \item \textbf{Short Circuit Terminal Potential:} When cell is short-circuited ($R=0$), current is maximum $I_{\text{sc}} = \mathcal{E}/r$, and terminal voltage drops to \textbf{zero} ($V = \mathcal{E} - I_{\text{sc}}r = 0$).
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 3: MAGNETIC EFFECTS OF CURRENT \& MAGNETISM
+% =========================================================================
+\section{Magnetic Effects of Current \& Magnetism (Unit 13)}
+
+\subsection{Biot-Savart Law \& Ampere's Circuital Law}
+
+\begin{formulabox}[Biot-Savart Law \& Symmetrical Field Equations]
+\begin{align}
+  d\mathbf{B} &= \frac{\mu_0}{4\pi}\frac{I d\mathbf{l}\times\hat{\mathbf{r}}}{r^2} && \left[\frac{\mu_0}{4\pi} = 10^{-7}\,\si{T.m.A^{-1}}\right] \\
+  B_{\text{straight, finite}} &= \frac{\mu_0 I}{4\pi d}(\sin\phi_1 + \sin\phi_2) \implies B_{\text{infinite}} = \frac{\mu_0 I}{2\pi d}, \quad B_{\text{semi-infinite}} = \frac{\mu_0 I}{4\pi d} \\
+  B_{\text{circular coil, axis}} &= \frac{\mu_0 N I R^2}{2(R^2 + x^2)^{3/2}} \implies B_{\text{center}} = \frac{\mu_0 N I}{2R} \quad (x = 0) \\
+  B_{\text{arc}} &= \frac{\mu_0 I \theta}{4\pi R} \quad [\theta \text{ in radians}], \qquad B_{\text{solenoid}} = \mu_0 n I = \mu_0 \left(\frac{N}{L}\right)I \\
+  \oint \mathbf{B}\cdot d\mathbf{l} &= \mu_0 I_{\text{enclosed}} && \text{[Ampere's Circuital Law]}
+\end{align}
+\end{formulabox}
+
+\subsection{Lorentz Force, Particle Trajectories \& Force on Conductors}
+
+\begin{formulabox}[Lorentz Equation \& Charged Particle Dynamics in Magnetic Fields]
+\begin{align}
+  \mathbf{F} &= q(\mathbf{E} + \mathbf{v}\times\mathbf{B}) \implies \mathbf{F}_B = q(\mathbf{v}\times\mathbf{B}) \implies W_B = \int \mathbf{F}_B\cdot d\mathbf{r} = 0 \quad [\text{Speed } v = \text{const}] \\
+  r &= \frac{mv}{qB} = \frac{p}{qB} = \frac{\sqrt{2mK}}{qB} = \frac{\sqrt{2mqV}}{qB} && \text{[Circular Orbit Radius for } \mathbf{v}\perp\mathbf{B}\text{]} \\
+  T &= \frac{2\pi m}{qB}, \qquad \nu = \frac{qB}{2\pi m} && \text{[Period and Frequency: INDEPENDENT of speed } v\text{]} \\
+  p_{\text{pitch}} &= v_{\parallel} T = \frac{2\pi m v\cos\theta}{qB} && \text{[Helical Path Pitch for launch angle } \theta\text{]} \\
+  \mathbf{F} &= I(\mathbf{L}\times\mathbf{B}), \qquad \frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d} && \text{[Parallel attract; antiparallel repel]}
+\end{align}
+\end{formulabox}
+
+\subsection{Galvanometer Conversions \& Magnetic Materials}
+
+\begin{formulabox}[Moving Coil Galvanometer, Ammeter, Voltmeter \& Magnetic Matter]
+\begin{align}
+  \tau &= N I A B = C\theta \implies I = \left(\frac{C}{NAB}\right)\theta, \quad I_s = \frac{\theta}{I} = \frac{NAB}{C}, \quad V_s = \frac{\theta}{V} = \frac{I_s}{R_G} \\
+  S &= \frac{I_g R_g}{I - I_g} \quad \text{[Ammeter Shunt in Parallel]}, \qquad R_s = \frac{V}{I_g} - R_g \quad \text{[Voltmeter Multiplier in Series]} \\
+  \mathbf{B} &= \mu_0(\mathbf{H} + \mathbf{M}) = \mu H, \qquad \chi = \frac{M}{H}, \qquad \mu_r = 1 + \chi = \frac{\mu}{\mu_0}
+\end{align}
+\textbf{Curie's Law for Paramagnetic Materials \& Curie-Weiss Law for Ferromagnets:}
+\begin{equation}
+  \chi_{\text{para}} = \frac{C}{T} \implies \chi \propto \frac{1}{T}, \qquad \chi_{\text{ferro}} = \frac{C'}{T - T_c} \quad (T > T_c)
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[Magnetism Traps: Work Done by Magnetic Force \& Galvanometer Sensitivity]
+\begin{itemize}
+  \item \textbf{Work Done by Magnetic Force is Zero:} Because $\mathbf{F}_B \perp \mathbf{v}$ at every instant, $\mathbf{F}_B\cdot\mathbf{v} = 0$. \textbf{A static magnetic field does zero work on a charged particle}. It changes the direction of motion, never the kinetic energy or speed.
+  \item \textbf{Current Sensitivity vs Voltage Sensitivity:} Doubling the number of turns $N$ doubles current sensitivity ($I_s \propto N$), but resistance also doubles ($R \propto N$), leaving voltage sensitivity $V_s = I_s / R_G$ \textbf{completely unchanged}!
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 4: ELECTROMAGNETIC INDUCTION \& ALTERNATING CURRENT
+% =========================================================================
+\section{Electromagnetic Induction \& Alternating Current (Unit 14)}
+
+\subsection{Faraday's Laws, Motional EMF \& Inductance}
+
+\begin{formulabox}[Faraday-Lenz Law, Motional EMF \& Self/Mutual Inductance]
+\begin{align}
+  \mathcal{E} &= -\frac{d\Phi_B}{dt} = -N\frac{d}{dt}(B A\cos\theta), \qquad q_{\text{induced}} = \frac{\Delta\Phi_B}{R} \quad [\text{Independent of time!}] \\
+  \mathcal{E}_{\text{motional}} &= B v l \quad [\text{Translational Rod}], \qquad \mathcal{E}_{\text{rotational}} = \frac{1}{2}B\omega L^2 \quad [\text{Rotating Rod about one end}] \\
+  \mathcal{E} &= -L\frac{dI}{dt}, \qquad U = \frac{1}{2}L I^2, \qquad L_{\text{solenoid}} = \mu_0 n^2 A l = \frac{\mu_0 N^2 A}{l} \\
+  \mathcal{E}_2 &= -M\frac{dI_1}{dt}, \qquad M = k\sqrt{L_1 L_2} \quad (0 \le k \le 1)
+\end{align}
+\end{formulabox}
+
+\subsection{Alternating Current Circuits, Impedance \& Resonance}
+
+\begin{formulabox}[AC Values, Reactance, Series LCR Circuit \& Resonance]
+\begin{align}
+  I_{\text{rms}} &= \frac{I_0}{\sqrt{2}} \approx 0.707 I_0, \qquad V_{\text{rms}} = \frac{V_0}{\sqrt{2}} \approx 0.707 V_0, \qquad I_{\text{avg, half}} = \frac{2I_0}{\pi} \approx 0.637 I_0 \\
+  X_L &= \omega L = 2\pi\nu L, \qquad X_C = \frac{1}{\omega C} = \frac{1}{2\pi\nu C} \quad [X_L \text{ leads by } \pi/2; X_C \text{ lags by } \pi/2] \\
+  Z &= \sqrt{R^2 + (X_L - X_C)^2}, \qquad \tan\phi = \frac{X_L - X_C}{R}, \qquad V_0 = \sqrt{V_R^2 + (V_L - V_C)^2} \\
+  \omega_0 &= \frac{1}{\sqrt{LC}} \iff \nu_0 = \frac{1}{2\pi\sqrt{LC}} \quad [\text{Series Resonance Condition: } X_L = X_C] \\
+  Z_{\min} &= R, \quad I_{\max} = \frac{V_{\text{rms}}}{R}, \quad \phi = 0, \quad Q = \frac{\omega_0 L}{R} = \frac{1}{\omega_0 C R} = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{\nu_0}{\Delta\nu}
+\end{align}
+\textbf{Average Power, Power Factor \& Ideal Transformer:}
+\begin{align}
+  P_{\text{avg}} &= V_{\text{rms}} I_{\text{rms}} \cos\phi = I_{\text{rms}}^2 R, \qquad \cos\phi = \frac{R}{Z} \quad [\text{Wattless Current } I_w = I_{\text{rms}}\sin\phi] \\
+  \frac{V_s}{V_p} &= \frac{N_s}{N_p} = \frac{I_p}{I_s} = K, \qquad \eta = \frac{P_{\text{out}}}{P_{\text{in}}} = \frac{V_s I_s}{V_p I_p}
+\end{align}
+\end{formulabox}
+
+\newpage
+
+% =========================================================================
+% SECTION 5: ELECTROMAGNETIC WAVES
+% =========================================================================
+\section{Electromagnetic Waves (Unit 15)}
+
+\begin{formulabox}[Displacement Current, Wave Speed, Energy \& Radiation Pressure]
+\begin{align}
+  I_d &= \varepsilon_0 \frac{d\Phi_E}{dt}, \qquad \oint \mathbf{B}\cdot d\mathbf{l} = \mu_0\left(I_c + \varepsilon_0\frac{d\Phi_E}{dt}\right) && \text{[Ampere-Maxwell Law]} \\
+  c &= \frac{1}{\sqrt{\mu_0\varepsilon_0}} = \frac{E_0}{B_0} \approx 3\times 10^8\,\si{m.s^{-1}}, \qquad v_{\text{medium}} = \frac{1}{\sqrt{\mu\varepsilon}} = \frac{c}{\sqrt{\mu_r \varepsilon_r}} \\
+  u_{\text{total}} &= u_E + u_B = \frac{1}{2}\varepsilon_0 E_{\text{rms}}^2 + \frac{B_{\text{rms}}^2}{2\mu_0} = \varepsilon_0 E_{\text{rms}}^2 = \frac{B_{\text{rms}}^2}{\mu_0} && \text{[Equal Electric \& Magnetic Energy]} \\
+  I &= \langle S \rangle = \frac{1}{2}\varepsilon_0 c E_0^2 = \varepsilon_0 c E_{\text{rms}}^2, \qquad P_{\text{rad}} = \begin{cases} \frac{I}{c} & \text{(Total Absorption)} \\ \frac{2I}{c} & \text{(Total Reflection)} \end{cases}
+\end{align}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c L}
+\toprule
+\textbf{Wave Type} & \textbf{Wavelength ($\lambda$)} & \textbf{Frequency ($\nu$)} & \textbf{Primary Source \& High-Yield Application} \\
+\midrule
+$\gamma$-Rays & $< 10^{-3}\,\si{nm}$ & $> 10^{20}\,\si{Hz}$ & Radioactive decay; cancer radiotherapy \\
+X-Rays & $1\,\si{nm} - 10^{-3}\,\si{nm}$ & $10^{18} - 10^{20}\,\si{Hz}$ & Fast electrons hitting heavy metal target; bone imaging \\
+UV Rays & $400\,\si{nm} - 1\,\si{nm}$ & $10^{15} - 10^{17}\,\si{Hz}$ & Very hot bodies (Sun), arcs; LASIK eye surgery, germicidal \\
+Visible & $700\,\si{nm} - 400\,\si{nm}$ & $4\times 10^{14} - 7.5\times 10^{14}\,\si{Hz}$ & Atomic electron transitions; human optical vision \\
+Infrared & $1\,\si{mm} - 700\,\si{nm}$ & $10^{11} - 4\times 10^{14}\,\si{Hz}$ & Hot bodies, molecules; thermal therapy, remote controls \\
+Microwaves & $0.1\,\si{m} - 1\,\si{mm}$ & $10^9 - 10^{11}\,\si{Hz}$ & Klystrons, magnetrons; RADAR systems, microwave ovens \\
+Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in antennas; cellular/radio broadcasting \\
+\bottomrule
+\end{tabularx}
+\caption{Electromagnetic Spectrum in Decreasing Order of Frequency / Increasing Wavelength.}
+\end{table}
+
+\vspace{15pt}
+\begin{center}
+  \rule{0.6\textwidth}{0.8pt}\\[6pt]
+  {\small\textbf{\color{primarydark}End of Module 03 Formula Handbook}}\\[2pt]
+  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
+\end{center}
+
+\end{document}

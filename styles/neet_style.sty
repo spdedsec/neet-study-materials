@@ -2,12 +2,12 @@
 \ProvidesPackage{neet_style}[2026/10/14 NEET 2027 Study Materials Package]
 
 % --- Core Geometry & Layout ---
-\RequirePackage[top=2.0cm, bottom=2.0cm, left=1.8cm, right=1.8cm, headheight=16pt, headsep=12pt, footskip=14pt]{geometry}
+\RequirePackage[top=2.0cm, bottom=2.0cm, left=1.8cm, right=1.8cm, headheight=22pt, headsep=12pt, footskip=14pt]{geometry}
 
 % --- Math & Symbols ---
 \RequirePackage{amsmath,amssymb,amsfonts,mathtools,bm}
 \RequirePackage{siunitx}
-\sisetup{detect-all, separate-uncert=true}
+\sisetup{separate-uncertainty = true}
 
 % --- Tables & Arrays ---
 \RequirePackage{booktabs,tabularx,longtable,array,colortbl,multirow}
@@ -44,8 +44,7 @@
   title={#1},
   arc=2.5mm,
   boxrule=0.9pt,
-  left=8pt, right=8pt, top=6pt, bottom=6pt,
-  separator style={draw=none}
+  left=8pt, right=8pt, top=6pt, bottom=6pt
 }
 
 % Use Case & Application Box (Assumptions, valid domains, edge cases, shortcuts)

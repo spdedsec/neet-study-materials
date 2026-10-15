@@ -1,0 +1,351 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% Title Header
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Biology Chapter Notes}}\\[6pt]
+  {\Large \textbf{Genetics \& Molecular Basis of Inheritance}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ High-Yield NCERT Master Notes}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{Genetics \& Molecular Basis of Inheritance}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Botany Chapter Notes}}
+
+\section{Principles of Inheritance \& Variation (Mendelian Genetics)}
+
+\begin{conceptbox}[Mendel's Experimental Architecture \& Contrasting Traits]
+Gregor Johann Mendel conducted hybridization experiments on garden peas (\textit{Pisum sativum}) for 7 years (1856--1863). He investigated \textbf{7 pairs of contrasting traits} located across 4 chromosomes (Chromosomes 1, 4, 5, 7):
+\begin{center}
+\small
+\begin{tabular}{|l|l|l|c|}
+\hline
+\textbf{Character} & \textbf{Dominant Trait} & \textbf{Recessive Trait} & \textbf{Chromosome} \\
+\hline
+Stem Height & Tall ($T$) & Dwarf ($t$) & 4 \\
+Flower Color & Violet / Purple ($W$) & White ($w$) & 1 \\
+Flower Position & Axial ($A$) & Terminal ($a$) & 4 \\
+Pod Shape & Inflated / Full ($I$) & Constricted ($i$) & 4 \\
+Pod Color & Green ($G$) & Yellow ($g$) & 5 \\
+Seed Shape & Round ($R$) & Wrinkled ($r$) & 7 \\
+Seed Color & Yellow ($Y$) & Green ($y$) & 1 \\
+\hline
+\end{tabular}
+\end{center}
+\end{conceptbox}
+
+\begin{formulabox}[Mendelian Ratios \& Mathematical Formulations]
+For a cross involving heterozygous parents ($Aa \times Aa$ for monohybrid, $AaBb \times AaBb$ for dihybrid):
+\begin{align*}
+  \textbf{Monohybrid Phenotypic Ratio: } & 3 : 1 \qquad (\text{Genotypic: } 1 : 2 : 1 = 1\,AA : 2\,Aa : 1\,aa)\\
+  \textbf{Dihybrid Phenotypic Ratio: } & 9 : 3 : 3 : 1 \qquad (\text{Genotypic: } 1:2:1:2:4:2:1:2:1)\\
+  \textbf{Trihybrid Phenotypic Ratio: } & (3 + 1)^3 = 27 : 9 : 9 : 9 : 3 : 3 : 3 : 1\\
+  \textbf{Number of Phenotypes: } & 2^n \quad (n = \text{number of heterozygous gene pairs})\\
+  \textbf{Number of Genotypes: } & 3^n\\
+  \textbf{Number of Gamete Types: } & 2^n\\
+  \textbf{Number of Zygotes / Offspring: } & 4^n
+\end{align*}
+\textbf{Test Cross Ratio:} Heterozygote crossed with homozygous recessive:
+\begin{itemize}
+  \item Monohybrid Test Cross ($Aa \times aa$): Ratio = $1 : 1$.
+  \item Dihybrid Test Cross ($AaBb \times aabb$): Ratio = $1 : 1 : 1 : 1$.
+\end{itemize}
+\end{formulabox}
+
+\begin{conceptbox}[Deviations from Pure Mendelian Inheritance]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Incomplete Dominance:} Neither allele is dominant; the heterozygote displays an intermediate phenotype.
+  \begin{itemize}
+    \item \textit{Examples:} Flower color in \textit{Mirabilis jalapa} (4 o'clock plant) and \textit{Antirrhinum majus} (Snapdragon / Dog flower).
+    \item Crossing Red ($RR$) $\times$ White ($rr$) gives Pink ($Rr$) in $F_1$.
+    \item $F_2$ Phenotypic ratio = $1\text{ Red} : 2\text{ Pink} : 1\text{ White}$ ($1:2:1$).
+    \item \textbf{Crucial Rule:} \textbf{Phenotypic ratio equals Genotypic ratio} ($1 : 2 : 1$).
+  \end{itemize}
+  \item \textbf{Codominance:} Both alleles express themselves fully and simultaneously in the heterozygote without blending.
+  \begin{itemize}
+    \item \textit{Examples:} ABO Blood grouping in humans, Sickle cell trait ($Hb^A Hb^S$), MN blood group.
+  \end{itemize}
+  \item \textbf{Multiple Allelism:} More than two alleles govern a single gene locus in a population (can only be studied in population studies, not in an individual).
+  \begin{itemize}
+    \item \textit{ABO Blood Group Gene ($I$):} Located on Chromosome 9; 3 alleles ($I^A, I^B, i$).
+    \item Number of possible genotypes for $n$ multiple alleles:
+    \begin{equation}
+      \text{Total Genotypes} = \frac{n(n+1)}{2} = \frac{3(3+1)}{2} = 6 \text{ genotypes} \implies 4 \text{ phenotypes (A, B, AB, O)}
+    \end{equation}
+  \end{itemize}
+  \item \textbf{Pleiotropy:} A single gene influences multiple unrelated phenotypic traits.
+  \begin{itemize}
+    \item \textit{Phenylketonuria (PKU):} Mutation in gene coding for enzyme \textit{phenylalanine hydroxylase} causes mental retardation, reduction in hair, and skin pigmentation.
+    \item \textit{Starch Synthesis in Pea Seeds:} Gene $B$ controls starch grain size (incomplete dominance: $BB$ large, $Bb$ intermediate, $bb$ small) and seed shape (complete dominance: $BB, Bb$ round, $bb$ wrinkled).
+  \end{itemize}
+  \item \textbf{Polygenic Inheritance:} Quantitative inheritance where multiple additive genes control a continuous trait, influenced by the environment (e.g., Human skin color, human height, kernel color in wheat).
+  \begin{itemize}
+    \item Governed by 3 genes ($A, B, C$): $AABBCC$ (darkest) to $aabbcc$ (lightest).
+    \item $F_2$ phenotypic distribution follows a bell-shaped Gaussian curve: $1 : 6 : 15 : 20 : 15 : 6 : 1$.
+  \end{itemize}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Chromosomal Theory, Linkage \& Genetic Mapping]
+\textbf{1. Chromosomal Theory of Inheritance (Sutton \& Boveri, 1902):}
+Behavior of chromosomes parallels the behavior of genes during meiosis. Chromosomes segregate during anaphase I and assort independently during anaphase I/metaphase I.
+
+\textbf{2. Morgan's Linkage Experiments (Thomas Hunt Morgan, 1910):}
+Used the fruit fly \textit{Drosophila melanogaster} because:
+\begin{itemize}
+  \item Can be grown on simple synthetic medium in the laboratory.
+  \item Short life cycle (about 2 weeks / 14 days).
+  \item A single mating produces a large number of progeny flies.
+  \item Clear morphological dimorphism (female is distinctly larger than male).
+  \item Low chromosome number ($2n = 8$) easily observable under low power microscope.
+\end{itemize}
+\textbf{Morgan's Crosses on X-Chromosome:}
+\begin{itemize}
+  \item \textbf{Cross A (Tightly Linked):} Yellow body ($y$), white eye ($w$) crossed with wild brown body ($y^+$), red eye ($w^+$). Recombination frequency = \textbf{1.3\%} (Parental types = \textbf{98.7\%}).
+  \item \textbf{Cross B (Loosely Linked):} White eye ($w$), miniature wing ($m$) crossed with wild red eye ($w^+$), normal wing ($m^+$). Recombination frequency = \textbf{37.2\%} (Parental types = \textbf{62.8\%}).
+\end{itemize}
+\textbf{3. Chromosome Mapping (Alfred Sturtevant):}
+Recombination frequency is directly proportional to the physical distance between genes on a chromosome:
+\begin{equation}
+  \text{Distance between genes (in centimorgans / map units)} = \frac{\text{Total Recombinants}}{\text{Total Progeny}} \times 100\%
+\end{equation}
+\begin{equation}
+  1\text{ Map Unit (cM)} = 1\% \text{ Recombination frequency}
+\end{equation}
+\textit{Boundary Limit:} Maximum observable recombination frequency for two linked genes cannot exceed \textbf{50\%} (at $50\%$, genes behave as if assorting independently).
+\end{formulabox}
+
+\begin{conceptbox}[Sex Determination Mechanisms in Animals \& Humans]
+\begin{itemize}
+  \item \textbf{XX--XY Type (Male Heterogamety):} Humans and \textit{Drosophila}. Male produces two types of sperms: 50\% with X, 50\% with Y. Female is homogametic (XX).
+  \item \textbf{XX--XO Type (Male Heterogamety):} Grasshopper and certain insects. Male has only one X-chromosome ($2A + XO$); female has two ($2A + XX$).
+  \item \textbf{ZZ--ZW Type (Female Heterogamety):} Birds, fowls, butterflies. Female produces two types of eggs: 50\% with Z, 50\% with W ($2A + ZW$). Male is homogametic ($2A + ZZ$).
+  \item \textbf{Haplodiploidy (Honeybee):} Female (Queen/Worker) develops from fertilized diploid egg ($2n = 32$) via sexual reproduction. Male (Drone) develops from unfertilized haploid egg ($n = 16$) by \textbf{parthenogenesis}. Drones have no father and cannot have sons, but have a grandfather and can have grandsons!
+\end{itemize}
+\end{conceptbox}
+
+\begin{trapbox}[NEET Trap: Genetic Disorders \& Pedigree Distinctions]
+\textbf{1. Mendelian Disorders (Single-Gene Mutations):}
+\begin{itemize}
+  \item \textbf{Autosomal Dominant:} \textit{Myotonic dystrophy}, Huntington's chorea. Trait does not skip generations; affected child always has at least one affected parent.
+  \item \textbf{Autosomal Recessive:} \textit{Sickle-cell Anemia, Phenylketonuria, Thalassemia, Cystic Fibrosis}. Trait frequently skips generations; parents of affected individuals are usually unaffected heterozygous carriers ($Aa$). Both sexes equally affected.
+  \begin{itemize}
+    \item \textbf{Sickle-cell Anemia:} Point mutation in $\beta$-globin gene on chromosome 11. GAG codon mutates to GUG $\implies$ substitution of Glutamic acid (Glu) by \textbf{Valine (Val) at position 6} of the $\beta$-chain. Under low $O_2$ tension, $Hb^S$ polymerizes into elongated sickle shapes.
+    \item \textbf{Thalassemia:} Quantitative disorder (reduced rate of globin chain synthesis), whereas Sickle-cell anemia is a qualitative disorder (defective globin produced). $\alpha$-Thalassemia is controlled by two closely linked genes $HBA1$ and $HBA2$ on chromosome 16. $\beta$-Thalassemia is controlled by a single gene $HBB$ on chromosome 11.
+  \end{itemize}
+  \item \textbf{Sex-Linked (X-Linked) Recessive:} \textit{Hemophilia, Color Blindness}.
+  \begin{itemize}
+    \item Show \textbf{Criss-cross inheritance} (passed from carrier mother to son, or father to daughter who becomes a carrier).
+    \item Far more prevalent in males ($X^c Y$) than females ($X^c X^c$, requiring carrier mother and affected father).
+    \item \textbf{Hemophilia A:} Deficiency of blood clotting Factor VIII; \textbf{Hemophilia B:} Factor IX (Christmas disease).
+  \end{itemize}
+\end{itemize}
+\textbf{2. Chromosomal Disorders (Aneuploidy \& Polyploidy):}
+\begin{itemize}
+  \item \textbf{Down's Syndrome (Trisomy 21):} First described by Langdon Down (1866). Karyotype = $47, XX+21$ or $47, XY+21$. Short stature, small round head, furrowed tongue, partially open mouth, broad palm with characteristic palm crease, physical and mental retardation.
+  \item \textbf{Klinefelter's Syndrome (Trisomy of Sex Chromosome):} Karyotype = $47, XXY$. Overall masculine development with feminine features (e.g., development of breasts / \textbf{Gynaecomastia}), sterile male.
+  \item \textbf{Turner's Syndrome (Monosomy of Sex Chromosome):} Karyotype = $45, XO$. Sterile female, rudimentary ovaries, lack of secondary sexual characters, short stature, webbed neck.
+\end{itemize}
+\end{trapbox}
+
+\section{Molecular Basis of Inheritance (DNA, Replication, Transcription \& Translation)}
+
+\begin{formulabox}[Watson-Crick B-DNA Structural Dimensions]
+Proposed by James Watson and Francis Crick in 1953, based on X-ray diffraction data of Rosalind Franklin and Maurice Wilkins.
+\begin{align*}
+  \textbf{Helix Type: } & \text{Right-handed double helix with antiparallel strands } (5'\to 3' \text{ and } 3'\to 5')\\
+  \textbf{Helix Pitch } (P): & 3.4\,\mathrm{nm} = 34\,\text{\AA} \quad (\text{one complete turn of helix})\\
+  \textbf{Base Pairs per Turn: } & 10\,\mathrm{bp}\\
+  \textbf{Distance between bp: } & 0.34\,\mathrm{nm} = 3.4\,\text{\AA} = 0.34 \times 10^{-9}\,\mathrm{m}\\
+  \textbf{Helix Diameter: } & 2.0\,\mathrm{nm} = 20\,\text{\AA}\\
+  \textbf{Hydrogen Bonds: } & \mathrm{A=T} \text{ (2 H-bonds)}, \quad \mathrm{G\equiv C} \text{ (3 H-bonds)}\\
+  \textbf{Human DNA Length: } & 6.6 \times 10^9\,\mathrm{bp} \times 0.34 \times 10^{-9}\,\mathrm{m} \approx \mathbf{2.2\,\mathrm{m}}
+\end{align*}
+\end{formulabox}
+
+\begin{conceptbox}[Packaging of DNA: Nucleosome Architecture]
+Because a $2.2\,\mathrm{m}$ long negatively charged DNA must fit inside a microscopic nucleus ($\sim 10^{-6}\,\mathrm{m}$), it is tightly packaged around basic proteins called \textbf{histones}:
+\begin{itemize}
+  \item \textbf{Histones:} Rich in basic amino acids \textbf{Lysine} and \textbf{Arginine} (both carry positive charges in their side chains).
+  \item \textbf{Histone Octamer:} Core consists of two molecules each of $H_2A, H_2B, H_3,$ and $H_4$.
+  \item \textbf{Nucleosome Core:} Negatively charged DNA is wrapped around the octamer:
+  \begin{equation}
+    \text{Length of DNA wrapped around single nucleosome} \approx \mathbf{200\,\mathrm{bp}}
+  \end{equation}
+  \item \textbf{Linker Histone ($H_1$):} Seals the DNA at the entry and exit points of the nucleosome core.
+  \item \textbf{Chromatin States:}
+  \begin{itemize}
+    \item \textbf{Euchromatin:} Loosely packed, stains light, transcriptionally active.
+    \item \textbf{Heterochromatin:} Densely packed, stains dark, transcriptionally inactive.
+  \end{itemize}
+\end{itemize}
+\end{conceptbox}
+
+\begin{conceptbox}[Historic Experiments Proving DNA is the Genetic Material]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Griffith's Transforming Principle (Frederick Griffith, 1928):}
+  Used \textit{Streptococcus pneumoniae} (Pneumococcus).
+  \begin{itemize}
+    \item Smooth (S) strain has mucous (polysaccharide) coat $\implies$ Virulent (mice die of pneumonia).
+    \item Rough (R) strain lacks capsule $\implies$ Non-virulent (mice survive).
+    \item Heat-killed S strain $\to$ Mice survive.
+    \item Heat-killed S strain $+$ Living R strain $\to$ \textbf{Mice die}, and living S strain bacteria were recovered from blood!
+    \item \textit{Conclusion:} R strain was transformed by a heat-stable transforming principle from heat-killed S.
+  \end{itemize}
+  \item \textbf{Biochemical Characterization (Avery, MacLeod \& McCarty, 1944):}
+  Purified biochemicals (proteins, RNA, DNA) from heat-killed S cells.
+  \begin{itemize}
+    \item Proteases and RNases did \textbf{not} inhibit transformation.
+    \item Digestion with \textbf{Deoxyribonuclease (DNase) completely inhibited transformation}.
+    \item \textit{Conclusion:} DNA is the substance causing transformation!
+  \end{itemize}
+  \item \textbf{Unequivocal Proof: Hershey-Chase Experiment (1952):}
+  Used Bacteriophage T2 and \textit{Escherichia coli}.
+  \begin{itemize}
+    \item Phages grown on radioactive sulfur ($^{35}\mathrm{S}$) labeled protein coat (cysteine and methionine contain S, DNA has no S).
+    \item Phages grown on radioactive phosphorus ($^{32}\mathrm{P}$) labeled DNA core (DNA has P, proteins have no P).
+    \item Steps: (i) Infection $\to$ (ii) Blending (agitation in kitchen blender detached coats) $\to$ (iii) Centrifugation.
+    \item Bacteria infected with $^{32}\mathrm{P}$ phages were radioactive (pellet had radioactivity). Supernatant with $^{35}\mathrm{S}$ had viral ghosts.
+    \item \textit{Conclusion:} DNA is the genetic material passed from virus to bacteria!
+  \end{itemize}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[DNA Replication Machinery \& Enzymology]
+Replication is \textbf{semiconservative} and \textbf{bidirectional}, originating at specific sites called \textit{Ori} (Origin of Replication).
+\begin{align*}
+  \textbf{Meselson \& Stahl: } & \text{Grew } E.\; coli \text{ in }^{15}\mathrm{NH_4Cl} \to \text{all heavy } (^{15}\mathrm{N}-^{15}\mathrm{N}).\\
+  \text{In }^{14}\mathrm{NH_4Cl}: \quad & \text{Gen 1 (20 min): 100\% Hybrid } (^{15}\mathrm{N}-^{14}\mathrm{N}).\\
+  & \text{Gen 2 (40 min): 50\% Hybrid } (^{15}\mathrm{N}-^{14}\mathrm{N}) + 50\% \text{ Light } (^{14}\mathrm{N}-^{14}\mathrm{N}).\\
+  \textbf{Taylor: } & \text{Tritiated thymidine in } \textit{Vicia faba} \text{ root cells.}
+\end{align*}
+\textbf{Core Enzymes and Functional Roles:}
+\begin{center}
+\small
+\begin{tabular}{|l|p{11.5cm}|}
+\hline
+\textbf{Enzyme} & \textbf{Specific Biological Action} \\
+\hline
+Helicase & Unwinds the parental DNA double helix by breaking hydrogen bonds, forming replication fork. \\
+SSB Proteins & Single-Strand Binding proteins stabilize single strands and prevent premature re-annealing. \\
+Topoisomerase / Gyrase & Relieves positive supercoiling strain ahead of the progressing replication fork by cutting and resealing. \\
+RNA Primase & Synthesizes short complementary RNA primers ($5\to 10$ nucleotides) providing free $3'\text{-OH}$ for DNA polymerase. \\
+DNA Polymerase III & Main replicating enzyme in prokaryotes; synthesizes in strictly \textbf{$5'\to 3'$ direction}; high catalytic speed ($\approx 2000\,\mathrm{bp/sec}$) with proofreading ($3'\to 5'$ exonuclease activity). \\
+DNA Polymerase I & Removes RNA primers (via $5'\to 3'$ exonuclease activity) and fills gaps with deoxynucleotides (Kornberg enzyme). \\
+DNA Ligase & Catalyzes formation of phosphodiester bonds between discontinuous Okazaki fragments on the lagging strand. \\
+\hline
+\end{tabular}
+\end{center}
+\end{formulabox}
+
+\begin{conceptbox}[Transcription: Prokaryotes vs Eukaryotes]
+A transcription unit comprises: (1) \textbf{Promoter} (located towards $5'$ end of coding strand / upstream), (2) \textbf{Structural gene}, (3) \textbf{Terminator} (located towards $3'$ end of coding strand / downstream).
+\begin{equation}
+  \text{Template Strand: } 3' \longrightarrow 5' \qquad \text{Coding Strand (Non-template): } 5' \longrightarrow 3'
+\end{equation}
+\textit{Convention:} All reference points (promoter, terminator) are defined with respect to the \textbf{coding strand}.
+
+\textbf{1. Transcription in Prokaryotes:}
+Single RNA polymerase conducts all phases:
+\begin{itemize}
+  \item Initiation: RNA Polymerase binds to promoter with transient assistance of \textbf{Sigma ($\sigma$) factor}.
+  \item Elongation: RNA Polymerase synthesizes RNA in $5'\to 3'$ direction using ribonucleoside triphosphates.
+  \item Termination: Termination factor \textbf{Rho ($\rho$)} associates with polymerase to terminate transcription.
+  \item Translation can begin \textbf{coupled with transcription} even before mRNA is fully synthesized (no nuclear membrane separation).
+\end{itemize}
+
+\textbf{2. Transcription in Eukaryotes (Three Polymerases \& Post-Transcriptional Processing):}
+\begin{itemize}
+  \item \textbf{RNA Polymerase I:} Transcribes rRNAs ($28S, 18S,$ and $5.8S$).
+  \item \textbf{RNA Polymerase II:} Transcribes precursor of mRNA, called \textbf{heterogeneous nuclear RNA (hnRNA)}.
+  \item \textbf{RNA Polymerase III:} Transcribes \textbf{tRNA}, \textbf{$5S$ rRNA}, and \textbf{snRNAs} (small nuclear RNAs).
+\end{itemize}
+\textbf{Post-Transcriptional Modifications of hnRNA $\to$ mature mRNA:}
+\begin{enumerate}
+  \item \textbf{Capping:} An unusual nucleotide, \textbf{methyl guanosine triphosphate (m$^7$Gppp)}, is added to the $5'$-end.
+  \item \textbf{Tailing (Polyadenylation):} Adenylate residues ($200-300$) are added at $3'$-end in a template-independent manner.
+  \item \textbf{Splicing:} Non-coding intervening sequences (\textbf{Introns}) are excised, and coding sequences (\textbf{Exons}) are joined by spliceosomes (complex of snRNPs).
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[The Genetic Code: Salient Features \& Wobble Phenomenon]
+Deciphered by George Gamow, Har Gobind Khorana, Marshall Nirenberg, and Severo Ochoa (polynucleotide phosphorylase).
+\begin{align*}
+  \textbf{Triplet Nature: } & 64 \text{ codons } (4^3); \quad 61 \text{ code for 20 amino acids}; \quad 3 \text{ stop codons.}\\
+  \textbf{Stop Codons: } & \mathbf{UAA} \text{ (Ochre)}, \quad \mathbf{UAG} \text{ (Amber)}, \quad \mathbf{UGA} \text{ (Opal)}.\\
+  \textbf{Dual Function: } & \mathbf{AUG} \text{ codes for Met AND acts as initiator codon.}\\
+  \textbf{Degenerate: } & \text{Amino acids coded by }>1\text{ codon (Leu, Ser, Arg have 6).}\\
+  \textbf{Exceptions: } & \text{AUG (Met) and UGG (Trp) have single codons alone.}\\
+  \textbf{Unambiguous: } & \text{One specific codon codes for strictly one amino acid.}\\
+  \textbf{Universal: } & \text{From bacteria to humans, UUU codes for Phe.}
+\end{align*}
+\textbf{Wobble Hypothesis (Crick, 1966):}
+The third base ($3'$ position of codon) does not pair as strictly with the first base ($5'$ position of anticodon) on tRNA. Non-Watson-Crick base pairing allows a single tRNA species to recognize multiple degenerate codons, reducing the minimum required tRNAs to 31.
+\end{formulabox}
+
+\begin{conceptbox}[Translation: Mechanism of Polypeptide Synthesis]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Charging of tRNA (Aminoacylation):}
+  \begin{equation}
+    \text{Amino Acid} + \text{ATP} \xrightarrow{\text{Aminoacyl-tRNA synthetase}} \text{Aminoacyl-AMP} + \mathrm{PP_i}
+  \end{equation}
+  \begin{equation}
+    \text{Aminoacyl-AMP} + \text{tRNA} \longrightarrow \text{Aminoacyl-tRNA} + \text{AMP}
+  \end{equation}
+  \item \textbf{Initiation:} Small ribosomal subunit ($30S$ in prokaryotes, $40S$ in eukaryotes) binds to mRNA at $5'$-end (Shine-Dalgarno sequence in prokaryotes). Initiator tRNA binds to P-site (Peptidyl site).
+  \item \textbf{Elongation:} Incoming charged tRNA binds to the A-site (Aminoacyl site). Peptide bond formation is catalyzed by the ribozyme:
+  \begin{equation}
+    \text{Peptidyl transferase} = \mathbf{23S\text{ rRNA}} \text{ (in prokaryotes)} \quad \text{or} \quad \mathbf{28S\text{ rRNA}} \text{ (in eukaryotes)}
+  \end{equation}
+  Ribosome advances codon by codon along mRNA in $5'\to 3'$ direction (\textbf{Translocation}, requires EF-G and GTP).
+  \item \textbf{Termination:} Stop codon arrives at A-site; release factors (RF1, RF2, RF3) bind to stop codon, hydrolyzing polypeptide from tRNA.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{conceptbox}[Gene Regulation: The Operon Model of Jacob \& Monod]
+The \textbf{Lac Operon} of \textit{E. coli} is an example of an \textbf{inducible, negative regulation system}:
+\begin{itemize}
+  \item \textbf{Gene $i$ (Inhibitor / Regulatory):} Constitutively expresses the active Lac repressor protein.
+  \item \textbf{Promoter ($p$):} Binding site for RNA polymerase.
+  \item \textbf{Operator ($o$):} Binding site for the Lac repressor protein.
+  \item \textbf{Structural Genes:}
+  \begin{itemize}
+    \item \textbf{Gene $z$:} Codes for \textbf{$\beta$-galactosidase} (hydrolyzes lactose into glucose and galactose).
+    \item \textbf{Gene $y$:} Codes for \textbf{Permease} (increases cellular membrane permeability to $\beta$-galactosides).
+    \item \textbf{Gene $a$:} Codes for \textbf{Transacetylase} (transfers acetyl group from acetyl-CoA to $\beta$-galactosides).
+  \end{itemize}
+  \item \textbf{Regulation States:}
+  \begin{itemize}
+    \item \textit{In Absence of Inducer (Lactose):} Repressor binds tightly to operator $\implies$ RNA polymerase blocked $\implies$ Operon switched OFF.
+    \item \textit{In Presence of Inducer (Lactose / Allolactose):} Inducer binds to repressor, inducing conformational change $\implies$ repressor inactivated and detaches $\implies$ RNA polymerase transcribes $z, y, a \implies$ Operon switched ON.
+  \end{itemize}
+\end{itemize}
+\end{conceptbox}
+
+\begin{ncertbox}[Human Genome Project (HGP) \& DNA Fingerprinting High-Yield Facts]
+\textbf{1. Human Genome Project Core Metrics:}
+\begin{itemize}
+  \item Total base pairs: \textbf{$3.1647 \times 10^9\,\mathrm{bp}$}; average gene contains \textbf{3000 bases}.
+  \item Largest known human gene: \textbf{Dystrophin} on X-chromosome ($2.4 \times 10^6$ bases).
+  \item Total estimated genes: \textbf{$\approx 30,000$} (drastically lower than previous estimates of 140,000).
+  \item Less than \textbf{2\% of the genome} codes for proteins.
+  \item Chromosome 1 has the most genes (\textbf{2968}); the Y chromosome has the fewest (\textbf{231}).
+  \item Scientists have identified about \textbf{1.4 million locations} where single-base DNA differences (\textbf{SNPs} -- single nucleotide polymorphisms) occur.
+\end{itemize}
+\textbf{2. DNA Fingerprinting (Alec Jeffreys, 1984):}
+\begin{itemize}
+  \item Explores \textbf{DNA polymorphism} in non-coding repetitive DNA sequence (\textbf{Satellite DNA}).
+  \item \textbf{VNTRs (Variable Number of Tandem Repeats):} Belong to a class of satellite DNA called \textit{minisatellites}. The copy number varies from chromosome to chromosome in an individual (size varies from $0.1$ to $20\,\mathrm{kb}$).
+  \item \textbf{Protocol Steps:} Isolation of DNA $\to$ Digestion by restriction endonucleases $\to$ Separation by agarose gel electrophoresis $\to$ Southern blotting (transfer to nylon membrane) $\to$ Hybridization using labeled VNTR probes $\to$ Detection by autoradiography.
+\end{itemize}
+\end{ncertbox}
+
+\end{document}

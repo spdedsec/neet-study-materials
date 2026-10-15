@@ -1,6 +1,18 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage{../../styles/neet_style}
 
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[L]{}%
+  \fancyhead[C]{}%
+  \fancyhead[R]{}%
+  \fancyfoot[L]{\footnotesize\color{gray}NEET UG 2027 Organic Mechanisms Handbook}%
+  \fancyfoot[C]{\small\textbf{\thepage}}%
+  \fancyfoot[R]{\footnotesize\color{gray}Master Chemistry Series}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{}
@@ -9,8 +21,11 @@
 \fancyfoot[L]{\footnotesize\color{gray}NEET UG 2027 Organic Mechanisms Handbook}
 \fancyfoot[C]{\small\textbf{\thepage}}
 \fancyfoot[R]{\footnotesize\color{gray}Master Chemistry Series}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
 
 \begin{document}
+\thispagestyle{plain}
 
 % Title Header Banner
 \begin{center}
@@ -54,8 +69,10 @@ Nitration is carried out using a ``nitrating mixture'' consisting of concentrate
 \begin{enumerate}[leftmargin=*]
   \item \textbf{Generation of Nitronium Ion ($\mathrm{NO_2^+}$):} Sulfuric acid ($pK_a \approx -3$) is a stronger acid than nitric acid ($pK_a \approx -1.4$). Nitric acid acts as a Br{\o}nsted-Lowry \textbf{base}, accepting a proton on its hydroxyl oxygen:
   \begin{align}
-    \mathrm{HNO_3} + \mathrm{H_2SO_4} &\rightleftharpoons \mathrm{H_2\overset{+}{O}-NO_2} + \mathrm{HSO_4^-}\\
-    \mathrm{H_2\overset{+}{O}-NO_2} + \mathrm{H_2SO_4} &\rightleftharpoons \mathrm{NO_2^+} + \mathrm{H_3O^+} + 2\mathrm{HSO_4^-} \quad (\text{Net: } \mathrm{NO_2^+} \text{ is linear, } sp\text{-hybridized})
+    \mathrm{HNO_3} + \mathrm{H_2SO_4} &\rightleftharpoons \mathrm{H_2\overset{+}{O}-NO_2} + \mathrm{HSO_4^-} \quad (\text{Protonation of nitric acid})\\
+    \mathrm{H_2\overset{+}{O}-NO_2} &\rightleftharpoons \mathrm{NO_2^+} + \mathrm{H_2O} \quad (\text{Heterolytic loss of water})\\
+    \mathrm{H_2O} + \mathrm{H_2SO_4} &\rightleftharpoons \mathrm{H_3O^+} + \mathrm{HSO_4^-} \quad (\text{Protonation of water by second } \mathrm{H_2SO_4})\\
+    \text{Net: } \mathrm{HNO_3} + 2\mathrm{H_2SO_4} &\rightleftharpoons \mathrm{NO_2^+} + \mathrm{H_3O^+} + 2\mathrm{HSO_4^-} \quad (\mathrm{NO_2^+} \text{ is linear, } sp\text{-hybridized})
   \end{align}
   \item \textbf{Electrophilic Attack (RDS):} $\mathrm{C_6H_6} + \mathrm{NO_2^+} \xrightarrow{\text{slow}} [\mathrm{C_6H_6NO_2}]^+$ ($\sigma$-complex).
   \item \textbf{Rearomatization:} $[\mathrm{C_6H_6NO_2}]^+ + \mathrm{HSO_4^-} \xrightarrow{\text{fast}} \mathrm{C_6H_5NO_2} + \mathrm{H_2SO_4}$.
@@ -112,7 +129,7 @@ Direct nitration of aniline with conc. $\mathrm{HNO_3} / \mathrm{H_2SO_4}$ gives
   \item \textbf{Deactivated Ring Immunity:} Rings carrying moderate to strong electron-withdrawing groups ($-M / -I$ like $-\mathrm{NO_2, -CF_3, -SO_3H, -COOH, -COOR, -CN, -CHO}$) do \textbf{not} undergo Friedel-Crafts reactions. Nitrobenzene is routinely used as an inert solvent for Friedel-Crafts reactions!
   \item \textbf{Aniline / Phenol Lewis Acid Failure:} Aniline and phenol do not undergo Friedel-Crafts alkylation/acylation cleanly because the Lewis acid ($\mathrm{AlCl_3}$) forms a strong coordinate complex with the lone pair on $-\mathrm{NH_2}$ or $-\mathrm{OH}$:
   \begin{equation}
-    \mathrm{C_6H_5NH_2} + \mathrm{AlCl_3} \to \mathrm{C_6H_5-\overset{+}{N}H_2-\bar{A}lCl_3}
+    \mathrm{C_6H_5NH_2} + \mathrm{AlCl_3} \to \mathrm{C_6H_5-\overset{+}{N}H_2-\overset{-}{Al}Cl_3}
   \end{equation}
   This converts the powerfully activating $-\mathrm{NH_2}$ into a strongly deactivating $-I$ group ($-\overset{+}{N}\mathrm{H_2-AlCl_3^-}$), completely terminating EAS.
 \end{enumerate}
@@ -185,7 +202,7 @@ The $S_N1$ mechanism operates through a stepwise dissociation-addition mechanism
 \end{align*}
 \textbf{Solvent Acceleration:} Favored by polar protic solvents ($\mathrm{H_2O, MeOH, EtOH, AcOH}$) with high dielectric constant ($\epsilon$), which solvate and stabilize both the carbocation and leaving group anion via hydrogen bonding.\\[4pt]
 \textbf{Stereochemical Outcome (Racemization with Partial Inversion):}
-The leaving group $\mathrm{X}^-$ does not diffuse away instantaneously; it forms an \textbf{intimate ion pair} ($\mathrm{R^+\cdots X^-}$) that partially shields the front face. Consequently, backside attack occurs more frequently than frontside attack, leading to \textbf{net racemization accompanied by partial inversion} ($50-70\%$ inversion $+ 30-50\%$ retention).
+The leaving group $\mathrm{X}^-$ does not diffuse away instantaneously; it forms an \textbf{intimate ion pair} ($\mathrm{R^+\cdots X^-}$) that partially shields the front face. Consequently, backside attack occurs more frequently than frontside attack, leading to \textbf{net partial racemization with predominant inversion} (typically $\approx 50-70\%$ inversion $+ 30-50\%$ retention, corresponding to $60-100\%$ racemic mixture with $0-40\%$ net optical inversion).
 \end{formulabox}
 
 \begin{usecasebox}[Carbocation Rearrangements in $S_N1$]
@@ -205,7 +222,7 @@ The $S_N2$ mechanism occurs in a single, concerted step without any reactive int
   \item The nucleophile approaches the electrophilic carbon from the \textbf{backside} ($180^\circ$ relative to the $\mathrm{C-X}$ leaving bond).
   \item The reaction passes through a single, pentacoordinate, trigonal bipyramidal transition state:
   \begin{equation}
-    \mathrm{Nu}^- + \mathrm{R-X} \xrightarrow{\text{slow}} \left[ \mathrm{Nu}^{\delta-}\cdots \mathrm{CR_2} \cdots \mathrm{X}^{\delta-} \right]^\ddagger \xrightarrow{\text{fast}} \mathrm{Nu-R} + \mathrm{X}^-
+    \mathrm{Nu}^- + \mathrm{R-CH_2-X} \xrightarrow{\text{slow}} \left[ \mathrm{Nu}^{\delta-}\cdots \mathrm{CH_2R} \cdots \mathrm{X}^{\delta-} \right]^\ddagger \xrightarrow{\text{fast}} \mathrm{Nu-CH_2-R} + \mathrm{X}^-
   \end{equation}
   The central carbon is approximately $sp^2$ hybridized with three equatorial bonds, while the nucleophile and leaving group share a collinear $p$-orbital axis at $180^\circ$.
 \end{enumerate}
@@ -232,7 +249,7 @@ Backside attack forces the three equatorial substituents to flip through a plana
 
 \begin{center}
 \scriptsize
-\begin{tabular}{|p{2.6cm}|p{6.4cm}|p{6.4cm}|}
+\begin{tabularx}{\linewidth}{|>{\bfseries\raggedright\arraybackslash}p{2.8cm}|L|L|}
 \hline
 \textbf{Parameter} & \textbf{$S_N1$ Mechanism} & \textbf{$S_N2$ Mechanism} \\
 \hline
@@ -252,7 +269,7 @@ Backside attack forces the three equatorial substituents to flip through a plana
 \hline
 \textbf{Leaving Group Order} & $\mathrm{I^- > Br^- > Cl^- \gg F^-}$ (governed by $\mathrm{C-X}$ bond energy). & $\mathrm{I^- > Br^- > Cl^- \gg F^-}$ (governed by leaving group stability). \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \begin{ncertbox}[$S_N\mathrm{i}$ Mechanism (Substitution Nucleophilic Internal): Thionyl Chloride Reaction]
@@ -284,7 +301,7 @@ $E1$ elimination proceeds through ionization to a planar carbocation, identical 
 \subsection{\texorpdfstring{$E2$}{E2} Elimination: Anti-Periplanar Geometry \& Regioselectivity}
 
 \begin{conceptbox}[Bimolecular Elimination (\texorpdfstring{$E2$}{E2}): Stereoelectronic Rigidity]
-$E2$ elimination occurs in a concerted manner when treated with a strong base (e.g., alcoholic $\mathrm{KOH}, \mathrm{NaOCH_2CH_3}$):
+$E2$ elimination occurs in a concerted manner upon treatment with a strong base (such as alcoholic $\mathrm{KOH}$ or $\mathrm{NaOCH_2CH_3}$):
 \begin{equation}
   \text{Rate} = k[\mathrm{R-X}][\text{Base}] \quad (\text{Order} = 2, \text{Molecularity} = 2)
 \end{equation}
@@ -522,6 +539,100 @@ Because the rate-determining step involves transition from planar $sp^2$ ($120^\
 \textit{Note on $3^\circ$ Alcohols:} Tertiary alcohols (e.g., tert-butanol) do \textbf{not} react via Fischer esterification. Instead, they dehydrate rapidly to alkenes or react via alkyl-oxygen cleavage through an $S_N1$ carbocation intermediate ($\mathrm{R'}^+$).
 \end{usecasebox}
 
+\subsection{Decarboxylation of Carboxylic Acids}
+
+\begin{conceptbox}[Soda-Lime Decarboxylation: Mechanism \& The Carbanion Intermediate]
+Heating sodium or potassium salts of carboxylic acids with soda lime (a dry mixture of $\mathrm{NaOH}$ and $\mathrm{CaO}$ in a $3:1$ mass ratio) eliminates carbon dioxide as carbonate, yielding an alkane with \textbf{one carbon atom less} than the parent carboxylate:
+\begin{equation}
+  \mathrm{R-COONa} + \mathrm{NaOH} \xrightarrow[\Delta]{\mathrm{CaO}} \mathrm{R-H} + \mathrm{Na_2CO_3}
+\end{equation}
+\textbf{Step-by-Step Reaction Mechanism:}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Step 1: Dissociation \& Attack by Base:}
+  Under high thermal fusion ($\approx 600\text{ K}$), the carboxylate anion interacts with hydroxide ion:
+  \begin{equation}
+    \mathrm{R-COO^-} + \mathrm{OH^-} \rightleftharpoons [\mathrm{R-COO\cdots H\cdots O}]^{2-}
+  \end{equation}
+  \item \textbf{Step 2: Heterolytic Cleavage to Free Carbanion [RDS]:}
+  The $\mathrm{C-C}$ bond connecting the alkyl group to the carboxylate carbon undergoes heterolytic cleavage, expelling carbon dioxide (which instantly neutralizes with base to form carbonate) and generating a reactive \textbf{carbanion intermediate} ($\mathrm{R^-}$):
+  \begin{equation}
+    \mathrm{R-COO^-} \xrightarrow{\text{slow, RDS}} \mathbf{R^-} \ (\text{\textbf{Carbanion Intermediate}}) + \mathrm{CO_2} \quad (\mathrm{CO_2} + 2\mathrm{OH^-} \to \mathrm{CO_3^{2-}} + \mathrm{H_2O})
+  \end{equation}
+  \item \textbf{Step 3: Rapid Proton Capture:}
+  The generated carbanion instantly abstracts a proton from water or amphoteric media to form the alkane:
+  \begin{equation}
+    \mathrm{R^-} + \mathrm{H_2O} \xrightarrow{\text{fast}} \mathrm{R-H} + \mathrm{OH^-}
+  \end{equation}
+\end{enumerate}
+\textbf{Rate-Determining Rule:} Because the rate-determining step generates a carbanion ($\mathrm{R^-}$), the rate of soda-lime decarboxylation is \textbf{directly proportional to the stability of the departing carbanion}:
+\begin{equation}
+  \text{Decarboxylation Rate} \propto \text{Carbanion Stability: } \mathrm{CH_3^-} > 1^\circ > 2^\circ > 3^\circ \quad (\text{Reverse of carbocation stability!})
+\end{equation}
+Electron-withdrawing groups ($-I, -M$) that disperse the negative charge tremendously accelerate the rate:
+\begin{equation}
+  \mathrm{O_2N-CH_2-COOH} > \mathrm{NC-CH_2-COOH} > \mathrm{Cl_3C-COOH} > \mathrm{CH_3COOH}
+\end{equation}
+\end{conceptbox}
+
+\begin{formulabox}[Kolbe's Electrolytic Decarboxylation \& Free Radical Coupling]
+When a concentrated aqueous solution of sodium or potassium carboxylate undergoes electrolysis, decarboxylative dimerization occurs at the anode:
+\begin{equation}
+  2\mathrm{R-COO^-K^+} + 2\mathrm{H_2O} \xrightarrow{\text{Electrolysis}} \mathbf{R-R} + 2\mathrm{CO_2}\uparrow + \mathrm{H_2}\uparrow + 2\mathrm{KOH}
+\end{equation}
+\textbf{Electrochemical Mechanism at Electrodes:}
+\begin{itemize}
+  \item \textbf{Anode Oxidation (Decarboxylation \& Radical Dimerization):}
+  \begin{align}
+    2\mathrm{R-COO^-} &\xrightarrow{-2e^-} 2[\mathrm{R-COO^\bullet}] \quad (\text{Acyloxy free radical})\\
+    2[\mathrm{R-COO^\bullet}] &\xrightarrow{\text{fast, RDS}} 2\mathrm{R^\bullet} + 2\mathrm{CO_2}\uparrow \quad (\text{Homolytic cleavage of } \mathrm{C-C} \text{ bond})\\
+    2\mathrm{R^\bullet} &\xrightarrow{\text{fast}} \mathbf{R-R} \quad (\text{Radical-radical coupling})
+  \end{align}
+  \item \textbf{Cathode Reduction (Evolution of $\mathrm{H_2}$ \& Alkalinization):}
+  \begin{equation}
+    2\mathrm{H_2O} + 2e^- \to \mathbf{H_2}\uparrow + 2\mathrm{OH^-}
+  \end{equation}
+\end{itemize}
+\textbf{Diagnostic Electrolytic Phenomena:}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{pH Drift:} As the reaction proceeds, $\mathrm{H^+}$ is evolved as $\mathrm{H_2}$ gas while $\mathrm{OH^-}$ accumulates in solution. Hence, the \textbf{pH of the electrolyte continuously rises} ($\mathrm{pH} > 7$, alkaline).
+  \item \textbf{Gas Ratio at Electrodes:} At the anode, $\mathrm{CO_2}$ and alkane vapor are evolved. At the cathode, pure $\mathrm{H_2}$ gas is evolved. For sodium acetate, the molar ratio of gases is $(\text{Anodic gases} : \text{Cathodic gas}) = (2\mathrm{CO_2} + 1\mathrm{C_2H_6}) : (1\mathrm{H_2}) = 3 : 1$.
+\end{enumerate}
+\end{formulabox}
+
+\begin{trapbox}[Four Cardinal NEET Traps in Decarboxylation Reactions]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{The Methane Exclusion in Kolbe Electrolysis:} Methane ($\mathrm{CH_4}$) \textbf{cannot} be prepared by Kolbe electrolysis because radical coupling requires at least two alkyl radicals ($2\mathrm{CH_3^\bullet} \to \mathrm{CH_3-CH_3}$). Potassium formate ($\mathrm{HCOOK}$) electrolyzed yields $\mathrm{H_2}$ and $\mathrm{CO_2}$, not alkane!
+  \item \textbf{Radical Disproportionation By-Products:} When sodium propanoate ($\mathrm{CH_3CH_2COONa}$) is electrolyzed, the intermediate ethyl radicals ($\mathrm{CH_3CH_2^\bullet}$) undergo both coupling ($n$-butane) and disproportionation:
+  \begin{equation}
+    \mathrm{CH_3CH_2^\bullet} + \mathrm{CH_3CH_2^\bullet} \to \mathrm{CH_2=CH_2} \text{ (Ethene)} + \mathrm{CH_3-CH_3} \text{ (Ethane)}
+  \end{equation}
+  \item \textbf{Dicarboxylic Acid Electrolysis Shortcuts:}
+  \begin{itemize}
+    \item Potassium succinate ($\mathrm{KOOC-CH_2-CH_2-COOK}$) yields \textbf{Ethene} ($\mathrm{CH_2=CH_2}$).
+    \item Potassium maleate or fumarate ($\mathrm{KOOC-CH=CH-COOK}$) yields \textbf{Ethyne} ($\mathrm{CH\equiv CH}$).
+  \end{itemize}
+  \item \textbf{Role of $\mathrm{CaO}$ in Soda Lime:} $\mathrm{CaO}$ is not a reactant. It is used because:
+  \begin{itemize}
+    \item It is intensely hygroscopic and keeps solid $\mathrm{NaOH}$ completely dry (deliquescence prevention).
+    \item It prevents melting/fusion of $\mathrm{NaOH}$ at high temperatures, avoiding corrosion and cracking of the glass tube.
+  \end{itemize}
+\end{enumerate}
+\end{trapbox}
+
+\begin{conceptbox}[Thermal Decarboxylation of \texorpdfstring{$\beta$}{beta}-Keto \& Gem-Dicarboxylic Acids]
+Carboxylic acids possessing a carbonyl group at the $\beta$-carbon ($\beta$-keto acids like acetoacetic acid, and gem-dicarboxylic acids like malonic acid) undergo spontaneous decarboxylation upon gentle heating ($\approx 373-423\text{ K}$) \textbf{without any added base or catalyst}:
+\begin{equation}
+  \mathrm{R-CO-CH_2-COOH} \xrightarrow{\Delta} \mathrm{R-CO-CH_3} + \mathrm{CO_2}\uparrow
+\end{equation}
+\textbf{Pericyclic Mechanism via 6-Membered Cyclic Transition State:}
+The acidic carboxylic proton forms an intramolecular hydrogen bond with the $\beta$-carbonyl oxygen. Heating triggers a concerted 6-electron cyclic electron redistribution:
+\begin{align}
+  \mathrm{R-CO-CH_2-COOH} &\xrightarrow[\text{cyclic 6-membered T.S.}]{\Delta} \mathrm{R-C(OH)=CH_2} \ (\text{Enol}) + \mathrm{CO_2}\uparrow\\
+  &\xrightarrow{\text{tautomerism}} \mathrm{R-CO-CH_3} \ (\text{Stable Methyl Ketone})
+\end{align}
+The enol intermediate undergoes instantaneous, virtually irreversible keto-enol tautomerism to yield the thermodynamically favored \textbf{methyl ketone}.
+\end{conceptbox}
+
 \subsection{Hell-Volhard-Zelinsky (HVZ) Reaction \& \texorpdfstring{$\alpha$}{alpha}-Halogenation}
 
 \begin{conceptbox}[HVZ Mechanism: In Situ Enolization via Acyl Halide]
@@ -738,7 +849,8 @@ Primary acid amides react with bromine in aqueous or ethanolic sodium hydroxide 
 
 \begin{center}
 \scriptsize
-\begin{tabular}{|p{2.6cm}|p{2.8cm}|p{2.0cm}|p{3.4cm}|p{4.2cm}|}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\linewidth}{|>{\bfseries\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}p{2.4cm}|>{\raggedright\arraybackslash}p{1.6cm}|L|L|}
 \hline
 \textbf{Reaction Name} & \textbf{Key Intermediate} & \textbf{Kinetic Order} & \textbf{Regio / Stereochemistry} & \textbf{Critical NEET Exam Pitfall} \\
 \hline
@@ -750,7 +862,7 @@ Primary acid amides react with bromine in aqueous or ethanolic sodium hydroxide 
 \hline
 \textbf{Halogenation of Halobenzenes} & Arenium Ion ($+M$ donor) & 2nd order & Ortho/Para orientation & Halogens are deactivating overall ($-I > +M$) but direct ortho/para. \\
 \hline
-\textbf{$S_N1$ Substitution} & Planar Carbocation ($sp^2$) & 1st order: $k[\mathrm{RX}]$ & Net racemization $+$ partial inversion & Rearrangements occur; hindered substrate ($3^\circ$) and polar protic solvent required. \\
+\textbf{$S_N1$ Substitution} & Planar Carbocation ($sp^2$) & 1st order: $k[\mathrm{RX}]$ & Net partial racemization $+$ excess inversion & Rearrangements occur; hindered substrate ($3^\circ$) and polar protic solvent required. \\
 \hline
 \textbf{$S_N2$ Substitution} & Trigonal Bipyramid T.S. & 2nd order: $k[\mathrm{RX}][\mathrm{Nu}]$ & $100\%$ Walden Inversion & Neopentyl halides are extremely unreactive; polar aprotic solvents accelerate. \\
 \hline
@@ -766,6 +878,10 @@ Primary acid amides react with bromine in aqueous or ethanolic sodium hydroxide 
 \hline
 \textbf{Fischer Esterification} & Tetrahedral Intermediate & Equilibrium & Acyl-oxygen ($\mathrm{R-CO\text{---}OH}$) cleavage & $^{18}\mathrm{O}$ tracer remains in ester; rate hindered by bulkiness on acid/alcohol. \\
 \hline
+\textbf{Soda-Lime Decarboxylation} & Free Carbanion ($\mathrm{R^-}$) & 1st order in carboxylate & Stereochemistry cage dependent & Rate $\propto$ carbanion stability ($\mathrm{CH_3^-} > 1^\circ > 2^\circ > 3^\circ$); $\mathrm{CaO}$ prevents tube fusion and deliquescence. \\
+\hline
+\textbf{Kolbe Electrolysis} & Alkyl Free Radical ($\mathrm{R^\bullet}$) & 2nd order radical coupling & Symmetrical $\mathrm{R-R}$ dimer & Methane cannot be synthesized; solution becomes strongly alkaline ($\mathrm{pH} > 7$) due to cathodic $\mathrm{OH^-}$. \\
+\hline
 \textbf{HVZ Halogenation} & Enol of Acyl Halide & Catalytic in $\mathrm{P}$ & $\alpha$-halogenation only & Must possess $\alpha$-H; red $\mathrm{P}$ generates $\mathrm{PX_3}$ which accelerates enolization. \\
 \hline
 \textbf{Azo Dye Coupling} & Diazonium Cation ($\mathrm{Ar-N_2^+}$) & 2nd order & Para-coupling exclusively & Phenol requires $\mathrm{pH} \approx 9-10$ (orange); Aniline requires $\mathrm{pH} \approx 4-5$ (yellow). \\
@@ -776,7 +892,7 @@ Primary acid amides react with bromine in aqueous or ethanolic sodium hydroxide 
 \hline
 \textbf{Hofmann Degradation} & Alkyl Isocyanate ($\mathrm{R-NCO}$) & 2nd order & Retention of chiral center & Carbon chain decreases by 1; consumes $1\text{ mol } \mathrm{Br_2} : 4\text{ mol } \mathrm{NaOH}$; $1^\circ$ amides only. \\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 \end{document}

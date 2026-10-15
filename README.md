@@ -6,11 +6,12 @@
 ## 1. Project Objective & Standards
 This repository contains a modular, publication-grade LaTeX suite specifically engineered for **NEET UG 2027**. 
 
-### Editorial Standard
+### Editorial Standard & Attribution
 - **Zero AI Bloat:** No filler phrases ("the ultimate", "the best", "one and only"), no narrative padding. Pure high-density technical notes.
-- **Strict NMC Alignment:** Strictly calibrated to the revised National Medical Commission (NMC) syllabus and rationalized NCERT textbooks. Dropped chapters (Solid State, Surface Chemistry, s-Block, Metallurgy, Digestion, Transport in Plants, Mineral Nutrition, etc.) are formally marked and excluded from core prep.
+- **Strict NMC Alignment:** Strictly calibrated to the revised National Medical Commission (NMC) syllabus and rationalized NCERT textbooks. Dropped chapters are formally marked and excluded from core prep.
 - **Rigorous Formula Architecture:** Every formula includes variables, SI units, dimensional formula, conditions of validity, vector forms, edge cases, and high-yield traps.
-- **Corner Attribution:** Every compiled page carries the official corner badge: `Prepared by Satya Prakash`.
+- **Corner Attribution:** Front page carries `Prepared, Compiled & Authored by Satya Prakash`. Interior pages carry `Satya Prakash` in the upper-right corner header only.
+- **Remote GitHub Repository:** [https://github.com/spdedsec/neet-study-materials](https://github.com/spdedsec/neet-study-materials)
 
 ---
 

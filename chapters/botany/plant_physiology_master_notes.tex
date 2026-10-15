@@ -1,0 +1,218 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% Title Header
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Biology Chapter Notes}}\\[6pt]
+  {\Large \textbf{Plant Physiology: Photosynthesis, Respiration \& Growth Regulators}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Rationalized NCERT \& NMC Scope}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{Plant Physiology Master Notes}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Botany Chapter Notes}}
+
+\section{Photosynthesis in Higher Plants}
+
+\begin{conceptbox}[Chloroplast Architecture \& Photosynthetic Pigments]
+Photosynthesis occurs in chloroplasts of green mesophyll cells:
+\begin{itemize}
+  \item \textbf{Membrane System (Grana \& Stroma Lamellae):} Responsible for trapping light energy and synthesizing ATP and NADPH (\textbf{Light Reactions / Photochemical Phase}).
+  \item \textbf{Fluid Stroma:} Contains soluble enzymes for enzymatic reduction of $\mathrm{CO}_2$ into carbohydrates (\textbf{Dark Reactions / Carbon Reactions / Biosynthetic Phase}).
+  \item \textbf{Pigment Separation (Paper Chromatography):}
+  \begin{itemize}
+    \item \textbf{Chlorophyll $a$:} Bright / blue-green; primary reaction center pigment.
+    \item \textbf{Chlorophyll $b$:} Yellow-green; accessory pigment.
+    \item \textbf{Xanthophylls:} Yellow; accessory pigment.
+    \item \textbf{Carotenoids:} Yellow to yellow-orange; accessory pigments; protect chlorophyll $a$ from \textbf{photo-oxidation}.
+  \end{itemize}
+  \item \textbf{Absorption vs Action Spectrum:} Maximum absorption by chlorophyll $a$ occurs in the \textbf{blue} ($400-450\,\mathrm{nm}$) and \textbf{red} ($650-700\,\mathrm{nm}$) regions, showing maximal rate of photosynthesis (first demonstrated by T.W. Engelmann using \textit{Cladophora} and aerobic bacteria).
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Photochemical Phase: Z-Scheme \& Photophosphorylation]
+Light-harvesting complexes (LHC) comprise hundreds of pigment molecules bound to proteins:
+\begin{align*}
+  \textbf{Photosystem I (PS I): } & \text{Reaction center chlorophyll } a \text{ has absorption peak at } \mathbf{700\,\mathrm{nm}} \ (\mathrm{P_{700}}).\\
+  \textbf{Photosystem II (PS II): } & \text{Reaction center chlorophyll } a \text{ has absorption peak at } \mathbf{680\,\mathrm{nm}} \ (\mathrm{P_{680}}).\\
+  \textbf{Photolysis of Water: } & 2\mathrm{H_2O} \xrightarrow[\mathrm{Mn^{2+}, Cl^-}]{\text{OEC}} 4\mathrm{H}^+ + \mathrm{O}_2 \uparrow + 4e^-\\
+  & (\text{Associated with PS II on inner thylakoid membrane}).
+\end{align*}
+\textbf{Comparison of Non-Cyclic vs Cyclic Photophosphorylation:}
+\begin{center}
+\small
+\begin{tabular}{|l|p{6.2cm}|p{6.2cm}|}
+\hline
+\textbf{Parameter} & \textbf{Non-Cyclic Photophosphorylation (Z-Scheme)} & \textbf{Cyclic Photophosphorylation} \\
+\hline
+Photosystems & Both \textbf{PS II and PS I} operate in series & \textbf{Only PS I} is active \\
+Electron Pathway & Non-cyclic (electrons from water reduce $\mathrm{NADP}^+$) & Cyclic (electrons cycle back to $\mathrm{P_{700}}$) \\
+End Products & \textbf{ATP, NADPH and $\mathrm{O}_2$} evolved & \textbf{ATP alone} (no NADPH, no $\mathrm{O}_2$ evolution) \\
+Site in Chloroplast & Grana thylakoids (appressed membrane) & \textbf{Stroma lamellae} (lack PS II and NADP reductase) \\
+Wavelength Needed & Normal sunlight ($\lambda \le 680\,\mathrm{nm}$) & Active when light of $\lambda > 680\,\mathrm{nm}$ is available \\
+\hline
+\end{tabular}
+\end{center}
+\end{formulabox}
+
+\begin{conceptbox}[Chemiosmotic Hypothesis (Peter Mitchell)]
+ATP synthesis in chloroplasts is coupled to the generation of a \textbf{proton gradient across the thylakoid membrane}. Protons accumulate in high concentration inside the \textbf{thylakoid lumen}, dropping lumenal pH:
+\begin{enumerate}
+  \item \textbf{Splitting of water} on inner side of membrane releases $\mathrm{H}^+$ into the lumen.
+  \item \textbf{Plastoquinone (PQ)} acts as a mobile hydrogen carrier; removes protons from stroma and dumps them into lumen.
+  \item \textbf{NADP reductase enzyme} on stroma side removes protons from stroma to reduce $\mathrm{NADP}^+$ to $\mathrm{NADPH} + \mathrm{H}^+$.
+\end{enumerate}
+\textbf{Proton Motive Force:} Protons break the gradient by passing through the transmembrane channel of \textbf{$F_0$ of ATP Synthase} into stroma $\implies$ drives conformational changes in \textbf{$F_1$ headpiece} to catalyze $\mathrm{ADP} + \mathrm{P_i} \to \mathrm{ATP}$.
+\end{conceptbox}
+
+\begin{formulabox}[Biosynthetic Phase: $C_3$ Calvin Cycle Energetics]
+Discovered by Melvin Calvin using radioactive $^{14}\mathrm{C}$ in algal photosynthesis (\textit{Chlorella}).
+\begin{align*}
+  \textbf{Phase 1: Carboxylation: } & \mathrm{RuBP}\ (5\mathrm{C}) + \mathrm{CO_2} \xrightarrow{\mathbf{RuBisCO}} 2 \times 3\text{-PGA}\ (3\mathrm{C})\\
+  \textbf{Phase 2: Reduction: } & 2 \times 3\text{-PGA} + 2\,\mathrm{ATP} + 2\,\mathrm{NADPH} \to 2\,\text{Triose-P} + 2\,\mathrm{ADP} + 2\,\mathrm{NADP}^+\\
+  \textbf{Phase 3: Regeneration: } & \text{Triose-P} + 1\,\mathrm{ATP} \longrightarrow \mathrm{RuBP} + 1\,\mathrm{ADP} + \mathrm{P_i}
+\end{align*}
+\begin{equation}
+  \textbf{Per Single } \mathrm{CO_2} \textbf{ Fixed: } \quad 3\,\mathrm{ATP} + 2\,\mathrm{NADPH}
+\end{equation}
+\begin{equation}
+  \textbf{Per Glucose (6 } \mathrm{CO_2}\textbf{):} \quad 6\,\mathrm{CO_2} + \mathbf{18\,\mathrm{ATP}} + \mathbf{12\,\mathrm{NADPH}} \longrightarrow \mathbf{\mathrm{C_6H_{12}O_6}} + 18\,\mathrm{ADP} + 12\,\mathrm{NADP}^+
+\end{equation}
+\end{formulabox}
+
+\begin{conceptbox}[Hatch-Slack Pathway ($C_4$ Plants) \& Photorespiration ($C_2$ Cycle)]
+\textbf{1. Kranz Anatomy of $C_4$ Leaves (Maize, Sugarcane, Sorghum):}
+\begin{itemize}
+  \item Bundle sheath cells surround vascular bundles in large layers; possess thick walls impermeable to gas exchange, no intercellular spaces, and large agranal chloroplasts with abundant \textbf{RuBisCO} (lack PEPcase).
+  \item Mesophyll cells have granal chloroplasts containing \textbf{PEPcase} (lack RuBisCO).
+  \item Primary $\mathrm{CO}_2$ acceptor is \textbf{Phosphoenolpyruvate (PEP, 3C)}, forming \textbf{Oxaloacetic acid (OAA, 4C)}.
+  \item Malic acid / Aspartic acid transported to bundle sheath cells $\to$ decarboxylated to release $\mathrm{CO}_2$ and pyruvate (3C).
+  \item \textbf{Advantage:} RuBisCO operates at saturated $\mathrm{CO}_2$ concentration, completely \textbf{preventing photorespiration}!
+  \item \textbf{Energetic Cost of $C_4$ Pathway:} Requires \textbf{$30\,\mathrm{ATP} + 12\,\mathrm{NADPH}$} per glucose molecule (extra $12\,\mathrm{ATP}$ to regenerate PEP).
+\end{itemize}
+\textbf{2. Photorespiration ($C_2$ Cycle / Glycolate Pathway):}
+Occurs under high $\mathrm{O}_2$, low $\mathrm{CO}_2$, and high temperature when RuBisCO acts as an \textbf{oxygenase}:
+\begin{equation}
+  \mathrm{RuBP}\ (5\mathrm{C}) + \mathrm{O_2} \xrightarrow{\mathrm{RuBisCO}} \text{Phosphoglycerate}\ (3\mathrm{C}) + \mathbf{Phosphoglycolate}\ (2\mathrm{C})
+\end{equation}
+Operates sequentially in three organelles: \textbf{Chloroplast $\to$ Peroxisome $\to$ Mitochondria}. A wasteful process that yields \textbf{neither ATP nor sugar}, but consumes ATP and releases $\mathrm{CO}_2$!
+\end{conceptbox}
+
+\begin{trapbox}[NEET Trap: Blackman's Law \& Factors Affecting Photosynthesis]
+\begin{itemize}
+  \item \textbf{Blackman's Law of Limiting Factors (1905):} If a chemical process is affected by more than one factor, its rate is determined by the factor which is nearest to its minimal value.
+  \item \textbf{$\mathrm{CO}_2$ Saturation Levels:} $C_4$ plants saturate at \textbf{$360\,\mu\mathrm{L/L}$}; $C_3$ plants saturate only beyond \textbf{$450\,\mu\mathrm{L/L}$}. Because current atmospheric $\mathrm{CO}_2$ is $\approx 400\,\mathrm{ppm}$, $\mathrm{CO}_2$ is the major limiting factor for $C_3$ plants (greenhouse crops like tomatoes and bell peppers show enhanced productivity in $\mathrm{CO}_2$-enriched atmospheres).
+  \item \textbf{Light Saturation:} Occurs at \textbf{10\% of full sunlight}. Except for plants in shade or dense forests, light is rarely a limiting factor in nature.
+\end{itemize}
+\end{trapbox}
+
+\section{Respiration in Plants}
+
+\begin{formulabox}[Glycolysis (EMP Pathway) \& Link Reaction]
+Discovered by Gustav Embden, Otto Meyerhof, and J. Parnas. Occurs in the \textbf{cytoplasm} of all living cells; universal to both aerobic and anaerobic organisms.
+\begin{align*}
+  \textbf{Phase 1: Preparatory: } & \text{Glucose} \xrightarrow{1\,\text{ATP}} \text{G-6-P} \to \text{F-6-P} \xrightarrow{1\,\text{ATP}} \text{F-1,6-BP} \quad (\text{Invests } 2\,\mathrm{ATP})\\
+  \textbf{Phase 2: Cleavage: } & \text{F-1,6-BP}\ (6\mathrm{C}) \xrightarrow{\text{Aldolase}} \text{PGAL}\ (3\mathrm{C}) \xrightleftharpoons{\text{TPI}} \text{DHAP}\ (3\mathrm{C})\\
+  \textbf{Phase 3: Payoff Phase (x2): } & 2\,\text{PGAL} + 2\,\mathrm{NAD}^+ \to 2 \times 1,3\text{-BPGA} + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+}\\
+  & 2 \times 1,3\text{-BPGA} + 2\,\mathrm{ADP} \to 2 \times 3\text{-PGA} + \mathbf{2\,\mathrm{ATP}} \ (\text{SLP})\\
+  & 2\,\text{PEP} + 2\,\mathrm{ADP} \xrightarrow{\text{PK}} 2\,\text{Pyruvate} + \mathbf{2\,\mathrm{ATP}} \ (\text{SLP})
+\end{align*}
+\begin{equation}
+  \textbf{Net Glycolysis Yield:} \quad \mathbf{2\,\text{Pyruvate}} + \mathbf{2\,\mathrm{ATP}} + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+} \quad (\text{No } \mathrm{CO}_2 \text{ or } \mathrm{O}_2)
+\end{equation}
+\textbf{The Link Reaction (Oxidative Decarboxylation of Pyruvate):}
+Occurs in the \textbf{mitochondrial matrix}, catalyzed by \textit{pyruvate dehydrogenase} multienzyme complex (requires $\mathrm{Mg}^{2+}, \text{TPP}, \text{Lipoamide}, \mathrm{NAD}^+, \text{CoA}$):
+\begin{equation}
+  2\,\text{Pyruvate}\ (3\mathrm{C}) + 2\,\mathrm{CoA} + 2\,\mathrm{NAD}^+ \longrightarrow \mathbf{2\,\text{Acetyl-CoA}}\ (2\mathrm{C}) + \mathbf{2\,\mathrm{CO_2}} \uparrow + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+}
+\end{equation}
+\end{formulabox}
+
+\begin{formulabox}[Krebs Cycle (TCA Cycle) \& Electron Transport System (ETS)]
+\textbf{1. Tricarboxylic Acid (TCA) Cycle (Hans Krebs, 1937):}
+Occurs in the \textbf{mitochondrial matrix}:
+\begin{align*}
+  \text{Per Acetyl-CoA (2C): } & \mathrm{Acetyl\text{-}CoA} + \mathrm{OAA}\ (4\mathrm{C}) + \mathrm{H_2O} \xrightarrow{\text{Citrate Synthase}} \text{Citrate}\ (6\mathrm{C}) + \mathrm{CoA}\\
+  \text{Decarboxylations: } & \text{Isocitrate} \to \alpha\text{-ketoglutarate}\ (5\mathrm{C}) + \mathrm{CO_2} + \mathrm{NADH}\\
+  & \alpha\text{-ketoglutarate} \to \text{Succinyl-CoA}\ (4\mathrm{C}) + \mathrm{CO_2} + \mathrm{NADH}\\
+  \text{Substrate-Level: } & \text{Succinyl-CoA} + \mathrm{GDP} + \mathrm{P_i} \to \text{Succinate} + \mathbf{1\,\mathrm{GTP / ATP}} + \mathrm{CoA}\\
+  \text{Oxidations: } & \text{Succinate} \to \text{Fumarate} + \mathbf{1\,\mathrm{FADH_2}} \ (\text{Succinate dehydrogenase in inner membrane})\\
+  & \text{Malate} + \mathrm{NAD}^+ \to \text{OAA} + \mathbf{1\,\mathrm{NADH} + \mathrm{H}^+}
+\end{align*}
+\begin{equation}
+  \textbf{Net Yield of TCA Cycle (2 Acetyl-CoA per Glucose):} \quad \mathbf{4\,\mathrm{CO_2}} + \mathbf{6\,\mathrm{NADH}} + \mathbf{2\,\mathrm{FADH_2}} + \mathbf{2\,\mathrm{ATP / GTP}}
+\end{equation}
+\textbf{2. Inner Mitochondrial Membrane ETS Complexes:}
+\begin{itemize}
+  \item \textbf{Complex I:} \textbf{NADH dehydrogenase} (contains FMN and Fe-S centers); transfers electrons from NADH to Ubiquinone (CoQ).
+  \item \textbf{Complex II:} \textbf{Succinate dehydrogenase} (contains $\mathrm{FAD}$ and Fe-S centers); transfers electrons from succinate to Ubiquinone.
+  \item \textbf{Complex III:} \textbf{Cytochrome $bc_1$ complex} (Cytochrome $b$, Fe-S, Cytochrome $c_1$).
+  \item \textbf{Mobile Electron Carriers:} \textbf{Ubiquinone} (in lipid bilayer) and \textbf{Cytochrome $c$} (small soluble protein attached to outer surface of inner membrane).
+  \item \textbf{Complex IV:} \textbf{Cytochrome $c$ oxidase} (contains Cytochrome $a, a_3$ and two copper centers, $\mathrm{Cu_A}$ and $\mathrm{Cu_B}$); reduces terminal electron acceptor $\mathrm{O}_2$:
+  \begin{equation}
+    \frac{1}{2}\mathrm{O_2} + 2\mathrm{H}^+ + 2e^- \longrightarrow \mathrm{H_2O} \quad (\text{Metabolic water})
+  \end{equation}
+  \item \textbf{Complex V:} \textbf{ATP Synthase ($F_0-F_1$ complex)}. Pass of $2\mathrm{H}^+$ through $F_0$ produces $1\,\mathrm{ATP}$.
+\end{itemize}
+\begin{equation}
+  \textbf{Total Yield per Glucose:} \quad \mathbf{36 \text{ or } 38\,\mathrm{ATP}} \ (\text{or } 30-32\,\mathrm{ATP} \text{ by modern P/O})
+\end{equation}
+\end{formulabox}
+
+\begin{formulabox}[Respiratory Quotient (RQ) Formulations]
+\begin{equation}
+  \mathrm{RQ} = \frac{\text{Volume of } \mathrm{CO_2} \text{ evolved}}{\text{Volume of } \mathrm{O_2} \text{ consumed}}
+\end{equation}
+\begin{align*}
+  \textbf{Carbohydrates (Glucose): } & \mathrm{C_6H_{12}O_6} + 6\mathrm{O_2} \to 6\mathrm{CO_2} + 6\mathrm{H_2O} \implies \mathbf{\mathrm{RQ} = 1.0}\\
+  \textbf{Fats (Tripalmitin): } & 2\mathrm{C_{51}H_{98}O_6} + 145\mathrm{O_2} \to 102\mathrm{CO_2} + 98\mathrm{H_2O} \implies \mathbf{\mathrm{RQ} = \frac{102}{145} = 0.7}\\
+  \textbf{Proteins: } & \mathbf{\mathrm{RQ} \approx 0.9}\\
+  \textbf{Organic Acids (Malic Acid): } & \mathrm{C_4H_6O_5} + 3\mathrm{O_2} \to 4\mathrm{CO_2} + 3\mathrm{H_2O} \implies \mathbf{\mathrm{RQ} = \frac{4}{3} = 1.33 > 1}\\
+  \textbf{Anaerobic Respiration: } & \mathrm{C_6H_{12}O_6} \to 2\mathrm{C_2H_5OH} + 2\mathrm{CO_2} \implies \mathbf{\mathrm{RQ} = \frac{2}{0} = \infty}
+\end{align*}
+\end{formulabox}
+
+\section{Plant Growth Regulators (Phytohormones)}
+
+\begin{conceptbox}[Five Classic Phytohormone Classes: Functions \& Applications]
+\begin{center}
+\scriptsize
+\begin{tabular}{|p{1.8cm}|p{2.6cm}|p{9.4cm}|}
+\hline
+\textbf{Hormone Class} & \textbf{Discovery / Chemistry} & \textbf{Key Physiological Functions \& Agricultural Applications} \\
+\hline
+\textbf{Auxins} & Charles \& Francis Darwin (\textit{Phalaris} coleoptile); isolated by F.W. Went from \textit{Avena} coleoptile tip. Natural: IAA, IBA; Synthetic: NAA, 2,4-D. & \begin{minipage}[t]{9.4cm}\begin{itemize}[leftmargin=*,nosep] \item Promotes \textbf{apical dominance} (growing apical bud inhibits lateral buds; removal / decapitation induces bushy hedge). \item Initiates root formation in stem cuttings. \item Promotes flowering in pineapples. Prevents premature fruit/leaf drop, promotes abscission of older leaves. \item \textbf{2,4-D} is widely used as a selective weedicide / herbicide to eradicate dicotyledonous weeds without affecting monocot plants. \item Induces parthenocarpy in tomatoes. \end{itemize}\end{minipage} \\
+\hline
+\textbf{Gibberellins} & E. Kurosawa discovered in \textit{Gibberella fujikuroi} (foolish seedling / \textit{bakanae} disease of rice). $>100$ known ($\mathrm{GA}_1, \mathrm{GA}_2, \mathbf{\mathrm{GA}_3}$ most studied). Terpene nature. & \begin{minipage}[t]{9.4cm}\begin{itemize}[leftmargin=*,nosep] \item Causes elongation of internodes; increases length of grape stalks and elongates apples. \item \textbf{Bolting} (internode elongation prior to flowering) in rosette plants like cabbage and beet. \item Increases sugarcane stem length, boosting yield by up to 20 tonnes per acre. \item Accelerates malting process in brewing industry. \end{itemize}\end{minipage} \\
+\hline
+\textbf{Cytokinins} & F. Skoog discovered kinetin from autoclaved herring sperm DNA; Letham isolated \textbf{Zeatin} from corn kernels. Aminopurine derivative. & \begin{minipage}[t]{9.4cm}\begin{itemize}[leftmargin=*,nosep] \item Promotes rapid cell division; high cytokinin-to-auxin ratio promotes shoot differentiation. \item Overcomes apical dominance; promotes nutrient mobilization and delays leaf senescence (\textbf{Richmond-Lang effect}). \item Promotes adventitious shoot formation and lateral shoot growth. \end{itemize}\end{minipage} \\
+\hline
+\textbf{Ethylene} & H.H. Cousins established volatile substance from ripened oranges ripened bananas. Only \textbf{gaseous hormone}. & \begin{minipage}[t]{9.4cm}\begin{itemize}[leftmargin=*,nosep] \item Accelerates fruit ripening accompanied by a sudden rise in respiration rate (\textbf{Respiratory Climacteric}). \item Source compound: \textbf{Ethephon} (releases ethylene slowly). \item Promotes senescence and abscission of plant organs (leaves, flowers). \item Promotes root growth and root hair formation, increasing absorption surface area. \item Breaks seed and bud dormancy (initiates germination in peanut seeds, sprouting of potato tubers). \item Promotes female flowers in cucumbers to increase yield. \end{itemize}\end{minipage} \\
+\hline
+\textbf{Abscisic Acid (ABA)} & Discovered as Inhibitor-$\beta$, Abscission II, and Dormin. Sesquiterpene derivative; acts as general growth inhibitor. & \begin{minipage}[t]{9.4cm}\begin{itemize}[leftmargin=*,nosep] \item Known as the \textbf{Stress Hormone}: stimulates rapid closure of stomata during water stress / drought. \item Induces and maintains \textbf{seed dormancy}, preventing vivipary and premature sprouting. \item Acts as a direct antagonist to gibberellins (anti-GA). \end{itemize}\end{minipage} \\
+\hline
+\end{tabular}
+\end{center}
+\end{conceptbox}
+
+\begin{ncertbox}[Photoperiodism \& Vernalization Highlights]
+\begin{itemize}
+  \item \textbf{Photoperiodism (Garner \& Allard):} Response of plants to periods of day/night.
+  \begin{itemize}
+    \item \textbf{Short-Day Plants (SDP):} Flower when day length is less than critical photoperiod (e.g., Tobacco, Soyabean, Chrysanthemum).
+    \item \textbf{Long-Day Plants (LDP):} Flower when day length exceeds critical photoperiod (e.g., Wheat, Radish, Spinach).
+    \item \textbf{Day-Neutral Plants (DNP):} No correlation between light exposure and flowering (e.g., Tomato, Sunflower, Pea).
+    \item \textbf{Site of Perception:} The site of perception of light/dark duration is the \textbf{leaves}. The hypothetical hormonal substance responsible for flowering is \textbf{Florigen} (migrates from leaves to shoot apices).
+  \end{itemize}
+  \item \textbf{Vernalization:} Quantitative or qualitative dependence of flowering on low-temperature exposure ($1-6^\circ\mathrm{C}$); prevents precocious reproductive development late in the growing season (e.g., winter varieties of wheat, barley, rye; biennials like sugarbeet, cabbage, carrot). Perceived by the \textbf{shoot apical meristem}.
+\end{itemize}
+\end{ncertbox}
+
+\end{document}

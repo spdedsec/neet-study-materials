@@ -1,0 +1,361 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% --- Document Header Banner ---
+\begin{center}
+  {\huge\bfseries\color{primarydark} NEET UG 2027: Chemistry Formula Compendium}\\[6pt]
+  {\Large\bfseries\color{accentblue} Module 03: Inorganic Chemistry Master Compendium}\\[8pt]
+  {\normalsize\textbf{Prepared, Compiled \& Authored by Satya Prakash} \quad\textbar\quad \textbf{Subject:} Inorganic Chemistry (Units 3, 9, 10, 11 \& 12)}\\[4pt]
+  {\footnotesize\color{gray} Strict NCERT \& NMC Alignment \quad\textbar\quad Complete Mathematical Variations, Use-Cases \& Traps}
+\end{center}
+\vspace{-2pt}
+\hrule height 1.2pt
+\vspace{8pt}
+
+% =========================================================================
+% SECTION 1: PERIODIC PROPERTIES \& TRENDS
+% =========================================================================
+\section{Classification of Elements \& Periodicity (Unit 9)}
+
+\subsection{Effective Nuclear Charge \& Atomic Radii Trends}
+
+\begin{formulabox}[Slater's Rules, Screening Constant \& Radius Scaling]
+\begin{align}
+  Z_{\text{eff}} &= Z - \sigma && [Z = \text{Atomic Number}, \quad \sigma = \text{Screening / Shielding Constant}] \\
+  \text{Shielding Power Order} &: s > p > d > f && \text{[$f$- and $d$-electrons provide extraordinarily POOR shielding]} \\
+  r_{\text{cation}} &< r_{\text{atom}} < r_{\text{anion}} && \text{[$r_{\text{isoelectronic}} \propto \frac{1}{Z} \implies \text{Size: } \text{O}^{2-} > \text{F}^- > \text{Na}^+ > \text{Mg}^{2+} > \text{Al}^{3+}$]}
+\end{align}
+\end{formulabox}
+
+\subsection{Ionization Enthalpy, Electron Gain Enthalpy \& Electronegativity}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c L}
+\toprule
+\textbf{Periodic Property} & \textbf{General Trend Across Period / Down Group} & \textbf{High-Yield NEET Exceptions \& Anomalies} \\
+\midrule
+\textbf{Ionization Enthalpy (IE)} & Across: Increases \quad Down: Decreases & $\text{Be} > \text{B}$ ($2s^2$ fully filled vs $2p^1$); $\text{N} > \text{O}$ ($2p^3$ half filled vs $2p^4$); $\text{Mg} > \text{Al}$; $\text{P} > \text{S}$; $\text{Tl} > \text{In}$ (Lanthanoid contraction). \\
+\textbf{Electron Gain Enthalpy ($\Delta_{\text{eg}}H$)} & Across: More Negative \quad Down: Less Negative & $\text{Cl} > \text{F}$ and $\text{S} > \text{O}$! (Compact $2p$ shell in F and O creates intense inter-electronic repulsions, lowering incoming electron affinity). \\
+\textbf{Electronegativity ($\chi$)} & Across: Increases \quad Down: Decreases & Most electronegative: $\text{F} (4.0) > \text{O} (3.5) > \text{N} (3.0) \approx \text{Cl} (3.0) > \text{Br} (2.8) > \text{I} \approx \text{C} \approx \text{S} (2.5)$. \\
+\bottomrule
+\end{tabularx}
+\caption{Systematic Summary of Periodic Trends and Anomaly Anchors.}
+\end{table}
+
+\begin{formulabox}[Electronegativity Scales \& Dipole Moment Formulations]
+\begin{align}
+  \chi_{\text{Mulliken}} &= \frac{\text{IE} + \text{EA}}{2}\text{ (in eV)}, \qquad \chi_{\text{Pauling}} = \frac{\chi_{\text{Mulliken}}}{2.8} = \frac{\text{IE} + \text{EA}}{5.6} \\
+  \mu &= q \times d \quad [1\,\text{Debye (D)} = 3.33564\times 10^{-30}\,\si{C.m}], \qquad \%\,\text{Ionic Character} = \frac{\mu_{\text{observed}}}{\mu_{\text{calculated}}} \times 100\% \\
+  \mu_{\text{net}} &= \sqrt{\mu_1^2 + \mu_2^2 + 2\mu_1\mu_2\cos\theta} \implies \mu_{\text{ortho}} > \mu_{\text{meta}} > \mu_{\text{para}} = 0 \quad (\text{for identical substituents})
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Periodic Traps: $\text{NH}_3$ vs $\text{NF}_3$ Dipole Moment \& Electron Gain Enthalpy]
+\begin{itemize}
+  \item \textbf{Dipole Moment Comparison ($\mu_{\text{NH}_3} > \mu_{\text{NF}_3}$):} In $\text{NH}_3$, bond dipoles of three $\text{N}-\text{H}$ bonds reinforce the lone-pair dipole ($\mu = 1.47\,\si{D}$). In $\text{NF}_3$, the highly electronegative fluorines pull electron density away, opposing the lone-pair dipole ($\mu = 0.23\,\si{D}$).
+  \item \textbf{Most Negative $\Delta_{\text{eg}}H$:} The element with the \textbf{most negative electron gain enthalpy} in the entire periodic table is \textbf{Chlorine ($\text{Cl}$)}, NOT Fluorine ($\text{Cl}: -349\,\si{kJ.mol^{-1}}$ vs $\text{F}: -328\,\si{kJ.mol^{-1}}$).
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 2: CHEMICAL BONDING \& MOLECULAR STRUCTURE
+% =========================================================================
+\section{Chemical Bonding \& Molecular Structure (Unit 3)}
+
+\subsection{Formal Charge \& VSEPR Theory Master Geometry Table}
+
+\begin{formulabox}[Formal Charge Equation \& Steric Number Rule]
+\begin{align}
+  \text{Formal Charge (FC)} &= V - L - \frac{1}{2}S && [V = \text{Valence } e^-, L = \text{Lone pair } e^-, S = \text{Shared } e^-] \\
+  \text{Steric Number (SN)} &= (\text{Number of }\sigma\text{-bonds}) + (\text{Number of localized lone pairs on central atom})
+\end{align}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{c c c c L L}
+\toprule
+\textbf{SN} & \textbf{Hybridization} & \textbf{Bond Pairs} & \textbf{Lone Pairs} & \textbf{Molecular Geometry / Shape} & \textbf{High-Yield NEET Examples} \\
+\midrule
+2 & $sp$ & 2 & 0 & Linear ($180^\circ$) & $\text{BeCl}_2, \text{CO}_2, \text{HCN}, \text{C}_2\text{H}_2$ \\
+3 & $sp^2$ & 3 & 0 & Trigonal Planar ($120^\circ$) & $\text{BF}_3, \text{BCl}_3, \text{SO}_3, \text{NO}_3^-$ \\
+3 & $sp^2$ & 2 & 1 & Bent / V-Shaped ($< 120^\circ$) & $\text{SO}_2, \text{O}_3, \text{NO}_2^-$ \\
+4 & $sp^3$ & 4 & 0 & Tetrahedral ($109.5^\circ$) & $\text{CH}_4, \text{CCl}_4, \text{NH}_4^+, \text{SO}_4^{2-}$ \\
+4 & $sp^3$ & 3 & 1 & Trigonal Pyramidal ($107^\circ$) & $\text{NH}_3, \text{PCl}_3, \text{H}_3\text{O}^+, \text{ClO}_3^-$ \\
+4 & $sp^3$ & 2 & 2 & Bent / Angular ($104.5^\circ$) & $\text{H}_2\text{O}, \text{H}_2\text{S}, \text{OF}_2, \text{SCl}_2$ \\
+5 & $sp^3d$ & 5 & 0 & Trigonal Bipyramidal & $\text{PCl}_5, \text{PF}_5, \text{SbCl}_5$ \\
+5 & $sp^3d$ & 4 & 1 & Seesaw / Distorted Tetrahedral & $\text{SF}_4, \text{SeF}_4$ \\
+5 & $sp^3d$ & 3 & 2 & T-Shaped & $\text{ClF}_3, \text{BrF}_3, \text{ICl}_3$ \\
+5 & $sp^3d$ & 2 & 3 & Linear & $\text{XeF}_2, \text{I}_3^-, \text{ICl}_2^-$ \\
+6 & $sp^3d^2$ & 6 & 0 & Octahedral ($90^\circ$) & $\text{SF}_6, [\text{AlF}_6]^{3-}, \text{PF}_6^-$ \\
+6 & $sp^3d^2$ & 5 & 1 & Square Pyramidal & $\text{BrF}_5, \text{IF}_5, \text{XeOF}_4$ \\
+6 & $sp^3d^2$ & 4 & 2 & Square Planar & $\text{XeF}_4, [\text{ICl}_4]^-$ \\
+7 & $sp^3d^3$ & 7 & 0 & Pentagonal Bipyramidal & $\text{IF}_7$ \\
+7 & $sp^3d^3$ & 6 & 1 & Distorted Octahedral & $\text{XeF}_6$ \\
+\bottomrule
+\end{tabularx}
+\caption{Master VSEPR Geometries, Hybridization and Lone Pair Partitions.}
+\end{table}
+
+\begin{usecasebox}[Bent's Rule Formulations in Trigonal Bipyramidal ($sp^3d$)]
+\begin{itemize}
+  \item \textbf{Bent's Postulate:} More electronegative substituents prefer hybrid orbitals having \textbf{less $s$-character} (Axial bonds in TBP: pure $pd$ character, longer and weaker).
+  \item \textbf{Lone Pair Preference:} Lone pairs and electropositive substituents prefer hybrid orbitals having \textbf{more $s$-character} (Equatorial bonds in TBP: $sp^2$ character, shorter and stronger).
+  \item \textbf{Application to $\text{PCl}_5$ and $\text{ClF}_3$:} In gaseous $\text{PCl}_5$, axial $\text{P}-\text{Cl}$ bonds ($214\,\si{pm}$) are longer than equatorial bonds ($202\,\si{pm}$). In solid state, it dissociates into ionic $[\text{PCl}_4]^+ [sp^3]$ and $[\text{PCl}_6]^- [sp^3d^2]$.
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Molecular Orbital Theory (MOT)}
+
+\begin{formulabox}[Molecular Orbital Energy Levels, Bond Order \& Magnetic State]
+\begin{align}
+  \text{Bond Order (BO)} &= \frac{1}{2}(N_b - N_a), \qquad \text{Stability} \propto \text{BO} \propto \text{Bond Dissociation Energy} \propto \frac{1}{\text{Bond Length}}
+\end{align}
+\textbf{Case 1: Total Electrons $\le 14$ ($B_2, C_2, N_2$ with $sp$-mixing):}
+\begin{equation}
+  \sigma 1s < \sigma^* 1s < \sigma 2s < \sigma^* 2s < (\pi 2p_x = \pi 2p_y) < \sigma 2p_z < (\pi^* 2p_x = \pi^* 2p_y) < \sigma^* 2p_z
+\end{equation}
+\textbf{Case 2: Total Electrons $> 14$ ($O_2, F_2$ without $sp$-mixing):}
+\begin{equation}
+  \sigma 1s < \sigma^* 1s < \sigma 2s < \sigma^* 2s < \sigma 2p_z < (\pi 2p_x = \pi 2p_y) < (\pi^* 2p_x = \pi^* 2p_y) < \sigma^* 2p_z
+\end{equation}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c c c}
+\toprule
+\textbf{Species} & \textbf{Total Electrons} & \textbf{Configuration Key} & \textbf{Bond Order} & \textbf{Magnetic Behaviour} \\
+\midrule
+$\text{N}_2$ & 14 & $(\pi 2p)^4 (\sigma 2p_z)^2$ & $3.0$ & Diamagnetic \\
+$\text{N}_2^+$ & 13 & $(\pi 2p)^4 (\sigma 2p_z)^1$ & $2.5$ & Paramagnetic (1 unpaired $e^-$) \\
+$\text{O}_2^{2+}$ & 14 & $(\sigma 2p_z)^2 (\pi 2p)^4$ & $3.0$ & Diamagnetic \\
+$\text{O}_2^+$ & 15 & $(\pi^* 2p)^1$ & $2.5$ & Paramagnetic (1 unpaired $e^-$) \\
+$\text{O}_2$ & 16 & $(\pi^* 2p_x)^1 (\pi^* 2p_y)^1$ & $2.0$ & Paramagnetic (2 unpaired $e^-$) \\
+$\text{O}_2^-$ (Superoxide) & 17 & $(\pi^* 2p)^3$ & $1.5$ & Paramagnetic (1 unpaired $e^-$) \\
+$\text{O}_2^{2-}$ (Peroxide) & 18 & $(\pi^* 2p)^4$ & $1.0$ & Diamagnetic \\
+$\text{C}_2$ & 12 & $(\pi 2p)^4$ & $2.0$ & Diamagnetic (Double bond consists of \textbf{two $\pi$-bonds}!) \\
+\bottomrule
+\end{tabularx}
+\caption{Molecular Orbital Configurations, Bond Orders and Paramagnetism for Homonuclear Diatomics.}
+\end{table}
+
+\newpage
+
+% =========================================================================
+% SECTION 3: COORDINATION COMPOUNDS
+% =========================================================================
+\section{Coordination Compounds (Unit 12)}
+
+\subsection{Werner's Theory, Ligands \& Chelate Effect}
+
+\begin{formulabox}[Primary vs Secondary Valency \& Chelate Stability]
+\begin{align}
+  \text{Primary Valency} &= \text{Oxidation state of metal; ionizable; non-directional} \\
+  \text{Secondary Valency} &= \text{Coordination number of metal; non-ionizable; directional (governs geometry)} \\
+  \text{Chelate Effect} &: \text{Polydentate ligands form stable ring structures} \implies \Delta S^\circ > 0 \implies \Delta G^\circ < 0
+\end{align}
+\end{formulabox}
+
+\subsection{Crystal Field Theory (CFT) \& Splitting Formulations}
+
+\begin{formulabox}[Octahedral \& Tetrahedral Crystal Field Splitting Parameters]
+\begin{align}
+  \Delta_t &= \frac{4}{9}\Delta_o \implies \Delta_t < P \quad (\text{Tetrahedral complexes are ALWAYS high spin!}) \\
+  \text{CFSE}_{\text{octahedral}} &= \left(-0.4\,n_{t_{2g}} + 0.6\,n_{e_g}\right)\Delta_o + m P && [P = \text{Electron pairing energy}] \\
+  \text{Spectrochemical Series} &: \text{I}^- < \text{Br}^- < \text{S}^{2-} < \text{SCN}^- < \text{Cl}^- < \text{N}_3^- < \text{F}^- < \text{OH}^- < \text{C}_2\text{O}_4^{2-} \approx \text{H}_2\text{O} \\
+  &< \text{NCS}^- < \text{EDTA}^{4-} < \text{NH}_3 \approx \text{py} < \text{en} < \text{bpy} < \text{phen} < \text{NO}_2^- < \text{PPh}_3 < \text{CN}^- \approx \text{CO}
+\end{align}
+\textbf{High-Spin vs Low-Spin Splitting Conditions for Octahedral Complexes:}
+\begin{align}
+  \Delta_o &> P \implies \text{Strong field ligand; pairing occurs in } t_{2g} \implies \text{Low-Spin / Inner Orbital Complex} \\
+  \Delta_o &< P \implies \text{Weak field ligand; electrons occupy } e_g \text{ before pairing} \implies \text{High-Spin / Outer Orbital Complex}
+\end{align}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c c c}
+\toprule
+\textbf{Ion Configuration} & \textbf{Weak Field ($\Delta_o < P$)} & \textbf{CFSE (Weak)} & \textbf{Strong Field ($\Delta_o > P$)} & \textbf{CFSE (Strong)} \\
+\midrule
+$d^4$ ($\text{Cr}^{2+}, \text{Mn}^{3+}$) & $t_{2g}^3 e_g^1$ ($n=4$) & $-0.6\,\Delta_o$ & $t_{2g}^4 e_g^0$ ($n=2$) & $-1.6\,\Delta_o + P$ \\
+$d^5$ ($\text{Fe}^{3+}, \text{Mn}^{2+}$) & $t_{2g}^3 e_g^2$ ($n=5$) & $0\,\Delta_o$ & $t_{2g}^5 e_g^0$ ($n=1$) & $-2.0\,\Delta_o + 2P$ \\
+$d^6$ ($\text{Fe}^{2+}, \text{Co}^{3+}$) & $t_{2g}^4 e_g^2$ ($n=4$) & $-0.4\,\Delta_o$ & $t_{2g}^6 e_g^0$ ($n=0$) & $-2.4\,\Delta_o + 2P$ \\
+$d^7$ ($\text{Co}^{2+}$) & $t_{2g}^5 e_g^2$ ($n=3$) & $-0.8\,\Delta_o$ & $t_{2g}^6 e_g^1$ ($n=1$) & $-1.8\,\Delta_o + P$ \\
+\bottomrule
+\end{tabularx}
+\caption{Crystal Field Electronic Configurations and CFSE Formulations for $3d^4 - 3d^7$ Octahedral Ions.}
+\end{table}
+
+\subsection{Stereoisomerism in Coordination Complexes}
+
+\begin{usecasebox}[Geometrical and Optical Isomerism Rules]
+\begin{itemize}
+  \item \textbf{Square Planar Complexes ($CN=4$):}
+  \begin{itemize}
+    \item $[MA_2B_2]$: Exhibits 2 geometrical isomers (cis and trans).
+    \item $[MABCD]$: Exhibits 3 geometrical isomers (2 cis, 1 trans).
+    \item Square planar complexes \textbf{never exhibit optical isomerism} because the molecular plane is an inherent plane of symmetry ($\sigma$).
+  \end{itemize}
+  \item \textbf{Octahedral Complexes ($CN=6$):}
+  \begin{itemize}
+    \item $[MA_4B_2]$: Exhibits 2 geometrical isomers (cis and trans). Both are optically inactive.
+    \item $[MA_3B_3]$: Exhibits 2 geometrical isomers (facial \textit{fac} and meridional \textit{mer}). Both are optically inactive.
+    \item $[M(AA)_3]$ (e.g. $[Co(en)_3]^{3+}$): Exhibits 0 geometrical, but exists as a pair of \textbf{optical enantiomers} ($d$ and $l$).
+    \item $[M(AA)_2B_2]$ (e.g. $[Co(en)_2Cl_2]^+$): \textit{cis}-isomer is chiral and optically active ($d/l$ pair); \textit{trans}-isomer has plane of symmetry and is \textbf{optically inactive}.
+  \end{itemize}
+\end{itemize}
+\end{usecasebox}
+
+\newpage
+
+% =========================================================================
+% SECTION 4: d- AND f-BLOCK ELEMENTS
+% =========================================================================
+\section{The $d$- and $f$-Block Elements (Unit 11)}
+
+\subsection{Transition Metal Trends \& Variable Oxidation States}
+
+\begin{formulabox}[Magnetic Moment, Enthalpy of Atomization \& Electrode Potentials]
+\begin{align}
+  \mu_{\text{spin-only}} &= \sqrt{n(n + 2)}\,\si{BM} && [n = \text{unpaired } d\text{-electrons; } n=1: 1.73, n=2: 2.83, n=3: 3.87, n=5: 5.92\,\si{BM}] \\
+  \text{Max Oxidation State} &= \text{Sc (+3)}, \quad \text{Ti (+4)}, \quad \text{V (+5)}, \quad \text{Cr (+6)}, \quad \text{Mn (+7)}, \quad \text{Fe (+6)}, \quad \text{Os/Ru (+8 in } \text{OsO}_4\text{)}
+\end{align}
+\end{formulabox}
+
+\subsection{Potassium Dichromate ($\text{K}_2\text{Cr}_2\text{O}_7$) \& Permanganate ($\text{KMnO}_4$)}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{L c c Y}
+\toprule
+\textbf{Reagent \& Reaction Medium} & \textbf{Change in Oxidation State} & $n$\textbf{-Factor} & \textbf{Canonical Half-Reaction} \\
+\midrule
+$\text{K}_2\text{Cr}_2\text{O}_7$ in Acidic Medium & $\text{Cr}^{6+} \to \text{Cr}^{3+}$ & $6$ & $\text{Cr}_2\text{O}_7^{2-} + 14\text{H}^+ + 6e^- \to 2\text{Cr}^{3+} + 7\text{H}_2\text{O}$ \\
+$\text{KMnO}_4$ in Acidic Medium & $\text{Mn}^{7+} \to \text{Mn}^{2+}$ & $5$ & $\text{MnO}_4^- + 8\text{H}^+ + 5e^- \to \text{Mn}^{2+} + 4\text{H}_2\text{O}$ \\
+$\text{KMnO}_4$ in Neutral / Faintly Alkaline & $\text{Mn}^{7+} \to \text{Mn}^{4+}$ & $3$ & $\text{MnO}_4^- + 2\text{H}_2\text{O} + 3e^- \to \text{MnO}_2 + 4\text{OH}^-$ \\
+$\text{KMnO}_4$ in Strongly Alkaline Medium & $\text{Mn}^{7+} \to \text{Mn}^{6+}$ & $1$ & $\text{MnO}_4^- + e^- \to \text{MnO}_4^{2-}$ \\
+\bottomrule
+\end{tabularx}
+\caption{Stoichiometric Redox $n$-Factors for Dichromate and Permanganate Titrations.}
+\end{table}
+
+\begin{usecasebox}[High-Yield Oxidation Reactions of $\text{KMnO}_4$ and $\text{K}_2\text{Cr}_2\text{O}_7$]
+\begin{itemize}
+  \item \textbf{Acidic $\text{KMnO}_4$ converts:}
+  \begin{equation*}
+    \text{Fe}^{2+} \to \text{Fe}^{3+}, \quad \text{C}_2\text{O}_4^{2-} \to \text{CO}_2, \quad \text{S}^{2-} \to \text{S}, \quad \text{SO}_3^{2-} \to \text{SO}_4^{2-}, \quad \text{NO}_2^- \to \text{NO}_3^-, \quad \text{I}^- \to \text{I}_2
+  \end{equation*}
+  \item \textbf{Faintly Alkaline $\text{KMnO}_4$ (Baeyer's Reagent) converts:}
+  \begin{equation*}
+    \text{I}^- \to \text{IO}_3^- \text{ (Iodate ion, NOT } \text{I}_2\text{!)}, \qquad \text{S}_2\text{O}_3^{2-} \to \text{SO}_4^{2-} \text{ (Thiosulfate to Sulfate)}
+  \end{equation*}
+  \item \textbf{Chromyl Chloride Test for Chloride ($\text{Cl}^-$) Detection:}
+  \begin{equation*}
+    \text{K}_2\text{Cr}_2\text{O}_7 + 4\text{NaCl} + 6\text{H}_2\text{SO}_4 \xrightarrow{\Delta} 2\text{CrO}_2\text{Cl}_2\uparrow \text{ (Deep Red Vapour)} + 2\text{KHSO}_4 + 4\text{NaHSO}_4 + 3\text{H}_2\text{O}
+  \end{equation*}
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Lanthanoid Contraction \& Oxidation States}
+
+\begin{formulabox}[Lanthanoid Contraction Governing Principles]
+\begin{align}
+  \text{Radius Trend} &: \text{La}^{3+} (106\,\si{pm}) \to \text{Lu}^{3+} (86\,\si{pm}) \quad [\text{Steady contraction of } 20\,\si{pm}\text{ across 14 elements}] \\
+  \text{Radius Similarity} &: \text{Zr} (160\,\si{pm}) \approx \text{Hf} (159\,\si{pm}), \quad \text{Nb} (146\,\si{pm}) \approx \text{Ta} (146\,\si{pm}), \quad \text{Mo} \approx \text{W} \\
+  \text{Basicity Order} &: \text{La(OH)}_3 > \text{Ce(OH)}_3 > \dots > \text{Lu(OH)}_3 \quad [\text{Covalent character increases as cation size shrinks}]
+\end{align}
+\textbf{High-Yield Oxidation States of Lanthanoids:}
+\begin{equation}
+  \text{Dominant: } +3; \qquad \text{Ce}^{4+} \text{ ([Xe] } 4f^0 \text{ powerful oxidizing agent)}, \qquad \text{Eu}^{2+} \text{ ([Xe] } 4f^7 \text{ reducing agent)}, \qquad \text{Yb}^{2+} \text{ ([Xe] } 4f^{14}\text{)}
+\end{equation}
+\end{formulabox}
+
+\newpage
+
+% =========================================================================
+% SECTION 5: p-BLOCK ELEMENTS (GROUPS 13 TO 18)
+% =========================================================================
+\section{$p$-Block Elements (Unit 10)}
+
+\subsection{Inert Pair Effect \& Thermodynamic Stability Trends}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c L}
+\toprule
+\textbf{Group} & \textbf{Higher Oxidation State} & \textbf{Lower Oxidation State} & \textbf{Stability Order \& Redox Consequence} \\
+\midrule
+Group 13 ($\text{B, Al, Ga, In, Tl}$) & $+3$ & $+1$ & $\text{Tl}^+ > \text{Tl}^{3+} \implies \text{Tl}^{3+} \text{ is oxidizing}; \text{Al}^{3+} \text{ is stable.}$ \\
+Group 14 ($\text{C, Si, Ge, Sn, Pb}$) & $+4$ & $+2$ & $\text{Pb}^{2+} > \text{Pb}^{4+} \implies \text{PbO}_2 \text{ is powerful oxidizer}; \text{Sn}^{2+} \text{ is reducing.}$ \\
+Group 15 ($\text{N, P, As, Sb, Bi}$) & $+5$ & $+3$ & $\text{Bi}^{3+} > \text{Bi}^{5+} \implies \text{BiF}_5 \text{ only stable pentahalide}; \text{Bi}^{5+} \text{ oxidizes.}$ \\
+\bottomrule
+\end{tabularx}
+\caption{Inert Pair Effect Manifestation Across Heavy $p$-Block Elements.}
+\end{table}
+
+\begin{usecasebox}[Group 15, 16 \& 17 Hydrides High-Yield Periodic Trends]
+\begin{itemize}
+  \item \textbf{Group 15 Hydrides ($\text{NH}_3, \text{PH}_3, \text{AsH}_3, \text{SbH}_3, \text{BiH}_3$):}
+  \begin{itemize}
+    \item Bond Angle: $\text{NH}_3 (107.8^\circ) > \text{PH}_3 (93.6^\circ) > \text{AsH}_3 (91.8^\circ) > \text{SbH}_3 (91.3^\circ)$ (Drago's rule).
+    \item Thermal Stability: $\text{NH}_3 > \text{PH}_3 > \text{AsH}_3 > \text{SbH}_3 > \text{BiH}_3$.
+    \item Reducing Character: $\text{BiH}_3 > \text{SbH}_3 > \text{AsH}_3 > \text{PH}_3 > \text{NH}_3$ (strongest reducing agent is $\text{BiH}_3$).
+    \item Boiling Point: $\text{BiH}_3 > \text{SbH}_3 > \mathbf{\text{NH}_3} > \text{AsH}_3 > \text{PH}_3$ ($\text{NH}_3$ elevated due to H-bonding!).
+  \end{itemize}
+  \item \textbf{Group 16 Hydrides ($\text{H}_2\text{O}, \text{H}_2\text{S}, \text{H}_2\text{Se}, \text{H}_2\text{Te}$):}
+  \begin{itemize}
+    \item Acidic Strength: $\text{H}_2\text{O} < \text{H}_2\text{S} < \text{H}_2\text{Se} < \text{H}_2\text{Te}$ ($E-\text{H}$ bond enthalpy decreases).
+    \item Boiling Point: $\mathbf{\text{H}_2\text{O}} > \text{H}_2\text{Te} > \text{H}_2\text{Se} > \text{H}_2\text{S}$ (water is highest due to extensive intermolecular H-bonding).
+  \end{itemize}
+  \item \textbf{Group 17 Hydrides ($\text{HF}, \text{HCl}, \text{HBr}, \text{HI}$):}
+  \begin{itemize}
+    \item Acidic Strength: $\text{HF} < \text{HCl} < \text{HBr} < \text{HI}$ ($\text{HI}$ is strongest acid).
+    \item Boiling Point: $\mathbf{\text{HF}} > \text{HI} > \text{HBr} > \text{HCl}$ ($\text{HF}$ elevated due to Zig-Zag H-bonding).
+    \item Reducing Power: $\text{HI} > \text{HBr} > \text{HCl} > \text{HF}$.
+  \end{itemize}
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[$p$-Block Traps: Oxoacids of Phosphorus \& Boric Acid Basicity]
+\begin{itemize}
+  \item \textbf{Basicity and Reducing Nature of Phosphorus Oxoacids:}
+  \begin{itemize}
+    \item $\text{H}_3\text{PO}_2$ (Hypophosphorous / Phosphinic acid): Contains $1\,\text{P}-\text{OH}$ and $2\,\text{P}-\text{H}$ bonds. \textbf{Monobasic}; powerful reducing agent.
+    \item $\text{H}_3\text{PO}_3$ (Phosphorous / Phosphonic acid): Contains $2\,\text{P}-\text{OH}$ and $1\,\text{P}-\text{H}$ bonds. \textbf{Dibasic}; moderate reducing agent.
+    \item $\text{H}_3\text{PO}_4$ (Orthophosphoric acid): Contains $3\,\text{P}-\text{OH}$ and $0\,\text{P}-\text{H}$ bonds. \textbf{Tribasic}; non-reducing.
+  \end{itemize}
+  \item \textbf{Orthoboric Acid ($\text{H}_3\text{BO}_3$):} Is \textbf{not a protonic acid}! It is a weak, \textbf{monobasic Lewis acid} that accepts $\text{OH}^-$ from water:
+  \begin{equation*}
+    \text{B(OH)}_3 + 2\text{H}_2\text{O} \rightleftharpoons [\text{B(OH)}_4]^- + \text{H}_3\text{O}^+
+  \end{equation*}
+\end{itemize}
+\end{trapbox}
+
+\vspace{15pt}
+\begin{center}
+  \rule{0.6\textwidth}{0.8pt}\\[6pt]
+  {\small\textbf{\color{primarydark}End of Inorganic Chemistry Master Compendium}}\\[2pt]
+  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
+\end{center}
+
+\end{document}

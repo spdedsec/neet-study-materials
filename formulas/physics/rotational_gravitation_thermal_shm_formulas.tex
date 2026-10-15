@@ -1,0 +1,394 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% --- Document Header Banner ---
+\begin{center}
+  {\huge\bfseries\color{primarydark} NEET UG 2027: Physics Formula Compendium}\\[6pt]
+  {\Large\bfseries\color{accentblue} Module 02: Rotational Dynamics, Gravitation, Solids, Fluids, Thermal \& Oscillations}\\[8pt]
+  {\normalsize\textbf{Prepared, Compiled \& Authored by Satya Prakash} \quad\textbar\quad \textbf{Subject:} Physics (Units 5, 6, 7, 8, 9 \& 10)}\\[4pt]
+  {\footnotesize\color{gray} Strict NCERT \& NMC Alignment \quad\textbar\quad Complete Mathematical Variations, Use-Cases \& Traps}
+\end{center}
+\vspace{-2pt}
+\hrule height 1.2pt
+\vspace{8pt}
+
+% =========================================================================
+% SECTION 1: ROTATIONAL DYNAMICS
+% =========================================================================
+\section{Rotational Dynamics \& Centre of Mass (Unit 5)}
+
+\subsection{Centre of Mass (CM) Formulations}
+
+\begin{formulabox}[Discrete and Continuous Centre of Mass Coordinates]
+\begin{equation}
+  \mathbf{r}_{\text{cm}} = \frac{\sum_{i=1}^n m_i \mathbf{r}_i}{\sum_{i=1}^n m_i} = \frac{1}{M}\sum m_i \mathbf{r}_i, \qquad \mathbf{r}_{\text{cm}} = \frac{\int \mathbf{r}\,dm}{\int dm} = \frac{1}{M}\int \mathbf{r}\,dm
+\end{equation}
+\textbf{Centre of Mass Velocity, Acceleration \& Truncated Body Relation:}
+\begin{equation}
+  \mathbf{v}_{\text{cm}} = \frac{\sum m_i \mathbf{v}_i}{M}, \quad \mathbf{a}_{\text{cm}} = \frac{\mathbf{F}_{\text{ext}}}{M}, \quad \mathbf{r}_{\text{rem}} = \frac{M\mathbf{r}_{\text{orig}} - m\mathbf{r}_{\text{cut}}}{M - m}
+\end{equation}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c L c}
+\toprule
+\textbf{Geometry / Symmetric Body} & \textbf{CM Location ($y_{\text{cm}}$)} & \textbf{Geometry / Symmetric Body} & \textbf{CM Location ($y_{\text{cm}}$)} \\
+\midrule
+Uniform Semicircular Ring & $\frac{2R}{\pi}$ from base & Uniform Semicircular Disc & $\frac{4R}{3\pi}$ from base \\
+Hemispherical Shell (Hollow) & $\frac{R}{2}$ from center & Solid Hemisphere & $\frac{3R}{8}$ from center \\
+Hollow Cone (without base) & $\frac{h}{3}$ from base & Solid Cone & $\frac{h}{4}$ from base \\
+\bottomrule
+\end{tabularx}
+\caption{Exact Centre of Mass Coordinates from Base / Symmetric Center along Axis.}
+\end{table}
+
+\subsection{Rotational Kinematics, Dynamics \& Angular Momentum}
+
+\begin{formulabox}[Governing Torque and Angular Momentum Relations]
+\begin{align}
+  \boldsymbol{\tau} &= \mathbf{r} \times \mathbf{F} = I\boldsymbol{\alpha} = \frac{d\mathbf{L}}{dt} && \text{[Torque Equation; $\tau = r F \sin\theta$]} \\
+  \mathbf{L} &= \mathbf{r} \times \mathbf{p} = I\boldsymbol{\omega} && \text{[Angular Momentum of Rigid Body]} \\
+  W_{\text{rot}} &= \int \tau\,d\theta = \frac{1}{2}I\omega_f^2 - \frac{1}{2}I\omega_i^2 && \text{[Rotational Work-Energy Theorem]}
+\end{align}
+\textbf{Conservation of Angular Momentum (When $\boldsymbol{\tau}_{\text{ext}} = \mathbf{0}$):}
+\begin{equation}
+  \mathbf{L} = I_1 \boldsymbol{\omega}_1 = I_2 \boldsymbol{\omega}_2 = \text{constant} \implies \omega \propto \frac{1}{I}
+\end{equation}
+\end{formulabox}
+
+\subsection{Moment of Inertia Theorems \& Standard Geometrical Values}
+
+\begin{formulabox}[Moment of Inertia (MI) Fundamental Theorems]
+\begin{align}
+  I &= \sum m_i r_i^2 = \int r^2\,dm = M k^2 && \text{[$k$ = Radius of Gyration]} \\
+  I &= I_{\text{cm}} + M d^2 && \text{[Parallel Axis Theorem: valid for ANY rigid body]} \\
+  I_z &= I_x + I_y && \text{[Perpendicular Axis Theorem: strictly PLANAR laminar bodies only]}
+\end{align}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c c}
+\toprule
+\textbf{Body (Mass $M$, Radius $R$)} & \textbf{Axis of Rotation} & \textbf{Moment of Inertia ($I$)} & $k^2/R^2$ \\
+\midrule
+Thin Rod (Length $L$) & Perpendicular through center & $\frac{1}{12} M L^2$ & $L^2 / (12 R^2)$ \\
+Thin Rod (Length $L$) & Perpendicular through one end & $\frac{1}{3} M L^2$ & $L^2 / (3 R^2)$ \\
+Thin Circular Ring & Central perpendicular axis & $M R^2$ & $1$ \\
+Thin Circular Ring & Across diameter & $\frac{1}{2} M R^2$ & $1/2$ \\
+Uniform Circular Disc & Central perpendicular axis & $\frac{1}{2} M R^2$ & $1/2$ \\
+Uniform Circular Disc & Across diameter & $\frac{1}{4} M R^2$ & $1/4$ \\
+Solid Cylinder & Longitudinal central axis & $\frac{1}{2} M R^2$ & $1/2$ \\
+Hollow Cylinder (Thin Pipe) & Longitudinal central axis & $M R^2$ & $1$ \\
+Solid Sphere & Through any diameter & $\frac{2}{5} M R^2$ & $2/5 = 0.40$ \\
+Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $2/3 \approx 0.67$ \\
+\bottomrule
+\end{tabularx}
+\caption{Standard Moments of Inertia and Dimensionless Gyration Factor $k^2/R^2$.}
+\end{table}
+
+\subsection{Pure Rolling Dynamics (Rolling Without Slipping)}
+
+\begin{formulabox}[Rolling Motion Governing Equations]
+\begin{align}
+  v_{\text{cm}} &= R\omega, \qquad a_{\text{cm}} = R\alpha \quad \text{[No-slip Kinematic Constraint]} \\
+  K_{\text{total}} &= K_{\text{trans}} + K_{\text{rot}} = \frac{1}{2}M v_{\text{cm}}^2 + \frac{1}{2}I_{\text{cm}}\omega^2 = \frac{1}{2}M v_{\text{cm}}^2\left(1 + \frac{k^2}{R^2}\right) \\
+  \frac{K_{\text{trans}}}{K_{\text{total}}} &= \frac{1}{1 + k^2/R^2}, \qquad \frac{K_{\text{rot}}}{K_{\text{total}}} = \frac{k^2/R^2}{1 + k^2/R^2}
+\end{align}
+\textbf{Rolling Down an Incline of Angle $\theta$ and Height $h$:}
+\begin{equation}
+  a = \frac{g\sin\theta}{1 + \frac{k^2}{R^2}}, \qquad v_{\text{bottom}} = \sqrt{\frac{2gh}{1 + \frac{k^2}{R^2}}}, \qquad \mu_{\min} = \frac{\tan\theta}{1 + \frac{R^2}{k^2}}
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Race Down an Incline (Identical $M, R, \theta, h$)]
+\begin{itemize}
+  \item Ordering of $k^2/R^2$: $\text{Solid Sphere } (0.40) < \text{Disc/Cylinder } (0.50) < \text{Hollow Sphere } (0.67) < \text{Ring/Hollow Cylinder } (1.00)$.
+  \item Acceleration Order: $a_{\text{solid sphere}} > a_{\text{disc}} > a_{\text{hollow sphere}} > a_{\text{ring}}$.
+  \item Time of Descent ($t = \sqrt{2s/a}$): $t_{\text{solid sphere}} < t_{\text{disc}} < t_{\text{hollow sphere}} < t_{\text{ring}}$. Solid sphere reaches first!
+  \item Velocity at Bottom: $v_{\text{solid sphere}} > v_{\text{disc}} > v_{\text{hollow sphere}} > v_{\text{ring}}$.
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[Rotational Traps: Friction & Perpendicular Axis Theorem]
+\begin{itemize}
+  \item \textbf{Friction in Pure Rolling:} Static friction acts at the instantaneous point of contact. Because the point of contact is instantaneously at rest ($v_{\text{contact}} = 0$), \textbf{work done by friction in pure rolling is identically zero} ($W_f = 0$). Mechanical energy is conserved.
+  \item \textbf{Perpendicular Axis Theorem Trap:} Cannot be applied to 3D bodies like spheres, solid cylinders, or cones. It is strictly valid for 2D plane laminar sheets ($I_z = I_x + I_y$).
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 2: GRAVITATION
+% =========================================================================
+\section{Gravitation (Unit 6)}
+
+\subsection{Universal Gravitation, Acceleration ($g$) \& Field Variations}
+
+\begin{formulabox}[Newton's Law \& Surface Acceleration $g$]
+\begin{align}
+  F &= \frac{G M_1 M_2}{r^2} && [G = 6.674\times 10^{-11}\si{N.m^2.kg^{-2}}] \\
+  g &= \frac{GM}{R^2} = \frac{4}{3}\pi G \rho R && [\text{Surface acceleration, Earth } g \approx 9.8\si{m.s^{-2}}]
+\end{align}
+\textbf{Variations of $g$ (Altitude, Depth \& Latitude):}
+\begin{align}
+  g_h &= g\left(\frac{R}{R+h}\right)^2 = g\left(1 + \frac{h}{R}\right)^{-2} \approx g\left(1 - \frac{2h}{R}\right) && [\text{Approximation valid strictly for } h \ll R] \\
+  g_d &= g\left(1 - \frac{d}{R}\right) && [\text{Exact at all depths } 0 \le d \le R] \\
+  g' &= g - \omega^2 R \cos^2\lambda && [\lambda = \text{latitude; Equator } \lambda=0, \text{Pole } \lambda=90^\circ]
+\end{align}
+\end{formulabox}
+
+\begin{usecasebox}[Exact Comparison & Extreme Earth Rotation Cases]
+\begin{itemize}
+  \item \textbf{Equal Reduction at Altitude and Depth:} For small $h \ll R$, $g_h = g_d \implies d = 2h$. A height of $1\si{km}$ causes the same reduction in $g$ as a depth of $2\si{km}$.
+  \item \textbf{Weightlessness at Equator:} For bodies at equator to become weightless ($g'=0$):
+  \begin{equation*}
+    \omega = \sqrt{\frac{g}{R}} \approx \frac{1}{800}\si{rad.s^{-1}}, \qquad T = 2\pi\sqrt{\frac{R}{g}} \approx 84.6\text{ minutes} \approx 1.41\text{ hours}
+  \end{equation*}
+  This requires the Earth to rotate roughly \textbf{17 times faster} than its current angular velocity.
+  \item \textbf{Earth Stops Rotating:} If $\omega \to 0$, $g$ increases by $\omega^2 R$ at the equator, but \textbf{remains unchanged at the poles}.
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Gravitational Potential, Escape \& Orbital Velocities}
+
+\begin{formulabox}[Potential, Escape Speed, Orbital Speed \& Satellite Energies]
+\begin{align}
+  V(r) &= -\frac{GM}{r}, \qquad U(r) = -\frac{GMm}{r} && [E_g = -\frac{dV}{dr} = -\frac{GM}{r^2}] \\
+  v_e &= \sqrt{\frac{2GM}{R}} = \sqrt{2gR} \approx 11.2\si{km.s^{-1}} && [\text{Escape Velocity from Earth Surface}] \\
+  v_o &= \sqrt{\frac{GM}{r}} = \sqrt{\frac{g R^2}{R+h}} && [\text{Orbital Velocity at orbit radius } r = R+h] \\
+  v_e &= \sqrt{2} v_o \approx 1.414 v_o && [\text{Near-Earth orbit } h \ll R: v_o \approx 7.92\si{km.s^{-1}}] \\
+  T^2 &= \left(\frac{4\pi^2}{GM}\right)r^3 \implies T = 2\pi\sqrt{\frac{r^3}{GM}} && [\text{Kepler's Third Law of Periods}]
+\end{align}
+\textbf{Satellite Energy Spectrum (Orbit radius $r = R+h$):}
+\begin{equation}
+  K = \frac{GMm}{2r}, \quad U = -\frac{GMm}{r}, \quad E_{\text{total}} = -\frac{GMm}{2r} = -K = \frac{U}{2}, \quad \text{B.E.} = -E_{\text{total}} = \frac{GMm}{2r}
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[Gravitation Traps: Launch Angle & Solid Sphere Potential]
+\begin{itemize}
+  \item \textbf{Escape Velocity Independence:} Escape velocity $v_e = \sqrt{2gR}$ is \textbf{completely independent} of the mass of the projectile $m$ and the angle of launch $\theta$. A body launched at $30^\circ, 60^\circ$ or $90^\circ$ requires the identical escape speed $11.2\si{km.s^{-1}}$.
+  \item \textbf{Gravitational Potential Inside Uniform Solid Sphere (Earth):}
+  \begin{equation*}
+    V_{\text{in}}(r) = -\frac{GM}{2R^3}\left(3R^2 - r^2\right) \implies V_{\text{center}} = -\frac{3}{2}\frac{GM}{R} = 1.5\,V_{\text{surface}}
+  \end{equation*}
+  Potential is NOT zero at the centre; its magnitude is 1.5 times the surface value.
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 3: PROPERTIES OF SOLIDS & FLUIDS
+% =========================================================================
+\section{Properties of Solids \& Fluids (Unit 7)}
+
+\subsection{Elasticity & Moduli of Elasticity}
+
+\begin{formulabox}[Hooke's Law, Elastic Moduli & Energy Density]
+\begin{align}
+  Y &= \frac{\text{Longitudinal Stress}}{\text{Longitudinal Strain}} = \frac{F/A}{\Delta L/L} = \frac{F L}{A \Delta L} && \text{[Young's Modulus, $\Delta L = \frac{F L}{A Y}$]} \\
+  B &= -\frac{\Delta P}{\Delta V / V} = -V\frac{\Delta P}{\Delta V}, \qquad K = \frac{1}{B} && \text{[Bulk Modulus $B$ \& Compressibility $K$]} \\
+  \eta &= \frac{\text{Shear Stress}}{\text{Shear Strain}} = \frac{F/A}{\theta} && \text{[Shear Modulus / Modulus of Rigidity]} \\
+  \sigma &= -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta d / d}{\Delta L / L} && \text{[Poisson's Ratio: Theoretical: $-1 \le \sigma \le 0.5$; Actual: $0 < \sigma < 0.5$]}
+\end{align}
+\textbf{Elastic Potential Energy Stored in Stretched Wire:}
+\begin{equation}
+  U = \frac{1}{2} F \Delta L = \frac{1}{2} k (\Delta L)^2, \qquad u = \frac{U}{V} = \frac{1}{2}\times\text{stress}\times\text{strain} = \frac{(\text{stress})^2}{2Y} = \frac{1}{2}Y(\text{strain})^2
+\end{equation}
+\textbf{Thermal Stress Developed in Clamped Rod:}
+\begin{equation}
+  \text{Stress} = Y\alpha\Delta T, \qquad F_{\text{tension}} = Y A \alpha \Delta T
+\end{equation}
+\end{formulabox}
+
+\subsection{Fluid Statics, Pascal's Principle & Buoyancy}
+
+\begin{formulabox}[Pressure, Pascal's Law & Archimedes' Principle]
+\begin{align}
+  P &= P_0 + \rho g h && \text{[Gauge Pressure } P_{\text{gauge}} = \rho g h\text{]} \\
+  \frac{F_1}{A_1} &= \frac{F_2}{A_2} \implies F_2 = F_1\left(\frac{A_2}{A_1}\right) && \text{[Hydraulic Lift Principle]} \\
+  F_B &= V_{\text{submerged}}\,\rho_{\text{liquid}}\,g && \text{[Archimedes' Buoyant Force]} \\
+  \frac{V_{\text{submerged}}}{V_{\text{total}}} &= \frac{\rho_{\text{body}}}{\rho_{\text{liquid}}}, \qquad W_{\text{apparent}} = W_{\text{actual}}\left(1 - \frac{\rho_{\text{liquid}}}{\rho_{\text{body}}}\right)
+\end{align}
+\end{formulabox}
+
+\subsection{Fluid Dynamics, Viscosity & Surface Tension}
+
+\begin{formulabox}[Continuity, Bernoulli, Viscosity & Capillarity]
+\begin{align}
+  A_1 v_1 &= A_2 v_2 = \text{constant} && \text{[Equation of Continuity for Incompressible Fluid]} \\
+  P + \frac{1}{2}\rho v^2 + \rho g h &= \text{constant} && \text{[Bernoulli's Theorem]} \\
+  v_{\text{efflux}} &= \sqrt{2gh}, \quad R_{\text{horizontal}} = 2\sqrt{h(H-h)} && \text{[Torricelli's Law; $R_{\max} = H$ at $h = H/2$]} \\
+  F_v &= 6\pi \eta r v && \text{[Stokes' Viscous Drag Law]} \\
+  v_t &= \frac{2}{9}\frac{r^2(\rho - \sigma)g}{\eta} \implies v_t \propto r^2 && \text{[Terminal Velocity; $\rho=\text{body density}, \sigma=\text{fluid density}$]} \\
+  R_e &= \frac{\rho v d}{\eta} && \text{[Reynolds Number: $R_e < 2000$ Laminar; $R_e > 3000$ Turbulent]}
+\end{align}
+\textbf{Surface Tension, Excess Pressure \& Capillary Rise:}
+\begin{align}
+  T &= \frac{F}{L} = \frac{\Delta W}{\Delta A}, \qquad W_{\text{splitting}} = 4\pi R^2 T(n^{1/3} - 1) && \text{[$1$ big drop $\to n$ identical droplets]} \\
+  \Delta P_{\text{liquid drop}} &= \frac{2T}{R}, \qquad \Delta P_{\text{soap bubble}} = \frac{4T}{R} && \text{[Soap bubble has TWO free air-liquid interfaces]} \\
+  h &= \frac{2T\cos\theta}{r\rho g} = \frac{2T}{R_c \rho g} && \text{[Jurin's Law: $h r = \text{constant}$; $R_c = r/\cos\theta$ is meniscus radius]}
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Fluid Traps: Terminal Velocity & Insufficient Capillary Length]
+\begin{itemize}
+  \item \textbf{Terminal Velocity ($r^2$ vs $r$):} Viscous force $F_v \propto r$, but terminal velocity $v_t \propto r^2$. If two drops of radii $1:2$ coalesce, the radius becomes $R = 2^{1/3}r$; new terminal velocity increases by a factor of $2^{2/3}$.
+  \item \textbf{Insufficient Capillary Tube Length ($l < h$):} Liquid \textbf{never overflows} from a capillary tube of insufficient height $l$. Instead, the liquid reaches the upper edge and increases its meniscus radius of curvature $R_c'$ such that $h r = l R_c'$ ($R_c' > R_c$).
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 4: THERMAL PHYSICS & THERMODYNAMICS
+% =========================================================================
+\section{Thermal Physics \& Thermodynamics (Units 7, 8 \& 9)}
+
+\subsection{Thermal Expansion, Calorimetry & Heat Transfer}
+
+\begin{formulabox}[Expansion, Calorimetry, Conduction & Radiation]
+\begin{align}
+  \Delta L &= L_0 \alpha \Delta T, \quad \Delta A = A_0 \beta \Delta T, \quad \Delta V = V_0 \gamma \Delta T && [\alpha : \beta : \gamma = 1 : 2 : 3] \\
+  Q &= m c \Delta T, \qquad Q = m L && [c = \text{sp. heat capacity}, L = \text{latent heat}] \\
+  \frac{dQ}{dt} &= \frac{kA(T_1 - T_2)}{L} = \frac{\Delta T}{R_{\text{th}}} && [R_{\text{th}} = \frac{L}{kA} = \text{Thermal Resistance}] \\
+  E &= \sigma e A T^4, \qquad P_{\text{net}} = \sigma e A(T^4 - T_0^4) && [\text{Stefan-Boltzmann Law, } \sigma = 5.67\times 10^{-8}\si{W.m^{-2}.K^{-4}}] \\
+  \lambda_m T &= b = 2.898\times 10^{-3}\si{m.K} && [\text{Wien's Displacement Law}] \\
+  \frac{T_1 - T_2}{t} &= K\left(\frac{T_1 + T_2}{2} - T_0\right) && [\text{Newton's Law of Cooling (Average Form)}]
+\end{align}
+\end{formulabox}
+
+\subsection{First Law of Thermodynamics & Process Formulations}
+
+\begin{formulabox}[First Law \& Thermodynamic Processes]
+\begin{equation}
+  \Delta Q = \Delta U + \Delta W \quad [\text{Ideal Gas: } \Delta U = n C_v \Delta T = \frac{P_2V_2 - P_1V_1}{\gamma - 1} \text{ for ANY process}]
+\end{equation}
+\textbf{Work Done in Standard Thermodynamic Processes:}
+\begin{align}
+  W_{\text{isochoric}} &= 0, \qquad \Delta Q = \Delta U = n C_v \Delta T && [V = \text{constant}] \\
+  W_{\text{isobaric}} &= P(V_2 - V_1) = n R(T_2 - T_1), \quad \Delta Q = n C_p \Delta T && [P = \text{constant}] \\
+  W_{\text{isothermal}} &= n R T \ln\left(\frac{V_2}{V_1}\right) = 2.303 n R T \log_{10}\left(\frac{P_1}{P_2}\right) && [T = \text{const}, \Delta U = 0, \Delta Q = W] \\
+  W_{\text{adiabatic}} &= \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} = \frac{n R(T_1 - T_2)}{\gamma - 1} = -\Delta U && [\Delta Q = 0, P V^\gamma = \text{const}]
+\end{align}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c c c}
+\toprule
+\textbf{Gas Atomicity} & \textbf{Deg. of Freedom ($f$)} & $C_v = \frac{f}{2}R$ & $C_p = C_v + R$ & $\gamma = C_p/C_v = 1 + \frac{2}{f}$ \\
+\midrule
+Monoatomic ($\text{He}, \text{Ne}, \text{Ar}$) & $3$ (translational) & $\frac{3}{2}R$ & $\frac{5}{2}R$ & $\frac{5}{3} \approx 1.67$ \\
+Diatomic (Rigid: $\text{O}_2, \text{N}_2$) & $3\text{ trans} + 2\text{ rot} = 5$ & $\frac{5}{2}R$ & $\frac{7}{2}R$ & $\frac{7}{5} = 1.40$ \\
+Non-Linear Polyatomic ($\text{H}_2\text{O}, \text{NH}_3$) & $3\text{ trans} + 3\text{ rot} = 6$ & $3R$ & $4R$ & $\frac{4}{3} \approx 1.33$ \\
+\bottomrule
+\end{tabularx}
+\caption{Molar Heat Capacities and Adiabatic Exponents for Standard Gases.}
+\end{table}
+
+\begin{usecasebox}[High-Yield Thermodynamic Relations & Polytropic Processes]
+\begin{itemize}
+  \item \textbf{Energy Partition in Isobaric Process:}
+  \begin{equation*}
+    \Delta W : \Delta U : \Delta Q = nR\Delta T : nC_v\Delta T : nC_p\Delta T = (\gamma - 1) : 1 : \gamma
+  \end{equation*}
+  For a diatomic gas ($\gamma = 7/5$), fraction of heat converted to work is $\frac{\Delta W}{\Delta Q} = \frac{\gamma - 1}{\gamma} = \frac{2}{7} \approx 28.6\%$.
+  \item \textbf{General Polytropic Process ($P V^n = \text{const}$):}
+  \begin{equation*}
+    W = \frac{nR(T_1 - T_2)}{n - 1}, \qquad C = C_v + \frac{R}{1 - n}
+  \end{equation*}
+  \item \textbf{Comparison of $P-V$ Curves:} $\left(\frac{dP}{dV}\right)_{\text{adiabatic}} = \gamma\left(\frac{dP}{dV}\right)_{\text{isothermal}}$. Adiabatic slope is $\gamma$-times steeper!
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Kinetic Theory of Gases (KTG)}
+
+\begin{formulabox}[Pressure, Speeds & Mean Free Path]
+\begin{align}
+  P &= \frac{1}{3}\rho v_{\text{rms}}^2 = \frac{1}{3}\frac{M}{V}v_{\text{rms}}^2, \qquad E_{\text{total, translation}} = \frac{3}{2}n R T = \frac{3}{2}N k_B T \\
+  v_{\text{rms}} &= \sqrt{\frac{3RT}{M}}, \quad v_{\text{avg}} = \sqrt{\frac{8RT}{\pi M}}, \quad v_{\text{mp}} = \sqrt{\frac{2RT}{M}} \implies v_{\text{mp}} : v_{\text{avg}} : v_{\text{rms}} = 1 : 1.128 : 1.224 \\
+  \lambda &= \frac{1}{\sqrt{2}\pi n d^2} = \frac{k_B T}{\sqrt{2}\pi d^2 P} \quad [\lambda \propto \frac{T}{P}; \text{if } V=\text{const}, \lambda = \text{constant}]
+\end{align}
+\end{formulabox}
+
+\newpage
+
+% =========================================================================
+% SECTION 5: OSCILLATIONS & WAVES
+% =========================================================================
+\section{Oscillations \& Waves (Unit 10)}
+
+\subsection{Simple Harmonic Motion (SHM) Kinematics & Energy}
+
+\begin{formulabox}[Governing Differential Equation, Velocity & Acceleration in SHM]
+\begin{align}
+  \frac{d^2 x}{dt^2} + \omega^2 x &= 0 \implies x(t) = A\sin(\omega t + \phi) \\
+  v(t) &= \frac{dx}{dt} = \omega\sqrt{A^2 - x^2}, \qquad a(t) = \frac{dv}{dt} = -\omega^2 x \\
+  v_{\max} &= \omega A \quad (\text{at mean } x=0), \qquad a_{\max} = \omega^2 A \quad (\text{at extreme } x=\pm A)
+\end{align}
+\textbf{Energy Spectrum of Particle Executing SHM:}
+\begin{align}
+  K &= \frac{1}{2}m v^2 = \frac{1}{2}m\omega^2(A^2 - x^2), \qquad U = \frac{1}{2}m\omega^2 x^2 \\
+  E_{\text{total}} &= K + U = \frac{1}{2}m\omega^2 A^2 = \text{constant for undamped SHM} \\
+  \langle K \rangle_{\text{time}} &= \langle U \rangle_{\text{time}} = \frac{1}{4}m\omega^2 A^2 = \frac{1}{2}E_{\text{total}}, \qquad \langle K \rangle_{\text{position}} = \frac{2}{3}E_{\text{total}}, \quad \langle U \rangle_{\text{position}} = \frac{1}{3}E_{\text{total}}
+\end{align}
+\end{formulabox}
+
+\subsection{Standard Oscillating Systems & Combinations}
+
+\begin{formulabox}[Time Period of Springs, Pendulums & Liquid Columns]
+\begin{align}
+  T_{\text{spring}} &= 2\pi\sqrt{\frac{m}{k}}, \quad k_s = \frac{k_1 k_2}{k_1 + k_2} \text{ [Series]}, \quad k_p = k_1 + k_2 \text{ [Parallel]} \\
+  T_{\text{cut spring}} &\implies k' = n k \implies T' = \frac{T}{\sqrt{n}} \quad [\text{Spring cut into } n \text{ equal pieces}] \\
+  T_{\text{simple pendulum}} &= 2\pi\sqrt{\frac{L}{g_{\text{eff}}}}, \qquad g_{\text{eff}} = |\mathbf{g} - \mathbf{a}| \quad [\text{Lift accelerating upward: } g_{\text{eff}} = g+a] \\
+  T_{\text{two block}} &= 2\pi\sqrt{\frac{\mu}{k}}, \qquad \mu = \frac{m_1 m_2}{m_1 + m_2} \quad [\text{Reduced Mass Formulation}] \\
+  T_{\text{U-tube liquid}} &= 2\pi\sqrt{\frac{h}{g}} = 2\pi\sqrt{\frac{L}{2g}} \quad [h = \text{equilibrium column height}, L = \text{total liquid length}]
+\end{align}
+\end{formulabox}
+
+\subsection{Wave Mechanics, Speed of Sound & Organ Pipes}
+
+\begin{formulabox}[Wave Speed, Harmonics in Strings & Pipes]
+\begin{align}
+  v &= \frac{\omega}{k} = \nu\lambda, \qquad y(x,t) = A\sin(kx \mp \omega t + \phi) \quad [-\text{ for } +x\text{ direction}] \\
+  v_{\text{string}} &= \sqrt{\frac{T}{\mu}}, \qquad v_{\text{gas}} = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}} \quad [\text{Newton-Laplace Correction}] \\
+  \nu_{\text{string, } n} &= \frac{n v}{2L} = \frac{n}{2L}\sqrt{\frac{T}{\mu}} \quad (n = 1, 2, 3, \dots) \quad [\text{All Harmonics Present}] \\
+  \nu_{\text{closed pipe, } n} &= (2n - 1)\frac{v}{4L} \quad (n = 1, 2, 3, \dots) \implies \nu_1 : \nu_2 : \nu_3 = 1 : 3 : 5 \quad [\text{ODD Harmonics ONLY}] \\
+  \nu_{\text{open pipe, } n} &= \frac{n v}{2L} \quad (n = 1, 2, 3, \dots) \implies \nu_1 : \nu_2 : \nu_3 = 1 : 2 : 3 \quad [\text{ALL Harmonics Present}]
+\end{align}
+\textbf{Resonance Tube Experiment \& Beat Frequency:}
+\begin{align}
+  \lambda &= 2(l_2 - l_1), \qquad e = \frac{l_2 - 3l_1}{2} \approx 0.6 r, \qquad v = 2\nu(l_2 - l_1) \\
+  \nu_{\text{beat}} &= |\nu_1 - \nu_2| \quad [\text{Waxing decreases frequency: } \nu\downarrow; \text{Filing increases frequency: } \nu\uparrow]
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Wave Traps: Organ Pipes & Speed of Sound vs Pressure]
+\begin{itemize}
+  \item \textbf{Sound Speed Independence from Pressure:} $v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}}$. At constant temperature, doubling pressure doubles density, leaving the ratio $P/\rho$ and sound speed $v$ \textbf{completely unchanged}.
+  \item \textbf{Closed Pipe Odd Harmonics:} In a closed organ pipe of length $L$, the 3rd harmonic is $\nu = 3\left(\frac{v}{4L}\right)$ which is the \textbf{1st overtone}. The $n$-th overtone is the $(2n+1)$-th harmonic!
+\end{itemize}
+\end{trapbox}
+
+\vspace{15pt}
+\begin{center}
+  \rule{0.6\textwidth}{0.8pt}\\[6pt]
+  {\small\textbf{\color{primarydark}End of Module 02 Formula Handbook}}\\[2pt]
+  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
+\end{center}
+
+\end{document}

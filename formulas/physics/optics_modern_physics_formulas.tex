@@ -1,0 +1,304 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% --- Document Header Banner ---
+\begin{center}
+  {\huge\bfseries\color{primarydark} NEET UG 2027: Physics Formula Compendium}\\[6pt]
+  {\Large\bfseries\color{accentblue} Module 04: Ray Optics, Wave Optics, Modern Physics \& Semiconductors}\\[8pt]
+  {\normalsize\textbf{Prepared, Compiled \& Authored by Satya Prakash} \quad\textbar\quad \textbf{Subject:} Physics (Units 16, 17, 18 \& 19)}\\[4pt]
+  {\footnotesize\color{gray} Strict NCERT \& NMC Alignment \quad\textbar\quad Complete Mathematical Variations, Use-Cases \& Traps}
+\end{center}
+\vspace{-2pt}
+\hrule height 1.2pt
+\vspace{8pt}
+
+% =========================================================================
+% SECTION 1: RAY OPTICS \& OPTICAL INSTRUMENTS
+% =========================================================================
+\section{Ray Optics \& Optical Instruments (Unit 16)}
+
+\subsection{Spherical Mirrors, Snell's Law \& Critical Angle}
+
+\begin{formulabox}[Mirror Formula, Magnification \& Normal Shift]
+\begin{align}
+  \frac{1}{v} + \frac{1}{u} &= \frac{1}{f} = \frac{2}{R} && \text{[Cartesian Sign Convention: Pole is origin; light direction is $+x$]} \\
+  m &= -\frac{v}{u} = \frac{f}{f - u} = \frac{f - v}{f} && \text{[Transverse / Linear Magnification]} \\
+  m_L &= \frac{dv}{du} = -m^2 = -\left(\frac{v}{u}\right)^2 && \text{[Longitudinal Magnification for small object along axis]} \\
+  \mu_1 \sin i &= \mu_2 \sin r \implies \frac{\sin i}{\sin r} = \frac{\mu_2}{\mu_1} = \frac{v_1}{v_2} = \frac{\lambda_1}{\lambda_2} && \text{[Snell's Law of Refraction; Frequency $\nu$ remains invariant]} \\
+  d_{\text{apparent}} &= \frac{d_{\text{real}}}{\mu_{\text{relative}}} = d\left(\frac{\mu_{\text{observer}}}{\mu_{\text{object}}}\right), \qquad \Delta t = t\left(1 - \frac{1}{\mu}\right) && \text{[Apparent Depth \& Normal Shift through slab]}
+\end{align}
+\textbf{Total Internal Reflection (TIR) \& Underwater Illuminance Cone:}
+\begin{equation}
+  \sin i_c = \frac{\mu_{\text{rarer}}}{\mu_{\text{denser}}} = \frac{1}{\mu}, \qquad r_{\text{circle}} = \frac{h}{\sqrt{\mu^2 - 1}}, \qquad \text{Area} = \frac{\pi h^2}{\mu^2 - 1} \quad [\text{Point source at depth } h]
+\end{equation}
+\end{formulabox}
+
+\subsection{Prisms, Dispersion \& Spherical Refracting Surfaces}
+
+\begin{formulabox}[Prism Deviation, Dispersive Power \& Curved Surface Refraction]
+\begin{align}
+  \delta &= (i_1 + i_2) - A, \qquad r_1 + r_2 = A && \text{[General Triangular Prism of Angle } A\text{]} \\
+  \mu &= \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)} \iff i_1 = i_2 = \frac{A + \delta_m}{2}, \quad r_1 = r_2 = \frac{A}{2} && \text{[Minimum Deviation Condition; ray parallel to base]} \\
+  \delta_{\text{thin}} &= (\mu - 1)A, \qquad \theta_{\text{dispersion}} = (\mu_V - \mu_R)A, \qquad \omega = \frac{\mu_V - \mu_R}{\mu_Y - 1} && \text{[Thin Prism ($A \le 10^\circ$) \& Dispersive Power $\omega$]} \\
+  \frac{\mu_2}{v} - \frac{\mu_1}{u} &= \frac{\mu_2 - \mu_1}{R}, \qquad m = \frac{\mu_1 v}{\mu_2 u} && \text{[Refraction at Single Spherical Interface]}
+\end{align}
+\end{formulabox}
+
+\subsection{Thin Lenses, Combinations \& Silvered Systems}
+
+\begin{formulabox}[Lens Maker's Equation, Power \& Silvering Formulations]
+\begin{align}
+  \frac{1}{f} &= \left(\frac{\mu_{\text{lens}}}{\mu_{\text{medium}}} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) && \text{[Lens Maker's Formula]} \\
+  \frac{1}{v} - \frac{1}{u} &= \frac{1}{f}, \qquad m = \frac{v}{u} = \frac{f}{f + u} = \frac{f - v}{f} && \text{[Thin Lens Equation \& Magnification]} \\
+  P &= \frac{1}{f\text{ (in m)}} = \frac{100}{f\text{ (in cm)}} \quad [\si{D = m^{-1}}], \qquad P_{\text{contact}} = \sum P_i = P_1 + P_2 \\
+  \frac{1}{F} &= \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2} \implies P = P_1 + P_2 - d P_1 P_2 && \text{[Two Lenses Separated by Distance } d\text{]}
+\end{align}
+\textbf{Silvering of a Lens Surface (Acts as an Equivalent Spherical Mirror):}
+\begin{equation}
+  P_{\text{eq}} = 2P_{\text{lens}} + P_{\text{mirror}} = \frac{2}{f_L} + \frac{1}{f_M} \implies F_{\text{eq}} = -\frac{1}{P_{\text{eq}}} \quad [\text{System always acts as a mirror}]
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Lens Cutting Rules \& Medium Immersion Effects]
+\begin{itemize}
+  \item \textbf{Vertical Cut (Perpendicular to Principal Axis):} Cutting a convex lens of focal length $f$ into two halves produces two plano-convex lenses: $f' = 2f, P' = P/2$. Intensity remains \textbf{unchanged}.
+  \item \textbf{Horizontal Cut (Along Principal Axis):} Each half retains identical curvature: $f' = f, P' = P$. Intensity is halved because light-gathering aperture area is reduced by $50\%$.
+  \item \textbf{Immersion in Liquid ($\mu_{\text{med}}$):}
+  \begin{equation*}
+    \frac{f_{\text{liquid}}}{f_{\text{air}}} = \frac{(\mu_g - 1)}{\left(\frac{\mu_g}{\mu_l} - 1\right)} \implies \text{For glass } (\mu=1.5) \text{ in water } (\mu=4/3): \quad f_{\text{water}} = 4 f_{\text{air}}
+  \end{equation*}
+  If $\mu_l > \mu_g$, focal length reverses sign: a converging convex lens behaves as a diverging concave lens!
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Optical Instruments}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c c}
+\toprule
+\textbf{Instrument} & \textbf{Normal Adjustment ($v = \infty$)} & \textbf{Near Point Adjustment ($v = D = 25\si{cm}$)} & \textbf{Tube Length ($L$)} \\
+\midrule
+Simple Microscope & $m = \frac{D}{f}$ & $m = 1 + \frac{D}{f}$ & Eye at lens \\
+Compound Microscope & $m = -\left(\frac{v_o}{u_o}\right)\left(\frac{D}{f_e}\right) \approx -\frac{L}{f_o}\frac{D}{f_e}$ & $m = -\left(\frac{v_o}{u_o}\right)\left(1 + \frac{D}{f_e}\right) \approx -\frac{L}{f_o}\left(1 + \frac{D}{f_e}\right)$ & $L = v_o + u_e \approx v_o + f_e$ \\
+Astronomical Telescope & $m = -\frac{f_o}{f_e}$ & $m = -\frac{f_o}{f_e}\left(1 + \frac{f_e}{D}\right)$ & $L = f_o + f_e \quad \text{or} \quad f_o + u_e$ \\
+\bottomrule
+\end{tabularx}
+\caption{Magnifying Powers and Tube Lengths of Canonical Optical Instruments.}
+\end{table}
+
+\newpage
+
+% =========================================================================
+% SECTION 2: WAVE OPTICS
+% =========================================================================
+\section{Wave Optics (Unit 16)}
+
+\subsection{Interference \& Young's Double Slit Experiment (YDSE)}
+
+\begin{formulabox}[Interference Intensity, Fringe Position \& Fringe Width]
+\begin{align}
+  I &= I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\phi \implies I = 4I_0 \cos^2\left(\frac{\phi}{2}\right) \quad (\text{when } I_1 = I_2 = I_0) \\
+  \frac{I_{\max}}{I_{\min}} &= \left(\frac{\sqrt{I_1} + \sqrt{I_2}}{\sqrt{I_1} - \sqrt{I_2}}\right)^2 = \left(\frac{a_1 + a_2}{a_1 - a_2}\right)^2, \qquad \Delta\phi = \frac{2\pi}{\lambda}\Delta x \\
+  y_n &= n\frac{\lambda D}{d} \quad (n = 0, 1, 2, \dots) && \text{[$n$-th Bright Fringe / Maximum; } \Delta x = n\lambda\text{]} \\
+  y_n' &= (2n - 1)\frac{\lambda D}{2d} \quad (n = 1, 2, 3, \dots) && \text{[$n$-th Dark Fringe / Minimum; } \Delta x = (2n-1)\frac{\lambda}{2}\text{]} \\
+  \beta &= \frac{\lambda D}{d}, \qquad \theta = \frac{\beta}{D} = \frac{\lambda}{d} \quad [\si{rad}] && \text{[Linear Fringe Width $\beta$ \& Angular Fringe Width $\theta$]}
+\end{align}
+\textbf{Shift Produced by Thin Dielectric Slab of Thickness $t$ and Refractive Index $\mu$:}
+\begin{equation}
+  \Delta y = \frac{D}{d}(\mu - 1)t, \qquad N_{\text{shifted}} = \frac{\Delta y}{\beta} = \frac{(\mu - 1)t}{\lambda}
+\end{equation}
+\end{formulabox}
+
+\subsection{Diffraction due to a Single Slit}
+
+\begin{formulabox}[Single Slit Diffraction Maxima, Minima \& Fresnel Distance]
+\begin{align}
+  a\sin\theta &= n\lambda \implies y_n = n\frac{\lambda D}{a} \quad (n = 1, 2, 3, \dots) && \text{[Diffraction Minima Condition]} \\
+  a\sin\theta &\approx (2n + 1)\frac{\lambda}{2} \implies y_n' = (2n + 1)\frac{\lambda D}{2a} && \text{[Secondary Maxima Condition ($n \ge 1$)]} \\
+  2\theta_0 &= \frac{2\lambda}{a}, \qquad W_{\text{central}} = 2y_1 = \frac{2\lambda D}{a} = 2\beta_{\text{diffraction}} && \text{[Width of Central Diffraction Maximum]} \\
+  Z_F &= \frac{a^2}{\lambda} && \text{[Fresnel Distance: Ray optics valid for } z \ll Z_F\text{]}
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Wave Optics Traps: Interference vs Diffraction Central Fringe]
+\begin{itemize}
+  \item \textbf{Central Maximum Width in Diffraction is Doubled:} In single-slit diffraction, the central maximum spreads between the first minima on both sides ($-\lambda/a$ to $+\lambda/a$). Its linear width is $\frac{2\lambda D}{a}$, exactly \textbf{twice} the width of secondary maxima ($\frac{\lambda D}{a}$). In YDSE, all fringes have identical width $\beta = \frac{\lambda D}{d}$.
+  \item \textbf{YDSE Immersed in Liquid:} When apparatus is dipped in liquid of refractive index $\mu$, wavelength shrinks ($\lambda' = \lambda/\mu$). Hence fringe width decreases: $\beta' = \beta/\mu$. Angular width also shrinks: $\theta' = \theta/\mu$.
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 3: DUAL NATURE OF MATTER \& RADIATION
+% =========================================================================
+\section{Dual Nature of Matter \& Radiation (Unit 17)}
+
+\subsection{Photoelectric Effect \& Einstein's Equation}
+
+\begin{formulabox}[Einstein's Photoelectric Governing Equations]
+\begin{align}
+  E &= h\nu = \Phi_0 + K_{\max} = \Phi_0 + e V_0 && \text{[Einstein's Photoelectric Law]} \\
+  \Phi_0 &= h\nu_0 = \frac{hc}{\lambda_0} \approx \frac{1240}{\lambda_0\text{ (in nm)}}\,\si{eV} && \text{[Work Function $\Phi_0$; Cutoff wavelength $\lambda_0$]} \\
+  e V_0 &= h\nu - \Phi_0 \implies V_0 = \left(\frac{h}{e}\right)\nu - \frac{\Phi_0}{e} && \text{[Slope of $V_0-\nu$ graph is universal: $\text{Slope} = h/e$]} \\
+  K_{\max} &= hc\left(\frac{1}{\lambda} - \frac{1}{\lambda_0}\right) = 1240\left(\frac{1}{\lambda\text{ [nm]}} - \frac{1}{\lambda_0\text{ [nm]}}\right)\,\si{eV}
+\end{align}
+\textbf{Photon Dynamics (Rest Mass $m_0 = 0$):}
+\begin{equation}
+  E = h\nu = \frac{hc}{\lambda}, \qquad p = \frac{E}{c} = \frac{h}{\lambda}, \qquad m_{\text{effective}} = \frac{h\nu}{c^2}, \qquad N_{\text{photons/sec}} = \frac{P}{h\nu} = \frac{P\lambda}{hc}
+\end{equation}
+\end{formulabox}
+
+\subsection{de Broglie Matter Wave Formulations}
+
+\begin{formulabox}[de Broglie Wavelength of Particles \& Accelerating Potentials]
+\begin{align}
+  \lambda &= \frac{h}{p} = \frac{h}{mv} = \frac{h}{\sqrt{2mK}} = \frac{h}{\sqrt{2mqV}} && \text{[Fundamental Matter Wave Equation]} \\
+  \lambda_{\text{electron}} &= \frac{h}{\sqrt{2m_e e V}} = \sqrt{\frac{150}{V}}\,\text{\AA} = \frac{1.227}{\sqrt{V\text{ [Volts]}}}\,\si{nm} && [V = \text{accelerating potential in Volts}] \\
+  \lambda_{\text{proton}} &= \frac{0.286}{\sqrt{V}}\,\text{\AA}, \qquad \lambda_{\alpha} = \frac{0.101}{\sqrt{V}}\,\text{\AA}, \qquad \lambda_{\text{deuteron}} = \frac{0.202}{\sqrt{V}}\,\text{\AA} \\
+  \lambda_{\text{gas molecule}} &= \frac{h}{\sqrt{3m k_B T}} = \frac{h}{\sqrt{2m\left(\frac{3}{2}k_B T\right)}} && \text{[Thermal de Broglie Wavelength at Temp } T\text{]}
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Photoelectric Traps: Intensity vs Frequency Effects]
+\begin{itemize}
+  \item \textbf{Intensity Modifies Current, NOT Kinetic Energy:} Doubling the intensity of incident light doubles the number of photons per second, thereby doubling the \textbf{saturation photoelectric current} ($I_{\text{sat}} \propto \text{Intensity}$). The maximum kinetic energy $K_{\max}$ and stopping potential $V_0$ remain \textbf{strictly unchanged}.
+  \item \textbf{Frequency Modifies Kinetic Energy, NOT Current:} Increasing frequency $\nu$ increases $K_{\max}$ and $V_0$ linearly ($V_0 = \frac{h}{e}\nu - \frac{\Phi_0}{e}$). Saturation current is independent of frequency above $\nu_0$.
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 4: ATOMS \& NUCLEI
+% =========================================================================
+\section{Atoms \& Nuclei (Unit 18)}
+
+\subsection{Bohr's Hydrogen-Like Atom Model}
+
+\begin{formulabox}[Bohr Postulates, Radius, Velocity, Energy \& Rydberg Formula]
+\begin{align}
+  L &= m v_n r_n = \frac{n h}{2\pi} \quad (n = 1, 2, 3, \dots) && \text{[Bohr Angular Momentum Quantization]} \\
+  r_n &= \frac{n^2 h^2 \varepsilon_0}{\pi m Z e^2} = 0.529\left(\frac{n^2}{Z}\right)\,\text{\AA} = r_1\left(\frac{n^2}{Z}\right) && \text{[Orbital Radius: } r \propto \frac{n^2}{Z}\text{]} \\
+  v_n &= \frac{Z e^2}{2\varepsilon_0 n h} = \left(\frac{c}{137}\right)\frac{Z}{n} \approx 2.18\times 10^6\left(\frac{Z}{n}\right)\,\si{m.s^{-1}} && \text{[Orbital Velocity: } v \propto \frac{Z}{n}\text{]} \\
+  E_n &= -\frac{m Z^2 e^4}{8\varepsilon_0^2 n^2 h^2} = -13.6\left(\frac{Z^2}{n^2}\right)\,\si{eV} && \text{[Total Energy: } K = -E_n, \quad U = 2E_n\text{]} \\
+  \frac{1}{\lambda} &= R Z^2\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right) && \left[R = 1.097\times 10^7\,\si{m^{-1}}, \quad \frac{1}{R} \approx 912\,\text{\AA}\right]
+\end{align}
+\textbf{Total Number of Emission Lines from Excited State $n$ to Ground State ($n=1$):}
+\begin{equation}
+  N = \frac{n(n - 1)}{2}, \qquad N_{\text{between } n_2 \text{ and } n_1} = \frac{(n_2 - n_1)(n_2 - n_1 + 1)}{2}
+\end{equation}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c c c}
+\toprule
+\textbf{Spectral Series} & \textbf{Lower Level ($n_1$)} & \textbf{Upper Level ($n_2$)} & \textbf{Spectral Region} & \textbf{Shortest Wavelength ($\lambda_{\min}$)} \\
+\midrule
+Lyman Series & $n_1 = 1$ & $2, 3, 4, \dots$ & Ultraviolet (UV) & $1/R \approx 912\,\text{\AA}$ \\
+Balmer Series & $n_1 = 2$ & $3, 4, 5, \dots$ & Visible \& Near UV & $4/R \approx 3646\,\text{\AA}$ \\
+Paschen Series & $n_1 = 3$ & $4, 5, 6, \dots$ & Infrared (IR) & $9/R \approx 8205\,\text{\AA}$ \\
+Brackett Series & $n_1 = 4$ & $5, 6, 7, \dots$ & Infrared (IR) & $16/R \approx 14586\,\text{\AA}$ \\
+Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790\,\text{\AA}$ \\
+\bottomrule
+\end{tabularx}
+\caption{Hydrogen Spectral Series Classifications and Spectral Regimes.}
+\end{table}
+
+\subsection{Nuclear Size, Mass Defect \& Binding Energy}
+
+\begin{formulabox}[Nuclear Radius, Density, Mass Defect \& Fission/Fusion Energies]
+\begin{align}
+  R &= R_0 A^{1/3} \quad [R_0 \approx 1.2\,\si{fm} = 1.2\times 10^{-15}\,\si{m}], \qquad \rho_{\text{nuclear}} = \frac{M}{\frac{4}{3}\pi R^3} \approx 2.3\times 10^{17}\,\si{kg.m^{-3}} \\
+  \Delta m &= [Z m_p + (A - Z)m_n] - M_{\text{nucleus}} && \text{[Mass Defect]} \\
+  E_b &= \Delta m\,c^2 = \Delta m\text{ (in u)}\times 931.5\,\si{MeV} && \text{[Total Binding Energy]} \\
+  \Delta E_{\text{reaction}} &= Q = [m_{\text{reactants}} - m_{\text{products}}]c^2 = [BE_{\text{products}} - BE_{\text{reactants}}]
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Nuclear Traps: Invariance of Nuclear Density]
+\begin{itemize}
+  \item \textbf{Nuclear Density is Constant:} Because $R \propto A^{1/3}$, nuclear volume $V \propto R^3 \propto A$. Thus nuclear density $\rho = \frac{m A}{V} \propto \frac{A}{A} = \text{constant}$. A Uranium nucleus ($A=238$) has approximately the \textbf{same density} as a Helium nucleus ($A=4$).
+  \item \textbf{Radioactivity Excluded by NMC:} Note that $\alpha, \beta, \gamma$ decay rate equations and half-life decay laws have been removed from NEET UG under current NMC guidelines; focus strictly on binding energy per nucleon curves, mass defects, and fission/fusion energy calculations.
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 5: ELECTRONIC DEVICES (SEMICONDUCTORS)
+% =========================================================================
+\section{Electronic Devices: Semiconductors (Unit 19)}
+
+\subsection{Intrinsic \& Extrinsic Semiconductors}
+
+\begin{formulabox}[Carrier Densities, Mass Action Law \& Electrical Conductivity]
+\begin{align}
+  n_e n_h &= n_i^2 && \text{[Law of Mass Action: valid for both intrinsic and extrinsic]} \\
+  n_e &= n_h = n_i && \text{[Intrinsic Semiconductor]} \\
+  n_e &\approx N_d \gg n_h && \text{[n-Type Semiconductor: Pentavalent Donor Doping (P, As, Sb)]} \\
+  n_h &\approx N_a \gg n_e && \text{[p-Type Semiconductor: Trivalent Acceptor Doping (B, Al, In)]} \\
+  \sigma &= e(n_e \mu_e + n_h \mu_h), \qquad I = I_e + I_h = e A E(n_e \mu_e + n_h \mu_h) \quad [\text{Total Drift Current}]
+\end{align}
+\end{formulabox}
+
+\subsection{p-n Junction Diodes, Rectifiers \& Optoelectronic Devices}
+
+\begin{formulabox}[Diode Dynamic Resistance \& Rectifier Efficiencies]
+\begin{align}
+  r_d &= \frac{\Delta V}{\Delta I} \quad [\text{Dynamic Resistance: Low in Forward Bias ($\sim 10-100\,\Omega$), High in Reverse Bias ($\sim 10^6\,\Omega$)}] \\
+  \eta_{\text{half-wave}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.406 R_L}{r_f + R_L} \implies \eta_{\max} = 40.6\%, \qquad \nu_{\text{ripple}} = \nu_{\text{input}} \\
+  \eta_{\text{full-wave}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.812 R_L}{r_f + R_L} \implies \eta_{\max} = 81.2\%, \qquad \nu_{\text{ripple}} = 2\nu_{\text{input}}
+\end{align}
+\end{formulabox}
+
+\subsection{Digital Electronics: Logic Gates \& Boolean Algebra}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{l c c c c c c c}
+\toprule
+\textbf{Input $A$} & \textbf{Input $B$} & \textbf{AND ($A\cdot B$)} & \textbf{OR ($A+B$)} & \textbf{NAND ($\overline{A\cdot B}$)} & \textbf{NOR ($\overline{A+B}$)} & \textbf{XOR ($A\oplus B$)} & \textbf{XNOR ($\overline{A\oplus B}$)} \\
+\midrule
+0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 \\
+0 & 1 & 0 & 1 & 1 & 0 & 1 & 0 \\
+1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+1 & 1 & 1 & 1 & 0 & 0 & 0 & 1 \\
+\bottomrule
+\end{tabularx}
+\caption{Comprehensive Truth Tables for Fundamental, Universal and Derived Logic Gates.}
+\end{table}
+
+\begin{usecasebox}[De Morgan's Theorems \& Universal Logic Construction]
+\begin{itemize}
+  \item \textbf{De Morgan's Laws:}
+  \begin{equation*}
+    \overline{A + B} = \overline{A}\cdot\overline{B}, \qquad \overline{A\cdot B} = \overline{A} + \overline{B}
+  \end{equation*}
+  \item \textbf{Universal Gates Minimal Realizations:}
+  \begin{itemize}
+    \item Number of NAND gates to make: $\text{NOT} = 1$, $\text{AND} = 2$, $\text{OR} = 3$, $\text{NOR} = 4$, $\text{XOR} = 4$.
+    \item Number of NOR gates to make: $\text{NOT} = 1$, $\text{OR} = 2$, $\text{AND} = 3$, $\text{NAND} = 4$, $\text{XNOR} = 4$.
+  \end{itemize}
+\end{itemize}
+\end{usecasebox}
+
+\vspace{15pt}
+\begin{center}
+  \rule{0.6\textwidth}{0.8pt}\\[6pt]
+  {\small\textbf{\color{primarydark}End of Module 04 Formula Handbook (Complete Physics Series)}}\\[2pt]
+  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
+\end{center}
+
+\end{document}

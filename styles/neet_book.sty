@@ -1,0 +1,239 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neet_book}[2026/10/15 NEET UG 2027 Professional Master Book Package]
+
+% --- Core Geometry & Layout (Optimized for Comprehensive Print-on-Demand & Twoside Binding) ---
+\RequirePackage[
+  a4paper,
+  top=2.2cm,
+  bottom=2.2cm,
+  inner=2.4cm,
+  outer=2.0cm,
+  headheight=24pt,
+  headsep=14pt,
+  footskip=16pt,
+  twoside,
+  bindingoffset=4mm
+]{geometry}
+
+% --- Math & Physics Symbols ---
+\RequirePackage{amsmath,amssymb,amsfonts,mathtools,bm}
+\RequirePackage{siunitx}
+\sisetup{separate-uncertainty = true}
+
+% --- Tables & Arrays ---
+\RequirePackage{booktabs,tabularx,longtable,array,colortbl,multirow}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% --- Professional Publishing Color Palette ---
+\RequirePackage[dvipsnames]{xcolor}
+\definecolor{primarydark}{RGB}{15, 34, 64}       % Deep Imperial Navy
+\definecolor{accentblue}{RGB}{28, 93, 153}      % Crisp Academic Blue
+\definecolor{formulablue}{RGB}{23, 70, 162}     % Formula Box Frame
+\definecolor{formulabg}{RGB}{243, 247, 255}     % Formula Light Blue Fill
+\definecolor{traprange}{RGB}{186, 24, 27}       % Alert Crimson Red / Trap Frame
+\definecolor{trapbg}{RGB}{255, 244, 244}        % Trap Light Pink Fill
+\definecolor{usecasegreen}{RGB}{20, 108, 67}    % Application Green Frame
+\definecolor{usecasebg}{RGB}{240, 249, 244}     % Application Light Green Fill
+\definecolor{ncertgold}{RGB}{180, 83, 9}        % NCERT Gold / Amber Frame
+\definecolor{ncertbg}{RGB}{255, 251, 235}       % NCERT Light Amber Fill
+\definecolor{darkcharcoal}{RGB}{33, 37, 41}
+\definecolor{subtleline}{RGB}{222, 226, 230}
+\definecolor{mentorpurple}{RGB}{109, 40, 217}   % Vivid Royal Purple Frame
+\definecolor{mentorbg}{RGB}{250, 245, 255}       % Soft Violet/Lilac Fill
+\definecolor{tipteal}{RGB}{13, 148, 136}         % Teal Frame
+\definecolor{tipbg}{RGB}{240, 253, 250}          % Soft Mint/Teal Fill
+
+% --- Semantic Callout Boxes (tcolorbox) ---
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% 1. Formula Box (Rigorous mathematical equations, limits, variables)
+\newtcolorbox{formulabox}[1][Master Formula \& Governing Equation]{
+  enhanced,
+  breakable,
+  colback=formulabg,
+  colframe=formulablue,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% 2. Use Case & Application Box (Assumptions, valid domains, edge cases, shortcuts)
+\newtcolorbox{usecasebox}[1][Application Regime, Boundary Conditions \& Shortcuts]{
+  enhanced,
+  breakable,
+  colback=usecasebg,
+  colframe=usecasegreen,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% 3. Exam Trap & Pitfall Box (Sign mistakes, units, tricky exceptions, A/R traps)
+\newtcolorbox{trapbox}[1][NEET Trap / Common Pitfall / Tricky Exception]{
+  enhanced,
+  breakable,
+  colback=trapbg,
+  colframe=traprange,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% 4. NCERT High-Yield Box (Direct lines, figures, tables, assertion-reason anchors)
+\newtcolorbox{ncertbox}[1][Direct NCERT Line / High-Yield Extraction]{
+  enhanced,
+  breakable,
+  colback=ncertbg,
+  colframe=ncertgold,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% 5. Concept Definition Box
+\newtcolorbox{conceptbox}[1][Core Principle / Theoretical Postulate]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=primarydark,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% 6. Mentor Note / Conversational Wisdom Box
+\newtcolorbox{mentorbox}[1][A Personal Note from Satya]{
+  enhanced,
+  breakable,
+  colback=mentorbg,
+  colframe=mentorpurple,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=1.0pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt
+}
+
+% 7. High-Yield Study Tip / Reader Strategy Box
+\newtcolorbox{studytipbox}[1][Strategic Study Tip for Aspirants]{
+  enhanced,
+  breakable,
+  colback=tipbg,
+  colframe=tipteal,
+  coltitle=white,
+  fonttitle=\bfseries\small,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.9pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt
+}
+
+% --- Headers & Footers (Two-Sided Academic Book Standard) ---
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+% Even Pages (Left / Verso):
+% Left: Page number. Right: Book Series / Title
+\fancyhead[LE]{\small\textbf{\color{primarydark}\thepage}}
+\fancyhead[RE]{\small\textbf{\color{primarydark}NEET UG 2027 Master Reference Series}}
+
+% Odd Pages (Right / Recto):
+% Left: Chapter / Section Mark. Right: Page number
+\fancyhead[LO]{\small\textbf{\color{accentblue}\nouppercase{\leftmark}}}
+\fancyhead[RO]{\small\textbf{\color{primarydark}\thepage}}
+
+% Footers:
+\fancyfoot[LE]{\footnotesize\color{gray}Authored by Satya Prakash $\cdot$ \href{mailto:spdedsec@hotmail.com}{spdedsec@hotmail.com}}
+\fancyfoot[RO]{\footnotesize\color{gray}Master Reference Edition $\cdot$ Strictly NMC Calibrated}
+
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{accentblue}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{subtleline}\leaders\hrule height \footrulewidth\hfill}}
+
+% Plain Page Style for Chapter Openings
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\small\textbf{\thepage}}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% Clean Double Page for Two-Sided Printing (Blank pages have no headers/footers)
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+  \hbox{}
+  \thispagestyle{empty}
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+% --- Typography & Sectional Hierarchy ---
+\RequirePackage{microtype}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 2pt minus 1pt}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=2pt, parsep=0pt, topsep=2pt}
+\setlist[enumerate]{leftmargin=1.4em, itemsep=2pt, parsep=0pt, topsep=2pt}
+
+% Part Formatting
+\titleformat{\part}[display]
+  {\centering\Huge\bfseries\color{primarydark}}
+  {\Large\bfseries\color{accentblue}\MakeUppercase{\partname}\ \thepart}
+  {1ex}
+  {\color{primarydark}\titlerule[1.5pt]\vspace{1.5ex}}
+  [\vspace{1.5ex}{\color{primarydark}\titlerule[1.5pt]}]
+
+% Chapter Formatting
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{primarydark}}
+  {\Large\bfseries\color{accentblue}\chaptertitlename\ \thechapter}
+  {6pt}
+  {\Huge}
+  [{\color{accentblue}\vspace{6pt}\titlerule[1.5pt]}]
+
+\titlespacing*{\chapter}{0pt}{10pt}{20pt}
+
+% Section Formatting
+\titleformat{\section}
+  {\Large\bfseries\color{primarydark}}
+  {\thesection}{0.8em}{}
+  [{\color{accentblue}\titlerule[1.2pt]}]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{accentblue}}
+  {\thesubsection}{0.6em}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{primarydark}}
+  {\thesubsubsection}{0.5em}{}
+
+% --- Hyperref Setup ---
+\RequirePackage[hidelinks,colorlinks=true,linkcolor=accentblue,urlcolor=accentblue,citecolor=accentblue]{hyperref}
+
+\endinput

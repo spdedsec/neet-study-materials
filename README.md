@@ -15,7 +15,19 @@ This repository hosts the complete, publication-grade study materials suite engi
 
 ---
 
-## 2. Physics Master Theory & Experimental Practicals Suite
+## 2. Complete 3-Volume Master Book Series (Publication Edition)
+
+The repository features three comprehensive, unabridged master book volumes engineered for print-on-demand and rigorous self-study, located in the dedicated `books/` directory. Each volume features a two-sided academic textbook layout, complete professional front matter (Half-Title, Title page, Copyright with editorial contact `spdedsec@hotmail.com`, Dedication, Preface, and auto-generated Table of Contents), discrete running headers, zero repetitive chapter banners, and personal conversational mentor notes from Satya Prakash on learning psychology, memory consolidation, knowing when to stop, and error analysis.
+
+| Volume Title | Scope & Integrated Modules | LaTeX Manuscript | Compiled PDF | Verified Metrics |
+| :--- | :--- | :--- | :--- | :---: |
+| **NEET UG Physics Master Book** | Mechanics, Rotational Dynamics, Gravitation, Fluids, Heat, Thermodynamics, Waves, Electrodynamics, Optics, Modern Physics, 18 Lab Practicals & Formulas | [`books/physics_master_book.tex`](books/physics_master_book.tex) | [`books/physics_master_book.pdf`](books/physics_master_book.pdf) | **139 Pages** (793 KB) |
+| **NEET UG Chemistry Master Book** | Physical Chemistry Foundations, Advanced Solutions/Electro/Kinetics, Inorganic Bonding/CFT, Organic Mechanisms Handbook, Lab Analysis & Formulas | [`books/chemistry_master_book.tex`](books/chemistry_master_book.tex) | [`books/chemistry_master_book.pdf`](books/chemistry_master_book.pdf) | **163 Pages** (981 KB) |
+| **NEET UG Biology Master Book** | Complete Botany (Genetics, Photosynthesis, Respiration, Reproduction, 7 Plant Families) & Zoology (Cell, Enzymes, Cockroach/Frog, Physiology, Health, Evolution) | [`books/biology_master_book.tex`](books/biology_master_book.tex) | [`books/biology_master_book.pdf`](books/biology_master_book.pdf) | **71 Pages** (435 KB) |
+
+---
+
+## 3. Physics Master Theory & Experimental Practicals Suite
 
 Comprehensive thematic master volumes covering all 20 units of the NEET UG 2027 Physics syllabus, featuring complete mathematical derivations, vector calculus, coordinate transformations, and worked problem archetypes.
 
@@ -30,7 +42,7 @@ Comprehensive thematic master volumes covering all 20 units of the NEET UG 2027 
 
 ---
 
-## 3. Chemistry Master Theory, Reaction Mechanisms & Lab Manual Suite
+## 4. Chemistry Master Theory, Reaction Mechanisms & Lab Manual Suite
 
 Comprehensive master volumes covering all 20 units of the NEET UG 2027 Chemistry syllabus, encompassing Physical Chemistry mathematical formulations, Inorganic structural and coordination models, Organic electronic effects and reaction pathways, and Practical Qualitative & Quantitative Lab skills.
 
@@ -44,7 +56,7 @@ Comprehensive master volumes covering all 20 units of the NEET UG 2027 Chemistry
 
 ---
 
-## 4. End-to-End (E2E) Testing, Quality Verification & Syllabus Compliance Track
+## 5. End-to-End (E2E) Testing, Quality Verification & Syllabus Compliance Track
 
 The repository enforces strict opaque-box software engineering standards for all LaTeX documents. Every single master module must pass a deterministic 7-gate verification engine prior to publication.
 
@@ -67,7 +79,7 @@ The repository enforces strict opaque-box software engineering standards for all
 
 ---
 
-## 5. Foundational Formula Handbooks & Biology Master Notes
+## 6. Foundational Formula Handbooks & Biology Master Notes
 
 In addition to the in-depth Master Theory Suite, the repository maintains high-yield quick revision formula handbooks and comprehensive Biology master notes covering Botany and Zoology.
 
@@ -92,19 +104,21 @@ In addition to the in-depth Master Theory Suite, the repository maintains high-y
 
 ---
 
-## 6. Styling & LaTeX Environment Framework
+## 7. Styling & LaTeX Environment Framework
 
-All documents in this repository import [`styles/neet_style.sty`](styles/neet_style.sty) and render using five breakable `tcolorbox` semantic callout environments:
+All documents in this repository import [`styles/neet_style.sty`](styles/neet_style.sty) or [`styles/neet_book.sty`](styles/neet_book.sty) and render using custom breakable `tcolorbox` semantic callout environments:
 
 - `\begin{conceptbox}[Title]` -- Fundamental scientific laws, underlying postulates, mechanisms, and structural pathways.
 - `\begin{formulabox}[Title]` -- High-yield governing equations, vector forms, dimensional analysis, and SI units.
 - `\begin{usecasebox}[Title]` -- Boundary conditions, domains of validity, approximations, and practical calculation shortcuts.
 - `\begin{trapbox}[Title]` -- NEET exam traps, historical trick questions, subtle distinction errors, and sign convention traps.
 - `\begin{ncertbox}[Title]` -- Direct NCERT line extractions, critical benchmark data, and official diagram cross-references.
+- `\begin{mentorbox}[Title]` -- Personal wisdom, study strategy, memory consolidation, and psychological endurance notes from Satya Prakash.
+- `\begin{studytipbox}[Title]` -- High-yield tactical shortcuts and examination problem-solving techniques.
 
 ---
 
-## 7. Local Build & Verification Guide
+## 8. Local Build & Verification Guide
 
 ### 1. Run Automated E2E Quality Verification
 To run the automated 7-gate verification engine on the Master Theory Suite:

@@ -1,0 +1,186 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% --- Document Header Banner ---
+\begin{center}
+  {\huge\bfseries\color{primarydark} NEET UG 2027: Chemistry Formula Compendium}\\[6pt]
+  {\Large\bfseries\color{accentblue} Module 02: Solutions, Electrochemistry \& Chemical Kinetics}\\[8pt]
+  {\normalsize\textbf{Prepared, Compiled \& Authored by Satya Prakash} \quad\textbar\quad \textbf{Subject:} Physical Chemistry (Units 5, 7 \& 8)}\\[4pt]
+  {\footnotesize\color{gray} Strict NCERT \& NMC Alignment \quad\textbar\quad Complete Mathematical Variations, Use-Cases \& Traps}
+\end{center}
+\vspace{-2pt}
+\hrule height 1.2pt
+\vspace{8pt}
+
+% =========================================================================
+% SECTION 1: SOLUTIONS \& COLLIGATIVE PROPERTIES
+% =========================================================================
+\section{Solutions \& Colligative Properties (Unit 5)}
+
+\subsection{Gas Solubility \& Raoult's Law}
+
+\begin{formulabox}[Henry's Law, Raoult's Law \& Vapour Pressure]
+\begin{align}
+  p &= K_H \cdot x \implies x = \frac{p}{K_H} && \text{[Henry's Law: Higher $K_H$ at given $T$ implies LOWER solubility]} \\
+  P_{\text{total}} &= P_A + P_B = P_A^\circ x_A + P_B^\circ x_B = P_A^\circ + (P_B^\circ - P_A^\circ)x_B && \text{[Raoult's Law for Volatile Binary Liquid Mixtures]} \\
+  y_A &= \frac{P_A}{P_{\text{total}}} = \frac{P_A^\circ x_A}{P_{\text{total}}}, \qquad \frac{1}{P_{\text{total}}} = \frac{y_A}{P_A^\circ} + \frac{y_B}{P_B^\circ} && \text{[$y_A, y_B$ are mole fractions in VAPOUR phase (Dalton's Law)]}
+\end{align}
+\end{formulabox}
+
+\subsection{Colligative Properties \& van 't Hoff Factor}
+
+\begin{formulabox}[The Four Colligative Properties \& van 't Hoff Factor ($i$)]
+\begin{align}
+  \frac{P_A^\circ - P}{P_A^\circ} &= i\,x_B = i\left(\frac{n_B}{n_A + n_B}\right) \approx i\left(\frac{w_B M_A}{M_B w_A}\right) && \text{[Relative Lowering of Vapour Pressure (RLVP)]} \\
+  \Delta T_b &= T_b - T_b^\circ = i\,K_b\,m = i\left(\frac{1000 K_b w_B}{M_B w_A}\right) && \text{[Elevation of Boiling Point; } K_b = \frac{R T_b^{\circ 2} M_A}{1000 \Delta H_{\text{vap}}}\text{]} \\
+  \Delta T_f &= T_f^\circ - T_f = i\,K_f\,m = i\left(\frac{1000 K_f w_B}{M_B w_A}\right) && \text{[Depression of Freezing Point; } K_f = \frac{R T_f^{\circ 2} M_A}{1000 \Delta H_{\text{fus}}}\text{]} \\
+  \Pi &= i\,C\,R\,T = i\left(\frac{n_B}{V}\right)R T = i\left(\frac{w_B R T}{M_B V}\right) && \text{[Osmotic Pressure; isotonic: } \Pi_1 = \Pi_2\text{]}
+\end{align}
+\textbf{van 't Hoff Factor ($i$) Formulations:}
+\begin{align}
+  i &= \frac{\text{Experimental / Observed Colligative Property}}{\text{Calculated / Normal Colligative Property}} = \frac{\text{Normal Molar Mass}}{\text{Abnormal / Observed Molar Mass}} \\
+  \alpha_{\text{dissociation}} &= \frac{i - 1}{n - 1} \implies i = 1 + (n - 1)\alpha \quad [\text{e.g. for } \text{K}_4[\text{Fe(CN)}_6]: n = 5 \implies i = 1 + 4\alpha] \\
+  \alpha_{\text{association}} &= \frac{1 - i}{1 - \frac{1}{n}} \implies i = 1 - \left(1 - \frac{1}{n}\right)\alpha \quad [\text{for dimerization } n = 2: i = 1 - \frac{\alpha}{2}]
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Solutions Traps: Molality in RLVP \& Abnormal Molar Mass]
+\begin{itemize}
+  \item \textbf{RLVP with Molality Shortcut:} For an aqueous solution, relative lowering of vapour pressure can be directly expressed in terms of molality $m$:
+  \begin{equation*}
+    \frac{P^\circ - P}{P} = \frac{m \times M_{\text{solvent}}}{1000} \implies \text{For water: } \frac{P^\circ - P}{P} = \frac{18 m}{1000}
+  \end{equation*}
+  Notice the denominator is $P$ (solution vapour pressure), NOT $P^\circ$!
+  \item \textbf{Elevation vs Depression Constant:} For water, $K_b = 0.52\,\si{K.kg.mol^{-1}}$, whereas $K_f = 1.86\,\si{K.kg.mol^{-1}}$. Freezing point depression is roughly 3.6 times more sensitive than boiling point elevation for the identical molal concentration.
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 2: ELECTROCHEMISTRY
+% =========================================================================
+\section{Electrochemistry (Unit 7)}
+
+\subsection{Galvanic Cells, Nernst Equation \& Equilibrium}
+
+\begin{formulabox}[EMF, Nernst Equation \& Free Energy Formulations]
+\begin{align}
+  E_{\text{cell}}^\circ &= E_{\text{cathode}}^\circ - E_{\text{anode}}^\circ = E_{\text{right}}^\circ - E_{\text{left}}^\circ && \text{[Standard Reduction Potentials]} \\
+  E_{\text{cell}} &= E_{\text{cell}}^\circ - \frac{R T}{n F}\ln Q = E_{\text{cell}}^\circ - \frac{2.303 R T}{n F}\log_{10} Q && \text{[Nernst Equation]} \\
+  E_{\text{cell}} &= E_{\text{cell}}^\circ - \frac{0.0591}{n}\log_{10} Q \quad (\text{at } T = 298.15\,\si{K}) && [F = 96485\,\si{C.mol^{-1}} \approx 96500\,\si{C}] \\
+  E_{\text{cell}}^\circ &= \frac{0.0591}{n}\log_{10} K_c \iff \log_{10} K_c = \frac{n E_{\text{cell}}^\circ}{0.0591} && \text{[At Equilibrium: } E_{\text{cell}} = 0, \quad Q = K_c\text{]} \\
+  \Delta_r G &= -n F E_{\text{cell}}, \qquad \Delta_r G^\circ = -n F E_{\text{cell}}^\circ = -2.303 R T \log_{10} K_c && \text{[Thermodynamic Link]}
+\end{align}
+\textbf{Concentration Cells (Identical Electrodes, Different Concentrations $C_1 < C_2$):}
+\begin{equation}
+  E_{\text{cell}}^\circ = 0 \implies E_{\text{cell}} = \frac{0.0591}{n}\log_{10}\left(\frac{C_2}{C_1}\right) \quad (\text{Spontaneous if } C_2 > C_1)
+\end{equation}
+\end{formulabox}
+
+\subsection{Electrolytic Conductance \& Kohlrausch's Law}
+
+\begin{formulabox}[Conductivity, Molar Conductivity \& Kohlrausch Formulations]
+\begin{align}
+  G &= \frac{1}{R} = \frac{A}{\rho L} = \kappa\frac{A}{L} \implies \kappa = G\left(\frac{L}{A}\right) = \frac{G^*}{R} && [G^* = \frac{L}{A} = \text{Cell Constant in }\si{cm^{-1}}] \\
+  \Lambda_m &= \frac{1000\,\kappa}{M\text{ [Molarity]}} \quad [\si{S.cm^2.mol^{-1}}], \qquad \Lambda_{\text{eq}} = \frac{1000\,\kappa}{N\text{ [Normality]}} = \frac{\Lambda_m}{n\text{-factor}} \\
+  \Lambda_m &= \Lambda_m^\circ - A\sqrt{C} && \text{[Debye-H\"uckel-Onsager for Strong Electrolytes]} \\
+  \Lambda_m^\circ(A_x B_y) &= x \lambda_m^\circ(A^{y+}) + y \lambda_m^\circ(B^{x-}) && \text{[Kohlrausch's Law of Independent Migration of Ions]} \\
+  \alpha &= \frac{\Lambda_m}{\Lambda_m^\circ}, \qquad K_a = \frac{C \alpha^2}{1 - \alpha} = \frac{C \Lambda_m^2}{\Lambda_m^\circ(\Lambda_m^\circ - \Lambda_m)}, \qquad S = \frac{1000\,\kappa_{\text{salt}}}{\Lambda_m^\circ} && \text{[Sparingly Soluble Salt Solubility } S\text{]}
+\end{align}
+\end{formulabox}
+
+\subsection{Faraday's Laws of Electrolysis}
+
+\begin{formulabox}[Faraday's First \& Second Laws of Electrolysis]
+\begin{align}
+  w &= Z\,I\,t = \left(\frac{E}{96500}\right)I\,t = \left(\frac{M}{n \times 96500}\right)I\,t && \text{[Faraday's First Law; } Q = I t\text{]} \\
+  \frac{w_1}{w_2} &= \frac{E_1}{E_2} \quad (\text{for identical charge } Q \text{ passed}) && \text{[Faraday's Second Law]}
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Electrochemistry Traps: Intensive $E^\circ$ vs Extensive $\Delta G^\circ$]
+\begin{itemize}
+  \item \textbf{Electrode Potentials are Intensive Properties:} Never multiply $E^\circ$ by stoichiometric coefficients when balancing electrons! For half-reaction multiplied by $2$: $\Delta G^\circ$ doubles, but $E^\circ$ remains \textbf{unchanged}. When combining non-standard half-cells, always combine $\Delta G^\circ = -nFE^\circ$, never add potentials directly!
+  \item \textbf{Conductivity vs Molar Conductivity on Dilution:} On dilution: Specific conductivity $\kappa$ \textbf{decreases} (fewer ions per unit volume), but molar conductivity $\Lambda_m$ \textbf{increases} (interionic attractions weaken for strong electrolytes; $\alpha$ increases for weak electrolytes).
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 3: CHEMICAL KINETICS
+% =========================================================================
+\section{Chemical Kinetics (Unit 8)}
+
+\subsection{Rate Laws, Order \& Molecularity}
+
+\begin{formulabox}[Reaction Rates \& General Rate Expressions]
+For general reaction: $aA + bB \to cC + dD$:
+\begin{align}
+  \text{Rate} &= -\frac{1}{a}\frac{d[A]}{dt} = -\frac{1}{b}\frac{d[B]}{dt} = +\frac{1}{c}\frac{d[C]}{dt} = +\frac{1}{d}\frac{d[D]}{dt} \\
+  \text{Differential Rate Law} &= k[A]^x[B]^y \implies \text{Overall Order } n = x + y \quad (\text{Order can be fractional or zero}) \\
+  \text{SI Units of Rate Constant } k &= (\si{mol.L^{-1}})^{1-n}\,\si{s^{-1}} = \si{mol^{1-n}.L^{n-1}.s^{-1}}
+\end{align}
+\end{formulabox}
+
+\subsection{Integrated Rate Equations: Zero, First \& $n$-th Order}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{L c c c c}
+\toprule
+\textbf{Reaction Order} & \textbf{Differential Form} & \textbf{Integrated Equation} & \textbf{Half-Life ($t_{1/2}$)} & \textbf{Completion Time ($t_{\text{comp}}$)} \\
+\midrule
+Zero Order ($n=0$) & $-\frac{d[A]}{dt} = k$ & $[A]_t = [A]_0 - kt$ & $t_{1/2} = \frac{[A]_0}{2k} \propto [A]_0$ & $t_{100\%} = \frac{[A]_0}{k} = 2t_{1/2}$ \\
+First Order ($n=1$) & $-\frac{d[A]}{dt} = k[A]$ & $k = \frac{2.303}{t}\log_{10}\frac{[A]_0}{[A]_t}$ & $t_{1/2} = \frac{\ln 2}{k} = \frac{0.693}{k}$ & $t_{100\%} \to \infty$ (Never completes) \\
+Second Order ($n=2$) & $-\frac{d[A]}{dt} = k[A]^2$ & $\frac{1}{[A]_t} - \frac{1}{[A]_0} = kt$ & $t_{1/2} = \frac{1}{k[A]_0} \propto \frac{1}{[A]_0}$ & $t_{100\%} \to \infty$ \\
+General $n$-th Order & $-\frac{d[A]}{dt} = k[A]^n$ & $\frac{1}{[A]_t^{n-1}} - \frac{1}{[A]_0^{n-1}} = (n-1)kt$ & $t_{1/2} \propto \frac{1}{[A]_0^{n-1}}$ & --- \\
+\bottomrule
+\end{tabularx}
+\caption{Systematic Summary of Integrated Rate Formulations and Half-Life Scaling.}
+\end{table}
+
+\begin{usecasebox}[First-Order Fractional Lifetimes Shortcuts]
+For any first-order process:
+\begin{align*}
+  t_{50\%} &= 1 \times t_{1/2} = \frac{0.693}{k} \\
+  t_{75\%} &= 2 \times t_{1/2} \quad (75\% \text{ consumed, } 25\% \text{ remaining}) \\
+  t_{87.5\%} &= 3 \times t_{1/2} \quad (87.5\% \text{ consumed, } 12.5\% \text{ remaining}) \\
+  t_{99\%} &= 2 \times t_{90\%} \approx 6.64 \times t_{1/2} \approx \frac{4.606}{k} \\
+  t_{99.9\%} &= 10 \times t_{1/2} \approx 3 \times t_{90\%} = \frac{6.909}{k}
+\end{align*}
+\end{usecasebox}
+
+\subsection{Temperature Dependence: Arrhenius Equation \& Catalysis}
+
+\begin{formulabox}[Arrhenius Equation, Activation Energy \& Collision Theory]
+\begin{align}
+  k &= A\,e^{-E_a / R T} \implies \ln k = \ln A - \frac{E_a}{R T} \implies \log_{10} k = \log_{10} A - \frac{E_a}{2.303 R T} \\
+  \log_{10}\left(\frac{k_2}{k_1}\right) &= \frac{E_a}{2.303 R}\left[\frac{T_2 - T_1}{T_1 T_2}\right] && \text{[Two Temperatures } T_1, T_2\text{]} \\
+  \text{Slope of } \log_{10} k \text{ vs } \frac{1}{T} &= -\frac{E_a}{2.303 R}, \qquad \text{Intercept} = \log_{10} A \\
+  \Delta_r H &= E_{a,\text{forward}} - E_{a,\text{backward}} && [\Delta H < 0 \text{ Exothermic; } \Delta H > 0 \text{ Endothermic}] \\
+  \text{Rate} &= P \cdot Z_{AB} \cdot e^{-E_a / RT} && [P = \text{Steric / Orientation Factor}, Z = \text{Collision Frequency}]
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Kinetics Traps: Molecularity vs Order \& Catalyst Action]
+\begin{itemize}
+  \item \textbf{Molecularity is NEVER Zero or Fractional:} Molecularity is the number of reacting species colliding simultaneously in an elementary step; it is strictly an integer ($1, 2, 3$). Reactions with molecularity $>3$ are statistically rare. Order is experimentally determined and can be $0$, fractional, or negative.
+  \item \textbf{Catalysts Do NOT Alter Equilibrium State:} A catalyst accelerates both forward and reverse reaction rates by the identical factor by providing an alternate reaction pathway with lower activation energy ($E_a' < E_a$). It does \textbf{not} alter $\Delta_r H$, $\Delta_r G^\circ$, or the equilibrium constant $K_c$.
+\end{itemize}
+\end{trapbox}
+
+\vspace{15pt}
+\begin{center}
+  \rule{0.6\textwidth}{0.8pt}\\[6pt]
+  {\small\textbf{\color{primarydark}End of Module 02 Physical Chemistry Formula Handbook (Complete Physical Suite)}}\\[2pt]
+  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
+\end{center}
+
+\end{document}

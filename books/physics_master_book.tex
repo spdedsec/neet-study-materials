@@ -1,3 +1,4 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[10pt,twoside,openright]{book}
 \usepackage{../styles/neet_book}
 
@@ -24,8 +25,8 @@
 \begin{center}
   {\Huge\bfseries\color{primarydark} NEET UG PHYSICS}\\[0.4cm]
   {\LARGE\bfseries\color{primarydark} MASTER TEXTBOOK}\\[0.8cm]
-  {\Large\bfseries\color{accentblue} Mechanics, Thermodynamics, Electrodynamics, Optics,}\\[0.2cm]
-  {\Large\bfseries\color{accentblue} Modern Physics, Experimental Skills \& High-Yield Formulas}\\[2cm]
+  {\Large\bfseries\color{accentblue} Complete Master Theory, Formulas \& Experimental Compendium}\\[0.3cm]
+  {\large\bfseries\color{accentblue} Strictly Aligned with NEET UG 2027 NMC Syllabus}\\[2cm]
   
   {\large\textbf{Authored by}}\\[0.3cm]
   {\LARGE\bfseries\color{primarydark} Satya Prakash}\\[1.5cm]
@@ -160,15 +161,15 @@ The National Eligibility cum Entrance Test (NEET UG 2027) follows the curriculum
 \centering
 \small
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{l c c c c Y}
+\begin{tabularx}{\textwidth}{l c c c Y}
 \toprule
-\textbf{Component} & \textbf{Section A} & \textbf{Section B} & \textbf{Total Questions} & \textbf{Marks} & \textbf{Question Typology} \\
+\textbf{Component} & \textbf{Compulsory Questions} & \textbf{Marks} & \textbf{Pace Budget} & \textbf{Question Typology} \\
 \midrule
-\textbf{Physics} & 35 & 15 (Attempt 10) & 45 & 180 & Single Choice, MCQs, \\
-\textbf{Exam Total} & 140 & 60 (Attempt 40) & 180 & 720 & Assertion-Reason, Matrix Match \\
+\textbf{Physics} & 45 (All Compulsory) & 180 & 45--50 min & Single Choice MCQs, Numerical Calculations, \\
+\textbf{Exam Total} & 180 Compulsory & 720 & 180 min (3h) & Assertion-Reason, Statement I/II, Matrix Match \\
 \bottomrule
 \end{tabularx}
-\caption{NEET UG Physics Examination Scheme (+4 for correct response, $-1$ for incorrect response, 0 for unattempted).}
+\caption{Reformed NEET UG Physics Examination Scheme (+4 for correct response, $-1$ for incorrect response, 0 for unattempted. Optional Section B discontinued by NTA).}
 \end{table}
 
 \section*{Official 20-Unit Physics Syllabus Structure}
@@ -228,7 +229,7 @@ Optics (Ray \& Wave Optics) & 4--5 & 16--20 Marks \\
 Modern Physics \& Semiconductors (Dual Nature, Atoms, Nuclei, Diodes/Gates) & 6--8 & 24--32 Marks \\
 Experimental Skills (Unit 20 Laboratory Practicals) & 2--3 & 8--12 Marks \\
 \midrule
-\textbf{Total Physics Paper} & \textbf{45 Attempted / 50} & \textbf{180 Marks} \\
+\textbf{Total Physics Paper} & \textbf{45 Questions (All Compulsory)} & \textbf{180 Marks} \\
 \bottomrule
 \end{tabularx}
 \caption{Empirical Question Distribution in Recent NEET UG Papers.}
@@ -248,27 +249,32 @@ Experimental Skills (Unit 20 Laboratory Practicals) & 2--3 & 8--12 Marks \\
 \mainmatter
 
 % =========================================================================
-% PART I: CLASSICAL MECHANICS & FLUID DYNAMICS
+% PART I: CLASSICAL MECHANICS & DYNAMICS
 % =========================================================================
-\part{Classical Mechanics \& Fluid Dynamics}
+\part{Classical Mechanics \& Dynamics}
 
-\chapter{Foundations of Mechanics: Kinematics, Dynamics, Work, Energy \& Collisions}
+\chapter{Foundations of Classical Mechanics: Kinematics, Dynamics, Work, Energy \& Collisions}
 
 This chapter establishes the core mechanics principles for NEET UG. We begin with the mathematical foundation of physical measurements, dimensional homogeneity, and error calculus, progressing into rectilinear and two-dimensional kinematics, Newton's laws of motion with constrained multi-block dynamics, microscopic friction mechanisms, vertical and banked circular motion, and the calculus of work, energy, and collision impulse.
 
 \section{Physical Measurement, Dimensional Analysis \& Calculus of Errors}
 
-\begin{conceptbox}[Foundational Standards of Measurement \& Dimensional Homogeneity]
-Physical quantities are classified into base (fundamental) and derived quantities. The International System of Units (SI) defines seven base quantities: Mass $[\mathrm{M}]$, Length $[\mathrm{L}]$, Time $[\mathrm{T}]$, Electric Current $[\mathrm{I}]$ or $[\mathrm{A}]$, Thermodynamic Temperature $[\mathrm{K}]$, Amount of Substance $[\mathrm{mol}]$, and Luminous Intensity $[\mathrm{cd}]$.
-\begin{enumerate}[leftmargin=*]
-  \item \textbf{Principle of Dimensional Homogeneity:} An equation representing physical law $A + B = C$ is physically valid only if $[A] = [B] = [C]$. Transcendental functions (trigonometric $\sin\theta$, exponential $e^x$, logarithmic $\ln x$) must have strictly dimensionless arguments: $[x] = \mathrm{M}^0\mathrm{L}^0\mathrm{T}^0 = 1$.
-  \item \textbf{Dimensional Analysis Capabilities \& Inherent Limitations:}
-  \begin{itemize}
-    \item Useful for deducing power-law dependencies among independent variables, checking algebraic consistency, and converting numerical values between unit systems.
-    \item Cannot determine dimensionless numerical constants (e.g., $2\pi$ or $1/2$), cannot solve equations involving more variables than the number of fundamental dimensions (typically 3 in mechanics: $\mathrm{M, L, T}$), and fails for relations involving vector addition or sum of terms.
-  \end{itemize}
-\end{enumerate}
-\end{conceptbox}
+\subsection{Foundational Standards of Measurement \& Dimensional Homogeneity}
+Physical quantities are classified into base (fundamental) and derived quantities. The International System of Units (SI) defines seven base quantities: Mass $[\mathrm{M}]$, Length $[\mathrm{L}]$, Time $[\mathrm{T}]$, Electric Current $[\mathrm{I}]$ or $[\mathrm{A}]$, Thermodynamic Temperature $[\mathrm{K}]$, Amount of Substance $[\mathrm{mol}]$, and Luminous Intensity $[\mathrm{cd}]$. All mechanical, thermal, and electrodynamic variables in the NEET curriculum derive from power combinations of these fundamental dimensions.
+
+\paragraph{Principle of Dimensional Homogeneity:} An equation representing any physical law of the form $A + B = C$ is physically valid if and only if each additive term possesses identical dimensions:
+\begin{equation}
+  [A] = [B] = [C]
+\end{equation}
+Furthermore, arguments of transcendental functions (such as trigonometric arguments $\sin\theta$, exponents in $e^x$, and logarithms $\ln x$) must be strictly dimensionless numbers: $[x] = \mathrm{M}^0\mathrm{L}^0\mathrm{T}^0 = 1$.
+
+\paragraph{Capabilities and Inherent Limitations of Dimensional Analysis:}
+Dimensional analysis provides a rapid method for checking algebraic consistency, deducing power-law dependencies among independent variables, and converting numerical magnitudes between unit systems (e.g., CGS and SI). However, it possesses fundamental limitations:
+\begin{itemize}
+  \item It cannot determine dimensionless proportionality constants (such as $1/2$ in kinetic energy or $2\pi$ in simple pendulum period).
+  \item It fails when a quantity depends on more variables than the available independent fundamental equations (typically three in mechanics: $\mathrm{M, L, T}$).
+  \item It cannot deduce relations involving additive sums of terms or trigonometric functions.
+\end{itemize}
 
 \begin{formulabox}[Calculus of Error Propagation \& Uncertainty Formulations]
 Let a derived quantity $Z$ depend on independently measured physical variables $A, B, C$ via the functional relation $Z = f(A, B, C)$. By taking the total differential:
@@ -555,25 +561,57 @@ where $\alpha, \beta, \gamma$ are the angles opposite to forces $\mathbf{F}_1, \
 % =========================================================================
 \section{Friction: Microscopic Mechanism, Slopes \& Multi-Block Dynamics}
 
-\begin{conceptbox}[Laws of Dry Friction (Amontons--Coulomb Model)]
-Friction is an electromagnetic contact force arising from microscopic adhesive bonding (cold welding of microscopic asperities) and mechanical interlocking between contacting surfaces.
-\begin{enumerate}[leftmargin=*]
-  \item \textbf{Static Friction ($f_s$):} A self-adjusting reaction force that opposes the tendency of relative motion. It matches the net applied tangential force up to a limiting threshold:
-  \begin{equation}
-    0 \le f_s \le f_{s,\max} = \mu_s N
-  \end{equation}
-  where $\mu_s$ is the coefficient of static friction, and $N$ is the normal contact force.
-  \item \textbf{Kinetic Friction ($f_k$):} Once relative slip begins, the opposing frictional force becomes nearly independent of relative sliding velocity and contact area:
-  \begin{equation}
-    f_k = \mu_k N \quad (\text{with } \mu_k < \mu_s)
-  \end{equation}
-  \item \textbf{Angle of Friction ($\lambda$) \& Angle of Repose ($\theta_r$):}
-  \begin{equation}
-    \tan\lambda = \frac{f_{s,\max}}{N} = \frac{\mu_s N}{N} = \mu_s, \qquad \tan\theta_r = \mu_s \implies \theta_r = \lambda = \tan^{-1}\mu_s
-  \end{equation}
-  A body resting on an inclined plane begins spontaneous sliding only when inclination $\theta > \theta_r$.
-\end{enumerate}
-\end{conceptbox}
+\subsection{Microscopic Origin and Laws of Dry Friction (Amontons--Coulomb Model)}
+Friction is an electromagnetic contact force arising from microscopic adhesive bonding (cold welding of microscopic surface asperities) and mechanical interlocking between contacting surfaces. When two rough solid surfaces are pressed together under normal load $N$, the actual microscopic contact area is merely a minute fraction ($10^{-4}$ to $10^{-2}$) of the apparent macroscopic surface area.
+
+\paragraph{1. Static Friction ($f_s$):} Static friction is a self-adjusting reaction force that opposes the impending tendency of relative tangential motion between two contacting interfaces. It automatically balances the net applied tangential force $F_{\text{applied}}$ up to a definite limiting maximum value $f_{s,\max}$:
+\begin{equation}
+  0 \le f_s \le f_{s,\max} = \mu_s N
+\end{equation}
+where $\mu_s$ is the dimensionless coefficient of static friction, and $N$ is the normal contact force. As long as $F_{\text{applied}} < \mu_s N$, the acceleration is zero and $f_s = F_{\text{applied}}$.
+
+\paragraph{2. Kinetic Friction ($f_k$):} Once the applied tangential load overcomes the limiting static barrier ($F_{\text{applied}} > \mu_s N$), relative sliding commences. The microscopic cold welds shear continuously, and the opposing kinetic friction force becomes virtually independent of both the sliding velocity (at moderate speeds) and the apparent contact area:
+\begin{equation}
+  f_k = \mu_k N \qquad (\text{with } \mu_k < \mu_s)
+\end{equation}
+
+\paragraph{3. Angle of Friction ($\lambda$) and Angle of Repose ($\theta_r$):}
+The angle of friction $\lambda$ is defined as the angle that the resultant contact force $\mathbf{R} = \mathbf{N} + \mathbf{f}_{s,\max}$ makes with the normal vector $\mathbf{N}$ at limiting equilibrium:
+\begin{equation}
+  \tan\lambda = \frac{f_{s,\max}}{N} = \frac{\mu_s N}{N} = \mu_s \implies \lambda = \tan^{-1}\mu_s
+\end{equation}
+Similarly, the angle of repose $\theta_r$ is the maximum angle of inclination of a rough plane with the horizontal such that a block placed upon it remains at rest without slipping down. By resolving forces parallel and perpendicular to the inclined plane:
+\begin{align}
+  N &= mg\cos\theta \\
+  f_s &= mg\sin\theta
+\end{align}
+At limiting equilibrium when slipping is imminent, $f_s = \mu_s N = \mu_s mg\cos\theta$. Equating the two yields:
+\begin{equation}
+  mg\sin\theta_r = \mu_s mg\cos\theta_r \implies \tan\theta_r = \mu_s \implies \theta_r = \lambda = \tan^{-1}\mu_s
+\end{equation}
+Thus, a body placed on an inclined plane remains at rest if $\theta \le \theta_r$, slides with constant velocity if $\theta = \theta_r$ (with $\mu_k \approx \mu_s$), and accelerates down the plane if $\theta > \theta_r$.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.1, >=Stealth]
+  \draw[thick, fill=gray!10] (0,0) -- (6,0) -- (6, 3.46) -- cycle;
+  \draw[thick] (1.2,0) arc (0:30:1.2);
+  \node at (1.5, 0.3) {$\theta$};
+  \begin{scope}[shift={(3.5, 2.02)}, rotate=30]
+    \draw[thick, fill=blue!10] (-0.8, 0) rectangle (0.8, 1.0);
+    \coordinate (G) at (0, 0.5);
+    \draw[->, thick, accentblue] (G) -- (0, 2.0) node[above] {$N = mg\cos\theta$};
+    \draw[->, thick, usecasegreen] (0, 0) -- (-1.8, 0) node[above left] {$f_s \le \mu_s N$};
+    \draw[->, thick, traprange] (G) -- (1.8, 0.5) node[below right] {$mg\sin\theta$};
+    \draw[->, dashed, primarydark] (G) -- (0, -1.2) node[below right] {$mg\cos\theta$};
+  \end{scope}
+  \coordinate (CenterMass) at (3.25, 2.45);
+  \filldraw[primarydark] (CenterMass) circle (2pt);
+  \draw[->, very thick, primarydark] (CenterMass) -- (3.25, 0.6) node[below] {$mg$ (Weight)};
+\end{tikzpicture}
+\caption{Free-Body Force Resolution for a Block of Mass $m$ on a Rough Inclined Plane of Angle $\theta$.}
+\label{fig:incline_fbd}
+\end{figure}
 
 \begin{formulabox}[Dynamics on Rough Inclined Planes \& Stacked Block Systems]
 \textbf{1. Acceleration on Rough Incline:}
@@ -903,7 +941,12 @@ In two-dimensional (oblique) collisions between smooth spheres:
 \end{itemize}
 \end{ncertbox}
 
-\chapter{System of Particles, Rotational Dynamics, Gravitation \& Fluid Mechanics}
+% =========================================================================
+% PART II: ROTATIONAL MECHANICS, GRAVITATION & CONTINUUM MECHANICS
+% =========================================================================
+\part{Rotational Mechanics, Gravitation \& Continuum Mechanics}
+
+\chapter{Rotational Dynamics, Universal Gravitation \& Continuum Mechanics}
 
 In this chapter, we bridge translational physics with rotational mechanics, celestial gravitation, and the mechanics of deformable media. Topics include the calculus of continuous mass distributions, moment of inertia theorems, angular momentum conservation, pure rolling on rough inclines, Kepler's laws, gravitational field/potential energy formulations, elastic moduli, surface tension, capillarity, and Bernoulli's hydrodynamic theorem.
 
@@ -1455,11 +1498,11 @@ For laminar flow of fluid through a capillary tube of internal radius $r$ and le
 \end{ncertbox}
 
 % =========================================================================
-% PART II: HEAT, THERMODYNAMICS & WAVE MECHANICS
+% PART III: THERMAL PHYSICS, THERMODYNAMICS & WAVES
 % =========================================================================
-\part{Thermal Physics, Thermodynamics \& Wave Mechanics}
+\part{Thermal Physics, Thermodynamics \& Waves}
 
-\chapter{Thermal Properties, Thermodynamics, Kinetic Theory \& Oscillations}
+\chapter{Thermal Physics, Thermodynamics, Kinetic Theory \& Waves}
 
 This chapter covers the thermal and vibrational behavior of matter. We explore thermal expansion, calorimetry, radiation laws, the first and second laws of thermodynamics with explicit NMC boundary exclusions, the molecular kinetic theory of gases with degrees of freedom and equipartition of energy, simple harmonic motion kinematics and spring-pendulum dynamics, and wave motion in strings and organ pipes.
 
@@ -1776,32 +1819,79 @@ Consider 1 mole of an ideal gas ($n=1$).
 \textit{In terms of specific heats (per unit mass):} $c_p - c_v = \frac{R}{M_{\text{molar}}}$.
 \end{formulabox}
 
-\begin{usecasebox}[P-V Indicator Diagram Slopes \& Cyclic Process Work]
-\textbf{1. Comparison of Adiabatic vs. Isothermal Slopes:}
+\subsection{$P-V$ Indicator Diagrams: Isothermal vs. Adiabatic Slopes \& Expansion Work}
+An indicator diagram represents thermodynamic transformations on a coordinate plane of state variables, most commonly pressure $P$ versus volume $V$. Because work done during any quasi-static process is given by the integral $W = \int P\,dV$, the area beneath the trajectory curve on a $P-V$ diagram measures the mechanical work exchanged with the surroundings.
+
+\paragraph{Mathematical Derivation of Trajectory Slopes:}
+The slope of a process at any state $(P, V)$ on the $P-V$ plane is given by the derivative $\frac{dP}{dV}$:
 \begin{itemize}
-  \item Isothermal curve: $P V = \text{const} \implies P dV + V dP = 0 \implies \mathbf{\left(\frac{dP}{dV}\right)_{\text{iso}} = -\frac{P}{V}}$.
-  \item Adiabatic curve: $P V^\gamma = \text{const} \implies V^\gamma dP + \gamma P V^{\gamma-1} dV = 0 \implies \mathbf{\left(\frac{dP}{dV}\right)_{\text{ad}} = -\gamma \frac{P}{V}}$.
-  \item \textbf{Fundamental Slope Theorem:}
+  \item \textbf{Isothermal Trajectory ($T = \text{constant}$):} For an ideal gas obeying Boyle's law $PV = \text{constant}$:
   \begin{equation}
-    \mathbf{\left(\frac{dP}{dV}\right)_{\text{adiabatic}} = \gamma \left(\frac{dP}{dV}\right)_{\text{isothermal}}}
+    P\,dV + V\,dP = 0 \implies \mathbf{\left(\frac{dP}{dV}\right)_{\text{isothermal}} = -\frac{P}{V}}
   \end{equation}
-  Since $\gamma > 1$, the adiabatic curve is \textbf{$\gamma$ times steeper} than the isothermal curve at any point of intersection.
+  \item \textbf{Adiabatic Trajectory ($dQ = 0$):} For a reversible adiabatic process obeying Poisson's relation $P V^\gamma = \text{constant}$:
+  \begin{equation}
+    V^\gamma\,dP + \gamma P V^{\gamma-1}\,dV = 0 \implies \mathbf{\left(\frac{dP}{dV}\right)_{\text{adiabatic}} = -\gamma \frac{P}{V}}
+  \end{equation}
 \end{itemize}
-\textbf{2. Expansion from Common Initial State $(P_0, V_0)$ to Final Volume $V_f > V_0$:}
+
+\paragraph{The Fundamental Slope Theorem:}
+Dividing the adiabatic slope by the isothermal slope yields the cornerstone theorem of thermodynamic indicator curves:
+\begin{equation}
+  \mathbf{\left(\frac{dP}{dV}\right)_{\text{adiabatic}} = \gamma \left(\frac{dP}{dV}\right)_{\text{isothermal}}}
+\end{equation}
+Since the adiabatic index $\gamma = \frac{C_p}{C_v} > 1$ for all gases ($\gamma \approx 1.67$ for monoatomic, $1.40$ for diatomic), the adiabatic curve is \textbf{strictly $\gamma$ times steeper} than the isothermal curve at every point of intersection.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.15, >=Stealth]
+  \draw[->, thick] (0,0) -- (6.5,0) node[right] {$V$ (Volume)};
+  \draw[->, thick] (0,0) -- (0,5.0) node[above] {$P$ (Pressure)};
+  
+  \coordinate (A) at (1.4, 4.2);
+  \filldraw[primarydark] (A) circle (2pt) node[above right] {$(P_0, V_0)$ Initial State};
+  
+  \draw[thick, accentblue, domain=1.4:5.5, samples=50] 
+    plot (\x, {5.88 / \x}) node[right] {Isothermal ($T = \text{const}$)};
+    
+  \draw[thick, traprange, domain=1.4:5.5, samples=50] 
+    plot (\x, {4.2 * (1.4 / \x)^1.4}) node[right] {Adiabatic ($P V^\gamma = \text{const}$)};
+    
+  \draw[dashed, gray] (1.4, 0) node[below] {$V_0$} -- (A);
+  \draw[dashed, gray] (4.5, 0) node[below] {$V_f$} -- (4.5, {5.88 / 4.5});
+  
+  \node[text width=4.5cm, align=left, fill=tipbg, draw=tipteal, rounded corners, inner sep=4pt] at (3.8, 3.8) {
+    \scriptsize \textbf{Fundamental Slope Relation:}\\[2pt]
+    $\left|\frac{dP}{dV}\right|_{\text{adiabatic}} = \gamma \left|\frac{dP}{dV}\right|_{\text{isothermal}}$\\[2pt]
+    Since $\gamma > 1$, adiabatic curve falls steeper during expansion.
+  };
+  
+  \node[text width=3.8cm, align=center, fill=formulabg, draw=formulablue, rounded corners, inner sep=3pt] at (2.2, 1.2) {
+    \scriptsize \textbf{Expansion Work:}\\[2pt]
+    $W_{\text{isothermal}} > W_{\text{adiabatic}}$
+  };
+\end{tikzpicture}
+\caption{$P-V$ Indicator Diagram: Comparison of Isothermal vs. Adiabatic Expansion from Identical Initial State.}
+\label{fig:pv_indicator_diagram}
+\end{figure}
+
+\begin{formulabox}[Work Comparison \& Cyclic Process Conventions]
+\textbf{1. Expansion from Common Initial State $(P_0, V_0)$ to Final Volume $V_f > V_0$:}
+Because the isobaric curve remains at $P_0$, the isothermal curve falls as $V^{-1}$, and the adiabatic curve plunges as $V^{-\gamma}$:
 \begin{equation}
   P_{\text{isobaric}} > P_{\text{isothermal}} > P_{\text{adiabatic}} \implies \mathbf{W_{\text{isobaric}} > W_{\text{isothermal}} > W_{\text{adiabatic}}}
 \end{equation}
-\textbf{3. Compression from Common Initial State $(P_0, V_0)$ to Final Volume $V_f < V_0$:}
+\textbf{2. Compression from Common Initial State $(P_0, V_0)$ to Final Volume $V_f < V_0$:}
 Work done \textbf{on} the gas is largest for adiabatic compression:
 \begin{equation}
   |W_{\text{adiabatic}}| > |W_{\text{isothermal}}| > |W_{\text{isobaric}}|
 \end{equation}
-\textbf{4. Net Work in Cyclic Processes:}
-The net work in any closed cycle on a $P-V$ diagram equals the enclosed loop area:
+\textbf{3. Net Work in Closed Cycles:}
+The net work executed over any closed cycle on a $P-V$ plane equals the area enclosed by the cyclic trajectory:
 \begin{equation}
-  W_{\text{net}} = \oint P dV = \begin{cases} > 0 & \text{Clockwise cycle (heat engine, net work output)} \\ < 0 & \text{Counter-clockwise cycle (work absorbed)} \end{cases}
+  W_{\text{net}} = \oint P\,dV = \begin{cases} > 0 & \text{Clockwise trajectory (Heat engine, net work done by gas)} \\ < 0 & \text{Counter-clockwise trajectory (Work done on system)} \end{cases}
 \end{equation}
-\end{usecasebox}
+\end{formulabox}
 
 \section{Second Law of Thermodynamics \& Syllabus Boundaries}
 
@@ -2241,18 +2331,18 @@ Under the revised NMC curriculum for NEET UG 2027:
 \end{usecasebox}
 
 % =========================================================================
-% PART III: ELECTRODYNAMICS, MAGNETISM & ALTERNATING CURRENTS
+% PART IV: ELECTRODYNAMICS & MAGNETISM
 % =========================================================================
-\part{Electrodynamics, Magnetism \& Alternating Currents}
+\part{Electrodynamics \& Magnetism}
 
-\chapter{Electrostatics, Capacitance, Current Electricity \& Electromagnetism}
+\chapter{Electrostatics, Capacitance, Current Electricity, Magnetism \& Alternating Currents}
 
 Electrodynamics represents over 25\% of the NEET Physics paper. In this chapter, we build from Coulomb's law and continuous charge distributions to Gauss's flux theorem, dielectric physics and capacitance networks, Ohm's drift dynamics and DC circuits, the magnetic effects of moving charges via Biot-Savart and Ampère laws, electromagnetic induction, LCR resonance in AC circuits, and Maxwell's electromagnetic wave spectrum.
 
 \begin{mentorbox}[A Personal Note from Satya: The Art of Knowing When to Stop (The 45-Second Rule)]
 \textbf{Before we enter the world of circuits, flux, and resonance, let me share a crucial truth about exam psychology.}
 
-NEET UG is not an IQ contest; it is a rapid-fire elimination game played under intense time pressure (200 questions in 200 minutes). The single most common reason why dedicated students score 520 instead of 650+ is not that they didn't know the theory---it's that \textit{they didn't know when to put their pen down.}
+NEET UG is not an IQ contest; it is a rapid-fire elimination game played under intense time pressure (180 questions in 180 minutes). The single most common reason why dedicated students score 520 instead of 650+ is not that they didn't know the theory---it's that \textit{they didn't know when to put their pen down.}
 
 Here is the cognitive trap: You encounter a tricky question---say, an asymmetrical resistor cube or a magnetic force on an oblique helical trajectory. You spend 60 seconds setting up the equations. The algebra gets tangled. You feel stuck. But your ego whispers: \textit{``I've already spent two minutes on this! If I skip now, those two minutes are wasted!''} So you stay for another two minutes. You end up calculating in panic, and you mark an option. 
 
@@ -2958,11 +3048,11 @@ Energy flux vector: $\mathbf{S = \frac{1}{\mu_0}(\mathbf{E} \times \mathbf{B})}$
 \end{usecasebox}
 
 % =========================================================================
-% PART IV: OPTICS, MODERN PHYSICS & SEMICONDUCTORS
+% PART V: OPTICS & MODERN PHYSICS
 % =========================================================================
-\part{Optics, Modern Physics \& Semiconductor Electronics}
+\part{Optics \& Modern Physics}
 
-\chapter{Ray Optics, Wave Optics, Quantum Radiation, Atomic Physics \& Semiconductors}
+\chapter{Ray Optics, Wave Optics, Modern Physics \& Semiconductor Electronics}
 
 This chapter covers geometric and wave optics alongside modern quantum and solid-state physics. We investigate Snell's law, total internal reflection, the lens-maker's equation, optical instruments, Huygens' wavelets, Young's double-slit interference, single-slit diffraction, Einstein's photoelectric effect, de Broglie matter waves, Bohr's atomic postulates and spectral emissions, nuclear binding energy, and p-n junction diode electronics with digital logic gates.
 
@@ -3105,34 +3195,82 @@ Consider a thin lens of refractive index $\mu_2$ bounded by spherical surfaces o
 \end{itemize}
 \end{formulabox}
 
-\begin{formulabox}[Refraction Through Prisms, Minimum Deviation \& Dispersion]
-A triangular prism of refracting angle $A$ and refractive index $\mu$:
-\begin{enumerate}
-  \item \textbf{Geometric Relations:}
-  \begin{equation}
-    r_1 + r_2 = A, \qquad \mathbf{\delta = i + e - A}
-  \end{equation}
-  where $i$ is incidence angle, $e$ is emergence angle, and $\delta$ is angular deviation.
-  \item \textbf{Condition for Minimum Deviation ($\delta = \delta_m$):}
-  By symmetry and reversibility of light paths: $i = e$ and $r_1 = r_2 = \frac{A}{2}$.
-  \begin{equation}
-    \delta_m = 2i - A \implies i = \frac{A + \delta_m}{2}
-  \end{equation}
-  Applying Snell's law at first refracting surface ($\sin i = \mu \sin r_1$):
-  \begin{equation}
-    \mathbf{\mu = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)}} \quad (\text{Prism Formula})
-  \end{equation}
-  \item \textbf{Thin Prism Approximation ($A \le 10^\circ$):}
-  \begin{equation}
-    \sin\theta \approx \theta \implies \frac{A + \delta}{2} \approx \mu \frac{A}{2} \implies \mathbf{\delta = (\mu - 1) A}
-  \end{equation}
-  \item \textbf{Dispersion \& Dispersive Power ($\omega$):}
-  \begin{itemize}
-    \item Angular Dispersion: $\mathbf{\theta = \delta_V - \delta_R = (\mu_V - \mu_R) A}$.
-    \item Mean Deviation (Yellow light): $\delta_Y = (\mu_Y - 1) A$.
-    \item Dispersive Power: $\mathbf{\omega = \frac{\delta_V - \delta_R}{\delta_Y} = \frac{\mu_V - \mu_R}{\mu_Y - 1}}$ (Independent of prism angle $A$).
-  \end{itemize}
-\end{enumerate}
+\subsection{Refraction Through Triangular Prisms, Angular Deviation \& Dispersion}
+A prism is a transparent optical medium bounded by two non-parallel refracting planes inclined at an angle $A$, termed the angle of the prism or refracting angle.
+
+\paragraph{Ray Geometry and Angular Deviation:}
+Consider a monochromatic ray of light incident at angle $i$ on the first refracting face $AB$ of a triangular glass prism (Figure~\ref{fig:prism_refraction}). The ray bends towards the normal at angle $r_1$, traverses through the prism, and meets the second face $AC$ at angle of incidence $r_2$. It emerges into air at angle of emergence $e$, bending away from the normal.
+
+From the geometry of the quadrilateral formed by the prism apex $A$ and the normals at the two refracting surfaces, the opposite angles sum to $180^\circ$. Therefore, within the interior ray triangle:
+\begin{equation}
+  r_1 + r_2 = A
+\end{equation}
+The total angular deviation $\delta$ suffered by the ray is the sum of the deviations at both refracting interfaces ($\delta = (i - r_1) + (e - r_2)$):
+\begin{equation}
+  \mathbf{\delta = i + e - A}
+\end{equation}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.1, >=Stealth]
+  \coordinate (A) at (3, 4.5);
+  \coordinate (B) at (0, 0);
+  \coordinate (C) at (6, 0);
+  \draw[thick, fill=blue!5] (B) -- (A) -- (C) -- cycle;
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \coordinate (P) at (-1.5, 1.2);
+  \coordinate (Q) at (1.2, 1.8);
+  \coordinate (R) at (4.6, 2.1);
+  \coordinate (S) at (7.0, 0.4);
+  \draw[dashed, gray] ($(Q)!-1.2cm!90:(A)$) -- ($(Q)!1.8cm!90:(A)$);
+  \draw[dashed, gray] ($(R)!-1.2cm!-90:(A)$) -- ($(R)!1.8cm!-90:(A)$);
+  \draw[thick, accentblue, ->] (P) -- (Q);
+  \draw[thick, accentblue, ->] (Q) -- (R);
+  \draw[thick, accentblue, ->] (R) -- (S);
+  \draw[dotted, red, thick] (Q) -- ($(Q)!2.8cm!(R)$) coordinate (ext1);
+  \draw[dotted, red, thick] (R) -- ($(R)!-2.2cm!(S)$) coordinate (ext2);
+  \coordinate (D) at (intersection of Q--ext1 and R--ext2);
+  \node[above left] at (P) {Incident Ray};
+  \node[above] at (Q) {$Q$};
+  \node[above] at (R) {$R$};
+  \node[right] at (S) {Emergent Ray};
+  \node at (0.7, 2.3) {$i$};
+  \node at (1.8, 1.6) {$r_1$};
+  \node at (3.9, 1.8) {$r_2$};
+  \node at (5.2, 1.8) {$e$};
+  \node[above, red] at ($(D)+(0.5, 0.1)$) {$\delta$};
+\end{tikzpicture}
+\caption{Refraction of a Monochromatic Light Ray Through a Triangular Glass Prism.}
+\label{fig:prism_refraction}
+\end{figure}
+
+\begin{formulabox}[Condition for Minimum Deviation \& The Prism Formula]
+\textbf{1. Minimum Deviation ($\delta = \delta_m$):}
+Experimentally, as the angle of incidence $i$ increases, the deviation $\delta$ first decreases to a unique minimum value $\delta_m$, and then increases. By the principle of optical reversibility, at minimum deviation the light path is strictly symmetric:
+\begin{equation}
+  i = e \quad \text{and} \quad r_1 = r_2 = \frac{A}{2}
+\end{equation}
+The refracted ray $QR$ inside the prism travels \textbf{strictly parallel to the base} $BC$ for an equilateral or isosceles prism. Substituting into the deviation relation:
+\begin{equation}
+  \delta_m = 2i - A \implies i = \frac{A + \delta_m}{2}
+\end{equation}
+Applying Snell's law at the first refracting surface ($\sin i = \mu \sin r_1$) yields the celebrated \textbf{Prism Formula}:
+\begin{equation}
+  \mathbf{\mu = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)}}
+\end{equation}
+\textbf{2. Thin Prism Approximation ($A \le 10^\circ$):}
+For small refracting angles, the small-angle approximation $\sin\theta \approx \theta$ applies:
+\begin{equation}
+  \frac{A + \delta}{2} \approx \mu \frac{A}{2} \implies \mathbf{\delta = (\mu - 1) A}
+\end{equation}
+\textbf{3. Angular Dispersion \& Dispersive Power ($\omega$):}
+Because refractive index depends inversely on wavelength ($\mu_V > \mu_R$ by Cauchy's dispersion formula $\mu \approx a + \frac{b}{\lambda^2}$), violet light deviates most and red least:
+\begin{itemize}
+  \item Angular Dispersion: $\mathbf{\theta = \delta_V - \delta_R = (\mu_V - \mu_R) A}$
+  \item Dispersive Power: $\mathbf{\omega = \frac{\delta_V - \delta_R}{\delta_Y} = \frac{\mu_V - \mu_R}{\mu_Y - 1}}$ (Completely independent of prism angle $A$).
+\end{itemize}
 \end{formulabox}
 
 \begin{formulabox}[Magnifying Power of Optical Instruments: Microscopes \& Telescopes]
@@ -3681,218 +3819,487 @@ The semiconductor bandgap for visible LEDs must exceed $1.8\,\mathrm{eV}$ ($hc/\
 \end{usecasebox}
 
 % =========================================================================
-% PART V: EXPERIMENTAL SKILLS & PRACTICAL PHYSICS
+% PART VI: EXPERIMENTAL PHYSICS & LABORATORY SKILLS
 % =========================================================================
-\part{Experimental Skills \& Practical Physics}
+\part{Experimental Physics \& Laboratory Skills}
 
-\chapter{Practical Physics \& Prescribed Experimental Lab Skills (NMC Unit 20)}
+\chapter{Experimental Physics \& Laboratory Skills: Complete NMC Practicals Manual}
 
-Under the revised NMC guidelines, experimental physics forms a dedicated unit tested directly in both Section A and Section B. This chapter provides a rigorous, step-by-step analytical manual for all 18 prescribed laboratory experiments, focusing on least count derivations, zero errors, reading formulas, experimental precautions, and high-frequency exam traps.
+Under the revised NMC guidelines, experimental physics forms a dedicated unit tested directly across the compulsory 45-question physics paper. This chapter provides a rigorous, step-by-step analytical manual for all 18 prescribed laboratory experiments, focusing on least count derivations, zero errors, reading formulas, experimental precautions, and high-frequency exam traps.
 
-\section{Vernier Calipers \& Screw Gauge}
+\section{Fundamental Mechanics \& Measurement Lab Protocols}
 
-\begin{formulabox}[Vernier Calipers: Least Count, Zero Error \& Measurement]
-\textbf{1. Least Count (Vernier Constant, VC):}
-Smallest distance measurable by the instrument. If $n$ Vernier Scale Divisions (VSD) equal $m$ Main Scale Divisions (MSD):
+\subsection{Practical 1: Vernier Calipers --- Diameter and Depth Measurement}
+
+\begin{formulabox}[Vernier Calipers: Governing Principles, Least Count \& Zero Error]
+\textbf{1. Theoretical Foundation \& Least Count (Vernier Constant, VC):}
+The Vernier caliper measures linear dimensions beyond the resolution of a conventional metric scale. When $n$ Vernier Scale Divisions (VSD) coincide with $m$ Main Scale Divisions (MSD):
 \begin{equation}
   \mathbf{\mathrm{LC} = 1\,\mathrm{MSD} - 1\,\mathrm{VSD} = \left(1 - \frac{m}{n}\right)\mathrm{MSD}}
 \end{equation}
-\textit{Standard Metric Caliper:} $10\,\mathrm{VSD} = 9\,\mathrm{MSD}$ with $1\,\mathrm{MSD} = 1\,\mathrm{mm} = 0.1\,\mathrm{cm}$:
+\textit{Standard Metric Instrument:} $10\,\mathrm{VSD} = 9\,\mathrm{MSD}$ with $1\,\mathrm{MSD} = 1\,\mathrm{mm} = 0.1\,\mathrm{cm}$:
 \begin{equation}
-  \mathrm{LC} = 1\,\mathrm{mm} - \frac{9}{10}\,\mathrm{mm} = \mathbf{0.1\,\mathrm{mm} = 0.01\,\mathrm{cm}}
+  \mathrm{LC} = 1\,\mathrm{mm} - \frac{9}{10}\,\mathrm{mm} = \mathbf{0.1\,\mathrm{mm} = 0.01\,\mathrm{cm} = 100\,\mu\mathrm{m}}
 \end{equation}
-\textbf{2. True Reading Formulation \& Zero Error Corrections:}
+\textbf{2. True Measurement Formulation:}
 \begin{equation}
-  \mathbf{\text{Observed Reading} = \mathrm{MSR} + (\mathrm{VSR} \times \mathrm{LC})} \qquad \mathbf{\text{True Reading} = \text{Observed Reading} - (\text{Zero Error})}
+  \mathbf{\text{True Reading} = \mathrm{MSR} + (\mathrm{VSR} \times \mathrm{LC}) - (\text{Zero Error})}
 \end{equation}
+Where $\mathrm{MSR}$ is the main scale reading just preceding the vernier zero mark, and $\mathrm{VSR}$ is the vernier division index that aligns with any main scale line.
 \begin{itemize}
-  \item \textbf{Positive Zero Error ($+e$):} Vernier zero lies to the \textbf{right of main scale zero} when jaws are closed.
+  \item \textbf{Positive Zero Error ($+e$):} The vernier zero mark lies to the \textbf{right} of the main scale zero mark when jaws are in contact.
   \begin{equation}
-    e = +(n \times \mathrm{LC}) \implies \text{True Reading} = \text{Observed} - e \quad (\text{Must be subtracted})
+    e = +(n \times \mathrm{LC}) \implies \text{True Reading} = \text{Observed Reading} - e
   \end{equation}
-  \item \textbf{Negative Zero Error ($-e$):} Vernier zero lies to the \textbf{left of main scale zero} when jaws are closed.
+  \item \textbf{Negative Zero Error ($-e$):} The vernier zero mark lies to the \textbf{left} of the main scale zero mark when jaws are in contact.
   \begin{equation}
-    e = -(N - n)\times \mathrm{LC} \implies \text{True Reading} = \text{Observed} - (-e) = \text{Observed} + |e| \quad (\text{Must be added})
+    e = -(N - n)\times \mathrm{LC} \implies \text{True Reading} = \text{Observed Reading} + |e|
+  \end{equation}
+\end{itemize}
+\textbf{3. Operational Jaws and Application Protocols:}
+\begin{itemize}
+  \item \textbf{External Jaws:} Measure outer diameter ($D$) of cylinders, spheres, and rectangular blocks.
+  \item \textbf{Internal Jaws:} Measure inner diameter ($d$) of beakers, hollow pipes, and test tubes.
+  \item \textbf{Metallic Depth Strip (Stem):} Slides out from the rear of the beam to measure the internal depth ($h$) of vessels:
+  \begin{equation}
+    V_{\text{internal}} = \frac{\pi d^2}{4} h
   \end{equation}
 \end{itemize}
 \end{formulabox}
 
-\begin{formulabox}[Screw Gauge (Micrometer): Pitch \& Backlash Error]
-\textbf{1. Pitch \& Least Count (LC):}
+\subsection{Practical 2: Screw Gauge --- Diameter of Thin Wire \& Sheet Thickness}
+
+\begin{formulabox}[Screw Gauge (Micrometer): Pitch, Backlash Error \& Measurements]
+\textbf{1. Pitch \& Least Count Formulations:}
+A screw gauge utilizes the principle of translating circular rotary motion into precision linear axial displacement:
 \begin{equation}
-  \mathbf{\text{Pitch}} = \frac{\text{Distance moved on linear pitch scale}}{\text{Number of complete rotations of circular cap}} \qquad (\text{Usually } 1\,\mathrm{mm} \text{ or } 0.5\,\mathrm{mm})
+  \mathbf{\text{Pitch}} = \frac{\text{Linear distance advanced on pitch scale}}{\text{Total number of complete revolutions of circular cap}} \quad (\text{Typically } 1.0\,\mathrm{mm} \text{ or } 0.5\,\mathrm{mm})
 \end{equation}
 \begin{equation}
-  \mathbf{\mathrm{LC}} = \frac{\text{Pitch}}{\text{Total number of circular scale divisions } (N)} = \frac{1\,\mathrm{mm}}{100} = \mathbf{0.01\,\mathrm{mm} = 0.001\,\mathrm{cm} = 10\,\mu\mathrm{m}}
+  \mathbf{\mathrm{LC}} = \frac{\text{Pitch}}{\text{Number of circular scale divisions } (N)} = \frac{1\,\mathrm{mm}}{100} = \mathbf{0.01\,\mathrm{mm} = 0.001\,\mathrm{cm} = 10\,\mu\mathrm{m}}
 \end{equation}
-\textbf{2. True Thickness / Diameter Calculation:}
+\textbf{2. True Diameter and Thickness Measurement:}
 \begin{equation}
   \mathbf{\text{True Reading} = \mathrm{PSR} + (\mathrm{CSR} \times \mathrm{LC}) - (\text{Zero Error})}
 \end{equation}
 \begin{itemize}
-  \item \textbf{Positive Zero Error:} Circular zero is \textbf{below the reference line} when studs touch $\implies e = +(n \times \mathrm{LC})$.
-  \item \textbf{Negative Zero Error:} Circular zero is \textbf{above the reference line} when studs touch $\implies e = -(N - n) \times \mathrm{LC}$.
-  \item \textbf{Backlash Error:} Due to loose thread fitting between screw and nut. Avoided by turning screw \textbf{strictly in one direction only}.
+  \item \textbf{Positive Zero Error ($+e$):} The zero of the circular scale lies \textbf{below the linear reference line} when the studs touch $\implies e = +(n \times \mathrm{LC})$.
+  \item \textbf{Negative Zero Error ($-e$):} The zero of the circular scale lies \textbf{above the linear reference line} when the studs touch $\implies e = -(N - n)\times \mathrm{LC}$.
+  \item \textbf{Backlash Error:} Arises from mechanical wear and tear causing loose fitting between screw threads and internal nut. \textit{Remedy:} Always turn the thimble in \textbf{one uniform direction only}.
+  \item \textbf{Ratchet Safety Mechanism:} Always advance the screw using the ratchet knob until three audible clicks sound, ensuring uniform compressive pressure without deforming thin specimens.
 \end{itemize}
 \end{formulabox}
 
-\section{Mechanics \& Hydrodynamics Lab Experiments}
+\subsection{Practical 3: Simple Pendulum --- Energy Dissipation \& Acceleration Due to Gravity ($g$)}
 
-\begin{conceptbox}[Simple Pendulum, Metre Scale \& Elasticity (Searle's Apparatus)]
-\textbf{1. Simple Pendulum ($L \text{ vs } T^2$ Graph):}
-Time period: $T = 2\pi\sqrt{\frac{L}{g}} \implies T^2 = \left(\frac{4\pi^2}{g}\right)L$.
+\begin{conceptbox}[Simple Pendulum: Oscillation Dynamics \& Exponential Energy Dissipation]
+\textbf{1. Acceleration Due to Gravity ($g$) Formulation:}
+For small angular displacements ($\theta \le 4^\circ$, ensuring $\sin\theta \approx \theta$):
+\begin{equation}
+  T = 2\pi\sqrt{\frac{L}{g}} \implies T^2 = \left(\frac{4\pi^2}{g}\right)L \implies \mathbf{g = 4\pi^2 \left(\frac{L}{T^2}\right) = \frac{4\pi^2}{\text{Slope of } T^2 \text{ vs } L \text{ graph}}}
+\end{equation}
+Where effective length $L = l + h + r$ ($l$ = length of suspension thread, $h$ = hook length, $r$ = radius of spherical bob).
 \begin{itemize}
-  \item Graph of $L$ versus $T^2$ is a \textbf{straight line passing through the origin}.
+  \item The graph of $L$ versus $T^2$ is a \textbf{straight line passing through the origin}.
+\end{itemize}
+\textbf{2. Energy Dissipation Protocol (Damped Oscillations):}
+Due to viscous air drag, the mechanical energy $E$ of the oscillating pendulum gradually dissipates:
+\begin{equation}
+  E(t) = \frac{1}{2}m\omega^2 A(t)^2 \implies \mathbf{E \propto A^2}
+\end{equation}
+The instantaneous amplitude $A(t)$ undergoes exponential damping:
+\begin{equation}
+  A(t) = A_0 e^{-\gamma t} \implies A^2(t) = A_0^2 e^{-2\gamma t} \implies \mathbf{\ln(A^2) = \ln(A_0^2) - 2\gamma t}
+\end{equation}
+\begin{itemize}
+  \item A plot of $A^2$ versus time $t$ shows a smooth \textbf{exponential decay curve}.
+  \item A plot of $\ln(A^2)$ versus time $t$ yields a \textbf{straight line with negative slope} ($-2\gamma$), experimentally verifying that energy dissipation is directly proportional to instantaneous kinetic energy.
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Practical 4: Metre Scale --- Determination of Mass by Principle of Moments}
+
+\begin{formulabox}[Principle of Moments: Rotational Equilibrium on a Knife-Edge]
+\textbf{1. Governing Principle of Moments:}
+A rigid uniform body supported at a fixed knife-edge pivot attains rotational equilibrium when the net external torque about the pivot vanishes:
+\begin{equation}
+  \sum \boldsymbol{\tau}_{\text{pivot}} = 0 \implies \sum \tau_{\text{clockwise}} = \sum \tau_{\text{anticlockwise}}
+\end{equation}
+\textbf{2. Experimental Protocol:}
+Suspend a known standard mass $m_1$ at position $x_1$ and an unknown mass $m_2$ at position $x_2$ on a uniform metre scale balanced at pivot position $x_p$:
+\begin{equation}
+  m_1 g (x_p - x_1) = M g (x_p - x_{\text{cg}}) + m_2 g (x_2 - x_p)
+\end{equation}
+Where $M$ is the intrinsic mass of the metre scale and $x_{\text{cg}}$ is its center of gravity.
+\begin{itemize}
+  \item \textbf{Simplified Direct Method ($x_p = x_{\text{cg}}$):} If the knife-edge is placed exactly at the center of gravity ($x_{\text{cg}} \approx 50.0\,\mathrm{cm}$), the torque exerted by the scale's own mass vanishes ($M g(x_p - x_{\text{cg}}) = 0$), yielding:
   \begin{equation}
-    \mathbf{g = 4\pi^2 \left(\frac{L}{T^2}\right) = \frac{4\pi^2}{\text{Slope of } T^2 \text{ vs } L \text{ graph}}}
+    m_1 (x_p - x_1) = m_2 (x_2 - x_p) \implies \mathbf{m_2 = m_1 \left(\frac{x_p - x_1}{x_2 - x_p}\right)}
   \end{equation}
-  \item \textbf{Effective Length:} $L = l + h + r$ ($l$ = wire length, $h$ = hook length, $r$ = bob radius).
-  \item Angular amplitude must be small ($\theta \le 4^\circ$) so that $\sin\theta \approx \theta$.
+  \item \textbf{Determination of Scale Mass $M$:} Balance the scale without $m_2$ by placing the knife-edge away from $x_{\text{cg}}$ and counter-balancing with a single known mass $m_1$:
+  \begin{equation}
+    M = m_1 \left(\frac{x_p - x_1}{x_{\text{cg}} - x_p}\right)
+  \end{equation}
 \end{itemize}
-\textbf{2. Metre Scale (Principle of Moments / Determination of Mass):}
-A balanced uniform metre scale obeys rotational equilibrium: $\sum \tau_{\mathrm{ext}} = 0$.
-\begin{equation}
-  m_1 g (x_{\mathrm{knife}} - x_1) = M g (x_{\mathrm{knife}} - x_{\mathrm{cg}}) + m_2 g (x_2 - x_{\mathrm{knife}})
-\end{equation}
-Where $M$ is mass of metre scale, $x_{\mathrm{cg}}$ is center of gravity (usually $50\,\mathrm{cm}$ mark for uniform scale).
-
-\textbf{3. Young's Modulus of Elasticity (Searle's Apparatus):}
-Two identical wires (reference and experimental) avoid thermal expansion errors:
-\begin{equation}
-  \mathbf{Y = \frac{\text{Stress}}{\text{Strain}} = \frac{M g L}{\pi r^2 l}} \implies \text{Elongation } l = \left(\frac{g L}{\pi r^2 Y}\right) M
-\end{equation}
-Graph of elongation $l$ versus suspended mass $M$ is a straight line. $Y = \frac{g L}{\pi r^2 (\text{Slope})}$.
-\end{conceptbox}
-
-\begin{conceptbox}[Surface Tension, Viscosity \& Speed of Sound in Air]
-\textbf{1. Surface Tension of Water by Capillary Rise Method:}
-\begin{equation}
-  \mathbf{T = \frac{r (h + r/3) \rho g}{2 \cos\theta}} \approx \mathbf{\frac{r h \rho g}{2}} \quad (\text{For pure water in clean glass, contact angle } \theta \approx 0^\circ, \cos\theta = 1)
-\end{equation}
-Meniscus correction adds $r/3$ to measured height $h$. Internal radius $r$ measured by travelling microscope.
-
-\textbf{2. Viscosity by Terminal Velocity (Stokes' Law):}
-Spherical lead/steel ball falling through viscous medium (glycerine/castor oil) reaches constant terminal velocity $v_t$:
-\begin{equation}
-  F_{\mathrm{viscous}} = 6\pi \eta r v_t = \frac{4}{3}\pi r^3 (\rho - \sigma) g \implies \mathbf{\eta = \frac{2 r^2 (\rho - \sigma) g}{9 v_t}}
-\end{equation}
-Where $\rho$ is density of sphere, $\sigma$ is density of liquid. Graph of $v_t$ versus $r^2$ is a straight line through the origin.
-
-\textbf{3. Speed of Sound in Air using Resonance Tube (End Correction):}
-Water level provides closed end. For first two resonant air columns of lengths $l_1$ and $l_2$ with tuning fork of frequency $f$:
-\begin{equation}
-  l_1 + e = \frac{\lambda}{4} \qquad l_2 + e = \frac{3\lambda}{4} \implies l_2 - l_1 = \frac{\lambda}{2}
-\end{equation}
-\begin{equation}
-  \mathbf{v = f \lambda = 2 f (l_2 - l_1)} \qquad \mathbf{\text{End Correction } e = \frac{l_2 - 3l_1}{2} \approx 0.6\,r} \ (r = \text{internal tube radius})
-\end{equation}
-\end{conceptbox}
-
-\begin{formulabox}[Calorimetry \& Newton's Law of Cooling]
-\textbf{1. Specific Heat Capacity of Solid by Method of Mixtures:}
-Heat lost by hot solid = Heat gained by water and calorimeter (at thermal equilibrium):
-\begin{equation}
-  m_s s_s (T_s - T) = (m_w s_w + m_c s_c)(T - T_0) \implies \mathbf{s_s = \frac{(m_w s_w + m_c s_c)(T - T_0)}{m_s (T_s - T)}}
-\end{equation}
-Where $m_c s_c = W$ is water equivalent of calorimeter.
-\textbf{2. Cooling Curve (Newton's Law of Cooling):}
-\begin{equation}
-  \frac{dT}{dt} = -K (T - T_0) \implies \mathbf{\ln(T - T_0) = -K t + C}
-\end{equation}
-Graph of $\ln(T - T_0)$ versus time $t$ is a straight line with negative slope ($-K$). Graph of temperature $T$ vs time $t$ is an exponential decay curve flattening at ambient temperature $T_0$.
 \end{formulabox}
 
-\section{Electricity \& Magnetism Lab Experiments}
+\subsection{Practical 5: Young's Modulus of Elasticity by Searle's Apparatus}
 
-\begin{formulabox}[Ohm's Law \& Metre Bridge (Wheatstone Bridge)]
-\textbf{1. Verification of Ohm's Law ($V-I$ Graph):}
-\begin{equation}
-  V = I R \implies R = \text{Slope of } V \text{ vs } I \text{ graph} \qquad \text{Resistivity } \mathbf{\rho = \frac{R A}{L} = \frac{\pi r^2 R}{L}}
-\end{equation}
-\textbf{2. Metre Bridge (Null Deflection Method):}
-Uniform high-resistance manganin/constantan wire of length $100\,\mathrm{cm}$:
-\begin{equation}
-  \frac{P}{Q} = \frac{R}{S} \implies \frac{l_1}{100 - l_1} = \frac{R}{X} \implies \mathbf{X = R \left(\frac{100 - l_1}{l_1}\right)}
-\end{equation}
-\textbf{End Errors \& Precautions:}
+\begin{conceptbox}[Searle's Apparatus: Stress-Strain Analysis \& Elongation Calculus]
+\textbf{1. Two-Wire Differential Suspension System:}
+Searle's apparatus employs two identical wires of identical length $L$, cross-sectional radius $r$, and composition:
 \begin{itemize}
-  \item Resistance of thick copper strips at ends introduces \textbf{End Errors} ($\alpha, \beta$); corrected by swapping $R$ and $X$.
-  \item Maximum sensitivity occurs when balance point is near the center: $\mathbf{l_1 \approx 50\,\mathrm{cm}}$ ($40\,\mathrm{cm} \le l_1 \le 60\,\mathrm{cm}$).
+  \item \textbf{Reference Wire:} Suspends a constant dead load to keep the wire taut and straight. It acts as an automatic compensator for thermal expansion of the building ceiling and support girder.
+  \item \textbf{Experimental Wire:} Carries the graduated slotted weights ($M$) that induce tensile longitudinal strain.
+\end{itemize}
+\textbf{2. Governing Elasticity Equation:}
+\begin{equation}
+  \mathbf{Y = \frac{\text{Tensile Stress}}{\text{Longitudinal Strain}} = \frac{M g / (\pi r^2)}{l / L} = \frac{M g L}{\pi r^2 l}} \implies \mathbf{l = \left(\frac{g L}{\pi r^2 Y}\right) M}
+\end{equation}
+\begin{itemize}
+  \item Wire elongation $l$ is measured using a sensitive spirit level and spherometer-micrometer drum attached between the two frames.
+  \item The graph of elongation $l$ versus suspended mass $M$ is a \textbf{straight line passing through the origin}. Young's modulus is determined from the reciprocal slope:
+  \begin{equation}
+    Y = \frac{g L}{\pi r^2 (\text{Slope of } l \text{ vs } M \text{ graph})}
+  \end{equation}
+  \item \textbf{Loading and Unloading Precaution:} Readings must be recorded during both progressive loading and unloading cycles; taking the average prevents errors caused by elastic hysteresis or delayed recovery.
+\end{itemize}
+\end{conceptbox}
+
+\section{Hydrodynamics, Thermal Physics \& Sound Lab Protocols}
+
+\subsection{Practical 6: Surface Tension by Capillary Rise \& Detergent Effects}
+
+\begin{formulabox}[Capillary Rise (Jurin's Law) \& Surfactant Influence on Surface Tension]
+\textbf{1. Capillary Ascent Formulation:}
+When a narrow glass capillary tube of internal radius $r$ is immersed vertically into water of density $\rho$:
+\begin{equation}
+  2\pi r T \cos\theta = \pi r^2 (h + r/3) \rho g \implies \mathbf{T = \frac{r (h + r/3)\rho g}{2\cos\theta}} \approx \mathbf{\frac{r h \rho g}{2}}
+\end{equation}
+For pure water in contact with clean glass, the contact angle is negligible ($\theta \approx 0^\circ \implies \cos\theta = 1$). The term $r/3$ is the \textbf{meniscus volume correction} for a hemispherical liquid cap.
+\begin{itemize}
+  \item The capillary bore radius $r$ is accurately determined by measuring the internal diameter at the liquid level using a horizontal travelling microscope.
+  \item \textbf{Jurin's Rule of Constant Product:} $h \cdot r = \text{constant}$. Narrower capillaries produce proportionally higher ascents.
+\end{itemize}
+\textbf{2. Effect of Adding Detergent (Surfactant Concentration):}
+\begin{itemize}
+  \item Detergent molecules consist of hydrophobic non-polar hydrocarbon tails and hydrophilic polar heads. They preferentially concentrate at the water-air interface, disrupting cohesive hydrogen bonding networks between adjacent water molecules.
+  \item \textbf{Observation:} Adding detergent causes a \textbf{marked decrease in surface tension} ($T_{\text{detergent}} < T_{\text{pure}}$), resulting in an immediate and measurable \textbf{drop in capillary ascent height $h$}.
 \end{itemize}
 \end{formulabox}
 
-\begin{formulabox}[Galvanometer Resistance, Figure of Merit \& Conversions]
-\textbf{1. Half-Deflection Method for Galvanometer Resistance ($G$):}
+\subsection{Practical 7: Viscosity of Liquid by Terminal Velocity (Stokes' Law)}
+
+\begin{conceptbox}[Terminal Velocity in Viscous Media \& Dynamic Viscosity Determination]
+\textbf{1. Hydrodynamic Balance at Steady State:}
+When a smooth spherical ball of radius $r$ and density $\rho$ falls through a wide column of viscous liquid (such as glycerol or castor oil) of density $\sigma$ and dynamic viscosity $\eta$, it rapidly accelerates until gravitational weight is exactly balanced by the sum of buoyant upward thrust and viscous drag:
 \begin{equation}
-  \text{Initial deflection } \theta \text{ with series } R: \quad I_1 = \frac{E}{R + G} = k\theta
+  W = F_B + F_v \implies \frac{4}{3}\pi r^3 \rho g = \frac{4}{3}\pi r^3 \sigma g + 6\pi \eta r v_t
 \end{equation}
 \begin{equation}
-  \text{Shunting galvanometer with } S \text{ reduces deflection to } \frac{\theta}{2}: \quad \mathbf{G = \frac{R \cdot S}{R - S}}
+  \mathbf{\eta = \frac{2 r^2 (\rho - \sigma) g}{9 v_t}} \implies \mathbf{v_t = \left(\frac{2(\rho - \sigma)g}{9\eta}\right)r^2}
 \end{equation}
-\textbf{2. Figure of Merit ($k$):} Current required to produce unit division deflection ($1\,\text{div}$):
+\textbf{2. Graphical Calculus and Experimental Protocol:}
+\begin{itemize}
+  \item The fall time between two horizontal reference marks separated by vertical distance $h$ is timed after the sphere has traversed an initial lead-in distance to ensure steady terminal velocity $v_t = h/t$.
+  \item A plot of terminal velocity $v_t$ versus the square of radius ($r^2$) is a \textbf{straight line passing through the origin}:
+  \begin{equation}
+    \eta = \frac{2(\rho - \sigma)g}{9 \times (\text{Slope of } v_t \text{ vs } r^2 \text{ graph})}
+  \end{equation}
+  \item \textbf{Wall and Bottom Effect Corrections:} The glass cylinder diameter must be large compared to the sphere diameter ($D_{\text{cylinder}} > 10\cdot r$) to ensure that boundary wall drag does not retard the terminal velocity.
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Practical 8: Speed of Sound in Air using Resonance Tube}
+
+\begin{formulabox}[Resonance Tube: Closed Acoustic Columns \& End Correction Calculus]
+\textbf{1. Resonance in a Cylindrical Air Column Closed at One End:}
+Water level in the tube provides a rigid boundary (displacement node / pressure antinode). The open mouth provides an approximate displacement antinode. Due to the inertia of moving air spilling slightly outside the open rim, the true antinode forms at an acoustic distance $e$ outside the tube mouth:
 \begin{equation}
-  \mathbf{k = \frac{I}{\theta} = \frac{E}{(R + G)\theta}} \implies \text{Full Scale Current } I_g = n \cdot k \quad (n = \text{total scale divisions})
+  l_1 + e = \frac{\lambda}{4} \quad (\text{First Resonance / Fundamental Mode})
+\end{equation}
+\begin{equation}
+  l_2 + e = \frac{3\lambda}{4} \quad (\text{Second Resonance / First Overtone})
+\end{equation}
+Subtracting the two equations eliminates the unknown end correction $e$:
+\begin{equation}
+  l_2 - l_1 = \frac{\lambda}{2} \implies \boldsymbol{\lambda = 2(l_2 - l_1)}
+\end{equation}
+\begin{equation}
+  \mathbf{v = f \lambda = 2 f (l_2 - l_1)}
+\end{equation}
+Where $f$ is the verified operating frequency of the excited tuning fork.
+\textbf{2. Acoustic End Correction Calculation:}
+\begin{equation}
+  \mathbf{e = \frac{l_2 - 3l_1}{2} \approx 0.6\,r} \qquad (r = \text{internal tube radius})
+\end{equation}
+\begin{itemize}
+  \item \textbf{Temperature Correction:} The measured sound speed $v$ is normalized to $0^\circ\mathrm{C}$ via:
+  \begin{equation}
+    v_0 = v_t - 0.61\,t \quad (t = \text{ambient air temperature in }{}^\circ\mathrm{C})
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\subsection{Practical 9: Specific Heat Capacity of Solids \& Liquids by Method of Mixtures}
+
+\begin{formulabox}[Calorimetry: Conservation of Thermal Energy \& Water Equivalent]
+\textbf{1. Principle of Calorimetry:}
+In an isolated thermodynamic calorimeter with negligible heat exchange with the surrounding environment, thermal equilibrium requires that the heat lost by the warmer solid equals the total heat gained by the cooler water and the containing calorimeter vessel:
+\begin{equation}
+  Q_{\text{lost}} = Q_{\text{gained}} \implies m_s s_s (T_s - T) = (m_w s_w + m_c s_c)(T - T_0)
+\end{equation}
+Where $m_s$ is the mass of the solid specimen heated in a hypsometer to boiling temperature $T_s$, $s_s$ is its specific heat capacity, $m_w$ is the initial mass of water at ambient temperature $T_0$, $m_c$ and $s_c$ are the mass and specific heat of the copper calorimeter, and $T$ is the steady final equilibrium temperature.
+\begin{equation}
+  \mathbf{s_s = \frac{(m_w s_w + W)(T - T_0)}{m_s (T_s - T)}} \qquad (\text{Where } W = m_c s_c \text{ is the Water Equivalent of the calorimeter})
+\end{equation}
+\textbf{2. Determination of Specific Heat of an Unknown Liquid ($s_l$):}
+Replace water with a known mass of liquid $m_l$ and drop in a calibrated metal cylinder of known specific heat capacity $s_s$:
+\begin{equation}
+  \mathbf{s_l = \frac{m_s s_s (T_s - T) - W(T - T_0)}{m_l (T - T_0)}}
+\end{equation}
+\end{formulabox}
+
+\subsection{Practical 10: Cooling Curve of a Warm Body (Newton's Law of Cooling)}
+
+\begin{conceptbox}[Newton's Law of Cooling: Thermal Radiation \& Logarithmic Decay Rate]
+\textbf{1. Differential Cooling Formulation:}
+For a body cooling under forced convection and radiation in a uniform enclosure maintained at ambient temperature $T_0$, when the excess temperature $\Delta T = (T - T_0)$ is modest ($\Delta T \le 30^\circ\mathrm{C}$):
+\begin{equation}
+  \frac{dQ}{dt} = -k A (T - T_0) \implies m s \frac{dT}{dt} = -k A (T - T_0) \implies \mathbf{\frac{dT}{dt} = -K (T - T_0)}
+\end{equation}
+Where $K = \frac{kA}{ms}$ is the overall cooling constant.
+\textbf{2. Integrated Logarithmic Law \& Graphs:}
+Integrating from initial temperature $T_1$ at $t = 0$:
+\begin{equation}
+  \int_{T_1}^T \frac{dT}{T - T_0} = -K \int_0^t dt \implies \mathbf{\ln(T - T_0) = -K t + C}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Direct Cooling Curve ($T$ vs $t$):} A non-linear exponential decay curve whose instantaneous tangent slope $|dT/dt|$ decreases progressively as the temperature difference diminishes, becoming asymptotic to $T_0$.
+  \item \textbf{Logarithmic Plot ($\ln(T - T_0)$ vs $t$):} A \textbf{straight line with negative slope} ($-K$), validating the direct first-order proportionality of cooling rate to temperature excess.
+  \item \textbf{Precaution:} Water must be continuously and gently stirred with a copper stirrer to ensure homogeneous internal temperature without splashing.
+\end{itemize}
+\end{conceptbox}
+
+\section{Electricity \& Magnetism Lab Protocols}
+
+\subsection{Practical 11: Verification of Ohm's Law \& Determination of Wire Resistivity}
+
+\begin{formulabox}[Ohm's Law Verification, Linear $V-I$ Characteristic \& Specific Resistance]
+\textbf{1. Circuit Architecture \& Ohm's Formulation:}
+Connect a uniform high-resistance alloy wire in series with an accumulator/power supply, plug key, rheostat, and ammeter. Connect a high-impedance voltmeter across the test wire:
+\begin{equation}
+  V = I R \implies \mathbf{R = \text{Slope of } V \text{ vs } I \text{ characteristic graph}}
+\end{equation}
+\textbf{2. Resistivity (Specific Resistance) Formulation:}
+\begin{equation}
+  R = \rho \frac{L}{A} = \rho \frac{L}{\pi (d/2)^2} = \frac{4 \rho L}{\pi d^2} \implies \mathbf{\rho = \frac{\pi d^2 R}{4 L} = \frac{\pi r^2 R}{L}}
+\end{equation}
+Where wire length $L$ is measured with a metre scale and diameter $d$ is determined at multiple orientations using a calibrated screw gauge.
+\begin{itemize}
+  \item \textbf{Crucial Experimental Precaution:} Close the plug key only during brief moments of observation. Continuous current flow causes Joule heating ($H = I^2 R t$), which increases wire resistance ($\Delta R = R_0 \alpha \Delta T$) and causes the $V-I$ graph to bend upward away from linearity.
+\end{itemize}
+\end{formulabox}
+
+\subsection{Practical 12: Metre Bridge --- Unknown Resistance \& Specific Resistance}
+
+\begin{formulabox}[Metre Bridge: Null-Deflection Wheatstone Bridge \& End Corrections]
+\textbf{1. Wheatstone Bridge Null Condition:}
+A metre bridge consists of a $100\,\mathrm{cm}$ uniform constantan/manganin wire stretched along a graduated metre rule over heavy copper end strips. When the sliding jockey achieves zero galvanometer deflection at balance length $l_1$:
+\begin{equation}
+  \frac{P}{Q} = \frac{R}{S} \implies \frac{\sigma l_1}{\sigma (100 - l_1)} = \frac{R}{X} \implies \mathbf{X = R \left(\frac{100 - l_1}{l_1}\right)}
+\end{equation}
+Where $R$ is a known standard resistance from a resistance box, and $X$ is the unknown wire resistance.
+\begin{equation}
+  \text{Specific Resistance: } \mathbf{\rho = \frac{X \cdot \pi r^2}{L_{\text{wire}}}}
+\end{equation}
+\textbf{2. Elimination of End Errors ($\alpha, \beta$):}
+Non-zero contact resistance and imperfect solder joints at the thick copper terminal strips introduce end errors $\alpha$ (at zero end) and $\beta$ (at $100\,\mathrm{cm}$ end):
+\begin{equation}
+  \frac{R}{X} = \frac{l_1 + \alpha}{(100 - l_1) + \beta}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Standard Remedial Protocol:} Interchange the positions of standard resistance $R$ and unknown resistance $X$ in the left and right gaps. Taking the arithmetic mean of the two balance lengths effectively cancels the end errors.
+  \item \textbf{Maximum Bridge Sensitivity:} Occurs when all four bridge arms have comparable resistance, placing the null point near the exact centre of the wire ($\mathbf{40\,\mathrm{cm} \le l_1 \le 60\,\mathrm{cm}}$).
+\end{itemize}
+\end{formulabox}
+
+\subsection{Practical 13: Galvanometer Resistance, Figure of Merit \& Meter Conversions}
+
+\begin{formulabox}[Moving Coil Galvanometer: Half-Deflection Method \& Conversion Protocols]
+\textbf{1. Galvanometer Resistance ($G$) by Half-Deflection Method:}
+\begin{itemize}
+  \item With high resistance $R$ connected in series with cell EMF $E$, record initial deflection $\theta$:
+  \begin{equation}
+    I_1 = \frac{E}{R + G} = k \theta
+  \end{equation}
+  \item Connect a low shunt resistance $S$ across the galvanometer and adjust $S$ until deflection halves to $\theta/2$:
+  \begin{equation}
+    I_2 = \frac{E}{R + \frac{GS}{G+S}} \cdot \frac{S}{G+S} = k \frac{\theta}{2} \implies \mathbf{G = \frac{R \cdot S}{R - S}}
+  \end{equation}
+  When $R \gg G$, this simplifies to $G \approx S$.
+\end{itemize}
+\textbf{2. Figure of Merit ($k$) and Full-Scale Current ($I_g$):}
+\begin{equation}
+  \mathbf{k = \frac{I_1}{\theta} = \frac{E}{(R + G)\theta}} \implies \mathbf{I_g = n \cdot k} \quad (n = \text{total number of scale divisions on one side})
 \end{equation}
 \textbf{3. Conversion of Galvanometer into Ammeter and Voltmeter:}
 \begin{itemize}
-  \item \textbf{Ammeter (Range $0 \to I$):} Connect small resistance (\textbf{Shunt $S$}) in \textbf{parallel} with galvanometer:
+  \item \textbf{Conversion to Ammeter (Range $0 \to I$):} Connect a small \textbf{Shunt Resistance ($S$)} in \textbf{parallel} with the galvanometer coil:
   \begin{equation}
-    (I - I_g)S = I_g G \implies \mathbf{S = \frac{I_g G}{I - I_g}} \approx \frac{I_g G}{I}
+    (I - I_g)S = I_g G \implies \mathbf{S = \frac{I_g G}{I - I_g}} \approx \frac{I_g G}{I} \quad (\text{for } I \gg I_g)
   \end{equation}
-  Resistance of ideal ammeter = $0$. Equivalent ammeter resistance: $R_A = \frac{G S}{G + S} < S$.
-  \item \textbf{Voltmeter (Range $0 \to V$):} Connect high resistance ($R_V$) in \textbf{series} with galvanometer:
+  Effective ammeter resistance: $R_A = \frac{GS}{G+S} \approx S \to 0$ (ideal ammeter has zero internal resistance).
+  \item \textbf{Conversion to Voltmeter (Range $0 \to V$):} Connect a large \textbf{Multiplier Resistance ($R_V$)} in \textbf{series} with the galvanometer coil:
   \begin{equation}
     V = I_g (G + R_V) \implies \mathbf{R_V = \frac{V}{I_g} - G}
   \end{equation}
-  Resistance of ideal voltmeter = $\infty$. Equivalent voltmeter resistance: $R_{\text{eff}} = G + R_V$.
+  Effective voltmeter resistance: $R_{\text{eff}} = G + R_V \approx R_V \to \infty$ (ideal voltmeter has infinite internal resistance).
 \end{itemize}
 \end{formulabox}
 
-\section{Optics \& Semiconductor Lab Experiments}
+\section{Optics \& Semiconductor Electronics Lab Protocols}
 
-\begin{formulabox}[Focal Length of Mirror/Lens, Prism Deviation \& Glass Slab]
-\textbf{1. Focal Length by $u-v$ Method (Convex Lens \& Concave Mirror):}
+\subsection{Practical 14: Determination of Focal Length of Mirrors and Lenses by Parallax Method}
+
+\begin{conceptbox}[Optical Bench: Parallax Removal \& Focal Length Formulations]
+\textbf{1. Removal of Parallax Principle:}
+Parallax is the apparent relative displacement between two objects when the observer's line of sight shifts sideways. Two collinear needle tips exhibit \textbf{zero parallax} only when they reside at the exact same physical coordinates in space; moving the head from left to right causes both tips to move strictly together without separating.
+\textbf{2. Convex Lens ($u-v$ Method):}
 \begin{equation}
-  \text{Convex Lens: } \frac{1}{f} = \frac{1}{v} - \frac{1}{u} \implies \text{Graph of } \frac{1}{v} \text{ vs } \frac{1}{u} \text{ has slope } -1 \text{ and intercepts } \frac{1}{f}
+  \frac{1}{f} = \frac{1}{v} - \frac{1}{u} \implies \mathbf{f = \frac{u v}{u - v}}
+\end{equation}
+\begin{itemize}
+  \item Graph of $1/v$ versus $1/u$ is a straight line with slope $-1$ and equal intercepts $1/f$ on both axes.
+  \item At symmetric object distance $u = -2f$, real inverted image forms at $v = +2f$.
+\end{itemize}
+\textbf{3. Concave Mirror ($u-v$ Method):}
+\begin{equation}
+  \frac{1}{f} = \frac{1}{v} + \frac{1}{u} \implies \mathbf{f = \frac{u v}{u + v}}
+\end{equation}
+\begin{itemize}
+  \item When object needle is located at center of curvature ($u = -2f = -R$), real inverted image coincides with the needle tip ($v = -2f$) without parallax.
+\end{itemize}
+\textbf{4. Convex Mirror (Auxiliary Convex Lens Method):}
+Since a convex mirror forms virtual images, a convex lens is placed between the object needle and convex mirror to produce a convergent incident beam. The mirror reflects the rays back along their incident path to form an inverted image coinciding with the object needle when the rays strike the mirror normally:
+\begin{equation}
+  \mathbf{R = d} \implies \mathbf{f = \frac{R}{2} = \frac{d}{2}}
+\end{equation}
+Where $d$ is the distance between the convex mirror and the position of the real auxiliary image produced by the lens alone.
+\textbf{5. Concave Lens (Auxiliary Convex Lens Method):}
+A concave lens is introduced between an auxiliary convex lens and its real image point $I_1$. The diverging concave lens pushes the real image further out to $I_2$. The point $I_1$ serves as a \textbf{virtual object} for the concave lens ($u = +d_1$, $v = +d_2$):
+\begin{equation}
+  \frac{1}{f} = \frac{1}{v} - \frac{1}{u} = \frac{1}{d_2} - \frac{1}{d_1} \implies \mathbf{f = \frac{d_1 d_2}{d_1 - d_2} < 0}
+\end{equation}
+\end{conceptbox}
+
+\subsection{Practical 15: Angle of Minimum Deviation of a Triangular Prism}
+
+\begin{formulabox}[Prism Deviation Geometry, $i-\delta$ Characteristic \& Refractive Index]
+\textbf{1. Total Deviation in a Triangular Glass Prism:}
+For a prism with refracting angle $A$, an incident ray undergoes two successive refractions:
+\begin{equation}
+  r_1 + r_2 = A, \qquad \delta = (i_1 + i_2) - A
+\end{equation}
+\textbf{2. Minimum Deviation Condition ($\delta = \delta_m$):}
+A plot of angle of incidence $i$ versus deviation $\delta$ is U-shaped and exhibits a single absolute minimum:
+\begin{equation}
+  \text{At Minimum Deviation: } i_1 = i_2 = i, \qquad r_1 = r_2 = \frac{A}{2}
 \end{equation}
 \begin{equation}
-  \text{Concave Mirror: } \frac{1}{f} = \frac{1}{v} + \frac{1}{u} \implies \text{At } u = 2f, \ v = 2f \quad (\text{Object at center of curvature})
+  i = \frac{A + \delta_m}{2} \implies \mathbf{\mu = \frac{\sin i}{\sin r} = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)}}
 \end{equation}
-\textbf{2. Refractive Index of Prism ($i-\delta$ Curve):}
-Graph of angle of incidence $i$ versus deviation $\delta$ is U-shaped with a unique minimum deviation $\delta_m$:
-\begin{equation}
-  \mathbf{\mu = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)}} \qquad (\text{At minimum deviation: } i_1 = i_2, \ r_1 = r_2 = A/2, \text{ ray inside is parallel to base})
-\end{equation}
-\textbf{3. Refractive Index of Glass Slab using Travelling Microscope:}
-\begin{equation}
-  \mathbf{\mu = \frac{\text{Real Thickness}}{\text{Apparent Thickness}} = \frac{R_3 - R_1}{R_3 - R_2}}
-\end{equation}
-Where $R_1$ = reading on ink mark on paper, $R_2$ = reading through glass slab, $R_3$ = reading of lycopodium powder on top surface.
+\begin{itemize}
+  \item At minimum deviation, the refracted ray passes through the prism \textbf{strictly parallel to the base} (for an equilateral or isosceles prism).
+  \item Ray path is symmetric and satisfies the principle of optical reversibility.
+\end{itemize}
 \end{formulabox}
 
-\begin{conceptbox}[Semiconductor Diode Characteristics (Forward \& Reverse Bias)]
+\subsection{Practical 16: Refractive Index of Glass Slab using Travelling Microscope}
+
+\begin{formulabox}[Travelling Microscope: Vertical Vernier \& Normal Refraction Shift]
+\textbf{1. Apparent Depth Formulation:}
+When looking through a transparent parallel glass slab of real thickness $t$ and refractive index $\mu$, refraction bends light rays away from the normal, causing an apparent upward displacement of the object:
+\begin{equation}
+  d_{\text{apparent}} = \frac{d_{\text{real}}}{\mu} \implies \mathbf{\mu = \frac{\text{Real Thickness}}{\text{Apparent Thickness}} = \frac{t_{\text{real}}}{t_{\text{apparent}}}}
+\end{equation}
+\textbf{2. Three-Reading Travelling Microscope Protocol:}
+Focus the vertical vernier microscope successively on three planes:
 \begin{itemize}
-  \item \textbf{Forward Bias Characteristics:} $p$-side connected to positive, $n$-side to negative terminal.
-  \begin{itemize}
-    \item Depletion layer width decreases; barrier potential opposes applied voltage.
-    \item \textbf{Knee / Cut-in Voltage ($V_k$):} Current is negligible until threshold voltage is reached ($\mathbf{0.7\,\mathrm{V}}$ for Silicon, $\mathbf{0.3\,\mathrm{V}}$ for Germanium), beyond which current rises exponentially.
-    \item \textbf{Dynamic Forward Resistance:} $\mathbf{r_f = \frac{\Delta V_f}{\Delta I_f}}$ (typically $10-100\,\Omega$).
-  \end{itemize}
-  \item \textbf{Reverse Bias Characteristics:} $p$-side connected to negative, $n$-side to positive terminal.
-  \begin{itemize}
-    \item Depletion layer width widens; tiny constant \textbf{Reverse Saturation Current} ($I_0$) flows due to minority carriers (microamperes $\mu\mathrm{A}$ for Ge, nanoamperes $\mathrm{nA}$ for Si).
-    \item \textbf{Reverse Breakdown Voltage ($V_{\mathrm{br}}$):} Sudden sharp increase in current due to avalanche/Zener breakdown.
-    \item \textbf{Dynamic Reverse Resistance:} $\mathbf{r_r = \frac{\Delta V_r}{\Delta I_r}}$ (typically $> 1\,\mathrm{M}\Omega$).
-  \end{itemize}
+  \item \textbf{Reading $R_1$:} Microscope focused on a fine ink cross mark made on white paper placed on the stage.
+  \item \textbf{Reading $R_2$:} Glass slab placed over the ink cross; microscope racked upward to refocus on the apparent image of the cross seen through the slab.
+  \item \textbf{Reading $R_3$:} Lycopodium powder sprinkled on the top surface of the glass slab; microscope racked upward to focus on the powder particles.
+\end{itemize}
+\begin{equation}
+  \text{Real Thickness: } t_{\text{real}} = R_3 - R_1, \qquad \text{Apparent Thickness: } t_{\text{apparent}} = R_3 - R_2
+\end{equation}
+\begin{equation}
+  \mathbf{\mu = \frac{R_3 - R_1}{R_3 - R_2}} \qquad \mathbf{\text{Normal Shift: } \Delta t = R_2 - R_1 = t\left(1 - \frac{1}{\mu}\right)}
+\end{equation}
+\end{formulabox}
+
+\subsection{Practical 17: Forward \& Reverse Bias of p-n Junction Diode \& Zener Breakdown}
+
+\begin{conceptbox}[Semiconductor Diodes: $I-V$ Characteristics \& Zener Voltage Regulation]
+\textbf{1. Forward Bias Characteristic Protocol:}
+Connect the $p$-side of a semiconductor diode to the positive supply terminal and $n$-side to the negative terminal via a potentiometer, series current-limiting resistor, and milliammeter ($\si{mA}$):
+\begin{itemize}
+  \item Applied forward voltage opposes the built-in barrier potential $V_0$, narrowing the depletion layer.
+  \item Negligible current flows until the \textbf{Cut-in / Knee Voltage ($V_k$)} is exceeded ($\mathbf{0.7\,\mathrm{V}}$ for Silicon, $\mathbf{0.3\,\mathrm{V}}$ for Germanium). Beyond $V_k$, forward current increases exponentially.
+  \item \textbf{Dynamic Forward Resistance:} $\mathbf{r_f = \frac{\Delta V_f}{\Delta I_f}}$ (typically $10-100\,\Omega$).
+\end{itemize}
+\textbf{2. Reverse Bias Characteristic Protocol:}
+Connect $p$-side to negative terminal and $n$-side to positive terminal with a microammeter ($\mu\mathrm{A}$):
+\begin{itemize}
+  \item Applied voltage reinforces the barrier potential, widening the depletion layer.
+  \item A tiny, voltage-independent \textbf{Reverse Saturation Current ($I_0$)} flows due to thermally generated minority carriers ($\sim \mathrm{nA}$ for Silicon, $\sim \mu\mathrm{A}$ for Germanium).
+  \item \textbf{Dynamic Reverse Resistance:} $\mathbf{r_r = \frac{\Delta V_r}{\Delta I_r} > 1\,\mathrm{M}\Omega}$.
+\end{itemize}
+\textbf{3. Zener Diode Reverse Breakdown Voltage ($V_z$):}
+A Zener diode is heavily doped ($p^{++}, n^{++}$), resulting in an extremely narrow depletion layer ($\sim 10\,\mathrm{nm}$) and high internal electric field ($> 10^6\,\si{V.m^{-1}}$):
+\begin{itemize}
+  \item When reverse voltage reaches the critical \textbf{Zener Breakdown Voltage ($V_z$)}, valence electrons are torn directly from covalent bonds via quantum tunneling (\textit{Zener breakdown}), or impact ionization causes an avalanche multiplication.
+  \item \textbf{Characteristic Sharp Knee:} Reverse current increases vertically over several orders of magnitude while the terminal voltage remains locked at $V_z$, making it an ideal voltage regulator.
 \end{itemize}
 \end{conceptbox}
 
-% =========================================================================
-% PART VI: MASTER FORMULA COMPENDIUMS & QUICK REVISION HANDBOOK
-% =========================================================================
-\part{Master Formula Compendiums \& Quick Revision Handbook}
+\subsection{Practical 18: Multimeter Identification of Diode, LED, Resistor \& Capacitor}
 
-\chapter{High-Yield Formula Compendium: Mechanics, Gravitation, Thermal \& SHM}
+\begin{usecasebox}[Multimeter Protocol: Component Discrimination \& Unidirectional Conduction]
+A Digital Multimeter (DMM) serves as a rapid diagnostic instrument to identify and distinguish two-terminal electronic components from a mixed collection using its rotary selector switch:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Resistor Identification:}
+  Set DMM to Resistance ($\Omega$) mode. Connect probes across component terminals and note reading; then reverse probe polarity:
+  \begin{itemize}
+    \item \textbf{Signature:} Displays \textbf{identical non-zero resistance in both directions} (symmetric bidirectional conduction obeying Ohm's law).
+  \end{itemize}
+  \item \textbf{p-n Junction Diode Identification:}
+  Set DMM to Diode Check ($\to|-$) mode. Connect red probe ($+$) and black probe ($-$), then reverse polarity:
+  \begin{itemize}
+    \item \textbf{Signature:} Displays forward voltage drop ($\mathbf{\sim 0.6-0.7\,\mathrm{V}}$ for Silicon) in forward bias (red on anode, black on cathode); displays \textbf{Overload / Open-Loop ($OL$)} in reverse bias (strict unidirectional conduction).
+  \end{itemize}
+  \item \textbf{Light Emitting Diode (LED) Identification:}
+  In Diode Check mode:
+  \begin{itemize}
+    \item \textbf{Signature:} Emits a distinct \textbf{glow of visible light} (red, green, blue) with a displayed forward voltage drop between $1.8\,\mathrm{V}$ and $3.2\,\mathrm{V}$ when forward biased; remains dark and displays $OL$ when reverse biased. Longer lead indicates anode ($+$).
+  \end{itemize}
+  \item \textbf{Capacitor Identification:}
+  Set DMM to high resistance range ($M\Omega$):
+  \begin{itemize}
+    \item \textbf{Signature:} Meter initially shows a low resistance reading which \textbf{steadily increases over time to infinity / $OL$} as the multimeter's internal DC test voltage charges the dielectric plates. Reversing probes shows temporary negative resistance / discharge followed by recharging.
+  \end{itemize}
+  \item \textbf{Continuity Buzzer Testing:}
+  Set DMM to Continuity Mode. Resistance $< 50\,\Omega$ triggers an audible continuous buzzer tone, verifying circuit continuity, unblown fuses, and unbroken connecting wires.
+\end{enumerate}
+\end{usecasebox}
+
+% =========================================================================
+% APPENDIX: HIGH-YIELD PHYSICS FORMULA & EQUATION COMPENDIUM
+% =========================================================================
+\appendix
+\part*{Appendix: High-Yield Physics Formula \& Equation Compendium}
+
+\chapter{High-Yield Formula Compendium: Mechanics, Gravitation, Thermal Physics \& Waves}
 
 This chapter brings together every governing equation, parameter definition, validity boundary condition, and NEET trap across Class 11 Physics (Units 2 through 10). Use this compendium for rapid revision before full-length tests and final preparation cycles.
 
@@ -4130,13 +4537,6 @@ This chapter brings together every governing equation, parameter definition, val
 \end{itemize}
 \end{usecasebox}
 
-\vspace{15pt}
-\begin{center}
-  \rule{0.6\textwidth}{0.8pt}\\[6pt]
-  {\small\textbf{\color{primarydark}End of Module 01 Formula Handbook}}\\[2pt]
-  {\footnotesize\color{accentblue}Prepared by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
-\end{center}
-
 \section{Rotational Dynamics \& Centre of Mass (Unit 5)}
 
 \subsection{Centre of Mass (CM) Formulations}
@@ -4319,7 +4719,7 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
   Y &= \frac{\text{Longitudinal Stress}}{\text{Longitudinal Strain}} = \frac{F/A}{\Delta L/L} = \frac{F L}{A \Delta L} && \text{[Young's Modulus, $\Delta L = \frac{F L}{A Y}$]} \\
   B &= -\frac{\Delta P}{\Delta V / V} = -V\frac{\Delta P}{\Delta V}, \qquad K = \frac{1}{B} && \text{[Bulk Modulus $B$ \& Compressibility $K$]} \\
   \eta &= \frac{\text{Shear Stress}}{\text{Shear Strain}} = \frac{F/A}{\theta} && \text{[Shear Modulus / Modulus of Rigidity]} \\
-  \sigma &= -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta d / d}{\Delta L / L} && \text{[Poisson's Ratio: Theoretical: $-1 \le \sigma \le 0.5$; Actual: $0 < \sigma < 0.5$]}
+  \sigma &= -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta d / d}{\Delta L / L} && \text{[Poisson's Ratio; Actual: $0 < \sigma < 0.5$]}
 \end{align}
 \textbf{Elastic Potential Energy Stored in Stretched Wire:}
 \begin{equation}
@@ -4350,14 +4750,14 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
   P + \frac{1}{2}\rho v^2 + \rho g h &= \text{constant} && \text{[Bernoulli's Theorem]} \\
   v_{\text{efflux}} &= \sqrt{2gh}, \quad R_{\text{horizontal}} = 2\sqrt{h(H-h)} && \text{[Torricelli's Law; $R_{\max} = H$ at $h = H/2$]} \\
   F_v &= 6\pi \eta r v && \text{[Stokes' Viscous Drag Law]} \\
-  v_t &= \frac{2}{9}\frac{r^2(\rho - \sigma)g}{\eta} \implies v_t \propto r^2 && \text{[Terminal Velocity; $\rho=\text{body density}, \sigma=\text{fluid density}$]} \\
-  R_e &= \frac{\rho v d}{\eta} && \text{[Reynolds Number: $R_e < 2000$ Laminar; $R_e > 3000$ Turbulent]}
+  v_t &= \frac{2 r^2(\rho - \sigma)g}{9\eta} \implies v_t \propto r^2 && \text{[Terminal Velocity; } \rho=\text{solid, } \sigma=\text{fluid]} \\
+  R_e &= \frac{\rho v d}{\eta} && \text{[Reynolds Number; Laminar } < 2000\text{]}
 \end{align}
 \textbf{Surface Tension, Excess Pressure \& Capillary Rise:}
 \begin{align}
-  T &= \frac{F}{L} = \frac{\Delta W}{\Delta A}, \qquad W_{\text{splitting}} = 4\pi R^2 T(n^{1/3} - 1) && \text{[$1$ big drop $\to n$ identical droplets]} \\
-  \Delta P_{\text{liquid drop}} &= \frac{2T}{R}, \qquad \Delta P_{\text{soap bubble}} = \frac{4T}{R} && \text{[Soap bubble has TWO free air-liquid interfaces]} \\
-  h &= \frac{2T\cos\theta}{r\rho g} = \frac{2T}{R_c \rho g} && \text{[Jurin's Law: $h r = \text{constant}$; $R_c = r/\cos\theta$ is meniscus radius]}
+  T &= \frac{F}{L} = \frac{\Delta W}{\Delta A}, \quad W_{\text{split}} = 4\pi R^2 T(n^{1/3} - 1) && [1\text{ drop } \to n\text{ droplets}] \\
+  \Delta P_{\text{liquid drop}} &= \frac{2T}{R}, \qquad \Delta P_{\text{soap bubble}} = \frac{4T}{R} && \text{[Soap bubble has TWO free interfaces]} \\
+  h &= \frac{2T\cos\theta}{r\rho g} = \frac{2T}{R_c \rho g} && \text{[Jurin's Law: } h r = \text{const; } R_c = r/\cos\theta\text{]}
 \end{align}
 \end{formulabox}
 
@@ -4503,14 +4903,7 @@ Non-Linear Polyatomic ($\text{H}_2\text{O}, \text{NH}_3$) & $3\text{ trans} + 3\
 \end{itemize}
 \end{trapbox}
 
-\vspace{15pt}
-\begin{center}
-  \rule{0.6\textwidth}{0.8pt}\\[6pt]
-  {\small\textbf{\color{primarydark}End of Module 02 Formula Handbook}}\\[2pt]
-  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
-\end{center}
-
-\chapter{High-Yield Formula Compendium: Electrodynamics, Optics \& Modern Physics}
+\chapter{High-Yield Formula Compendium: Electrodynamics, Magnetism, Optics \& Modern Physics}
 
 This chapter compiles all core formulas, vector relations, circuit equations, optical relations, quantum constants, and logic gate truth tables spanning Class 12 Physics (Units 11 through 19).
 
@@ -4543,7 +4936,8 @@ This chapter compiles all core formulas, vector relations, circuit equations, op
   E_{\text{line}} &= \frac{\lambda}{2\pi\varepsilon_0 r} = \frac{2k\lambda}{r} && \text{[Infinitely Long Uniform Line Charge]} \\
   E_{\text{sheet}} &= \frac{\sigma}{2\varepsilon_0} && \text{[Infinite Non-Conducting Plane Sheet (independent of $r$)]} \\
   E_{\text{conductor}} &= \frac{\sigma}{\varepsilon_0} && \text{[Just outside any charged conducting surface]} \\
-  E_{\text{shell}}(r) &= \begin{cases} 0 & (r < R) \\ \frac{kq}{R^2} & (r = R) \\ \frac{kq}{r^2} & (r > R) \end{cases}, \qquad V_{\text{shell}}(r) = \begin{cases} \frac{kq}{R} & (r \le R) \\ \frac{kq}{r} & (r > R) \end{cases} && \text{[Thin Spherical Shell of Radius } R\text{]}
+  E_{\text{shell}}(r) &= \begin{cases} 0 & (r < R) \\ \frac{kq}{R^2} & (r = R) \\ \frac{kq}{r^2} & (r > R) \end{cases} && \text{[Field: Spherical Shell Radius } R\text{]} \\
+  V_{\text{shell}}(r) &= \begin{cases} \frac{kq}{R} & (r \le R) \\ \frac{kq}{r} & (r > R) \end{cases} && \text{[Potential: Spherical Shell Radius } R\text{]}
 \end{align}
 \textbf{Uniformly Charged Solid Non-Conducting Sphere (Total Charge $q$, Radius $R$):}
 \begin{equation}
@@ -4670,11 +5064,11 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[Lorentz Equation \& Charged Particle Dynamics in Magnetic Fields]
 \begin{align}
-  \mathbf{F} &= q(\mathbf{E} + \mathbf{v}\times\mathbf{B}) \implies \mathbf{F}_B = q(\mathbf{v}\times\mathbf{B}) \implies W_B = \int \mathbf{F}_B\cdot d\mathbf{r} = 0 \quad [\text{Speed } v = \text{const}] \\
-  r &= \frac{mv}{qB} = \frac{p}{qB} = \frac{\sqrt{2mK}}{qB} = \frac{\sqrt{2mqV}}{qB} && \text{[Circular Orbit Radius for } \mathbf{v}\perp\mathbf{B}\text{]} \\
-  T &= \frac{2\pi m}{qB}, \qquad \nu = \frac{qB}{2\pi m} && \text{[Period and Frequency: INDEPENDENT of speed } v\text{]} \\
-  p_{\text{pitch}} &= v_{\parallel} T = \frac{2\pi m v\cos\theta}{qB} && \text{[Helical Path Pitch for launch angle } \theta\text{]} \\
-  \mathbf{F} &= I(\mathbf{L}\times\mathbf{B}), \qquad \frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d} && \text{[Parallel attract; antiparallel repel]}
+  \mathbf{F}_B &= q(\mathbf{v}\times\mathbf{B}) \implies W_B = 0 \quad [\text{Speed } v = \text{constant}] \\
+  r &= \frac{mv}{qB} = \frac{p}{qB} = \frac{\sqrt{2mK}}{qB} = \frac{\sqrt{2mqV}}{qB} && [\mathbf{v}\perp\mathbf{B}] \\
+  T &= \frac{2\pi m}{qB}, \qquad \nu = \frac{qB}{2\pi m} && [\text{Period independent of } v] \\
+  p_{\text{pitch}} &= v_{\parallel} T = \frac{2\pi m v\cos\theta}{qB} && [\text{Helical Pitch}] \\
+  \mathbf{F} &= I(\mathbf{L}\times\mathbf{B}), \qquad \frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d} && [\text{Force between currents}]
 \end{align}
 \end{formulabox}
 
@@ -4770,24 +5164,17 @@ Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in anten
 \caption{Electromagnetic Spectrum in Decreasing Order of Frequency / Increasing Wavelength.}
 \end{table}
 
-\vspace{15pt}
-\begin{center}
-  \rule{0.6\textwidth}{0.8pt}\\[6pt]
-  {\small\textbf{\color{primarydark}End of Module 03 Formula Handbook}}\\[2pt]
-  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
-\end{center}
-
 \section{Ray Optics \& Optical Instruments (Unit 16)}
 
 \subsection{Spherical Mirrors, Snell's Law \& Critical Angle}
 
 \begin{formulabox}[Mirror Formula, Magnification \& Normal Shift]
 \begin{align}
-  \frac{1}{v} + \frac{1}{u} &= \frac{1}{f} = \frac{2}{R} && \text{[Cartesian Sign Convention: Pole is origin; light direction is $+x$]} \\
-  m &= -\frac{v}{u} = \frac{f}{f - u} = \frac{f - v}{f} && \text{[Transverse / Linear Magnification]} \\
-  m_L &= \frac{dv}{du} = -m^2 = -\left(\frac{v}{u}\right)^2 && \text{[Longitudinal Magnification for small object along axis]} \\
-  \mu_1 \sin i &= \mu_2 \sin r \implies \frac{\sin i}{\sin r} = \frac{\mu_2}{\mu_1} = \frac{v_1}{v_2} = \frac{\lambda_1}{\lambda_2} && \text{[Snell's Law of Refraction; Frequency $\nu$ remains invariant]} \\
-  d_{\text{apparent}} &= \frac{d_{\text{real}}}{\mu_{\text{relative}}} = d\left(\frac{\mu_{\text{observer}}}{\mu_{\text{object}}}\right), \qquad \Delta t = t\left(1 - \frac{1}{\mu}\right) && \text{[Apparent Depth \& Normal Shift through slab]}
+  \frac{1}{v} + \frac{1}{u} &= \frac{1}{f} = \frac{2}{R} && [\text{Mirror Formula; Pole is Origin}] \\
+  m &= -\frac{v}{u} = \frac{f}{f - u} = \frac{f - v}{f} && [\text{Transverse Magnification}] \\
+  m_L &= \frac{dv}{du} = -m^2 = -\left(\frac{v}{u}\right)^2 && [\text{Longitudinal Magnification}] \\
+  \frac{\sin i}{\sin r} &= \frac{\mu_2}{\mu_1} = \frac{v_1}{v_2} = \frac{\lambda_1}{\lambda_2} && [\text{Snell's Law; Frequency } \nu = \text{const}] \\
+  d_{\text{app}} &= \frac{d}{\mu_{\text{rel}}}, \qquad \Delta t = t\left(1 - \frac{1}{\mu}\right) && [\text{Apparent Depth \& Normal Shift}]
 \end{align}
 \textbf{Total Internal Reflection (TIR) \& Underwater Illuminance Cone:}
 \begin{equation}
@@ -4799,10 +5186,10 @@ Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in anten
 
 \begin{formulabox}[Prism Deviation, Dispersive Power \& Curved Surface Refraction]
 \begin{align}
-  \delta &= (i_1 + i_2) - A, \qquad r_1 + r_2 = A && \text{[General Triangular Prism of Angle } A\text{]} \\
-  \mu &= \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)} \iff i_1 = i_2 = \frac{A + \delta_m}{2}, \quad r_1 = r_2 = \frac{A}{2} && \text{[Minimum Deviation Condition; ray parallel to base]} \\
-  \delta_{\text{thin}} &= (\mu - 1)A, \qquad \theta_{\text{dispersion}} = (\mu_V - \mu_R)A, \qquad \omega = \frac{\mu_V - \mu_R}{\mu_Y - 1} && \text{[Thin Prism ($A \le 10^\circ$) \& Dispersive Power $\omega$]} \\
-  \frac{\mu_2}{v} - \frac{\mu_1}{u} &= \frac{\mu_2 - \mu_1}{R}, \qquad m = \frac{\mu_1 v}{\mu_2 u} && \text{[Refraction at Single Spherical Interface]}
+  \delta &= (i_1 + i_2) - A, \qquad r_1 + r_2 = A && [\text{Triangular Prism of Angle } A] \\
+  \mu &= \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)} \quad (i = \frac{A+\delta_m}{2},\ r = \frac{A}{2}) && [\text{Minimum Deviation Condition}] \\
+  \delta_{\text{thin}} &= (\mu - 1)A, \qquad \omega = \frac{\mu_V - \mu_R}{\mu_Y - 1} && [\text{Thin Prism ($A \le 10^\circ$) \& Dispersion}] \\
+  \frac{\mu_2}{v} - \frac{\mu_1}{u} &= \frac{\mu_2 - \mu_1}{R}, \qquad m = \frac{\mu_1 v}{\mu_2 u} && [\text{Single Spherical Interface}]
 \end{align}
 \end{formulabox}
 
@@ -4810,10 +5197,10 @@ Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in anten
 
 \begin{formulabox}[Lens Maker's Equation, Power \& Silvering Formulations]
 \begin{align}
-  \frac{1}{f} &= \left(\frac{\mu_{\text{lens}}}{\mu_{\text{medium}}} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) && \text{[Lens Maker's Formula]} \\
-  \frac{1}{v} - \frac{1}{u} &= \frac{1}{f}, \qquad m = \frac{v}{u} = \frac{f}{f + u} = \frac{f - v}{f} && \text{[Thin Lens Equation \& Magnification]} \\
-  P &= \frac{1}{f\text{ (in m)}} = \frac{100}{f\text{ (in cm)}} \quad [\si{D = m^{-1}}], \qquad P_{\text{contact}} = \sum P_i = P_1 + P_2 \\
-  \frac{1}{F} &= \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2} \implies P = P_1 + P_2 - d P_1 P_2 && \text{[Two Lenses Separated by Distance } d\text{]}
+  \frac{1}{f} &= \left(\frac{\mu_{\text{lens}}}{\mu_{\text{medium}}} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) && [\text{Lens Maker's Formula}] \\
+  \frac{1}{v} - \frac{1}{u} &= \frac{1}{f}, \qquad m = \frac{v}{u} = \frac{f}{f + u} && [\text{Thin Lens Equation}] \\
+  P &= \frac{1}{f\text{ (in m)}} = \frac{100}{f\text{ (in cm)}} \quad [\si{D}], \qquad P_{\text{contact}} = P_1 + P_2 \\
+  \frac{1}{F} &= \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2} && [\text{Lenses Separated by Distance } d]
 \end{align}
 \textbf{Silvering of a Lens Surface (Acts as an Equivalent Spherical Mirror):}
 \begin{equation}
@@ -4837,14 +5224,14 @@ Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in anten
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{L c c c}
+\begin{tabularx}{\textwidth}{>{\hsize=0.65\hsize}L >{\hsize=1.05\hsize}Y >{\hsize=1.2\hsize}Y >{\hsize=1.1\hsize}Y}
 \toprule
-\textbf{Instrument} & \textbf{Normal Adjustment ($v = \infty$)} & \textbf{Near Point Adjustment ($v = D = 25\si{cm}$)} & \textbf{Tube Length ($L$)} \\
+\textbf{Instrument} & \textbf{Normal Adjustment ($v = \infty$)} & \textbf{Near Point Adjustment ($v = D$)} & \textbf{Tube Length ($L$)} \\
 \midrule
 Simple Microscope & $m = \frac{D}{f}$ & $m = 1 + \frac{D}{f}$ & Eye at lens \\
-Compound Microscope & $m = -\left(\frac{v_o}{u_o}\right)\left(\frac{D}{f_e}\right) \approx -\frac{L}{f_o}\frac{D}{f_e}$ & $m = -\left(\frac{v_o}{u_o}\right)\left(1 + \frac{D}{f_e}\right) \approx -\frac{L}{f_o}\left(1 + \frac{D}{f_e}\right)$ & $L = v_o + u_e \approx v_o + f_e$ \\
+Compound Microscope & $m = -\frac{v_o}{u_o}\frac{D}{f_e} \approx -\frac{L}{f_o}\frac{D}{f_e}$ & $m = -\frac{v_o}{u_o}\left(1 + \frac{D}{f_e}\right)$ & $L = v_o + u_e \approx v_o + f_e$ \\
 Astronomical Telescope & $m = -\frac{f_o}{f_e}$ & $m = -\frac{f_o}{f_e}\left(1 + \frac{f_e}{D}\right)$ & $L = f_o + f_e \quad \text{or} \quad f_o + u_e$ \\
 \bottomrule
 \end{tabularx}
@@ -4864,9 +5251,9 @@ Astronomical Telescope & $m = -\frac{f_o}{f_e}$ & $m = -\frac{f_o}{f_e}\left(1 +
 \begin{align}
   I &= I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\phi \implies I = 4I_0 \cos^2\left(\frac{\phi}{2}\right) \quad (\text{when } I_1 = I_2 = I_0) \\
   \frac{I_{\max}}{I_{\min}} &= \left(\frac{\sqrt{I_1} + \sqrt{I_2}}{\sqrt{I_1} - \sqrt{I_2}}\right)^2 = \left(\frac{a_1 + a_2}{a_1 - a_2}\right)^2, \qquad \Delta\phi = \frac{2\pi}{\lambda}\Delta x \\
-  y_n &= n\frac{\lambda D}{d} \quad (n = 0, 1, 2, \dots) && \text{[$n$-th Bright Fringe / Maximum; } \Delta x = n\lambda\text{]} \\
-  y_n' &= (2n - 1)\frac{\lambda D}{2d} \quad (n = 1, 2, 3, \dots) && \text{[$n$-th Dark Fringe / Minimum; } \Delta x = (2n-1)\frac{\lambda}{2}\text{]} \\
-  \beta &= \frac{\lambda D}{d}, \qquad \theta = \frac{\beta}{D} = \frac{\lambda}{d} \quad [\si{rad}] && \text{[Linear Fringe Width $\beta$ \& Angular Fringe Width $\theta$]}
+  y_n &= n\frac{\lambda D}{d} \quad (n = 0, 1, 2, \dots) && \text{[$n$-th Bright Fringe; } \Delta x = n\lambda\text{]} \\
+  y_n' &= (2n - 1)\frac{\lambda D}{2d} \quad (n = 1, 2, \dots) && \text{[$n$-th Dark Fringe; } \Delta x = (2n-1)\frac{\lambda}{2}\text{]} \\
+  \beta &= \frac{\lambda D}{d}, \qquad \theta = \frac{\beta}{D} = \frac{\lambda}{d} \quad [\si{rad}] && \text{[Fringe Width } \beta \text{ \& Angular Width } \theta\text{]}
 \end{align}
 \textbf{Shift Produced by Thin Dielectric Slab of Thickness $t$ and Refractive Index $\mu$:}
 \begin{equation}
@@ -5002,11 +5389,11 @@ Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790
 
 \begin{formulabox}[Carrier Densities, Mass Action Law \& Electrical Conductivity]
 \begin{align}
-  n_e n_h &= n_i^2 && \text{[Law of Mass Action: valid for both intrinsic and extrinsic]} \\
-  n_e &= n_h = n_i && \text{[Intrinsic Semiconductor]} \\
-  n_e &\approx N_d \gg n_h && \text{[n-Type Semiconductor: Pentavalent Donor Doping (P, As, Sb)]} \\
-  n_h &\approx N_a \gg n_e && \text{[p-Type Semiconductor: Trivalent Acceptor Doping (B, Al, In)]} \\
-  \sigma &= e(n_e \mu_e + n_h \mu_h), \qquad I = I_e + I_h = e A E(n_e \mu_e + n_h \mu_h) \quad [\text{Total Drift Current}]
+  n_e n_h &= n_i^2 && [\text{Law of Mass Action}] \\
+  n_e &= n_h = n_i && [\text{Intrinsic Semiconductor}] \\
+  n_e &\approx N_d \gg n_h && [\text{n-Type: Pentavalent Donor Doping (P, As)}] \\
+  n_h &\approx N_a \gg n_e && [\text{p-Type: Trivalent Acceptor Doping (B, Al)}] \\
+  \sigma &= e(n_e \mu_e + n_h \mu_h), \qquad I = e A E(n_e \mu_e + n_h \mu_h)
 \end{align}
 \end{formulabox}
 
@@ -5014,7 +5401,7 @@ Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790
 
 \begin{formulabox}[Diode Dynamic Resistance \& Rectifier Efficiencies]
 \begin{align}
-  r_d &= \frac{\Delta V}{\Delta I} \quad [\text{Dynamic Resistance: Low in Forward Bias ($\sim 10-100\,\Omega$), High in Reverse Bias ($\sim 10^6\,\Omega$)}] \\
+  r_d &= \frac{\Delta V}{\Delta I} && [\text{Dynamic Resistance: } r_f \sim 10-100\,\Omega,\ r_r > 1\,\mathrm{M}\Omega] \\
   \eta_{\text{half-wave}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.406 R_L}{r_f + R_L} \implies \eta_{\max} = 40.6\%, \qquad \nu_{\text{ripple}} = \nu_{\text{input}} \\
   \eta_{\text{full-wave}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.812 R_L}{r_f + R_L} \implies \eta_{\max} = 81.2\%, \qquad \nu_{\text{ripple}} = 2\nu_{\text{input}}
 \end{align}
@@ -5024,11 +5411,13 @@ Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{l c c c c c c c}
+\begin{tabularx}{\textwidth}{c c Y Y Y Y Y Y}
 \toprule
-\textbf{Input $A$} & \textbf{Input $B$} & \textbf{AND ($A\cdot B$)} & \textbf{OR ($A+B$)} & \textbf{NAND ($\overline{A\cdot B}$)} & \textbf{NOR ($\overline{A+B}$)} & \textbf{XOR ($A\oplus B$)} & \textbf{XNOR ($\overline{A\oplus B}$)} \\
+\textbf{$A$} & \textbf{$B$} & \textbf{AND} & \textbf{OR} & \textbf{NAND} & \textbf{NOR} & \textbf{XOR} & \textbf{XNOR} \\
+ & & ($A\cdot B$) & ($A+B$) & ($\overline{A\cdot B}$) & ($\overline{A+B}$) & ($A\oplus B$) & ($\overline{A\oplus B}$) \\
 \midrule
 0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 \\
 0 & 1 & 0 & 1 & 1 & 0 & 1 & 0 \\
@@ -5052,13 +5441,6 @@ Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790
   \end{itemize}
 \end{itemize}
 \end{usecasebox}
-
-\vspace{15pt}
-\begin{center}
-  \rule{0.6\textwidth}{0.8pt}\\[6pt]
-  {\small\textbf{\color{primarydark}End of Module 04 Formula Handbook (Complete Physics Series)}}\\[2pt]
-  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
-\end{center}
 
 % =========================================================================
 % BACK MATTER

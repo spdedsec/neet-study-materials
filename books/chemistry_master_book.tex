@@ -1,3 +1,4 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[10pt,twoside,openright]{book}
 \usepackage{../styles/neet_book}
 
@@ -14,7 +15,9 @@
 \begin{center}
   {\Huge\bfseries\color{primarydark} NEET UG CHEMISTRY}\\[0.6cm]
   {\Large\bfseries\color{accentblue} MASTER TEXTBOOK}\\[1.5cm]
-  {\normalsize\color{gray} NEET UG 2027 Master Reference Series $\cdot$ Complete Authoritative Edition}
+  {\normalsize\color{gray} Complete Master Theory, Formulas \& Experimental Compendium}\\[0.2cm]
+  {\normalsize\color{gray} Strictly Aligned with NEET UG 2027 NMC Syllabus}\\[1.5cm]
+  {\large\bfseries\color{primarydark} Satya Prakash}
 \end{center}
 \cleardoublepage
 
@@ -24,8 +27,8 @@
 \begin{center}
   {\Huge\bfseries\color{primarydark} NEET UG CHEMISTRY}\\[0.4cm]
   {\LARGE\bfseries\color{primarydark} MASTER TEXTBOOK}\\[0.8cm]
-  {\Large\bfseries\color{accentblue} Physical Chemistry, Inorganic Compendium, Organic Theory,}\\[0.2cm]
-  {\Large\bfseries\color{accentblue} Reaction Mechanisms, Qualitative Lab Manual \& Formulas}\\[2cm]
+  {\Large\bfseries\color{accentblue} Complete Master Theory, Formulas \& Experimental Compendium}\\[0.2cm]
+  {\Large\bfseries\color{accentblue} Strictly Aligned with NEET UG 2027 NMC Syllabus}\\[2cm]
   
   {\large\textbf{Authored by}}\\[0.3cm]
   {\LARGE\bfseries\color{primarydark} Satya Prakash}\\[1.5cm]
@@ -44,7 +47,7 @@
 \begin{flushleft}
 {\small
 \textbf{NEET UG CHEMISTRY MASTER TEXTBOOK}\\[2pt]
-\textit{Complete Theory, Reaction Mechanisms, Qualitative Analysis \& Formula Compendium}\\[8pt]
+\textit{Complete Master Theory, Formulas \& Experimental Compendium strictly aligned with NEET UG 2027 NMC Syllabus}\\[8pt]
 \textbf{Author:} Satya Prakash\\
 \textbf{Editorial Correspondence \& Academic Feedback:} \href{mailto:spdedsec@hotmail.com}{spdedsec@hotmail.com}\\
 \textbf{Source Repository \& Official Errata:} \url{https://github.com/spdedsec/neet-study-materials}\\[10pt]
@@ -53,15 +56,16 @@
 
 \textbf{First Edition:} October 2026\\
 \textbf{Publishing Imprint:} Independent Academic Publishing / Satya Prakash Editorial Imprint\\
-\textbf{Target Cycle:} NEET UG 2027 (Undergraduate Medical Admissions Entrance Examination)\\
+\textbf{Target Examination Cycle:} NEET UG 2027 (Undergraduate Medical Admissions Entrance Examination)\\
+\textbf{Publication Format:} Print on Demand Professional Two-Sided Edition\\
 \textbf{ISBN-13 (Paperback):} 979-8-XXXXXXXXX (Placeholder for Official Assigned ISBN)\\
 \textbf{ISBN-13 (Hardcover):} 979-8-XXXXXXXXX (Placeholder for Official Assigned ISBN)\\[10pt]
 
 \textbf{All Rights Reserved.} No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means---electronic, mechanical, photocopying, recording, scanning, or otherwise---without the prior written permission of the author, except for brief quotations embodied in critical reviews or scholarly analysis as permitted under copyright law.\\[8pt]
 
-\textbf{Academic \& Legal Disclaimer:} This textbook is an independent preparation manual authored by Satya Prakash to assist candidates preparing for the National Eligibility cum Entrance Test (NEET UG). While every effort has been made to verify scientific accuracy and strict concordance with the National Medical Commission (NMC) curriculum and rationalized NCERT textbooks, the author and publisher make no official claims of affiliation with or endorsement by the National Testing Agency (NTA), the National Medical Commission (NMC), or the Ministry of Education, Government of India. The author disclaims any liability for errors or omissions.\\[8pt]
+\textbf{Academic \& Legal Disclaimer for Medical Entrance Examination Preparation:} This textbook is an independent preparation manual authored by Satya Prakash to assist candidates preparing for the National Eligibility cum Entrance Test (NEET UG). While every effort has been made to verify scientific accuracy and strict concordance with the National Medical Commission (NMC) curriculum and rationalized NCERT textbooks, the author and publisher make no official claims of affiliation with or endorsement by the National Testing Agency (NTA), the National Medical Commission (NMC), or the Ministry of Education, Government of India. The author disclaims any liability for errors, omissions, or examination outcomes.\\[8pt]
 
-\textbf{Typesetting \& Typography:} Typeset in \LaTeXe\ with the Tectonic XeTeX engine using Latin Modern typefaces. Chemical nomenclature and IUPAC rules strictly observed. Produced and bound under rigorous academic publishing standards.\\[4pt]
+\textbf{Typesetting \& Typography:} Typeset in \LaTeXe\ with the Tectonic XeTeX engine using Latin Modern typefaces and custom academic publishing geometry. Chemical nomenclature, SI units, and IUPAC rules strictly observed. Produced and bound under rigorous academic publishing standards.\\[4pt]
 Printed in the United States of America / United Kingdom / India.
 }
 \end{flushleft}
@@ -104,34 +108,30 @@ Finally, I express my sincere appreciation to the \LaTeXe\ open-source community
 \cleardoublepage
 
 % --- Author's Preface ---
-\chapter*{Author's Preface: Straight Talk on Chemistry}
-\addcontentsline{toc}{chapter}{Author's Preface: Straight Talk on Chemistry}
+\chapter*{Author's Preface: Pedagogical Architecture \& Analytical Methodology}
+\addcontentsline{toc}{chapter}{Author's Preface: Pedagogical Architecture \& Analytical Methodology}
 
-Let's sit down and talk honestly about NEET Chemistry.
+Mastering chemistry for the National Eligibility cum Entrance Test (NEET UG) requires a decisive transition from passive memorization to analytical problem-solving and mechanistic reasoning.
 
-Every year, students fall into one of two dangerous traps. On one hand, you have students who treat chemistry like a phonebook: they memorize hundreds of isolated reactions, random exceptions, and formula sheets without ever understanding electron density, inductive effects, or thermodynamic driving forces. The moment NTA twists a question into an Assertion-Reasoning format or gives a substituted benzaldehyde they haven't seen in a coaching worksheet, their memorized answers crumble.
+In competitive medical entrance preparation, candidates often encounter two persistent pedagogical pitfalls. First, many treat chemistry as an encyclopedic catalog of isolated reactions, memorizing reagents and formula sheets without internalizing electron density distributions, stereochemical principles, or thermodynamic driving forces. Consequently, when examination items present novel multi-step transformations, stereochemical configurations, or Assertion-Reasoning pairings, memorized patterns fail.
 
-On the other hand, you have students who waste hundreds of hours studying legacy coaching material that still includes nine entire chapters that the National Medical Commission (NMC) completely eliminated from the syllabus: Solid State, States of Matter, Surface Chemistry, Hydrogen, the s-Block, Metallurgy, Polymers, Chemistry in Everyday Life, and Environmental Chemistry. Think about that: nearly 35\% of the old syllabus is gone! 
+Second, substantial study time is frequently misallocated to legacy coaching material covering topics eliminated under the rationalized curriculum issued by the National Medical Commission (NMC). Nine former units—Solid State, States of Matter, Surface Chemistry, Hydrogen, the $s$-Block Elements, Metallurgy, Polymers, Chemistry in Everyday Life, and Environmental Chemistry—have been formally excised from the syllabus. This curricular pruning is not a reduction in examination rigor; rather, it allows the examination to test substantially deeper conceptual comprehension across the retained foundational domains: Chemical Bonding, Coordination Chemistry, Reaction Intermediates, Carbonyl Chemistry, Thermodynamics, and Ionic Equilibria.
 
-Why does this matter to you? Because the NMC didn't reduce the syllabus to make NEET easier. They reduced the volume so they could demand \textbf{much deeper conceptual clarity} in the chapters that remain: Chemical Bonding, Coordination Compounds, General Organic Chemistry (GOC), Carbonyl Chemistry, Chemical Equilibrium, and Electrochemistry.
-
-I created this master book to give you a single, unified, and uncompromisingly clear roadmap for NEET UG 2027:
+This master textbook is constructed to provide an uncompromisingly rigorous, self-contained, and syllabus-calibrated pedagogical framework for NEET UG 2027:
 
 \begin{enumerate}[leftmargin=*]
-  \item \textbf{Physical Chemistry Built on First Principles:} We don't skip algebraic derivations. From the de Broglie wavelength to the Nernst equation and integrated rate laws, every equation is derived step-by-step with explicit units. You will understand exactly when an equation is valid and when it breaks down.
+  \item \textbf{First-Principles Physical Chemistry:} Every governing formulation—from de Broglie wave mechanics and Schrödinger orbital definitions to the integrated rate laws, Kohlrausch conductivity, and the Nernst equation—is derived algebraically with rigorous thermodynamic sign discipline and dimensional consistency.
   
-  \item \textbf{Mechanistic Organic Chemistry:} Organic chemistry is not a list of reagents; it is the logical movement of electron pairs from nucleophilic sites to electrophilic centers. Chapter 5 gives you a dedicated handbook of curved-arrow mechanisms, transition states, and carbocation rearrangements for all major reaction classes.
+  \item \textbf{Mechanistic Organic Transformations:} Organic chemistry is presented through the physical movement of electron pairs. Part V provides a dedicated handbook of curved-arrow reaction mechanisms, arenium ion intermediates, transition states, and carbocation rearrangements spanning all canonical reaction classes.
   
-  \item \textbf{Inorganic Chemistry Demystified:} Instead of asking you to memorize isolated facts group by group, we use periodic trends, effective nuclear charge ($Z_{\text{eff}}$), inert pair effect, back-bonding, and crystal field splitting energy ($\Delta_o$) to explain why elements behave the way they do.
+  \item \textbf{Inorganic Chemistry Grounded in Electronic Structure:} Rather than relying on disconnected factual recall, inorganic behavior across the $p$-block, $d$-block, and coordination complexes is deduced systematically from effective nuclear charge ($Z_{\text{eff}}$), shielding parameters, crystal field splitting energy ($\Delta_o$ and $\Delta_t$), and stereochemical geometries.
   
-  \item \textbf{Comprehensive Lab Manual (Practical Chemistry):} Practical chemistry is now tested with high frequency. Chapter 6 provides the complete analytical procedure for cation group separation, anion confirmatory tests, and volumetric redox titrations.
+  \item \textbf{Laboratory Skills \& Analytical Protocols:} In strict accordance with the updated practical chemistry mandate, Part VI provides comprehensive protocols for systematic cation group separation (Groups 0--VI), confirmatory tests for acidic radicals, and quantitative redox titrimetry.
   
-  \item \textbf{The 5-Color Tactical Box Pedagogy:} Use the \texttt{conceptbox}, \texttt{formulabox}, \texttt{usecasebox}, \texttt{trapbox}, and \texttt{ncertbox} callouts to guide your study. Pay special attention to the Red Trap boxes---they highlight the exact sign conventions, hidden assumptions, and tricky exceptions where students consistently lose marks.
+  \item \textbf{Integrated Tactical Callout Architecture:} Five distinct callout environments—\texttt{conceptbox}, \texttt{formulabox}, \texttt{usecasebox}, \texttt{trapbox}, and \texttt{ncertbox}—demarcate fundamental principles, valid boundary conditions, and the high-frequency pitfalls where aspirants routinely concede negative marks.
 \end{enumerate}
 
-Here is my study advice to you as a friend: work with paper and pen. Balance every redox equation by ion-electron method yourself. Draw out the curved arrows in organic mechanisms. Check the units in every physical chemistry numerical before hitting the calculator.
-
-Stay steady, stay curious, and keep putting in the honest hours. The results will follow.
+Candidates are strongly advised to engage actively with paper and pen: verify every mathematical derivation, trace each curved arrow through its transition state, and balance redox equations systematically by the ion-electron method. Conceptual clarity achieved through active derivation is the most durable asset in competitive examination environments.
 
 \vspace{1cm}
 \begin{flushright}
@@ -154,15 +154,15 @@ This section details the official NEET UG 2027 Chemistry curriculum prescribed b
 \centering
 \small
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{l c c c c Y}
+\begin{tabularx}{\textwidth}{l c c c Y}
 \toprule
-\textbf{Component} & \textbf{Section A} & \textbf{Section B} & \textbf{Total Questions} & \textbf{Marks} & \textbf{Question Typology} \\
+\textbf{Component} & \textbf{Compulsory Questions} & \textbf{Marks} & \textbf{Pace Budget} & \textbf{Question Typology} \\
 \midrule
-\textbf{Chemistry} & 35 & 15 (Attempt 10) & 45 & 180 & Single Choice, MCQs, \\
-\textbf{Exam Total} & 140 & 60 (Attempt 40) & 180 & 720 & Assertion-Reason, Matrix Match \\
+\textbf{Chemistry} & 45 (All Compulsory) & 180 & 40--45 min & Single Choice MCQs, Reaction Sequences, \\
+\textbf{Exam Total} & 180 Compulsory & 720 & 180 min (3h) & Assertion-Reason, Statement I/II, Matrix Match \\
 \bottomrule
 \end{tabularx}
-\caption{NEET UG Chemistry Examination Scheme (+4 for correct response, $-1$ for incorrect response, 0 for unattempted).}
+\caption{Reformed NEET UG Chemistry Examination Scheme (+4 for correct response, $-1$ for incorrect response, 0 for unattempted. Optional Section B discontinued by NTA).}
 \end{table}
 
 \section*{Official 20-Unit Chemistry Syllabus Structure}
@@ -241,9 +241,9 @@ Practical Chemistry (Qualitative Salt Analysis \& Volumetric Redox Titrations) &
 \mainmatter
 
 % =========================================================================
-% PART I: PHYSICAL CHEMISTRY
+% PART I: PHYSICAL CHEMISTRY FOUNDATIONS
 % =========================================================================
-\part{Physical Chemistry}
+\part{Physical Chemistry Foundations}
 
 \chapter{Foundations of Physical Chemistry: Stoichiometry, Atomic Structure \& Thermodynamics}
 
@@ -827,12 +827,12 @@ At dynamic chemical equilibrium, $\Delta G = 0$ and $Q = K_{\text{eq}}$:
 \end{formulabox}
 
 % =========================================================================
-% SECTION 5: CHEMICAL \& IONIC EQUILIBRIUM
+% CHAPTER 2: CHEMICAL & IONIC EQUILIBRIUM
 % =========================================================================
 
-\chapter{Chemical Dynamics: Equilibrium, Solutions, Electrochemistry \& Kinetics}
+\chapter{Chemical \& Ionic Equilibrium}
 
-This chapter explores how and why chemical reactions proceed. We cover the dynamic equilibrium of reversible reactions, ionic equilibria and buffer solutions, Raoult's law and colligative properties, electrochemical cell EMF and the Nernst equation, and the calculus of chemical reaction kinetics with integrated rate laws and Arrhenius activation energy.
+Chemical equilibrium establishes the dynamic balance between forward and reverse reaction rates in closed thermodynamic systems, governed by the law of mass action and Le Chatelier's principle. Ionic equilibrium extends these principles to electrolytic solutions, encompassing acid-base dissociation equilibria, the autoionization of water, buffer solution dynamics via the Henderson-Hasselbalch formulation, quantitative salt hydrolysis, and sparingly soluble salt precipitation criteria governed by the solubility product ($K_{sp}$).
 
 \section{Chemical \& Ionic Equilibrium (Unit 6)}
 
@@ -991,8 +991,14 @@ If molar solubility is $S\,\si{mol.L^{-1}}$:
 \end{itemize}
 
 % =========================================================================
-% SECTION 6: SOLUTIONS \& COLLIGATIVE PROPERTIES
+% PART II: ADVANCED PHYSICAL CHEMISTRY
 % =========================================================================
+\part{Advanced Physical Chemistry}
+
+\chapter{Advanced Physical Chemistry: Solutions, Electrochemistry \& Chemical Kinetics}
+
+This chapter investigates advanced dynamic physical chemistry systems: homogeneous binary liquid solutions obeying Raoult's law and anomalous colligative properties via the van 't Hoff factor, electrochemical cell energetics governed by the Nernst equation and Kohlrausch conductance, and chemical kinetics exploring differential and integrated rate laws, temperature coefficients, and Arrhenius transition-state collision theory.
+
 \section{Solutions \& Colligative Properties (Unit 5)}
 
 \subsection{Gas Solubility \& Henry's Law}
@@ -1489,24 +1495,72 @@ According to Max Trautz and William Lewis:
 \end{equation}
 where $Z_{AB}$ is the collision frequency ($10^{25} - 10^{28}\,\si{collisions.s^{-1}.cm^{-3}}$), and $P$ is the steric or orientation factor representing the fraction of collisions occurring with proper spatial orientation.
 
-\begin{conceptbox}[Catalysis Kinetics \& Activation Energy Reduction]
-A catalyst accelerates reaction rate by providing an alternative reaction pathway involving an activated complex with a substantially lower activation energy $E_a'$ ($E_a' < E_a$):
+\paragraph{Mechanism of Catalytic Acceleration:}
+A catalyst accelerates the rate of a chemical transformation without undergoing permanent stoichiometric consumption. It achieves this kinetic enhancement not by shifting molecular energy distributions, but by providing an alternative mechanistic pathway involving an intermediate activated complex characterized by a significantly lower activation barrier $E_a'$ ($E_a' < E_a$), as depicted in Figure~\ref{fig:activation_energy_catalyst}.
+
+According to the Arrhenius relation, the relative catalytic rate enhancement factor is given by:
 \begin{equation}
   \frac{k_{\text{cat}}}{k_{\text{uncat}}} = \frac{A e^{-E_a' / R T}}{A e^{-E_a / R T}} = e^{(E_a - E_a') / R T} = e^{\Delta E_a / R T}
 \end{equation}
-\textbf{Critical Examination Invariants:}
+Because the reduction $\Delta E_a$ resides in the numerator of an exponential exponent, even a modest lowering of the activation energy (e.g., by $15\,\si{kJ.mol^{-1}}$) accelerates reaction velocity by several orders of magnitude at physiological temperature.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.1, >=Stealth]
+  \draw[->, thick] (0,0) -- (8.5,0) node[right] {Reaction Coordinate};
+  \draw[->, thick] (0,0) -- (0,5.5) node[above] {Potential Energy ($E$)};
+  
+  \coordinate (R_start) at (0.6, 2.0);
+  \coordinate (R_end) at (2.0, 2.0);
+  \coordinate (P_start) at (6.5, 1.0);
+  \coordinate (P_end) at (8.0, 1.0);
+  
+  \draw[very thick, primarydark] (R_start) -- (R_end) node[midway, above] {\textbf{Reactants} ($R$)};
+  \draw[very thick, primarydark] (P_start) -- (P_end) node[midway, above] {\textbf{Products} ($P$)};
+  
+  \draw[very thick, traprange] (R_end) .. controls (3.0, 2.0) and (3.2, 5.0) .. (4.25, 5.0)
+                               .. controls (5.3, 5.0) and (5.5, 1.0) .. (P_start);
+  \node[above, traprange] at (4.25, 5.0) {\small Transition State $TS_1$ (Uncatalyzed)};
+  
+  \draw[thick, dashed, accentblue] (R_end) .. controls (3.0, 2.0) and (3.3, 3.6) .. (4.25, 3.6)
+                                   .. controls (5.2, 3.6) and (5.5, 1.0) .. (P_start);
+  \node[above, accentblue] at (4.25, 3.65) {\small Catalyzed Path ($TS_2$)};
+  
+  \draw[dotted, gray] (0, 2.0) -- (R_start);
+  \draw[dotted, gray] (2.0, 2.0) -- (5.0, 2.0);
+  \draw[dotted, gray] (0, 1.0) -- (P_start);
+  \draw[dotted, gray] (4.25, 5.0) -- (5.8, 5.0);
+  \draw[dotted, gray] (4.25, 3.6) -- (5.8, 3.6);
+  
+  \draw[<->, thick, traprange] (2.8, 2.0) -- (2.8, 5.0) node[midway, left] {$E_{a,\text{uncat}}$};
+  \draw[<->, thick, accentblue] (5.5, 2.0) -- (5.5, 3.6) node[midway, right] {$E_{a,\text{cat}}'$};
+  
+  \draw[<->, thick, usecasegreen] (7.2, 2.0) -- (7.2, 1.0) node[midway, right] {$\Delta_r H < 0$};
+  
+  \node[text width=5.5cm, align=left, fill=tipbg, draw=tipteal, rounded corners, inner sep=4pt] at (3.5, 0.8) {
+    \scriptsize \textbf{Fundamental Catalysis Principle:}\\[1pt]
+    Catalyst lowers activation barrier: $E_a' < E_a$.\\[1pt]
+    $\Delta_r H$ and $\Delta_r G^\circ$ remain \textbf{strictly unchanged}.
+  };
+\end{tikzpicture}
+\caption{Potential Energy Diagram for an Exothermic Reaction Illustrating the Lowering of Activation Energy by a Catalyst.}
+\label{fig:activation_energy_catalyst}
+\end{figure}
+
+\begin{trapbox}[NTA Assertion-Reason Traps: Thermodynamic Invariants of Catalysis]
+Candidates frequently lose marks on Assertion-Reason questions involving catalytic effects:
 \begin{itemize}
-  \item A catalyst reduces activation energy for \textbf{both forward and backward reactions by the identical amount}: $\Delta E_{a,f} = \Delta E_{a,b}$.
-  \item A catalyst does \textbf{NOT} alter the overall enthalpy of reaction: $\Delta_r H = E_{a,f} - E_{a,b} = \text{constant}$.
-  \item A catalyst does \textbf{NOT} alter the equilibrium constant $K_{\text{eq}}$ or equilibrium composition.
-  \item A catalyst does \textbf{NOT} alter Gibbs free energy $\Delta_r G$ or reaction spontaneity.
+  \item \textbf{Equal Barrier Reduction:} A catalyst reduces activation energy for \textbf{both forward and reverse reactions by the exact same amount}: $\Delta E_{a,f} = \Delta E_{a,b}$.
+  \item \textbf{No Change in Reaction Enthalpy:} Because $\Delta_r H = E_{a,f} - E_{a,b}$, the reaction enthalpy is \textbf{strictly unaltered} by the presence of a catalyst.
+  \item \textbf{No Change in Equilibrium Constant:} A catalyst accelerates the approach to equilibrium but does \textbf{NOT} alter the equilibrium constant $K_c$ or shift equilibrium concentrations.
+  \item \textbf{No Change in Spontaneity:} Standard Gibbs free energy $\Delta_r G^\circ$ is completely independent of catalytic mechanisms. A catalyst cannot drive a non-spontaneous ($\Delta G > 0$) process.
 \end{itemize}
-\end{conceptbox}
+\end{trapbox}
 
 % =========================================================================
-% PART II: INORGANIC CHEMISTRY
+% PART III: INORGANIC CHEMISTRY & COORDINATION COMPOUNDS
 % =========================================================================
-\part{Inorganic Chemistry}
+\part{Inorganic Chemistry \& Coordination Compounds}
 
 \chapter{Inorganic Chemistry: Periodic Trends, Chemical Bonding, Coordination \& Block Elements}
 
@@ -2060,26 +2114,72 @@ Linus Pauling applied hybridization of metal $d, s, p$ orbitals to explain coord
 \end{itemize}
 
 \subsection{Crystal Field Theory (CFT): Splitting Diagrams \& CFSE}
-CFT treats the metal-ligand interaction as a purely electrostatic point-charge perturbation. In an isolated gaseous ion, all five $d$-orbitals are degenerate. Surrounding ligand fields split this degeneracy:
+Crystal Field Theory treats the metal-ligand interaction as an electrostatic perturbation arising from point negative charges (anions) or point dipoles (neutral molecules like $\mathrm{NH_3, H_2O}$) surrounding the central metal cation. In an isolated gaseous transition metal atom or ion, all five $d$-orbitals ($d_{xy}, d_{yz}, d_{zx}, d_{x^2-y^2}, d_{z^2}$) possess identical energy (five-fold degenerate).
+
+When ligands approach the metal ion, two sequential perturbations occur:
+\begin{enumerate}
+  \item A hypothetical spherically symmetric negative field raises the energy of all five $d$-orbitals equally due to overall electron-electron repulsion.
+  \item An asymmetric ligand field splits this degeneracy according to spatial orientation and ligand coordinate geometry (Figure~\ref{fig:octahedral_cft}).
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=1.0, >=Stealth]
+  \node at (0, 3.5) {\textbf{Free Ion}};
+  \foreach \i in {-1.2, -0.6, 0, 0.6, 1.2} {
+    \draw[very thick, primarydark] (\i-0.25, 2.5) -- (\i+0.25, 2.5);
+  }
+  \node[below] at (0, 2.2) {\scriptsize $d_{xy}, d_{yz}, d_{zx}, d_{x^2-y^2}, d_{z^2}$};
+  \node[below=8pt] at (0, 2.2) {\scriptsize (Degenerate)};
+
+  \draw[->, dashed, gray] (1.6, 2.5) -- (2.8, 3.2);
+  \node at (3.5, 4.2) {\textbf{Spherical Field}};
+  \foreach \i in {-1.2, -0.6, 0, 0.6, 1.2} {
+    \draw[very thick, gray] (3.5+\i-0.25, 3.2) -- (3.5+\i+0.25, 3.2);
+  }
+  \node[below] at (3.5, 2.9) {\scriptsize Average Energy};
+
+  \draw[->, dashed, gray] (5.0, 3.2) -- (6.5, 4.4);
+  \draw[->, dashed, gray] (5.0, 3.2) -- (6.5, 2.0);
+  \node at (8.0, 5.5) {\textbf{Octahedral Field}};
+
+  \draw[dotted, thick, darkgray] (6.0, 3.2) -- (10.0, 3.2) node[right] {\scriptsize Barycentre};
+
+  \draw[very thick, traprange] (7.2, 4.4) -- (7.8, 4.4);
+  \draw[very thick, traprange] (8.2, 4.4) -- (8.8, 4.4);
+  \node[above] at (8.0, 4.5) {$e_g$ ($d_{x^2-y^2}, d_{z^2}$)};
+
+  \draw[very thick, accentblue] (6.8, 2.0) -- (7.4, 2.0);
+  \draw[very thick, accentblue] (7.7, 2.0) -- (8.3, 2.0);
+  \draw[very thick, accentblue] (8.6, 2.0) -- (9.2, 2.0);
+  \node[below] at (8.0, 1.9) {$t_{2g}$ ($d_{xy}, d_{yz}, d_{zx}$)};
+
+  \draw[<->, thick] (9.8, 2.0) -- (9.8, 4.4) node[midway, right] {$\mathbf{\Delta_o}$};
+  \draw[<->, accentblue] (6.3, 3.2) -- (6.3, 2.0) node[midway, left] {\scriptsize $-0.4\Delta_o$};
+  \draw[<->, traprange] (6.3, 3.2) -- (6.3, 4.4) node[midway, left] {\scriptsize $+0.6\Delta_o$};
+\end{tikzpicture}
+\caption{Crystal Field Splitting of Five $d$-Orbitals in an Octahedral Complex ($\Delta_o$).}
+\label{fig:octahedral_cft}
+\end{figure}
 
 \subsubsection{1. Octahedral Crystal Field Splitting ($\Delta_o$)}
-Six ligands approach along the Cartesian $\pm x, \pm y, \pm z$ axes:
+In an octahedral $[ML_6]$ complex, six ligands approach the central metal ion along the Cartesian $\pm x, \pm y, \pm z$ axes:
 \begin{itemize}
-  \item The $e_g$ orbitals ($d_{x^2-y^2}, d_{z^2}$) point directly along the axes $\implies$ experience maximal electrostatic repulsion $\implies$ destabilized and raised by $\mathbf{+0.6\Delta_o}$ ($+\frac{3}{5}\Delta_o$).
-  \item The $t_{2g}$ orbitals ($d_{xy}, d_{yz}, d_{zx}$) point between the Cartesian axes $\implies$ experience less repulsion $\implies$ stabilized and lowered by $\mathbf{-0.4\Delta_o}$ ($-\frac{2}{5}\Delta_o$).
-  \item The barycentre (weighted average energy) remains invariant: $3(-0.4\Delta_o) + 2(+0.6\Delta_o) = 0$.
+  \item The $e_g$ orbitals ($d_{x^2-y^2}, d_{z^2}$) have lobes pointing directly along the Cartesian axes where the ligands lie $\implies$ experience maximal electrostatic repulsion $\implies$ destabilized and raised by $\mathbf{+0.6\Delta_o}$ ($+\frac{3}{5}\Delta_o$).
+  \item The $t_{2g}$ orbitals ($d_{xy}, d_{yz}, d_{zx}$) have lobes directed in between the Cartesian axes $\implies$ experience minimal direct repulsion $\implies$ stabilized and lowered by $\mathbf{-0.4\Delta_o}$ ($-\frac{2}{5}\Delta_o$).
+  \item The barycentre (weighted mean energy level) remains invariant: $3(-0.4\Delta_o) + 2(+0.6\Delta_o) = 0$.
 \end{itemize}
 
 \subsubsection{2. Tetrahedral Crystal Field Splitting ($\Delta_t$)}
-Four ligands approach the alternate corners of a cube containing the metal at the centre:
+In a tetrahedral $[ML_4]$ complex, four ligands approach alternate corners of a circumscribed cube containing the metal at its center:
 \begin{itemize}
-  \item The $t_2$ orbitals ($d_{xy}, d_{yz}, d_{zx}$) lie closer to ligand directions $\implies$ raised by $\mathbf{+0.4\Delta_t}$.
-  \item The $e$ orbitals ($d_{x^2-y^2}, d_{z^2}$) lie further away $\implies$ lowered by $\mathbf{-0.6\Delta_t}$.
-  \item \textbf{Splitting Magnitude Relation:}
+  \item The $t_2$ orbitals ($d_{xy}, d_{yz}, d_{zx}$) point directly toward the edges of the cube closer to the approaching ligands $\implies$ raised by $\mathbf{+0.4\Delta_t}$.
+  \item The $e$ orbitals ($d_{x^2-y^2}, d_{z^2}$) point toward the faces of the cube further from the ligands $\implies$ lowered by $\mathbf{-0.6\Delta_t}$.
+  \item \textbf{Splitting Magnitude Relation:} Because there are only 4 ligands (instead of 6) and none point directly at the $d$-orbitals:
   \begin{equation}
-    \Delta_t = \frac{4}{9}\Delta_o
+    \mathbf{\Delta_t = \frac{4}{9}\Delta_o}
   \end{equation}
-  Because $\Delta_t$ is less than half of $\Delta_o$, the crystal field splitting is \textbf{always smaller than pairing energy} ($\Delta_t < P$). Consequently, \textbf{tetrahedral complexes are ALWAYS high-spin}.
+  Because $\Delta_t$ is less than half of $\Delta_o$, the crystal field splitting energy in tetrahedral geometry is \textbf{always smaller than the pairing energy} ($\Delta_t < P$). Consequently, \textbf{tetrahedral complexes are universally HIGH-SPIN} (spin-free); low-spin tetrahedral complexes do not exist under standard conditions.
 \end{itemize}
 
 \begin{formulabox}[Spectrochemical Series \& CFSE Calculations]
@@ -2534,9 +2634,9 @@ The imperfect shielding of one $4f$ electron by another causes a progressive inc
 \end{itemize}
 
 % =========================================================================
-% PART III: ORGANIC CHEMISTRY & REACTION PATHWAYS
+% PART IV: ORGANIC CHEMISTRY: PRINCIPLES, PATHWAYS & BIOMOLECULES
 % =========================================================================
-\part{Organic Chemistry \& Reaction Pathways}
+\part{Organic Chemistry: Principles, Pathways \& Biomolecules}
 
 \chapter{Organic Chemistry: Electronic Effects, Functional Groups \& Biomolecules}
 
@@ -3944,7 +4044,12 @@ Hormones are intercellular chemical messengers secreted directly into the bloods
 \end{itemize}
 \end{conceptbox}
 
-\chapter{Advanced Organic Reaction Mechanisms Handbook}
+% =========================================================================
+% PART V: ORGANIC REACTION MECHANISMS HANDBOOK
+% =========================================================================
+\part{Organic Reaction Mechanisms Handbook}
+
+\chapter{Organic Reaction Mechanisms Handbook: Step-by-Step Arrow-Pushing Pathways}
 
 To answer multi-step synthesis and Assertion-Reasoning questions with confidence, students must master the underlying reaction mechanisms. This chapter presents a rigorous, curved-arrow mechanistic breakdown of electrophilic aromatic substitution, nucleophilic aliphatic substitution ($S_N1$ vs $S_N2$), elimination pathways ($E1$ vs $E2$), carbonyl additions and condensations, and carboxylic acid derivative substitutions.
 
@@ -4808,9 +4913,9 @@ Primary acid amides react with bromine in aqueous or ethanolic sodium hydroxide 
 \end{center}
 
 % =========================================================================
-% PART IV: PRACTICAL CHEMISTRY & QUALITATIVE ANALYSIS
+% PART VI: PRACTICAL CHEMISTRY & QUALITATIVE ANALYSIS LAB MANUAL
 % =========================================================================
-\part{Practical Chemistry \& Qualitative Analysis}
+\part{Practical Chemistry \& Qualitative Analysis Lab Manual}
 
 \chapter{Practical Chemistry: Qualitative Salt Analysis \& Volumetric Redox Titrations}
 
@@ -4870,30 +4975,28 @@ Do not evolve gases with dilute or concentrated acids; identified by direct prec
 
 \section{Systematic Qualitative Analysis: Basic Radicals (Cations)}
 
-\begin{conceptbox}[Systematic Cation Group Separation Scheme \& Group Reagents]
-\begin{center}
-\scriptsize
-\begin{tabular}{|p{1.2cm}|p{2.2cm}|p{3.2cm}|p{2.6cm}|p{5.1cm}|}
-\hline
-\textbf{Group} & \textbf{Cations} & \textbf{Group Reagent} & \textbf{Precipitated As} & \textbf{Underlying Solubility Product ($K_{sp}$) Principle} \\
-\hline
-\textbf{Group 0} & $\mathrm{NH_4^+}$ & $\mathrm{NaOH}$ (heat) & Gas ($\mathrm{NH_3}$) & Identified by Nessler's reagent: brown ppt of iodide of Millon's base ($\mathrm{H_2N-Hg-O-Hg-I}$). \\
-\hline
-\textbf{Group I} & $\mathrm{Pb^{2+}}$ & Dilute $\mathrm{HCl}$ & Chlorides ($\mathrm{PbCl_2} \downarrow$) & Lowest $K_{sp}$ of chlorides; $\mathrm{PbCl_2}$ dissolves in hot water, recrystallizes on cooling. \\
-\hline
-\textbf{Group II} & $\mathrm{Pb^{2+}, Cu^{2+}, As^{3+}}$ & $\mathrm{H_2S}$ gas $+$ dilute $\mathrm{HCl}$ & Sulfides ($\mathrm{PbS, CuS, As_2S_3} \downarrow$) & \textbf{Common Ion Effect:} $\mathrm{H}^+$ suppresses $\mathrm{H_2S}$ dissociation, keeping $[\mathrm{S}^{2-}]$ very low; only Group II sulfides precipitate. \\
-\hline
-\textbf{Group III} & $\mathrm{Fe^{3+}, Al^{3+}}$ & $\mathrm{NH_4OH} + \mathbf{\mathrm{NH_4Cl}}$ & Hydroxides ($\mathrm{Fe(OH)_3, Al(OH)_3} \downarrow$) & \textbf{Common Ion Effect:} $\mathrm{NH_4^+}$ suppresses $\mathrm{NH_4OH}$ dissociation, keeping $[\mathrm{OH}^-]$ low to precipitate only Group III hydroxides. \\
-\hline
-\textbf{Group IV} & $\mathrm{Co^{2+}, Ni^{2+}},$ \newline $\mathrm{Mn^{2+}, Zn^{2+}}$ & $\mathrm{H_2S} + \mathbf{\mathrm{NH_4OH}}$ & Sulfides \newline ($\mathrm{CoS, NiS, MnS, ZnS} \downarrow$) & $\mathrm{OH}^-$ consumes $\mathrm{H}^+ \implies$ increases $[\mathrm{S}^{2-}]$, exceeding higher $K_{sp}$ of Group IV sulfides. \\
-\hline
-\textbf{Group V} & $\mathrm{Ba^{2+}, Sr^{2+}, Ca^{2+}}$ & $(\mathrm{NH_4})_2\mathrm{CO_3} +$ \newline $\mathrm{NH_4OH} + \mathrm{NH_4Cl}$ & Carbonates \newline ($\mathrm{BaCO_3, SrCO_3, CaCO_3} \downarrow$) & Carbonates precipitated in alkaline medium; $\mathrm{Mg}^{2+}$ remains in solution due to $\mathrm{NH_4Cl}$. \\
-\hline
-\textbf{Group VI} & $\mathrm{Mg^{2+}}$ & $\mathrm{Na_2HPO_4} + \mathrm{NH_4OH}$ & $\mathrm{Mg(NH_4)PO_4} \downarrow$ & White crystalline precipitate formed in alkaline ammoniacal medium. \\
-\hline
-\end{tabular}
-\end{center}
-\end{conceptbox}
+\begin{landscape}
+\begin{table}[p]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{l c p{3.2cm} p{3.4cm} p{5.5cm} X}
+\toprule
+\textbf{Group} & \textbf{Cations} & \textbf{Group Reagent} & \textbf{Precipitated As (Color)} & \textbf{Solubility Product ($K_{sp}$) Principle} & \textbf{Confirmatory Test \& Governing Equation} \\
+\midrule
+\textbf{Group 0} & $\mathrm{NH_4^+}$ & Dilute $\mathrm{NaOH}$ (gently warm) & Evolved gas $\mathrm{NH_3} \uparrow$ & High volatility of free ammonia & Nessler test: brown precipitate of iodide of Millon base ($\mathrm{H_2N-Hg-O-Hg-I} \downarrow$). \\
+\textbf{Group I} & $\mathrm{Pb^{2+}}$ & Dilute $\mathrm{HCl}$ & $\mathrm{PbCl_2} \downarrow$ (White) & Lowest $K_{sp}$ among metal chlorides & Precipitate dissolves in hot water, recrystallizes as golden spangles on cooling. $\mathrm{K_2CrO_4} \to \mathrm{PbCrO_4} \downarrow$ (Yellow). \\
+\textbf{Group II} & $\mathrm{Pb^{2+}, Cu^{2+}, As^{3+}}$ & $\mathrm{H_2S}$ gas in presence of dilute $\mathrm{HCl}$ & $\mathrm{PbS, CuS}$ (Black); $\mathrm{As_2S_3}$ (Yellow) & \textbf{Common Ion Effect:} $\mathrm{H}^+$ from $\mathrm{HCl}$ suppresses $\mathrm{H_2S}$ ionization, maintaining $[\mathrm{S}^{2-}]$ extremely low; only sparingly soluble Group II sulfides exceed $K_{sp}$. & $\mathrm{Cu^{2+}} + \text{excess } \mathrm{NH_4OH} \to [\mathrm{Cu(NH_3)_4}]^{2+}$ (Deep Azure Blue); $\mathrm{K_4[Fe(CN)_6]} \to \mathrm{Cu_2[Fe(CN)_6]} \downarrow$ (Chocolate Brown). \\
+\textbf{Group III} & $\mathrm{Fe^{3+}, Al^{3+}}$ & $\mathrm{NH_4OH}$ in presence of solid $\mathrm{NH_4Cl}$ & $\mathrm{Fe(OH)_3} \downarrow$ (Reddish-brown); $\mathrm{Al(OH)_3} \downarrow$ (White gelatinous) & \textbf{Common Ion Effect:} $\mathrm{NH_4^+}$ from $\mathrm{NH_4Cl}$ suppresses $\mathrm{NH_4OH}$ ionization, keeping $[\mathrm{OH}^-]$ sufficiently low to precipitate only Group III hydroxides. & $\mathrm{Fe^{3+}} + \mathrm{K_4[Fe(CN)_6]} \to \mathrm{Fe_4[Fe(CN)_6]_3} \downarrow$ (Prussian Blue); $\mathrm{Al(OH)_3}$ dissolves in excess $\mathrm{NaOH}$ forming soluble aluminate $\mathrm{NaAlO_2}$. \\
+\textbf{Group IV} & $\mathrm{Co^{2+}, Ni^{2+}, Mn^{2+}, Zn^{2+}}$ & $\mathrm{H_2S}$ gas in presence of $\mathrm{NH_4OH} + \mathrm{NH_4Cl}$ & $\mathrm{CoS, NiS}$ (Black); $\mathrm{MnS}$ (Buff/flesh); $\mathrm{ZnS}$ (Dirty white) & Alkaline medium: $\mathrm{OH}^-$ consumes $\mathrm{H}^+$, shifting $\mathrm{H_2S} \rightleftharpoons 2\mathrm{H}^+ + \mathrm{S}^{2-}$ forward; $[\mathrm{S}^{2-}]$ increases, exceeding higher $K_{sp}$ of Group IV sulfides. & $\mathrm{Ni^{2+}} + \mathrm{DMG} + \mathrm{NH_4OH} \to [\mathrm{Ni(DMG)_2}] \downarrow$ (Rosy-red); $\mathrm{Zn}^{2+} + \mathrm{K_4[Fe(CN)_6]} \to \mathrm{Zn_2[Fe(CN)_6]} \downarrow$ (Bluish-white). \\
+\textbf{Group V} & $\mathrm{Ba^{2+}, Sr^{2+}, Ca^{2+}}$ & $(\mathrm{NH_4})_2\mathrm{CO_3} + \mathrm{NH_4OH} + \mathrm{NH_4Cl}$ & $\mathrm{BaCO_3, SrCO_3, CaCO_3} \downarrow$ (White) & Carbonate precipitation in ammoniacal medium; presence of $\mathrm{NH_4Cl}$ prevents precipitation of $\mathrm{MgCO_3}$ by keeping $[\mathrm{CO_3^{2-}}]$ below its $K_{sp}$. & Flame Tests: $\mathrm{Ba}^{2+}$ gives Apple Green; $\mathrm{Sr}^{2+}$ gives Crimson Red; $\mathrm{Ca}^{2+}$ gives Brick Red. $\mathrm{Ba}^{2+} + \mathrm{K_2CrO_4} \to \mathrm{BaCrO_4} \downarrow$ (Yellow). \\
+\textbf{Group VI} & $\mathrm{Mg^{2+}}$ & $\mathrm{Na_2HPO_4} + \mathrm{NH_4OH}$ & $\mathrm{Mg(NH_4)PO_4} \downarrow$ (White crystalline) & Direct precipitation of ammonium magnesium phosphate in strongly ammoniacal alkaline medium & Scratching test tube walls with glass rod accelerates crystallization of white $\mathrm{Mg(NH_4)PO_4}$. \\
+\bottomrule
+\end{tabularx}
+\caption{Master Analytical Scheme: Systematic Qualitative Group Separation of Basic Radicals (Cations).}
+\label{tab:cation_separation_landscape}
+\end{table}
+\end{landscape}
 
 \begin{formulabox}[High-Yield Confirmatory Tests \& Diagnostic Colorations]
 \textbf{1. Nickel Ion ($\mathrm{Ni^{2+}}$) with Dimethylglyoxime (DMG):}
@@ -4962,9 +5065,11 @@ Oxalic acid is a primary standard dihydrate: $\mathbf{(\mathrm{COOH})_2\cdot 2\m
 \end{formulabox}
 
 % =========================================================================
-% PART V: MASTER FORMULA COMPENDIUMS & REACTION QUICK-REFERENCE
+% APPENDIX: COMPREHENSIVE FORMULA, NAMED REACTION & REAGENT MATRICES
 % =========================================================================
-\part{Master Formula Compendiums \& Reaction Quick-Reference}
+\cleardoublepage
+\appendix
+\part*{Appendix: Comprehensive Chemistry Formula, Named Reaction \& Reagent Matrices}
 
 \chapter{Physical Chemistry Core Formulas \& Thermodynamic Equations}
 
@@ -5233,12 +5338,6 @@ Weak Acid + Weak Base ($\text{CH}_3\text{COONH}_4$) & $K_h = \frac{K_w}{K_a K_b}
 \end{itemize}
 \end{trapbox}
 
-\vspace{15pt}
-\begin{center}
-  \rule{0.6\textwidth}{0.8pt}\\[6pt]
-  {\small\textbf{\color{primarydark}End of Module 01 Physical Chemistry Formula Handbook}}\\[2pt]
-  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
-\end{center}
 
 \section{Solutions \& Colligative Properties (Unit 5)}
 
@@ -5383,11 +5482,12 @@ For any first-order process:
 
 \begin{formulabox}[Arrhenius Equation, Activation Energy \& Collision Theory]
 \begin{align}
-  k &= A\,e^{-E_a / R T} \implies \ln k = \ln A - \frac{E_a}{R T} \implies \log_{10} k = \log_{10} A - \frac{E_a}{2.303 R T} \\
+  k &= A\,e^{-E_a / R T} \implies \ln k = \ln A - \frac{E_a}{R T} \\
+  \log_{10} k &= \log_{10} A - \frac{E_a}{2.303 R T} \\
   \log_{10}\left(\frac{k_2}{k_1}\right) &= \frac{E_a}{2.303 R}\left[\frac{T_2 - T_1}{T_1 T_2}\right] && \text{[Two Temperatures } T_1, T_2\text{]} \\
-  \text{Slope of } \log_{10} k \text{ vs } \frac{1}{T} &= -\frac{E_a}{2.303 R}, \qquad \text{Intercept} = \log_{10} A \\
-  \Delta_r H &= E_{a,\text{forward}} - E_{a,\text{backward}} && [\Delta H < 0 \text{ Exothermic; } \Delta H > 0 \text{ Endothermic}] \\
-  \text{Rate} &= P \cdot Z_{AB} \cdot e^{-E_a / RT} && [P = \text{Steric / Orientation Factor}, Z = \text{Collision Frequency}]
+  \text{Slope} &= -\frac{E_a}{2.303 R}, \qquad \text{Intercept} = \log_{10} A && \left[\log_{10} k \text{ vs } \frac{1}{T}\right] \\
+  \Delta_r H &= E_{a,\text{forward}} - E_{a,\text{backward}} && [\Delta H < 0 \text{ Exothermic}] \\
+  \text{Rate} &= P \cdot Z_{AB} \cdot e^{-E_a / RT} && [P = \text{Steric Factor}, Z = \text{Freq.}]
 \end{align}
 \end{formulabox}
 
@@ -5398,12 +5498,6 @@ For any first-order process:
 \end{itemize}
 \end{trapbox}
 
-\vspace{15pt}
-\begin{center}
-  \rule{0.6\textwidth}{0.8pt}\\[6pt]
-  {\small\textbf{\color{primarydark}End of Module 02 Physical Chemistry Formula Handbook (Complete Physical Suite)}}\\[2pt]
-  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
-\end{center}
 
 \chapter{Inorganic Trends \& Organic Named Reactions Compendium}
 
@@ -5465,8 +5559,8 @@ This quick-reference compendium brings together inorganic electronic configurati
 
 \begin{formulabox}[Formal Charge Equation \& Steric Number Rule]
 \begin{align}
-  \text{Formal Charge (FC)} &= V - L - \frac{1}{2}S && [V = \text{Valence } e^-, L = \text{Lone pair } e^-, S = \text{Shared } e^-] \\
-  \text{Steric Number (SN)} &= (\text{Number of }\sigma\text{-bonds}) + (\text{Number of localized lone pairs on central atom})
+  \text{Formal Charge (FC)} &= V - L - \frac{1}{2}S && [V = \text{Valence } e^-, L = \text{Lone } e^-, S = \text{Shared } e^-] \\
+  \text{Steric Number (SN)} &= \text{Bond pairs } (\sigma) + \text{Lone pairs on central atom}
 \end{align}
 \end{formulabox}
 
@@ -5566,13 +5660,14 @@ $\text{C}_2$ & 12 & $(\pi 2p)^4$ & $2.0$ & Diamagnetic (Double bond consists of 
 \begin{align}
   \Delta_t &= \frac{4}{9}\Delta_o \implies \Delta_t < P \quad (\text{Tetrahedral complexes are ALWAYS high spin!}) \\
   \text{CFSE}_{\text{octahedral}} &= \left(-0.4\,n_{t_{2g}} + 0.6\,n_{e_g}\right)\Delta_o + m P && [P = \text{Electron pairing energy}] \\
-  \text{Spectrochemical Series} &: \text{I}^- < \text{Br}^- < \text{S}^{2-} < \text{SCN}^- < \text{Cl}^- < \text{N}_3^- < \text{F}^- < \text{OH}^- < \text{C}_2\text{O}_4^{2-} \approx \text{H}_2\text{O} \\
-  &< \text{NCS}^- < \text{EDTA}^{4-} < \text{NH}_3 \approx \text{py} < \text{en} < \text{bpy} < \text{phen} < \text{NO}_2^- < \text{PPh}_3 < \text{CN}^- \approx \text{CO}
+  \text{Spectrochemical Series} &: \text{I}^- < \text{Br}^- < \text{S}^{2-} < \text{SCN}^- < \text{Cl}^- < \text{N}_3^- < \text{F}^- < \text{OH}^- \\
+  &< \text{C}_2\text{O}_4^{2-} \approx \text{H}_2\text{O} < \text{NCS}^- < \text{EDTA}^{4-} < \text{NH}_3 \approx \text{py} \\
+  &< \text{en} < \text{bpy} < \text{phen} < \text{NO}_2^- < \text{PPh}_3 < \text{CN}^- \approx \text{CO}
 \end{align}
 \textbf{High-Spin vs Low-Spin Splitting Conditions for Octahedral Complexes:}
 \begin{align}
-  \Delta_o &> P \implies \text{Strong field ligand; pairing occurs in } t_{2g} \implies \text{Low-Spin / Inner Orbital Complex} \\
-  \Delta_o &< P \implies \text{Weak field ligand; electrons occupy } e_g \text{ before pairing} \implies \text{High-Spin / Outer Orbital Complex}
+  \Delta_o &> P \implies \text{Strong field; } t_{2g}\text{ pairing} \implies \text{Low-Spin / Inner Orbital} \\
+  \Delta_o &< P \implies \text{Weak field; no } t_{2g}\text{ pairing} \implies \text{High-Spin / Outer Orbital}
 \end{align}
 \end{formulabox}
 
@@ -5624,8 +5719,8 @@ $d^7$ ($\text{Co}^{2+}$) & $t_{2g}^5 e_g^2$ ($n=3$) & $-0.8\,\Delta_o$ & $t_{2g}
 
 \begin{formulabox}[Magnetic Moment, Enthalpy of Atomization \& Electrode Potentials]
 \begin{align}
-  \mu_{\text{spin-only}} &= \sqrt{n(n + 2)}\,\si{BM} && [n = \text{unpaired } d\text{-electrons; } n=1: 1.73, n=2: 2.83, n=3: 3.87, n=5: 5.92\,\si{BM}] \\
-  \text{Max Oxidation State} &= \text{Sc (+3)}, \quad \text{Ti (+4)}, \quad \text{V (+5)}, \quad \text{Cr (+6)}, \quad \text{Mn (+7)}, \quad \text{Fe (+6)}, \quad \text{Os/Ru (+8 in } \text{OsO}_4\text{)}
+  \mu_{\text{spin-only}} &= \sqrt{n(n + 2)}\,\si{BM} && [n = \text{unpaired } d\text{-electrons}] \\
+  \text{Max Oxidation States} &: \text{Sc (+3), Ti (+4), V (+5), Cr (+6), Mn (+7), Fe (+6), Os/Ru (+8)}
 \end{align}
 \end{formulabox}
 
@@ -5742,12 +5837,6 @@ Group 15 ($\text{N, P, As, Sb, Bi}$) & $+5$ & $+3$ & $\text{Bi}^{3+} > \text{Bi}
 \end{itemize}
 \end{trapbox}
 
-\vspace{15pt}
-\begin{center}
-  \rule{0.6\textwidth}{0.8pt}\\[6pt]
-  {\small\textbf{\color{primarydark}End of Inorganic Chemistry Master Compendium}}\\[2pt]
-  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
-\end{center}
 
 \section{General Organic Chemistry (GOC) \& Electronic Effects}
 

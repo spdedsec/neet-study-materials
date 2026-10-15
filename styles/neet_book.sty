@@ -1,6 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{neet_book}[2026/10/15 NEET UG 2027 Professional Master Book Package]
 
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
+
 % --- Core Geometry & Layout (Optimized for Comprehensive Print-on-Demand & Twoside Binding) ---
 \RequirePackage[
   a4paper,
@@ -20,13 +23,17 @@
 \RequirePackage{siunitx}
 \sisetup{separate-uncertainty = true}
 
-% --- Tables & Arrays ---
+% --- Tables, Landscape & Visual Architecture ---
 \RequirePackage{booktabs,tabularx,longtable,array,colortbl,multirow}
+\RequirePackage{pdflscape}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
+% --- TikZ Vector Graphics Engine ---
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing,backgrounds,positioning,fit,calc}
+
 % --- Professional Publishing Color Palette ---
-\RequirePackage[dvipsnames]{xcolor}
 \definecolor{primarydark}{RGB}{15, 34, 64}       % Deep Imperial Navy
 \definecolor{accentblue}{RGB}{28, 93, 153}      % Crisp Academic Blue
 \definecolor{formulablue}{RGB}{23, 70, 162}     % Formula Box Frame

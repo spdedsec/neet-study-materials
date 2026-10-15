@@ -1,0 +1,168 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% Title Header
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Biology Chapter Notes}}\\[6pt]
+  {\Large \textbf{Ecology, Biodiversity \& Systematic Morphology of Plant Families}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Rationalized NCERT \& NMC Scope}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{Ecology, Biodiversity \& Plant Families}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Botany Chapter Notes}}
+
+\section{Organisms \& Populations}
+
+\begin{formulabox}[Population Growth Formulations: Exponential vs Logistic Model]
+\textbf{1. Exponential Growth (Unlimited Resources / Geometric Progression):}
+\begin{equation}
+  \frac{dN}{dt} = (b - d)N = rN \implies N_t = N_0 e^{rt} \quad (\textbf{J-shaped curve})
+\end{equation}
+Where $N$ = population size, $b$ = per capita birth rate, $d$ = per capita death rate, $r$ = \textbf{intrinsic rate of natural increase}:
+\begin{itemize}
+  \item Norway rat: $r = 0.015$ | Flour beetle: $r = 0.12$ | Human population in India (1981): $r = 0.0205$.
+\end{itemize}
+\textbf{2. Logistic Growth / Verhulst-Pearl Model (Limited Resources / Realistic):}
+\begin{equation}
+  \frac{dN}{dt} = rN \left(\frac{K - N}{K}\right) \quad (\textbf{Sigmoid / S-shaped curve})
+\end{equation}
+Where $K$ = \textbf{Carrying Capacity} (maximum population density the habitat can support indefinitely).
+\begin{itemize}
+  \item Four phases: Lag phase $\to$ Acceleration / Log phase $\to$ Deceleration $\to$ Asymptote ($N = K$).
+  \item When $N \to K$, environmental resistance $\left(\frac{K-N}{K}\right) \to 0$, growth rate drops to zero.
+\end{itemize}
+\end{formulabox}
+
+\begin{conceptbox}[Interspecific Population Interactions Matrix]
+\begin{center}
+\small
+\begin{tabular}{|l|c|c|p{8.8cm}|}
+\hline
+\textbf{Interaction Type} & \textbf{Species A} & \textbf{Species B} & \textbf{NCERT Canonical Examples} \\
+\hline
+\textbf{Mutualism} & $+$ & $+$ & Lichens (Algae $+$ Fungi); Mycorrhizae (Fungi $+$ Roots of higher plants); Fig tree and pollinator Fig Wasp; Mediterranean orchid \textit{Ophrys} (\textbf{sexual deceit} by mimicking female bee \textit{Colpa}). \\
+\hline
+\textbf{Competition} & $-$ & $-$ & Abingdon tortoise in Galapagos became extinct within a decade after goats were introduced (browsing efficiency); \textbf{Gause's Exclusion Principle} (inferior eliminated if resources limiting); \textbf{MacArthur's Warblers} (5 species coexisted via \textbf{resource partitioning} and foraging behavior). \\
+\hline
+\textbf{Predation} & $+$ & $-$ & Biological control: \textit{Cactoblastis} moth controlled invasive prickly pear cactus in Australia (1920); Pisaster starfish removal caused extinction of $>10$ invertebrate species; Monarch butterfly accumulates cardiac glycosides from weed in caterpillar stage. \\
+\hline
+\textbf{Parasitism} & $+$ & $-$ & Ectoparasites: Lice on humans, ticks on dogs, marine copepods on fishes, \textit{Cuscuta} (dodder) on hedge plants; Endoparasites: Liver fluke (requires snail and fish hosts), Malarial parasite; \textbf{Brood Parasitism} (Cuckoo/Koel lays eggs in Crow's nest). \\
+\hline
+\textbf{Commensalism} & $+$ & $0$ & Epiphytic orchid on mango tree branch; Barnacles attached to back of whale; Cattle egret foraging alongside grazing cattle; Clownfish living among stinging tentacles of Sea anemone. \\
+\hline
+\textbf{Amensalism} & $-$ & $0$ & \textit{Penicillium} secreting penicillin antibiotic inhibiting bacterial growth; Black walnut (\textit{Juglans nigra}) secreting juglone inhibiting understory plants. \\
+\hline
+\end{tabular}
+\end{center}
+\end{conceptbox}
+
+\section{Ecosystem: Structure, Function \& Ecological Succession}
+
+\begin{formulabox}[Productivity Equations \& Decomposition Dynamics]
+\textbf{1. Primary Productivity Formulations:}
+\begin{align*}
+  \textbf{Gross Primary Productivity (GPP): } & \text{Total rate of organic matter synthesis in photosynthesis.}\\
+  \textbf{Net Primary Productivity (NPP): } & \mathrm{GPP} - R \quad (R = \text{respiratory loss})\\
+  \textbf{Global Annual Biosphere NPP: } & \approx \mathbf{170\,\text{billion tons}} \ (\text{dry organic matter})\\
+  \textbf{Oceans Productivity: } & \mathbf{55\,\text{billion tons}} \quad (\text{Covers } 70\% \text{ but yields } 32\% \text{ NPP})
+\end{align*}
+\textbf{2. Stages of Decomposition:}
+Detritus (dead leaves, bark, animal remains) undergoes five simultaneous steps:
+\begin{enumerate}
+  \item \textbf{Fragmentation:} Breakdown of detritus into smaller particles by detritivores (e.g., Earthworm).
+  \item \textbf{Leaching:} Water-soluble inorganic nutrients percolate into soil horizon and precipitate as unavailable salts.
+  \item \textbf{Catabolism:} Bacterial and fungal enzymes degrade detritus into simpler inorganic substances.
+  \item \textbf{Humification:} Accumulation of dark, amorphous, colloidal \textbf{Humus} (highly resistant to microbial action, extremely slow decomposition, acts as reservoir of nutrients).
+  \item \textbf{Mineralization:} Slow release of inorganic nutrients by microbial degradation of humus.
+\end{enumerate}
+\textit{Rate Factors:} Decomposition is fast if detritus is rich in \textbf{nitrogen and water-soluble sugars}; slow if rich in \textbf{lignin and chitin}.
+\end{formulabox}
+
+\begin{conceptbox}[Energy Flow \& Ecological Pyramids Architecture]
+\begin{itemize}
+  \item \textbf{10\% Law of Lindeman:} Only $\mathbf{10\%}$ of energy entering a trophic level is transferred to the next higher level; $90\%$ is lost as metabolic heat.
+  \item \textbf{Photosynthetically Active Radiation (PAR):} Out of total incident solar radiation, less than $\mathbf{50\%}$ is PAR. Plants capture only $\mathbf{2-10\%}$ of PAR ($1-5\%$ of total incident radiation).
+  \item \textbf{Ecological Pyramids Comparison:}
+  \begin{itemize}
+    \item \textbf{Pyramid of Numbers:} Mostly upright (grassland); \textbf{inverted} in tree ecosystem supporting thousands of parasitic insects.
+    \item \textbf{Pyramid of Biomass:} Upright on land (trees/grasses have vast biomass); \textbf{Inverted in Aquatic / Marine Ecosystems} (biomass of phytoplankton is drastically smaller than that of zooplankton and predatory fishes).
+    \item \textbf{Pyramid of Energy:} \textbf{Strictly and always upright}; can never be inverted because energy is lost as heat at each transfer (Second Law of Thermodynamics).
+  \end{itemize}
+  \item \textbf{Succession Trajectory:} Both \textbf{Hydrarch} (water) and \textbf{Xerarch} (bare rock) successions converge toward identical moderate water conditions called \textbf{Mesic conditions}.
+\end{itemize}
+\end{conceptbox}
+
+\section{Biodiversity \& Conservation}
+
+\begin{formulabox}[Species-Area Relationship (Alexander von Humboldt)]
+Alexander von Humboldt observed that within a region, species richness increases with increasing explored area, but only up to a limit:
+\begin{equation}
+  S = C A^Z \implies \mathbf{\log S = \log C + Z \log A}
+\end{equation}
+Where $S$ = Species richness, $A$ = Area, $C$ = Y-intercept, $Z$ = \textbf{Slope of regression line}:
+\begin{itemize}
+  \item For small regional areas (plants in Britain, birds in California): $Z$ is strictly \textbf{$0.1$ to $0.2$}.
+  \item For vast continents (frugivorous birds and mammals in tropical forests): $Z$ is much steeper, \textbf{$0.6$ to $1.2$} (typically \textbf{$1.15$}).
+\end{itemize}
+\end{formulabox}
+
+\begin{ncertbox}[Global Biodiversity Metrics \& The "Evil Quartet" Causes of Loss]
+\textbf{1. Biodiversity Estimates (Robert May):}
+Global species total $\approx \mathbf{7\,\text{million}}$. More than \textbf{70\% of all recorded species are animals}, and plants comprise $\le 22\%$. Among animals, \textbf{insects make up $>70\%$} (7 out of 10 animals on Earth are insects). India has \textbf{2.4\% of global land area} but accounts for \textbf{8.1\% of global species diversity} (one of 12 mega-diversity countries).
+
+\textbf{2. The "Evil Quartet" (Major Drivers of Biodiversity Extinction):}
+\begin{enumerate}
+  \item \textbf{Habitat Loss \& Fragmentation:} The single most catastrophic cause. Tropical rainforests once covered $14\%$ of Earth's land, now reduced to $<6\%$. Amazon rainforest is being cleared for soybean cultivation and cattle pasture.
+  \item \textbf{Over-Exploitation:} Excessive hunting led to extinction of \textit{Steller's sea cow} and \textit{Passenger pigeon}.
+  \item \textbf{Alien Species Invasions:}
+  \begin{itemize}
+    \item Nile perch introduced into Lake Victoria caused extinction of $>200$ endemic \textit{Cichlid fish} species.
+    \item Invasive weeds: \textit{Parthenium} (Carrot grass), \textit{Lantana}, and \textit{Eichhornia crassipes} (Water Hyacinth / "Terror of Bengal").
+    \item Illegal introduction of African catfish \textit{Clarias gariepinus} threatens indigenous catfishes in Indian rivers.
+  \end{itemize}
+  \item \textbf{Co-Extinctions:} Obligate co-evolved relationships (e.g., host fish and its specific monogenean parasite; plant-pollinator mutualism).
+\end{enumerate}
+\textbf{3. In-Situ vs Ex-Situ Conservation:}
+\begin{itemize}
+  \item \textbf{In-Situ (On-site):} 14 Biosphere Reserves, 90 National Parks, 448 Wildlife Sanctuaries, Sacred Groves (Khasi and Jaintia Hills in Meghalaya, Aravalli Hills in Rajasthan, Western Ghats).
+  \item \textbf{Ex-Situ (Off-site):} Zoological parks, Botanical gardens, Wildlife safari parks, Cryopreservation of gametes at $-196^\circ\mathrm{C}$ in liquid nitrogen, Seed banks, Tissue culture.
+\end{itemize}
+\end{ncertbox}
+
+\section{Systematic Morphology of Plant Families (Prescribed NMC Syllabus)}
+
+\begin{conceptbox}[Diagnostic Master Comparison of Prescribed Angiosperm Families]
+\begin{center}
+\scriptsize
+\begin{tabular}{|p{1.9cm}|p{3.4cm}|p{2.9cm}|p{6.4cm}|}
+\hline
+\textbf{Family} & \textbf{Floral Formula} & \textbf{Androecium / Gynoecium} & \textbf{Diagnostic Traits \& Important Economic Plants} \\
+\hline
+\textbf{Brassicaceae} (Mustard) & $\oplus \text{ K}_{2+2} \text{ C}_4 \text{ A}_{2+4} \underline{\text{G}}_{(2)}$ & \textbf{Tetradynamous} ($2$ outer short, $4$ inner long); Bicarpellary, unilocular with \textbf{false septum (Replum)}. & Cruciform corolla (clawed petals); Siliqua fruit. \textit{Brassica campestris} (mustard), \textit{Raphanus sativus} (radish). \\
+\hline
+\textbf{Fabaceae} (Legume) & $\% \text{ K}_{(5)} \text{ C}_{1+2+(2)} \text{ A}_{(9)+1} \underline{\text{G}}_1$ & \textbf{Diadelphous} ($9$ fused $+ 1$ free); Monocarpellary, marginal placentation. & \textbf{Vexillary aestivation} (1 standard, 2 wings, 2 keel); Root nodules with \textit{Rhizobium}. Pulses (Gram, Arhar), Oil (Soyabean, Groundnut), Dye (\textit{Indigofera}), Fodder (\textit{Sesbania}), Medicine (\textit{Muliathi}). \\
+\hline
+\textbf{Solanaceae} (Potato) & $\oplus \text{ K}_{(5)} \overbrace{\text{C}_{(5)} \text{ A}_5} \underline{\text{G}}_{(2)}$ & Epipetalous stamens; Bicarpellary, syncarpous, \textbf{oblique ovary}, \textbf{swollen axile placenta}. & Persistent calyx; Berry or capsule. Food (Potato, Tomato, Brinjal), Spice (Chilli), Medicine (\textit{Belladonna}, \textit{Ashwagandha}), Fumigatory (Tobacco), Ornamental (\textit{Petunia}). \\
+\hline
+\textbf{Liliaceae} (Lily) & $\oplus \overbrace{\text{P}_{(3+3)} \text{ A}_{3+3}} \underline{\text{G}}_{(3)}$ & Epiphyllous stamens; Tricarpellary, syncarpous, trilocular with axile placentation. & Perianth of 6 tepals in two whorls; Capsule/berry. Ornamental (Tulip, \textit{Gloriosa}), Medicine (\textit{Aloe}), Vegetable (\textit{Asparagus}), Colchicine (\textit{Colchicum autumnale}). \\
+\hline
+\textbf{Malvaceae} (Cotton) & $\oplus \text{ K}_{(5)} \text{ C}_5 \text{ A}_{(\infty)} \underline{\text{G}}_{(5)}$ & \textbf{Monadelphous} staminal tube; \textbf{Monothecous, reniform anthers}. & \textbf{Epicalyx} present; Mucilaginous sap; Twisted aestivation. Cotton (\textit{Gossypium}), Lady's finger (\textit{Abelmoschus}), China rose (\textit{Hibiscus}). \\
+\hline
+\textbf{Compositae} (Sunflower) & Ray: $\% \text{ K}_{\text{pappus}} \text{ C}_{(5)} \text{ A}_0 \underline{\text{G}}_{(2)}$ \newline Disc: $\oplus \text{ K}_{\text{pappus}} \overbrace{\text{C}_{(5)} \text{ A}_{(5)}} \underline{\text{G}}_{(2)}$ & \textbf{Syngenesious} (anthers fused, filaments free); Bicarpellary, unilocular, \textbf{basal placentation}. & \textbf{Capitulum inflorescence}; Calyx modified into hairy \textbf{Pappus}; Cypsela fruit. Sunflower (\textit{Helianthus}), Marigold (\textit{Tagetes}), \textit{Chrysanthemum}. \\
+\hline
+\textbf{Gramineae} (Poaceae - Grass) & $\% \text{ P}_2 \text{ A}_3 \text{ or } \text{A}_{3+3} \underline{\text{G}}_1$ & Versatile anthers; Monocarpellary, unilocular, basal placentation with \textbf{feathery bifid stigma}. & \textbf{Spikelet inflorescence}; Perianth represented by 2 scale-like \textbf{Lodicules}; Caryopsis fruit. Cereals (Wheat, Rice, Maize, Sugarcane, Bamboo). \\
+\hline
+\end{tabular}
+\end{center}
+\end{conceptbox}
+
+\end{document}

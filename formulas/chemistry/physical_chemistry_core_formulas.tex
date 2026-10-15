@@ -1,0 +1,291 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% --- Document Header Banner ---
+\begin{center}
+  {\huge\bfseries\color{primarydark} NEET UG 2027: Chemistry Formula Compendium}\\[6pt]
+  {\Large\bfseries\color{accentblue} Module 01: Mole Concept, Atomic Structure, Thermodynamics \& Equilibrium}\\[8pt]
+  {\normalsize\textbf{Prepared, Compiled \& Authored by Satya Prakash} \quad\textbar\quad \textbf{Subject:} Physical Chemistry (Units 1, 2, 4 \& 6)}\\[4pt]
+  {\footnotesize\color{gray} Strict NCERT \& NMC Alignment \quad\textbar\quad Complete Mathematical Variations, Use-Cases \& Traps}
+\end{center}
+\vspace{-2pt}
+\hrule height 1.2pt
+\vspace{8pt}
+
+% =========================================================================
+% SECTION 1: SOME BASIC CONCEPTS IN CHEMISTRY (MOLE CONCEPT)
+% =========================================================================
+\section{Some Basic Concepts in Chemistry: Mole Concept (Unit 1)}
+
+\subsection{Stoichiometric Mole Formulations}
+
+\begin{formulabox}[Fundamental Mole Formulations \& Gas Volumes]
+\begin{align}
+  n &= \frac{w\text{ [mass in g]}}{M\text{ [molar mass in }\si{g.mol^{-1}}\text{]}} = \frac{N\text{ [number of particles]}}{N_A} = \frac{V_{\text{STP}}\text{ [Volume of ideal gas at STP]}}{22.4\,\si{L}} \\
+  N_A &= 6.022\times 10^{23}\,\si{mol^{-1}}, \qquad 1\,\si{amu} = 1\,\si{u} = \frac{1}{N_A}\,\si{g} \approx 1.66\times 10^{-24}\,\si{g} = 1.66\times 10^{-27}\,\si{kg} \\
+  \text{Vapour Density (VD)} &= \frac{\text{Density of gas at } T, P}{\text{Density of } \text{H}_2 \text{ gas at same } T, P} \implies \text{Molar Mass} = 2 \times \text{VD} \\
+  \text{Mass \% of element } X &= \frac{(\text{Number of atoms of } X)\times(\text{Atomic mass of } X)}{\text{Molar mass of compound}} \times 100
+\end{align}
+\textbf{Limiting Reagent Condition for Reaction $aA + bB \to cC + dD$:}
+\begin{equation}
+  \text{Compare ratio } \frac{n_A}{a} \text{ and } \frac{n_B}{b} \implies \text{If } \frac{n_A}{a} < \frac{n_B}{b}, \quad A \text{ is the limiting reagent (completely consumed).}
+\end{equation}
+\end{formulabox}
+
+\subsection{Solution Concentrations \& Dilution Formulations}
+
+\begin{formulabox}[Molarity, Molality, Normality \& Interconversions]
+\begin{align}
+  M &= \frac{n_{\text{solute}}}{V_{\text{solution}}\text{ (in L)}} = \frac{w_B \times 1000}{M_B \times V_{\text{sol}}\text{ (in mL)}} && \text{[Molarity: Temperature Dependent]} \\
+  m &= \frac{n_{\text{solute}}}{W_{\text{solvent}}\text{ (in kg)}} = \frac{w_B \times 1000}{M_B \times W_A\text{ (in g)}} && \text{[Molality: Temperature Independent]} \\
+  N &= \frac{\text{Gram equivalents of solute}}{V_{\text{solution}}\text{ (in L)}} = M \times n\text{-factor} && \text{[Normality: } n\text{-factor is valence/redox exchange]} \\
+  x_B &= \frac{n_B}{n_A + n_B}, \qquad x_A + x_B = 1 && \text{[Mole Fraction: Temperature Independent]} \\
+  \text{ppm} &= \frac{\text{Mass of component}}{\text{Total mass of solution}} \times 10^6, \qquad \%(\text{w/w}) = \frac{w_{\text{solute}}}{w_{\text{solution}}} \times 100
+\end{align}
+\textbf{High-Yield Interconversion Formulas ($d = \text{solution density in }\si{g.mL^{-1}}$):}
+\begin{equation}
+  M = \frac{10 \times \%(w/w) \times d}{M_B}, \qquad m = \frac{1000 M}{1000 d - M M_B}, \qquad m = \frac{x_B \times 1000}{(1 - x_B)M_A}
+\end{equation}
+\textbf{Dilution and Mixing of Solutions:}
+\begin{equation}
+  M_1 V_1 = M_2 V_2, \qquad M_{\text{mix}} = \frac{M_1 V_1 + M_2 V_2 + \dots}{V_1 + V_2 + \dots}, \qquad N_1 V_1 = N_2 V_2 \quad [\text{at equivalence point}]
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[Mole Traps: STP Standards \& Temperature Dependence]
+\begin{itemize}
+  \item \textbf{STP Standard Volume:} In IUPAC revised standard conditions ($T = 273.15\,\si{K}, P = 1\,\si{bar} = 10^5\,\si{Pa}$), molar volume is $22.7\,\si{L}$. Under traditional NCERT standard pressure ($1\,\si{atm} = 1.01325\times 10^5\,\si{Pa}$), molar volume is $22.4\,\si{L}$. Unless specified as $1\,\si{bar}$, calculate using $22.4\,\si{L}$.
+  \item \textbf{Molarity Changes with Temperature:} Because volume expands on heating ($V \propto T$), molarity $M$ and normality $N$ \textbf{decrease with increasing temperature}. Molality $m$, mole fraction $x$, and $\%(w/w)$ involve mass only and remain \textbf{strictly constant}.
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 2: ATOMIC STRUCTURE
+% =========================================================================
+\section{Structure of Atom (Unit 2)}
+
+\subsection{Quantum Mechanics, Wave-Particle Duality \& Uncertainty}
+
+\begin{formulabox}[de Broglie, Heisenberg Uncertainty \& Orbital Angular Momentum]
+\begin{align}
+  \lambda &= \frac{h}{p} = \frac{h}{mv} = \frac{h}{\sqrt{2mK}} = \frac{h}{\sqrt{2mqV}} && [h = 6.626\times 10^{-34}\,\si{J.s}] \\
+  \Delta x \cdot \Delta p &\ge \frac{h}{4\pi} \implies \Delta x \cdot (m\Delta v) \ge \frac{h}{4\pi} \implies \Delta x \cdot \Delta v \ge \frac{h}{4\pi m} && \text{[Heisenberg Uncertainty Principle]} \\
+  \Delta E \cdot \Delta t &\ge \frac{h}{4\pi} && \text{[Energy-Time Uncertainty Formulation]} \\
+  L_{\text{orbital}} &= \sqrt{l(l + 1)}\hbar = \sqrt{l(l + 1)}\frac{h}{2\pi} && \text{[Orbital Angular Momentum; $l=0$ for $s$-orbital!]} \\
+  \mu_{\text{spin}} &= \sqrt{n(n + 2)}\,\si{BM} \quad [\si{BM} = \text{Bohr Magneton}] && \text{[$n$ = number of unpaired electrons]}
+\end{align}
+\end{formulabox}
+
+\subsection{Quantum Numbers, Nodes \& Electron Filling Principles}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{L c c L}
+\toprule
+\textbf{Quantum Number} & \textbf{Symbol} & \textbf{Allowed Values} & \textbf{Physical Significance / Property} \\
+\midrule
+Principal & $n$ & $1, 2, 3, \dots, \infty$ & Main energy level, shell size, distance from nucleus \\
+Azimuthal / Orbital Angular & $l$ & $0, 1, 2, \dots, (n - 1)$ & Subshell shape ($l=0: s, 1: p, 2: d, 3: f$) \\
+Magnetic & $m_l$ & $-l, \dots, 0, \dots, +l$ & Spatial orientation of orbital in magnetic field \\
+Spin & $m_s$ & $+\frac{1}{2}, -\frac{1}{2}$ & Intrinsic spin angular momentum orientation \\
+\bottomrule
+\end{tabularx}
+\caption{The Four Quantum Numbers and Boundary Constraints.}
+\end{table}
+
+\begin{formulabox}[Nodal Formulations for Atomic Orbitals]
+\begin{align}
+  \text{Radial Nodes (Spherical Nodes)} &= n - l - 1 \\
+  \text{Angular Nodes (Nodal Planes)} &= l \\
+  \text{Total Nodes} &= (n - l - 1) + l = n - 1 \\
+  \text{Maximum Electrons in Shell } n &= 2n^2, \qquad \text{Maximum Orbitals in Shell } n = n^2 \\
+  \text{Maximum Electrons in Subshell } l &= 2(2l + 1) = 4l + 2
+\end{align}
+\end{formulabox}
+
+\begin{usecasebox}[Orbital Filling Rules \& Exchange Energy Stability]
+\begin{itemize}
+  \item \textbf{Aufbau Principle ($(n + l)$ Rule):} Electrons enter lowest energy subshell first. Lower $(n+l)$ has lower energy. If $(n+l)$ identical, lower $n$ has lower energy (e.g. $4s$ has $4+0=4$, $3d$ has $3+2=5 \implies 4s$ fills before $3d$).
+  \item \textbf{Pauli Exclusion Principle:} No two electrons in an atom can have the identical set of all four quantum numbers. An orbital holds maximum 2 electrons with opposite spins.
+  \item \textbf{Hund's Rule of Maximum Multiplicity:} Pairing does not occur in degenerate orbitals until each holds one electron with parallel spin.
+  \item \textbf{Exchange Energy of Half/Fully Filled Subshells:} Number of possible electron exchanges among electrons of parallel spin:
+  \begin{equation*}
+    K = \frac{n_p(n_p - 1)}{2} \implies \text{For } d^5: K = \frac{5\times 4}{2} = 10 \text{ exchanges (extraordinarily stable configuration!)}
+  \end{equation*}
+\end{itemize}
+\end{usecasebox}
+
+\newpage
+
+% =========================================================================
+% SECTION 3: CHEMICAL THERMODYNAMICS \& THERMOCHEMISTRY
+% =========================================================================
+\section{Chemical Thermodynamics \& Thermochemistry (Unit 4)}
+
+\subsection{First Law, Work, Enthalpy \& Heat Capacities}
+
+\begin{formulabox}[First Law, PV-Work \& Enthalpy-Internal Energy Coupling]
+\begin{align}
+  \Delta U &= q + w \quad \text{[IUPAC Sign: Work done ON system is positive; BY system is negative]} \\
+  w_{\text{irr}} &= -P_{\text{ext}}(V_2 - V_1) = -P_{\text{ext}}\Delta V && \text{[Irreversible Work against Constant External Pressure]} \\
+  w_{\text{rev, isothermal}} &= -\int_{V_1}^{V_2} P\,dV = -n R T \ln\left(\frac{V_2}{V_1}\right) = -2.303 n R T \log_{10}\left(\frac{P_1}{P_2}\right) \\
+  w_{\text{free expansion}} &= 0 \quad (P_{\text{ext}} = 0 \text{ into vacuum}) \implies \Delta U = 0, \quad \Delta T = 0 \text{ for ideal gas} \\
+  H &= U + P V \implies \Delta H = \Delta U + \Delta(P V) = \Delta U + \Delta n_g R T && [\Delta n_g = \sum n_{g,\text{prod}} - \sum n_{g,\text{react}}] \\
+  C_p - C_v &= R \implies \Delta H = q_p = n C_p \Delta T, \qquad \Delta U = q_v = n C_v \Delta T
+\end{align}
+\end{formulabox}
+
+\subsection{Thermochemistry \& Hess's Law}
+
+\begin{formulabox}[Hess's Law, Reaction Enthalpy \& Bond Dissociation Enthalpies]
+\begin{align}
+  \Delta_r H^\circ &= \sum \Delta_f H^\circ(\text{Products}) - \sum \Delta_f H^\circ(\text{Reactants}) && [\Delta_f H^\circ \text{ of pure elements in standard state is } 0] \\
+  \Delta_r H^\circ &= \sum BE(\text{Reactants}) - \sum BE(\text{Products}) && \text{[All species MUST be in GASEOUS state!]} \\
+  \Delta_r H &= \sum \Delta_{\text{comb}} H^\circ(\text{Reactants}) - \sum \Delta_{\text{comb}} H^\circ(\text{Products}) && \text{[From Enthalpies of Combustion]}
+\end{align}
+\textbf{Kirchhoff's Law of Temperature Dependence of Enthalpy:}
+\begin{equation}
+  \frac{\Delta H_{T_2} - \Delta H_{T_1}}{T_2 - T_1} = \Delta C_p, \qquad \frac{\Delta U_{T_2} - \Delta U_{T_1}}{T_2 - T_1} = \Delta C_v \quad \left[\Delta C_p = \sum C_{p,\text{prod}} - \sum C_{p,\text{react}}\right]
+\end{equation}
+\end{formulabox}
+
+\subsection{Entropy, Second Law \& Gibbs Free Energy Spontaneity}
+
+\begin{formulabox}[Entropy, Third Law \& Spontaneity Criteria]
+\begin{align}
+  \Delta S &= \frac{q_{\text{rev}}}{T}, \qquad \Delta S_{\text{total}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}} \ge 0 \quad \text{[Second Law]} \\
+  \Delta S_{\text{system}} &= n C_v \ln\left(\frac{T_2}{T_1}\right) + n R \ln\left(\frac{V_2}{V_1}\right) = n C_p \ln\left(\frac{T_2}{T_1}\right) - n R \ln\left(\frac{P_2}{P_1}\right) \\
+  \Delta S_{\text{isothermal}} &= n R \ln\left(\frac{V_2}{V_1}\right) = 2.303 n R \log_{10}\left(\frac{P_1}{P_2}\right), \qquad \Delta S_{\text{isochoric}} = n C_v \ln\left(\frac{T_2}{T_1}\right) \\
+  G &= H - T S \implies \Delta G = \Delta H - T \Delta S \quad \text{[Gibbs-Helmholtz Equation at constant } T, P\text{]} \\
+  \Delta G^\circ &= -R T \ln K = -2.303 R T \log_{10} K \iff K = e^{-\Delta G^\circ / RT}
+\end{align}
+\end{formulabox}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{c c c L}
+\toprule
+$\Delta H$ & $\Delta S$ & $\Delta G = \Delta H - T\Delta S$ & \textbf{Spontaneity Criterion} \\
+\midrule
+$-$ & $+$ & Always Negative ($-$) & Spontaneous at ALL temperatures \\
+$+$ & $-$ & Always Positive ($+$) & Non-spontaneous at ALL temperatures (reverse is spontaneous) \\
+$-$ & $-$ & Negative at low $T$ ($T < \frac{\Delta H}{\Delta S}$) & Spontaneous at LOW temperature; non-spontaneous at high $T$ \\
+$+$ & $+$ & Negative at high $T$ ($T > \frac{\Delta H}{\Delta S}$) & Spontaneous at HIGH temperature; non-spontaneous at low $T$ \\
+\bottomrule
+\end{tabularx}
+\caption{Spontaneity Matrix Governed by Enthalpy and Entropy Interplay.}
+\end{table}
+
+\begin{trapbox}[Thermodynamics Traps: Standard States \& Bond Enthalpy Reversal]
+\begin{itemize}
+  \item \textbf{Bond Enthalpy Subtraction Order:} Enthalpy of reaction using formation enthalpies is $[\text{Products} - \text{Reactants}]$, but using bond enthalpies it is $[\mathbf{Reactants} - \mathbf{Products}]$!
+  \item \textbf{Reference Standard State Formation Enthalpy is Zero:} Only the most stable allotropic form at $298.15\,\si{K}$ and $1\,\si{bar}$ has $\Delta_f H^\circ = 0$: Carbon is \textbf{Graphite} (Diamond has $\Delta_f H^\circ = 1.9\,\si{kJ.mol^{-1}}$), Sulfur is \textbf{Rhombic}, Phosphorus is \textbf{White}.
+\end{itemize}
+\end{trapbox}
+
+\newpage
+
+% =========================================================================
+% SECTION 4: CHEMICAL \& IONIC EQUILIBRIUM
+% =========================================================================
+\section{Equilibrium (Unit 6)}
+
+\subsection{Chemical Equilibrium, $K_p-K_c$ Coupling \& Le Chatelier}
+
+\begin{formulabox}[Equilibrium Constants, Reaction Quotient \& Degree of Dissociation]
+\begin{align}
+  K_p &= K_c (R T)^{\Delta n_g} \quad \left[R = 0.0821\,\si{L.atm.mol^{-1}.K^{-1}} \text{ or } 0.0831\,\si{L.bar.mol^{-1}.K^{-1}}\right] \\
+  Q &< K \implies \text{Forward direction}; \quad Q = K \implies \text{Equilibrium}; \quad Q > K \implies \text{Backward direction} \\
+  \alpha &= \frac{D - d}{(n - 1)d} = \frac{M_{\text{theoretical}} - M_{\text{observed}}}{(n - 1)M_{\text{observed}}} \quad \text{[$n$ = number of moles produced per mole dissociated]}
+\end{align}
+\textbf{van 't Hoff Equation (Temperature Dependence of Equilibrium Constant):}
+\begin{equation}
+  \ln\left(\frac{K_2}{K_1}\right) = \frac{\Delta H^\circ}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right) \implies \log_{10}\left(\frac{K_2}{K_1}\right) = \frac{\Delta H^\circ}{2.303 R}\left[\frac{T_2 - T_1}{T_1 T_2}\right]
+\end{equation}
+\end{formulabox}
+
+\subsection{Ionic Equilibrium: Ostwald Dilution, Water Autoionization \& pH}
+
+\begin{formulabox}[Ostwald's Dilution Law, Water Ion Product \& Acid-Base pH]
+\begin{align}
+  K_a &= \frac{C \alpha^2}{1 - \alpha} \approx C \alpha^2 \implies \alpha = \sqrt{\frac{K_a}{C}}, \quad [\text{H}^+] = C\alpha = \sqrt{K_a C} \quad (\text{for } \alpha \le 0.05) \\
+  K_w &= [\text{H}^+][\text{OH}^-] = 1.0\times 10^{-14} \text{ at } 25^\circ\text{C} \implies \text{pH} + \text{pOH} = 14 = \text{p}K_w \\
+  \text{pH} &= -\log_{10}[\text{H}^+], \qquad [\text{H}^+] = 10^{-\text{pH}}
+\end{align}
+\end{formulabox}
+
+\subsection{Salt Hydrolysis Formulations}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{L c c Y}
+\toprule
+\textbf{Salt Type (Example)} & \textbf{Hydrolysis Const. ($K_h$)} & \textbf{Degree of Hydrolysis ($h$)} & \textbf{pH Formula at $25^\circ\text{C}$} \\
+\midrule
+Strong Acid + Strong Base ($\text{NaCl}$) & No Hydrolysis & $h = 0$ & $\text{pH} = 7.00$ \\
+Weak Acid + Strong Base ($\text{CH}_3\text{COONa}$) & $K_h = \frac{K_w}{K_a}$ & $h = \sqrt{\frac{K_w}{C K_a}}$ & $\text{pH} = 7 + \frac{1}{2}\text{p}K_a + \frac{1}{2}\log C$ \\
+Strong Acid + Weak Base ($\text{NH}_4\text{Cl}$) & $K_h = \frac{K_w}{K_b}$ & $h = \sqrt{\frac{K_w}{C K_b}}$ & $\text{pH} = 7 - \frac{1}{2}\text{p}K_b - \frac{1}{2}\log C$ \\
+Weak Acid + Weak Base ($\text{CH}_3\text{COONH}_4$) & $K_h = \frac{K_w}{K_a K_b}$ & $h = \sqrt{\frac{K_w}{K_a K_b}}$ & $\text{pH} = 7 + \frac{1}{2}\text{p}K_a - \frac{1}{2}\text{p}K_b$ \\
+\bottomrule
+\end{tabularx}
+\caption{Exact Hydrolysis Parameters and pH Formulations for Canonical Salts.}
+\end{table}
+
+\subsection{Buffer Solutions \& Henderson-Hasselbalch Equations}
+
+\begin{formulabox}[Acidic and Basic Buffer Governing Equations]
+\begin{align}
+  \text{pH} &= \text{p}K_a + \log_{10}\left(\frac{[\text{Salt}]}{[\text{Weak Acid}]}\right) = \text{p}K_a + \log_{10}\left(\frac{[\text{Conjugate Base}]}{[\text{Acid}]}\right) && \text{[Acidic Buffer]} \\
+  \text{pOH} &= \text{p}K_b + \log_{10}\left(\frac{[\text{Salt}]}{[\text{Weak Base}]}\right) \implies \text{pH} = 14 - \text{pOH} && \text{[Basic Buffer]} \\
+  \text{Buffer Range} &= \text{p}K_a \pm 1, \qquad \beta = \frac{d B}{d(\text{pH})} && \text{[Buffer Capacity $\beta$ is maximum at } [\text{Salt}] = [\text{Acid}]\text{]}
+\end{align}
+\end{formulabox}
+
+\subsection{Solubility Product ($K_{sp}$) \& Precipitation Criteria}
+
+\begin{formulabox}[Solubility Product Equations \& Precipitation]
+\begin{equation}
+  A_x B_y(s) \rightleftharpoons x A^{y+}(aq) + y B^{x-}(aq) \implies K_{sp} = [A^{y+}]^x [B^{x-}]^y = (x S)^x (y S)^y = x^x y^y S^{x+y}
+\end{equation}
+\textbf{Canonical Stoichiometric Solubility Forms:}
+\begin{itemize}
+  \item $1:1$ Salt ($\text{AgCl}$): $K_{sp} = S^2 \implies S = \sqrt{K_{sp}}$
+  \item $1:2$ or $2:1$ Salt ($\text{PbCl}_2, \text{CaF}_2, \text{Ag}_2\text{CrO}_4$): $K_{sp} = 1^1 \times 2^2 \times S^{1+2} = 4S^3 \implies S = \sqrt[3]{\frac{K_{sp}}{4}}$
+  \item $1:3$ or $3:1$ Salt ($\text{Al(OH)}_3, \text{Fe(OH)}_3$): $K_{sp} = 1^1 \times 3^3 \times S^{1+3} = 27S^4 \implies S = \sqrt[4]{\frac{K_{sp}}{27}}$
+  \item $2:3$ or $3:2$ Salt ($\text{Ca}_3(\text{PO}_4)_2, \text{As}_2\text{S}_3$): $K_{sp} = 2^2 \times 3^3 \times S^{2+3} = 108S^5 \implies S = \sqrt[5]{\frac{K_{sp}}{108}}$
+\end{itemize}
+\textbf{Precipitation Criterion:}
+\begin{equation}
+  Q_{sp} < K_{sp} \implies \text{Unsaturated (No precipitate)}; \quad Q_{sp} = K_{sp} \implies \text{Saturated}; \quad Q_{sp} > K_{sp} \implies \text{Precipitation Occurs}
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[Ionic Equilibrium Traps: Autoionization of Water \& pH Scaling]
+\begin{itemize}
+  \item \textbf{Low Concentration Acid pH ($10^{-8}\,\si{M}\text{ HCl}$):} Never write $\text{pH} = 8$ for an acid! In extremely dilute solutions ($< 10^{-6}\,\si{M}$), autoionization of water ($[\text{H}^+]_{\text{water}} = 10^{-7}\,\si{M}$) cannot be neglected:
+  \begin{equation*}
+    [\text{H}^+]_{\text{total}} = 10^{-8} + 10^{-7} = 1.1\times 10^{-7}\,\si{M} \implies \text{pH} \approx 6.96 \quad (\text{strictly } < 7)
+  \end{equation*}
+  \item \textbf{Temperature Dependence of $K_w$:} The autoionization of water ($\text{H}_2\text{O} \rightleftharpoons \text{H}^+ + \text{OH}^-$) is endothermic ($\Delta H > 0$). Heating water to $60^\circ\text{C}$ increases $K_w \approx 10^{-13}$. Neutral water at $60^\circ\text{C}$ has $\text{pH} = \frac{1}{2}\text{p}K_w = 6.5$, but remains strictly \textbf{neutral} because $[\text{H}^+] = [\text{OH}^-]$.
+\end{itemize}
+\end{trapbox}
+
+\vspace{15pt}
+\begin{center}
+  \rule{0.6\textwidth}{0.8pt}\\[6pt]
+  {\small\textbf{\color{primarydark}End of Module 01 Physical Chemistry Formula Handbook}}\\[2pt]
+  {\footnotesize\color{accentblue}Prepared, Compiled \& Authored by Satya Prakash \quad\textbar\quad NEET UG 2027 Series}
+\end{center}
+
+\end{document}

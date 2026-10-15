@@ -1,0 +1,221 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\begin{document}
+
+% Title Header
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Practical Handbook}}\\[6pt]
+  {\Large \textbf{Physics Unit 20: 18 Prescribed Experimental Lab Skills}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Revised NMC Syllabus}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{Experimental Physics Unit 20 Handbook}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Physics Practical Notes}}
+
+\section{Vernier Calipers \& Screw Gauge}
+
+\begin{formulabox}[Vernier Calipers: Least Count, Zero Error \& Measurement]
+\textbf{1. Least Count (Vernier Constant, VC):}
+Smallest distance measurable by the instrument. If $n$ Vernier Scale Divisions (VSD) equal $m$ Main Scale Divisions (MSD):
+\begin{equation}
+  \mathbf{\mathrm{LC} = 1\,\mathrm{MSD} - 1\,\mathrm{VSD} = \left(1 - \frac{m}{n}\right)\mathrm{MSD}}
+\end{equation}
+\textit{Standard Metric Caliper:} $10\,\mathrm{VSD} = 9\,\mathrm{MSD}$ with $1\,\mathrm{MSD} = 1\,\mathrm{mm} = 0.1\,\mathrm{cm}$:
+\begin{equation}
+  \mathrm{LC} = 1\,\mathrm{mm} - \frac{9}{10}\,\mathrm{mm} = \mathbf{0.1\,\mathrm{mm} = 0.01\,\mathrm{cm}}
+\end{equation}
+\textbf{2. True Reading Formulation \& Zero Error Corrections:}
+\begin{equation}
+  \mathbf{\text{Observed Reading} = \mathrm{MSR} + (\mathrm{VSR} \times \mathrm{LC})} \qquad \mathbf{\text{True Reading} = \text{Observed Reading} - (\text{Zero Error})}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Positive Zero Error ($+e$):} Vernier zero lies to the \textbf{right of main scale zero} when jaws are closed.
+  \begin{equation}
+    e = +(n \times \mathrm{LC}) \implies \text{True Reading} = \text{Observed} - e \quad (\text{Must be subtracted})
+  \end{equation}
+  \item \textbf{Negative Zero Error ($-e$):} Vernier zero lies to the \textbf{left of main scale zero} when jaws are closed.
+  \begin{equation}
+    e = -(N - n)\times \mathrm{LC} \implies \text{True Reading} = \text{Observed} - (-e) = \text{Observed} + |e| \quad (\text{Must be added})
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Screw Gauge (Micrometer): Pitch \& Backlash Error]
+\textbf{1. Pitch \& Least Count (LC):}
+\begin{equation}
+  \mathbf{\text{Pitch}} = \frac{\text{Distance moved on linear pitch scale}}{\text{Number of complete rotations of circular cap}} \qquad (\text{Usually } 1\,\mathrm{mm} \text{ or } 0.5\,\mathrm{mm})
+\end{equation}
+\begin{equation}
+  \mathbf{\mathrm{LC}} = \frac{\text{Pitch}}{\text{Total number of circular scale divisions } (N)} = \frac{1\,\mathrm{mm}}{100} = \mathbf{0.01\,\mathrm{mm} = 0.001\,\mathrm{cm} = 10\,\mu\mathrm{m}}
+\end{equation}
+\textbf{2. True Thickness / Diameter Calculation:}
+\begin{equation}
+  \mathbf{\text{True Reading} = \mathrm{PSR} + (\mathrm{CSR} \times \mathrm{LC}) - (\text{Zero Error})}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Positive Zero Error:} Circular zero is \textbf{below the reference line} when studs touch $\implies e = +(n \times \mathrm{LC})$.
+  \item \textbf{Negative Zero Error:} Circular zero is \textbf{above the reference line} when studs touch $\implies e = -(N - n) \times \mathrm{LC}$.
+  \item \textbf{Backlash Error:} Due to loose thread fitting between screw and nut. Avoided by turning screw \textbf{strictly in one direction only}.
+\end{itemize}
+\end{formulabox}
+
+\section{Mechanics \& Hydrodynamics Lab Experiments}
+
+\begin{conceptbox}[Simple Pendulum, Metre Scale \& Elasticity (Searle's Apparatus)]
+\textbf{1. Simple Pendulum ($L \text{ vs } T^2$ Graph):}
+Time period: $T = 2\pi\sqrt{\frac{L}{g}} \implies T^2 = \left(\frac{4\pi^2}{g}\right)L$.
+\begin{itemize}
+  \item Graph of $L$ versus $T^2$ is a \textbf{straight line passing through the origin}.
+  \begin{equation}
+    \mathbf{g = 4\pi^2 \left(\frac{L}{T^2}\right) = \frac{4\pi^2}{\text{Slope of } T^2 \text{ vs } L \text{ graph}}}
+  \end{equation}
+  \item \textbf{Effective Length:} $L = l + h + r$ ($l$ = wire length, $h$ = hook length, $r$ = bob radius).
+  \item Angular amplitude must be small ($\theta \le 4^\circ$) so that $\sin\theta \approx \theta$.
+\end{itemize}
+\textbf{2. Metre Scale (Principle of Moments / Determination of Mass):}
+A balanced uniform metre scale obeys rotational equilibrium: $\sum \tau_{\mathrm{ext}} = 0$.
+\begin{equation}
+  m_1 g (x_{\mathrm{knife}} - x_1) = M g (x_{\mathrm{knife}} - x_{\mathrm{cg}}) + m_2 g (x_2 - x_{\mathrm{knife}})
+\end{equation}
+Where $M$ is mass of metre scale, $x_{\mathrm{cg}}$ is center of gravity (usually $50\,\mathrm{cm}$ mark for uniform scale).
+
+\textbf{3. Young's Modulus of Elasticity (Searle's Apparatus):}
+Two identical wires (reference and experimental) avoid thermal expansion errors:
+\begin{equation}
+  \mathbf{Y = \frac{\text{Stress}}{\text{Strain}} = \frac{M g L}{\pi r^2 l}} \implies \text{Elongation } l = \left(\frac{g L}{\pi r^2 Y}\right) M
+\end{equation}
+Graph of elongation $l$ versus suspended mass $M$ is a straight line. $Y = \frac{g L}{\pi r^2 (\text{Slope})}$.
+\end{conceptbox}
+
+\begin{conceptbox}[Surface Tension, Viscosity \& Speed of Sound in Air]
+\textbf{1. Surface Tension of Water by Capillary Rise Method:}
+\begin{equation}
+  \mathbf{T = \frac{r (h + r/3) \rho g}{2 \cos\theta}} \approx \mathbf{\frac{r h \rho g}{2}} \quad (\text{For pure water in clean glass, contact angle } \theta \approx 0^\circ, \cos\theta = 1)
+\end{equation}
+Meniscus correction adds $r/3$ to measured height $h$. Internal radius $r$ measured by travelling microscope.
+
+\textbf{2. Viscosity by Terminal Velocity (Stokes' Law):}
+Spherical lead/steel ball falling through viscous medium (glycerine/castor oil) reaches constant terminal velocity $v_t$:
+\begin{equation}
+  F_{\mathrm{viscous}} = 6\pi \eta r v_t = \frac{4}{3}\pi r^3 (\rho - \sigma) g \implies \mathbf{\eta = \frac{2 r^2 (\rho - \sigma) g}{9 v_t}}
+\end{equation}
+Where $\rho$ is density of sphere, $\sigma$ is density of liquid. Graph of $v_t$ versus $r^2$ is a straight line through the origin.
+
+\textbf{3. Speed of Sound in Air using Resonance Tube (End Correction):}
+Water level provides closed end. For first two resonant air columns of lengths $l_1$ and $l_2$ with tuning fork of frequency $f$:
+\begin{equation}
+  l_1 + e = \frac{\lambda}{4} \qquad l_2 + e = \frac{3\lambda}{4} \implies l_2 - l_1 = \frac{\lambda}{2}
+\end{equation}
+\begin{equation}
+  \mathbf{v = f \lambda = 2 f (l_2 - l_1)} \qquad \mathbf{\text{End Correction } e = \frac{l_2 - 3l_1}{2} \approx 0.6\,r} \ (r = \text{internal tube radius})
+\end{equation}
+\end{conceptbox}
+
+\begin{formulabox}[Calorimetry \& Newton's Law of Cooling]
+\textbf{1. Specific Heat Capacity of Solid by Method of Mixtures:}
+Heat lost by hot solid = Heat gained by water and calorimeter (at thermal equilibrium):
+\begin{equation}
+  m_s s_s (T_s - T) = (m_w s_w + m_c s_c)(T - T_0) \implies \mathbf{s_s = \frac{(m_w s_w + m_c s_c)(T - T_0)}{m_s (T_s - T)}}
+\end{equation}
+Where $m_c s_c = W$ is water equivalent of calorimeter.
+\textbf{2. Cooling Curve (Newton's Law of Cooling):}
+\begin{equation}
+  \frac{dT}{dt} = -K (T - T_0) \implies \mathbf{\ln(T - T_0) = -K t + C}
+\end{equation}
+Graph of $\ln(T - T_0)$ versus time $t$ is a straight line with negative slope ($-K$). Graph of temperature $T$ vs time $t$ is an exponential decay curve flattening at ambient temperature $T_0$.
+\end{formulabox}
+
+\section{Electricity \& Magnetism Lab Experiments}
+
+\begin{formulabox}[Ohm's Law \& Metre Bridge (Wheatstone Bridge)]
+\textbf{1. Verification of Ohm's Law ($V-I$ Graph):}
+\begin{equation}
+  V = I R \implies R = \text{Slope of } V \text{ vs } I \text{ graph} \qquad \text{Resistivity } \mathbf{\rho = \frac{R A}{L} = \frac{\pi r^2 R}{L}}
+\end{equation}
+\textbf{2. Metre Bridge (Null Deflection Method):}
+Uniform high-resistance manganin/constantan wire of length $100\,\mathrm{cm}$:
+\begin{equation}
+  \frac{P}{Q} = \frac{R}{S} \implies \frac{l_1}{100 - l_1} = \frac{R}{X} \implies \mathbf{X = R \left(\frac{100 - l_1}{l_1}\right)}
+\end{equation}
+\textbf{End Errors \& Precautions:}
+\begin{itemize}
+  \item Resistance of thick copper strips at ends introduces \textbf{End Errors} ($\alpha, \beta$); corrected by swapping $R$ and $X$.
+  \item Maximum sensitivity occurs when balance point is near the center: $\mathbf{l_1 \approx 50\,\mathrm{cm}}$ ($40\,\mathrm{cm} \le l_1 \le 60\,\mathrm{cm}$).
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Galvanometer Resistance, Figure of Merit \& Conversions]
+\textbf{1. Half-Deflection Method for Galvanometer Resistance ($G$):}
+\begin{equation}
+  \text{Initial deflection } \theta \text{ with series } R: \quad I_1 = \frac{E}{R + G} = k\theta
+\end{equation}
+\begin{equation}
+  \text{Shunting galvanometer with } S \text{ reduces deflection to } \frac{\theta}{2}: \quad \mathbf{G = \frac{R \cdot S}{R - S}}
+\end{equation}
+\textbf{2. Figure of Merit ($k$):} Current required to produce unit division deflection ($1\,\text{div}$):
+\begin{equation}
+  \mathbf{k = \frac{I}{\theta} = \frac{E}{(R + G)\theta}} \implies \text{Full Scale Current } I_g = n \cdot k \quad (n = \text{total scale divisions})
+\end{equation}
+\textbf{3. Conversion of Galvanometer into Ammeter and Voltmeter:}
+\begin{itemize}
+  \item \textbf{Ammeter (Range $0 \to I$):} Connect small resistance (\textbf{Shunt $S$}) in \textbf{parallel} with galvanometer:
+  \begin{equation}
+    (I - I_g)S = I_g G \implies \mathbf{S = \frac{I_g G}{I - I_g}} \approx \frac{I_g G}{I}
+  \end{equation}
+  Resistance of ideal ammeter = $0$. Equivalent ammeter resistance: $R_A = \frac{G S}{G + S} < S$.
+  \item \textbf{Voltmeter (Range $0 \to V$):} Connect high resistance ($R_V$) in \textbf{series} with galvanometer:
+  \begin{equation}
+    V = I_g (G + R_V) \implies \mathbf{R_V = \frac{V}{I_g} - G}
+  \end{equation}
+  Resistance of ideal voltmeter = $\infty$. Equivalent voltmeter resistance: $R_{\text{eff}} = G + R_V$.
+\end{itemize}
+\end{formulabox}
+
+\section{Optics \& Semiconductor Lab Experiments}
+
+\begin{formulabox}[Focal Length of Mirror/Lens, Prism Deviation \& Glass Slab]
+\textbf{1. Focal Length by $u-v$ Method (Convex Lens \& Concave Mirror):}
+\begin{equation}
+  \text{Convex Lens: } \frac{1}{f} = \frac{1}{v} - \frac{1}{u} \implies \text{Graph of } \frac{1}{v} \text{ vs } \frac{1}{u} \text{ has slope } -1 \text{ and intercepts } \frac{1}{f}
+\end{equation}
+\begin{equation}
+  \text{Concave Mirror: } \frac{1}{f} = \frac{1}{v} + \frac{1}{u} \implies \text{At } u = 2f, \ v = 2f \quad (\text{Object at center of curvature})
+\end{equation}
+\textbf{2. Refractive Index of Prism ($i-\delta$ Curve):}
+Graph of angle of incidence $i$ versus deviation $\delta$ is U-shaped with a unique minimum deviation $\delta_m$:
+\begin{equation}
+  \mathbf{\mu = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)}} \qquad (\text{At minimum deviation: } i_1 = i_2, \ r_1 = r_2 = A/2, \text{ ray inside is parallel to base})
+\end{equation}
+\textbf{3. Refractive Index of Glass Slab using Travelling Microscope:}
+\begin{equation}
+  \mathbf{\mu = \frac{\text{Real Thickness}}{\text{Apparent Thickness}} = \frac{R_3 - R_1}{R_3 - R_2}}
+\end{equation}
+Where $R_1$ = reading on ink mark on paper, $R_2$ = reading through glass slab, $R_3$ = reading of lycopodium powder on top surface.
+\end{formulabox}
+
+\begin{conceptbox}[Semiconductor Diode Characteristics (Forward \& Reverse Bias)]
+\begin{itemize}
+  \item \textbf{Forward Bias Characteristics:} $p$-side connected to positive, $n$-side to negative terminal.
+  \begin{itemize}
+    \item Depletion layer width decreases; barrier potential opposes applied voltage.
+    \item \textbf{Knee / Cut-in Voltage ($V_k$):} Current is negligible until threshold voltage is reached ($\mathbf{0.7\,\mathrm{V}}$ for Silicon, $\mathbf{0.3\,\mathrm{V}}$ for Germanium), beyond which current rises exponentially.
+    \item \textbf{Dynamic Forward Resistance:} $\mathbf{r_f = \frac{\Delta V_f}{\Delta I_f}}$ (typically $10-100\,\Omega$).
+  \end{itemize}
+  \item \textbf{Reverse Bias Characteristics:} $p$-side connected to negative, $n$-side to positive terminal.
+  \begin{itemize}
+    \item Depletion layer width widens; tiny constant \textbf{Reverse Saturation Current} ($I_0$) flows due to minority carriers (microamperes $\mu\mathrm{A}$ for Ge, nanoamperes $\mathrm{nA}$ for Si).
+    \item \textbf{Reverse Breakdown Voltage ($V_{\mathrm{br}}$):} Sudden sharp increase in current due to avalanche/Zener breakdown.
+    \item \textbf{Dynamic Reverse Resistance:} $\mathbf{r_r = \frac{\Delta V_r}{\Delta I_r}}$ (typically $> 1\,\mathrm{M}\Omega$).
+  \end{itemize}
+\end{itemize}
+\end{conceptbox}
+
+\end{document}

@@ -1,0 +1,1275 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{NEET UG 2027: Physical Chemistry Master Theory}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Physical Chemistry Chapter Notes}}
+
+\begin{document}
+
+% Front Banner
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Chapter Theory}}\\[6pt]
+  {\Large \textbf{Physical Chemistry: In-Depth Derivations \& High-Yield Archetypes}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Revised NMC Syllabus}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+% =========================================================================
+% SECTION 1: NMC SYLLABUS DIRECTIVE \& STRICT EXCLUSIONS
+% =========================================================================
+\section{NMC 2027 Regulatory Calibration \& Scope Demarcation}
+
+\begin{trapbox}[Zero-Tolerance NMC Syllabus Alert: Deleted Physical Chemistry Chapters]
+Under the revised National Medical Commission (NMC) NEET UG 2027 regulatory curriculum, the following legacy chapters have been \textbf{strictly deleted and removed from the examination}:
+\begin{enumerate}
+  \item \textbf{Solid State:} All unit cells, crystal systems, Bragg's diffraction, packing efficiency derivations, point defects (Schottky and Frenkel defects), electrical and magnetic properties of solids are \textbf{completely eliminated}.
+  \item \textbf{States of Matter (Gaseous \& Liquid Bulk States):} Macroscopic gas laws, van der Waals equation of state, critical phenomena ($P_c, V_c, T_c$), compressibility factor ($Z$) curves, liquefaction of gases, and bulk liquid properties (surface tension, viscosity) are \textbf{completely eliminated}. (Note: Ideal gas stoichiometry at STP is retained in Unit 1; molecular kinetic theory is covered in Physics).
+  \item \textbf{Surface Chemistry:} Adsorption isotherms (Freundlich and Langmuir), colloidal states, lyophilic and lyophobic sols, micelles and CMC, Tyndall effect, electrophoresis, coagulation and Hardy-Schulze rule, and heterogeneous catalysis are \textbf{strictly eliminated} from theory.
+\end{enumerate}
+\textbf{Study Directive:} Do not invest study hours in these eliminated topics. All cognitive focus must remain on the rigorously tested Class 11 and Class 12 physical chemistry units detailed below.
+\end{trapbox}
+
+% =========================================================================
+% SECTION 2: SOME BASIC CONCEPTS IN CHEMISTRY (MOLE CONCEPT \& STOICHIOMETRY)
+% =========================================================================
+\section{Some Basic Concepts in Chemistry: Mole Concept \& Stoichiometry (Unit 1)}
+
+\subsection{Laws of Chemical Combination}
+Chemical transformations obey five fundamental empirical laws that form the bedrock of quantitative chemistry:
+\begin{enumerate}
+  \item \textbf{Law of Conservation of Mass (Lavoisier, 1789):} In any chemical reaction, the total mass of the reactants equals the total mass of the products: $\sum m_{\text{reactants}} = \sum m_{\text{products}}$.
+  \item \textbf{Law of Definite Proportions (Proust, 1799):} A given chemical compound always contains exactly the same proportion of elements by mass, regardless of its source or method of preparation.
+  \item \textbf{Law of Multiple Proportions (Dalton, 1803):} If two elements combine to form more than one compound, the masses of one element that combine with a fixed mass of the other element are in the ratio of small whole numbers (e.g., in $\mathrm{CO}$ and $\mathrm{CO_2}$, fixed $12\,\si{g}$ of carbon combines with $16\,\si{g}$ and $32\,\si{g}$ of oxygen, ratio $1:2$).
+  \item \textbf{Gay-Lussac's Law of Gaseous Volumes (1808):} When gases react together, they do so in volumes which bear a simple whole-number ratio to one another and to the volumes of gaseous products, provided all volumes are measured at identical temperature and pressure.
+  \item \textbf{Avogadro's Hypothesis (1811):} Equal volumes of all gases under identical conditions of temperature and pressure contain an equal number of molecules: $V \propto n$ (at constant $T, P$).
+\end{enumerate}
+
+\subsection{The Mole Concept \& Molar Quantities}
+The mole is the SI base unit for the amount of substance. Exactly one mole contains $6.02214076 \times 10^{23}$ elementary entities (Avogadro's constant, $N_A$).
+
+\begin{formulabox}[Master Mole Formulations]
+For any pure chemical substance of mass $w$ (in $\si{g}$), molar mass $M$ (in $\si{g.mol^{-1}}$), and elementary particle count $N$:
+\begin{equation}
+  n = \frac{w}{M} = \frac{N}{N_A} = \frac{V_{\text{STP}}\text{ (in Litres)}}{V_m}
+\end{equation}
+where the standard molar volume $V_m$ depends on the adopted thermodynamic convention:
+\begin{itemize}
+  \item \textbf{Traditional NCERT Standard ($T = 273.15\,\si{K}, P = 1\,\si{atm} = 101.325\,\si{kPa}$):} $V_m = 22.414\,\si{L.mol^{-1}} \approx 22.4\,\si{L}$.
+  \item \textbf{IUPAC Standard ($T = 273.15\,\si{K}, P = 1\,\si{bar} = 100.0\,\si{kPa}$):} $V_m = 22.711\,\si{L.mol^{-1}} \approx 22.7\,\si{L}$.
+\end{itemize}
+\textbf{Vapour Density (VD) Relationship for Ideal Gases:}
+\begin{equation}
+  \text{VD} = \frac{\rho_{\text{gas}}}{\rho_{\text{H}_2}} = \frac{M_{\text{gas}}}{M_{\text{H}_2}} = \frac{M_{\text{gas}}}{2.016} \implies M \approx 2 \times \text{VD}
+\end{equation}
+\end{formulabox}
+
+\subsection{Empirical and Molecular Formulas}
+\begin{conceptbox}[Empirical vs Molecular Formula Determination]
+\begin{itemize}
+  \item \textbf{Empirical Formula (EF):} The simplest whole-number ratio of atoms of each element present in a compound.
+  \item \textbf{Molecular Formula (MF):} The actual number of atoms of each element present in a molecule of the compound:
+  \begin{equation}
+    \text{Molecular Formula} = (\text{Empirical Formula})_n, \qquad n = \frac{\text{Molar Mass}}{\text{Empirical Formula Mass}}
+  \end{equation}
+  \item \textbf{Algorithmic Determination:}
+  \begin{enumerate}
+    \item Convert given mass percentages directly to mass in $100\,\si{g}$ of sample.
+    \item Divide each mass by the respective atomic mass to compute relative moles: $n_i = w_i / A_i$.
+    \item Divide each $n_i$ by the smallest mole value among them: $r_i = n_i / n_{\min}$.
+    \item If the resulting ratios are non-integers, multiply all ratios by the smallest integer that converts them into whole numbers.
+  \end{enumerate}
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Stoichiometry, Limiting Reagents \& Reaction Yields}
+For a general balanced stoichiometric chemical equation:
+\begin{equation}
+  aA + bB \longrightarrow cC + dD
+\end{equation}
+The stoichiometric coefficients $a, b, c, d$ represent the exact molar combining ratios:
+\begin{equation}
+  \frac{n_A\text{ (consumed)}}{a} = \frac{n_B\text{ (consumed)}}{b} = \frac{n_C\text{ (produced)}}{c} = \frac{n_D\text{ (produced)}}{d}
+\end{equation}
+
+\begin{usecasebox}[Limiting Reagent (LR) Diagnostic Algorithm]
+When arbitrary initial quantities $n_{A,0}$ and $n_{B,0}$ are supplied:
+\begin{enumerate}
+  \item Compute the mole-to-coefficient ratio for each reactant:
+  \begin{equation}
+    \mathcal{R}_A = \frac{n_{A,0}}{a}, \qquad \mathcal{R}_B = \frac{n_{B,0}}{b}
+  \end{equation}
+  \item If $\mathcal{R}_A < \mathcal{R}_B$, reactant $A$ is the \textbf{Limiting Reagent} (completely consumed). Reactant $B$ is in excess.
+  \item All product yields and reactant consumptions are strictly determined by the limiting reagent:
+  \begin{equation}
+    n_C = c \left(\frac{n_{A,0}}{a}\right), \qquad n_{B,\text{remaining}} = n_{B,0} - b \left(\frac{n_{A,0}}{a}\right)
+  \end{equation}
+  \item \textbf{Percentage Yield \& Percentage Purity:}
+  \begin{align}
+    \text{Percentage Yield} &= \frac{\text{Actual Yield}}{\text{Theoretical Yield}} \times 100\% \\
+    \text{Percentage Purity} &= \frac{\text{Mass of pure reactant}}{\text{Total mass of impure sample}} \times 100\%
+  \end{align}
+\end{enumerate}
+\end{usecasebox}
+
+\subsection{Solution Concentration Expressions \& Interconversions}
+The quantitative composition of solutions is formulated across six distinct mathematical regimes:
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{p{3.2cm} p{2.2cm} p{4.2cm} p{4.8cm}}
+\toprule
+\textbf{Concentration Unit} & \textbf{Symbol} & \textbf{Mathematical Definition} & \textbf{Temperature Dependence} \\
+\midrule
+\textbf{Molarity} & $M$ & $M = \frac{n_{\text{solute}}}{V_{\text{sol}}\text{ (in L)}} = \frac{w_B \times 1000}{M_B \times V_{\text{sol}}\text{ (in mL)}}$ & \textbf{Temperature Dependent} ($V \propto T \implies M$ decreases as $T$ rises) \\
+\textbf{Molality} & $m$ & $m = \frac{n_{\text{solute}}}{W_{\text{solvent}}\text{ (in kg)}} = \frac{w_B \times 1000}{M_B \times W_A\text{ (in g)}}$ & \textbf{Temperature Independent} (mass is invariant with temperature) \\
+\textbf{Normality} & $N$ & $N = \frac{\text{Gram Equivalents}}{V_{\text{sol}}\text{ (in L)}} = M \times n\text{-factor}$ & \textbf{Temperature Dependent} ($V \propto T$) \\
+\textbf{Mole Fraction} & $x_B$ & $x_B = \frac{n_B}{n_A + n_B}, \quad x_A + x_B = 1$ & \textbf{Temperature Independent} \\
+\textbf{Mass Percentage} & $\%(w/w)$ & $\%(w/w) = \frac{w_{\text{solute}}}{w_{\text{solution}}} \times 100$ & \textbf{Temperature Independent} \\
+\textbf{Volume Percentage} & $\%(v/v)$ & $\%(v/v) = \frac{V_{\text{solute}}}{V_{\text{solution}}} \times 100$ & \textbf{Temperature Dependent} \\
+\textbf{Parts Per Million} & $\text{ppm}$ & $\text{ppm} = \frac{w_{\text{solute}}}{w_{\text{solution}}} \times 10^6$ & \textbf{Temperature Independent} \\
+\bottomrule
+\end{tabularx}
+\caption{Comprehensive Classification of Solution Concentration Regimes.}
+\end{table}
+
+\begin{formulabox}[Master Interconversion Formulations ($d = \text{density in }\si{g.mL^{-1}}$)]
+\begin{align}
+  M &= \frac{10 \times \%(w/w) \times d}{M_B} \\
+  m &= \frac{1000 \times M}{1000\,d - M\,M_B} \\
+  m &= \frac{x_B \times 1000}{(1 - x_B)M_A} = \frac{x_B \times 1000}{x_A M_A} \\
+  x_B &= \frac{m\,M_A}{1000 + m\,M_A}
+\end{align}
+\textbf{Dilution and Mixing Formulations:}
+\begin{equation}
+  M_1 V_1 = M_2 V_2, \qquad M_{\text{mix}} = \frac{\sum M_i V_i}{\sum V_i}, \qquad N_1 V_1 = N_2 V_2 \quad (\text{at exact redox/acid-base equivalence})
+\end{equation}
+\end{formulabox}
+
+\begin{ncertbox}[NCERT Benchmark: Valence Factor ($n$-factor) Rules]
+\begin{itemize}
+  \item \textbf{Acids:} $n\text{-factor} = \text{basicity}$ (number of replaceable $\mathrm{H}^+$ ions): $\mathrm{HCl} \implies 1$; $\mathrm{H_2SO_4} \implies 2$; $\mathrm{H_3PO_4} \implies 3$; $\mathrm{H_3PO_3} \implies 2$ (one $\mathrm{P-H}$ bond is non-ionizable!); $\mathrm{H_3PO_2} \implies 1$ (two $\mathrm{P-H}$ bonds are non-ionizable!).
+  \item \textbf{Bases:} $n\text{-factor} = \text{acidity}$ (number of replaceable $\mathrm{OH}^-$ ions): $\mathrm{NaOH} \implies 1$; $\mathrm{Ca(OH)_2} \implies 2$; $\mathrm{Al(OH)_3} \implies 3$.
+  \item \textbf{Salts:} $n\text{-factor} = \text{total positive or negative charge}$: $\mathrm{NaCl} \implies 1$; $\mathrm{CaCl_2} \implies 2$; $\mathrm{Al_2(SO_4)_3} \implies 6$.
+  \item \textbf{Redox Agents:} $n\text{-factor} = \text{total change in oxidation state per mole of reagent}$.
+\end{itemize}
+\end{ncertbox}
+
+\begin{trapbox}[Common Pitfall: STP Molar Volume \& Equivalent Mass of Oxyacids]
+\begin{itemize}
+  \item \textbf{STP Standard Conditions Shift:} In modern IUPAC / NCERT convention, standard temperature and pressure (STP) is defined at $T = 273.15\,\si{K}$ and $P = 1\,\si{bar} = 10^5\,\si{Pa}$. Under these modern conditions, the molar volume of an ideal gas is $V_{\mathrm{m}} = 22.7\,\si{L\cdot mol^{-1}}$ (or $22.7\,\si{dm^3\cdot mol^{-1}}$). The legacy convention ($1\,\si{atm} = 1.01325\times 10^5\,\si{Pa}$) yielded $22.4\,\si{L\cdot mol^{-1}}$. Always inspect whether numerical question options in NEET assume legacy ($22.4\,\si{L}$) or modern IUPAC ($22.7\,\si{L}$).
+  \item \textbf{Polyprotic Phosphorus Oxyacids:} Never equate molecular mass divided by 3 to equivalent mass blindly! For orthophosphoric acid ($\mathrm{H_3PO_4}$), basicity is $3 \implies E = M/3$. For phosphorous acid ($\mathrm{H_3PO_3}$), basicity is $2 \implies E = M/2$ because one hydrogen is directly bonded to phosphorus ($\mathrm{P-H}$) and does not ionize in aqueous solution. For hypophosphorous acid ($\mathrm{H_3PO_2}$), basicity is $1 \implies E = M/1$ since two hydrogens are non-ionizable $\mathrm{P-H}$ bonds.
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 3: ATOMIC STRUCTURE \& WAVE MECHANICS
+% =========================================================================
+\section{Atomic Structure \& Wave Mechanics (Unit 2)}
+
+\subsection{Dual Nature of Light \& The Photoelectric Effect}
+Einstein formulated the photoelectric effect by treating light as discrete localized wave packets (photons) of energy $E = h\nu$. When a photon strikes a metallic surface:
+\begin{equation}
+  E_{\text{photon}} = \Phi + K_{\max} \implies h\nu = h\nu_0 + \frac{1}{2}m_e v_{\max}^2 = h\nu_0 + e V_0
+\end{equation}
+where $\Phi = h\nu_0$ is the work function of the metal, $\nu_0$ is the threshold frequency, and $V_0$ is the stopping potential.
+
+\subsection{Bohr's Model of the Hydrogen Atom: Complete Mathematical Derivations}
+Niels Bohr synthesized classical electrostatic planetary mechanics with Planckian angular momentum quantization for hydrogen-like species of nuclear charge $+Ze$ and single orbital electron $-e$:
+\begin{enumerate}
+  \item \textbf{Postulate 1 (Electrostatic Centripetal Equilibrium):}
+  \begin{equation}
+    \frac{m_e v_n^2}{r_n} = \frac{1}{4\pi\varepsilon_0}\frac{Z e^2}{r_n^2} \implies m_e v_n^2 r_n = \frac{Z e^2}{4\pi\varepsilon_0}
+    \label{eq:bohr_force}
+  \end{equation}
+  \item \textbf{Postulate 2 (Quantization of Orbital Angular Momentum):}
+  \begin{equation}
+    L_n = m_e v_n r_n = \frac{n h}{2\pi} \quad (n = 1, 2, 3, \dots)
+    \label{eq:bohr_quant}
+  \end{equation}
+\end{enumerate}
+
+\subsubsection{Derivation of Quantized Orbit Radius ($r_n$)}
+Dividing Equation~\ref{eq:bohr_quant} by $m_e r_n$ yields the electron orbital velocity:
+\begin{equation}
+  v_n = \frac{n h}{2\pi m_e r_n}
+\end{equation}
+Substituting this expression for $v_n$ into Equation~\ref{eq:bohr_force}:
+\begin{equation}
+  m_e \left(\frac{n h}{2\pi m_e r_n}\right)^2 r_n = \frac{Z e^2}{4\pi\varepsilon_0} \implies \frac{n^2 h^2}{4\pi^2 m_e r_n} = \frac{Z e^2}{4\pi\varepsilon_0}
+\end{equation}
+Solving explicitly for $r_n$:
+\begin{equation}
+  r_n = \frac{\varepsilon_0 h^2}{\pi m_e e^2} \frac{n^2}{Z} = a_0 \frac{n^2}{Z} \approx 0.529\,\text{\AA} \times \frac{n^2}{Z} = 52.9\,\si{pm} \times \frac{n^2}{Z}
+\end{equation}
+where $a_0 = 0.529177\,\text{\AA}$ is the first Bohr radius of hydrogen ($n=1, Z=1$).
+
+\subsubsection{Derivation of Quantized Velocity ($v_n$)}
+Substituting $r_n$ into Equation~\ref{eq:bohr_quant}:
+\begin{equation}
+  v_n = \frac{n h}{2\pi m_e \left(\frac{\varepsilon_0 h^2 n^2}{\pi m_e e^2 Z}\right)} = \frac{e^2}{2\varepsilon_0 h}\frac{Z}{n} = v_0 \frac{Z}{n} \approx 2.188 \times 10^6 \frac{Z}{n}\,\si{m.s^{-1}} = \frac{c}{137}\frac{Z}{n}
+\end{equation}
+
+\subsubsection{Derivation of Quantized Energies ($K_n, U_n, E_n$)}
+\begin{align}
+  K_n &= \frac{1}{2}m_e v_n^2 = \frac{1}{2}\left(\frac{Z e^2}{4\pi\varepsilon_0 r_n}\right) = \frac{Z e^2}{8\pi\varepsilon_0 r_n} \\
+  U_n &= -\frac{1}{4\pi\varepsilon_0}\frac{Z e^2}{r_n} = -2 K_n \quad (\text{Virial Theorem: } 2\langle K \rangle + \langle U \rangle = 0) \\
+  E_n &= K_n + U_n = -K_n = \frac{1}{2}U_n = -\frac{Z e^2}{8\pi\varepsilon_0 r_n}
+\end{align}
+Substituting the derived value of $r_n$:
+\begin{equation}
+  E_n = -\frac{m_e e^4}{8\varepsilon_0^2 h^2}\frac{Z^2}{n^2} = -R_H h c \frac{Z^2}{n^2} = -2.18 \times 10^{-18}\,\si{J} \times \frac{Z^2}{n^2} = -13.6 \frac{Z^2}{n^2}\,\si{eV}
+\end{equation}
+
+\subsubsection{Spectral Transitions \& The Rydberg Equation}
+When an electron drops from an initial upper energy level $n_2$ to a lower level $n_1$ ($n_2 > n_1$):
+\begin{equation}
+  \Delta E = E_{n_2} - E_{n_1} = h\nu = \frac{h c}{\lambda} \implies \bar{\nu} = \frac{1}{\lambda} = R_H Z^2 \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
+\end{equation}
+where $R_H = \frac{m_e e^4}{8\varepsilon_0^2 h^3 c} \approx 1.09677 \times 10^7\,\si{m^{-1}}$ ($1/R_H \approx 912\,\text{\AA}$).
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{p{2.8cm} c c p{4.5cm} Y}
+\toprule
+\textbf{Spectral Series} & \textbf{Lower Level ($n_1$)} & \textbf{Upper Level ($n_2$)} & \textbf{Spectral Region} & \textbf{Wavelength Range for H ($Z=1$)} \\
+\midrule
+\textbf{Lyman} & $1$ & $2, 3, 4, \dots, \infty$ & Ultraviolet (UV) & $912\,\text{\AA} \le \lambda \le 1216\,\text{\AA}$ \\
+\textbf{Balmer} & $2$ & $3, 4, 5, \dots, \infty$ & Visible ($H_\alpha$ to $H_\delta$) + Near UV & $3646\,\text{\AA} \le \lambda \le 6563\,\text{\AA}$ \\
+\textbf{Paschen} & $3$ & $4, 5, 6, \dots, \infty$ & Near Infrared (IR) & $8204\,\text{\AA} \le \lambda \le 18751\,\text{\AA}$ \\
+\textbf{Brackett} & $4$ & $5, 6, 7, \dots, \infty$ & Infrared (IR) & $14580\,\text{\AA} \le \lambda \le 40512\,\text{\AA}$ \\
+\textbf{Pfund} & $5$ & $6, 7, 8, \dots, \infty$ & Far Infrared (Far IR) & $22790\,\text{\AA} \le \lambda \le 74580\,\text{\AA}$ \\
+\bottomrule
+\end{tabularx}
+\caption{Hydrogen Atom Emission Spectral Series.}
+\end{table}
+
+\subsection{Wave-Particle Duality: The de Broglie Relation}
+Louis de Broglie (1924) postulated that matter exhibits intrinsic wave characteristics. Equating Einstein's mass-energy equivalence ($E = mc^2 = pc$) with Planck's photon energy ($E = h\nu = hc/\lambda$):
+\begin{equation}
+  p = \frac{h}{\lambda} \implies \lambda = \frac{h}{p} = \frac{h}{m v}
+\end{equation}
+For a charged particle of mass $m$ and charge $q$ accelerated from rest through an electrostatic potential difference $V$:
+\begin{equation}
+  K = q V = \frac{p^2}{2m} \implies p = \sqrt{2m q V} \implies \lambda = \frac{h}{\sqrt{2m q V}}
+\end{equation}
+\textbf{Specialized de Broglie Wavelength Formulas:}
+\begin{itemize}
+  \item \textbf{Accelerated Electron ($m = m_e, q = e$):} $\lambda_e = \frac{1.227}{\sqrt{V}}\,\si{nm} = \frac{12.27}{\sqrt{V}}\,\text{\AA}$.
+  \item \textbf{Thermal Neutron / Gas Molecule ($K = \frac{3}{2}k_B T$):} $\lambda_{\text{thermal}} = \frac{h}{\sqrt{3 m k_B T}}$.
+\end{itemize}
+
+\subsection{Heisenberg's Uncertainty Principle}
+Werner Heisenberg (1927) proved that it is physically impossible to simultaneously determine both the exact position and exact momentum of a microscopic quantum entity:
+\begin{equation}
+  \Delta x \cdot \Delta p_x \ge \frac{\hbar}{2} = \frac{h}{4\pi} \implies \Delta x \cdot (m \Delta v_x) \ge \frac{h}{4\pi} \implies \Delta x \cdot \Delta v_x \ge \frac{h}{4\pi m}
+\end{equation}
+\textbf{Alternative Conjugate Variables Formulations:}
+\begin{equation}
+  \Delta E \cdot \Delta t \ge \frac{h}{4\pi}, \qquad \Delta \theta \cdot \Delta L \ge \frac{h}{4\pi}
+\end{equation}
+Because Planck's constant $h = 6.626 \times 10^{-34}\,\si{J.s}$ is infinitesimally small, the uncertainty product is completely imperceptible for macroscopic bodies ($m \sim 1\,\si{kg}$), but dominates the atomic regime ($m_e \sim 9.1 \times 10^{-31}\,\si{kg}$).
+
+\subsection{Schrödinger Wave Equation \& Quantum Mechanical Formalism}
+Erwin Schrödinger (1926) formulated the stationary-state wave equation for a quantum particle of mass $m$ moving in a potential field $V(x,y,z)$:
+\begin{equation}
+  \nabla^2 \psi + \frac{8\pi^2 m}{h^2}(E - V)\psi = 0 \iff \hat{H}\psi = E\psi
+\end{equation}
+where $\hat{H} = -\frac{\hbar^2}{2m}\nabla^2 + V$ is the Hamiltonian operator, and $\psi(r, \theta, \phi)$ is the eigenfunction.
+
+\begin{conceptbox}[Physical Interpretation of Wave Function $\psi$ and Probability Density $|\psi|^2$]
+\begin{itemize}
+  \item \textbf{Wave Function Amplitude ($\psi$):} $\psi$ possesses no direct physical meaning; it can be positive, negative, or complex.
+  \item \textbf{Born's Probability Density ($|\psi|^2 = \psi^* \psi$):} Represents the probability of finding the electron per unit volume in an infinitesimal volume element $d\tau = dx\,dy\,dz$:
+  \begin{equation}
+    dP = |\psi|^2 d\tau, \qquad \int_{\text{all space}} |\psi|^2 d\tau = 1 \quad (\text{Normalization Condition})
+  \end{equation}
+  \item \textbf{Radial vs Angular Separation:} In spherical coordinates $(r, \theta, \phi)$:
+  \begin{equation}
+    \psi(r, \theta, \phi) = R_{n,l}(r) \times Y_{l,m_l}(\theta, \phi)
+  \end{equation}
+  $R_{n,l}(r)$ (radial function) dictates orbital size and radial probability; $Y_{l,m_l}(\theta, \phi)$ (angular function) dictates orbital 3D spatial geometry and orientation.
+  \item \textbf{Radial Probability Distribution Function ($4\pi r^2 R^2(r)$):} Represents the absolute probability of locating the electron in a spherical shell of radius $r$ and thickness $dr$:
+  \begin{equation}
+    P(r)dr = 4\pi r^2 R^2(r) dr
+  \end{equation}
+  At $r = 0$, $4\pi r^2 R^2 = 0$ for all orbitals (electron cannot reside at the mathematical point of the nucleus).
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Master Nodal Formulations]
+Nodes are spatial domains where the probability density $|\psi|^2$ vanishes identically:
+\begin{align}
+  \text{Radial Nodes (Spherical Nodes)} &= n - l - 1 \\
+  \text{Angular Nodes (Nodal Planes / Cones)} &= l \\
+  \text{Total Nodes} &= (n - l - 1) + l = n - 1
+\end{align}
+\textbf{Examples:}
+\begin{itemize}
+  \item $1s$: Radial $= 1 - 0 - 1 = 0$, Angular $= 0$, Total $= 0$.
+  \item $2s$: Radial $= 2 - 0 - 1 = 1$, Angular $= 0$, Total $= 1$.
+  \item $2p$: Radial $= 2 - 1 - 1 = 0$, Angular $= 1$ (the planar surface passing through nucleus), Total $= 1$.
+  \item $3d$: Radial $= 3 - 2 - 1 = 0$, Angular $= 2$ (two nodal planes/cones), Total $= 2$.
+  \item $4d$: Radial $= 4 - 2 - 1 = 1$, Angular $= 2$, Total $= 3$.
+\end{itemize}
+\end{formulabox}
+
+\subsection{Quantum Numbers \& Rules of Electron Configuration}
+An atomic electron is completely described by four quantum numbers:
+\begin{enumerate}
+  \item \textbf{Principal Quantum Number ($n \in \{1, 2, 3, \dots\}$):} Determines main energy shell, average distance from nucleus, maximum electrons $= 2n^2$, maximum orbitals $= n^2$.
+  \item \textbf{Azimuthal Quantum Number ($l \in \{0, 1, 2, \dots, n-1\}$):} Determines subshell shape ($s: 0, p: 1, d: 2, f: 3$), and orbital angular momentum:
+  \begin{equation}
+    L_{\text{orbital}} = \sqrt{l(l+1)}\hbar = \sqrt{l(l+1)}\frac{h}{2\pi} \quad (\text{For any } s\text{-orbital}, l=0 \implies L=0!)
+  \end{equation}
+  \item \textbf{Magnetic Quantum Number ($m_l \in \{-l, \dots, 0, \dots, +l\}$):} Determines 3D spatial orientation of the orbital in an external magnetic field ($2l+1$ degenerate orientations).
+  \item \textbf{Spin Quantum Number ($m_s \in \{+\frac{1}{2}, -\frac{1}{2}\}$):} Intrinsic angular momentum orientation. Spin-only magnetic moment:
+  \begin{equation}
+    \mu_s = \sqrt{n_u(n_u + 2)}\,\si{BM} \quad (n_u = \text{number of unpaired electrons, } \si{BM} = \text{Bohr Magneton})
+  \end{equation}
+\end{enumerate}
+
+\begin{conceptbox}[Fundamental Rules of Electronic Architecture]
+\begin{itemize}
+  \item \textbf{Aufbau Principle:} In the ground state of an atom, electrons occupy the lowest available atomic energy orbitals first. Energy follows the \textbf{$(n+l)$ rule}:
+  \begin{enumerate}
+    \item Lower $(n+l)$ orbital fills before higher $(n+l)$ (e.g., $4s: 4+0=4$ fills before $3d: 3+2=5$).
+    \item If two orbitals share identical $(n+l)$, the orbital with lower $n$ fills first (e.g., $3d: 3+2=5$ fills before $4p: 4+1=5$).
+  \end{enumerate}
+  \item \textbf{Pauli's Exclusion Principle:} No two electrons in an atom can have the identical set of all four quantum numbers. Consequently, an individual orbital accommodates at most two electrons with antiparallel spins ($\uparrow\downarrow$).
+  \item \textbf{Hund's Rule of Maximum Multiplicity:} Pairing of electrons in degenerate orbitals ($p, d, f$) cannot occur until each orbital of the subshell is singly occupied with parallel spins.
+  \item \textbf{Extra Stability of Half-Filled and Fully-Filled Subshells:}
+  \begin{itemize}
+    \item \textbf{Symmetrical Electron Distribution:} Spherically symmetric charge minimizes interelectronic repulsions.
+    \item \textbf{Exchange Energy:} Quantum mechanical exchange of electrons with parallel spins releases stabilization energy. For $n$ electrons of parallel spin:
+    \begin{equation}
+      \text{Number of possible exchanges} = \frac{n(n-1)}{2}
+    \end{equation}
+    For Chromium ($[\mathrm{Ar}] 3d^5 4s^1$): $3d^5$ allows $\frac{5\times 4}{2} = 10$ exchanges, vs $[\mathrm{Ar}] 3d^4 4s^2$ which allows only $\frac{4\times 3}{2} = 6$ exchanges. Copper ($[\mathrm{Ar}] 3d^{10} 4s^1$) similarly gains maximum exchange stability over $3d^9 4s^2$.
+  \end{itemize}
+\end{itemize}
+\end{conceptbox}
+
+% =========================================================================
+% SECTION 4: CHEMICAL THERMODYNAMICS \& THERMOCHEMISTRY
+% =========================================================================
+\section{Chemical Thermodynamics \& Thermochemistry (Unit 4)}
+
+\subsection{Fundamental Concepts: Systems, Variables \& Functions}
+\begin{itemize}
+  \item \textbf{Thermodynamic System:} That part of the universe selected for thermodynamic study.
+  \begin{itemize}
+    \item \textbf{Open System:} Exchanges both matter and energy with surroundings (e.g., open beaker of boiling water).
+    \item \textbf{Closed System:} Exchanges energy but not matter with surroundings (e.g., sealed metal canister).
+    \item \textbf{Isolated System:} Exchanges neither matter nor energy with surroundings (e.g., perfectly insulated Dewar flask).
+  \end{itemize}
+  \item \textbf{State Functions vs Path Functions:}
+  \begin{itemize}
+    \item \textbf{State Functions:} Properties whose values depend solely upon the current thermodynamic state of the system, independent of the path traversed ($U, H, S, G, P, V, T$). Cyclic integral $\oint dX = 0$.
+    \item \textbf{Path Functions:} Quantities whose numerical values depend explicitly upon the transition path traversed between states ($q = \text{heat}, w = \text{work}$). Cyclic integral $\oint dq \ne 0$.
+  \end{itemize}
+  \item \textbf{Intensive vs Extensive Properties:}
+  \begin{itemize}
+    \item \textbf{Extensive (additive, depends on mass):} Mass ($m$), volume ($V$), internal energy ($U$), enthalpy ($H$), entropy ($S$), Gibbs energy ($G$), heat capacity ($C$).
+    \item \textbf{Intensive (scale-independent, independent of mass):} Temperature ($T$), pressure ($P$), density ($\rho$), molar heat capacity ($C_m$), specific heat ($c$), viscosity ($\eta$), surface tension, refractive index, EMF of a cell ($E_{\text{cell}}$).
+  \end{itemize}
+\end{itemize}
+
+\subsection{First Law of Thermodynamics \& Expansion Work Derivations}
+The First Law is the conservation of energy principle applied to thermodynamic systems:
+\begin{equation}
+  \Delta U = q + w
+\end{equation}
+where $\Delta U = U_2 - U_1$ is the change in internal energy, $q$ is the heat absorbed by the system ($q > 0$ if endothermic, $q < 0$ if exothermic), and $w$ is work done on the system ($w > 0$ for compression, $w < 0$ for expansion under IUPAC sign convention).
+
+\subsubsection{Derivation of Reversible Isothermal Expansion Work of an Ideal Gas}
+For an infinitesimal quasi-static reversible expansion, the internal gas pressure $P_{\text{gas}}$ differs from the external opposing pressure $P_{\text{ext}}$ by an infinitesimal amount $dP$ ($P_{\text{ext}} = P - dP$):
+\begin{equation}
+  \delta w_{\text{rev}} = -P_{\text{ext}} dV = -(P - dP) dV = -P dV + dP dV \approx -P dV
+\end{equation}
+Integrating from initial state $(P_1, V_1)$ to final state $(P_2, V_2)$ at constant temperature $T$:
+\begin{equation}
+  w_{\text{rev}} = -\int_{V_1}^{V_2} P dV = -\int_{V_1}^{V_2} \frac{n R T}{V} dV = -n R T \ln\left(\frac{V_2}{V_1}\right) = -2.303 n R T \log_{10}\left(\frac{V_2}{V_1}\right)
+\end{equation}
+By Boyle's Law ($P_1 V_1 = P_2 V_2$ at constant $T$):
+\begin{equation}
+  w_{\text{rev}} = -2.303 n R T \log_{10}\left(\frac{P_1}{P_2}\right)
+\end{equation}
+Since temperature is constant in an isothermal ideal gas expansion ($\Delta U = 0$):
+\begin{equation}
+  q_{\text{rev}} = -w_{\text{rev}} = +2.303 n R T \log_{10}\left(\frac{V_2}{V_1}\right)
+\end{equation}
+
+\subsubsection{Irreversible Expansion \& Free Expansion}
+\begin{itemize}
+  \item \textbf{Irreversible Expansion against Constant External Pressure ($P_{\text{ext}}$):}
+  \begin{equation}
+    w_{\text{irr}} = -\int_{V_1}^{V_2} P_{\text{ext}} dV = -P_{\text{ext}}(V_2 - V_1) = -P_{\text{ext}}\left(\frac{n R T_2}{P_2} - \frac{n R T_1}{P_1}\right)
+  \end{equation}
+  Because $|w_{\text{rev}}| > |w_{\text{irr}}|$, reversible expansion produces the \textbf{maximum work output}.
+  \item \textbf{Free Expansion into Vacuum ($P_{\text{ext}} = 0$):}
+  \begin{equation}
+    w_{\text{free}} = -\int 0 \cdot dV = 0
+  \end{equation}
+  For an ideal gas in an insulated container undergoing free expansion: $w = 0, q = 0 \implies \Delta U = 0 \implies \Delta T = 0$ (Joule's Law).
+\end{itemize}
+
+\subsection{Enthalpy, Heat Capacities \& Mayer's Relation Derivation}
+Enthalpy is defined as the total heat content:
+\begin{equation}
+  H = U + P V \implies \Delta H = \Delta U + \Delta(P V)
+\end{equation}
+For a chemical reaction involving gases at constant temperature:
+\begin{equation}
+  \Delta H = \Delta U + \Delta n_g R T
+\end{equation}
+where $\Delta n_g = \sum n_g(\text{gaseous products}) - \sum n_g(\text{gaseous reactants})$.
+
+\begin{formulabox}[Derivation of Mayer's Relation: $C_p - C_v = R$]
+Heat capacities are defined by:
+\begin{equation}
+  C_v = \left(\frac{\partial U}{\partial T}\right)_V = \frac{q_V}{\Delta T}, \qquad C_p = \left(\frac{\partial H}{\partial T}\right)_P = \frac{q_P}{\Delta T}
+\end{equation}
+For 1 mole of an ideal gas:
+\begin{equation}
+  H = U + P V = U + R T
+\end{equation}
+Differentiating both sides with respect to temperature $T$:
+\begin{equation}
+  \frac{dH}{dT} = \frac{dU}{dT} + R \frac{d(T)}{dT} \implies C_p = C_v + R \implies C_p - C_v = R
+\end{equation}
+For $n$ moles: $C_{p,\text{total}} - C_{v,\text{total}} = n R$.
+\textbf{Heat Capacity Ratio ($\gamma$):}
+\begin{equation}
+  \gamma = \frac{C_p}{C_v} = 1 + \frac{R}{C_v}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Monoatomic Gas ($\mathrm{He, Ne, Ar}$):} Degrees of freedom $f = 3 \implies C_v = \frac{3}{2}R, C_p = \frac{5}{2}R \implies \gamma = \frac{5}{3} \approx 1.67$.
+  \item \textbf{Diatomic Gas ($\mathrm{O_2, N_2, CO}$ at moderate $T$):} $f = 5 \implies C_v = \frac{5}{2}R, C_p = \frac{7}{2}R \implies \gamma = \frac{7}{5} = 1.40$.
+  \item \textbf{Non-linear Polyatomic Gas ($\mathrm{H_2O, NH_3, CH_4}$):} $f = 6 \implies C_v = 3R, C_p = 4R \implies \gamma = \frac{4}{3} \approx 1.33$.
+\end{itemize}
+\end{formulabox}
+
+\subsection{Reversible Adiabatic Expansion of an Ideal Gas}
+In an adiabatic process, no heat enters or leaves the system ($q = 0$). By the First Law:
+\begin{equation}
+  dU = \delta w \implies n C_v dT = -P dV = -\frac{n R T}{V} dV
+\end{equation}
+Dividing by $n T$ and separating variables:
+\begin{equation}
+  C_v \frac{dT}{T} = -R \frac{dV}{V} = -(C_p - C_v)\frac{dV}{V} \implies \frac{dT}{T} = -(\gamma - 1)\frac{dV}{V}
+\end{equation}
+Integrating from state 1 to state 2:
+\begin{equation}
+  \ln\left(\frac{T_2}{T_1}\right) = -(\gamma - 1)\ln\left(\frac{V_2}{V_1}\right) = \ln\left[\left(\frac{V_1}{V_2}\right)^{\gamma - 1}\right] \implies T_1 V_1^{\gamma - 1} = T_2 V_2^{\gamma - 1} = \text{constant}
+\end{equation}
+Substituting $T = \frac{P V}{n R}$:
+\begin{equation}
+  P_1 V_1^\gamma = P_2 V_2^\gamma = \text{constant}, \qquad T_1^\gamma P_1^{1-\gamma} = T_2^\gamma P_2^{1-\gamma} = \text{constant}
+\end{equation}
+\textbf{Work Done in Reversible Adiabatic Expansion:}
+\begin{equation}
+  w_{\text{adi}} = \Delta U = n C_v(T_2 - T_1) = \frac{n R(T_2 - T_1)}{\gamma - 1} = \frac{P_2 V_2 - P_1 V_1}{\gamma - 1}
+\end{equation}
+Since the gas expands ($V_2 > V_1$), $T_2 < T_1$ (gas cools during adiabatic expansion!). On a $P-V$ diagram, the slope of an adiabat is $\gamma$ times steeper than an isotherm:
+\begin{equation}
+  \left(\frac{dP}{dV}\right)_{\text{adi}} = -\gamma \frac{P}{V} = \gamma \left(\frac{dP}{dV}\right)_{\text{iso}}
+\end{equation}
+
+\subsection{Thermochemistry: Heats of Reactions, Hess's Law \& Cycles}
+\begin{conceptbox}[Thermochemical Laws \& Enthalpy Formulations]
+\begin{itemize}
+  \item \textbf{Hess's Law of Constant Heat Summation:} If a chemical reaction can be made to take place in a single step or in several successive steps, the overall enthalpy change is identical, independent of the pathway:
+  \begin{equation}
+    \Delta_r H^\circ = \Delta H_1 + \Delta H_2 + \Delta H_3 + \dots
+  \end{equation}
+  \item \textbf{Standard Enthalpy of Formation ($\Delta_f H^\circ$):} Enthalpy change when 1 mole of a compound is synthesized from its constituent elements in their standard reference states ($298.15\,\si{K}, 1\,\si{bar}$).
+  \begin{equation}
+    \Delta_r H^\circ = \sum \nu_p \Delta_f H^\circ(\text{products}) - \sum \nu_r \Delta_f H^\circ(\text{reactants})
+  \end{equation}
+  \item \textbf{Standard State Convention Trap:} By definition, $\Delta_f H^\circ = 0$ for all pure elements in their most stable allotropic form at $298\,\si{K}$: $\mathrm{C(\text{graphite})} = 0$ (but $\mathrm{C(\text{diamond})} = +1.89\,\si{kJ.mol^{-1}}$); $\mathrm{S(\text{rhombic})} = 0$ (monoclinic $\ne 0$); $\mathrm{P(\text{white})} = 0$ (red $\ne 0$); $\mathrm{Br_{2(l)}} = 0$; $\mathrm{I_{2(s)}} = 0$.
+  \item \textbf{Bond Dissociation Enthalpy (BE):}
+  \begin{equation}
+    \Delta_r H^\circ = \sum \text{BE}(\text{reactants}) - \sum \text{BE}(\text{products}) \quad (\text{all species in gas phase!})
+  \end{equation}
+  \item \textbf{Kirchhoff's Law (Temperature Dependence of $\Delta_r H$):}
+  \begin{equation}
+    \Delta_r H_{T_2}^\circ = \Delta_r H_{T_1}^\circ + \int_{T_1}^{T_2} \Delta C_p dT = \Delta_r H_{T_1}^\circ + \Delta C_p (T_2 - T_1)
+  \end{equation}
+  where $\Delta C_p = \sum \nu_p C_{p,\text{products}} - \sum \nu_r C_{p,\text{reactants}}$.
+\end{itemize}
+\end{conceptbox}
+
+\begin{usecasebox}[Born-Haber Cycle for Ionic Crystal Lattice Enthalpy ($\Delta_{\text{lattice}} H^\circ$)]
+For crystalline sodium chloride ($\mathrm{NaCl_{(s)}}$), the standard enthalpy of formation from elemental sodium and chlorine gas connects directly to lattice enthalpy via five thermochemical steps:
+\begin{equation}
+  \mathrm{Na_{(s)}} + \frac{1}{2}\mathrm{Cl_{2(g)}} \xrightarrow{\Delta_f H^\circ} \mathrm{NaCl_{(s)}}
+\end{equation}
+\begin{enumerate}
+  \item Sublimation of solid sodium: $\mathrm{Na_{(s)}} \to \mathrm{Na_{(g)}}$, $\Delta H_{\text{sub}}^\circ = +108.4\,\si{kJ.mol^{-1}}$.
+  \item Ionization of gaseous sodium: $\mathrm{Na_{(g)}} \to \mathrm{Na^+_{(g)}} + e^-$, $\text{IE}_1 = +495.8\,\si{kJ.mol^{-1}}$.
+  \item Dissociation of diatomic chlorine: $\frac{1}{2}\mathrm{Cl_{2(g)}} \to \mathrm{Cl_{(g)}}$, $\frac{1}{2}\Delta_{\text{diss}} H^\circ = +\frac{1}{2}(242) = +121.0\,\si{kJ.mol^{-1}}$.
+  \item Electron gain by chlorine: $\mathrm{Cl_{(g)}} + e^- \to \mathrm{Cl^-_{(g)}}$, $\Delta_{\text{eg}} H^\circ = -348.6\,\si{kJ.mol^{-1}}$.
+  \item Condensation of gaseous ions into crystal lattice: $\mathrm{Na^+_{(g)}} + \mathrm{Cl^-_{(g)}} \to \mathrm{NaCl_{(s)}}$, $-\Delta_{\text{lattice}} H^\circ$.
+\end{enumerate}
+Applying Hess's Law:
+\begin{equation}
+  \Delta_f H^\circ = \Delta H_{\text{sub}}^\circ + \text{IE}_1 + \frac{1}{2}\Delta_{\text{diss}} H^\circ + \Delta_{\text{eg}} H^\circ - \Delta_{\text{lattice}} H^\circ
+\end{equation}
+\begin{equation}
+  \Delta_{\text{lattice}} H^\circ = \Delta H_{\text{sub}}^\circ + \text{IE}_1 + \frac{1}{2}\Delta_{\text{diss}} H^\circ + \Delta_{\text{eg}} H^\circ - \Delta_f H^\circ = +788\,\si{kJ.mol^{-1}}
+\end{equation}
+\end{usecasebox}
+
+\subsection{Second \& Third Laws: Entropy, Free Energy \& Spontaneity}
+\begin{itemize}
+  \item \textbf{Entropy ($S$):} Measure of microscopic disorder or thermal energy dispersal. Infinitesimal reversible change:
+  \begin{equation}
+    dS = \frac{\delta q_{\text{rev}}}{T}
+  \end{equation}
+  \item \textbf{Entropy Change for an Ideal Gas:}
+  \begin{equation}
+    \Delta S = n C_v \ln\left(\frac{T_2}{T_1}\right) + n R \ln\left(\frac{V_2}{V_1}\right) = n C_p \ln\left(\frac{T_2}{T_1}\right) - n R \ln\left(\frac{P_2}{P_1}\right)
+  \end{equation}
+  \begin{itemize}
+    \item \textbf{Isothermal Process ($T_1 = T_2$):} $\Delta S = n R \ln(V_2 / V_1) = n R \ln(P_1 / P_2)$.
+    \item \textbf{Isobaric Process ($P_1 = P_2$):} $\Delta S = n C_p \ln(T_2 / T_1)$.
+    \item \textbf{Isochoric Process ($V_1 = V_2$):} $\Delta S = n C_v \ln(T_2 / T_1)$.
+    \item \textbf{Reversible Phase Transitions:} $\Delta S_{\text{fusion}} = \frac{\Delta H_{\text{fus}}}{T_f}$, $\Delta S_{\text{vaporization}} = \frac{\Delta H_{\text{vap}}}{T_b}$.
+  \end{itemize}
+  \item \textbf{Spontaneity Criterion (Second Law of Thermodynamics):} For an isolated system or the universe:
+  \begin{equation}
+    \Delta S_{\text{total}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}} \ge 0 \quad (\text{Spontaneous if } > 0; \text{Equilibrium if } = 0)
+  \end{equation}
+  \item \textbf{Third Law of Thermodynamics:} The entropy of a perfectly crystalline pure substance approaches zero as absolute temperature approaches zero: $\lim_{T \to 0} S = 0$.
+\end{itemize}
+
+\subsection{Gibbs Free Energy \& Equilibrium Thermodynamics}
+Gibbs Free Energy ($G = H - TS$) provides the single-parameter spontaneity criterion at constant temperature and pressure:
+\begin{equation}
+  \Delta G = \Delta H - T \Delta S
+\end{equation}
+\begin{itemize}
+  \item $\Delta G < 0 \implies$ Reaction is spontaneous in the forward direction.
+  \item $\Delta G = 0 \implies$ Dynamic equilibrium is attained.
+  \item $\Delta G > 0 \implies$ Non-spontaneous forward (spontaneous in reverse direction).
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{c c c L}
+\toprule
+$\Delta H$ & $\Delta S$ & $\Delta G = \Delta H - T\Delta S$ & \textbf{Spontaneity Regime \& Temperature Dependence} \\
+\midrule
+$-$ & $+$ & Always Negative ($-$) & \textbf{Spontaneous at all temperatures} (enthalpy \& entropy driven) \\
+$+$ & $-$ & Always Positive ($+$) & \textbf{Non-spontaneous at all temperatures} (reverse is spontaneous) \\
+$-$ & $-$ & Negative at low $T$, Positive at high $T$ & \textbf{Spontaneous at low $T$}, non-spontaneous at high $T$ ($|T\Delta S| > |\Delta H|$) \\
+$+$ & $+$ & Positive at low $T$, Negative at high $T$ & \textbf{Spontaneous at high $T$}, non-spontaneous at low $T$ ($T > \frac{\Delta H}{\Delta S}$) \\
+\bottomrule
+\end{tabularx}
+\caption{Thermodynamic Spontaneity Temperature Dependency Matrix.}
+\end{table}
+
+\begin{formulabox}[Master Thermodynamic Equilibrium Links]
+For a general reaction with reaction quotient $Q$:
+\begin{equation}
+  \Delta G = \Delta_r G^\circ + R T \ln Q = \Delta_r G^\circ + 2.303 R T \log_{10} Q
+\end{equation}
+At dynamic chemical equilibrium, $\Delta G = 0$ and $Q = K_{\text{eq}}$:
+\begin{equation}
+  \Delta_r G^\circ = -R T \ln K_{\text{eq}} = -2.303 R T \log_{10} K_{\text{eq}} \iff K_{\text{eq}} = e^{-\Delta_r G^\circ / R T}
+\end{equation}
+\textbf{van 't Hoff Reaction Isobar:}
+\begin{equation}
+  \frac{d \ln K}{d T} = \frac{\Delta_r H^\circ}{R T^2} \implies \log_{10}\left(\frac{K_2}{K_1}\right) = \frac{\Delta_r H^\circ}{2.303 R}\left[\frac{T_2 - T_1}{T_1 T_2}\right] = \frac{\Delta_r H^\circ}{2.303 R}\left[\frac{1}{T_1} - \frac{1}{T_2}\right]
+\end{equation}
+\begin{itemize}
+  \item \textbf{Endothermic Reaction ($\Delta_r H^\circ > 0$):} $K$ increases as temperature increases.
+  \item \textbf{Exothermic Reaction ($\Delta_r H^\circ < 0$):} $K$ decreases as temperature increases.
+\end{itemize}
+\end{formulabox}
+
+% =========================================================================
+% SECTION 5: CHEMICAL \& IONIC EQUILIBRIUM
+% =========================================================================
+\section{Chemical \& Ionic Equilibrium (Unit 6)}
+
+\subsection{Chemical Equilibrium: Law of Mass Action \& Constant Relations}
+For a reversible homogeneous gas-phase reaction:
+\begin{equation}
+  aA(g) + bB(g) \rightleftharpoons cC(g) + dD(g)
+\end{equation}
+The equilibrium constants in terms of molar concentrations ($K_c$) and partial pressures ($K_p$) are:
+\begin{equation}
+  K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b}, \qquad K_p = \frac{P_C^c P_D^d}{P_A^a P_B^b}
+\end{equation}
+
+\begin{formulabox}[Derivation of $K_p = K_c(R T)^{\Delta n_g}$]
+Assuming ideal gas behavior for each component:
+\begin{equation}
+  P_i V = n_i R T \implies P_i = \left(\frac{n_i}{V}\right) R T = [i] R T
+\end{equation}
+Substituting each partial pressure into the $K_p$ expression:
+\begin{equation}
+  K_p = \frac{([C] R T)^c ([D] R T)^d}{([A] R T)^a ([B] R T)^b} = \frac{[C]^c [D]^d}{[A]^a [B]^b} \times \frac{(R T)^{c+d}}{(R T)^{a+b}} = K_c (R T)^{(c+d) - (a+b)}
+\end{equation}
+\begin{equation}
+  K_p = K_c (R T)^{\Delta n_g}
+\end{equation}
+where $\Delta n_g = (c + d) - (a + b)$.
+\begin{itemize}
+  \item If $\Delta n_g = 0 \implies K_p = K_c$ (dimensionless, pressure independent, e.g., $\mathrm{H_2 + I_2 \rightleftharpoons 2HI}$).
+  \item If $\Delta n_g > 0 \implies K_p > K_c$ when $R T > 1$ (units $\si{atm^{\Delta n_g}}$ or $\si{bar^{\Delta n_g}}$, e.g., $\mathrm{PCl_5 \rightleftharpoons PCl_3 + Cl_2}$).
+  \item If $\Delta n_g < 0 \implies K_p < K_c$ when $R T > 1$ (e.g., $\mathrm{N_2 + 3H_2 \rightleftharpoons 2NH_3}$).
+\end{itemize}
+\end{formulabox}
+
+\subsection{Le Chatelier's Principle \& Equilibrium Shifts}
+If a dynamic equilibrium is subjected to a stress in concentration, pressure, volume, temperature, or inert gas, the system shifts in that direction which minimizes or undoes the applied constraint:
+\begin{itemize}
+  \item \textbf{Concentration:} Adding reactants or removing products shifts forward ($Q < K$).
+  \item \textbf{Pressure / Volume:} Increasing pressure (compressing volume) shifts equilibrium toward fewer gaseous moles ($\Delta n_g < 0$).
+  \item \textbf{Temperature:} Increasing temperature shifts toward the endothermic direction ($\Delta H > 0$).
+  \item \textbf{Inert Gas Addition:}
+  \begin{itemize}
+    \item \textbf{At Constant Volume:} Total pressure rises, but partial pressures and molar concentrations of reacting gases remain \textbf{strictly unchanged} $\implies$ \textbf{NO EFFECT} on equilibrium state!
+    \item \textbf{At Constant Pressure:} Volume expands, partial pressures drop $\implies$ equilibrium shifts toward \textbf{greater number of gaseous moles} ($\Delta n_g > 0$).
+  \end{itemize}
+  \item \textbf{Catalyst:} Increases forward and backward rates equally; equilibrium constant $K$ and composition are completely unaffected (shortens time to achieve equilibrium).
+\end{itemize}
+
+\begin{ncertbox}[NCERT Focus: Le Chatelier Optimization in Industrial Syntheses]
+\textbf{Case Study: Synthesis of Ammonia (Haber-Bosch Process)}
+\begin{equation*}
+  \mathrm{N_2(g) + 3H_2(g) \rightleftharpoons 2NH_3(g)}, \quad \Delta_{\mathrm{r}}H^\circ = -92.4\,\si{kJ\cdot mol^{-1}}, \quad \Delta n_g = 2 - 4 = -2
+\end{equation*}
+\begin{itemize}
+  \item \textbf{High Pressure ($\approx 200\,\si{atm}$):} Since $\Delta n_g < 0$, high pressure drives the equilibrium forward toward product formation, optimizing ammonia yield.
+  \item \textbf{Optimum Temperature ($\approx 700\text{--}775\,\si{K}$):} Because the reaction is exothermic ($\Delta_{\mathrm{r}}H^\circ < 0$), low temperature thermodynamically favors ammonia, but drastically lowers kinetic reaction rates. An optimum temperature with iron oxide catalyst and promoters ($\mathrm{K_2O}$ and $\mathrm{Al_2O_3}$) is maintained.
+  \item \textbf{Inert Gas Injection Trap:} Adding argon or neon at constant volume ($V = \text{const}$) causes zero shift in equilibrium yield. Only addition at constant pressure ($P = \text{const}$) shifts the reaction backward (toward more gaseous moles, $\Delta n_g = -2 < 0 \implies$ leftward shift).
+\end{itemize}
+\end{ncertbox}
+
+\subsection{Degree of Dissociation from Vapour Density}
+For a gas dissociating according to $A(g) \rightleftharpoons n B(g)$:
+\begin{equation}
+  \alpha = \frac{D - d}{(n - 1)d} = \frac{M_{\text{theoretical}} - M_{\text{observed}}}{(n - 1)M_{\text{observed}}}
+\end{equation}
+where $D$ is the theoretical vapour density of pure reactant, and $d$ is the observed equilibrium mixture vapour density.
+
+\subsection{Ionic Equilibrium: Ostwald Dilution Law \& Autoionization of Water}
+\begin{itemize}
+  \item \textbf{Ostwald's Dilution Law for Weak Acid ($\mathrm{HA \rightleftharpoons H^+ + A^-}$):}
+  \begin{equation}
+    K_a = \frac{C\alpha^2}{1 - \alpha} \approx C\alpha^2 \quad (\text{for } \alpha \le 0.05) \implies \alpha = \sqrt{\frac{K_a}{C}}
+  \end{equation}
+  \begin{equation}
+    [\mathrm{H}^+] = C\alpha = \sqrt{K_a C} \implies \text{pH} = \frac{1}{2}\left(\text{p}K_a - \log_{10} C\right)
+  \end{equation}
+  \item \textbf{Self-Ionization of Water ($\mathrm{2H_2O \rightleftharpoons H_3O^+ + OH^-}$):}
+  \begin{equation}
+    K_w = [\mathrm{H}^+][\mathrm{OH}^-] = 1.0 \times 10^{-14} \quad (\text{at } 25^\circ\text{C}) \implies \text{pH} + \text{pOH} = \text{p}K_w = 14
+  \end{equation}
+  Because self-ionization is endothermic ($\Delta H > 0$), $K_w$ increases with temperature: at $80^\circ\text{C}$, $K_w \approx 10^{-13} \implies \text{pH of neutral water} = \frac{13}{2} = 6.5$.
+\end{itemize}
+
+\subsection{Salt Hydrolysis: Derivations of $K_h$, $h$, and pH}
+Salt hydrolysis is the reverse of neutralization, where ions of a salt interact with water to perturb $[\mathrm{H}^+]$ and $[\mathrm{OH}^-]$:
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{p{3.0cm} p{1.8cm} p{2.4cm} p{2.6cm} X}
+\toprule
+\textbf{Salt Category \& Example} & \textbf{Hydrolysis Type} & \textbf{Hydrolysis Constant ($K_h$)} & \textbf{Degree of Hydrolysis ($h$)} & \textbf{Exact pH Formula} \\
+\midrule
+\textbf{Strong Acid + Strong Base} & No Hydrolysis & --- & $h = 0$ & $\text{pH} = 7.00$ \\
+($\mathrm{NaCl, KNO_3, NaClO_4}$) & Spectator ions & & & (Neutral, unaffected by dilution) \\
+\midrule
+\textbf{Strong Acid + Weak Base} & Cationic & $K_h = \frac{K_w}{K_b}$ & $h = \sqrt{\frac{K_w}{K_b C}}$ & $\text{pH} = 7 - \frac{1}{2}\text{p}K_b - \frac{1}{2}\log_{10} C$ \\
+($\mathrm{NH_4Cl, FeSO_4, AlCl_3}$) & & & & (Acidic: $\text{pH} < 7$) \\
+\midrule
+\textbf{Weak Acid + Strong Base} & Anionic & $K_h = \frac{K_w}{K_a}$ & $h = \sqrt{\frac{K_w}{K_a C}}$ & $\text{pH} = 7 + \frac{1}{2}\text{p}K_a + \frac{1}{2}\log_{10} C$ \\
+($\mathrm{CH_3COONa, NaCN, Na_2CO_3}$) & & & & (Alkaline: $\text{pH} > 7$) \\
+\midrule
+\textbf{Weak Acid + Weak Base} & Both Ions & $K_h = \frac{K_w}{K_a K_b}$ & $h = \sqrt{\frac{K_w}{K_a K_b}}$ & $\mathbf{\text{pH} = 7 + \frac{1}{2}\text{p}K_a - \frac{1}{2}\text{p}K_b}$ \\
+($\mathrm{CH_3COONH_4, NH_4CN}$) & Hydrolyze & & \textbf{(Independent of $C$!)} & \textbf{(Strictly independent of $C$!)} \\
+\bottomrule
+\end{tabularx}
+\caption{Master Classification and Analytical Formulations for Salt Hydrolysis.}
+\end{table}
+
+\subsection{Buffer Solutions \& Henderson-Hasselbalch Derivations}
+A buffer resists pH changes upon addition of small quantities of strong acid or base.
+\begin{enumerate}
+  \item \textbf{Acidic Buffer (Weak Acid + Salt with Strong Base, e.g., $\mathrm{CH_3COOH + CH_3COONa}$):}
+  \begin{equation}
+    K_a = \frac{[\mathrm{H}^+][\mathrm{A}^-]}{[\mathrm{HA}]} \implies [\mathrm{H}^+] = K_a \frac{[\mathrm{HA}]}{[\mathrm{A}^-]} \approx K_a \frac{[\text{Acid}]}{[\text{Salt}]}
+  \end{equation}
+  Taking $-\log_{10}$ on both sides:
+  \begin{equation}
+    \text{pH} = \text{p}K_a + \log_{10}\left(\frac{[\text{Conjugate Base / Salt}]}{[\text{Weak Acid}]}\right)
+  \end{equation}
+  \item \textbf{Basic Buffer (Weak Base + Salt with Strong Acid, e.g., $\mathrm{NH_4OH + NH_4Cl}$):}
+  \begin{equation}
+    \text{pOH} = \text{p}K_b + \log_{10}\left(\frac{[\text{Conjugate Acid / Salt}]}{[\text{Weak Base}]}\right), \qquad \text{pH} = 14 - \text{pOH}
+  \end{equation}
+  \item \textbf{Buffer Capacity ($\phi$):} The number of moles of strong acid or base required to change the pH of $1\,\si{L}$ of buffer solution by 1 unit:
+  \begin{equation}
+    \phi = \frac{d B}{d(\text{pH})} = 2.303 \frac{[\text{Acid}][\text{Salt}]}{[\text{Acid}] + [\text{Salt}]}
+  \end{equation}
+  Buffer capacity is \textbf{maximum} when $[\text{Acid}] = [\text{Salt}] \implies \text{pH} = \text{p}K_a$ (effective buffer range: $\text{p}K_a \pm 1$).
+\end{enumerate}
+
+\subsection{Solubility Product ($K_{sp}$) \& Common Ion Precipitation}
+For a sparingly soluble salt $A_x B_y$:
+\begin{equation}
+  A_x B_y(s) \rightleftharpoons x A^{y+}(aq) + y B^{x-}(aq)
+\end{equation}
+If molar solubility is $S\,\si{mol.L^{-1}}$:
+\begin{equation}
+  [A^{y+}] = x S, \qquad [B^{x-}] = y S
+\end{equation}
+\begin{equation}
+  K_{sp} = [A^{y+}]^x [B^{x-}]^y = (x S)^x (y S)^y = x^x y^y S^{x+y} \implies S = \left(\frac{K_{sp}}{x^x y^y}\right)^{\frac{1}{x+y}}
+\end{equation}
+\textbf{Solubility Equations by Salt Stoichiometry:}
+\begin{itemize}
+  \item $AB$ type ($\mathrm{AgCl, BaSO_4}$): $K_{sp} = S^2 \implies S = \sqrt{K_{sp}}$.
+  \item $AB_2$ or $A_2B$ type ($\mathrm{PbCl_2, Ag_2CrO_4, CaF_2}$): $K_{sp} = 1^1 \times 2^2 \times S^3 = 4S^3 \implies S = \sqrt[3]{K_{sp}/4}$.
+  \item $AB_3$ or $A_3B$ type ($\mathrm{Al(OH)_3, Fe(OH)_3}$): $K_{sp} = 1^1 \times 3^3 \times S^4 = 27S^4 \implies S = \sqrt[4]{K_{sp}/27}$.
+  \item $A_2B_3$ or $A_3B_2$ type ($\mathrm{As_2S_3, Ca_3(PO_4)_2}$): $K_{sp} = 2^2 \times 3^3 \times S^5 = 108S^5 \implies S = \sqrt[5]{K_{sp}/108}$.
+\end{itemize}
+\textbf{Precipitation Criterion:}
+\begin{itemize}
+  \item $Q_{sp} < K_{sp} \implies$ Unsaturated solution; no precipitate forms.
+  \item $Q_{sp} = K_{sp} \implies$ Saturated solution at dynamic equilibrium.
+  \item $Q_{sp} > K_{sp} \implies$ Supersaturated solution; \textbf{precipitation occurs immediately}.
+\end{itemize}
+
+% =========================================================================
+% SECTION 6: SOLUTIONS \& COLLIGATIVE PROPERTIES
+% =========================================================================
+\section{Solutions \& Colligative Properties (Unit 5)}
+
+\subsection{Gas Solubility \& Henry's Law}
+Henry's Law states that the solubility of a gas in a liquid at constant temperature is directly proportional to the partial pressure of the gas above the solution:
+\begin{equation}
+  p = K_H \cdot x \iff x = \frac{p}{K_H}
+\end{equation}
+where $p$ is the partial pressure of gas, $x$ is the mole fraction of gas dissolved, and $K_H$ is Henry's law constant.
+\begin{itemize}
+  \item At a constant pressure $p$, solubility $x$ is \textbf{inversely proportional} to $K_H$.
+  \item For a given gas, $K_H$ \textbf{increases with increasing temperature} $\implies$ gas solubility in liquids decreases on heating (aquatic life thrives in cold water due to higher dissolved $\mathrm{O_2}$).
+\end{itemize}
+
+\subsection{Vapour Pressure \& Raoult's Law}
+For a binary solution of volatile liquids $A$ and $B$, Raoult's law states that the partial vapour pressure of each component is equal to the vapour pressure of the pure component multiplied by its mole fraction in the liquid phase:
+\begin{equation}
+  P_A = P_A^\circ x_A, \qquad P_B = P_B^\circ x_B
+\end{equation}
+By Dalton's Law of Partial Pressures, the total vapour pressure is:
+\begin{equation}
+  P_{\text{total}} = P_A + P_B = P_A^\circ x_A + P_B^\circ x_B = P_A^\circ(1 - x_B) + P_B^\circ x_B = P_A^\circ + (P_B^\circ - P_A^\circ)x_B
+\end{equation}
+\textbf{Vapour Phase Composition ($y_A, y_B$):}
+\begin{equation}
+  y_A = \frac{P_A}{P_{\text{total}}} = \frac{P_A^\circ x_A}{P_{\text{total}}}, \qquad y_B = \frac{P_B}{P_{\text{total}}} = \frac{P_B^\circ x_B}{P_{\text{total}}} \implies \frac{1}{P_{\text{total}}} = \frac{y_A}{P_A^\circ} + \frac{y_B}{P_B^\circ}
+\end{equation}
+
+\subsection{Ideal vs Non-Ideal Solutions \& Azeotropes}
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{p{3.0cm} p{4.0cm} p{4.2cm} p{4.2cm}}
+\toprule
+\textbf{Thermodynamic Property} & \textbf{Ideal Solution} & \textbf{Non-Ideal: Positive Deviation} & \textbf{Non-Ideal: Negative Deviation} \\
+\midrule
+\textbf{Intermolecular Forces} & $A-B \approx A-A \approx B-B$ & $A-B < A-A, B-B$ (Weaker) & $A-B > A-A, B-B$ (Stronger) \\
+\textbf{Vapour Pressure} & $P_{\text{total}} = P_A^\circ x_A + P_B^\circ x_B$ & $P_{\text{total}} > P_{\text{ideal}}$ & $P_{\text{total}} < P_{\text{ideal}}$ \\
+\textbf{Enthalpy of Mixing} & $\Delta H_{\text{mix}} = 0$ & $\Delta H_{\text{mix}} > 0$ (Endothermic) & $\Delta H_{\text{mix}} < 0$ (Exothermic) \\
+\textbf{Volume of Mixing} & $\Delta V_{\text{mix}} = 0$ & $\Delta V_{\text{mix}} > 0$ (Expansion) & $\Delta V_{\text{mix}} < 0$ (Contraction) \\
+\textbf{Entropy \& Free Energy} & $\Delta S_{\text{mix}} > 0, \Delta G_{\text{mix}} < 0$ & $\Delta S_{\text{mix}} > 0, \Delta G_{\text{mix}} < 0$ & $\Delta S_{\text{mix}} > 0, \Delta G_{\text{mix}} < 0$ \\
+\textbf{Azeotrope Formed} & None (Separable by distillation) & \textbf{Minimum Boiling Azeotrope} & \textbf{Maximum Boiling Azeotrope} \\
+\textbf{High-Yield Examples} & Benzene + Toluene; $n$-hexane + $n$-heptane; $\mathrm{C_2H_5Br + C_2H_5I}$ & Ethanol + Water ($95.6\%$); Acetone + $\mathrm{CS_2}$; $\mathrm{CCl_4}$ + Toluene & Chloroform + Acetone; $\mathrm{HNO_3} + \mathrm{H_2O}$ ($68\%$); $\mathrm{HCl} + \mathrm{H_2O}$ ($20.2\%$) \\
+\bottomrule
+\end{tabularx}
+\caption{Comprehensive Physical and Thermodynamic Profiling of Binary Liquid Mixtures.}
+\end{table}
+
+\subsection{Colligative Properties \& Thermodynamic Derivations}
+Colligative properties depend exclusively on the ratio of the number of solute particles to solvent particles, irrespective of their chemical nature.
+
+\subsubsection{1. Relative Lowering of Vapour Pressure (RLVP)}
+When a non-volatile solute $B$ is added to volatile solvent $A$, only solvent molecules occupy the vapour phase: $P_{\text{total}} = P_A = P_A^\circ x_A = P_A^\circ(1 - x_B)$.
+\begin{equation}
+  \Delta P = P_A^\circ - P = P_A^\circ x_B \implies \frac{P_A^\circ - P}{P_A^\circ} = x_B = \frac{n_B}{n_A + n_B} \approx \frac{n_B}{n_A} = \frac{w_B M_A}{M_B w_A} \quad (\text{dilute})
+\end{equation}
+\textbf{Exact Molality Expression for All Concentrations:}
+\begin{equation}
+  \frac{P_A^\circ - P}{P} = \frac{n_B}{n_A} = \frac{m \times M_A}{1000} \implies \text{Notice denominator is } P\text{, not } P_A^\circ!
+\end{equation}
+
+\begin{trapbox}[Common Pitfall: Relative Lowering of Vapour Pressure Denominator]
+A frequent numerical trap in NEET involves confusing the theoretical RLVP definition with the exact molality formula:
+\begin{itemize}
+  \item \textbf{Definition of RLVP:} By Raoult's law, relative lowering with respect to pure solvent vapour pressure is:
+  \begin{equation*}
+    \frac{P^\circ - P}{P^\circ} = x_B = \frac{n_B}{n_A + n_B}
+  \end{equation*}
+  This equation strictly possesses the pure solvent vapour pressure $P^\circ$ in the denominator.
+  \item \textbf{Exact Non-Approximated Molality Conversion:} Inverting and subtracting 1 gives:
+  \begin{equation*}
+    \frac{P^\circ - P}{P} = \frac{n_B}{n_A} = \frac{w_B \cdot M_A}{M_B \cdot w_A} = \frac{m \cdot M_A}{1000}
+  \end{equation*}
+  Here the denominator is the \textbf{solution} vapour pressure $P$, NOT $P^\circ$. Equating $(P^\circ - P)/P^\circ$ directly to $n_B/n_A$ without dilute approximation creates systematic calculation errors in non-dilute questions ($m > 0.1\,\si{m}$).
+\end{itemize}
+\end{trapbox}
+
+\subsubsection{2. Elevation of Boiling Point ($\Delta T_b$)}
+At boiling point, vapour pressure equals external atmospheric pressure ($1\,\si{atm}$). Addition of non-volatile solute lowers vapour pressure; hence the solution must be heated to a higher temperature $T_b > T_b^\circ$:
+\begin{equation}
+  \Delta T_b = T_b - T_b^\circ = K_b \cdot m = \frac{1000 K_b w_B}{M_B w_A}
+\end{equation}
+\textbf{Thermodynamic Derivation of Ebullioscopic Constant ($K_b$):}
+From the Clausius-Clapeyron relation connecting chemical potential and vapour pressure:
+\begin{equation}
+  \ln\left(\frac{P^\circ}{P}\right) = \frac{\Delta H_{\text{vap}}}{R}\left(\frac{1}{T_b^\circ} - \frac{1}{T_b}\right) \approx \frac{\Delta H_{\text{vap}} \Delta T_b}{R (T_b^\circ)^2}
+\end{equation}
+Since $\ln(P^\circ / P) = -\ln(1 - x_B) \approx x_B \approx \frac{m M_A}{1000}$:
+\begin{equation}
+  \frac{m M_A}{1000} = \frac{\Delta H_{\text{vap}} \Delta T_b}{R (T_b^\circ)^2} \implies \Delta T_b = \left[\frac{R (T_b^\circ)^2 M_A}{1000 \Delta H_{\text{vap}}}\right] m
+\end{equation}
+\begin{equation}
+  K_b = \frac{R (T_b^\circ)^2 M_A}{1000 \Delta H_{\text{vap}}} = \frac{R (T_b^\circ)^2}{1000 l_v} \quad (l_v = \text{latent heat of vaporization per gram})
+\end{equation}
+For water: $K_b = 0.512 \approx 0.52\,\si{K.kg.mol^{-1}}$.
+
+\subsubsection{3. Depression of Freezing Point ($\Delta T_f$)}
+Freezing point is the temperature at which the vapour pressure of the liquid solvent equals the vapour pressure of its solid phase. Lowering vapour pressure depresses the freezing point:
+\begin{equation}
+  \Delta T_f = T_f^\circ - T_f = K_f \cdot m = \frac{1000 K_f w_B}{M_B w_A}
+\end{equation}
+\textbf{Thermodynamic Derivation of Cryoscopic Constant ($K_f$):}
+\begin{equation}
+  K_f = \frac{R (T_f^\circ)^2 M_A}{1000 \Delta H_{\text{fusion}}} = \frac{R (T_f^\circ)^2}{1000 l_f} \quad (l_f = \text{latent heat of fusion per gram})
+\end{equation}
+For water: $K_f = 1.86\,\si{K.kg.mol^{-1}}$. Note that $K_f / K_b = 1.86 / 0.52 \approx 3.58$ (freezing point depression is over 3.5 times more sensitive than boiling point elevation!).
+
+\begin{usecasebox}[NEET High-Yield Application: Automotive Antifreeze Formulation]
+\textbf{Problem Statement:} An automobile radiator requires protection against freezing down to $-15.0\,^\circ\mathrm{C}$ during harsh winter operations. Calculate the mass of ethylene glycol ($\mathrm{C_2H_6O_2}$, molar mass $M = 62.07\,\si{g\cdot mol^{-1}}$) that must be added to $5.00\,\si{kg}$ of water ($K_f = 1.86\,\si{K\cdot kg\cdot mol^{-1}}$).
+\begin{enumerate}
+  \item \textbf{Target Freezing Point Depression:}
+  \begin{equation*}
+    \Delta T_f = T_f^\circ - T_f = 0.00\,^\circ\mathrm{C} - (-15.0\,^\circ\mathrm{C}) = 15.0\,\si{K}
+  \end{equation*}
+  \item \textbf{Required Molality of Glycol:}
+  \begin{equation*}
+    m = \frac{\Delta T_f}{K_f} = \frac{15.0\,\si{K}}{1.86\,\si{K\cdot kg\cdot mol^{-1}}} = 8.065\,\si{mol\cdot kg^{-1}}
+  \end{equation*}
+  \item \textbf{Mass of Ethylene Glycol Required:}
+  \begin{equation*}
+    w_{\mathrm{glycol}} = m \times W_{\mathrm{water}}\text{ (in kg)} \times M_{\mathrm{glycol}} = 8.065\,\si{mol\cdot kg^{-1}} \times 5.00\,\si{kg} \times 62.07\,\si{g\cdot mol^{-1}} \approx 2503\,\si{g} = 2.50\,\si{kg}
+  \end{equation*}
+\end{enumerate}
+\textbf{Clinical / Engineering Context:} In addition to lowering the freezing point, the non-volatile ethylene glycol simultaneously elevates the boiling point ($\Delta T_b = K_b \cdot m = 0.52 \times 8.065 \approx 4.19\,\si{K}$), preventing engine coolant boilover during high-temperature engine cycling.
+\end{usecasebox}
+
+\subsubsection{4. Osmotic Pressure ($\Pi$)}
+Osmosis is the spontaneous net flow of solvent molecules through a semi-permeable membrane from pure solvent into solution. Osmotic pressure $\Pi$ is the excess hydrostatic pressure that must be applied to the solution to completely arrest this solvent influx:
+\begin{equation}
+  \Pi = C R T = \left(\frac{n_B}{V}\right) R T = \frac{w_B R T}{M_B V} \implies M_B = \frac{w_B R T}{\Pi V}
+\end{equation}
+\textbf{Why Osmotic Pressure is Superior for Macromolecules (Proteins, DNA, Polymers):}
+\begin{enumerate}
+  \item High molecular mass ($M_B \sim 10^4 - 10^6\,\si{g.mol^{-1}}$) produces immeasurably tiny molalities ($m \sim 10^{-4}\,\si{m}$), causing negligible $\Delta T_b$ ($< 10^{-4}\,\si{K}$), but yielding easily measurable osmotic pressure ($\Pi = 10^{-4} \times 0.0821 \times 300 \approx 2.5 \times 10^{-3}\,\si{atm} \approx 26\,\si{mm\ Hg}$).
+  \item Measurement occurs at ambient room temperature, preventing thermal denaturation of delicate biological polymers.
+\end{enumerate}
+
+\subsection{Abnormal Molar Masses \& van 't Hoff Factor ($i$)}
+When a solute undergoes dissociation or association in solution, colligative properties deviate from theoretical ideal values:
+\begin{equation}
+  i = \frac{\text{Experimental / Observed Colligative Property}}{\text{Calculated / Normal Colligative Property}} = \frac{M_{\text{theoretical / normal}}}{M_{\text{observed / abnormal}}}
+\end{equation}
+
+\begin{formulabox}[Derivation of Degree of Dissociation ($\alpha_{\text{diss}}$) and Association ($\alpha_{\text{assoc}}$)]
+\begin{itemize}
+  \item \textbf{Case 1: Dissociation ($A \rightleftharpoons n B$):}
+  Let 1 mole of electrolyte be dissolved with degree of dissociation $\alpha$:
+  \begin{equation}
+    \begin{array}{lcccc}
+      & A & \rightleftharpoons & n B & \\
+      \text{Initial moles:} & 1 & & 0 & \\
+      \text{Equilibrium moles:} & 1 - \alpha & & n\alpha & \implies \text{Total moles} = 1 - \alpha + n\alpha = 1 + (n - 1)\alpha
+    \end{array}
+  \end{equation}
+  \begin{equation}
+    i = \frac{1 + (n - 1)\alpha}{1} \implies \alpha_{\text{diss}} = \frac{i - 1}{n - 1}
+  \end{equation}
+  \item \textbf{Case 2: Association / Polymerization ($n A \rightleftharpoons A_n$):}
+  Let 1 mole of solute undergo association to an $n$-mer with degree of association $\alpha$:
+  \begin{equation}
+    \begin{array}{lcccc}
+      & n A & \rightleftharpoons & A_n & \\
+      \text{Initial moles:} & 1 & & 0 & \\
+      \text{Equilibrium moles:} & 1 - \alpha & & \frac{\alpha}{n} & \implies \text{Total moles} = 1 - \alpha + \frac{\alpha}{n} = 1 - \left(1 - \frac{1}{n}\right)\alpha
+    \end{array}
+  \end{equation}
+  \begin{equation}
+    i = 1 - \left(1 - \frac{1}{n}\right)\alpha \implies \alpha_{\text{assoc}} = \frac{1 - i}{1 - \frac{1}{n}}
+  \end{equation}
+  For dimerization of acetic acid in benzene ($n = 2$): $i = 1 - \frac{\alpha}{2} \implies$ if $100\%$ dimerized ($\alpha=1$), $i = 0.5$ and observed molar mass is double ($120\,\si{g.mol^{-1}}$ vs $60\,\si{g.mol^{-1}}$).
+\end{itemize}
+\end{formulabox}
+
+% =========================================================================
+% SECTION 7: REDOX REACTIONS \& ELECTROCHEMISTRY
+% =========================================================================
+\section{Redox Reactions \& Electrochemistry (Unit 7)}
+
+\subsection{Galvanic Cells \& The Daniell Cell}
+A galvanic cell converts spontaneous chemical redox free energy into electrical work:
+\begin{equation}
+  \mathrm{Zn(s)} + \mathrm{Cu^{2+}(aq)} \longrightarrow \mathrm{Zn^{2+}(aq)} + \mathrm{Cu(s)}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Anode (Oxidation, Negative Terminal):} $\mathrm{Zn(s)} \to \mathrm{Zn^{2+}(aq)} + 2e^-$, $E^\circ_{\mathrm{Zn^{2+}/Zn}} = -0.76\,\si{V}$.
+  \item \textbf{Cathode (Reduction, Positive Terminal):} $\mathrm{Cu^{2+}(aq)} + 2e^- \to \mathrm{Cu(s)}$, $E^\circ_{\mathrm{Cu^{2+}/Cu}} = +0.34\,\si{V}$.
+  \item \textbf{Cell Representation:} $\mathrm{Zn(s)} \mid \mathrm{Zn^{2+}(aq)} \parallel \mathrm{Cu^{2+}(aq)} \mid \mathrm{Cu(s)}$.
+  \item \textbf{Salt Bridge Functions:}
+  \begin{enumerate}
+    \item Maintains electrical neutrality in both half-cells by migrating counter-ions ($\mathrm{K}^+$ and $\mathrm{Cl}^-$ or $\mathrm{NO_3^-}$).
+    \item Prevents physical mixing of the two electrolytic solutions.
+    \item Minimizes liquid junction potential. Electrolyte chosen ($\mathrm{KCl, KNO_3, NH_4NO_3}$) has nearly identical transport numbers for cation and anion ($v_+ \approx v_-$).
+  \end{enumerate}
+\end{itemize}
+
+\subsection{Standard Hydrogen Electrode \& Electrochemical Series}
+The Standard Hydrogen Electrode (SHE) is the universal reference standard assigned $E^\circ = 0.000\,\si{V}$ at all temperatures:
+\begin{equation}
+  \mathrm{Pt(s)} \mid \mathrm{H_2(g, 1\,bar)} \mid \mathrm{H^+(aq, 1\,M)}, \qquad 2\mathrm{H^+} + 2e^- \rightleftharpoons \mathrm{H_2(g)}
+\end{equation}
+\textbf{Standard Cell EMF ($E_{\text{cell}}^\circ$):}
+\begin{equation}
+  E_{\text{cell}}^\circ = E_{\text{cathode}}^\circ - E_{\text{anode}}^\circ = E_{\text{right}}^\circ - E_{\text{left}}^\circ \quad (\text{using standard reduction potentials})
+\end{equation}
+
+\subsection{Thermodynamic Derivation of the Nernst Equation}
+The maximum non-expansion electrical work delivered by a galvanic cell at constant $T, P$ equals the decrease in Gibbs free energy:
+\begin{equation}
+  w_{\text{elec}} = q_{\text{charge}} \times E_{\text{cell}} = (n F) E_{\text{cell}} \implies \Delta_r G = -w_{\text{elec}} = -n F E_{\text{cell}}
+\end{equation}
+Under standard state conditions: $\Delta_r G^\circ = -n F E_{\text{cell}}^\circ$.
+Substituting these relations into the fundamental thermodynamic equation $\Delta_r G = \Delta_r G^\circ + R T \ln Q$:
+\begin{equation}
+  -n F E_{\text{cell}} = -n F E_{\text{cell}}^\circ + R T \ln Q
+\end{equation}
+Dividing throughout by $-n F$:
+\begin{equation}
+  E_{\text{cell}} = E_{\text{cell}}^\circ - \frac{R T}{n F}\ln Q = E_{\text{cell}}^\circ - \frac{2.303 R T}{n F}\log_{10} Q
+\end{equation}
+Substituting universal constants $R = 8.314\,\si{J.mol^{-1}.K^{-1}}$, $F = 96485\,\si{C.mol^{-1}}$, and $T = 298.15\,\si{K}$:
+\begin{equation}
+  E_{\text{cell}} = E_{\text{cell}}^\circ - \frac{0.0591}{n}\log_{10} Q
+\end{equation}
+
+\begin{formulabox}[Nernst Equation Special Cases \& Thermodynamic Properties]
+\begin{itemize}
+  \item \textbf{Dynamic Equilibrium ($E_{\text{cell}} = 0, Q = K_c$):}
+  \begin{equation}
+    0 = E_{\text{cell}}^\circ - \frac{0.0591}{n}\log_{10} K_c \implies \log_{10} K_c = \frac{n E_{\text{cell}}^\circ}{0.0591}
+  \end{equation}
+  \item \textbf{Concentration Cells (Identical Electrodes, Different Concentrations $C_1 < C_2$):}
+  Since standard potentials are identical, $E_{\text{cell}}^\circ = 0$:
+  \begin{equation}
+    E_{\text{cell}} = -\frac{0.0591}{n}\log_{10}\left(\frac{C_1}{C_2}\right) = \frac{0.0591}{n}\log_{10}\left(\frac{C_2}{C_1}\right) \quad (\text{Spontaneous if } C_2 > C_1)
+  \end{equation}
+  \item \textbf{Temperature Coefficient of EMF and Entropy of Cell Reaction:}
+  \begin{equation}
+    \left(\frac{\partial \Delta G}{\partial T}\right)_P = -\Delta S \implies \Delta S = n F \left(\frac{\partial E_{\text{cell}}}{\partial T}\right)_P
+  \end{equation}
+  \begin{equation}
+    \Delta H = \Delta G + T \Delta S = -n F E_{\text{cell}} + n F T \left(\frac{\partial E_{\text{cell}}}{\partial T}\right)_P
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\subsection{Electrolytic Conductance \& Kohlrausch's Law}
+\begin{itemize}
+  \item \textbf{Conductivity ($\kappa$):} Conductance of a unit volume ($1\,\si{cm^3}$ or $1\,\si{m^3}$) of electrolytic solution:
+  \begin{equation}
+    R = \rho \frac{l}{A} \implies G = \frac{1}{R} = \kappa \frac{A}{l} \implies \kappa = \frac{1}{R}\left(\frac{l}{A}\right) = G \cdot G^*
+  \end{equation}
+  where $G^* = l/A$ is the cell constant (units $\si{cm^{-1}}$ or $\si{m^{-1}}$).
+  \item \textbf{Molar Conductivity ($\Lambda_m$):} Conductance of volume of solution containing 1 mole of electrolyte:
+  \begin{equation}
+    \Lambda_m = \frac{\kappa \times 1000}{M\text{ (in Molarity)}} \quad (\text{in }\si{S.cm^2.mol^{-1}}) = \frac{\kappa}{1000 \times M} \quad (\text{in }\si{S.m^2.mol^{-1}})
+  \end{equation}
+  \item \textbf{Dilution Effects:}
+  \begin{itemize}
+    \item \textbf{Conductivity ($\kappa$) Decreases with Dilution:} Dilution reduces the number of current-carrying ions per unit volume.
+    \item \textbf{Molar Conductivity ($\Lambda_m$) Increases with Dilution:} Volume containing 1 mole expands, overcompensating the decrease in $\kappa$.
+  \end{itemize}
+  \item \textbf{Strong vs Weak Electrolytes:}
+  \begin{itemize}
+    \item \textbf{Strong Electrolytes:} Obey Debye-Hückel-Onsager equation: $\Lambda_m = \Lambda_m^\circ - A\sqrt{C}$. Plot of $\Lambda_m$ vs $\sqrt{C}$ is linear and can be extrapolated to $C = 0$ to obtain limiting molar conductivity $\Lambda_m^\circ$.
+    \item \textbf{Weak Electrolytes ($\mathrm{CH_3COOH}$):} $\Lambda_m$ increases steeply near infinite dilution; cannot be obtained by graphical extrapolation.
+  \end{itemize}
+\end{itemize}
+
+\begin{formulabox}[Kohlrausch's Law of Independent Migration of Ions]
+At infinite dilution, each ion migrates independently of its co-ion and makes a definite contribution to the total molar conductivity:
+\begin{equation}
+  \Lambda_m^\circ = \nu_+ \lambda_+^\circ + \nu_- \lambda_-^\circ
+\end{equation}
+\textbf{High-Yield Applications of Kohlrausch's Law:}
+\begin{enumerate}
+  \item \textbf{Limiting Molar Conductivity of Weak Electrolytes ($\mathrm{CH_3COOH}$):}
+  \begin{equation}
+    \Lambda_m^\circ(\mathrm{CH_3COOH}) = \Lambda_m^\circ(\mathrm{CH_3COONa}) + \Lambda_m^\circ(\mathrm{HCl}) - \Lambda_m^\circ(\mathrm{NaCl})
+  \end{equation}
+  \item \textbf{Degree of Dissociation of Weak Electrolyte ($\alpha$):}
+  \begin{equation}
+    \alpha = \frac{\Lambda_m}{\Lambda_m^\circ} \implies K_a = \frac{C \alpha^2}{1 - \alpha} = \frac{C \left(\frac{\Lambda_m}{\Lambda_m^\circ}\right)^2}{1 - \frac{\Lambda_m}{\Lambda_m^\circ}} = \frac{C \Lambda_m^2}{\Lambda_m^\circ(\Lambda_m^\circ - \Lambda_m)}
+  \end{equation}
+  \item \textbf{Solubility and $K_{sp}$ of Sparingly Soluble Salts ($\mathrm{AgCl, BaSO_4}$):}
+  \begin{equation}
+    \Lambda_m^\circ = \frac{1000 \kappa_{\text{salt}}}{S} \implies S = \frac{1000 \kappa_{\text{salt}}}{\Lambda_m^\circ} \implies K_{sp} = S^2
+  \end{equation}
+  where $\kappa_{\text{salt}} = \kappa_{\text{solution}} - \kappa_{\text{water}}$.
+\end{enumerate}
+\end{formulabox}
+
+\subsection{Electrolysis \& Faraday's Laws}
+\begin{itemize}
+  \item \textbf{Faraday's First Law:} Mass of substance deposited or liberated at any electrode is directly proportional to the total electrical charge passed:
+  \begin{equation}
+    w = Z \cdot Q = Z \cdot I \cdot t = \left(\frac{E}{96500}\right) I \cdot t = \left(\frac{M}{n F}\right) I \cdot t
+  \end{equation}
+  where $Z = \frac{E}{F}$ is the electrochemical equivalent, and $E = \frac{M}{n}$ is equivalent mass.
+  \item \textbf{Faraday's Second Law:} When the identical quantity of electricity is passed through different electrolytes connected in series, masses deposited are proportional to their chemical equivalent masses:
+  \begin{equation}
+    \frac{w_1}{w_2} = \frac{E_1}{E_2}
+  \end{equation}
+  \item \textbf{Preferential Discharge Traps:}
+  \begin{itemize}
+    \item \textbf{Molten $\mathrm{NaCl}$:} Cathode: $\mathrm{Na^+ + e^- \to Na(l)}$; Anode: $\mathrm{2Cl^- \to Cl_2(g) + 2e^-}$.
+    \item \textbf{Aqueous $\mathrm{NaCl}$:} At cathode, $\mathrm{H_2O}$ reduction ($E^\circ = -0.83\,\si{V}$) occurs preferentially over $\mathrm{Na^+}$ ($E^\circ = -2.71\,\si{V}$) $\implies \mathrm{H_2(g)}$ evolved. At anode, oxidation of $\mathrm{Cl^-}$ to $\mathrm{Cl_2(g)}$ occurs preferentially over $\mathrm{O_2}$ evolution due to high \textbf{oxygen overpotential} on Pt.
+    \item \textbf{Aqueous $\mathrm{CuSO_4}$ (Pt electrodes):} Cathode: $\mathrm{Cu^{2+} + 2e^- \to Cu(s)}$; Anode: $\mathrm{2H_2O \to O_2(g) + 4H^+ + 4e^-}$.
+    \item \textbf{Aqueous $\mathrm{CuSO_4}$ (Cu electrodes):} Cathode: Cu deposition; Anode: Cu dissolution ($\mathrm{Cu \to Cu^{2+} + 2e^-}$); concentration remains constant.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Commercial Batteries \& Mechanism of Corrosion}
+\begin{conceptbox}[Batteries \& Corrosion Reaction Architectures]
+\begin{itemize}
+  \item \textbf{Lead-Acid Storage Battery (Secondary Reversible Cell):}
+  \begin{itemize}
+    \item \textbf{Discharging Half-Reactions:}
+    \begin{align}
+      \text{Anode: } &\mathrm{Pb(s)} + \mathrm{SO_4^{2-}(aq)} \longrightarrow \mathrm{PbSO_4(s)} + 2e^- \\
+      \text{Cathode: } &\mathrm{PbO_2(s)} + \mathrm{SO_4^{2-}(aq)} + 4\mathrm{H^+(aq)} + 2e^- \longrightarrow \mathrm{PbSO_4(s)} + 2\mathrm{H_2O(l)} \\
+      \text{Net Discharge: } &\mathrm{Pb(s)} + \mathrm{PbO_2(s)} + 2\mathrm{H_2SO_4(aq)} \longrightarrow 2\mathrm{PbSO_4(s)} + 2\mathrm{H_2O(l)}
+    \end{align}
+    Density of $\mathrm{H_2SO_4}$ drops from $1.30\,\si{g.cm^{-3}}$ to $< 1.20\,\si{g.cm^{-3}}$. Recharging reverses all signs.
+  \end{itemize}
+  \item \textbf{Hydrogen-Oxygen Fuel Cell:}
+  \begin{equation}
+    \text{Anode: } 2\mathrm{H_2} + 4\mathrm{OH^-} \to 4\mathrm{H_2O} + 4e^-, \qquad \text{Cathode: } \mathrm{O_2} + 2\mathrm{H_2O} + 4e^- \to 4\mathrm{OH^-}
+  \end{equation}
+  Theoretical thermodynamic efficiency: $\eta = \frac{\Delta G^\circ}{\Delta H^\circ} \times 100\% \approx 70\%-75\%$ (far exceeds thermal engines).
+  \item \textbf{Electrochemical Mechanism of Rusting of Iron:}
+  \begin{align}
+    \text{Anodic site: } &\mathrm{Fe(s)} \longrightarrow \mathrm{Fe^{2+}(aq)} + 2e^- \quad (E^\circ = -0.44\,\si{V}) \\
+    \text{Cathodic site: } &\mathrm{O_2(g)} + 4\mathrm{H^+(aq)} + 4e^- \longrightarrow 2\mathrm{H_2O(l)} \quad (E^\circ = +1.23\,\si{V}) \\
+    \text{Rust Formation: } &4\mathrm{Fe^{2+}} + \mathrm{O_2} + 4\mathrm{H_2O} + 2x\mathrm{H_2O} \longrightarrow 2\mathrm{Fe_2O_3}\cdot x\mathrm{H_2O(s)} + 8\mathrm{H^+}
+  \end{align}
+  Prevented by galvanization (sacrificial zinc coating: $E^\circ_{\mathrm{Zn^{2+}/Zn}} = -0.76\,\si{V} < E^\circ_{\mathrm{Fe^{2+}/Fe}} = -0.44\,\si{V}$).
+\end{itemize}
+\end{conceptbox}
+
+% =========================================================================
+% SECTION 8: CHEMICAL KINETICS
+% =========================================================================
+\section{Chemical Kinetics (Unit 8)}
+
+\subsection{Reaction Rate, Rate Laws \& Order vs Molecularity}
+For a general reaction:
+\begin{equation}
+  aA + bB \longrightarrow cC + dD
+\end{equation}
+The instantaneous stoichiometric rate of reaction is:
+\begin{equation}
+  r = -\frac{1}{a}\frac{d[A]}{dt} = -\frac{1}{b}\frac{d[B]}{dt} = +\frac{1}{c}\frac{d[C]}{dt} = +\frac{1}{d}\frac{d[D]}{dt}
+\end{equation}
+\textbf{Experimental Differential Rate Law:}
+\begin{equation}
+  r = k [A]^x [B]^y
+\end{equation}
+where $k$ is the specific rate constant, $x$ is the order with respect to $A$, $y$ is the order with respect to $B$, and $n = x + y$ is the overall reaction order.
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{p{3.5cm} p{5.5cm} p{5.5cm}}
+\toprule
+\textbf{Feature / Property} & \textbf{Order of Reaction} & \textbf{Molecularity of Reaction} \\
+\midrule
+\textbf{Definition} & Sum of powers of reactant concentrations in experimentally determined rate law. & Number of reacting species (atoms, ions, molecules) colliding simultaneously in an elementary step. \\
+\textbf{Determination} & Strictly experimental parameter; cannot be deduced from balanced equation. & Theoretical property deduced from proposed elementary reaction mechanism. \\
+\textbf{Allowed Values} & Can be zero, positive, negative, or fractional ($0, 1, 2, 3, 1/2, -1$). & Always a positive non-zero integer ($1, 2, 3$). Cannot be zero or fractional! \\
+\textbf{Upper Bound} & Can exceed 3. & Rarely exceeds 3 due to vanishing statistical probability of ternary simultaneous collisions. \\
+\textbf{Complex Reactions} & Applicable to both elementary and overall complex reactions. & Meaningless for a complex multistep reaction; applies strictly to individual elementary steps. \\
+\bottomrule
+\end{tabularx}
+\caption{Systematic Comparison: Order of Reaction vs Molecularity.}
+\end{table}
+
+\textbf{Units of Rate Constant ($k$):}
+\begin{equation}
+  \text{Units of } k = \left(\si{mol.L^{-1}}\right)^{1 - n} \si{s^{-1}} = \left(\si{atm}\right)^{1 - n} \si{s^{-1}}
+\end{equation}
+\begin{itemize}
+  \item Zero-order ($n=0$): $\si{mol.L^{-1}.s^{-1}}$.
+  \item First-order ($n=1$): $\si{s^{-1}}$ (completely independent of concentration units!).
+  \item Second-order ($n=2$): $\si{L.mol^{-1}.s^{-1}}$.
+\end{itemize}
+
+\subsection{Integrated Rate Equations: Full Calculus Derivations}
+
+\subsubsection{1. Zero-Order Kinetics}
+For $A \to \text{Products}$, rate is independent of $[A]$:
+\begin{equation}
+  -\frac{d[A]}{dt} = k [A]^0 = k \implies d[A] = -k dt
+\end{equation}
+Integrating from $t = 0$ ($[A] = [A]_0$) to time $t$ ($[A] = [A]_t$):
+\begin{equation}
+  \int_{[A]_0}^{[A]_t} d[A] = -k \int_0^t dt \implies [A]_t - [A]_0 = -kt \implies [A]_t = [A]_0 - kt
+\end{equation}
+\textbf{Half-Life ($t_{1/2}$) and Completion Time ($t_{100\%}$):}
+At $t = t_{1/2}$, $[A]_t = \frac{[A]_0}{2}$:
+\begin{equation}
+  \frac{[A]_0}{2} = [A]_0 - k t_{1/2} \implies t_{1/2} = \frac{[A]_0}{2k} \quad (\text{Half-life is directly proportional to initial concentration!})
+\end{equation}
+At $t = t_{100\%}$, $[A]_t = 0$:
+\begin{equation}
+  0 = [A]_0 - k t_{100\%} \implies t_{100\%} = \frac{[A]_0}{k} = 2 t_{1/2}
+\end{equation}
+Zero-order reactions proceed to complete termination in a finite time.
+\textbf{Examples:} Photochemical synthesis of $\mathrm{HCl}$ over water ($\mathrm{H_2 + Cl_2 \xrightarrow{h\nu} 2HCl}$); decomposition of $\mathrm{NH_3}$ on hot Pt/W surface at high pressure.
+
+\subsubsection{2. First-Order Kinetics}
+For $A \to \text{Products}$:
+\begin{equation}
+  -\frac{d[A]}{dt} = k [A] \implies \frac{d[A]}{[A]} = -k dt
+\end{equation}
+Integrating from $t = 0$ ($[A] = [A]_0$) to time $t$ ($[A] = [A]_t$):
+\begin{equation}
+  \int_{[A]_0}^{[A]_t} \frac{d[A]}{[A]} = -k \int_0^t dt \implies \ln\left(\frac{[A]_t}{[A]_0}\right) = -kt \implies [A]_t = [A]_0 e^{-kt}
+\end{equation}
+\begin{equation}
+  k = \frac{1}{t}\ln\left(\frac{[A]_0}{[A]_t}\right) = \frac{2.303}{t}\log_{10}\left(\frac{[A]_0}{[A]_t}\right) = \frac{2.303}{t}\log_{10}\left(\frac{a}{a - x}\right)
+\end{equation}
+\textbf{Half-Life ($t_{1/2}$):}
+At $t = t_{1/2}$, $[A]_t = \frac{[A]_0}{2}$:
+\begin{equation}
+  k = \frac{2.303}{t_{1/2}}\log_{10}(2) \implies t_{1/2} = \frac{\ln 2}{k} = \frac{0.69315}{k} \approx \frac{0.693}{k}
+\end{equation}
+The half-life of a first-order reaction is \textbf{strictly independent of initial reactant concentration}.
+
+\begin{ncertbox}[NCERT Paradigm: Fractional Lifetimes of First-Order Reactions]
+For any first-order process ($[A]_t = [A]_0 e^{-kt}$), each half-life interval reduces the remaining reactant concentration by exactly $50\%$, regardless of initial amount. Rapid shortcuts for NEET:
+\begin{align*}
+  t_{75\%} &= \frac{2.303}{k}\log_{10}\left(\frac{100}{25}\right) = \frac{2.303}{k}\log_{10}(4) = 2 \times \frac{0.693}{k} = 2 t_{1/2} \\
+  t_{87.5\%} &= \frac{2.303}{k}\log_{10}\left(\frac{100}{12.5}\right) = \frac{2.303}{k}\log_{10}(8) = 3 t_{1/2} \\
+  t_{93.75\%} &= 4 t_{1/2} \quad (\text{remaining fraction } = 6.25\%) \\
+  t_{99\%} &= \frac{2.303}{k}\log_{10}(100) = \frac{2 \times 2.303}{k} \approx \frac{4.606}{k} \approx 6.64 t_{1/2} \\
+  t_{99.9\%} &= \frac{2.303}{k}\log_{10}\left(\frac{100}{0.1}\right) = \frac{3 \times 2.303}{k} \approx \frac{6.909}{k} \approx 10 t_{1/2}
+\end{align*}
+\textbf{NCERT Benchmark Conclusion:} The time required for $99.9\%$ completion of a first-order reaction is approximately $10$ times its half-life ($t_{99.9\%} \approx 10 t_{1/2}$), while $t_{99\%} \approx 2 t_{90\%}$.
+\end{ncertbox}
+\textbf{Gas Phase First-Order Decomposition ($A(g) \to B(g) + C(g)$):}
+If initial pressure of $A$ is $P_i$ and total pressure at time $t$ is $P_t$:
+\begin{equation}
+  P_t = (P_i - p) + p + p = P_i + p \implies p = P_t - P_i \implies P_A = P_i - p = 2P_i - P_t
+\end{equation}
+\begin{equation}
+  k = \frac{2.303}{t}\log_{10}\left(\frac{P_i}{2P_i - P_t}\right)
+\end{equation}
+
+\subsubsection{3. Pseudo-First-Order Kinetics}
+Reactions of higher order that behave kinetically as first-order when one reactant is present in large stoichiometric excess:
+\begin{itemize}
+  \item \textbf{Acid-Catalyzed Ester Hydrolysis:}
+  \begin{equation}
+    \mathrm{CH_3COOC_2H_5} + \mathrm{H_2O} \xrightarrow{\mathrm{H^+}} \mathrm{CH_3COOH} + \mathrm{C_2H_5OH}
+  \end{equation}
+  Because water is solvent ($[\mathrm{H_2O}] \approx 55.5\,\si{M} \approx \text{constant}$):
+  \begin{equation}
+    r = k' [\mathrm{ester}][\mathrm{H_2O}] = k [\mathrm{ester}], \qquad k = k' [\mathrm{H_2O}]
+  \end{equation}
+  Tracked by titrating aliquots with standard $\mathrm{NaOH}$: $k = \frac{2.303}{t}\log_{10}\left(\frac{V_\infty - V_0}{V_\infty - V_t}\right)$.
+  \item \textbf{Inversion of Cane Sugar (Polarimetry):}
+  \begin{equation}
+    \mathrm{C_{12}H_{22}O_{11}} + \mathrm{H_2O} \xrightarrow{\mathrm{H^+}} \mathrm{C_6H_{12}O_6\text{ (D-glucose)}} + \mathrm{C_6H_{12}O_6\text{ (D-fructose)}}
+  \end{equation}
+  The optical rotation changes from dextro ($+66.5^\circ$) to levo ($-39.7^\circ$). Kinetics tracked via polarimeter angle of rotation:
+  \begin{equation}
+    k = \frac{2.303}{t}\log_{10}\left(\frac{r_0 - r_\infty}{r_t - r_\infty}\right)
+  \end{equation}
+\end{itemize}
+
+\subsection{Temperature Dependence: The Arrhenius Equation}
+Svante Arrhenius (1889) derived the exponential relationship between reaction rate constant and absolute temperature:
+\begin{equation}
+  k = A e^{-E_a / R T}
+\end{equation}
+where $A$ is the pre-exponential factor (frequency factor), $E_a$ is the activation energy, and $e^{-E_a / R T}$ represents the Boltzmann fraction of molecular collisions having kinetic energy $\ge E_a$.
+\begin{equation}
+  \ln k = \ln A - \frac{E_a}{R T} \iff \log_{10} k = \log_{10} A - \frac{E_a}{2.303 R T}
+\end{equation}
+An Arrhenius plot of $\log_{10} k$ versus $\frac{1}{T}$ produces a straight line:
+\begin{equation}
+  \text{Slope} = -\frac{E_a}{2.303 R}, \qquad y\text{-intercept} = \log_{10} A
+\end{equation}
+\textbf{Two-Temperature Comparative Formulation:}
+\begin{equation}
+  \log_{10}\left(\frac{k_2}{k_1}\right) = \frac{E_a}{2.303 R}\left[\frac{T_2 - T_1}{T_1 T_2}\right] = \frac{E_a}{2.303 R}\left[\frac{1}{T_1} - \frac{1}{T_2}\right]
+\end{equation}
+
+\subsection{Collision Theory \& Catalysis Kinetics}
+According to Max Trautz and William Lewis:
+\begin{equation}
+  k = P \cdot Z_{AB} \cdot e^{-E_a / R T}
+\end{equation}
+where $Z_{AB}$ is the collision frequency ($10^{25} - 10^{28}\,\si{collisions.s^{-1}.cm^{-3}}$), and $P$ is the steric or orientation factor representing the fraction of collisions occurring with proper spatial orientation.
+
+\begin{conceptbox}[Catalysis Kinetics \& Activation Energy Reduction]
+A catalyst accelerates reaction rate by providing an alternative reaction pathway involving an activated complex with a substantially lower activation energy $E_a'$ ($E_a' < E_a$):
+\begin{equation}
+  \frac{k_{\text{cat}}}{k_{\text{uncat}}} = \frac{A e^{-E_a' / R T}}{A e^{-E_a / R T}} = e^{(E_a - E_a') / R T} = e^{\Delta E_a / R T}
+\end{equation}
+\textbf{Critical Examination Invariants:}
+\begin{itemize}
+  \item A catalyst reduces activation energy for \textbf{both forward and backward reactions by the identical amount}: $\Delta E_{a,f} = \Delta E_{a,b}$.
+  \item A catalyst does \textbf{NOT} alter the overall enthalpy of reaction: $\Delta_r H = E_{a,f} - E_{a,b} = \text{constant}$.
+  \item A catalyst does \textbf{NOT} alter the equilibrium constant $K_{\text{eq}}$ or equilibrium composition.
+  \item A catalyst does \textbf{NOT} alter Gibbs free energy $\Delta_r G$ or reaction spontaneity.
+\end{itemize}
+\end{conceptbox}
+
+\end{document}

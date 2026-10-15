@@ -1,0 +1,1406 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{NEET UG 2027: Organic Chemistry Master Theory}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Chemistry Chapter Notes}}
+
+\begin{document}
+
+% Title Header Banner
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Chapter Theory}}\\[6pt]
+  {\Large \textbf{Organic Chemistry: Electronic Effects, Reaction Mechanisms \& Biomolecules}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Revised NMC Syllabus}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+\section{NMC Syllabus Demarcation \& Zero-Tolerance Deletions}
+
+\begin{conceptbox}[Curriculum Alignment \& Pedagogical Scope]
+The revised National Medical Commission (NMC) NEET UG 2027 Chemistry syllabus demands a rigorous, mechanistic understanding of organic transformations rather than superficial rote memorization. The curriculum is built upon three integrated pillars:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{General Organic Chemistry (GOC) \& Reaction Intermediates:} Quantitative and qualitative evaluation of electron displacement effects (inductive, electromeric, resonance, hyperconjugation, and aromaticity) and the structural thermodynamics of transient intermediates (carbocations, carbanions, free radicals, carbenes, and arynes).
+  \item \textbf{Systematic Functional Group Reaction Pathways:} Exhaustive mechanism sequences spanning aliphatic/aromatic hydrocarbons, haloalkanes/haloarenes, oxygenated functions (alcohols, phenols, ethers, aldehydes, ketones, carboxylic acids), and nitrogenous compounds (amines, diazonium salts).
+  \item \textbf{Biomolecules of Life:} Structural stereochemistry of carbohydrates, amino acids, peptide linkages, primary through quaternary protein architecture, nucleic acid Watson-Crick geometry, vitamins, and hormones.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{trapbox}[Zero-Tolerance NMC Deleted Topics Alert: Do Not Study!]
+To optimize preparation efficiency and adhere strictly to the regulatory mandate issued by the NMC for NEET UG 2024--2027, the following entire domains are \textbf{permanently excluded} from the examination:
+\begin{itemize}
+  \item \textbf{Polymers (Entire Chapter Deleted):} Classification of polymers; addition and condensation polymerization; natural and synthetic rubber, vulcanization; polythene (LDPE/HDPE), Teflon, PAN, Nylon-6, Nylon-6,6, Terylene/Dacron, Bakelite, melamine-formaldehyde, Buna-S, Buna-N; biodegradable polymers (PHBV, Nylon-2-Nylon-6).
+  \item \textbf{Chemistry in Everyday Life (Entire Chapter Deleted):} Drugs and pharmacodynamics; analgesics (narcotic and non-narcotic); tranquilizers, antiseptics (Dettol, Bithionol), disinfectants, antibiotics, antacids, antihistamines; artificial sweeteners (saccharin, aspartame, alitame, sucralose); food preservatives; soaps and synthetic detergents (anionic, cationic, non-ionic).
+\end{itemize}
+Candidates must \textbf{not} allocate study time to these deleted units. Any occurrence of these keywords in this text serves solely as an exclusion boundary warning.
+\end{trapbox}
+
+\section{General Organic Chemistry (GOC) \& Electronic Effects}
+
+\subsection{Inductive Effect (\texorpdfstring{$\pm I$}{+-I})}
+
+\begin{conceptbox}[Physical Origin \& Characteristics of Inductive Effect]
+The inductive effect is a permanent polarization of a $\sigma$-bond arising from electronegativity differences between bonded atoms. The more electronegative atom pulls the bonding $\sigma$-electron pair toward itself, establishing a static dipole:
+\begin{equation}
+  \mathrm{-C^{\delta\delta\delta+} - C^{\delta\delta+} - C^{\delta+} - X^{\delta-}} \quad (\text{where } \chi_X > \chi_C)
+\end{equation}
+\textbf{Key Physical Attributes:}
+\begin{itemize}
+  \item \textbf{Permanent Distortion:} It involves shifting of $\sigma$-electrons without complete bond cleavage or free electron transfer.
+  \item \textbf{Distance Attenuation:} The magnitude of the fractional charge decreases rapidly with distance and becomes virtually negligible beyond the third $\sigma$-carbon atom ($\mathrm{C}_3$).
+  \item \textbf{Hydrogen Reference Standard:} The electronegativity of hydrogen is taken as the arbitrary zero benchmark: $I_{\mathrm{H}} = 0$.
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Authoritative \texorpdfstring{$-I$}{-I} and \texorpdfstring{$+I$}{+I} Relative Strength Series]
+\textbf{1. Electron-Withdrawing ($-I$) Series (Decreasing Order of Pull):}
+\begin{equation}
+  \begin{aligned}
+    -\mathrm{NF_3^+} &> -\mathrm{NR_3^+} > -\mathrm{NH_3^+} > -\mathrm{NO_2} > -\mathrm{SO_3H} > -\mathrm{CN} > -\mathrm{COOH} > -\mathrm{F} > -\mathrm{Cl} \\
+    &> -\mathrm{Br} > -\mathrm{I} > -\mathrm{OR} > -\mathrm{OH} > -\mathrm{C\equiv CR} > -\mathrm{NH_2} > -\mathrm{C_6H_5} > -\mathrm{CH=CH_2} > -\mathrm{H}
+  \end{aligned}
+\end{equation}
+\textbf{2. Electron-Releasing ($+I$) Series (Decreasing Order of Push):}
+\begin{equation}
+  -\mathrm{O^-} > -\mathrm{COO^-} > -\mathrm{C(CH_3)_3} > -\mathrm{CH(CH_3)_2} > -\mathrm{CH_2CH_3} > -\mathrm{CH_3} > -\mathrm{D} > -\mathrm{H}
+\end{equation}
+\textbf{Physical Rationales for Key Sequences:}
+\begin{itemize}
+  \item \textbf{Positive Formal Charges:} Positively charged ammonium and nitro centers exhibit dramatically higher $-I$ than neutral halogens because full ionic charges create immense electrostatic attraction.
+  \item \textbf{Hybridization Dependency:} Higher $\% s$-character pulls electrons closer to the carbon nucleus, raising electronegativity:
+  \begin{equation}
+    sp\text{ carbon } (50\% s, \chi \approx 3.29) > sp^2\text{ carbon } (33.3\% s, \chi \approx 2.75) > sp^3\text{ carbon } (25\% s, \chi \approx 2.48)
+  \end{equation}
+  Hence, alkynyl ($-\mathrm{C\equiv CR}$) exerts a stronger $-I$ effect than vinyl ($-\mathrm{CH=CH_2}$) and phenyl ($-\mathrm{C_6H_5}$).
+  \item \textbf{Isotope Effect:} Tritium ($-\mathrm{T}$) and Deuterium ($-\mathrm{D}$) have shorter and stronger $\mathrm{C-D}$ bonds than $\mathrm{C-H}$ due to lower zero-point vibrational energy, causing less average nuclear distance and greater electron release: $+I(\mathrm{-T}) > +I(\mathrm{-D}) > +I(\mathrm{-H})$.
+\end{itemize}
+\end{formulabox}
+
+\begin{usecasebox}[Quantitative Applications: Acidic Strength of Carboxylic Acids]
+The acidic strength ($K_a$, where $pK_a = -\log K_a$) of carboxylic acids is determined by the stability of the conjugate carboxylate anion ($\mathrm{R-COO^-}$):
+\begin{equation}
+  \text{Acidic Strength} \propto \text{Stability of Conjugate Base } (\mathrm{R-COO^-}) \propto \frac{-I\text{ effect}}{+I\text{ effect}}
+\end{equation}
+\textbf{1. Influence of Halogen Identity (Electronegativity):}
+\begin{align}
+  \mathrm{FCH_2COOH} \ (pK_a = 2.66) &> \mathrm{ClCH_2COOH} \ (2.86) > \mathrm{BrCH_2COOH} \ (2.90) \notag \\
+  &> \mathrm{ICH_2COOH} \ (3.17) > \mathrm{CH_3COOH} \ (4.76)
+\end{align}
+\textbf{2. Number of Electron-Withdrawing Groups:}
+\begin{equation}
+  \mathrm{Cl_3C-COOH} \ (pK_a = 0.65) > \mathrm{Cl_2CH-COOH} \ (1.29) > \mathrm{ClCH_2-COOH} \ (2.86) > \mathrm{CH_3COOH} \ (4.76)
+\end{equation}
+\textbf{3. Distance Dependence ($\alpha, \beta, \gamma$-Positions):}
+\begin{align}
+  \mathrm{CH_3-CH_2-CH(Cl)-COOH} \ (\alpha\text{-isomer}, pK_a = 2.84) &> \mathrm{CH_3-CH(Cl)-CH_2-COOH} \ (\beta, 4.06) \notag \\
+  &> \mathrm{CH_2(Cl)-CH_2-CH_2-COOH} \ (\gamma, 4.52)
+\end{align}
+\end{usecasebox}
+
+\begin{ncertbox}[Direct NCERT Line: Formic Acid vs Benzoic Acid vs Acetic Acid]
+The electron-donating $+I$ effect of the methyl group destabilizes the acetate anion relative to the formate anion:
+\begin{equation}
+  \mathrm{HCOOH} \ (pK_a = 3.75) > \mathrm{C_6H_5COOH} \ (pK_a = 4.20) > \mathrm{CH_3COOH} \ (pK_a = 4.76)
+\end{equation}
+\textbf{Crucial Insight:} Even though phenyl is electron-withdrawing by $-I$ relative to $sp^3$ alkyl, its $+M$ resonance into the carbonyl group weakens acidity compared to formic acid. Thus, formic acid is stronger than benzoic acid!
+\end{ncertbox}
+
+\subsection{Resonance / Mesomeric Effect (\texorpdfstring{$\pm M$}{+-M})}
+
+\begin{conceptbox}[The Quantum Mechanical Basis of Resonance]
+Resonance describes the delocalization of $\pi$-electrons or non-bonding lone pairs across parallel, unhybridized $p$-orbitals in planar conjugated frameworks.
+\textbf{Mandatory Conditions for Conjugation:}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Planarity:} All participating atomic nuclei must lie in a single plane (or near-planar geometry) to permit effective sideways overlap of adjacent $p$-orbitals.
+  \item \textbf{Conjugated Topologies:} Conjugation occurs across alternating systems:
+  \begin{itemize}
+    \item $\pi - \sigma - \pi$ (e.g., 1,3-butadiene, benzene)
+    \item $\pi - \sigma - p_{\text{vacant}}$ (e.g., allyl carbocation, tropylium cation)
+    \item $\pi - \sigma - \text{lone pair / non-bonding}$ (e.g., vinyl chloride, phenoxide, aniline)
+    \item $\pi - \sigma - \text{unpaired electron } (\bullet)$ (e.g., allyl free radical)
+    \item Lone pair $- \sigma - p_{\text{vacant}}$ (e.g., $\mathrm{CH_3-\overset{+}{C}H-\ddot{O}CH_3}$)
+  \end{itemize}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Hierarchical Rules for Evaluating Canonical Structure Stability]
+When ranking the thermodynamic contribution of contributing resonance structures (canonical forms) to the true resonance hybrid, apply the following hierarchy strictly in order:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Complete Octet Rule (Paramount Criterion):} Structures in which all second-period atoms ($C, N, O, F$) possess complete valence octets contribute overwhelmingly more than structures with incomplete octets, \textbf{even if} a formal positive charge resides on an electronegative atom ($O$ or $N$):
+  \begin{equation}
+    \mathrm{CH_3-\overset{+}{O}=CH_2} \ (\text{all octets complete, Major}) \longleftrightarrow \mathrm{CH_3-\ddot{O}-\overset{+}{C}H_2} \ (\text{carbon has } 6e^-, \text{Minor})
+  \end{equation}
+  \item \textbf{Maximum Number of Covalent Bonds:} Greater number of covalent bonds maximizes attractive nuclear-electronic interactions, conferring greater stability.
+  \item \textbf{Charge Separation vs Uncharged Species:} Neutral structures without formal charge separation are intrinsically more stable than dipolar (zwitterionic) structures.
+  \item \textbf{Electronegativity \& Charge Concordance:} Among charge-separated structures:
+  \begin{itemize}
+    \item Negative formal charges reside most stably on the most electronegative atoms ($\mathrm{O^-} > \mathrm{N^-} > \mathrm{C^-}$).
+    \item Positive formal charges reside most stably on the least electronegative atoms ($\mathrm{C^+} > \mathrm{N^+} > \mathrm{O^+}$).
+  \end{itemize}
+  \item \textbf{Proximity of Like/Unlike Charges:} Canonical forms with like charges on adjacent atoms are violently destabilized (electrostatic repulsion); unlike charges close together confer electrostatic stabilization.
+\end{enumerate}
+\end{formulabox}
+
+\begin{formulabox}[Resonance Energy (\texorpdfstring{$E_{\mathrm{res}}$}{Eres}) Formulation]
+Resonance energy is defined as the difference in energy between the actual resonance hybrid and the most stable theoretical canonical Lewis structure:
+\begin{equation}
+  E_{\mathrm{res}} = E_{\text{canonical (most stable)}} - E_{\text{actual hybrid}}
+\end{equation}
+Experimentally, resonance energy is determined from standard enthalpies of hydrogenation ($\Delta_{\mathrm{hydro}}H^\circ$):
+\begin{equation}
+  \begin{aligned}
+    \text{Cyclohexene} + \mathrm{H_2} &\to \text{Cyclohexane} \quad \Delta H^\circ = -119.7\text{ kJ/mol}\\
+    \text{Theoretical 1,3,5-Cyclohexatriene (no resonance)} &\implies 3 \times (-119.7) = -359.1\text{ kJ/mol}\\
+    \text{Experimental Benzene} + 3\mathrm{H_2} &\to \text{Cyclohexane} \quad \Delta H^\circ = -208.5\text{ kJ/mol}\\
+    E_{\mathrm{res}}(\text{Benzene}) &= |-359.1 - (-208.5)| = 150.6\text{ kJ/mol} \ (\approx 36.0\text{ kcal/mol})
+  \end{aligned}
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[NEET Trap: Halogen Paradox in EAS (\texorpdfstring{$+M$}{+M} vs \texorpdfstring{$-I$}{-I})]
+Halogens ($-\mathrm{F}, -\mathrm{Cl}, -\mathrm{Br}, -\mathrm{I}$) attached to benzene present a classical dual nature:
+\begin{itemize}
+  \item \textbf{Reactivity (Net Deactivating):} Halogens are strongly electronegative ($\chi_{\mathrm{F}} = 4.0, \chi_{\mathrm{Cl}} = 3.16$), creating a powerful $-I$ effect that drains $\sigma$-electron density from the ring. The $-I$ effect dominates over the $+M$ resonance effect for overall rate, making haloarenes \textbf{less reactive} than benzene toward electrophiles.
+  \item \textbf{Regioselectivity (Ortho/Para Directing):} During attack by an incoming electrophile ($E^+$), the halogen donates its $p$-lone pair via $+M$ resonance to stabilize the positively charged arenium ion specifically when $E^+$ attacks the \textbf{ortho} or \textbf{para} positions (giving a complete-octet canonical structure $[\mathrm{Cl}^+=\mathrm{C_6H_5E}]$). At the meta position, the halogen lone pair cannot stabilize the carbocation.
+\end{itemize}
+\textbf{Conclusion:} Halogens are uniquely \textbf{deactivating ortho/para-directors} in EAS.
+\end{trapbox}
+
+\subsection{Hyperconjugation (Baker-Nathan Effect)}
+
+\begin{conceptbox}[The \texorpdfstring{$\sigma \to \pi^*$}{sigma to pi*} and \texorpdfstring{$\sigma \to p$}{sigma to p} No-Bond Resonance]
+Hyperconjugation involves the delocalization of bonding electrons in a $\mathrm{C-H}$ (or $\mathrm{C-C}$) $\sigma$-bond into an adjacent vacant or partially filled non-bonding $p$-orbital or an antibonding $\pi^*$ molecular orbital:
+\begin{equation}
+  \sigma_{\mathrm{C-H}} \longrightarrow p_{\text{vacant}} \quad (\text{in carbocations}) \quad \text{or} \quad \sigma_{\mathrm{C-H}} \longrightarrow \pi^* \quad (\text{in alkenes})
+\end{equation}
+\textbf{Structural Characteristics:}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Number of Contributing Structures:} For an alkene, carbocation, or free radical with $n$ $\alpha$-hydrogens (hydrogens on the $sp^3$ carbon directly attached to the $sp^2$ system), the total number of hyperconjugative canonical forms is:
+  \begin{equation}
+    \text{Total Hyperconjugative Structures} = n + 1 \quad (\text{where } n = \text{number of } \alpha\text{-H})
+  \end{equation}
+  \item \textbf{Bond Shortening \& Bond Lengthening:} The single bond between the $sp^3$ and $sp^2$ carbons acquires partial double bond character (e.g., the $\mathrm{C-C}$ single bond in propene is $1.49\text{ \AA}$, significantly shorter than standard $1.54\text{ \AA}$ in ethane). The $\mathrm{C}_\alpha\mathrm{-H}$ bond is lengthened and weakened.
+  \item \textbf{Reverse Hyperconjugation:} Observed when electronegative halogen atoms reside at the $\alpha$-carbon (e.g., $-\mathrm{CX_3}$ in trifluoromethylbenzene $\mathrm{C_6H_5-CF_3}$). Electron density flows from the $\pi$-system into the vacant $\sigma^*_{\mathrm{C-F}}$ antibonding orbital, causing meta-direction and ring deactivation.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Alkene Stability \& Heat of Hydrogenation (\texorpdfstring{$\Delta_{\mathrm{hydro}}H^\circ$}{Delta H})]
+Alkene thermodynamic stability is directly proportional to the number of hyperconjugative $\alpha$-hydrogens:
+\begin{equation}
+  \text{Alkene Stability} \propto (\text{Number of } \alpha\text{-H}) \propto \frac{1}{\text{Heat of Hydrogenation } (\Delta_{\mathrm{hydro}}H^\circ)}
+\end{equation}
+\textbf{Authoritative Stability Sequence:}
+\begin{equation}
+  \begin{aligned}
+    \mathrm{(CH_3)_2C=C(CH_3)_2} \ (12\alpha\text{-H}) &> \mathrm{(CH_3)_2C=CHCH_3} \ (9\alpha\text{-H}) \\
+    &> \mathrm{CH_2=C(CH_3)_2} \ (6\alpha\text{-H}, \text{gem-dimethyl}) \\
+    &> \textit{trans}\mathrm{-CH_3CH=CHCH_3} \ (6\alpha\text{-H}) \\
+    &> \textit{cis}\mathrm{-CH_3CH=CHCH_3} \ (6\alpha\text{-H}) \\
+    &> \mathrm{CH_3CH_2CH=CH_2} \ (2\alpha\text{-H}) \\
+    &> \mathrm{CH_2=CH_2} \ (0\alpha\text{-H})
+  \end{aligned}
+\end{equation}
+\textbf{The \textit{trans} vs \textit{cis} Isomer Trap:} \textit{trans}-2-butene is more stable than \textit{cis}-2-butene because the two bulky methyl groups are oriented at $180^\circ$, eliminating the steric van der Waals repulsion present in the eclipsed-like geometry of the \textit{cis}-isomer. The \textit{gem}-dimethyl alkene ($\mathrm{CH_2=C(CH_3)_2}$) is thermodynamically more stable than both \textit{cis}- and \textit{trans}-2-butene due to superior electrostatic distribution across the two methyl groups attached to the same $sp^2$ carbon.
+\end{formulabox}
+
+\subsection{Electromeric Effect (\texorpdfstring{$\pm E$}{+-E})}
+
+\begin{conceptbox}[Temporary Reagent-Induced $\pi$-Polarization]
+The electromeric effect is a purely \textbf{temporary} electronic displacement operating exclusively in molecules containing multiple bonds ($\mathrm{C=C}, \mathrm{C\equiv C}, \mathrm{C=O}$) upon the approach of an attacking polar reagent. Upon removal of the reagent, the system instantly reverts to its unpolarized ground state.
+\begin{itemize}
+  \item \textbf{Positive Electromeric Effect ($+E$):} The $\pi$-electron pair shifts toward the atom to which the attacking reagent attaches:
+  \begin{equation}
+    \mathrm{CH_2=CH_2} + \mathrm{H^+} \xrightarrow{+E} \mathrm{CH_2^+-CH_2-H} \quad (\text{Electrophilic attack on alkene})
+  \end{equation}
+  \item \textbf{Negative Electromeric Effect ($-E$):} The $\pi$-electron pair shifts away from the atom to which the attacking reagent attaches:
+  \begin{equation}
+    >\mathrm{C=O} + \mathrm{CN^-} \xrightarrow{-E} >\mathrm{C(CN)-O^-} \quad (\text{Nucleophilic attack on carbonyl})
+  \end{equation}
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Aromaticity \& Hückel's Rule}
+
+\begin{conceptbox}[The Four Cardinal Criteria for Aromaticity]
+To be classified as \textbf{aromatic}, a chemical entity must simultaneously satisfy all four structural and electronic requirements formulated by Erich Hückel:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Cyclic Structure:} The system must possess a continuous closed loop of bonded atoms.
+  \item \textbf{Planar Geometry:} All ring vertices must be strictly planar (or possess $< 0.1\text{ \AA}$ deviation) to maintain parallel $p$-orbital orientation.
+  \item \textbf{Complete Unbroken Conjugation:} Every atom in the cyclic ring must possess an unhybridized $p$-orbital (i.e., fully $sp^2$ or $sp$ hybridized; zero tetrahedral $sp^3$ carbons in the ring loop).
+  \item \textbf{Hückel's $(4n+2)\pi$ Electron Rule:} The number of delocalized $\pi$-electrons must equal $(4n + 2)$, where $n$ is a non-negative integer ($n = 0, 1, 2, 3, \dots \implies 2, 6, 10, 14, 18 \dots \ \pi\text{-electrons}$).
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Aromatic vs Anti-Aromatic vs Non-Aromatic Classification]
+\begin{tabularx}{\linewidth}{|l|Y|Y|Y|}
+\hline
+\textbf{Property} & \textbf{Aromatic} & \textbf{Anti-Aromatic} & \textbf{Non-Aromatic} \\
+\hline
+\textbf{Cyclic \& Planar?} & Yes & Yes & Lacks cyclicity or planarity \\
+\hline
+\textbf{Conjugation} & Unbroken throughout ring & Unbroken throughout ring & Interrupted by $sp^3$ carbon \\
+\hline
+\textbf{$\pi$-Electron Count} & $(4n+2)\pi$ electrons & $4n\pi$ electrons ($n=1,2,\dots$) & Arbitrary count \\
+\hline
+\textbf{Thermodynamic Stability} & Exceptionally High ($E_{\mathrm{res}} \gg 0$) & Exceptionally Low ($E_{\mathrm{strain}} \gg 0$) & Normal open-chain analog \\
+\hline
+\textbf{Magnetic Induced Field} & Diatropic (Diamagnetic ring current) & Paratropic (Paramagnetic ring current) & No ring current \\
+\hline
+\textbf{Canonical Examples} & Benzene ($6\pi$), Tropylium ($6\pi$) & Cyclobutadiene ($4\pi$), Cyclopentadienyl cation ($4\pi$) & 1,3-Cyclohexadiene, COT (tub-shaped) \\
+\hline
+\end{tabularx}
+\end{formulabox}
+
+\begin{trapbox}[Annulenes \& Non-Planar Ring Escapes]
+\textbf{1. Cyclooctatetraene (COT, [8]-Annulene):}
+COT possesses $8\pi$-electrons ($4n$ with $n=2$). If planar, it would be severely anti-aromatic. To escape extreme anti-aromatic electronic destabilization, the flexible 8-membered ring distorts into a non-planar \textbf{tub conformation}. Because $p$-orbitals are perpendicular at the edges, conjugation is broken: COT is strictly \textbf{non-aromatic}. However, reduction with potassium metal yields the cyclooctatetraenyl dianion ($\mathrm{C_8H_8^{2-}}$), which has $10\pi$-electrons ($4n+2, n=2$), becomes strictly planar, and is \textbf{aromatic}!\\
+\textbf{2. [10]-Annulene:}
+Possesses $10\pi$-electrons ($4n+2, n=2$). In the planar configuration, severe steric repulsion between the two internal hydrogen atoms forces the ring out of planarity $\implies$ \textbf{non-aromatic}. If the internal hydrogens are replaced with a methylene bridge (1,6-methano[10]annulene), the ring achieves planarity and exhibits robust \textbf{aromaticity}.
+\end{trapbox}
+
+\begin{usecasebox}[Heterocyclic Aromaticity \& Lone Pair Involvement]
+When determining Hückel $\pi$-electron counts in heterocycles containing $N, O, S$:
+\begin{itemize}
+  \item \textbf{Pyridine ($\mathrm{C_5H_5N}$):} The nitrogen atom is $sp^2$-hybridized. Its unhybridized $p$-orbital contributes $1e^-$ to the $6\pi$ aromatic sextet. The lone pair resides in an $sp^2$ hybrid orbital in the ring plane, perpendicular to the $\pi$-cloud. It does \textbf{not} participate in aromaticity $\implies$ Pyridine is basic ($pK_b \approx 8.8$).
+  \item \textbf{Pyrrole ($\mathrm{C_4H_4NH}$):} The nitrogen atom is $sp^2$-hybridized. Its lone pair resides in an unhybridized $p$-orbital, contributing $2e^-$ to complete the $6\pi$ aromatic sextet. The lone pair is tied up in aromaticity $\implies$ Pyrrole is an exceptionally weak base ($pK_b \approx 13.6$) and protonation on nitrogen destroys aromaticity.
+  \item \textbf{Furan ($\mathrm{C_4H_4O}$) \& Thiophene ($\mathrm{C_4H_4S}$):} The heteroatom contributes one lone pair ($2e^-$) to the aromatic sextet ($6\pi$ electrons); the second lone pair resides in an $sp^2$ orbital orthogonal to the $\pi$-system.
+\end{itemize}
+\end{usecasebox}
+
+\section{Reactive Intermediates \& Molecular Rearrangements}
+
+\subsection{Carbocations}
+
+\begin{conceptbox}[Geometry, Electronic Configuration \& Stability Hierarchy]
+Carbocations are trivalent carbon cations possessing a positive formal charge and a sextet ($6e^-$) of valence electrons:
+\begin{itemize}
+  \item \textbf{Geometry \& Hybridization:} The positively charged carbon is $sp^2$-hybridized with trigonal planar geometry ($120^\circ$ bond angles). The remaining unhybridized $2p_z$ orbital is completely vacant.
+  \item \textbf{Stability Factors:} Stabilized by $+M$ resonance delocalization, aromatic stabilization, hyperconjugation ($n_{\alpha\mathrm{-H}}$), and $+I$ inductive effects.
+\end{itemize}
+\begin{equation}
+  \begin{aligned}
+    \text{Tropylium } (6\pi\text{-aromatic}) &\approx \text{Cyclopropylcarbinyl (dancing resonance)} \\
+    &> \mathrm{(C_6H_5)_3C^+} > \mathrm{(C_6H_5)_2CH^+} > \mathrm{C_6H_5CH_2^+} \approx \mathrm{CH_2=CH-CH_2^+} \\
+    &> 3^\circ \ \mathrm{(CH_3)_3C^+} \ (9\alpha\text{-H}) > 2^\circ \ \mathrm{(CH_3)_2CH^+} \ (6\alpha\text{-H}) \\
+    &> 1^\circ \ \mathrm{CH_3CH_2^+} \ (3\alpha\text{-H}) > \mathrm{CH_3^+} \ (0\alpha\text{-H}) > \text{vinyl } (\mathrm{CH_2=CH^+}) > \text{phenyl } (\mathrm{C_6H_5^+})
+  \end{aligned}
+\end{equation}
+\end{conceptbox}
+
+\begin{formulabox}[The Driving Force \& Pathways of Carbocation Rearrangements]
+A carbocation will spontaneously rearrange if and only if the rearranged carbocation possesses lower Gibbs free energy (greater thermodynamic stability). Rearrangements occur via intramolecular 1,2-migrations of a hydride, alkyl, or aryl group into the adjacent vacant $p$-orbital:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{1,2-Hydride Shift ($H^-$):}
+  \begin{equation}
+    \mathrm{CH_3-CH_2-CH_2^+} \ (1^\circ, 2\alpha\text{-H}) \xrightarrow{1,2\text{-H}^-} \mathrm{CH_3-\overset{+}{C}H-CH_3} \ (2^\circ, 6\alpha\text{-H})
+  \end{equation}
+  \item \textbf{1,2-Methyl / Alkyl Shift ($R^-$):}
+  \begin{equation}
+    \mathrm{(CH_3)_3C-\overset{+}{C}H_2} \ (\text{neopentyl}, 1^\circ) \xrightarrow{1,2\text{-CH}_3^-} \mathrm{CH_3-\overset{+}{C}(CH_3)-CH_2CH_3} \ (3^\circ, 8\alpha\text{-H})
+  \end{equation}
+  \item \textbf{Ring Expansion (Angle Strain Relief):}
+  Four- and five-membered rings with an exocyclic carbocation undergo instantaneous 1,2-bond migration to expand the ring:
+  \begin{itemize}
+    \item \textbf{Cyclobutylcarbinyl Cation $\to$ Cyclopentyl Cation:} The $90^\circ$ ring angle expands to $108^\circ$, relieving $\approx 108.8\text{ kJ/mol}$ of Baeyer angle strain.
+    \item \textbf{Cyclopentylcarbinyl Cation $\to$ Cyclohexyl Cation:} Expansion from 5-membered ring ($108^\circ$) to strain-free chair cyclohexane ($109.5^\circ$).
+  \end{itemize}
+\end{enumerate}
+\end{formulabox}
+
+\begin{trapbox}[NEET Trap: Migratory Aptitude in Carbocation Rearrangements]
+When competing groups are attached to the migrating carbon, the intrinsic migratory aptitude is:
+\begin{equation}
+  \mathrm{H}^- > \mathrm{Aryl} \ (\mathrm{Ar}^-) > \mathrm{Alkyl} \ (3^\circ > 2^\circ > 1^\circ > \mathrm{CH_3^-})
+\end{equation}
+For substituted aryl groups: electron-donating groups accelerate migration:
+\begin{align}
+  p\text{-anisyl } (p\mathrm{-CH_3O-C_6H_4-}) &> p\text{-tolyl } (p\mathrm{-CH_3-C_6H_4-}) > \text{phenyl } (\mathrm{C_6H_5-}) \notag \\
+  &> p\text{-chlorophenyl} > p\text{-nitrophenyl}
+\end{align}
+\textbf{Crucial Rule:} Never perform a less-stable to less-stable rearrangement unless it immediately opens a direct pathway to an overwhelmingly more stable intermediate (e.g., resonance-delocalized benzylic or allylic system).
+\end{trapbox}
+
+\subsection{Carbanions}
+
+\begin{conceptbox}[Structure, Pyramidal Inversion \& Stability Hierarchy]
+Carbanions possess a trivalent carbon bearing a formal negative charge and eight valence electrons (3 bonding pairs $+$ 1 lone pair):
+\begin{itemize}
+  \item \textbf{Hybridization \& Inversion:} Unconjugated carbanions are $sp^3$-hybridized with trigonal pyramidal geometry. The lone pair undergoes rapid umbrella inversion (flipping barrier $\approx 25\text{ kJ/mol}$), making isolated chiral carbanions rapidly racemize.
+  \item \textbf{Conjugated Carbanions ($sp^2$ Planarity):} If the carbanion is adjacent to a $\pi$-system or an electron-withdrawing carbonyl group ($-\mathrm{C=O}$), it rehybridizes to $sp^2$ to accommodate the lone pair in an unhybridized $p$-orbital for maximum resonance delocalization.
+  \item \textbf{Stability Sequence:}
+  \begin{equation}
+    \begin{aligned}
+      \text{Cyclopentadienyl Anion } (6\pi) &> \mathrm{(C_6H_5)_3C^-} > \mathrm{(C_6H_5)_2CH^-} \\
+      &> \mathrm{C_6H_5CH_2^-} \approx \mathrm{CH_2=CH-CH_2^-} > \mathrm{HC\equiv C^-} \ (sp, 50\% s) \\
+      &> \mathrm{CH_2=CH^-} \ (sp^2) \approx \mathrm{C_6H_5^-} > \mathrm{CH_3^-} > 1^\circ > 2^\circ > 3^\circ
+    \end{aligned}
+  \end{equation}
+\end{itemize}
+\end{conceptbox}
+
+\begin{usecasebox}[Active Methylene Compounds \& Enolate Chemistry]
+Methylene groups ($-\mathrm{CH_2}-$) flanked between two strong electron-withdrawing groups (e.g., diethyl malonate, ethyl acetoacetate, acetylacetone) possess exceptionally acidic hydrogens ($pK_a \approx 9-13$):
+\begin{equation}
+  \mathrm{CH_3-CO-CH_2-CO-CH_3} + \mathrm{EtO^-} \rightleftharpoons [\mathrm{CH_3-CO-\overset{-}{C}H-CO-CH_3} \longleftrightarrow \text{2 Enolate Forms}] + \mathrm{EtOH}
+\end{equation}
+The resulting enolate anion is an \textbf{ambident nucleophile} that can attack electrophiles via carbon ($C$-alkylation) or oxygen ($O$-alkylation), driving fundamental $\mathrm{C-C}$ bond-forming reactions (Aldol, Claisen, Michael additions).
+\end{usecasebox}
+
+\subsection{Free Radicals}
+
+\begin{conceptbox}[Structure, Generation \& Allylic Halogenation via NBS]
+Carbon free radicals are neutral trivalent species possessing seven valence electrons (one unpaired electron):
+\begin{itemize}
+  \item \textbf{Structure:} Planar $sp^2$ hybridized with the odd electron occupying the unhybridized $2p$ orbital, or shallow rapidly inverting pyramid.
+  \item \textbf{Stability:} Stabilized by hyperconjugation and resonance delocalization:
+  \begin{equation}
+    \mathrm{(C_6H_5)_3C^\bullet} > \mathrm{(C_6H_5)_2\dot{C}H} > \mathrm{C_6H_5\dot{C}H_2} \approx \mathrm{CH_2=CH-\dot{C}H_2} > 3^\circ > 2^\circ > 1^\circ > \mathrm{\dot{C}H_3} > \text{vinyl}
+  \end{equation}
+  \item \textbf{N-Bromosuccinimide (NBS) Allylic/Benzylic Halogenation:}
+  NBS selectively brominates the allylic or benzylic position without adding across the $\mathrm{C=C}$ double bond.
+  \textbf{Mechanism:} Trace $\mathrm{HBr}$ reacts with NBS to maintain a constant, extremely low concentration of molecular bromine ($\mathrm{Br_2}$):
+  \begin{align}
+    \mathrm{Br}^\bullet + \mathrm{CH_3-CH=CH_2} &\longrightarrow \mathrm{HBr} + [\mathrm{\dot{C}H_2-CH=CH_2} \longleftrightarrow \mathrm{CH_2=CH-\dot{C}H_2}] \quad (\text{RDS})\\
+    \mathrm{NBS} + \mathrm{HBr} &\longrightarrow \text{Succinimide} + \mathrm{Br_2} \quad (\text{Maintains } [\mathrm{Br_2}] \approx 10^{-6}\text{ M})\\
+    \mathrm{\dot{C}H_2-CH=CH_2} + \mathrm{Br_2} &\longrightarrow \mathrm{BrCH_2-CH=CH_2} + \mathrm{Br}^\bullet
+  \end{align}
+  The low $[\mathrm{Br_2}]$ prevents electrophilic addition across the double bond, ensuring exclusive allylic radical substitution!
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Carbenes, Nitrenes \& Arynes}
+
+\begin{formulabox}[Singlet vs Triplet Carbenes (\texorpdfstring{$:\mathrm{CR_2}$}{:CR2})]
+\begin{tabularx}{\linewidth}{|l|Y|Y|}
+\hline
+\textbf{Feature} & \textbf{Singlet Carbene ($^1:\mathrm{CR_2}$)} & \textbf{Triplet Carbene ($^3:\mathrm{CR_2}$)} \\
+\hline
+\textbf{Electron Spin State} & Spin-paired ($\uparrow\downarrow$, $S=0, 2S+1=1$) & Parallel spins ($\uparrow\ \uparrow$, $S=1, 2S+1=3$) \\
+\hline
+\textbf{Hybridization \& Geometry} & $sp^2$, Bent ($102-108^\circ$) & $sp$ linear ($180^\circ$) or bent $sp^2$ ($130-150^\circ$) \\
+\hline
+\textbf{Orbital Configuration} & Lone pair in $sp^2$, vacant $p$-orbital & One electron in $sp^2$, one in $p$-orbital \\
+\hline
+\textbf{Relative Stability} & Thermodynamically less stable (except halocarbenes $:CCl_2$) & Ground state for $:CH_2$ (Hund's rule) \\
+\hline
+\textbf{Addition to Alkenes} & \textbf{Stereospecific syn-addition} (concerted, geometry retained: cis $\to$ cis) & \textbf{Non-stereospecific} (diradical intermediate, spin flip allows rotation $\to$ cis + trans) \\
+\hline
+\end{tabularx}
+\end{formulabox}
+
+\begin{conceptbox}[Generation of Dichlorocarbene \& The Benzyne Mechanism]
+\textbf{1. Dichlorocarbene ($:\mathrm{CCl_2}$) via $\alpha$-Elimination:}
+Chloroform treated with strong alkali undergoes two-step $\alpha$-elimination:
+\begin{equation}
+  \mathrm{CHCl_3} + \mathrm{OH^-} \xrightleftharpoons{\text{fast}} \mathrm{:\bar{C}Cl_3} + \mathrm{H_2O} \xrightarrow[\text{RDS}]{\text{loss of } \mathrm{Cl^-}} \mathbf{:\mathrm{CCl_2}} \quad (\text{Electrophilic singlet carbene})
+\end{equation}
+$:\mathrm{CCl_2}$ serves as the key electrophilic intermediate in the \textbf{Reimer-Tiemann reaction} and the \textbf{Carbylamine reaction}.\\
+\textbf{2. Benzyne Intermediate (Elimination-Addition):}
+Aryl halides lacking electron-withdrawing groups react with extremely strong bases (e.g., $\mathrm{KNH_2 / liq. NH_3}$) via elimination of $\mathrm{HX}$ to yield \textbf{benzyne} ($\mathrm{C_6H_4}$):
+\begin{itemize}
+  \item \textbf{Bonding in Benzyne:} The formal triple bond is formed by sideways overlap of two $sp^2$ hybrid orbitals in the plane of the ring. This bond does not disturb the $6\pi$ aromatic sextet, but overlap is extremely weak due to poor orbital alignment $\implies$ severe ring strain and immense reactivity.
+  \item \textbf{Cine-Substitution:} Addition of $\mathrm{NH_3}$ across the strained triple bond occurs with equal probability at either carbon, producing isotopic scrambling ($50\%$ direct substitution $+$ $50\%$ cine-substitution).
+\end{itemize}
+\end{conceptbox}
+
+\section{Hydrocarbons: Aliphatic \& Aromatic Pathways}
+
+\subsection{Alkanes}
+
+\begin{formulabox}[Free-Radical Halogenation Kinetics \& Hammond's Postulate]
+Free radical halogenation follows a three-stage chain mechanism (Initiation, Propagation, Termination):
+\begin{align}
+  \text{Initiation: } & \mathrm{X_2} \xrightarrow{h\nu \text{ or } \Delta} 2\mathrm{X}^\bullet\\
+  \text{Propagation: } & \mathrm{R-H} + \mathrm{X}^\bullet \xrightarrow{k_1} \mathrm{R}^\bullet + \mathrm{HX} \quad (\text{RDS for bromination})\\
+  & \mathrm{R}^\bullet + \mathrm{X_2} \xrightarrow{k_2} \mathrm{R-X} + \mathrm{X}^\bullet
+\end{align}
+\textbf{Relative Reactivity Rates at $298\text{ K}$:}
+\begin{itemize}
+  \item \textbf{Chlorination (Reactivity over Selectivity):} $1^\circ : 2^\circ : 3^\circ = 1.0 : 3.8 : 5.0$. Chlorination is highly exothermic; the transition state is early (reactant-like per Hammond's postulate), meaning $\mathrm{C-H}$ bond cleavage has barely progressed, yielding low regioselectivity.
+  \item \textbf{Bromination (Selectivity over Reactivity):} $1^\circ : 2^\circ : 3^\circ = 1.0 : 82 : 1600$. Bromination is endothermic; the transition state is late (product-like), with extensive radical character on carbon, leading to massive selectivity for the $3^\circ$ alkyl halide ($> 99\%$).
+\end{itemize}
+\end{formulabox}
+
+\begin{usecasebox}[Conformational Analysis of Ethane and n-Butane]
+\begin{itemize}
+  \item \textbf{Ethane:} Infinite conformations between \textbf{staggered} (dihedral angle $\theta = 60^\circ$, minimum energy) and \textbf{eclipsed} ($\theta = 0^\circ$, maximum energy). The energy barrier is $12.5\text{ kJ/mol}$ ($3.0\text{ kcal/mol}$), caused by \textbf{torsional strain} (electron cloud repulsion between adjacent $\mathrm{C-H}$ bonds).
+  \item \textbf{n-Butane (Rotation about $\mathrm{C}_2-\mathrm{C}_3$):}
+  \begin{equation}
+    \text{Anti } (\theta=180^\circ) > \text{Gauche } (\theta=60^\circ) > \text{Partially Eclipsed } (\theta=120^\circ) > \text{Fully Eclipsed } (\theta=0^\circ)
+  \end{equation}
+  The anti conformation is the global minimum. Gauche is destabilized by $3.8\text{ kJ/mol}$ due to van der Waals steric repulsion between the two bulky methyl groups. The fully eclipsed form is destabilized by $19.0\text{ kJ/mol}$ due to combined torsional and steric strain.
+  \item \textbf{Gauche Exception (Intramolecular H-Bonding):} In ethylene glycol ($\mathrm{HO-CH_2-CH_2-OH}$) and 2-fluoroethanol ($\mathrm{F-CH_2-CH_2-OH}$), the \textbf{gauche} conformation is more stable than anti due to stabilizing intramolecular hydrogen bonding.
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Alkenes}
+
+\begin{conceptbox}[Electrophilic Addition of Halogens: Cyclic Halonium Ion]
+Electrophilic addition of $\mathrm{Br_2}$ (in nonpolar solvent $\mathrm{CCl_4}$) to alkenes proceeds via a cyclic three-membered \textbf{bromonium ion}:
+\begin{enumerate}[leftmargin=*]
+  \item The $\pi$-cloud of the alkene polarizes the $\mathrm{Br-Br}$ bond, displacing the distal bromide ion to form a bridged cyclic bromonium ion intermediate.
+  \item The nucleophilic $\mathrm{Br^-}$ attacks the cyclic intermediate from the \textbf{backside} (anti-attack) with complete inversion at the attacked carbon.
+  \item \textbf{Stereospecificity:}
+  \begin{itemize}
+    \item \textit{trans}-Alkene $+$ $\mathrm{Br_2}$ (anti-addition) $\longrightarrow$ \textbf{\textit{meso}-dibromide}.
+    \item \textit{cis}-Alkene $+$ $\mathrm{Br_2}$ (anti-addition) $\longrightarrow$ \textbf{racemic mixture ($\pm$) of enantiomers}.
+    \item \textit{(Mnemonic: CAR -- Cis + Anti $\to$ Racemic; TAM -- Trans + Anti $\to$ Meso)}.
+  \end{itemize}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Markovnikov Addition vs Anti-Markovnikov Peroxide Effect]
+\textbf{1. Markovnikov's Rule:} In electrophilic addition of unsymmetrical $HX$ to unsymmetrical alkenes, the electrophilic proton ($\mathrm{H^+}$) attaches to the $sp^2$ carbon carrying the greater number of hydrogen atoms to generate the more stable carbocation intermediate (which may rearrange!).\\
+\textbf{2. Anti-Markovnikov (Kharasch / Peroxide Effect):}
+Operates exclusively when $\mathbf{HBr}$ is added in the presence of organic peroxides ($\mathrm{R-O-O-R}$):
+\begin{align}
+  \text{Initiation: } & \mathrm{ROOR} \xrightarrow{\Delta} 2\mathrm{RO}^\bullet; \quad \mathrm{RO}^\bullet + \mathrm{HBr} \to \mathrm{ROH} + \mathrm{Br}^\bullet\\
+  \text{Propagation 1: } & \mathrm{CH_3-CH=CH_2} + \mathrm{Br}^\bullet \to \mathrm{CH_3-\dot{C}H-CH_2Br} \quad (\Delta H^\circ = -42\text{ kJ/mol})\\
+  \text{Propagation 2: } & \mathrm{CH_3-\dot{C}H-CH_2Br} + \mathrm{HBr} \to \mathrm{CH_3-CH_2-CH_2Br} + \mathrm{Br}^\bullet \quad (\Delta H^\circ = -38\text{ kJ/mol})
+\end{align}
+\end{formulabox}
+
+\begin{trapbox}[Thermochemical Reason: Why Peroxide Effect Operates ONLY for HBr]
+NEET frequently tests why the peroxide effect fails completely for $\mathrm{HCl}$ and $\mathrm{HI}$:
+\begin{itemize}
+  \item \textbf{Failure with $\mathrm{HCl}$:} The $\mathrm{H-Cl}$ bond is exceptionally strong ($431\text{ kJ/mol}$). Step 2 ($\mathrm{R^\bullet + HCl \to R-H + Cl^\bullet}$) is strongly \textbf{endothermic} ($\Delta H^\circ \approx +27\text{ kJ/mol}$). The chain reaction cannot propagate.
+  \item \textbf{Failure with $\mathrm{HI}$:} The $\mathrm{H-I}$ bond is weak ($297\text{ kJ/mol}$), making $\mathrm{I}^\bullet$ generation easy. However, iodine radicals are large and unreactive toward alkenes: Step 1 ($\mathrm{Alkene + I^\bullet \to Radical}$) is \textbf{endothermic} ($\Delta H^\circ \approx +54\text{ kJ/mol}$). Instead of adding to the double bond, iodine radicals dimerize instantaneously: $2\mathrm{I}^\bullet \to \mathrm{I_2}$.
+\end{itemize}
+\textbf{Conclusion:} Only for $\mathrm{HBr}$ are \textbf{both propagation steps exothermic}, permitting chain reaction!
+\end{trapbox}
+
+\begin{usecasebox}[Comparative Summary: The Three Alkene Hydration Pathways]
+\begin{tabularx}{\linewidth}{|l|Y|Y|Y|}
+\hline
+\textbf{Parameter} & \textbf{Acid-Catalyzed Hydration} & \textbf{Hydroboration-Oxidation (HBO)} & \textbf{Oxymercuration-Demercuration (OMDM)} \\
+\hline
+\textbf{Reagents} & $\mathrm{H_2O / H_2SO_4}$ & 1. $\mathrm{BH_3\cdot THF}$, 2. $\mathrm{H_2O_2, OH^-}$ & 1. $\mathrm{Hg(OAc)_2, H_2O}$, 2. $\mathrm{NaBH_4}$ \\
+\hline
+\textbf{Regiochemistry} & Markovnikov & \textbf{Anti-Markovnikov} & \textbf{Markovnikov} \\
+\hline
+\textbf{Stereochemistry} & Non-stereospecific & \textbf{Syn-addition} & Overall non-stereospecific (anti in step 1) \\
+\hline
+\textbf{Intermediate} & Free Carbocation & 4-center cyclic transition state & Cyclic mercurinium ion \\
+\hline
+\textbf{Rearrangement?} & \textbf{Yes (frequent)} & \textbf{Zero rearrangement} & \textbf{Zero rearrangement} \\
+\hline
+\textbf{Propene Product} & Propan-2-ol & Propan-1-ol & Propan-2-ol \\
+\hline
+\textbf{3,3-Dimethylbut-1-ene} & 2,3-dimethylbutan-2-ol (rearranged) & 3,3-dimethylbutan-1-ol & 3,3-dimethylbutan-2-ol (clean Markovnikov) \\
+\hline
+\end{tabularx}
+\end{usecasebox}
+
+\begin{ncertbox}[Direct NCERT Extraction: Ozonolysis \& Structure Elucidation]
+Ozonolysis cleaves the $\mathrm{C=C}$ double bond into two carbonyl fragments:
+\begin{itemize}
+  \item \textbf{Reductive Ozonolysis ($\mathrm{O_3}$ followed by $\mathrm{Zn / H_2O}$ or $\mathrm{(CH_3)_2S}$):} Aldehydes and ketones are preserved. Zinc destroys hydrogen peroxide ($\mathrm{H_2O_2} + \mathrm{Zn} \to \mathrm{ZnO} + \mathrm{H_2O}$), preventing oxidation of aldehydes to carboxylic acids.
+  \item \textbf{Oxidative Ozonolysis ($\mathrm{O_3}$ followed by $\mathrm{H_2O_2}$ or $\mathrm{H_2O}$):} All aldehydes are oxidized to carboxylic acids ($-\mathrm{CHO} \to -\mathrm{COOH}$); terminal $=\mathrm{CH_2}$ becomes $\mathrm{CO_2} + \mathrm{H_2O}$; ketones remain unchanged.
+\end{itemize}
+\end{ncertbox}
+
+\subsection{Alkynes}
+
+\begin{conceptbox}[Terminal Alkyne Acidity \& Selective Hydrogenation]
+\textbf{1. Acidity of Terminal Alkynes ($-\mathrm{C\equiv CH}$):}
+The $sp$-hybridized carbon has $50\% s$-character, placing valence electrons closest to the carbon nucleus. Terminal alkynes are acidic ($pK_a \approx 25$):
+\begin{itemize}
+  \item React with sodamide: $\mathrm{R-C\equiv CH} + \mathrm{NaNH_2} \to \mathrm{R-C\equiv C^-Na^+} + \mathrm{NH_3}\uparrow$.
+  \item Tollens' Test: Forms a \textbf{white precipitate} of silver acetylide: $\mathrm{R-C\equiv CH} + \mathrm{[Ag(NH_3)_2]^+OH^-} \to \mathrm{R-C\equiv C-Ag}\downarrow + 2\mathrm{NH_3} + \mathrm{H_2O}$.
+  \item Ammoniacal $\mathrm{Cu_2Cl_2}$: Forms a \textbf{red precipitate} of cuprous acetylide: $\mathrm{R-C\equiv CH} + \mathrm{[Cu(NH_3)_2]^+OH^-} \to \mathrm{R-C\equiv C-Cu}\downarrow + 2\mathrm{NH_3} + \mathrm{H_2O}$.
+  \item \textit{Note: Internal alkynes ($\mathrm{R-C\equiv C-R'}$) give negative tests with both reagents!}
+\end{itemize}
+\textbf{2. Stereoselective Reduction to Alkenes:}
+\begin{itemize}
+  \item \textbf{Lindlar's Catalyst ($\mathrm{H_2 / Pd-CaCO_3}$ poisoned with quinoline / lead acetate):} Syn-addition of hydrogen yielding \textbf{\textit{cis}-alkene}.
+  \item \textbf{Birch Reduction ($\mathrm{Na / \text{liq. } NH_3}$ at $-33^\circ\text{C}$):} Anti-addition proceeding via radical-anion intermediate with trans-geometry to minimize electron-electron repulsion, yielding \textbf{\textit{trans}-alkene}.
+\end{itemize}
+\textbf{3. Kucherov Hydration ($\mathrm{HgSO_4 / dil. H_2SO_4}$ at $333\text{ K}$):}
+Electrophilic addition of water across the triple bond yields an enol, which immediately undergoes keto-enol tautomerism:
+\begin{equation}
+  \begin{aligned}
+    \mathrm{HC\equiv CH} + \mathrm{H_2O} &\xrightarrow{\mathrm{Hg^{2+}/H^+}} [\mathrm{CH_2=CH-OH}] \rightleftharpoons \mathbf{\mathrm{CH_3-CHO}} \quad (\text{Acetaldehyde, only aldehyde formed})\\
+    \mathrm{CH_3-C\equiv CH} + \mathrm{H_2O} &\xrightarrow{\mathrm{Hg^{2+}/H^+}} [\mathrm{CH_3-C(OH)=CH_2}] \rightleftharpoons \mathbf{\mathrm{CH_3-CO-CH_3}} \quad (\text{Acetone})
+  \end{aligned}
+\end{equation}
+\end{conceptbox}
+
+\subsection{Aromatic Hydrocarbons: EAS Mechanics \& Substituent Effects}
+
+\begin{conceptbox}[Fundamental 3-Step EAS Mechanism \& Arenium Ion (\texorpdfstring{$\sigma$}{sigma}-Complex)]
+Electrophilic aromatic substitution ($S_E\mathrm{Ar}$) preserves the massive resonance stabilization of the benzene ring ($150.6\text{ kJ/mol}$):
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Generation of Active Electrophile ($E^+$):} Lewis or Br{\o}nsted acid generates $E^+$ ($\mathrm{NO_2^+, Cl^+, SO_3, R^+, RCO^+}$).
+  \item \textbf{Formation of Arenium Ion ($\sigma$-Complex / Wheland Intermediate) [RDS]:} $\mathrm{C_6H_6} + E^+ \xrightarrow{\text{slow}} [\mathrm{C_6H_6E}]^+$. The attacked carbon rehybridizes from $sp^2$ to $sp^3$, disrupting aromaticity. Positive charge delocalizes over ortho and para positions.
+  \item \textbf{Rapid Deprotonation \& Rearomatization:} Fast abstraction of the proton from the $sp^3$ carbon restores the planar $sp^2$ aromatic sextet.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Directing and Activating Effects of Ring Substituents]
+\begin{tabularx}{\linewidth}{|p{3.0cm}|p{4.2cm}|Y|c|}
+\hline
+\textbf{Group Type} & \textbf{Examples} & \textbf{Electronic Mechanism} & \textbf{Directing Influence} \\
+\hline
+\textbf{Strongly Activating} & $-\mathrm{OH}$, $-\mathrm{O^-}$, $-\mathrm{NH_2}$, $-\mathrm{NR_2}$ & Dominant $+M$ resonance & Ortho / Para \\
+\hline
+\textbf{Moderately Activating} & $-\mathrm{OCH_3}$, $-\mathrm{NHCOCH_3}$, $-\mathrm{OCOR}$ & $+M$ modulated by cross-conjugation & Ortho / Para \\
+\hline
+\textbf{Weakly Activating} & $-\mathrm{CH_3}$, $-\mathrm{CH_2CH_3}$, $-\mathrm{C_6H_5}$ & Hyperconjugation \& $+I$ & Ortho / Para \\
+\hline
+\textbf{Deactivating (Halogens)} & $-\mathrm{F}$, $-\mathrm{Cl}$, $-\mathrm{Br}$, $-\mathrm{I}$ & Strong $-I$ dominates rate; $+M$ directs & \textbf{Ortho / Para} \\
+\hline
+\textbf{Moderately Deactivating} & $-\mathrm{CHO}$, $-\mathrm{COR}$, $-\mathrm{COOH}$, $-\mathrm{COOR}$ & $-M$ resonance \& $-I$ & Meta \\
+\hline
+\textbf{Strongly Deactivating} & $-\mathrm{NO_2}$, $-\mathrm{CF_3}$, $-\mathrm{CCl_3}$, $-\mathrm{CN}$, $-\mathrm{SO_3H}$, $-\mathrm{NR_3^+}$ & Powerful $-M$ / $-I$ withdraws electron density & Meta \\
+\hline
+\end{tabularx}
+\end{formulabox}
+
+\begin{trapbox}[Friedel-Crafts Reactions: Critical Limitations \& Exceptions]
+\textbf{1. Carbocation Rearrangement in Alkylation:} Reaction of benzene with 1-chloropropane ($\mathrm{CH_3CH_2CH_2Cl}$) and $\mathrm{AlCl_3}$ yields \textbf{isopropylbenzene (cumene)} as major product ($65-70\%$) due to 1,2-hydride shift of the primary propyl carbocation to the more stable secondary carbocation!
+\begin{equation}
+  \text{Benzene} + \mathrm{CH_3CH_2CH_2Cl} \xrightarrow{\mathrm{AlCl_3}} \mathrm{C_6H_5-CH(CH_3)_2} \ (\text{Major}) + \mathrm{C_6H_5-CH_2CH_2CH_3} \ (\text{Minor})
+\end{equation}
+\textbf{Solution:} To synthesize linear alkylbenzenes, carry out \textbf{Friedel-Crafts Acylation} with propanoyl chloride to yield ethyl phenyl ketone (no rearrangement because acylium ion $\mathrm{R-C\equiv O^+}$ is resonance-stabilized), followed by \textbf{Clemmensen reduction} ($\mathrm{Zn-Hg / HCl}$) or \textbf{Wolff-Kishner reduction}.\\
+\textbf{2. Polyalkylation vs Monoacylation:} Alkyl groups activate the ring toward further substitution (polyalkylation occurs). Acyl groups ($-\mathrm{COR}$) are strongly deactivating, ensuring clean monoacylation.\\
+\textbf{3. Complete Failure with Aniline and Phenol:} Aniline ($\mathrm{-NH_2}$) and Phenol ($\mathrm{-OH}$) fail Friedel-Crafts reactions because their lone pairs form an insoluble Lewis acid-base adduct with $\mathrm{AlCl_3}$ (e.g., $\mathrm{Ph-NH_2\cdot AlCl_3}$), placing a positive charge adjacent to the ring and rendering it deactivated toward electrophiles!
+\end{trapbox}
+
+\section{Haloalkanes \& Haloarenes}
+
+\subsection{Nucleophilic Aliphatic Substitution (\texorpdfstring{$S_N1$}{SN1} vs \texorpdfstring{$S_N2$}{SN2} vs \texorpdfstring{$S_Ni$}{SNi})}
+
+\begin{formulabox}[Comprehensive Mechanistic Comparison: \texorpdfstring{$S_N1$}{SN1} vs \texorpdfstring{$S_N2$}{SN2}]
+\begin{tabularx}{\linewidth}{|l|Y|Y|}
+\hline
+\textbf{Parameter} & \textbf{\texorpdfstring{$S_N1$}{SN1} (Substitution Nucleophilic Unimolecular)} & \textbf{\texorpdfstring{$S_N2$}{SN2} (Substitution Nucleophilic Bimolecular)} \\
+\hline
+\textbf{Number of Steps} & Two discrete elementary steps & Single concerted step \\
+\hline
+\textbf{Rate Law \& Kinetics} & Rate $= k[\mathrm{R-X}]$ (First order) & Rate $= k[\mathrm{R-X}][\mathrm{Nu^-}]$ (Second order) \\
+\hline
+\textbf{Substrate Reactivity} & $3^\circ > 2^\circ \gg 1^\circ > \mathrm{CH_3}$ (governed by carbocation stability) & $\mathrm{CH_3} > 1^\circ > 2^\circ \gg 3^\circ$ (governed by steric hindrance) \\
+\hline
+\textbf{Transition State} & Involves carbocation intermediate & Pentacoordinate trigonal bipyramidal TS \\
+\hline
+\textbf{Stereochemical Outcome} & Partial racemization with net inversion ($50-70\%$ inversion due to front-side ion pair shielding) & \textbf{100\% Complete Walden Inversion} (backside attack) \\
+\hline
+\textbf{Nucleophile Strength} & Weak, neutral nucleophiles ($\mathrm{H_2O, ROH}$) suffice & Requires strong, anionic nucleophiles ($\mathrm{OH^-, RO^-, CN^-}$) \\
+\hline
+\textbf{Solvent Preference} & \textbf{Polar Protic} ($\mathrm{H_2O, EtOH, AcOH}$): solvates carbocation and stabilizes leaving group anion & \textbf{Polar Aprotic} ($\mathrm{DMSO, DMF, \text{acetone}}$): solvates cations, leaving naked, highly reactive anions \\
+\hline
+\textbf{Rearrangements} & Carbocation rearrangements (shifts, expansions) common & \textbf{Zero rearrangement possible} \\
+\hline
+\textbf{Leaving Group Order} & $\mathrm{I^- > Br^- > Cl^- \gg F^-}$ & $\mathrm{I^- > Br^- > Cl^- \gg F^-}$ \\
+\hline
+\end{tabularx}
+\end{formulabox}
+
+\begin{conceptbox}[The \texorpdfstring{$S_Ni$}{SNi} Mechanism: Darzens Process with Thionyl Chloride]
+Reaction of alcohols with $\mathrm{SOCl_2}$ proceeds with different stereochemical outcomes depending on the solvent:
+\begin{itemize}
+  \item \textbf{In Dioxane / Diethyl Ether ($S_Ni$, Internal Return):} Reaction forms an alkyl chlorosulfite ester ($\mathrm{R-O-SOCl}$). In nonpolar solvent, it dissociates into an intimate ion pair $[\mathrm{R}^+\ \mathrm{SO_2Cl}^-]$. Decomposition releases $\mathrm{SO_2}\uparrow$, and the chloride is delivered to the carbocation from the \textbf{same face} from which the oxygen departed. Outcome: \textbf{Retention of configuration}.
+  \item \textbf{In Pyridine ($S_N2$ Inversion):} Pyridine reacts with generated $\mathrm{HCl}$ and converts the chlorosulfite into an active pyridinium intermediate. Free chloride ion attacks from the \textbf{backside}. Outcome: \textbf{Complete Walden inversion}.
+\end{itemize}
+\end{conceptbox}
+
+\subsection{Elimination Reactions (\texorpdfstring{$E1$}{E1} vs \texorpdfstring{$E2$}{E2} vs \texorpdfstring{$E1cB$}{E1cB})}
+
+\begin{formulabox}[Saytzeff (Zaitsev) vs Hofmann Regioselectivity]
+\textbf{1. Saytzeff Rule (Thermodynamic Control):} Dehydrohalogenation yields preferentially the more stable, more highly substituted alkene (greater number of hyperconjugative $\alpha$-hydrogens).
+\begin{itemize}
+  \item \textbf{Conditions for Saytzeff Selectivity:} Small, unhindered bases ($\mathrm{EtO^-, MeO^-, OH^-}$) acting on substrates with good leaving groups ($\mathrm{I^-, Br^-, Cl^-}$).
+  \begin{align}
+    \mathrm{CH_3-CH_2-CH(Br)-CH_3} \xrightarrow{\mathrm{alc.\ KOH}} &\mathbf{\mathrm{CH_3-CH=CH-CH_3}} \ (\text{Saytzeff}, 81\%) \notag \\
+    &+ \mathrm{CH_3-CH_2-CH=CH_2} \ (\text{Hofmann}, 19\%)
+  \end{align}
+\end{itemize}
+\textbf{2. Hofmann Rule (Kinetic Control):} Elimination yields preferentially the less substituted, terminal alkene.
+\begin{itemize}
+  \item \textbf{Conditions for Hofmann Selectivity:}
+  \begin{enumerate}
+    \item \textbf{Bulky Sterically Hindered Bases:} Potassium tert-butoxide ($t\mathrm{-BuO^-K^+}$), diisopropylamide. The base cannot access the more hindered internal $\beta$-hydrogen and abstracts the accessible terminal $\beta$-hydrogen.
+    \item \textbf{Poor Leaving Groups:} Fluoride ($-\mathrm{F}$) or quaternary ammonium ($-\mathrm{NR_3^+}$) and sulfonium ($-\mathrm{SR_2^+}$) salts. Due to extreme electronegativity, the $\beta$-hydrogen becomes acidic, developing significant carbanion character in the transition state. The less substituted primary carbanion is more stable than secondary, directing elimination to the terminal alkene.
+  \end{enumerate}
+\end{itemize}
+\textbf{3. $E2$ Stereochemistry:} Elimination requires strict \textbf{anti-periplanar} geometry: the $\beta\mathrm{-H}$, the two carbons, and the leaving group $X$ must lie in a single plane with dihedral angle $\theta = 180^\circ$.
+\end{formulabox}
+
+\subsection{Nucleophilic Aromatic Substitution (\texorpdfstring{$S_N\mathrm{Ar}$}{SNAr})}
+
+\begin{conceptbox}[Addition-Elimination via Meisenheimer Complex]
+Unactivated haloarenes are virtually inert toward nucleophiles at ambient conditions because the $\mathrm{C-X}$ bond possesses partial double bond character ($1.69\text{ \AA}$ in chlorobenzene vs $1.77\text{ \AA}$ in chloroethane) due to $+M$ resonance, and the $sp^2$ carbon holds electrons tightly.
+\textbf{Activation by Nitro Groups ($S_N\mathrm{Ar}$):}
+Introducing strong electron-withdrawing nitro ($-\mathrm{NO_2}$) groups at \textbf{ortho} and \textbf{para} positions dramatically enhances substitution rate:
+\begin{equation}
+  \text{Chlorobenzene } (623\text{ K}, 300\text{ atm}) \gg p\text{-nitro } (443\text{ K}) \gg 2,4\text{-dinitro } (368\text{ K}) \gg 2,4,6\text{-trinitro (warm } \mathrm{H_2O})
+\end{equation}
+\textbf{Mechanism:} Nucleophilic attack on the ipso carbon forms a resonance-stabilized carbanionic intermediate (\textbf{Meisenheimer complex}), where negative charge delocalizes into the ortho and para nitro groups. Loss of halide in Step 2 restores aromaticity.
+\textbf{Leaving Group Anomaly:} Unlike aliphatic substitutions, the rate order in $S_N\mathrm{Ar}$ is:
+\begin{equation}
+  \mathrm{Ar-F} \gg \mathrm{Ar-Cl} > \mathrm{Ar-Br} > \mathrm{Ar-I}
+\end{equation}
+The rate-determining step is nucleophilic attack (Step 1). The extreme electronegativity of fluorine stabilizes the Meisenheimer intermediate via $-I$ pull, accelerating the rate!
+\end{conceptbox}
+
+\section{Alcohols, Phenols \& Ethers}
+
+\subsection{Alcohols: Acidity, Oxidation \& Dehydration}
+
+\begin{conceptbox}[Acidity \& The Lucas Distinction Test]
+\textbf{1. Acidity Order of Alcohols:}
+\begin{equation}
+  \mathrm{H_2O} \ (pK_a = 15.7) > \mathrm{CH_3OH} \ (15.5) > 1^\circ \ \mathrm{RCH_2OH} \ (16) > 2^\circ \ \mathrm{R_2CHOH} \ (16.5) > 3^\circ \ \mathrm{R_3COH} \ (17)
+\end{equation}
+Alkoxide anions ($\mathrm{R-O^-}$) are destabilized by the $+I$ inductive effect of alkyl groups. Water is a stronger acid than all alcohols except methanol!\\
+\textbf{2. The Lucas Test ($\text{anhydrous } \mathrm{ZnCl_2} + \text{conc. } \mathrm{HCl}$):}
+Distinguishes $1^\circ, 2^\circ, 3^\circ$ alcohols via $S_N1$ conversion to insoluble alkyl chlorides:
+\begin{equation}
+  \mathrm{R-OH} + \mathrm{HCl} \xrightarrow{\mathrm{ZnCl_2}} \mathrm{R-Cl}\downarrow (\text{cloudy turbidity}) + \mathrm{H_2O}
+\end{equation}
+\begin{itemize}
+  \item \textbf{$3^\circ$ Alcohols:} Immediate turbidity within 5--10 seconds at room temperature.
+  \item \textbf{$2^\circ$ Alcohols:} Turbidity appears within 5 minutes.
+  \item \textbf{$1^\circ$ Alcohols:} Solution remains completely clear at room temperature; turbidity appears only on prolonged boiling.
+\end{itemize}
+\end{conceptbox}
+
+\begin{usecasebox}[Oxidation Reagents for Alcohols]
+\begin{itemize}
+  \item \textbf{Pyridinium Chlorochromate (PCC in $\mathrm{CH_2Cl_2}$):} Mild selective oxidant. Oxidizes $1^\circ$ alcohols to \textbf{aldehydes} (stops cleanly without over-oxidation to carboxylic acid) and $2^\circ$ alcohols to ketones.
+  \item \textbf{Jones Reagent ($\mathrm{CrO_3 / aq.\ H_2SO_4 / \text{acetone}}$):} Converts $1^\circ$ alcohols directly to carboxylic acids; $2^\circ$ alcohols to ketones.
+  \item \textbf{Heated Copper Catalyst at $573\text{ K}$ ($300^\circ\text{C}$):}
+  \begin{itemize}
+    \item $1^\circ$ Alcohol $\xrightarrow{\mathrm{Cu, 573 K}}$ Aldehyde $+ \mathrm{H_2}\uparrow$ (Dehydrogenation).
+    \item $2^\circ$ Alcohol $\xrightarrow{\mathrm{Cu, 573 K}}$ Ketone $+ \mathrm{H_2}\uparrow$ (Dehydrogenation).
+    \item $3^\circ$ Alcohol $\xrightarrow{\mathrm{Cu, 573 K}}$ \textbf{Alkene} $+ \mathrm{H_2O}$ (\textbf{Dehydration}, not dehydrogenation!).
+  \end{itemize}
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Phenols: Acidic Character \& Named Reactions}
+
+\begin{conceptbox}[Phenol Acidity \& Substituent Influence]
+Phenol ($pK_a \approx 10$) is $10^6$ times more acidic than aliphatic alcohols ($pK_a \approx 16-18$):
+\begin{itemize}
+  \item \textbf{Resonance Stabilization of Phenoxide:} The phenoxide ion ($\mathrm{C_6H_5O^-}$) delocalizes negative charge into the benzene ring over ortho and para positions (5 resonance structures). Alkoxide ions ($\mathrm{RO^-}$) have zero resonance stabilization.
+  \item \textbf{Substituent Effects on Phenol Acidity:}
+  \begin{align}
+    \text{Picric acid } (pK_a = 0.38) &> 2,4\text{-dinitrophenol } (4.0) > p\text{-nitrophenol } (7.15) \notag \\
+    &> o\text{-nitrophenol } (7.23) > \text{Phenol } (10.0) > p\text{-cresol } (10.2)
+  \end{align}
+  \textit{Note: $p$-nitrophenol is more acidic than $o$-nitrophenol because the ortho isomer is stabilized by intramolecular hydrogen bonding, reducing proton release!}
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Kolbe's \& Reimer-Tiemann Reactions]
+\textbf{1. Kolbe's Reaction (Synthesis of Salicylic Acid):}
+Sodium phenoxide is treated with weak electrophile $\mathrm{CO_2}$ at $400\text{ K}$ and $4-7\text{ atm}$, followed by acidification:
+\begin{equation}
+  \mathrm{C_6H_5ONa} + \mathrm{CO_2} \xrightarrow[4-7\text{ atm}]{400\text{ K}} \text{Sodium Salicylate} \xrightarrow{\mathrm{H^+}} \mathbf{\text{Salicylic Acid } (o\text{-hydroxybenzoic acid})}
+\end{equation}
+Salicylic acid acetylates with acetic anhydride to yield \textbf{Aspirin} (acetylsalicylic acid).\\
+\textbf{2. Reimer-Tiemann Reaction (Synthesis of Salicylaldehyde):}
+Phenol treated with $\mathrm{CHCl_3}$ and aqueous $\mathrm{NaOH}$ at $340\text{ K}$:
+\begin{equation}
+  \mathrm{C_6H_5OH} + \mathrm{CHCl_3} + 3\mathrm{NaOH} \longrightarrow \mathbf{\text{Salicylaldehyde } (o\text{-hydroxybenzaldehyde})} + 3\mathrm{NaCl} + 2\mathrm{H_2O}
+\end{equation}
+\textbf{Mechanistic Detail:} The electrophile is singlet dichlorocarbene ($:\mathrm{CCl_2}$) generated in situ. Attack occurs predominantly at the ortho position due to cyclic sodium chelation in the transition state. If $\mathrm{CCl_4}$ is used instead of $\mathrm{CHCl_3}$, \textbf{salicylic acid} is formed directly!
+\end{formulabox}
+
+\subsection{Ethers: Williamson Synthesis \& HI Cleavage}
+
+\begin{trapbox}[NEET Trap: Substrate Rules for Williamson Ether Synthesis]
+Williamson ether synthesis involves nucleophilic displacement of an alkyl halide by an alkoxide:
+\begin{equation}
+  \mathrm{R-O^-Na^+} + \mathrm{R'-X} \xrightarrow{S_N2} \mathrm{R-O-R'} + \mathrm{NaX}
+\end{equation}
+\textbf{The Strict Constraint:} The alkyl halide ($\mathrm{R'-X}$) \textbf{must be methyl or primary ($1^\circ$)}.
+\begin{itemize}
+  \item \textbf{Correct Preparation of tert-Butyl Methyl Ether:}
+  \begin{equation}
+    \mathrm{(CH_3)_3C-O^-Na^+} \ (\text{sodium } tert\text{-butoxide}) + \mathrm{CH_3-I} \xrightarrow{S_N2} \mathbf{\mathrm{(CH_3)_3C-O-CH_3}} + \mathrm{NaI} \quad (\text{Yield } \approx 95\%)
+  \end{equation}
+  \item \textbf{Fatal Reversal Trap:} If sodium methoxide is treated with tert-butyl bromide:
+  \begin{equation}
+    \mathrm{CH_3-O^-Na^+} + \mathrm{(CH_3)_3C-Br} \xrightarrow{E2} \mathbf{\mathrm{CH_2=C(CH_3)_2}} \ (\text{2-methylpropene}) + \mathrm{CH_3OH} + \mathrm{NaBr}
+  \end{equation}
+  Because tert-butyl bromide is sterically crowded, the strongly basic methoxide ion induces \textbf{exclusive $E2$ elimination}!
+\end{itemize}
+\end{trapbox}
+
+\begin{formulabox}[Cleavage of Ethers with Hydroiodic Acid (\texorpdfstring{$\mathrm{HI}$}{HI})]
+When unsymmetrical ether $\mathrm{R-O-R'}$ is cleaved with cold, concentrated $\mathrm{HI}$:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Case 1: Both Alkyl Groups are $1^\circ$ or $2^\circ$ ($S_N2$ Pathway):}
+  The protonated ether $[\mathrm{R-OH^+-R'}]$ is attacked by iodide ion ($\mathrm{I^-}$) at the \textbf{less sterically hindered carbon}:
+  \begin{equation}
+    \mathrm{CH_3-O-CH_2CH_2CH_3} + \mathrm{HI} \xrightarrow{S_N2} \mathbf{\mathrm{CH_3I}} + \mathrm{CH_3CH_2CH_2OH}
+  \end{equation}
+  \item \textbf{Case 2: One Alkyl Group is $3^\circ$ or Resonance-Stabilized ($S_N1$ Pathway):}
+  Heterolysis occurs first to produce the stable $3^\circ$ or benzylic carbocation:
+  \begin{equation}
+    \mathrm{(CH_3)_3C-O-CH_3} + \mathrm{HI} \xrightarrow{S_N1} \mathbf{\mathrm{(CH_3)_3C-I}} + \mathrm{CH_3OH}
+  \end{equation}
+  \item \textbf{Case 3: Alkyl Aryl Ethers (Anisole $\mathrm{C_6H_5-O-CH_3}$):}
+  The $\mathrm{C_{aromatic}-O}$ bond has partial double bond character due to resonance and cannot be cleaved. Cleavage yields exclusively:
+  \begin{equation}
+    \mathrm{C_6H_5-O-CH_3} + \mathrm{HI} \longrightarrow \mathbf{\mathrm{C_6H_5OH}} \ (\text{phenol}) + \mathbf{\mathrm{CH_3I}}
+  \end{equation}
+  \textit{Note: Excess hot $\mathrm{HI}$ converts all aliphatic alcohols to alkyl iodides: $\mathrm{R-OH} + \mathrm{HI} \to \mathrm{R-I} + \mathrm{H_2O}$. Phenol never converts to iodobenzene!}
+\end{enumerate}
+\end{formulabox}
+
+\section{Aldehydes, Ketones \& Carboxylic Acids}
+
+\subsection{Nucleophilic Addition Mechanisms}
+
+\begin{conceptbox}[Carbonyl Electrophilicity \& Relative Reactivity Order]
+The carbonyl carbon is $sp^2$-hybridized with planar geometry ($120^\circ$). Strong electronegativity of oxygen ($\chi=3.44$ vs $\chi_C=2.55$) creates a permanent dipole:
+\begin{equation}
+  >\mathrm{C^{\delta+}=O^{\delta-}} \longleftrightarrow >\mathrm{\overset{+}{C}-\overset{-}{O}}
+\end{equation}
+Nucleophiles attack perpendicular to the carbonyl plane ($107^\circ$ Bürgi-Dunitz angle), transforming the planar $sp^2$ carbon into a tetrahedral $sp^3$ alkoxide intermediate.
+\textbf{Reactivity Hierarchy Toward Nucleophiles:}
+\begin{equation}
+  \mathrm{HCHO} > \mathrm{CH_3CHO} > \mathrm{CH_3COCH_3} > \mathrm{C_6H_5CHO} > \mathrm{C_6H_5COCH_3} > \mathrm{C_6H_5COC_6H_5}
+\end{equation}
+\textbf{Governing Factors:}
+\begin{itemize}
+  \item \textbf{Steric Effect:} Bulky alkyl or aryl groups crowd the transition state, hindering nucleophilic approach.
+  \item \textbf{Electronic Effect:} Electron-donating $+I$ alkyl groups reduce partial positive charge on the carbonyl carbon. $+M$ resonance from aromatic rings strongly stabilizes the ground state, lowering electrophilicity.
+\end{itemize}
+\end{conceptbox}
+
+\begin{usecasebox}[Standard Nucleophilic Addition Reactions]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Addition of $\mathrm{HCN}$ (Cyanohydrin Formation):} Catalyzed by base ($\mathrm{OH^-}$ generates active nucleophile $\mathrm{CN^-}$). Cyanohydrins hydrolyze in acid to $\alpha$-hydroxy acids:
+  \begin{equation}
+    \mathrm{CH_3CHO} + \mathrm{HCN} \xrightarrow{\mathrm{OH^-}} \mathrm{CH_3CH(OH)CN} \xrightarrow{\mathrm{H_3O^+}} \mathrm{CH_3CH(OH)COOH} \ (\text{Lactic Acid})
+  \end{equation}
+  \item \textbf{Addition of Sodium Bisulfite ($\mathrm{NaHSO_3}$):} Aldehydes and methyl ketones form crystalline, water-soluble bisulfite adducts. The adduct regenerates pure carbonyl on treatment with dilute mineral acid or base (used for industrial separation and purification).
+  \item \textbf{Addition of Alcohols (Acetal/Ketal Formation):} Carbonyls react with 1 equivalent of alcohol in dry $\mathrm{HCl}$ to form hemiacetals, and with 2 equivalents to form acetals. Acetals are stable to bases, oxidants, and reducing agents, acting as universal carbonyl protecting groups.
+  \item \textbf{Nucleophilic Addition-Elimination with Ammonia Derivatives ($\mathrm{NH_2-G}$):}
+  \begin{equation}
+    >\mathrm{C=O} + \mathrm{H_2N-G} \xrightarrow{\mathrm{pH } 4.5} [>\mathrm{C(OH)-NH-G}] \xrightarrow{-\mathrm{H_2O}} >\mathbf{\mathrm{C=N-G}}
+  \end{equation}
+  \begin{itemize}
+    \item Hydroxylamine ($\mathrm{NH_2OH}$) $\to$ \textbf{Oxime} ($>\mathrm{C=N-OH}$).
+    \item Hydrazine ($\mathrm{NH_2NH_2}$) $\to$ \textbf{Hydrazone} ($>\mathrm{C=N-NH_2}$).
+    \item 2,4-Dinitrophenylhydrazine (2,4-DNP / Brady's Reagent) $\to$ \textbf{Yellow/Orange precipitate} (used to detect aldehydes/ketones).
+    \item Semicarbazide ($\mathrm{NH_2-CO-NHNH_2}$) $\to$ \textbf{Semicarbazone}. (\textit{Trap: Only the hydrazine $-\mathrm{NH_2}$ is nucleophilic; the amide $-\mathrm{CONH_2}$ nitrogen lone pair is delocalized into the carbonyl!})
+  \end{itemize}
+\end{enumerate}
+\end{usecasebox}
+
+\subsection{Reactions Involving \texorpdfstring{$\alpha$}{alpha}-Hydrogen: Aldol, Cannizzaro \& Haloform}
+
+\begin{formulabox}[Step-by-Step Mechanism: Aldol Condensation]
+Aldehydes or ketones possessing at least one $\alpha$-hydrogen react in dilute alkali ($\mathrm{dil.\ NaOH}$):
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Step 1: Enolate Generation (Acid-Base Equilibrium):}
+  \begin{equation}
+    \mathrm{CH_3-CHO} + \mathrm{OH^-} \rightleftharpoons [\mathrm{:\bar{C}H_2-CHO} \longleftrightarrow \mathrm{CH_2=CH-O^-}] + \mathrm{H_2O}
+  \end{equation}
+  \item \textbf{Step 2: Nucleophilic Attack on Second Carbonyl Molecule (RDS):}
+  \begin{equation}
+    \mathrm{CH_3-CHO} + \mathrm{:\bar{C}H_2-CHO} \longrightarrow \mathrm{CH_3-CH(O^-)-CH_2-CHO}
+  \end{equation}
+  \item \textbf{Step 3: Protonation to Aldol ($\beta$-Hydroxyaldehyde):}
+  \begin{equation}
+    \mathrm{CH_3-CH(O^-)-CH_2-CHO} + \mathrm{H_2O} \longrightarrow \mathbf{\mathrm{CH_3-CH(OH)-CH_2-CHO}} \ (\text{3-hydroxybutanal}) + \mathrm{OH^-}
+  \end{equation}
+  \item \textbf{Step 4: Dehydration on Heating ($E1cB$ Mechanism):}
+  Deprotonation of the acidic $\alpha$-carbon creates an enolate, followed by expulsion of hydroxide ion ($\mathrm{OH^-}$) to yield a conjugated $\alpha,\beta$-unsaturated aldehyde:
+  \begin{equation}
+    \mathrm{CH_3-CH(OH)-CH_2-CHO} \xrightarrow{\Delta, -\mathrm{H_2O}} \mathbf{\mathrm{CH_3-CH=CH-CHO}} \ (\text{But-2-enal / Crotonaldehyde})
+  \end{equation}
+\end{enumerate}
+\end{formulabox}
+
+\begin{formulabox}[Step-by-Step Mechanism: Cannizzaro Reaction]
+Aldehydes \textbf{lacking $\alpha$-hydrogen} ($\mathrm{HCHO, C_6H_5CHO, (CH_3)_3CCHO}$) disproportionate in concentrated alkali ($50\%\ \mathrm{NaOH}$):
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Step 1: Reversible Addition of Hydroxide:}
+  \begin{equation}
+    \mathrm{C_6H_5CHO} + \mathrm{OH^-} \rightleftharpoons \mathrm{C_6H_5-CH(OH)-O^-} \quad (\text{Monoanion})
+  \end{equation}
+  \item \textbf{Step 2: Rate-Determining Hydride Shift ($H^-$):}
+  The alkoxide reforms the carbonyl double bond, transferring a hydride ion directly to a second aldehyde molecule:
+  \begin{equation}
+    \mathrm{C_6H_5-CH(O^-)-OH} + \mathrm{C_6H_5CHO} \xrightarrow{\text{slow, RDS}} \mathrm{C_6H_5COOH} + \mathrm{C_6H_5CH_2O^-}
+  \end{equation}
+  \item \textbf{Step 3: Fast Acid-Base Proton Exchange:}
+  \begin{equation}
+    \mathrm{C_6H_5COOH} + \mathrm{C_6H_5CH_2O^-} \xrightarrow{\text{fast}} \mathbf{\mathrm{C_6H_5COO^-Na^+}} \ (\text{Sodium Benzoate}) + \mathbf{\mathrm{C_6H_5CH_2OH}} \ (\text{Benzyl Alcohol})
+  \end{equation}
+\end{enumerate}
+\textbf{Cross-Cannizzaro Reaction:} When benzaldehyde reacts with formaldehyde in concentrated alkali, formaldehyde is oxidized exclusively to sodium formate ($\mathrm{HCOONa}$) while benzaldehyde is reduced to benzyl alcohol:
+\begin{equation}
+  \mathrm{C_6H_5CHO} + \mathrm{HCHO} + \mathrm{NaOH} \longrightarrow \mathbf{\mathrm{C_6H_5CH_2OH}} + \mathbf{\mathrm{HCOONa}}
+\end{equation}
+\textit{Cause: Formaldehyde is sterically uncrowded and far more electrophilic than benzaldehyde, undergoing nucleophilic attack by $\mathrm{OH^-}$ first!}
+\end{formulabox}
+
+\begin{trapbox}[The Haloform (Iodoform) Reaction Test]
+\textbf{Structural Requirement:} Reagent $\mathrm{I_2 / NaOH}$ (or $\mathrm{NaOI}$) oxidizes and cleaves compounds containing:
+\begin{enumerate}
+  \item $\mathrm{CH_3-C=O}$ (Methyl ketone group, e.g., acetaldehyde, acetone, acetophenone).
+  \item $\mathrm{CH_3-CH(OH)}-$ (Methyl carbinol group oxidizable in situ to methyl ketone, e.g., ethanol, propan-2-ol, butan-2-ol).
+\end{enumerate}
+\begin{equation}
+  \mathrm{R-CO-CH_3} + 3\mathrm{I_2} + 4\mathrm{NaOH} \longrightarrow \mathbf{\mathrm{CHI_3}}\downarrow \ (\text{Yellow precipitate, m.p. } 119^\circ\text{C}) + \mathrm{R-COONa} + 3\mathrm{NaI} + 3\mathrm{H_2O}
+\end{equation}
+\textbf{Classical NEET Distinction Traps:}
+\begin{itemize}
+  \item \textbf{Ethanol vs Methanol:} Ethanol gives positive iodoform test; methanol gives negative test.
+  \item \textbf{Pentan-2-one vs Pentan-3-one:} Pentan-2-one is a methyl ketone (positive); pentan-3-one is not (negative).
+  \item \textbf{Acetaldehyde vs Benzaldehyde:} Acetaldehyde gives yellow iodoform; benzaldehyde does not.
+\end{itemize}
+\end{trapbox}
+
+\subsection{Distinction Tests \& Reductions}
+
+\begin{usecasebox}[Distinction Tests for Carbonyl Functions]
+\begin{itemize}
+  \item \textbf{Tollens' Test (Silver Mirror Test):}
+  Tollens' reagent ($\mathrm{[Ag(NH_3)_2]^+OH^-}$) is reduced by \textbf{all aldehydes} (aliphatic and aromatic) and $\alpha$-hydroxy ketones to a shining silver mirror ($\mathrm{Ag}\downarrow$):
+  \begin{equation}
+    \mathrm{R-CHO} + 2\mathrm{[Ag(NH_3)_2]^+} + 3\mathrm{OH^-} \longrightarrow \mathrm{R-COO^-} + 2\mathbf{\mathrm{Ag}}\downarrow + 4\mathrm{NH_3} + 2\mathrm{H_2O}
+  \end{equation}
+  \item \textbf{Fehling's Test:} Alkaline cupric tartrate complex ($\mathrm{Cu^{2+}}$) is reduced to a \textbf{red precipitate of cuprous oxide} ($\mathrm{Cu_2O}\downarrow$) by \textbf{aliphatic aldehydes only}:
+  \begin{equation}
+    \mathrm{R-CHO} + 2\mathrm{Cu^{2+}} + 5\mathrm{OH^-} \longrightarrow \mathrm{R-COO^-} + \mathbf{\mathrm{Cu_2O}}\downarrow (\text{red}) + 3\mathrm{H_2O}
+  \end{equation}
+  \textit{NEET Trap: Benzaldehyde and all aromatic aldehydes FAIL Fehling's test because aromatic resonance stabilizes the carbonyl, making it an insufficiently strong reducing agent to reduce the tartrate-chelated $\mathrm{Cu^{2+}}$ ion!}
+\end{itemize}
+\end{usecasebox}
+
+\begin{formulabox}[Clemmensen vs Wolff-Kishner Carbonyl Reduction]
+\begin{itemize}
+  \item \textbf{Clemmensen Reduction:} Uses amalgamated zinc and concentrated hydrochloric acid ($\mathrm{Zn-Hg / conc.\ HCl}$):
+  \begin{equation}
+    >\mathrm{C=O} + 4[\mathrm{H}] \xrightarrow{\mathrm{Zn-Hg / conc.\ HCl}} >\mathbf{\mathrm{CH_2}} + \mathrm{H_2O}
+  \end{equation}
+  \textit{Constraint: Cannot be used for substrates containing acid-sensitive groups ($-\mathrm{OH}, -\mathrm{OR}, -\mathrm{C=C}-$), which undergo elimination or addition in strong acid.}
+  \item \textbf{Wolff-Kishner Reduction:} Carbonyl converted to hydrazone, then heated with $\mathrm{KOH}$ in ethylene glycol at $453-473\text{ K}$:
+  \begin{equation}
+    >\mathrm{C=O} + \mathrm{NH_2NH_2} \xrightarrow{-\mathrm{H_2O}} >\mathrm{C=N-NH_2} \xrightarrow[\text{glycol}, \Delta]{\mathrm{KOH}} >\mathbf{\mathrm{CH_2}} + \mathrm{N_2}\uparrow
+  \end{equation}
+  \textit{Constraint: Cannot be used for substrates containing base-sensitive groups (alkyl halides, esters), which undergo nucleophilic displacement or saponification.}
+\end{itemize}
+\end{formulabox}
+
+\subsection{Carboxylic Acids \& Derivatives}
+
+\begin{conceptbox}[Resonance in Carboxylic Acids \& The Ortho Effect]
+\textbf{1. Resonance of Carboxylate Anion:}
+Deprotonation of carboxylic acid yields the carboxylate anion ($\mathrm{R-COO^-}$), which is stabilized by two \textbf{completely equivalent} resonance structures sharing negative charge equally between two electronegative oxygen atoms ($\mathrm{C-O}$ bond lengths identical at $1.26\text{ \AA}$). This makes carboxylic acids vastly more acidic than phenols.\\
+\textbf{2. The Ortho Effect in Benzoic Acids:}
+Any substituent at the \textbf{ortho position} of benzoic acid—regardless of whether it is electron-withdrawing ($-\mathrm{NO_2}$) or electron-releasing ($-\mathrm{CH_3}, -\mathrm{OCH_3}$)—increases the acidic strength compared to benzoic acid:
+\begin{equation}
+  o\text{-toluic acid } (pK_a = 3.91) > \text{benzoic acid } (pK_a = 4.20) > m\text{-toluic acid } (4.27) > p\text{-toluic acid } (4.37)
+\end{equation}
+\textbf{Physical Cause:} Steric crowding by the ortho substituent twists the $-\mathrm{COOH}$ group out of the plane of the benzene ring. This \textbf{steric inhibition of resonance (SIR)} eliminates cross-conjugation between the ring and the carbonyl, allowing unhindered resonance delocalization of negative charge across the two carboxylate oxygens!
+\end{conceptbox}
+
+\begin{formulabox}[Hell-Volhard-Zelinsky (HVZ) Reaction \& Decarboxylation]
+\textbf{1. HVZ Reaction ($\alpha$-Halogenation):}
+Carboxylic acids possessing $\alpha$-hydrogen react with chlorine or bromine in the presence of catalytic red phosphorus:
+\begin{equation}
+  \mathrm{R-CH_2-COOH} + \mathrm{X_2} \xrightarrow{\text{red } \mathrm{P}} \mathrm{R-CH(X)-COX} \xrightarrow{\mathrm{H_2O}} \mathbf{\mathrm{R-CH(X)-COOH}} \ (\alpha\text{-halocarboxylic acid}) + \mathrm{HX}
+\end{equation}
+\textit{Note: Formic acid ($\mathrm{HCOOH}$) and benzoic acid ($\mathrm{C_6H_5COOH}$) fail the HVZ reaction due to absence of $\alpha$-hydrogens!}\\
+\textbf{2. Soda-Lime Decarboxylation:}
+Sodium carboxylates heated with soda lime ($\mathrm{NaOH} + \mathrm{CaO}$ in $3:1$ mass ratio) undergo loss of carbon dioxide:
+\begin{equation}
+  \mathrm{R-COONa} + \mathrm{NaOH} \xrightarrow[\Delta]{\mathrm{CaO}} \mathbf{\mathrm{R-H}} + \mathrm{Na_2CO_3}
+\end{equation}
+$\mathrm{CaO}$ acts as a desiccant, keeping $\mathrm{NaOH}$ dry and raising the reaction fusion temperature.
+\end{formulabox}
+
+\section{Nitrogen-Containing Compounds: Amines \& Diazonium Chemistry}
+
+\subsection{Basicity of Amines: Gas Phase vs Aqueous Phase}
+
+\begin{conceptbox}[Thermodynamic Factors Governing Amine Basicity]
+The basicity of amines is measured by $K_b$ or $pK_b$ ($pK_b = -\log K_b$; lower $pK_b$ indicates stronger base). Basicity reflects the thermodynamic stability of the conjugate ammonium cation ($\mathrm{RNH_3^+}$).
+\textbf{1. Gas Phase (Isolated Molecules):}
+In the gas phase, solvent molecules are absent. Basicity is governed strictly by the electron-donating $+I$ inductive effect of alkyl groups, which stabilizes the positive charge on nitrogen:
+\begin{equation}
+  \text{Gas Phase Basicity: } 3^\circ \ \mathrm{R_3N} > 2^\circ \ \mathrm{R_2NH} > 1^\circ \ \mathrm{RNH_2} > \mathrm{NH_3}
+\end{equation}
+\textbf{2. Aqueous Solution (Interplay of Three Opposing Factors):}
+In water, three thermodynamic effects operate concurrently:
+\begin{enumerate}
+  \item \textbf{Inductive Effect ($+I$):} Stabilizes cation in order $3^\circ > 2^\circ > 1^\circ > \mathrm{NH_3}$.
+  \item \textbf{Hydration Energy (H-Bonding):} The conjugate ammonium ion forms hydrogen bonds with water molecules. Greater number of hydrogens attached to positive nitrogen yields higher hydration energy: $\mathrm{RNH_3^+}$ ($3\text{ H-bonds}$) $> \mathrm{R_2NH_2^+}$ ($2\text{ H-bonds}$) $> \mathrm{R_3NH^+}$ ($1\text{ H-bond}$). Hydration stabilizes in order: $\mathrm{NH_4^+} > 1^\circ > 2^\circ > 3^\circ$.
+  \item \textbf{Steric Hindrance to Protonation:} Bulky alkyl groups shield the nitrogen lone pair, impeding proton attack in order: $1^\circ > 2^\circ > 3^\circ$.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Authoritative Aqueous Basicity Orders (NEET Core Benchmark)]
+The combined net effect produces the following experimentally established basicity sequences in aqueous medium:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Methyl-Substituted Amines ($2^\circ > 1^\circ > 3^\circ > \mathrm{NH_3}$, Mnemonic: ``213''):}
+  \begin{equation}
+    \mathbf{\mathrm{(CH_3)_2NH}} \ (pK_b = 3.27) > \mathbf{\mathrm{CH_3NH_2}} \ (3.38) > \mathbf{\mathrm{(CH_3)_3N}} \ (4.22) > \mathbf{\mathrm{NH_3}} \ (4.75)
+  \end{equation}
+  \item \textbf{Ethyl-Substituted Amines ($2^\circ > 3^\circ > 1^\circ > \mathrm{NH_3}$, Mnemonic: ``231''):}
+  \begin{equation}
+    \mathbf{\mathrm{(C_2H_5)_2NH}} \ (pK_b = 3.00) > \mathbf{\mathrm{(C_2H_5)_3N}} \ (3.25) > \mathbf{\mathrm{C_2H_5NH_2}} \ (3.29) > \mathbf{\mathrm{NH_3}} \ (4.75)
+  \end{equation}
+  \item \textbf{Arylamines (Aniline):}
+  Aniline ($\mathrm{C_6H_5NH_2}$, $pK_b = 9.38$) is vastly weaker than ammonia ($pK_b = 4.75$) because its nitrogen lone pair is delocalized over the ortho and para positions of the aromatic ring (5 canonical forms). The anilinium cation ($\mathrm{C_6H_5NH_3^+}$) has only 2 resonance structures, making protonation thermodynamically disfavored!
+\end{enumerate}
+\end{formulabox}
+
+\subsection{Gabriel Phthalimide \& Hoffmann Bromamide Mechanisms}
+
+\begin{conceptbox}[Gabriel Phthalimide Synthesis: Pure Primary Aliphatic Amines]
+Gabriel synthesis produces pure $1^\circ$ aliphatic amines free from secondary or tertiary contamination:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Potassium Salt Formation:} Phthalimide is deprotonated by ethanolic $\mathrm{KOH}$ to form potassium phthalimide (the imide hydrogen is acidic due to two flanking carbonyls).
+  \item \textbf{Alkylation ($S_N2$):} Nucleophilic attack of the phthalimide anion on a primary alkyl halide ($\mathrm{R-X}$) yields $N$-alkylphthalimide.
+  \item \textbf{Hydrazinolysis / Alkaline Hydrolysis:} Alkaline hydrolysis with $\mathrm{NaOH}$ yields pure primary amine and sodium phthalate:
+  \begin{align}
+    \text{Phthalimide} &\xrightarrow{\mathrm{KOH}} \text{Potassium Phthalimide} \xrightarrow{\mathrm{R-X}} N\text{-Alkylphthalimide} \notag \\
+    &\xrightarrow{\mathrm{NaOH(aq)}} \mathbf{\mathrm{R-NH_2}} + \text{Sodium Phthalate}
+  \end{align}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{trapbox}[NEET Trap: Why Aromatic Amines CANNOT be Prepared by Gabriel Synthesis]
+Aniline ($\mathrm{C_6H_5NH_2}$) cannot be prepared by Gabriel phthalimide synthesis because the required aryl halide ($\mathrm{C_6H_5-X}$) does not undergo nucleophilic aromatic substitution ($S_N2$) with the phthalimide anion under standard conditions due to partial double bond character of the $\mathrm{C-X}$ bond and steric/electronic repulsion of the aromatic ring!
+\end{trapbox}
+
+\begin{formulabox}[Step-by-Step Mechanism: Hoffmann Bromamide Degradation]
+Primary acid amides react with bromine and aqueous alkali ($\mathrm{Br_2 + 4KOH}$) to yield primary amines with \textbf{one less carbon atom}:
+\begin{equation}
+  \mathrm{R-CONH_2} + \mathrm{Br_2} + 4\mathrm{KOH} \longrightarrow \mathbf{\mathrm{R-NH_2}} + \mathrm{K_2CO_3} + 2\mathrm{KBr} + 2\mathrm{H_2O}
+\end{equation}
+\textbf{Elementary Mechanistic Steps:}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Formation of $N$-Bromoamide:} $\mathrm{RCONH_2} + \mathrm{OH^-} \to \mathrm{RCON\bar{H}} \xrightarrow{\mathrm{Br_2}} \mathrm{R-CONHBr} + \mathrm{Br^-}$.
+  \item \textbf{Formation of Bromoamide Anion:} $\mathrm{R-CONHBr} + \mathrm{OH^-} \rightleftharpoons [\mathrm{R-CON-Br}]^- + \mathrm{H_2O}$.
+  \item \textbf{Rate-Determining Concerted 1,2-Shift (Isocyanate Formation):}
+  Migration of alkyl/aryl group $R$ with its electron pair from carbonyl carbon to electron-deficient nitrogen with simultaneous loss of bromide ion:
+  \begin{equation}
+    [\mathrm{R-CO-\bar{N}-Br}] \xrightarrow{\text{slow, RDS}} \mathbf{\mathrm{R-N=C=O}} \ (\text{Alkyl Isocyanate}) + \mathrm{Br^-}
+  \end{equation}
+  \textit{Stereochemical Note: The migrating group $R$ migrates with \textbf{complete retention of configuration}! If chiral, optical activity is preserved.}
+  \item \textbf{Alkaline Hydrolysis of Isocyanate:}
+  \begin{equation}
+    \mathrm{R-N=C=O} + 2\mathrm{OH^-} \longrightarrow \mathbf{\mathrm{R-NH_2}} + \mathrm{CO_3^{2-}}
+  \end{equation}
+\end{enumerate}
+\end{formulabox}
+
+\subsection{Distinction Tests for Amines}
+
+\begin{usecasebox}[Hinsberg, Carbylamine \& Nitrous Acid Tests]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Hinsberg Test (Benzenesulfonyl Chloride $\mathrm{C_6H_5SO_2Cl}$):}
+  \begin{itemize}
+    \item \textbf{$1^\circ$ Amines:} React to form $N$-alkylbenzenesulfonamide ($\mathrm{C_6H_5SO_2NHR}$). The remaining hydrogen on nitrogen is strongly acidic due to the electron-withdrawing $-\mathrm{SO_2}-$ group $\implies$ \textbf{Dissolves completely in aqueous $\mathrm{KOH}$}.
+    \item \textbf{$2^\circ$ Amines:} React to form $N,N$-dialkylbenzenesulfonamide ($\mathrm{C_6H_5SO_2NR_2}$). Lacks acidic hydrogen on nitrogen $\implies$ \textbf{Insoluble in aqueous $\mathrm{KOH}$}.
+    \item \textbf{$3^\circ$ Amines:} Possess no hydrogen on nitrogen $\implies$ \textbf{Does not react at all}.
+  \end{itemize}
+  \item \textbf{Carbylamine Test (Isocyanide Test):}
+  Exclusive to \textbf{primary amines} (both aliphatic and aromatic). Heated with chloroform and alcoholic $\mathrm{KOH}$:
+  \begin{align}
+    \mathrm{R-NH_2} + \mathrm{CHCl_3} + 3\mathrm{KOH} \xrightarrow{\Delta} &\mathbf{\mathrm{R-N\equiv C}} \ (\text{Carbylamine, foul odor}) \notag \\
+    &+ 3\mathrm{KCl} + 3\mathrm{H_2O}
+  \end{align}
+  \textit{Secondary and tertiary amines fail the carbylamine test!}
+  \item \textbf{Reaction with Nitrous Acid ($\mathrm{HNO_2} = \mathrm{NaNO_2 + HCl}$):}
+  \begin{itemize}
+    \item \textbf{$1^\circ$ Aliphatic Amines:} Yield unstable aliphatic diazonium salts that decompose quantitatively to alcohols with quantitative evolution of nitrogen gas: $\mathrm{RNH_2} + \mathrm{HNO_2} \to \mathrm{ROH} + \mathbf{\mathrm{N_2}}\uparrow + \mathrm{H_2O}$.
+    \item \textbf{$1^\circ$ Aromatic Amines (Aniline):} Form stable benzenediazonium chloride at ice-cold temperature ($0-5^\circ\text{C}$).
+    \item \textbf{$2^\circ$ Amines (Aliphatic \& Aromatic):} React to form yellow oily $N$-nitrosamines ($\mathrm{R_2N-NO}$), which give \textbf{Liebermann's nitroso test}.
+    \item \textbf{$3^\circ$ Aliphatic Amines:} Form water-soluble trialkylammonium nitrite salts ($\mathrm{[R_3NH]^+NO_2^-}$).
+  \end{itemize}
+\end{enumerate}
+\end{usecasebox}
+
+\subsection{Benzenediazonium Chemistry \& Synthetic Transformations}
+
+\begin{formulabox}[Sandmeyer, Gattermann, Balz-Schiemann \& Coupling Reactions]
+Benzenediazonium chloride ($\mathrm{C_6H_5N_2^+Cl^-}$) is prepared by diazotization of aniline with $\mathrm{NaNO_2 + 2HCl}$ at $273-278\text{ K}$ ($0-5^\circ\text{C}$). It undergoes two major classes of reactions:
+\textbf{1. Replacement Reactions (Loss of $\mathrm{N_2}\uparrow$):}
+\begin{itemize}
+  \item \textbf{Sandmeyer Reaction:} $\mathrm{Cu_2Cl_2/HCl} \to \mathrm{C_6H_5Cl}$; $\mathrm{Cu_2Br_2/HBr} \to \mathrm{C_6H_5Br}$; $\mathrm{CuCN/KCN} \to \mathrm{C_6H_5CN}$ (higher yields via cuprous salts).
+  \item \textbf{Gattermann Reaction:} $\mathrm{Cu \text{ powder} / HCl} \to \mathrm{C_6H_5Cl}$; $\mathrm{Cu \text{ powder} / HBr} \to \mathrm{C_6H_5Br}$.
+  \item \textbf{Balz-Schiemann Reaction:} $\mathrm{HBF_4} \to \mathrm{C_6H_5N_2^+BF_4^-} \xrightarrow{\Delta} \mathbf{\mathrm{C_6H_5F}} + \mathrm{BF_3} + \mathrm{N_2}\uparrow$ (best method for fluorobenzene).
+  \item \textbf{Replacement by Iodine:} Warm with aqueous $\mathrm{KI} \to \mathbf{\mathrm{C_6H_5I}} + \mathrm{KCl} + \mathrm{N_2}\uparrow$ (no copper catalyst needed).
+  \item \textbf{Deamination (Replacement by H):} Reduction with hypophosphorous acid ($\mathrm{H_3PO_2 / H_2O}$) or ethanol ($\mathrm{CH_3CH_2OH}$):
+  \begin{equation}
+    \mathrm{C_6H_5N_2^+Cl^-} + \mathrm{H_3PO_2} + \mathrm{H_2O} \xrightarrow{\mathrm{Cu^+}} \mathbf{\mathrm{C_6H_6}} + \mathrm{H_3PO_3} + \mathrm{HCl} + \mathrm{N_2}\uparrow
+  \end{equation}
+\end{itemize}
+\textbf{2. Azo Coupling Reactions (Retention of Diazo Linkage $-\mathrm{N=N}-$):}
+The diazonium ion acts as a weak electrophile, attacking highly activated aromatic rings at the para position:
+\begin{itemize}
+  \item \textbf{Coupling with Phenol (Alkaline Medium, $\text{pH } 9-10$):} Forms \textbf{orange azo dye} ($p$-hydroxyazobenzene):
+  \begin{equation}
+    \mathrm{C_6H_5N_2^+Cl^-} + \mathrm{C_6H_5OH} \xrightarrow{\mathrm{pH } 9-10} \mathbf{\mathrm{C_6H_5-N=N-C_6H_4-OH}} \ (\text{Orange Dye}) + \mathrm{HCl}
+  \end{equation}
+  \item \textbf{Coupling with Aniline (Mildly Acidic Medium, $\text{pH } 4-5$):} Forms \textbf{yellow azo dye} ($p$-aminoazobenzene):
+  \begin{equation}
+    \mathrm{C_6H_5N_2^+Cl^-} + \mathrm{C_6H_5NH_2} \xrightarrow{\mathrm{pH } 4-5} \mathbf{\mathrm{C_6H_5-N=N-C_6H_4-NH_2}} \ (\text{Yellow Dye}) + \mathrm{HCl}
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\section{Biomolecules (NEET Unit 19)}
+
+\subsection{Carbohydrates: Classification \& Stereochemistry}
+
+\begin{conceptbox}[Definition \& D/L Stereochemical Nomenclature]
+Carbohydrates are optically active polyhydroxy aldehydes or polyhydroxy ketones, or substances that produce them upon hydrolysis.
+\begin{itemize}
+  \item \textbf{D/L Configuration (Rosanoff Convention):} Assigned by comparing the configuration of the highest-numbered chiral carbon (the penultimate asymmetric carbon, $C_5$ in hexoses) in a vertical Fischer projection to \textbf{D-glyceraldehyde}:
+  \begin{itemize}
+    \item \textbf{D-Sugar:} The $-\mathrm{OH}$ group at the lowest asymmetric center projects to the \textbf{right}.
+    \item \textbf{L-Sugar:} The $-\mathrm{OH}$ group projects to the \textbf{left}.
+  \end{itemize}
+  \item \textit{Crucial Principle: D and L designate configurational stereochemistry only. They have ZERO correlation to experimental dextrorotation $(+)$ or levorotation $(-)$. D-glucose is dextrorotatory, whereas D-fructose is strongly levorotatory!}
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Structure Elucidation of D-(+)-Glucose]
+Experimental evidence establishing the open-chain structure of D-glucose:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Molecular Formula:} $\mathrm{C_6H_{12}O_6}$.
+  \item \textbf{Straight Chain of 6 Carbons:} Prolonged heating with hydroiodic acid and red phosphorus yields \textbf{n-hexane}:
+  \begin{equation}
+    \mathrm{C_6H_{12}O_6} \xrightarrow[\Delta]{\mathrm{HI / red\ P}} \mathrm{CH_3-(CH_2)_4-CH_3} \ (n\text{-hexane})
+  \end{equation}
+  \item \textbf{Carbonyl Group ($>\mathrm{C=O}$):} Reacts with hydroxylamine ($\mathrm{NH_2OH}$) to form an oxime, and with $\mathrm{HCN}$ to form a cyanohydrin.
+  \item \textbf{Aldehyde Function ($-\mathrm{CHO}$):} Oxidation with mild bromine water ($\mathrm{Br_2 / H_2O}$) selectively oxidizes glucose to \textbf{gluconic acid} ($\mathrm{HOOC-(CHOH)_4-CH_2OH}$). (Ketones are not oxidized by bromine water).
+  \item \textbf{Five Hydroxyl Groups ($-\mathrm{OH}$):} Acetylation with acetic anhydride ($\mathrm{Ac_2O}$) yields \textbf{glucose penta-acetate}. Because it is stable, all five $-\mathrm{OH}$ groups reside on separate carbon atoms.
+  \item \textbf{Primary Alcohol at $C_6$ ($-\mathrm{CH_2OH}$):} Oxidation with concentrated nitric acid ($\mathrm{HNO_3}$) oxidizes both the terminal aldehyde and the primary alcohol to dicarboxylic \textbf{saccharic acid (glucaric acid)}:
+  \begin{equation}
+    \mathrm{CHO-(CHOH)_4-CH_2OH} \xrightarrow{\mathrm{HNO_3}} \mathbf{\mathrm{HOOC-(CHOH)_4-COOH}} \ (\text{Saccharic Acid})
+  \end{equation}
+\end{enumerate}
+\end{formulabox}
+
+\subsection{Cyclic Pyranose Structures, Anomers \& Mutarotation}
+
+\begin{conceptbox}[Failure of Open-Chain Structure \& The Cyclic Pyranose Ring]
+\textbf{1. Evidence Opposing the Simple Open-Chain Aldehyde:}
+\begin{itemize}
+  \item Glucose does not react with $\mathrm{NaHSO_3}$, does not form 2,4-DNP adduct, and does not restore the pink color of Schiff's reagent.
+  \item Glucose penta-acetate does not react with hydroxylamine (proves absence of a free $-\mathrm{CHO}$ group).
+  \item Glucose exists in two distinct crystalline stereoisomers ($\alpha$ and $\beta$) with different physical properties.
+\end{itemize}
+\textbf{2. Cyclic Hemiacetal Formation:}
+Intramolecular nucleophilic attack of the $C_5-\mathrm{OH}$ group onto the $C_1$ carbonyl carbon produces a 6-membered \textbf{pyranose ring}. The $C_1$ carbon becomes an asymmetric center known as the \textbf{anomeric carbon}:
+\begin{itemize}
+  \item \textbf{$\alpha$-D-Glucopyranose:} In Haworth projection, the anomeric $-\mathrm{OH}$ at $C_1$ points \textbf{downward} (\textit{trans} to the $-\mathrm{CH_2OH}$ group at $C_6$). Melting point $146^\circ\text{C}$, specific rotation $[\alpha]_D = +112^\circ$.
+  \item \textbf{$\beta$-D-Glucopyranose:} The anomeric $-\mathrm{OH}$ at $C_1$ points \textbf{upward} (\textit{cis} to the $-\mathrm{CH_2OH}$ group at $C_6$). In the chair conformation, all bulky groups ($-\mathrm{OH}$ and $-\mathrm{CH_2OH}$) occupy equatorial positions $\implies$ thermodynamically more stable. Melting point $150^\circ\text{C}$, specific rotation $[\alpha]_D = +18.7^\circ$.
+\end{itemize}
+\textbf{3. Mutarotation Mechanism:}
+When pure crystals of either $\alpha$-D-glucose ($+112^\circ$) or $\beta$-D-glucose ($+18.7^\circ$) are dissolved in water, the optical rotation spontaneously drifts over time until reaching an equilibrium value of \textbf{$+52.7^\circ$}:
+\begin{equation}
+  \alpha\text{-D-glucose } (+112^\circ) \xrightleftharpoons[\approx 36\%]{\mathrm{H_2O}} \text{Open-Chain Form } (0.02\%) \xrightleftharpoons[\approx 64\%]{\mathrm{H_2O}} \beta\text{-D-glucose } (+18.7^\circ)
+\end{equation}
+This reversible interconversion between anomers via the open-chain aldehyde is called \textbf{mutarotation}.
+\end{conceptbox}
+
+\subsection{Disaccharides, Glycosidic Linkages \& Polysaccharides}
+
+\begin{formulabox}[Disaccharide Chemistry: Linkages \& Reducing Character]
+\begin{tabularx}{\linewidth}{|l|Y|Y|Y|Y|}
+\hline
+\textbf{Sugar} & \textbf{Monomer Units} & \textbf{Glycosidic Bond} & \textbf{Free Anomeric C?} & \textbf{Reducing?} \\
+\hline
+\textbf{Sucrose} (Cane sugar) & $\alpha$-D-glucose $+$ $\beta$-D-fructose & $\mathbf{\alpha(1 \to 2)\beta}$ & None ($C_1$ of Glc and $C_2$ of Fru tied up) & \textbf{Non-Reducing} \\
+\hline
+\textbf{Maltose} (Malt sugar) & $\alpha$-D-glucose $+$ $\alpha$-D-glucose & $\mathbf{\alpha(1 \to 4)}$ & Yes ($C_1$ of second glucose free) & \textbf{Reducing} \\
+\hline
+\textbf{Lactose} (Milk sugar) & $\beta$-D-galactose $+$ $\beta$-D-glucose & $\mathbf{\beta(1 \to 4)}$ & Yes ($C_1$ of glucose free) & \textbf{Reducing} \\
+\hline
+\end{tabularx}
+\end{formulabox}
+
+\begin{trapbox}[Invert Sugar \& The Optical Inversion of Sucrose]
+Sucrose is \textbf{dextrorotatory} ($[\alpha]_D = +66.5^\circ$). Upon acid hydrolysis or enzymatic cleavage by \textit{invertase}, it yields an equimolar mixture of D-(+)-glucose and D-(-)-fructose:
+\begin{equation}
+  \mathrm{C_{12}H_{22}O_{11}} \ (\text{Sucrose}, +66.5^\circ) + \mathrm{H_2O} \xrightarrow{\mathrm{H^+}} \mathrm{D\text{-(+)-glucose}} \ (+52.7^\circ) + \mathrm{D\text{-(-)-fructose}} \ (-92.4^\circ)
+\end{equation}
+Because the levorotation of fructose ($-92.4^\circ$) is numerically far greater than the dextrorotation of glucose ($+52.7^\circ$), the net resulting hydrolyzed mixture is \textbf{levorotatory} ($[\alpha]_{\text{net}} \approx -39.7^\circ$).\\
+\textbf{Definition:} This reversal in the sign of optical rotation from dextro ($+$) to levo ($-$) is called the \textbf{inversion of cane sugar}, and the resulting equimolar mixture is termed \textbf{invert sugar} (found naturally in honey).
+\end{trapbox}
+
+\begin{usecasebox}[Polysaccharides: Starch, Cellulose \& Glycogen]
+\begin{itemize}
+  \item \textbf{Starch (Plant Storage Polysaccharide):} Polymer of $\alpha$-D-glucose consisting of two distinct structural components:
+  \begin{enumerate}
+    \item \textbf{Amylose ($15-20\%$):} Water-soluble, linear unbranched chain of $200-1000$ $\alpha$-D-glucose units linked by \textbf{$\alpha(1 \to 4)$ glycosidic bonds}. Forms a hollow helical coil that entraps triiodide ions ($\mathrm{I_3^-}$) to produce a characteristic deep blue-black color.
+    \item \textbf{Amylopectin ($80-85\%$):} Water-insoluble, highly branched polymer. Linear chains contain $\alpha(1 \to 4)$ linkages; branching points occur every $24-30$ units via \textbf{$\alpha(1 \to 6)$ glycosidic bonds}.
+  \end{enumerate}
+  \item \textbf{Cellulose (Plant Cell Wall Structural Polymer):} Unbranched, linear polymer composed exclusively of $\beta$-D-glucose units joined by \textbf{$\beta(1 \to 4)$ glycosidic bonds}. Chains lie parallel, held together by massive intermolecular hydrogen bonds to form rigid microfibrils. Humans cannot digest cellulose due to lack of the enzyme cellulase.
+  \item \textbf{Glycogen (Animal Starch):} Stored in mammalian liver and muscle. Structurally similar to amylopectin, but possesses far more frequent branching ($\alpha(1 \to 6)$ branches every $8-12$ glucose residues).
+\end{itemize}
+\end{usecasebox}
+
+\subsection{Amino Acids, Zwitterions \& The Isoelectric Point (\texorpdfstring{$pI$}{pI})}
+
+\begin{conceptbox}[Structure, Stereochemistry \& Essential Amino Acids]
+Amino acids contain both an amino group ($-\mathrm{NH_2}$) and a carboxyl group ($-\mathrm{COOH}$):
+\begin{equation}
+  \mathrm{R-CH(NH_2)-COOH} \quad (\alpha\text{-amino acid})
+\end{equation}
+\begin{itemize}
+  \item \textbf{Chirality Exception:} All 20 standard proteinogenic amino acids are chiral and optically active \textbf{except Glycine} ($\mathrm{H_2N-CH_2-COOH}$), where $R=H$, which is achiral and optically inactive!
+  \item \textbf{L-Configuration:} All natural amino acids in proteins belong to the L-series (the $-\mathrm{NH_2}$ group resides on the left in Fischer projections).
+  \item \textbf{Essential Amino Acids (Cannot be synthesized in human body; must be supplied in diet):}
+  Valine, Leucine, Isoleucine, Phenylalanine, Tryptophan, Threonine, Methionine, Lysine (plus Arginine and Histidine, semi-essential in infants). \textit{(Mnemonic: PVT TIM HaLL)}.
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Zwitterion Structure \& Formulation of Isoelectric Point (\texorpdfstring{$pI$}{pI})]
+In aqueous solution, the acidic carboxyl group transfers a proton to the basic amino group, generating a dipolar internal salt known as a \textbf{zwitterion}:
+\begin{equation}
+  \mathrm{R-CH(NH_2)-COOH} \rightleftharpoons \mathbf{\mathrm{R-CH(NH_3^+)-COO^-}} \quad (\text{Zwitterion: net charge } = 0)
+\end{equation}
+\textbf{1. Behavior in Varying pH Media:}
+\begin{itemize}
+  \item In acidic solution ($\text{pH} < pI$): Protonation gives cation $\mathrm{R-CH(NH_3^+)-COOH} \implies$ migrates toward \textbf{cathode} in electric field.
+  \item In basic solution ($\text{pH} > pI$): Deprotonation gives anion $\mathrm{R-CH(NH_2)-COO^-} \implies$ migrates toward \textbf{anode} in electric field.
+\end{itemize}
+\textbf{2. Isoelectric Point ($pI$):} The exact pH at which the amino acid carries no net electrical charge and does not migrate in an electric field:
+\begin{equation}
+  pI = \frac{pK_{a1} (\alpha\mathrm{-COOH}) + pK_{a2} (\alpha\mathrm{-NH_3^+})}{2} \quad (\text{for neutral amino acids})
+\end{equation}
+\textit{Crucial Property: At its isoelectric point ($pI$), an amino acid exhibits \textbf{minimum aqueous solubility}, permitting selective precipitation and separation!}
+\end{formulabox}
+
+\subsection{Peptide Bond Resonance \& Structural Hierarchy of Proteins}
+
+\begin{conceptbox}[The Peptide Bond (-\texorpdfstring{$\mathrm{CO-NH}-$}{CO-NH-}) \& Planarity]
+A peptide bond is an amide linkage formed by condensation of the $-\mathrm{COOH}$ group of one amino acid with the $-\mathrm{NH_2}$ group of another with loss of water:
+\begin{align}
+  \mathrm{R-CH(NH_2)-COOH} &+ \mathrm{H_2N-CH(R')-COOH} \notag \\
+  &\xrightarrow{-\mathrm{H_2O}} \mathrm{R-CH(NH_2)-\mathbf{CO-NH}-CH(R')-COOH}
+\end{align}
+\textbf{Resonance Stabilization of the Peptide Bond:}
+Delocalization of the nitrogen lone pair into the carbonyl group confers $\approx 40\%$ \textbf{partial double bond character} to the $\mathrm{C-N}$ bond:
+\begin{equation}
+  -\mathrm{C(=O)-NH}- \longleftrightarrow -\mathrm{C(O^-)=\overset{+}{N}H}-
+\end{equation}
+\textbf{Consequences:}
+\begin{enumerate}
+  \item The $\mathrm{C-N}$ bond length ($1.32\text{ \AA}$) is substantially shorter than a normal $\mathrm{C-N}$ single bond ($1.47\text{ \AA}$).
+  \item Free rotation about the $\mathrm{C-N}$ bond is restricted; the six atoms of the peptide group ($\mathrm{C}_\alpha\mathrm{-CO-NH-C}_\alpha$) are strictly coplanar.
+  \item The \textit{trans}-conformation is overwhelmingly favored to minimize steric clash between adjacent side chains ($R$).
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[The Four Structural Levels of Protein Organization]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Primary Structure ($1^\circ$):} The linear sequence of amino acids linked covalently by peptide bonds. Any alteration in sequence alters biological function (e.g., in sickle-cell anemia, glutamate at position 6 of the $\beta$-chain of hemoglobin is mutated to valine).
+  \item \textbf{Secondary Structure ($2^\circ$):} Regular folding of the polypeptide backbone stabilized exclusively by \textbf{hydrogen bonds} between $>\mathrm{C=O}$ and $-\mathrm{NH}-$ groups:
+  \begin{itemize}
+    \item \textbf{$\alpha$-Helix:} Polypeptide coils into a right-handed screw. Stabilized by intramolecular hydrogen bonding between the $>\mathrm{C=O}$ of residue $n$ and the $-\mathrm{NH}-$ of residue $(n+4)$. Each turn contains $3.6$ amino acids with pitch $5.4\text{ \AA}$. Proline acts as a helix breaker.
+    \item \textbf{$\beta$-Pleated Sheet:} Polypeptide chains are stretched side-by-side in zigzag sheets, held by intermolecular hydrogen bonds. Can be parallel or antiparallel (e.g., silk fibroin).
+  \end{itemize}
+  \item \textbf{Tertiary Structure ($3^\circ$):} Overall 3D spatial folding of the polypeptide chain into compact shapes:
+  \begin{itemize}
+    \item \textbf{Fibrous Proteins:} Linear, insoluble in water, structural role (keratin in hair/nails, collagen in tendons, myosin in muscle).
+    \item \textbf{Globular Proteins:} Spherical, water-soluble, metabolic role (enzymes, hemoglobin, albumin).
+    \item \textbf{Stabilizing Forces:} Hydrogen bonds, \textbf{disulfide bonds ($-\mathrm{S-S-}$ between cysteine residues, covalent)}, ionic/salt bridges ($\mathrm{-COO^-\cdots NH_3^+}$), hydrophobic interactions, and van der Waals forces.
+  \end{itemize}
+  \item \textbf{Quaternary Structure ($4^\circ$):} Spatial arrangement of two or more independent tertiary polypeptide subunits into an oligomeric protein (e.g., adult Hemoglobin is a tetramer consisting of $2\alpha$ and $2\beta$ subunits).
+\end{enumerate}
+\end{formulabox}
+
+\begin{trapbox}[Denaturation of Proteins: What Survives and What Is Destroyed?]
+When a native protein is exposed to physical changes (heating, radiation) or chemical changes (extreme pH, urea, organic solvents, heavy metals):
+\begin{itemize}
+  \item \textbf{Destroyed:} Hydrogen bonds, salt bridges, and hydrophobic interactions rupture. The delicate $2^\circ, 3^\circ$, and $4^\circ$ spatial architectures unfold. Globular proteins precipitate, and biological activity is irreversibly lost.
+  \item \textbf{Retained Intact:} \textbf{The primary structure ($1^\circ$) remains 100\% completely intact}! Covalent peptide bonds ($-\mathrm{CO-NH}-$) are not cleaved under normal denaturation conditions.
+  \item \textbf{Classic NCERT Examples:} Coagulation of egg white (albumin) upon boiling; curdling of milk caused by lactic acid produced by bacteria.
+\end{itemize}
+\end{trapbox}
+
+\subsection{Nucleic Acids: DNA \& RNA Architecture}
+
+\begin{conceptbox}[Chemical Composition: Sugars, Bases \& Nucleotides]
+Nucleic acids are unbranched biopolymers of nucleotides:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Pentose Sugar:} $\beta$-D-ribose in RNA; $\beta$-D-2-deoxyribose in DNA (lacks oxygen atom at $C_2'$ position).
+  \item \textbf{Nitrogenous Bases:}
+  \begin{itemize}
+    \item \textbf{Purines (Bicyclic 9-membered):} Adenine (A) and Guanine (G) in both DNA and RNA.
+    \item \textbf{Pyrimidines (Monocyclic 6-membered):} Cytosine (C) and Thymine (T, 5-methyluracil) in DNA; Cytosine (C) and Uracil (U) in RNA.
+  \end{itemize}
+  \item \textbf{Nucleoside vs Nucleotide:}
+  \begin{itemize}
+    \item $\text{Nucleoside} = \text{Pentose Sugar} + \text{Base}$ (joined by $N$-glycosidic linkage between $C_1'$ of sugar and $N_9$ of purine or $N_1$ of pyrimidine).
+    \item $\text{Nucleotide} = \text{Nucleoside} + \text{Phosphate}$ (esterified at $C_5'$ of pentose sugar).
+  \end{itemize}
+  \item \textbf{Phosphodiester Linkage:} Nucleotides polymerize via \textbf{$3',5'$-phosphodiester bonds} between the $3'-\mathrm{OH}$ of one nucleotide sugar and the $5'-\mathrm{OH}$ of the next nucleotide sugar, establishing directional polarity ($5' \to 3'$).
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Watson-Crick Double Helix Model \& Chargaff's Rules]
+James Watson and Francis Crick (1953) established the B-DNA double helix structure:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Antiparallel Strands:} Two polynucleotide chains wound around a central axis in a right-handed helix. One strand runs $5' \to 3'$, and the complementary strand runs $3' \to 5'$.
+  \item \textbf{Complementary Base Pairing (Hydrogen Bonds):}
+  \begin{equation}
+    \mathbf{A = T} \quad (\text{Adenine pairs with Thymine via 2 Hydrogen Bonds})
+  \end{equation}
+  \begin{equation}
+    \mathbf{G \equiv C} \quad (\text{Guanine pairs with Cytosine via 3 Hydrogen Bonds})
+  \end{equation}
+  Because $G\equiv C$ pairs have 3 hydrogen bonds, DNA with high GC content has a higher melting temperature ($T_m$).
+  \item \textbf{Geometric Dimensions of B-DNA:}
+  \begin{itemize}
+    \item Helix Diameter: $2.0\text{ nm}$ ($20\text{ \AA}$).
+    \item Pitch of Helix (one complete $360^\circ$ turn): $3.4\text{ nm}$ ($34\text{ \AA}$).
+    \item Base Pairs per Turn: 10 base pairs.
+    \item Distance between Adjacent Base Pairs: $0.34\text{ nm}$ ($3.4\text{ \AA}$).
+  \end{itemize}
+  \item \textbf{Chargaff's Rules (Applies Exclusively to Double-Stranded DNA):}
+  \begin{equation}
+    [\mathrm{A}] = [\mathrm{T}], \quad [\mathrm{G}] = [\mathrm{C}] \implies [\mathrm{A} + \mathrm{G}] = [\mathrm{T} + \mathrm{C}] \quad \left(\frac{\text{Total Purines}}{\text{Total Pyrimidines}} = 1.0\right)
+  \end{equation}
+  \textit{Note: The ratio $\frac{\mathrm{A+T}}{\mathrm{G+C}}$ is not necessarily equal to 1; it is variable and species-specific.}
+\end{enumerate}
+\end{formulabox}
+
+\subsection{Vitamins \& Hormones}
+
+\begin{formulabox}[Comprehensive Vitamin Classification \& Deficiency Pathology]
+\begin{tabularx}{\linewidth}{|l|l|Y|L|}
+\hline
+\textbf{Vitamin} & \textbf{Chemical Name} & \textbf{Solubility Class} & \textbf{Deficiency Disease / Symptoms} \\
+\hline
+\textbf{Vitamin A} & Retinol & Fat-Soluble & Night blindness (Nyctalopia), Xerophthalmia (corneal hardening) \\
+\hline
+\textbf{Vitamin $\mathrm{B_1}$} & Thiamine & Water-Soluble & \textbf{Beriberi} (loss of appetite, muscular weakness, neuropathy) \\
+\hline
+\textbf{Vitamin $\mathrm{B_2}$} & Riboflavin & Water-Soluble & Cheilosis (fissuring at corners of mouth), glossitis \\
+\hline
+\textbf{Vitamin $\mathrm{B_3}$} & Niacin / Nicotinic acid & Water-Soluble & \textbf{Pellagra} (dermatitis, diarrhea, dementia) \\
+\hline
+\textbf{Vitamin $\mathrm{B_6}$} & Pyridoxine & Water-Soluble & Convulsions, peripheral neuritis \\
+\hline
+\textbf{Vitamin $\mathrm{B_{12}}$} & Cyanocobalamin & Water-Soluble & \textbf{Pernicious Anemia} (RBC deficiency; stored in liver!) \\
+\hline
+\textbf{Vitamin C} & Ascorbic Acid & Water-Soluble & \textbf{Scurvy} (bleeding gums, delayed wound healing; destroyed by heat) \\
+\hline
+\textbf{Vitamin D} & Ergocalciferol / Cholecalciferol & Fat-Soluble & \textbf{Rickets} in children, \textbf{Osteomalacia} in adults (bone softness) \\
+\hline
+\textbf{Vitamin E} & Tocopherols & Fat-Soluble & Muscular weakness, increased fragility of RBCs, loss of fertility \\
+\hline
+\textbf{Vitamin K} & Phylloquinone & Fat-Soluble & \textbf{Defective Blood Clotting} (prolonged prothrombin time) \\
+\hline
+\end{tabularx}
+\end{formulabox}
+
+\begin{conceptbox}[Endocrine Hormones: Chemical Classification]
+Hormones are intercellular chemical messengers secreted directly into the bloodstream by ductless endocrine glands:
+\begin{itemize}
+  \item \textbf{Steroid Hormones (Lipid-Soluble, Cholesterol Derivatives):}
+  Secreted by adrenal cortex and gonads: Testosterone, Estrogens (Estradiol), Progesterone, Cortisol, Aldosterone.
+  \item \textbf{Peptide / Protein Hormones (Water-Soluble):}
+  \begin{itemize}
+    \item \textbf{Insulin (51 amino acids):} Secreted by $\beta$-cells of islets of Langerhans in pancreas; promotes glucose uptake and conversion to glycogen; deficiency causes \textit{Diabetes mellitus}.
+    \item \textbf{Glucagon:} Secreted by $\alpha$-cells of pancreas; stimulates glycogenolysis to elevate blood glucose.
+    \item \textbf{Oxytocin \& Vasopressin (ADH):} Nonapeptides released by posterior pituitary gland.
+  \end{itemize}
+  \item \textbf{Amine Hormones (Amino Acid Derivatives):}
+  \begin{itemize}
+    \item \textbf{Epinephrine (Adrenaline) \& Norepinephrine:} Derived from tyrosine; secreted by adrenal medulla (``fight or flight'' hormones).
+    \item \textbf{Thyroxine ($\mathrm{T_4}$):} Iodinated derivative of tyrosine produced by thyroid gland; regulates basal metabolic rate (BMR); deficiency causes goiter and hypothyroidism.
+  \end{itemize}
+\end{itemize}
+\end{conceptbox}
+
+\section{Master Distinction Matrix \& High-Yield Synthesis Archetypes}
+
+\subsection{Exhaustive Chemical Distinction Matrix}
+
+\begin{formulabox}[High-Yield Laboratory Chemical Tests for Functional Groups]
+\begin{tabularx}{\linewidth}{|p{2.3cm}|p{3.5cm}|p{2.6cm}|L|}
+\hline
+\textbf{Test Name} & \textbf{Reagents} & \textbf{Target Species} & \textbf{Positive Observation / Chemistry} \\
+\hline
+\textbf{Lucas Test} & Anhyd. $\mathrm{ZnCl_2} + \text{conc. } \mathrm{HCl}$ & $1^\circ$, $2^\circ$, $3^\circ$ Alcohols & $3^\circ$: Immediate turbidity; $2^\circ$: in 5 min; $1^\circ$: on boiling only \\
+\hline
+\textbf{Neutral $\mathrm{FeCl_3}$} & Neutral $\mathrm{FeCl_3}$ solution & Phenols & Violet / purple coloration (ferric phenoxide complex) \\
+\hline
+\textbf{Tollens' Test} & Ammoniacal $\mathrm{AgNO_3}$ & All Aldehydes & Shining silver mirror ($\mathrm{Ag}\downarrow$) on inner tube walls \\
+\hline
+\textbf{Fehling's Test} & Fehling A ($\mathrm{CuSO_4}$) $+$ Fehling B (alkaline tartrate) & Aliphatic Aldehydes & Red precipitate of cuprous oxide ($\mathrm{Cu_2O}\downarrow$); aromatic aldehydes fail \\
+\hline
+\textbf{Iodoform Test} & $\mathrm{I_2} + \mathrm{NaOH}$ (or $\mathrm{NaOI}$) & $\mathrm{CH_3C=O}$ or $\mathrm{CH_3CH(OH)}-$ & Yellow crystalline precipitate of $\mathrm{CHI_3}\downarrow$ (m.p. $119^\circ\text{C}$) \\
+\hline
+\textbf{2,4-DNP Test} & 2,4-Dinitrophenylhydrazine & Aldehydes \& Ketones & Yellow, orange, or red crystalline precipitate \\
+\hline
+\textbf{Carbylamine Test} & $\mathrm{CHCl_3} + \text{alc. } \mathrm{KOH}, \Delta$ & $1^\circ$ Amines & Extremely obnoxious, foul odor of carbylamine ($\mathrm{R-NC}$) \\
+\hline
+\textbf{Hinsberg Test} & $\mathrm{C_6H_5SO_2Cl} + \mathrm{KOH}$ & $1^\circ$, $2^\circ$, $3^\circ$ Amines & $1^\circ$: sol. in $\mathrm{KOH}$; $2^\circ$: insol. in $\mathrm{KOH}$; $3^\circ$: no reaction \\
+\hline
+\textbf{Azo Dye Test} & 1.~$\mathrm{NaNO_2/HCl}$ ($0-5^\circ\text{C}$), 2.~alkaline $\beta$-naphthol & $1^\circ$ Aromatic Amines & Brilliant scarlet / orange red azo dye \\
+\hline
+\textbf{Bicarbonate Test} & Sat. $\mathrm{NaHCO_3}$ solution & Carboxylic Acids & Brisk effervescence of $\mathrm{CO_2}\uparrow$ gas (phenols fail, except picric acid) \\
+\hline
+\end{tabularx}
+\end{formulabox}
+
+\subsection{Solved Master Synthesis Archetypes}
+
+\begin{usecasebox}[Archetype 1: Multi-Step Synthesis with Stereochemical Retention]
+\textbf{Problem:} Convert Benzene into pure \textit{p}-bromoaniline. Identify why direct bromination of aniline fails, and formulate the complete protected sequence.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Pitfall of Direct Bromination:} Aniline contains a powerfully activating $-\mathrm{NH_2}$ group ($+M$). Bromination with $\mathrm{Br_2 / H_2O}$ yields instantaneous white precipitate of 2,4,6-tribromoaniline; monosubstitution cannot be controlled.
+  \item \textbf{Step 1 (Nitration):} Benzene $\xrightarrow[\text{323--333 K}]{\text{conc. } \mathrm{HNO_3} + \mathrm{H_2SO_4}} \mathrm{C_6H_5NO_2}$ (Nitrobenzene).
+  \item \textbf{Step 2 (Reduction):} $\mathrm{C_6H_5NO_2} \xrightarrow{\mathrm{Sn / HCl \text{ or } Fe / HCl}} \mathrm{C_6H_5NH_2}$ (Aniline).
+  \item \textbf{Step 3 (Protection via Acetylation):} $\mathrm{C_6H_5NH_2} + \mathrm{(CH_3CO)_2O} \xrightarrow{\text{pyridine}} \mathrm{C_6H_5NHCOCH_3}$ (Acetanilide). The lone pair on nitrogen is delocalized into the acetyl carbonyl, moderating ring activation.
+  \item \textbf{Step 4 (Regioselective Bromination):} $\mathrm{C_6H_5NHCOCH_3} + \mathrm{Br_2} \xrightarrow{\mathrm{CH_3COOH}} p\text{-bromoacetanilide}$ (exclusive para product due to steric hindrance at ortho positions).
+  \item \textbf{Step 5 (Deprotection):} $p\text{-bromoacetanilide} \xrightarrow{\mathrm{H_3O^+ \text{ or } OH^-}, \Delta} \mathbf{p\textbf{-bromoaniline}} + \mathrm{CH_3COOH}$.
+\end{enumerate}
+\end{usecasebox}
+
+\begin{usecasebox}[Archetype 2: Carbon-Carbon Chain Lengthening \& Functional Transformation]
+\textbf{Problem:} Formulate the synthetic conversion of Ethanol into Propan-1-amine and Propan-2-ol.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Conversion of Ethanol into Propan-1-amine (One Carbon Ascent):}
+  \begin{align}
+    \mathrm{CH_3CH_2OH} &\xrightarrow{\mathrm{PCl_5 \text{ or } SOCl_2}} \mathrm{CH_3CH_2Cl} \quad (\text{Ethyl chloride})\\
+    \mathrm{CH_3CH_2Cl} &\xrightarrow{\text{ethanolic } \mathrm{KCN}} \mathrm{CH_3CH_2CN} \quad (\text{Propanenitrile: nucleophilic substitution})\\
+    \mathrm{CH_3CH_2CN} &\xrightarrow{\mathrm{LiAlH_4 \text{ or } Na / EtOH}} \mathbf{\mathrm{CH_3CH_2CH_2NH_2}} \quad (\text{Propan-1-amine: complete reduction})
+  \end{align}
+  \item \textbf{Conversion of Ethanol into Propan-2-ol (Grignard Pathway):}
+  \begin{align}
+    \mathrm{CH_3CH_2OH} &\xrightarrow{\mathrm{PCC / CH_2Cl_2}} \mathrm{CH_3CHO} \quad (\text{Acetaldehyde: selective oxidation})\\
+    \mathrm{CH_3CHO} + \mathrm{CH_3MgBr} &\xrightarrow{\text{dry ether}} [\mathrm{CH_3-CH(OMgBr)-CH_3}]\\
+    [\mathrm{CH_3-CH(OMgBr)-CH_3}] &\xrightarrow{\mathrm{H_3O^+}} \mathbf{\mathrm{CH_3-CH(OH)-CH_3}} \quad (\text{Propan-2-ol})
+  \end{align}
+\end{enumerate}
+\end{usecasebox}
+
+\begin{conceptbox}[Master Summary: Key Takeaways for NEET UG 2027 Organic Chemistry]
+\begin{itemize}
+  \item \textbf{Always inspect carbocation intermediates} for possible 1,2-hydride, 1,2-methyl, or ring-expansion rearrangements before forming products in $S_N1, E1$, and electrophilic addition reactions.
+  \item \textbf{In Williamson ether synthesis}, always employ the alkoxide of the bulky tertiary component and a primary alkyl halide to avoid elimination.
+  \item \textbf{In biomolecules}, remember that sucrose is non-reducing and lacks mutarotation; all monosaccharides, maltose, and lactose are reducing.
+  \item \textbf{In DNA double helix}, $A=T$ (2 H-bonds) and $G\equiv C$ (3 H-bonds); Chargaff's rules hold strictly for double-stranded DNA.
+  \item \textbf{In aromatic synthesis}, protect aniline by acetylation with acetic anhydride before nitration to avoid the anomalous $47\%$ meta-product.
+\end{itemize}
+\end{conceptbox}
+
+\end{document}

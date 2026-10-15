@@ -1,0 +1,673 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{NEET UG 2027: Physics Mechanics Master Theory}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Physics Theory Notes}}
+
+\begin{document}
+
+% --- Front Title \& Attribution Banner ---
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Chapter Theory}}\\[6pt]
+  {\Large \textbf{Physics Mechanics Master Theory: Kinematics, Dynamics, Work-Energy \& Collisions}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Revised NMC Syllabus}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+% =========================================================================
+% SECTION 1: PHYSICAL MEASUREMENTS, DIMENSIONAL ANALYSIS \& ERROR PROPAGATION
+% =========================================================================
+\section{Physical Measurement, Dimensional Analysis \& Calculus of Errors}
+
+\begin{conceptbox}[Foundational Standards of Measurement \& Dimensional Homogeneity]
+Physical quantities are classified into base (fundamental) and derived quantities. The International System of Units (SI) defines seven base quantities: Mass $[\mathrm{M}]$, Length $[\mathrm{L}]$, Time $[\mathrm{T}]$, Electric Current $[\mathrm{I}]$ or $[\mathrm{A}]$, Thermodynamic Temperature $[\mathrm{K}]$, Amount of Substance $[\mathrm{mol}]$, and Luminous Intensity $[\mathrm{cd}]$.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Principle of Dimensional Homogeneity:} An equation representing physical law $A + B = C$ is physically valid only if $[A] = [B] = [C]$. Transcendental functions (trigonometric $\sin\theta$, exponential $e^x$, logarithmic $\ln x$) must have strictly dimensionless arguments: $[x] = \mathrm{M}^0\mathrm{L}^0\mathrm{T}^0 = 1$.
+  \item \textbf{Dimensional Analysis Capabilities \& Inherent Limitations:}
+  \begin{itemize}
+    \item Useful for deducing power-law dependencies among independent variables, checking algebraic consistency, and converting numerical values between unit systems.
+    \item Cannot determine dimensionless numerical constants (e.g., $2\pi$ or $1/2$), cannot solve equations involving more variables than the number of fundamental dimensions (typically 3 in mechanics: $\mathrm{M, L, T}$), and fails for relations involving vector addition or sum of terms.
+  \end{itemize}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Calculus of Error Propagation \& Uncertainty Formulations]
+Let a derived quantity $Z$ depend on independently measured physical variables $A, B, C$ via the functional relation $Z = f(A, B, C)$. By taking the total differential:
+\begin{equation}
+  dZ = \left(\frac{\partial f}{\partial A}\right) dA + \left(\frac{\partial f}{\partial B}\right) dB + \left(\frac{\partial f}{\partial C}\right) dC
+\end{equation}
+For experimental uncertainty analysis, maximum absolute error $\Delta Z$ is determined by summing the absolute magnitudes of the partial deviations:
+\begin{align}
+  \text{Sum / Difference: } Z = A \pm B &\implies \Delta Z = \Delta A + \Delta B \\
+  \text{Product / Quotient: } Z = \frac{A \cdot B}{C} &\implies \frac{\Delta Z}{Z} = \frac{\Delta A}{A} + \frac{\Delta B}{B} + \frac{\Delta C}{C} \\
+  \text{Generalized Power Formulation: } Z = \frac{A^p B^q}{C^r} &\implies \frac{\Delta Z}{Z} = p\left(\frac{\Delta A}{A}\right) + q\left(\frac{\Delta B}{B}\right) + r\left(\frac{\Delta C}{C}\right)
+\end{align}
+The percentage fractional uncertainty is given by:
+\begin{equation}
+  \% \Delta Z = \left[ p\left(\frac{\Delta A}{A}\right) + q\left(\frac{\Delta B}{B}\right) + r\left(\frac{\Delta C}{C}\right) \right] \times 100\%
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Experimental Least Count \& Boundary Application Rules]
+\begin{itemize}
+  \item \textbf{Vernier Calipers Least Count ($\mathrm{LC}$):} Given $1\,\mathrm{MSD}$ (Main Scale Division) and $n$ Vernier divisions coinciding with $(n-1)\,\mathrm{MSD}$:
+  \begin{equation}
+    \mathrm{LC} = 1\,\mathrm{MSD} - 1\,\mathrm{VSD} = \frac{1\,\mathrm{MSD}}{n}
+  \end{equation}
+  \item \textbf{Screw Gauge Least Count:} For pitch $p$ and total circular scale divisions $N$:
+  \begin{equation}
+    \mathrm{LC} = \frac{\text{Pitch } p}{N}, \qquad \text{True Reading} = \text{MSR} + (\text{CSR} \times \mathrm{LC}) - (\pm \text{Zero Error})
+  \end{equation}
+  \item \textbf{Rule for Significant Figures in Calculus:} For multiplication and division, the final computed value retains the same number of significant figures as the least precise factor. For addition and subtraction, the result retains the least number of decimal places.
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Sign of Zero Error \& Subtraction of Uncertainty]
+\begin{itemize}
+  \item \textbf{Zero Error Subtraction:} True Reading = Observed Reading $-$ (Zero Error with appropriate algebraic sign). If a screw gauge has a positive zero error of $+0.04\,\mathrm{mm}$, that quantity must be \textbf{subtracted}. If it has a negative zero error of $-0.03\,\mathrm{mm}$, it is added: $\text{True} = \text{Observed} - (-0.03) = \text{Observed} + 0.03\,\mathrm{mm}$.
+  \item \textbf{Never Subtract Errors:} In fractional error propagation for $Z = A/B$ or $Z = A - B$, errors never cancel. Even though variables subtract, their individual experimental uncertainties \textbf{additively compound}: $\Delta Z = \Delta A + \Delta B$.
+\end{itemize}
+\end{trapbox}
+
+\begin{ncertbox}[NCERT Critical Extraction: Systematic vs Random Errors]
+\textbf{NCERT Highlight:} Systematic errors are unidirectional (consistently positive or consistently negative) and arise from instrumental imperfections, zero errors, or experimental methodology flaws. They can be eliminated by calibration. Random errors arise from uncontrollable fluctuations in experimental conditions and follow Gaussian distributions; their influence is minimized by taking the arithmetic mean of $N$ repetitive measurements, reducing the random error magnitude by a factor of $1/\sqrt{N}$.
+\end{ncertbox}
+
+% =========================================================================
+% SECTION 2: RECTILINEAR KINEMATICS (MOTION IN 1D)
+% =========================================================================
+\section{Rectilinear Kinematics (Motion in One Dimension)}
+
+\begin{conceptbox}[Calculus Formulations of Rectilinear Motion]
+Consider a point particle moving along a coordinate axis $x(t)$.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Position and Displacement:} Position vector $\mathbf{r}(t) = x(t)\hat{\mathbf{i}}$. Displacement over time interval $[t_1, t_2]$ is $\Delta x = x(t_2) - x(t_1)$, which is path-independent. Total distance $s$ is path-dependent: $s = \int_{t_1}^{t_2} |v(t)|\,dt \ge |\Delta x|$.
+  \item \textbf{Differential Velocity and Acceleration:}
+  \begin{equation}
+    v(t) = \frac{dx}{dt}, \qquad a(t) = \frac{dv}{dt} = \frac{d^2 x}{dt^2} = v\frac{dv}{dx}
+  \end{equation}
+  \item \textbf{Integral Kinematic Relations (Variable Acceleration):}
+  \begin{equation}
+    \Delta x = \int_{t_1}^{t_2} v(t)\,dt, \qquad \Delta v = \int_{t_1}^{t_2} a(t)\,dt, \qquad \int_{v_1}^{v_2} v\,dv = \int_{x_1}^{x_2} a(x)\,dx
+  \end{equation}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Rigorous Calculus Derivation of Uniformly Accelerated Kinematic Equations]
+For constant acceleration $a = \text{constant}$:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{First Kinematic Relation ($v - t$):}
+  \begin{equation}
+    a = \frac{dv}{dt} \implies \int_{u}^{v} dv = a\int_{0}^{t} dt \implies [v]_u^v = a[t]_0^t \implies v = u + at
+  \end{equation}
+  \item \textbf{Second Kinematic Relation ($x - t$):}
+  \begin{equation}
+    v = \frac{dx}{dt} = u + at \implies \int_{0}^{s} dx = \int_{0}^{t} (u + at)\,dt \implies s = ut + \frac{1}{2}at^2
+  \end{equation}
+  \item \textbf{Third Kinematic Relation ($v - x$):}
+  \begin{equation}
+    a = v\frac{dv}{dx} \implies \int_{u}^{v} v\,dv = a\int_{0}^{s} dx \implies \left[\frac{v^2}{2}\right]_u^v = as \implies v^2 = u^2 + 2as
+  \end{equation}
+  \item \textbf{Displacement in the $n^{\text{th}}$ Second ($s_n$):}
+  \begin{align}
+    s_n &= s(n) - s(n-1) = \left[un + \frac{1}{2}an^2\right] - \left[u(n-1) + \frac{1}{2}a(n-1)^2\right] \nonumber \\
+    &= u[n - (n-1)] + \frac{1}{2}a[n^2 - (n^2 - 2n + 1)] = u + \frac{a}{2}(2n - 1)
+  \end{align}
+\end{enumerate}
+\end{formulabox}
+
+\begin{usecasebox}[Motion Under Gravity: Symmetries \& Galileo's Odd Integer Theorem]
+For vertical throw under uniform gravitational acceleration $a = -g$ (taking upward as positive):
+\begin{itemize}
+  \item \textbf{Maximum Height Attained:} Setting $v = 0$ in $v^2 = u^2 - 2gH \implies H = \frac{u^2}{2g}$.
+  \item \textbf{Time of Ascent and Descent:} $t_{\text{ascent}} = \frac{u}{g}$, Total flight time $T = \frac{2u}{g}$. The speed of the particle returning to the release plane equals its launch speed: $v_{\text{return}} = -u$.
+  \item \textbf{Galileo's Law of Odd Numbers:} For a body released from rest ($u=0$), the distances traversed in successive equal time intervals $\Delta t$ follow the ratio of odd integers:
+  \begin{equation}
+    s_1 : s_2 : s_3 : \dots : s_n = 1 : 3 : 5 : \dots : (2n - 1)
+  \end{equation}
+  \item \textbf{Stopping Distance \& Reaction Time:} If driver reacts after time $t_r$ and braking deceleration is $a$:
+  \begin{equation}
+    d_{\text{stop}} = d_{\text{reaction}} + d_{\text{braking}} = u \cdot t_r + \frac{u^2}{2a}
+  \end{equation}
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Distance vs Displacement in Turning Point Trajectories]
+When computing the total distance traveled by an object undergoing deceleration (e.g., $u > 0, a < 0$), the kinematic formula $s = ut + \frac{1}{2}at^2$ yields the \textbf{net displacement}, which can be zero or negative.
+\begin{itemize}
+  \item \textbf{Verification Step:} First solve $v(t^*) = u + at^* = 0 \implies t^* = -u/a$.
+  \item If the specified evaluation time $t > t^*$, the particle has reversed direction. The total path distance is:
+  \begin{equation}
+    \text{Distance } = |x(t^*) - x(0)| + |x(t) - x(t^*)| = \frac{u^2}{2|a|} + \frac{1}{2}|a|(t - t^*)^2
+  \end{equation}
+  Using $s = ut + \frac{1}{2}at^2$ directly will cause a catastrophic error in NEET problems!
+\end{itemize}
+\end{trapbox}
+
+\begin{ncertbox}[NCERT High-Yield Extraction: Geometric Meanings of Motion Graphs]
+\textbf{NCERT Highlight:}
+\begin{itemize}
+  \item In a Position--Time ($x-t$) graph: Slope of the tangent at time $t$ gives instantaneous velocity $v = \frac{dx}{dt}$. An inflection point represents zero acceleration.
+  \item In a Velocity--Time ($v-t$) graph: Slope gives instantaneous acceleration $a = \frac{dv}{dt}$. The signed definite integral (area between curve and time axis) represents net displacement: $\Delta x = \int v\,dt$. Total area with positive magnitudes represents total distance: $s = \int |v|\,dt$.
+  \item In an Acceleration--Time ($a-t$) graph: Area under the curve yields change in velocity: $\Delta v = \int a\,dt$.
+\end{itemize}
+\end{ncertbox}
+
+% =========================================================================
+% SECTION 3: TWO-DIMENSIONAL KINEMATICS \& PROJECTILE DYNAMICS
+% =========================================================================
+\section{Two-Dimensional Kinematics, Projectile Motion \& Relative Velocity}
+
+\begin{conceptbox}[Orthogonal Vector Decomposition in Planar Motion]
+Planar motion under constant acceleration vector $\mathbf{a} = a_x \hat{\mathbf{i}} + a_y \hat{\mathbf{j}}$ decomposes into two completely independent, uncoupled rectilinear motions along perpendicular Cartesian axes:
+\begin{equation}
+  x(t) = x_0 + u_x t + \frac{1}{2}a_x t^2, \qquad y(t) = y_0 + u_y t + \frac{1}{2}a_y t^2
+\end{equation}
+The instantaneous velocity vector is $\mathbf{v}(t) = (u_x + a_x t)\hat{\mathbf{i}} + (u_y + a_y t)\hat{\mathbf{j}}$, with speed $|\mathbf{v}| = \sqrt{v_x^2 + v_y^2}$ and trajectory inclination angle $\tan\phi(t) = \frac{v_y(t)}{v_x(t)}$.
+\end{conceptbox}
+
+\begin{formulabox}[Complete Mathematical Derivation of Oblique Projectile Dynamics]
+Consider a projectile launched with speed $u$ at angle $\theta$ to the horizontal over level ground ($a_x = 0, a_y = -g$):
+\begin{align}
+  u_x &= u\cos\theta, \qquad v_x(t) = u\cos\theta, \qquad x(t) = (u\cos\theta)t \\
+  u_y &= u\sin\theta, \qquad v_y(t) = u\sin\theta - gt, \qquad y(t) = (u\sin\theta)t - \frac{1}{2}gt^2
+\end{align}
+\textbf{1. Time of Flight ($T$):} Setting vertical displacement $y(T) = 0$:
+\begin{equation}
+  T\left(u\sin\theta - \frac{1}{2}gT\right) = 0 \implies T = \frac{2u\sin\theta}{g}
+\end{equation}
+\textbf{2. Maximum Height Attained ($H$):} At the trajectory apex, $v_y = 0 \implies t_{\text{apex}} = \frac{u\sin\theta}{g}$:
+\begin{equation}
+  H = y(t_{\text{apex}}) = u\sin\theta\left(\frac{u\sin\theta}{g}\right) - \frac{1}{2}g\left(\frac{u\sin\theta}{g}\right)^2 = \frac{u^2\sin^2\theta}{2g}
+\end{equation}
+\textbf{3. Horizontal Range ($R$):} Evaluating horizontal coordinate at $t = T$:
+\begin{equation}
+  R = x(T) = (u\cos\theta)\left(\frac{2u\sin\theta}{g}\right) = \frac{u^2(2\sin\theta\cos\theta)}{g} = \frac{u^2\sin 2\theta}{g}
+\end{equation}
+\textbf{4. Cartesian Equation of Trajectory:} Eliminating $t = \frac{x}{u\cos\theta}$:
+\begin{equation}
+  y(x) = u\sin\theta\left(\frac{x}{u\cos\theta}\right) - \frac{g}{2}\left(\frac{x}{u\cos\theta}\right)^2 = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta} = x\tan\theta\left(1 - \frac{x}{R}\right)
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[High-Yield Projectile Properties \& Incline Formulas]
+\begin{itemize}
+  \item \textbf{Complementary Angles of Projection:} For a given initial velocity $u$, the range is identical for launch angles $\theta$ and $(90^\circ - \theta)$:
+  \begin{equation}
+    R(\theta) = R(90^\circ - \theta) = \frac{u^2\sin 2\theta}{g}
+  \end{equation}
+  The corresponding maximum heights $H_1, H_2$ satisfy the master identity:
+  \begin{equation}
+    R = 4\sqrt{H_1 H_2}, \qquad H_1 + H_2 = \frac{u^2}{2g}
+  \end{equation}
+  \item \textbf{Horizontal Projectile from Cliff of Height $h$:} Launched horizontally with speed $u$:
+  \begin{equation}
+    t_{\text{flight}} = \sqrt{\frac{2h}{g}}, \qquad R = u\sqrt{\frac{2h}{g}}, \qquad v_{\text{strike}} = \sqrt{u^2 + 2gh}
+  \end{equation}
+  \item \textbf{Projectile Motion on an Inclined Plane:} For a plane inclined at angle $\alpha$ to horizontal, with launch angle $\beta$ relative to the inclined plane:
+  \begin{align}
+    \text{Time of flight: } T &= \frac{2u\sin\beta}{g\cos\alpha} \\
+    \text{Range up the incline: } R_{\text{up}} &= \frac{u^2}{g\cos^2\alpha}\left[\sin(2\beta + \alpha) - \sin\alpha\right] \\
+    \text{Condition for Maximum Range: } \beta &= \frac{\pi}{4} - \frac{\alpha}{2} \implies R_{\max,\text{up}} = \frac{u^2}{g(1 + \sin\alpha)}
+  \end{align}
+\end{itemize}
+\end{usecasebox}
+
+\begin{formulabox}[Relative Velocity Formulations in 2D: River-Boat \& Rain-Man]
+Relative velocity of body $A$ with respect to body $B$ is defined by:
+\begin{equation}
+  \mathbf{v}_{AB} = \mathbf{v}_A - \mathbf{v}_B
+\end{equation}
+\textbf{1. River-Boat Problem:} Let river width be $d$, river flow speed be $v_r\hat{\mathbf{i}}$, and boat velocity relative to water be $\mathbf{v}_{br}$:
+\begin{itemize}
+  \item \textbf{Shortest Time Crossing:} Steer directly across ($\theta = 90^\circ$ to river flow):
+  \begin{equation}
+    t_{\min} = \frac{d}{v_{br}}, \qquad \text{Drift } x = v_r \cdot t_{\min} = \frac{v_r d}{v_{br}}
+  \end{equation}
+  \item \textbf{Shortest Path Crossing (Zero Drift):} Feasible only when $v_{br} > v_r$. Steer at angle $\theta$ upstream such that horizontal component cancels river flow:
+  \begin{equation}
+    \sin\theta = \frac{v_r}{v_{br}}, \qquad v_{\text{resultant}} = \sqrt{v_{br}^2 - v_r^2}, \qquad t = \frac{d}{\sqrt{v_{br}^2 - v_r^2}}
+  \end{equation}
+\end{itemize}
+\textbf{2. Rain-Man Problem:} Rain falling vertically with velocity $\mathbf{v}_r = -v_r\hat{\mathbf{j}}$, observer walking with $\mathbf{v}_m = v_m\hat{\mathbf{i}}$:
+\begin{equation}
+  \mathbf{v}_{r,m} = \mathbf{v}_r - \mathbf{v}_m = -v_m\hat{\mathbf{i}} - v_r\hat{\mathbf{j}}, \qquad \tan\theta = \frac{|\mathbf{v}_m|}{|\mathbf{v}_r|} = \frac{v_m}{v_r}
+\end{equation}
+The umbrella must be oriented tilted forward at angle $\theta = \tan^{-1}(v_m/v_r)$ relative to vertical.
+\end{formulabox}
+
+\begin{trapbox}[NEET Trap: Minimum Separation in 2D Interception Problems]
+When two bodies $A$ and $B$ move with constant velocities $\mathbf{v}_A$ and $\mathbf{v}_B$ from initial positions $\mathbf{r}_A$ and $\mathbf{r}_B$:
+\begin{itemize}
+  \item \textbf{Wrong Approach:} Differentiating scalar distance formula algebraically leads to enormous computation time.
+  \item \textbf{Correct Vector Method:} Freeze body $B$ at the origin of a relative frame. Body $A$ moves along a straight line with constant relative velocity $\mathbf{v}_{AB} = \mathbf{v}_A - \mathbf{v}_B$ starting from relative position $\mathbf{r}_{AB} = \mathbf{r}_A - \mathbf{r}_B$.
+  \item The shortest distance is simply the length of the perpendicular from $B$ to the relative velocity line:
+  \begin{equation}
+    d_{\min} = \frac{|\mathbf{r}_{AB} \times \mathbf{v}_{AB}|}{|\mathbf{v}_{AB}|}, \qquad t_{\min} = -\frac{\mathbf{r}_{AB} \cdot \mathbf{v}_{AB}}{|\mathbf{v}_{AB}|^2}
+  \end{equation}
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 4: NEWTON'S LAWS OF MOTION \& CONSTRAINED SYSTEM DYNAMICS
+% =========================================================================
+\section{Newton's Laws of Motion, Constrained Dynamics \& Pseudo-Forces}
+
+\begin{conceptbox}[Foundations of Newtonian Mechanics \& Frame Relativity]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Newton's First Law (Law of Inertia):} In the absence of an unbalanced net external force, a body maintains its state of rest or uniform rectilinear motion. This establishes the existence of \textbf{Inertial Reference Frames}.
+  \item \textbf{Newton's Second Law:} The rate of change of linear momentum $\mathbf{p} = m\mathbf{v}$ is proportional to and in the direction of the applied net force:
+  \begin{equation}
+    \mathbf{F}_{\text{net}} = \frac{d\mathbf{p}}{dt} = m\frac{d\mathbf{v}}{dt} + \mathbf{v}\frac{dm}{dt} = m\mathbf{a} \quad (\text{for constant mass system})
+  \end{equation}
+  \item \textbf{Newton's Third Law:} Forces occur strictly in pairs. When body $A$ exerts force $\mathbf{F}_{BA}$ on body $B$, body $B$ exerts an instantaneous, collinear, equal and opposite reaction force on $A$: $\mathbf{F}_{AB} = -\mathbf{F}_{BA}$. Action and reaction act on \textbf{different bodies} and never cancel each other.
+  \item \textbf{Non-Inertial Reference Frames \& Pseudo-Force:} In a frame accelerating with acceleration $\mathbf{a}_f$, Newton's second law is restored by introducing the inertial pseudo-force:
+  \begin{equation}
+    \mathbf{F}_{\text{pseudo}} = -m\mathbf{a}_f
+  \end{equation}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Equilibrium, Lami's Theorem \& String/Wedge Constraints]
+\textbf{1. Concurrent Force Equilibrium (Lami's Theorem):} If three coplanar forces $\mathbf{F}_1, \mathbf{F}_2, \mathbf{F}_3$ acting on a particle maintain equilibrium ($\mathbf{F}_1 + \mathbf{F}_2 + \mathbf{F}_3 = \mathbf{0}$):
+\begin{equation}
+  \frac{F_1}{\sin\alpha} = \frac{F_2}{\sin\beta} = \frac{F_3}{\sin\gamma}
+\end{equation}
+where $\alpha, \beta, \gamma$ are the angles opposite to forces $\mathbf{F}_1, \mathbf{F}_2, \mathbf{F}_3$ respectively.
+
+\textbf{2. Virtual Work Principle for String Constraints:} For an inextensible, taut string passing over ideal frictionless massless pulleys, the total internal work done by string tension across the system is identically zero:
+\begin{equation}
+  \sum_{i} \mathbf{T}_i \cdot \mathbf{x}_i = 0 \implies \sum_{i} \mathbf{T}_i \cdot \mathbf{v}_i = 0 \implies \sum_{i} \mathbf{T}_i \cdot \mathbf{a}_i = 0
+\end{equation}
+\textbf{3. Wedge Constraints:} Two bodies maintaining continuous contact without penetration must have identical velocity and acceleration components along the \textbf{common normal} to their contact interface:
+\begin{equation}
+  (\mathbf{v}_1 \cdot \hat{\mathbf{n}}) = (\mathbf{v}_2 \cdot \hat{\mathbf{n}}), \qquad (\mathbf{a}_1 \cdot \hat{\mathbf{n}}) = (\mathbf{a}_2 \cdot \hat{\mathbf{n}})
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Atwood Machine Derivations \& High-Yield Accelerations]
+\begin{itemize}
+  \item \textbf{Standard Simple Atwood Machine:} Masses $m_1 > m_2$ connected over an ideal pulley:
+  \begin{equation}
+    a = \left(\frac{m_1 - m_2}{m_1 + m_2}\right)g, \qquad T = \left(\frac{2m_1 m_2}{m_1 + m_2}\right)g, \qquad \text{Force on Pulley Support } F_p = 2T = \frac{4m_1 m_2 g}{m_1 + m_2}
+  \end{equation}
+  \item \textbf{Movable Pulley System (Mechanical Advantage):} Mass $m_1$ on smooth horizontal table connected to movable pulley holding hanging mass $m_2$. Since $x_2 = x_1/2$, constraint yields $a_1 = 2a_2$:
+  \begin{equation}
+    a_2 = \frac{m_2 g}{4m_1 + m_2}, \qquad a_1 = \frac{2m_2 g}{4m_1 + m_2}, \qquad T = \frac{2m_1 m_2 g}{4m_1 + m_2}
+  \end{equation}
+  \item \textbf{Apparent Weight in an Accelerating Elevator:}
+  \begin{align}
+    \text{Accelerating upward with } a &: N = m(g + a) \\
+    \text{Accelerating downward with } a &: N = m(g - a) \\
+    \text{Free fall ($a = g$)} &: N = 0 \quad (\text{Weightlessness})
+  \end{align}
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Spring Balance Reading During Transients \& Cut Strings]
+\begin{itemize}
+  \item \textbf{Spring vs String Cut Difference:} A light spring exerts force $F = kx$. The displacement $x$ cannot change discontinuously. Therefore, immediately after cutting an adjacent string/support at $t = 0^+$, the spring force \textbf{remains completely unchanged} ($F_{\text{spring}}(0^+) = F_{\text{spring}}(0^-)$).
+  \item In contrast, string tension is an instantaneous constraint force that drops to zero or readjusts instantaneously ($T(0^+) \neq T(0^-)$).
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 5: FRICTION DYNAMICS
+% =========================================================================
+\section{Friction: Microscopic Mechanism, Slopes \& Multi-Block Dynamics}
+
+\begin{conceptbox}[Laws of Dry Friction (Amontons--Coulomb Model)]
+Friction is an electromagnetic contact force arising from microscopic adhesive bonding (cold welding of microscopic asperities) and mechanical interlocking between contacting surfaces.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Static Friction ($f_s$):} A self-adjusting reaction force that opposes the tendency of relative motion. It matches the net applied tangential force up to a limiting threshold:
+  \begin{equation}
+    0 \le f_s \le f_{s,\max} = \mu_s N
+  \end{equation}
+  where $\mu_s$ is the coefficient of static friction, and $N$ is the normal contact force.
+  \item \textbf{Kinetic Friction ($f_k$):} Once relative slip begins, the opposing frictional force becomes nearly independent of relative sliding velocity and contact area:
+  \begin{equation}
+    f_k = \mu_k N \quad (\text{with } \mu_k < \mu_s)
+  \end{equation}
+  \item \textbf{Angle of Friction ($\lambda$) \& Angle of Repose ($\theta_r$):}
+  \begin{equation}
+    \tan\lambda = \frac{f_{s,\max}}{N} = \frac{\mu_s N}{N} = \mu_s, \qquad \tan\theta_r = \mu_s \implies \theta_r = \lambda = \tan^{-1}\mu_s
+  \end{equation}
+  A body resting on an inclined plane begins spontaneous sliding only when inclination $\theta > \theta_r$.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Dynamics on Rough Inclined Planes \& Stacked Block Systems]
+\textbf{1. Acceleration on Rough Incline:}
+\begin{align}
+  \text{Sliding down incline ($\theta > \theta_r$): } a_{\text{down}} &= g(\sin\theta - \mu_k\cos\theta) \\
+  \text{Projected upward along incline: } a_{\text{up}} &= -g(\sin\theta + \mu_k\cos\theta)
+\end{align}
+Ratio of time taken to slide down rough incline vs smooth incline of identical length:
+\begin{equation}
+  t_{\text{rough}} = n \cdot t_{\text{smooth}} \implies \mu_k = \tan\theta\left(1 - \frac{1}{n^2}\right)
+\end{equation}
+\textbf{2. Minimum Force to Drag a Block on a Rough Horizontal Surface:}
+Pulling at an upward angle $\theta$ to the horizontal reduces normal force $N = mg - F\sin\theta$:
+\begin{equation}
+  F\cos\theta = \mu_s(mg - F\sin\theta) \implies F(\theta) = \frac{\mu_s mg}{\cos\theta + \mu_s\sin\theta}
+\end{equation}
+Minimizing $F(\theta)$ by setting $\frac{d}{d\theta}(\cos\theta + \mu_s\sin\theta) = 0 \implies \tan\theta = \mu_s$:
+\begin{equation}
+  F_{\min} = \frac{\mu_s mg}{\sqrt{1 + \mu_s^2}} \quad \text{at angle } \theta = \tan^{-1}\mu_s
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Two-Block Stacked Friction Problem Archetype]
+Consider block $A$ of mass $m_1$ resting atop block $B$ of mass $m_2$, situated on a frictionless horizontal floor. Friction coefficient between $A$ and $B$ is $\mu_s = \mu_k = \mu$.
+\begin{itemize}
+  \item \textbf{Case I: External Force $F$ Applied to Lower Block $B$ ($m_2$):}
+  The only force driving block $A$ forward is static friction $f_s \le \mu m_1 g$.
+  Maximum allowable acceleration without relative slip:
+  \begin{equation}
+    a_{\max} = \frac{f_{s,\max}}{m_1} = \frac{\mu m_1 g}{m_1} = \mu g
+  \end{equation}
+  Threshold force for no slipping:
+  \begin{equation}
+    F_{\text{threshold}} = (m_1 + m_2)a_{\max} = \mu(m_1 + m_2)g
+  \end{equation}
+  If $F \le F_{\text{threshold}}$, both blocks accelerate together at $a = \frac{F}{m_1 + m_2}$.
+  If $F > F_{\text{threshold}}$, slipping occurs:
+  \begin{equation}
+    a_1 = \mu g, \qquad a_2 = \frac{F - \mu m_1 g}{m_2}
+  \end{equation}
+  \item \textbf{Case II: External Force $F$ Applied to Upper Block $A$ ($m_1$):}
+  Here friction on $B$ drives $B$ forward: $f_s \le \mu m_1 g \implies a_{\max} = \frac{\mu m_1 g}{m_2}$.
+  \begin{equation}
+    F_{\text{threshold}} = (m_1 + m_2)a_{\max} = \mu m_1 g\left(1 + \frac{m_1}{m_2}\right)
+  \end{equation}
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Direction of Static Friction on Walking \& Driving Wheels]
+\begin{itemize}
+  \item \textbf{Human Walking:} The foot pushes the ground backward. By Newton's third law, static friction exerted by the ground on the foot acts \textbf{forward}, providing propulsive acceleration!
+  \item \textbf{Automobile / Bicycle Wheels:} For the rear (driving) wheel of a bicycle, engine/pedal torque pushes the ground backward, so ground friction acts \textbf{forward}. For the front (driven) wheel, ground friction acts \textbf{backward} to generate forward angular rotation.
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 6: DYNAMICS OF CIRCULAR MOTION
+% =========================================================================
+\section{Dynamics of Circular Motion, Banking \& Conical Pendulum}
+
+\begin{conceptbox}[Kinematics \& Force Mechanics in Curvilinear Trajectories]
+In circular motion of radius $r$, the acceleration vector decomposes along radial (centripetal) and tangential directions:
+\begin{equation}
+  \mathbf{a} = \mathbf{a}_c + \mathbf{a}_t = -\left(\frac{v^2}{r}\right)\hat{\mathbf{r}} + \left(\frac{dv}{dt}\right)\hat{\boldsymbol{\theta}} = -(\omega^2 r)\hat{\mathbf{r}} + (\alpha r)\hat{\boldsymbol{\theta}}
+\end{equation}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Centripetal Force:} A net real force directed toward the instantaneous center of curvature required to continuously bend the velocity vector:
+  \begin{equation}
+    F_c = m a_c = \frac{m v^2}{r} = m \omega^2 r
+  \end{equation}
+  \item \textbf{Centrifugal Force:} In the rotating reference frame attached to the orbiting particle, a radially outward pseudo-force of magnitude $F_{\text{cf}} = m\omega^2 r$ is applied.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Complete Derivation of Banking Dynamics on Curved Tracks]
+Consider a vehicle negotiating a curve of radius $r$ on a road banked at angle $\theta$ with static friction coefficient $\mu_s$:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Unbanked Level Curved Road:} Friction alone provides centripetal acceleration:
+  \begin{equation}
+    f_s \le \mu_s N = \mu_s mg \implies \frac{mv^2}{r} \le \mu_s mg \implies v_{\max} = \sqrt{\mu_s g r}
+  \end{equation}
+  \item \textbf{Frictionless Banked Road (Optimum Speed $v_0$):} Normal force component $N\sin\theta$ provides centripetal acceleration, while $N\cos\theta$ balances gravity:
+  \begin{equation}
+    N\sin\theta = \frac{mv_0^2}{r}, \quad N\cos\theta = mg \implies \tan\theta = \frac{v_0^2}{rg} \implies v_0 = \sqrt{rg\tan\theta}
+  \end{equation}
+  \item \textbf{Rough Banked Road (Maximum Safe Velocity $v_{\max}$):} Vehicle tends to skid outward up the incline; limiting friction $f_s = \mu_s N$ acts downward along the incline:
+  \begin{align}
+    N\cos\theta - f_s\sin\theta = mg &\implies N(\cos\theta - \mu_s\sin\theta) = mg \\
+    N\sin\theta + f_s\cos\theta = \frac{mv^2}{r} &\implies N(\sin\theta + \mu_s\cos\theta) = \frac{mv^2}{r}
+  \end{align}
+  Dividing the two equations yields the exact NEET master formula:
+  \begin{equation}
+    v_{\max} = \sqrt{rg\left(\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}\right)}
+  \end{equation}
+  \item \textbf{Minimum Safe Velocity (Preventing Inward Slide $v_{\min}$):} Limiting friction acts upward along the incline:
+  \begin{equation}
+    v_{\min} = \sqrt{rg\left(\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}\right)} \quad (\text{if } \tan\theta > \mu_s)
+  \end{equation}
+\end{enumerate}
+\end{formulabox}
+
+\begin{usecasebox}[Conical Pendulum Dynamics \& Period Derivation]
+A bob of mass $m$ attached to a string of length $L$ traces a horizontal circle of radius $r = L\sin\theta$ at constant angular velocity $\omega$, making semi-vertical angle $\theta$:
+\begin{align}
+  \text{Vertical force balance: } T\cos\theta &= mg \implies T = \frac{mg}{\cos\theta} \\
+  \text{Radial centripetal equation: } T\sin\theta &= m\omega^2 r = m\omega^2(L\sin\theta) \implies T = m\omega^2 L
+\end{align}
+Equating expressions for string tension $T$:
+\begin{equation}
+  \frac{mg}{\cos\theta} = m\omega^2 L \implies \omega = \sqrt{\frac{g}{L\cos\theta}}
+\end{equation}
+The time period of the conical pendulum is:
+\begin{equation}
+  T_{\text{period}} = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{L\cos\theta}{g}} = 2\pi\sqrt{\frac{h}{g}}
+\end{equation}
+where $h = L\cos\theta$ is the vertical height of the apex above the circular plane of motion.
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Death Well / Rotor Minimum Angular Velocity]
+In a cylindrical rotor (death well) of radius $R$, a person rests against the vertical wall without a floor.
+\begin{itemize}
+  \item The normal force $N = m\omega^2 R$ acts \textbf{horizontally} providing centripetal acceleration.
+  \item Static friction acts \textbf{vertically upward} to balance weight: $f_s = mg$.
+  \item Condition to prevent sliding down:
+  \begin{equation}
+    f_s \le \mu_s N \implies mg \le \mu_s(m\omega^2 R) \implies \omega_{\min} = \sqrt{\frac{g}{\mu_s R}}, \quad v_{\min} = \sqrt{\frac{gR}{\mu_s}}
+  \end{equation}
+  Notice that $\mu_s$ appears in the denominator, in stark contrast to level road turns!
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 7: WORK, ENERGY, POWER \& VERTICAL CIRCULAR MOTION
+% =========================================================================
+\section{Work, Energy, Power \& Vertical Circular Dynamics}
+
+\begin{conceptbox}[Calculus Formulations of Work \& Potential Energy Functions]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Work Done by Variable Force:} For a particle moving along path $C$ from $\mathbf{r}_i$ to $\mathbf{r}_f$:
+  \begin{equation}
+    W = \int_{\mathbf{r}_i}^{\mathbf{r}_f} \mathbf{F} \cdot d\mathbf{r} = \int_{x_i}^{x_f} F_x\,dx + \int_{y_i}^{y_f} F_y\,dy + \int_{z_i}^{z_f} F_z\,dz
+  \end{equation}
+  \item \textbf{Conservative Force Criterion:} A force is conservative if the work done around any closed loop vanishes identically: $\oint \mathbf{F}\cdot d\mathbf{r} = 0 \iff \boldsymbol{\nabla}\times\mathbf{F} = \mathbf{0}$.
+  \item \textbf{Potential Energy Field ($U$):} For conservative forces, potential energy is defined such that:
+  \begin{equation}
+    \Delta U = U_f - U_i = -W_{\text{int}} = -\int_{\mathbf{r}_i}^{\mathbf{r}_f} \mathbf{F}\cdot d\mathbf{r} \implies \mathbf{F} = -\boldsymbol{\nabla}U = -\left(\frac{\partial U}{\partial x}\hat{\mathbf{i}} + \frac{\partial U}{\partial y}\hat{\mathbf{j}} + \frac{\partial U}{\partial z}\hat{\mathbf{k}}\right)
+  \end{equation}
+  \item \textbf{Equilibrium States \& Stability Calculus:}
+  \begin{align}
+    \text{Equilibrium Condition: } &\frac{dU}{dx} = 0 \implies F = 0 \\
+    \text{Stable Equilibrium: } &\frac{d^2 U}{dx^2} > 0 \quad (\text{Local Potential Minimum, restoring force}) \\
+    \text{Unstable Equilibrium: } &\frac{d^2 U}{dx^2} < 0 \quad (\text{Local Potential Maximum, destabilizing}) \\
+    \text{Neutral Equilibrium: } &\frac{d^2 U}{dx^2} = 0 \quad (\text{Flat potential valley})
+  \end{align}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Work-Energy Theorem Rigorous Proof \& Spring Potential Energy]
+\textbf{1. Work-Energy Theorem for Variable Force in 1D:}
+\begin{equation}
+  W = \int_{x_i}^{x_f} F\,dx = \int_{x_i}^{x_f} m\left(\frac{dv}{dt}\right)dx = \int_{x_i}^{x_f} m v\left(\frac{dv}{dx}\right)dx = \int_{v_i}^{v_f} m v\,dv
+\end{equation}
+Integrating yields the fundamental Work-Energy Theorem:
+\begin{equation}
+  W_{\text{net}} = \left[\frac{1}{2}m v^2\right]_{v_i}^{v_f} = \frac{1}{2}m v_f^2 - \frac{1}{2}m v_i^2 = \Delta K
+\end{equation}
+\textbf{2. Elastic Potential Energy of Ideal Spring:}
+According to Hooke's Law, restoring spring force is $F_s = -kx$. Work done by external agent stretching from $0$ to $x$:
+\begin{equation}
+  W_{\text{ext}} = \int_{0}^{x} kx\,dx = \frac{1}{2}kx^2 \implies U_s(x) = \frac{1}{2}kx^2
+\end{equation}
+\end{formulabox}
+
+\begin{formulabox}[Complete Dynamics of Vertical Circular Motion (String vs Rod)]
+Let a bob of mass $m$ on a string of length $l$ be projected horizontally at the lowest point (Point $L$) with velocity $u$.
+At angle $\theta$ relative to the downward vertical:
+\begin{align}
+  \text{Conservation of Mechanical Energy: } &\frac{1}{2}mu^2 = \frac{1}{2}mv^2(\theta) + mgl(1 - \cos\theta) \nonumber \\
+  &\implies v^2(\theta) = u^2 - 2gl(1 - \cos\theta) \\
+  \text{Radial Equation for String Tension: } &T(\theta) - mg\cos\theta = \frac{mv^2(\theta)}{l} \nonumber \\
+  &\implies T(\theta) = \frac{mu^2}{l} - mg(2 - 3\cos\theta)
+\end{align}
+\textbf{Key Critical Boundary Values for Complete Vertical Loop (String):}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{At Highest Point ($\theta = \pi$):} $\cos\pi = -1 \implies v_{\text{top}}^2 = u^2 - 4gl$.
+  To maintain tautness, $T_{\text{top}} \ge 0$:
+  \begin{equation}
+    T_{\text{top}} = \frac{m v_{\text{top}}^2}{l} - mg \ge 0 \implies v_{\text{top}} \ge \sqrt{gl}
+  \end{equation}
+  \item \textbf{Critical Minimum Launch Speed at Bottom ($u_{\min}$):}
+  \begin{equation}
+    u^2 - 4gl \ge gl \implies u_{\min} = \sqrt{5gl}
+  \end{equation}
+  \item \textbf{Speed at Horizontal Position ($\theta = \pi/2$):}
+  \begin{equation}
+    v_{\text{horiz}} = \sqrt{u^2 - 2gl} \ge \sqrt{3gl}
+  \end{equation}
+  \item \textbf{Tension Difference Between Bottom and Top:}
+  \begin{equation}
+    T_{\text{bottom}} = \frac{mu^2}{l} + mg, \qquad T_{\text{top}} = \frac{mu^2}{l} - 5mg \implies T_{\text{bottom}} - T_{\text{top}} = 6mg
+  \end{equation}
+  \item \textbf{Looping in a Light Rigid Rod:} A rod can support compressive stress. Looping requires only $v_{\text{top}} \ge 0$:
+  \begin{equation}
+    v_{\text{top}} \ge 0 \implies u_{\min,\text{rod}} = \sqrt{4gl} = 2\sqrt{gl}
+  \end{equation}
+\end{enumerate}
+\end{formulabox}
+
+\begin{usecasebox}[Regimes of Motion in Vertical Circle Based on Launch Velocity $u$]
+\begin{itemize}
+  \item \textbf{Regime I ($0 < u \le \sqrt{2gl}$): Oscillation Regime.} Velocity vanishes ($v=0$) before or at horizontal ($\theta \le 90^\circ$). Tension remains strictly positive ($T > 0$). The particle oscillates as a simple pendulum.
+  \item \textbf{Regime II ($\sqrt{2gl} < u < \sqrt{5gl}$): String Slackening Regime.} Tension vanishes ($T=0$) before velocity vanishes, at an angle $\theta$ in the upper hemisphere ($90^\circ < \theta < 180^\circ$):
+  \begin{equation}
+    \cos\theta = \frac{2gl - u^2}{3gl} \quad (\text{negative value})
+  \end{equation}
+  The particle leaves the circular path and executes parabolic projectile motion under gravity!
+  \item \textbf{Regime III ($u \ge \sqrt{5gl}$): Complete Looping Regime.} String never slacks ($T \ge 0$ throughout).
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Instantaneous Power vs Average Power]
+Power is the rate of doing work:
+\begin{equation}
+  P_{\text{avg}} = \frac{\Delta W}{\Delta t}, \qquad P_{\text{inst}} = \frac{dW}{dt} = \mathbf{F} \cdot \mathbf{v} = F v \cos\phi
+\end{equation}
+\begin{itemize}
+  \item In uniform circular motion, $\mathbf{F} \perp \mathbf{v}$ at every instant ($\cos 90^\circ = 0$). Thus, instantaneous power delivered by centripetal force is \textbf{identically zero} ($P_{\text{inst}} = 0$), and net work done over any interval is zero.
+  \item For an engine delivering constant power $P$, velocity scales as $v \propto t^{1/2}$ and displacement scales as $x \propto t^{3/2}$.
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 8: MOMENTUM CONSERVATION, COLLISIONS \& VARIABLE MASS SYSTEMS
+% =========================================================================
+\section{Conservation of Linear Momentum, Collisions \& Variable Mass Systems}
+
+\begin{conceptbox}[Conservation of Linear Momentum \& Coefficient of Restitution]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Principle of Conservation of Linear Momentum:} For an isolated system of particles with zero net external force ($\sum \mathbf{F}_{\text{ext}} = \mathbf{0}$):
+  \begin{equation}
+    \frac{d\mathbf{P}_{\text{total}}}{dt} = \mathbf{0} \implies \mathbf{P}_{\text{total}} = \sum m_i \mathbf{v}_i = \text{constant}
+  \end{equation}
+  \item \textbf{Impulse-Momentum Theorem:} The time integral of net force equals the total change in linear momentum:
+  \begin{equation}
+    \mathbf{J} = \int_{t_1}^{t_2} \mathbf{F}\,dt = \Delta\mathbf{p} = \mathbf{p}_2 - \mathbf{p}_1
+  \end{equation}
+  \item \textbf{Newton's Law of Restitution:} The coefficient of restitution $e$ quantifies the elasticity along the line of impact (common normal):
+  \begin{equation}
+    e = \frac{\text{Velocity of Separation}}{\text{Velocity of Approach}} = \frac{v_2 - v_1}{u_1 - u_2}
+  \end{equation}
+  \begin{itemize}
+    \item $e = 1$: Perfectly elastic collision (kinetic energy conserved).
+    \item $0 < e < 1$: Inelastic collision (partial loss of kinetic energy to heat/deformation).
+    \item $e = 0$: Perfectly inelastic collision (bodies stick together, maximum kinetic energy loss).
+  \end{itemize}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Complete Derivation of Post-Collision Velocities \& Kinetic Energy Loss]
+Consider two masses $m_1, m_2$ moving with initial velocities $u_1, u_2$ undergoing a 1D head-on collision with coefficient of restitution $e$:
+\begin{align}
+  \text{Conservation of Momentum: } &m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2 \\
+  \text{Restitution Equation: } &v_2 - v_1 = e(u_1 - u_2) \implies v_2 = v_1 + e(u_1 - u_2)
+\end{align}
+Substituting $v_2$ into the momentum equation:
+\begin{align}
+  m_1 u_1 + m_2 u_2 &= m_1 v_1 + m_2[v_1 + e(u_1 - u_2)] = (m_1 + m_2)v_1 + e m_2(u_1 - u_2) \nonumber \\
+  \implies (m_1 + m_2)v_1 &= m_1 u_1 + m_2 u_2 - e m_2 u_1 + e m_2 u_2 = (m_1 - e m_2)u_1 + (1+e)m_2 u_2
+\end{align}
+This yields the universal post-collision velocity formulas:
+\begin{align}
+  v_1 &= \left(\frac{m_1 - e m_2}{m_1 + m_2}\right)u_1 + \left(\frac{(1+e)m_2}{m_1 + m_2}\right)u_2 \\
+  v_2 &= \left(\frac{(1+e)m_1}{m_1 + m_2}\right)u_1 + \left(\frac{m_2 - e m_1}{m_1 + m_2}\right)u_2
+\end{align}
+\textbf{Kinetic Energy Loss in Inelastic Collisions ($\Delta K_{\text{loss}}$):}
+\begin{equation}
+  \Delta K_{\text{loss}} = K_i - K_f = \frac{1}{2}\left(\frac{m_1 m_2}{m_1 + m_2}\right)(u_1 - u_2)^2(1 - e^2) = \frac{1}{2}\mu (u_{\text{rel}})^2(1 - e^2)
+\end{equation}
+where $\mu = \frac{m_1 m_2}{m_1 + m_2}$ is the reduced mass of the two-body colliding system.
+\end{formulabox}
+
+\begin{usecasebox}[High-Yield Collision Archetypes \& Variable Mass Systems]
+\begin{itemize}
+  \item \textbf{Equal Masses Elastic Collision ($m_1 = m_2, e = 1$):} Velocities swap completely:
+  \begin{equation}
+    v_1 = u_2, \qquad v_2 = u_1
+  \end{equation}
+  \item \textbf{Massive Target at Rest ($m_2 \gg m_1, u_2 = 0, e = 1$):}
+  \begin{equation}
+    v_1 = -u_1, \qquad v_2 \approx 0 \quad (\text{Projectile rebounds with inverted speed})
+  \end{equation}
+  \item \textbf{Massive Projectile on Light Target ($m_1 \gg m_2, u_2 = 0, e = 1$):}
+  \begin{equation}
+    v_1 \approx u_1, \qquad v_2 \approx 2u_1 \quad (\text{Target kicked at double projectile velocity})
+  \end{equation}
+  \item \textbf{Successive Bounces of Ball Dropped from Height $h_0$:}
+  \begin{align}
+    \text{Height after } n^{\text{th}}\text{ bounce: } h_n &= e^{2n}h_0 \\
+    \text{Total distance traveled until rest: } H_{\text{total}} &= h_0 + 2\sum_{n=1}^\infty h_n = h_0\left(\frac{1+e^2}{1-e^2}\right) \\
+    \text{Total time elapsed until rest: } T_{\text{total}} &= \sqrt{\frac{2h_0}{g}} + 2\sum_{n=1}^\infty \sqrt{\frac{2h_n}{g}} = \sqrt{\frac{2h_0}{g}}\left(\frac{1+e}{1-e}\right)
+  \end{align}
+  \item \textbf{Rocket Propulsion (Tsiolkovsky Equation):} For variable mass system with exhaust velocity $u_{\text{rel}}$:
+  \begin{equation}
+    v(t) = v_0 + u_{\text{rel}}\ln\left(\frac{m_0}{m(t)}\right) - gt
+  \end{equation}
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Oblique Collisions \& Line of Impact Conservation]
+In two-dimensional (oblique) collisions between smooth spheres:
+\begin{itemize}
+  \item Forces during collision act \textbf{solely along the line of impact} (the common normal connecting the sphere centers at the instant of contact).
+  \item Consequently, momentum is conserved along the line of impact, and Newton's restitution formula $e = -\frac{v_{2n} - v_{1n}}{u_{2n} - u_{1n}}$ applies \textbf{only} to normal velocity components.
+  \item Tangential velocity components parallel to the contact plane experience zero impulse and remain \textbf{strictly unchanged}:
+  \begin{equation}
+    v_{1t} = u_{1t}, \qquad v_{2t} = u_{2t}
+  \end{equation}
+  Applying restitution to total velocity vectors without normal projection is an immediate trap!
+\end{itemize}
+\end{trapbox}
+
+\begin{ncertbox}[NCERT Critical Extraction: Collision Classifications \& Nuclear Moderation]
+\textbf{NCERT Highlight:}
+\begin{itemize}
+  \item In a nuclear reactor, fast neutrons ($m \approx 1\,\mathrm{u}$) produced by uranium fission must be slowed down to thermal speeds to sustain a chain reaction. Moderators containing light nuclei such as protons or carbon ($m_2 \approx m_1$) are used.
+  \item In an elastic head-on collision with a target of comparable mass ($m_1 \approx m_2$) at rest, the incoming neutron transfers virtually all of its kinetic energy ($100\%$) because $v_1 \approx 0$ and $v_2 \approx u_1$. Heavy stationary nuclei ($m_2 \gg m_1$) merely rebound the neutron elastically without absorbing its kinetic energy.
+\end{itemize}
+\end{ncertbox}
+
+\end{document}

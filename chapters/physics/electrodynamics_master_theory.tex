@@ -1,0 +1,712 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{NEET UG 2027: Electrodynamics Master Theory}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Physics Chapter Notes}}
+
+\begin{document}
+
+% Title Header Banner
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Chapter Theory}}\\[6pt]
+  {\Large \textbf{Electrodynamics, Magnetism, Electromagnetic Induction \& AC Circuits}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Revised NMC Syllabus}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+\section{Electrostatics, Coulomb's Law \& Continuous Charge Distributions}
+
+\begin{conceptbox}[Foundations of Electric Charge \& Coulomb's Law in Vector Form]
+\textbf{1. Fundamental Charge Properties:}
+\begin{itemize}
+  \item \textbf{Quantization of Charge:} Charge exists strictly as integer multiples of the elementary charge $e \approx 1.602 \times 10^{-19}\,\mathrm{C}$:
+  \begin{equation}
+    q = \pm n e \quad (n \in \mathbb{N})
+  \end{equation}
+  \item \textbf{Conservation of Charge:} The algebraic sum of fundamental charges within an isolated physical system remains invariant over time.
+  \item \textbf{Invariance of Charge:} The magnitude of electric charge is independent of the reference frame speed ($q_{\text{rest}} = q_{\text{motion}}$), unlike relativistic mass.
+\end{itemize}
+\textbf{2. Coulomb's Inverse-Square Law in Vector Form:}
+The electrostatic force exerted by point charge $q_1$ at position vector $\mathbf{r}_1$ on charge $q_2$ at $\mathbf{r}_2$:
+\begin{equation}
+  \mathbf{F}_{12} = \frac{1}{4\pi\varepsilon_0 \varepsilon_r} \frac{q_1 q_2}{|\mathbf{r}_2 - \mathbf{r}_1|^3} (\mathbf{r}_2 - \mathbf{r}_1) = \frac{1}{4\pi\varepsilon_0 \varepsilon_r} \frac{q_1 q_2}{r_{12}^2} \hat{\mathbf{r}}_{12}
+\end{equation}
+where $\varepsilon_0 = 8.854 \times 10^{-12}\,\mathrm{C}^2\cdot\mathrm{N}^{-1}\cdot\mathrm{m}^{-2}$ is the permittivity of free space, and $\frac{1}{4\pi\varepsilon_0} \approx 8.988 \times 10^9\,\mathrm{N}\cdot\mathrm{m}^2\cdot\mathrm{C}^{-2}$.
+In a dielectric medium of relative permittivity (dielectric constant) $\kappa = \varepsilon_r > 1$:
+\begin{equation}
+  F_{\text{medium}} = \frac{F_{\text{vacuum}}}{\kappa}
+\end{equation}
+\textbf{3. Superposition Principle:}
+The resultant force acting on any test charge $q_0$ due to a collection of discrete charges $q_1, q_2, \dots, q_n$ is the vector sum:
+\begin{equation}
+  \mathbf{F}_{\text{net}} = \sum_{i=1}^n \mathbf{F}_{i0} = \frac{q_0}{4\pi\varepsilon_0} \sum_{i=1}^n \frac{q_i}{|\mathbf{r}_0 - \mathbf{r}_i|^3} (\mathbf{r}_0 - \mathbf{r}_i)
+\end{equation}
+\end{conceptbox}
+
+\begin{formulabox}[Electric Field \& Potential of Continuous Charge Geometries: Ring \& Disk]
+\textbf{1. Electric Field Definition:}
+$\mathbf{E} = \lim_{q_0 \to 0} \frac{\mathbf{F}}{q_0} = -\boldsymbol{\nabla} V$.
+\textbf{2. Uniformly Charged Thin Circular Ring on its Symmetry Axis:}
+Consider a ring of total charge $Q$ and radius $R$ positioned in the $y-z$ plane with symmetry axis along $x$.
+\begin{itemize}
+  \item By radial symmetry, perpendicular field components cancel: $dE_\perp = 0$.
+  \item Axial field element: $dE_x = dE \cos\theta = \frac{1}{4\pi\varepsilon_0} \frac{dq}{x^2 + R^2} \frac{x}{\sqrt{x^2 + R^2}}$.
+  \item Total integrated axial electric field:
+  \begin{equation}
+    \mathbf{E(x) = \frac{1}{4\pi\varepsilon_0} \frac{Q x}{(x^2 + R^2)^{3/2}} \hat{\mathbf{i}}}
+  \end{equation}
+  \item \textbf{At Ring Center ($x=0$):} $E(0) = 0$.
+  \item \textbf{Far-Field Regime ($x \gg R$):} $E(x) \approx \frac{1}{4\pi\varepsilon_0}\frac{Q}{x^2}$ (acts as point charge).
+  \item \textbf{Location of Maximum Electric Field:}
+  \begin{equation}
+    \frac{dE}{dx} = \frac{Q}{4\pi\varepsilon_0} \frac{(x^2 + R^2)^{3/2} - x \cdot \frac{3}{2}(x^2 + R^2)^{1/2}(2x)}{(x^2 + R^2)^3} = 0 \implies x^2 + R^2 - 3x^2 = 0 \implies \mathbf{x = \pm \frac{R}{\sqrt{2}}}
+  \end{equation}
+  \begin{equation}
+    \mathbf{E_{\max} = \frac{1}{4\pi\varepsilon_0} \frac{2 Q}{3\sqrt{3} R^2}}
+  \end{equation}
+  \item \textbf{Electrostatic Potential on Ring Axis:}
+  \begin{equation}
+    \mathbf{V(x) = \frac{1}{4\pi\varepsilon_0} \frac{Q}{\sqrt{x^2 + R^2}}} \implies V_{\text{center}} = \frac{Q}{4\pi\varepsilon_0 R}
+  \end{equation}
+\end{itemize}
+\textbf{3. Uniformly Charged Flat Circular Disk on its Axis:}
+Integrating concentric rings of radius $r$ and charge $dq = \sigma (2\pi r dr)$ from $r=0$ to $R$:
+\begin{equation}
+  \mathbf{E(x) = \frac{\sigma}{2\varepsilon_0} \left(1 - \frac{x}{\sqrt{x^2 + R^2}}\right) \hat{\mathbf{i}}}, \qquad \mathbf{V(x) = \frac{\sigma}{2\varepsilon_0} \left(\sqrt{x^2 + R^2} - x\right)}
+\end{equation}
+For $R \to \infty$ (infinite sheet), $E = \frac{\sigma}{2\varepsilon_0}$ (constant, independent of $x$).
+\end{formulabox}
+
+\begin{formulabox}[Electric Dipole Dynamics: Field, Torque \& Potential Energy]
+An electric dipole consists of two equal and opposite point charges $+q$ and $-q$ separated by a displacement vector $2\mathbf{a}$ pointing from $-q$ to $+q$:
+\begin{equation}
+  \mathbf{p} = q(2\mathbf{a}) \quad [\mathrm{C}\cdot\mathrm{m}]
+\end{equation}
+\textbf{1. Electric Field of Dipole in Coordinate Space ($r \gg a$):}
+\begin{itemize}
+  \item \textbf{Axial Point (End-on Position, $\theta = 0^\circ$):}
+  \begin{equation}
+    \mathbf{E_{\text{axial}} = \frac{1}{4\pi\varepsilon_0} \frac{2\mathbf{p}}{r^3}} \quad (\text{Collinear and parallel to } \mathbf{p})
+  \end{equation}
+  \item \textbf{Equatorial Point (Broadside-on Position, $\theta = 90^\circ$):}
+  \begin{equation}
+    \mathbf{E_{\text{eq}} = -\frac{1}{4\pi\varepsilon_0} \frac{\mathbf{p}}{r^3}} \quad (\text{Antiparallel to } \mathbf{p})
+  \end{equation}
+  \item \textbf{General Coordinate Point $(r, \theta)$:}
+  \begin{equation}
+    \mathbf{|\mathbf{E}| = \frac{1}{4\pi\varepsilon_0} \frac{p}{r^3} \sqrt{1 + 3\cos^2\theta}}, \qquad \tan\alpha = \frac{1}{2}\tan\theta
+  \end{equation}
+  where $\alpha$ is the angle between $\mathbf{E}$ and position vector $\mathbf{r}$.
+  \item \textbf{Electrostatic Potential at $(r, \theta)$:}
+  \begin{equation}
+    \mathbf{V(r, \theta) = \frac{1}{4\pi\varepsilon_0} \frac{\mathbf{p}\cdot\hat{\mathbf{r}}}{r^2} = \frac{1}{4\pi\varepsilon_0} \frac{p\cos\theta}{r^2}}
+  \end{equation}
+  Notice: $V_{\text{eq}} = V(r, 90^\circ) = 0$ everywhere along the equatorial bisector plane.
+\end{itemize}
+\textbf{2. External Uniform Electric Field Interactions:}
+\begin{itemize}
+  \item Net Force: $\mathbf{F_{\text{net}} = q\mathbf{E} + (-q)\mathbf{E} = 0}$ (zero translational acceleration).
+  \item Torque:
+  \begin{equation}
+    \mathbf{\boldsymbol{\tau} = \mathbf{p} \times \mathbf{E}} \implies |\boldsymbol{\tau}| = p E \sin\theta
+  \end{equation}
+  Maximum torque occurs at $\theta = 90^\circ$ ($\tau_{\max} = pE$).
+  \item Potential Energy of Dipole in External Field:
+  \begin{equation}
+    \mathbf{U = -\mathbf{p}\cdot\mathbf{E} = -p E \cos\theta}
+  \end{equation}
+  \begin{itemize}
+    \item \textbf{Stable Equilibrium ($\theta = 0^\circ$):} $\mathbf{p} \parallel \mathbf{E} \implies \boldsymbol{\tau} = 0$, $U_{\min} = -pE$.
+    \item \textbf{Unstable Equilibrium ($\theta = 180^\circ$):} $\mathbf{p} \parallel -\mathbf{E} \implies \boldsymbol{\tau} = 0$, $U_{\max} = +pE$.
+  \end{itemize}
+  \item Work done by external agent in rotating dipole from $\theta_1$ to $\theta_2$:
+  \begin{equation}
+    \mathbf{W_{\text{ext}} = \Delta U = p E (\cos\theta_1 - \cos\theta_2)}
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\section{Gauss's Law, Electric Flux \& Boundary Value Applications}
+
+\begin{conceptbox}[Gauss's Law Formulation \& Electric Flux]
+\textbf{1. Electric Flux ($\Phi_E$):}
+Surface integral of the electric field vector through an oriented surface element $d\mathbf{A} = \hat{\mathbf{n}} dA$:
+\begin{equation}
+  \Phi_E = \iint_S \mathbf{E}\cdot d\mathbf{A} \quad [\mathrm{N}\cdot\mathrm{m}^2\cdot\mathrm{C}^{-1} \text{ or } \mathrm{V}\cdot\mathrm{m}]
+\end{equation}
+\textbf{2. Gauss's Law (Maxwell's First Equation):}
+The net outward electric flux through any closed Gaussian surface enclosing net charge $q_{\text{enclosed}}$:
+\begin{equation}
+  \mathbf{\oint_{\partial V} \mathbf{E}\cdot d\mathbf{A} = \frac{q_{\text{enclosed}}}{\varepsilon_0}}
+\end{equation}
+\textit{Key Physical Insights:}
+\begin{itemize}
+  \item Net flux is completely independent of the shape, size, or geometry of the Gaussian boundary.
+  \item Charges residing outside the closed surface contribute zero net flux through the surface (entering flux equals exiting flux).
+  \item Electric field $\mathbf{E}$ on the left-hand side is the \textbf{net resultant field} produced by all charges (both inside and outside).
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Master Applications of Gauss's Law: Exact Field Derivations]
+\textbf{1. Infinitely Long Line Charge of Uniform Density $\lambda$ ($\mathrm{C/m}$):}
+Using a coaxial Gaussian cylinder of radius $r$ and length $L$:
+\begin{equation}
+  \oint \mathbf{E}\cdot d\mathbf{A} = E(2\pi r L) = \frac{\lambda L}{\varepsilon_0} \implies \mathbf{E(r) = \frac{\lambda}{2\pi\varepsilon_0 r}\hat{\mathbf{r}}}
+\end{equation}
+\textbf{2. Uniformly Charged Infinite Thin Flat Sheet of Density $\sigma$ ($\mathrm{C/m^2}$):}
+Using a Gaussian pillbox of cross-sectional area $A$ piercing normal to the sheet:
+\begin{equation}
+  \oint \mathbf{E}\cdot d\mathbf{A} = 2 E A = \frac{\sigma A}{\varepsilon_0} \implies \mathbf{E = \frac{\sigma}{2\varepsilon_0}\hat{\mathbf{n}}} \quad (\text{Independent of distance})
+\end{equation}
+\textbf{3. Surface of a Charged Conductor:}
+Inside the conductor, $E=0$. Flux exits only from the outer face:
+\begin{equation}
+  E A = \frac{\sigma A}{\varepsilon_0} \implies \mathbf{E_{\text{conductor}} = \frac{\sigma}{\varepsilon_0}\hat{\mathbf{n}}} \quad (\text{Twice that of a non-conducting sheet})
+\end{equation}
+\textbf{4. Thin Spherical Shell of Radius $R$ and Total Charge $Q$:}
+\begin{itemize}
+  \item \textbf{Interior Region ($r < R$):} Gaussian surface encloses $q_{\text{encl}} = 0 \implies \mathbf{E_{\text{in}} = 0}$.
+  \item Potential is constant throughout interior: $\mathbf{V_{\text{in}} = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R}}$.
+  \item \textbf{Exterior Region ($r \ge R$):} Gaussian sphere encloses $Q \implies \mathbf{E_{\text{out}}(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}\hat{\mathbf{r}}}$.
+  \item Exterior potential: $\mathbf{V_{\text{out}}(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r}}$.
+\end{itemize}
+\textbf{5. Uniformly Charged Non-Conducting Solid Sphere of Radius $R$ and Total Charge $Q$:}
+\begin{itemize}
+  \item Volume charge density: $\rho = \frac{Q}{\frac{4}{3}\pi R^3}$.
+  \item \textbf{Interior Region ($r \le R$):} $q_{\text{encl}} = \rho \left(\frac{4}{3}\pi r^3\right) = Q \frac{r^3}{R^3}$:
+  \begin{equation}
+    E(r) \cdot 4\pi r^2 = \frac{Q r^3}{\varepsilon_0 R^3} \implies \mathbf{E_{\text{in}}(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q r}{R^3}\hat{\mathbf{r}} = \frac{\rho r}{3\varepsilon_0}\hat{\mathbf{r}}}
+  \end{equation}
+  Electric field increases linearly with radial distance $r$ from center.
+  \item \textbf{Interior Potential:} $V_{\text{in}}(r) = -\int_\infty^R E_{\text{out}} dr - \int_R^r E_{\text{in}} dr$:
+  \begin{equation}
+    \mathbf{V_{\text{in}}(r) = \frac{Q}{4\pi\varepsilon_0}\left[\frac{3R^2 - r^2}{2R^3}\right]} \implies \mathbf{V_{\text{center}} = \frac{3}{2} V_{\text{surface}} = 1.5 V_{\text{surface}}}
+  \end{equation}
+  \item \textbf{Exterior Region ($r \ge R$):} Identical to point charge:
+  \begin{equation}
+    \mathbf{E_{\text{out}}(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}\hat{\mathbf{r}}}, \qquad \mathbf{V_{\text{out}}(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r}}
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\begin{ncertbox}[NCERT Extraction: Electrostatic Shielding \& Cavity Boundary Properties]
+Inside any hollow conducting cavity of arbitrary shape, the electric field is \textbf{identically zero} ($\mathbf{E} = 0$), provided no charge is enclosed within the cavity. The potential throughout the cavity remains constant and strictly equals the potential on the conducting surface ($V_{\text{cavity}} = V_{\text{surface}}$).
+\begin{itemize}
+  \item \textit{Faraday Cage Principle:} Any sensitive electrical apparatus enclosed in a hollow metallic enclosure is completely shielded from external electrical disturbances.
+  \item \textit{Practical Safety:} During lightning storms, it is significantly safer to remain inside a closed metallic car or bus than under a tree or in the open, as lightning charges flow along the outer conducting body directly to the ground without penetrating the passenger interior.
+\end{itemize}
+\end{ncertbox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Van de Graaff Generator Deletion]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NEET UG syllabus issued by the National Medical Commission:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The \textbf{Van de Graaff Generator} (high voltage production via belt charge transport, corona discharge, insulating column, spherical dome collection) has been \textbf{completely eliminated}.
+  \item \textbf{EXAM ORIENTATION:} Candidates must master Gauss's law boundary applications (spherical shells, solid spheres, line charges, and conductor electrostatic shielding) without studying the obsolete Van de Graaff machine.
+\end{itemize}
+\end{trapbox}
+
+\section{Capacitance, Dielectric Physics \& Energy Storage}
+
+\begin{conceptbox}[Dielectric Polarization \& Capacitance Principles]
+\textbf{1. Capacitance Definition:}
+The capacity of a conductor to store electric charge per unit potential rise:
+\begin{equation}
+  C = \frac{Q}{V} \quad [\mathrm{Farad}, \mathrm{F} = \mathrm{C}\cdot\mathrm{V}^{-1}]
+\end{equation}
+For an isolated conducting sphere of radius $R$: $C = 4\pi\varepsilon_0 R$.
+\textbf{2. Parallel Plate Capacitor in Vacuum:}
+Plates of area $A$ separated by vacuum gap $d$ with uniform field $E = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\varepsilon_0 A}$ and $V = Ed$:
+\begin{equation}
+  \mathbf{C_0 = \frac{\varepsilon_0 A}{d}}
+\end{equation}
+\textbf{3. Dielectric Material Polarization:}
+When an insulating dielectric is inserted into an external electric field $\mathbf{E}_0$, bound molecular dipoles align, generating a macroscopic polarization vector $\mathbf{P} = \varepsilon_0 \chi_e \mathbf{E}$.
+This induces surface bound charge density $\sigma_b = \mathbf{P}\cdot\hat{\mathbf{n}}$ producing an internal opposing depolarizing field $\mathbf{E}_{\text{induced}} = \frac{\sigma_b}{\varepsilon_0}$.
+\begin{equation}
+  \mathbf{E_{\text{net}} = \mathbf{E}_0 - \mathbf{E}_{\text{induced}} = \frac{\mathbf{E}_0}{\kappa}} \quad (\text{Field is attenuated by factor } \kappa)
+\end{equation}
+where $\kappa = 1 + \chi_e = \varepsilon_r$ is the dielectric constant.
+\textbf{4. Bound Induced Surface Charge:}
+\begin{equation}
+  E_{\text{net}} = \frac{\sigma - \sigma_b}{\varepsilon_0} = \frac{\sigma}{\kappa\varepsilon_0} \implies \sigma_b = \sigma\left(1 - \frac{1}{\kappa}\right) \implies \mathbf{q_b = q\left(1 - \frac{1}{\kappa}\right)}
+\end{equation}
+\end{conceptbox}
+
+\begin{formulabox}[Capacitor with Partial Dielectric Slab \& Network Combinations]
+\textbf{1. Partial Dielectric Slab Insertion (Thickness $t < d$):}
+Across the vacuum gap $(d-t)$, electric field is $E_0 = \frac{Q}{\varepsilon_0 A}$. Inside the slab of thickness $t$, field is $E = \frac{E_0}{\kappa}$.
+Total potential difference between plates:
+\begin{equation}
+  V = E_0 (d - t) + E t = E_0 \left[(d - t) + \frac{t}{\kappa}\right] = \frac{Q}{\varepsilon_0 A} \left[d - t\left(1 - \frac{1}{\kappa}\right)\right]
+\end{equation}
+\begin{equation}
+  \mathbf{C = \frac{Q}{V} = \frac{\varepsilon_0 A}{d - t\left(1 - \frac{1}{\kappa}\right)}}
+\end{equation}
+\textit{Special Cases:}
+\begin{itemize}
+  \item Complete dielectric filling ($t=d$): $C = \kappa \frac{\varepsilon_0 A}{d} = \kappa C_0$.
+  \item Conducting slab inserted ($t < d$, $\kappa \to \infty$): $C = \frac{\varepsilon_0 A}{d - t}$.
+\end{itemize}
+\textbf{2. Grouping of Capacitors:}
+\begin{itemize}
+  \item \textbf{Series Combination (Charge $Q$ is identical):}
+  \begin{equation}
+    V = V_1 + V_2 + \dots \implies \mathbf{\frac{1}{C_{\text{eq}}} = \sum_{i=1}^n \frac{1}{C_i}} \quad \left(\text{For two: } C_{\text{eq}} = \frac{C_1 C_2}{C_1 + C_2}\right)
+  \end{equation}
+  \item \textbf{Parallel Combination (Potential difference $V$ is identical):}
+  \begin{equation}
+    Q = Q_1 + Q_2 + \dots \implies \mathbf{C_{\text{eq}} = \sum_{i=1}^n C_i}
+  \end{equation}
+\end{itemize}
+\textbf{3. Electrostatic Energy Stored \& Field Energy Density:}
+Work required to assemble charge $Q$ on plates against potential $V$:
+\begin{equation}
+  \mathbf{U = \int_0^Q V(q) dq = \int_0^Q \frac{q}{C} dq = \frac{Q^2}{2C} = \frac{1}{2} C V^2 = \frac{1}{2} Q V}
+\end{equation}
+\textbf{4. Energy Density in Electric Field:}
+Dividing energy $U$ by the volume of the dielectric space ($A \cdot d$):
+\begin{equation}
+  u_E = \frac{U}{Ad} = \frac{\frac{1}{2}(\kappa \varepsilon_0 A/d)(Ed)^2}{Ad} \implies \mathbf{u_E = \frac{1}{2} \kappa \varepsilon_0 E^2}
+\end{equation}
+\textbf{5. Attractive Mechanical Force Between Plates:}
+\begin{equation}
+  \mathbf{F = -\frac{dU}{dx} = \frac{Q^2}{2\varepsilon_0 A} = \frac{1}{2} Q E_0 = \frac{1}{2} \varepsilon_0 A E_0^2}
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Dielectric Insertion: Battery Connected vs. Battery Disconnected]
+\begin{center}
+\begin{tabularx}{\linewidth}{|l|Y|Y|}
+\hline
+\textbf{Physical Parameter} & \textbf{Case A: Battery Disconnected ($Q = \text{const}$)} & \textbf{Case B: Battery Remains Connected ($V = \text{const}$)} \\
+\hline
+\textbf{Charge ($Q$)} & Unchanged: $Q = Q_0$ & Increases: $Q = \kappa Q_0$ \\
+\hline
+\textbf{Capacitance ($C$)} & Increases: $C = \kappa C_0$ & Increases: $C = \kappa C_0$ \\
+\hline
+\textbf{Potential Difference ($V$)} & Decreases: $V = V_0 / \kappa$ & Unchanged: $V = V_0$ \\
+\hline
+\textbf{Electric Field ($E$)} & Decreases: $E = E_0 / \kappa$ & Unchanged: $E = E_0$ \\
+\hline
+\textbf{Stored Energy ($U$)} & Decreases: $U = U_0 / \kappa$ & Increases: $U = \kappa U_0$ \\
+\hline
+\textbf{Battery Work Done} & Zero (battery isolated) & $W_{\text{battery}} = \Delta Q \cdot V_0 = (\kappa - 1) C_0 V_0^2$ \\
+\hline
+\end{tabularx}
+\end{center}
+\end{usecasebox}
+
+\section{Current Electricity, Drift Dynamics \& DC Resistive Networks}
+
+\begin{conceptbox}[Drift Velocity, Microscopic Ohm's Law \& Mobility]
+\textbf{1. Microscopic Mechanism of Conduction in Metals:}
+Under zero external field, conduction electrons execute chaotic thermal motion at speeds $v_{\text{th}} \sim 10^5\,\mathrm{m/s}$ with random directions ($\langle \mathbf{v}_{\text{th}} \rangle = 0$).
+When an external electric field $\mathbf{E}$ is applied, each electron experiences an electrostatic force $\mathbf{F} = -e\mathbf{E}$, imparting constant acceleration $\mathbf{a} = -\frac{e\mathbf{E}}{m_e}$.
+Electrons repeatedly scatter elastically from vibrating crystal lattice ions. The average time elapsed between consecutive scattering collisions is the \textbf{relaxation time} $\tau \sim 10^{-14}\,\mathrm{s}$.
+\textbf{2. Drift Velocity ($\mathbf{v}_d$) Derivation:}
+\begin{equation}
+  \mathbf{v}_d = \langle \mathbf{v}_{\text{initial}} + \mathbf{a} t \rangle = 0 + \mathbf{a}\tau \implies \mathbf{\mathbf{v}_d = -\frac{e \mathbf{E} \tau}{m_e}}
+\end{equation}
+Typically, drift speed is remarkably slow: $v_d \sim 10^{-4}\,\mathrm{m/s} = 0.1\,\mathrm{mm/s}$.
+\textbf{3. Current Density \& Microscopic Ohm's Law:}
+Consider a conductor of cross-sectional area $A$ with free electron density $n$. In time $\Delta t$, charge passing through is $\Delta Q = n e A v_d \Delta t$.
+\begin{equation}
+  I = \frac{\Delta Q}{\Delta t} = \mathbf{n e A v_d} \implies \mathbf{J = \frac{I}{A} = n e v_d = \left(\frac{n e^2 \tau}{m_e}\right) E}
+\end{equation}
+\begin{equation}
+  \mathbf{\mathbf{J} = \sigma \mathbf{E} = \frac{1}{\rho}\mathbf{E}} \quad (\text{Vector / Microscopic Ohm's Law})
+\end{equation}
+where electrical conductivity $\sigma$ and resistivity $\rho$:
+\begin{equation}
+  \mathbf{\sigma = \frac{n e^2 \tau}{m_e}}, \qquad \mathbf{\rho = \frac{m_e}{n e^2 \tau}}
+\end{equation}
+\textbf{4. Electron Mobility ($\mu$):}
+Drift speed per unit electric field:
+\begin{equation}
+  \mathbf{\mu = \frac{v_d}{E} = \frac{e \tau}{m_e}} \quad [\mathrm{m}^2\cdot\mathrm{V}^{-1}\cdot\mathrm{s}^{-1}]
+\end{equation}
+\end{conceptbox}
+
+\begin{formulabox}[Temperature Dependence, Cell Grouping \& Power Transfer Theorem]
+\textbf{1. Temperature Dependence of Resistance:}
+For metallic conductors, increasing temperature intensifies lattice vibrations, reducing relaxation time $\tau$:
+\begin{equation}
+  R(T) = R_0 [1 + \alpha (T - T_0)] \implies \mathbf{\alpha = \frac{R_T - R_0}{R_0 \Delta T}} \quad [^\circ\mathrm{C}^{-1} \text{ or } \mathrm{K}^{-1}]
+\end{equation}
+For metals, $\alpha > 0$ (positive). For semiconductors and electrolytes, charge carrier density surges exponentially with temperature ($n(T) \propto e^{-E_g / 2k_B T}$), overriding $\tau$ drops, giving $\mathbf{\alpha < 0}$ (negative).
+\textbf{2. Terminal Potential Difference of a Real Cell ($\mathcal{E}, r$):}
+\begin{itemize}
+  \item \textbf{Discharging (Supplying current $I$ to load $R$):} $\mathbf{V = \mathcal{E} - I r} = \frac{\mathcal{E} R}{R + r}$.
+  \item \textbf{Charging (External charger driving current into cell):} $\mathbf{V = \mathcal{E} + I r}$.
+  \item \textbf{Open Circuit ($I=0$):} $V = \mathcal{E}$. Short circuit ($R=0$): $I_{\text{sc}} = \frac{\mathcal{E}}{r}, V = 0$.
+\end{itemize}
+\textbf{3. Mixed Grouping of Cells ($m$ rows of $n$ series cells each):}
+Total cells $N = n \times m$. Total EMF $= n\mathcal{E}$; total internal resistance $= \frac{n r}{m}$.
+Current through load $R$:
+\begin{equation}
+  I = \frac{n\mathcal{E}}{R + \frac{n r}{m}} = \frac{m n \mathcal{E}}{m R + n r}
+\end{equation}
+To maximize current, minimize the denominator $(mR + nr) = (\sqrt{mR} - \sqrt{nr})^2 + 2\sqrt{mnRr}$.
+The minimum occurs when $\sqrt{mR} = \sqrt{nr}$:
+\begin{equation}
+  \mathbf{R = \frac{n r}{m}} \quad (\text{Load resistance equals total internal resistance})
+\end{equation}
+\textbf{4. Maximum Power Transfer Theorem:}
+Power delivered to load: $P(R) = I^2 R = \frac{\mathcal{E}^2 R}{(R + r)^2}$. Setting $\frac{dP}{dR} = 0$:
+\begin{equation}
+  \frac{dP}{dR} = \mathcal{E}^2 \frac{(R + r)^2 - 2R(R + r)}{(R + r)^4} = 0 \implies R + r - 2R = 0 \implies \mathbf{R = r}
+\end{equation}
+\begin{equation}
+  \mathbf{P_{\max} = \frac{\mathcal{E}^2}{4r}}
+\end{equation}
+\end{formulabox}
+
+\begin{formulabox}[Kirchhoff's Laws \& Measurement Bridges]
+\textbf{1. Kirchhoff's Laws:}
+\begin{itemize}
+  \item \textbf{Junction Rule (KCL):} At any circuit node: $\sum I_{\text{in}} = \sum I_{\text{out}}$ (Conservation of Charge).
+  \item \textbf{Loop Rule (KVL):} Around any closed loop: $\sum \Delta V = \sum \mathcal{E} - \sum I R = 0$ (Conservation of Energy).
+\end{itemize}
+\textbf{2. Wheatstone Bridge Balance Derivation:}
+A quadrilateral network of four resistors $P, Q, R, S$ with a galvanometer connected between junctions $B$ and $D$.
+At balance, no current traverses the galvanometer ($I_g = 0 \implies V_B = V_D$).
+Applying KVL to loop $ABDA$: $I_1 P - I_2 R = 0 \implies I_1 P = I_2 R$.
+Applying KVL to loop $BCDB$: $I_1 Q - I_2 S = 0 \implies I_1 Q = I_2 S$.
+Dividing the two equations yields the classical balance condition:
+\begin{equation}
+  \mathbf{\frac{P}{Q} = \frac{R}{S}}
+\end{equation}
+\textbf{3. Metre Bridge (Slide-Wire Bridge):}
+A uniform wire of length $100\,\mathrm{cm}$ acts as ratio arms $P = \rho_w l$ and $Q = \rho_w (100 - l)$.
+\begin{equation}
+  \frac{R}{X} = \frac{l}{100 - l} \implies \mathbf{X = R \left(\frac{100 - l}{l}\right)}
+\end{equation}
+Maximum experimental precision occurs at the central null point ($l \approx 50\,\mathrm{cm}$).
+\end{formulabox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Potentiometer \& Carbon Resistor Color Codes Deletion]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NEET UG syllabus issued by the National Medical Commission:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The \textbf{Potentiometer} (principle of fall of potential $V \propto l$, comparison of EMFs of two cells $\mathcal{E}_1/\mathcal{E}_2 = l_1/l_2$, and determination of cell internal resistance $r = R(l_1/l_2 - 1)$) has been \textbf{completely deleted}.
+  \item \textbf{STRICTLY DELETED:} \textbf{Color Coding of Carbon Resistors} (BBROYGBVGW mnemonic bands, tolerance multipliers) has been \textbf{completely deleted}.
+  \item \textbf{RETAINED:} The \textbf{Metre Bridge} and \textbf{Wheatstone Bridge} are fully retained and form the exclusive focus for bridge measurements.
+\end{itemize}
+\end{trapbox}
+
+\section{Magnetic Effects of Electric Current \& Moving Charges}
+
+\begin{conceptbox}[Biot-Savart Law \& Magnetic Lorentz Force]
+\textbf{1. Biot-Savart Law:}
+The infinitesimal magnetic field $d\mathbf{B}$ generated by an elementary current length vector $I d\mathbf{l}$ at displacement $\mathbf{r}$:
+\begin{equation}
+  \mathbf{d\mathbf{B} = \frac{\mu_0}{4\pi} \frac{I (d\mathbf{l} \times \hat{\mathbf{r}})}{r^2} = \frac{\mu_0}{4\pi} \frac{I (d\mathbf{l} \times \mathbf{r})}{r^3}}
+\end{equation}
+where $\mu_0 = 4\pi \times 10^{-7}\,\mathrm{T}\cdot\mathrm{m}\cdot\mathrm{A}^{-1}$ is vacuum permeability.
+\textbf{2. Magnetic Lorentz Force on a Moving Charge:}
+\begin{equation}
+  \mathbf{\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})}
+\end{equation}
+\begin{itemize}
+  \item Pure magnetic force: $\mathbf{F}_B = q(\mathbf{v} \times \mathbf{B})$. Since $\mathbf{F}_B \perp \mathbf{v}$, the instantaneous power is $P = \mathbf{F}_B \cdot \mathbf{v} = 0$.
+  \item \textbf{Work Done by Magnetic Force is Identically Zero:} Magnetic forces change the direction of motion, never particle kinetic energy or speed.
+  \item \textbf{Helical Trajectory in Uniform Field $\mathbf{B}$:}
+  When particle velocity $\mathbf{v}$ makes angle $\theta$ with $\mathbf{B}$ ($v_\perp = v\sin\theta, v_\parallel = v\cos\theta$):
+  \begin{equation}
+    \mathbf{r = \frac{m v_\perp}{q B} = \frac{m v \sin\theta}{q B}}, \qquad \mathbf{T = \frac{2\pi m}{q B}}, \qquad \mathbf{\text{Pitch } p = v_\parallel T = \frac{2\pi m v \cos\theta}{q B}}
+  \end{equation}
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Master Magnetic Field Formulas: Straight Wires, Loops, Solenoids \& Toroids]
+\textbf{1. Finite Straight Wire Subtending Angles $\theta_1, \theta_2$ at Distance $d$:}
+\begin{equation}
+  \mathbf{B = \frac{\mu_0 I}{4\pi d}(\sin\theta_1 + \sin\theta_2)}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Infinitely Long Straight Wire ($\theta_1 = \theta_2 = 90^\circ$):} $\mathbf{B = \frac{\mu_0 I}{2\pi d}}$.
+  \item \textbf{Semi-Infinite Wire End ($\theta_1 = 90^\circ, \theta_2 = 0^\circ$):} $\mathbf{B = \frac{\mu_0 I}{4\pi d}}$.
+\end{itemize}
+\textbf{2. Circular Current Loop of Radius $R$ on Symmetry Axis ($x$):}
+\begin{equation}
+  \mathbf{B(x) = \frac{\mu_0 I R^2}{2(R^2 + x^2)^{3/2}} \hat{\mathbf{i}}} \implies \mathbf{B_{\text{center}} = \frac{\mu_0 I}{2R}}
+\end{equation}
+\textbf{3. Ampere's Circuital Law:}
+\begin{equation}
+  \mathbf{\oint \mathbf{B}\cdot d\mathbf{l} = \mu_0 I_{\text{enclosed}}}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Ideal Long Solenoid ($n$ turns/meter):} Interior field is axial and uniform: $\mathbf{B = \mu_0 n I}$. Near ends: $B_{\text{end}} = \frac{1}{2}\mu_0 n I$.
+  \item \textbf{Toroid of Mean Radius $R$ and $N$ Total Turns:} $n = \frac{N}{2\pi R} \implies \mathbf{B = \mu_0 n I = \frac{\mu_0 N I}{2\pi R}}$.
+\end{itemize}
+\textbf{4. Force Between Parallel Currents (Definition of Ampere):}
+\begin{equation}
+  \mathbf{\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}}
+\end{equation}
+Parallel currents \textbf{attract}; antiparallel currents \textbf{repel}.
+\end{formulabox}
+
+\begin{formulabox}[Moving Coil Galvanometer Conversion \& Magnetic Materials]
+\textbf{1. Moving Coil Galvanometer (MCG):}
+Deflecting torque balances radial restoring suspension torque: $\tau = N I A B = C \theta \implies \theta = \left(\frac{NAB}{C}\right)I$.
+\begin{itemize}
+  \item \textbf{Conversion to Ammeter (Extending range to $I > I_g$):} Connect small shunt resistance $S$ in parallel:
+  \begin{equation}
+    (I - I_g) S = I_g R_g \implies \mathbf{S = \frac{I_g R_g}{I - I_g}}
+  \end{equation}
+  \item \textbf{Conversion to Voltmeter (Extending range to $V$):} Connect high multiplier resistance $R$ in series:
+  \begin{equation}
+    V = I_g (R_g + R) \implies \mathbf{R = \frac{V}{I_g} - R_g}
+  \end{equation}
+\end{itemize}
+\textbf{2. Classification of Magnetic Materials:}
+\begin{itemize}
+  \item \textbf{Diamagnetic:} $\chi_m < 0$ (small, negative, independent of temperature). $\mu_r < 1$. Repelled by magnetic fields. Examples: $\mathrm{Bi, Cu, H_2O, NaCl}$.
+  \item \textbf{Paramagnetic:} $\chi_m > 0$ (small, positive). Follows \textbf{Curie's Law}: $\chi_m = \frac{C}{T}$. $\mu_r > 1$. Weakly attracted. Examples: $\mathrm{Al, Na, O_2}$.
+  \item \textbf{Ferromagnetic:} $\chi_m \gg 1$ (enormous, positive). Follows \textbf{Curie-Weiss Law} above Curie temperature $T_c$: $\chi_m = \frac{C}{T - T_c}$. Exhibits domains and hysteresis. Examples: $\mathrm{Fe, Co, Ni}$.
+\end{itemize}
+\end{formulabox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Cyclotron \& Earth's Magnetism Deletion]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NEET UG syllabus issued by the National Medical Commission:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The \textbf{Cyclotron} (resonating RF frequency $\nu_c = \frac{qB}{2\pi m}$, kinetic energy $K_{\max} = \frac{q^2 B^2 R^2}{2m}$, relativistic limits) has been \textbf{completely removed}.
+  \item \textbf{STRICTLY DELETED:} \textbf{Earth's Magnetic Elements} (Magnetic Declination $\theta$, Angle of Dip / Inclination $\delta$, Horizontal Component $B_H$, relation $B = \sqrt{B_H^2 + B_V^2}$) have been \textbf{completely removed}.
+\end{itemize}
+\end{trapbox}
+
+\section{Electromagnetic Induction (EMI) \& Inductive Circuits}
+
+\begin{conceptbox}[Faraday's Law, Lenz's Law \& Motional EMF]
+\textbf{1. Magnetic Flux ($\Phi_B$):}
+\begin{equation}
+  \Phi_B = \iint \mathbf{B}\cdot d\mathbf{A} = B A \cos\theta \quad [\mathrm{Weber}, \mathrm{Wb} = \mathrm{T}\cdot\mathrm{m}^2]
+\end{equation}
+\textbf{2. Faraday's Law of Electromagnetic Induction:}
+Induced EMF in any closed circuit equals the negative time rate of change of magnetic flux:
+\begin{equation}
+  \mathbf{\mathcal{E} = -\frac{d\Phi_B}{dt} = -N \frac{d\Phi_B}{dt}}
+\end{equation}
+\textbf{3. Lenz's Law (Conservation of Energy):}
+The polarity of the induced EMF is such that it produces a current whose magnetic field opposes the original flux change that created it.
+\textbf{4. Motional EMF Derivations:}
+\begin{itemize}
+  \item \textbf{Straight Conducting Rod of Length $L$ Moving with Velocity $\mathbf{v} \perp \mathbf{B}$:}
+  Lorentz force on free electrons $\mathbf{F} = -e(\mathbf{v} \times \mathbf{B})$ drives charge accumulation until internal electrostatic field cancels magnetic force: $eE = evB \implies \mathbf{\mathcal{E} = B v L}$.
+  \item \textbf{Conducting Rod of Length $L$ Rotating at Angular Velocity $\omega$ in Uniform $\mathbf{B}$:}
+  Integrating elemental motional EMF $d\mathcal{E} = B v(r) dr = B (\omega r) dr$:
+  \begin{equation}
+    \mathbf{\mathcal{E} = \int_0^L B \omega r dr = \frac{1}{2} B \omega L^2}
+  \end{equation}
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Self-Inductance, Mutual Inductance \& Magnetic Energy Density]
+\textbf{1. Self-Inductance ($L$):}
+Total flux linkage is proportional to circulating current: $N \Phi_B = L I$.
+\begin{equation}
+  \mathbf{\mathcal{E}_L = -L \frac{dI}{dt}} \quad [\mathrm{Henry}, \mathrm{H} = \mathrm{V}\cdot\mathrm{s}\cdot\mathrm{A}^{-1}]
+\end{equation}
+For a long air-core solenoid of length $l$, area $A$, and turn density $n$:
+\begin{equation}
+  \Phi = B A = (\mu_0 n I) A \implies N \Phi = (n l)(\mu_0 n I A) = \mu_0 n^2 A l I \implies \mathbf{L = \mu_0 n^2 A l = \mu_0 \frac{N^2}{l} A}
+\end{equation}
+\textbf{2. Mutual Inductance ($M$):}
+$N_2 \Phi_2 = M_{21} I_1 \implies \mathcal{E}_2 = -M \frac{dI_1}{dt}$. For coaxial solenoids:
+\begin{equation}
+  \mathbf{M = \mu_0 n_1 n_2 A l = \frac{\mu_0 N_1 N_2 A}{l}}
+\end{equation}
+Coupling coefficient: $\mathbf{k = \frac{M}{\sqrt{L_1 L_2}}}$ ($0 \le k \le 1$).
+\textbf{3. Energy Stored in an Inductor:}
+\begin{equation}
+  \mathbf{U = \int_0^I L i di = \frac{1}{2} L I^2}
+\end{equation}
+\textbf{4. Magnetic Energy Density in a Magnetic Field:}
+\begin{equation}
+  \mathbf{u_B = \frac{U}{\text{Volume}} = \frac{B^2}{2\mu_0}}
+\end{equation}
+\end{formulabox}
+
+\begin{ncertbox}[NCERT Extraction: Eddy Currents \& Practical Technological Applications]
+When bulk conductors are subjected to changing magnetic flux, circulating closed induced current loops (\textbf{Eddy Currents}) are established in planes perpendicular to the magnetic lines of force.
+\begin{itemize}
+  \item \textbf{Electromagnetic Damping:} The metallic non-magnetic frame of a moving coil galvanometer develops opposing eddy currents as it deflects, rapidly bringing the pointer to rest at its steady reading without oscillatory hunting (dead-beat galvanometer).
+  \item \textbf{Induction Furnaces:} High-frequency alternating magnetic fields generate massive eddy currents within metallic charges, producing Joule heat sufficient to melt metals in vacuum.
+  \item \textbf{Magnetic Braking in Trains:} Electromagnets activated above rails induce opposing eddy currents in the rotating metallic wheels/rails, producing smooth, wear-free deceleration.
+  \item \textbf{Mitigation in Transformers:} To minimize eddy current heating losses in transformers and motors, solid iron cores are replaced with thin, individually varnished/insulated metallic laminations stacked parallel to magnetic flux lines.
+\end{itemize}
+\end{ncertbox}
+
+\section{Alternating Currents (AC) \& Resonant Circuits}
+
+\begin{conceptbox}[Alternating Current Fundamentals: Phasors \& RMS Values]
+A sinusoidal alternating EMF and current:
+\begin{equation}
+  V(t) = V_0 \sin(\omega t), \qquad I(t) = I_0 \sin(\omega t - \phi)
+\end{equation}
+\textbf{1. Mean (Average) Value over Half-Cycle:}
+\begin{equation}
+  I_{\text{avg}} = \frac{1}{\pi/\omega} \int_0^{\pi/\omega} I_0 \sin(\omega t) dt = \mathbf{\frac{2}{\pi} I_0 \approx 0.637 I_0}
+\end{equation}
+Full cycle average is strictly zero: $\langle I \rangle_{\text{full}} = 0$.
+\textbf{2. Root-Mean-Square (RMS / Virtual) Value:}
+Equating Joule heating over a full cycle $H = \int_0^T I^2 R dt = I_{\text{rms}}^2 R T$:
+\begin{equation}
+  I_{\text{rms}} = \sqrt{\frac{1}{T} \int_0^T I_0^2 \sin^2(\omega t) dt} = \mathbf{\frac{I_0}{\sqrt{2}} \approx 0.707 I_0}, \qquad \mathbf{V_{\text{rms}} = \frac{V_0}{\sqrt{2}}}
+\end{equation}
+AC meters (hot-wire ammeters and voltmeters) always read \textbf{RMS values}.
+\end{conceptbox}
+
+\begin{formulabox}[Series LCR Circuit: Impedance, Resonance \& Quality Factor]
+In a series LCR circuit with supply voltage $V(t) = V_0 \sin(\omega t)$:
+\begin{equation}
+  V_R = I R, \qquad V_L = I X_L = I (\omega L), \qquad V_C = I X_C = I \left(\frac{1}{\omega C}\right)
+\end{equation}
+Since $V_L$ leads current by $\pi/2$ and $V_C$ lags current by $\pi/2$:
+\begin{equation}
+  V_0 = \sqrt{V_R^2 + (V_L - V_C)^2} = I_0 \sqrt{R^2 + \left(\omega L - \frac{1}{\omega C}\right)^2}
+\end{equation}
+\begin{equation}
+  \mathbf{Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{R^2 + \left(\omega L - \frac{1}{\omega C}\right)^2}}, \qquad \mathbf{\tan\phi = \frac{X_L - X_C}{R}}
+\end{equation}
+\textbf{1. Electrical Resonance Condition:}
+When inductive reactance equals capacitive reactance:
+\begin{equation}
+  X_L = X_C \implies \omega_0 L = \frac{1}{\omega_0 C} \implies \mathbf{\omega_0 = \frac{1}{\sqrt{LC}}}, \quad \mathbf{\nu_0 = \frac{1}{2\pi\sqrt{LC}}}
+\end{equation}
+At resonance:
+\begin{itemize}
+  \item Impedance is minimum and purely resistive: $\mathbf{Z_{\min} = R}$.
+  \item Current amplitude is maximum and in phase with voltage: $\mathbf{I_{0,\max} = \frac{V_0}{R}}$, $\phi = 0$.
+  \item Power factor is unity: $\cos\phi = 1$.
+\end{itemize}
+\textbf{2. Sharpness of Resonance \& Quality Factor ($Q$):}
+\begin{equation}
+  \mathbf{Q = \frac{\omega_0 L}{R} = \frac{1}{\omega_0 C R} = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{\omega_0}{2\Delta\omega} = \frac{\text{Resonant Frequency}}{\text{Bandwidth}}}
+\end{equation}
+High $Q$-factor indicates sharp selectivity and low damping.
+\textbf{3. Average Power in AC Circuit \& Power Factor:}
+\begin{equation}
+  \mathbf{P_{\text{avg}} = V_{\text{rms}} I_{\text{rms}} \cos\phi}
+\end{equation}
+where $\cos\phi = \frac{R}{Z}$ is the \textbf{power factor}.
+\begin{itemize}
+  \item Pure $L$ or pure $C$: $\phi = \pm \pi/2 \implies \cos\phi = 0 \implies P_{\text{avg}} = 0$ (\textbf{Wattless Current} $I_w = I_{\text{rms}} \sin\phi$).
+  \item Pure $R$ or LCR at resonance: $\phi = 0 \implies \cos\phi = 1 \implies P_{\text{avg}} = V_{\text{rms}} I_{\text{rms}}$.
+\end{itemize}
+\textbf{4. Transformers:}
+\begin{equation}
+  \mathbf{\frac{V_s}{V_p} = \frac{N_s}{N_p} = \frac{I_p}{I_s} = K} \quad (\text{Transformation Ratio})
+\end{equation}
+Efficiency: $\eta = \frac{P_{\text{output}}}{P_{\text{input}}} = \frac{V_s I_s \cos\phi_s}{V_p I_p \cos\phi_p}$.
+\end{formulabox}
+
+\section{Electromagnetic Waves \& Maxwell's Equations}
+
+\begin{conceptbox}[Maxwell's Displacement Current \& Unified Field Equations]
+\textbf{1. Maxwell's Displacement Current ($I_d$):}
+Ampere's Circuital Law ($\oint \mathbf{B}\cdot d\mathbf{l} = \mu_0 I$) failed when applied to a charging capacitor boundary. Maxwell resolved this inconsistency by postulating that a time-varying electric field produces an equivalent displacement current:
+\begin{equation}
+  \Phi_E = E A = \left(\frac{Q}{\varepsilon_0 A}\right) A = \frac{Q}{\varepsilon_0} \implies I_d = \varepsilon_0 \frac{d\Phi_E}{dt} = \frac{dQ}{dt} = I_c
+\end{equation}
+\begin{equation}
+  \mathbf{\oint \mathbf{B}\cdot d\mathbf{l} = \mu_0 (I_c + I_d) = \mu_0 I_c + \mu_0 \varepsilon_0 \frac{d\Phi_E}{dt}} \quad (\text{Ampere-Maxwell Law})
+\end{equation}
+\textbf{2. Transverse Nature \& Speed of EM Waves:}
+Electric and magnetic vectors oscillate perpendicular to each other and perpendicular to the wave propagation direction:
+\begin{equation}
+  \mathbf{c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} = \frac{E_0}{B_0} \approx 3.00 \times 10^8\,\mathrm{m/s}}
+\end{equation}
+\textbf{3. Poynting Vector \& Radiation Pressure:}
+Energy flux vector: $\mathbf{S = \frac{1}{\mu_0}(\mathbf{E} \times \mathbf{B})}$. Average intensity: $I = \frac{1}{2}\varepsilon_0 c E_0^2 = \frac{E_0 B_0}{2\mu_0}$.
+\begin{equation}
+  \text{Radiation Pressure: } P_{\text{rad}} = \begin{cases} \frac{I}{c} & \text{Perfectly Absorbing Surface} \\ \frac{2I}{c} & \text{Perfectly Reflecting Surface} \end{cases}
+\end{equation}
+\end{conceptbox}
+
+\begin{formulabox}[The Electromagnetic Spectrum: Master Classification]
+\begin{center}
+\begin{tabularx}{\linewidth}{|l|c|c|Y|}
+\hline
+\textbf{Wave Type} & \textbf{Wavelength ($\lambda$)} & \textbf{Frequency ($\nu$)} & \textbf{Production Mechanism \& Major Use} \\
+\hline
+\textbf{Radio Waves} & $> 0.1\,\mathrm{m}$ & $< 3 \times 10^9\,\mathrm{Hz}$ & Rapid charge acceleration in LC antennas; Radio/TV communication \\
+\hline
+\textbf{Microwaves} & $1\,\mathrm{mm} - 0.1\,\mathrm{m}$ & $10^9 - 10^{11}\,\mathrm{Hz}$ & Klystron/Magnetron tubes; Radar navigation, Microwave ovens \\
+\hline
+\textbf{Infrared} & $700\,\mathrm{nm} - 1\,\mathrm{mm}$ & $10^{11} - 4 \times 10^{14}\,\mathrm{Hz}$ & Thermal molecular vibrations; Greenhouse effect, Remote controls \\
+\hline
+\textbf{Visible Light} & $400\,\mathrm{nm} - 700\,\mathrm{nm}$ & $4 - 7.5 \times 10^{14}\,\mathrm{Hz}$ & Electron transitions in outer atomic shells; Human vision \\
+\hline
+\textbf{Ultraviolet} & $1\,\mathrm{nm} - 400\,\mathrm{nm}$ & $10^{15} - 10^{17}\,\mathrm{Hz}$ & High-temperature inner shell transitions, sun; Sterilization, LASIK \\
+\hline
+\textbf{X-Rays} & $0.01\,\mathrm{nm} - 10\,\mathrm{nm}$ & $10^{16} - 10^{20}\,\mathrm{Hz}$ & Fast electrons decelerated on heavy metal target; Medical radiography \\
+\hline
+\textbf{Gamma Rays} & $< 10^{-3}\,\mathrm{nm}$ & $> 10^{19}\,\mathrm{Hz}$ & Nuclear de-excitation / nuclear isomeric transitions; Cancer radiotherapy \\
+\hline
+\end{tabularx}
+\end{center}
+\end{formulabox}
+
+\section{Master High-Yield Problem Archetypes \& Worked Solutions}
+
+\begin{usecasebox}[Archetype 1: Cube Resistor Network Equivalent Resistances]
+\textbf{Problem:} Twelve identical resistors, each of resistance $R$, form the edges of a skeleton cube. Compute equivalent resistance between: (i) diagonally opposite body corners, (ii) opposite face corners, and (iii) adjacent edge corners.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}
+  \item \textbf{Body Diagonal (Points $A$ and $G$):}
+  Inject current $I$ at $A$ and extract at $G$. By threefold rotational symmetry around the body diagonal:
+  \begin{itemize}
+    \item 3 edges leave $A$, each carrying $I/3$.
+    \item Each splits into 2 edges, each carrying $I/6$ across the middle 6 edges.
+    \item These recombine into 3 edges entering $G$, each carrying $I/3$.
+  \end{itemize}
+  Total potential drop: $V_{AG} = \left(\frac{I}{3}\right)R + \left(\frac{I}{6}\right)R + \left(\frac{I}{3}\right)R = I R \left(\frac{1}{3} + \frac{1}{6} + \frac{1}{3}\right) = \frac{5}{6} I R$.
+  \begin{equation}
+    \mathbf{R_{\text{body}} = \frac{5}{6} R}
+  \end{equation}
+  \item \textbf{Face Diagonal (Points $A$ and $C$):}
+  By mirror symmetry across the plane bisecting the face:
+  \begin{equation}
+    \mathbf{R_{\text{face}} = \frac{3}{4} R}
+  \end{equation}
+  \item \textbf{Adjacent Edge (Points $A$ and $B$):}
+  \begin{equation}
+    \mathbf{R_{\text{edge}} = \frac{7}{12} R}
+  \end{equation}
+\end{enumerate}
+\end{usecasebox}
+
+\begin{usecasebox}[Archetype 2: Series LCR Circuit Resonance \& Power Factor Calculation]
+\textbf{Problem:} A series LCR circuit has $R = 10\,\Omega$, $L = 0.1\,\mathrm{H}$, and $C = 100\,\mu\mathrm{F}$ connected to an AC source $V(t) = 200 \sin(100 t)\,\mathrm{V}$. Calculate: (i) Inductive reactance $X_L$, (ii) Capacitive reactance $X_C$, (iii) Total impedance $Z$, (iv) Peak current $I_0$, (v) Resonant frequency $\omega_0$, and (vi) Quality factor $Q$.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}
+  \item $\omega = 100\,\mathrm{rad/s}$, $V_0 = 200\,\mathrm{V}$.
+  \item $X_L = \omega L = 100 \times 0.1 = \mathbf{10\,\Omega}$.
+  \item $X_C = \frac{1}{\omega C} = \frac{1}{100 \times 100 \times 10^{-6}} = \frac{1}{10^{-2}} = \mathbf{100\,\Omega}$.
+  \item Total impedance $Z$:
+  \begin{equation}
+    Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{10^2 + (10 - 100)^2} = \sqrt{100 + (-90)^2} = \sqrt{100 + 8100} = \sqrt{8200} \approx \mathbf{90.55\,\Omega}
+  \end{equation}
+  Circuit is strongly capacitive ($X_C > X_L$), current leads voltage.
+  \item Peak current: $I_0 = \frac{V_0}{Z} = \frac{200}{90.55} \approx \mathbf{2.21\,\mathrm{A}}$.
+  \item Resonant angular frequency $\omega_0$:
+  \begin{equation}
+    \omega_0 = \frac{1}{\sqrt{LC}} = \frac{1}{\sqrt{0.1 \times 10^{-4}}} = \frac{1}{\sqrt{10^{-5}}} = \frac{1000}{\sqrt{10}} \approx \mathbf{316.2\,\mathrm{rad/s}}
+  \end{equation}
+  \item Quality factor $Q$:
+  \begin{equation}
+    Q = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{1}{10}\sqrt{\frac{0.1}{10^{-4}}} = \frac{1}{10}\sqrt{1000} = \frac{31.62}{10} \approx \mathbf{3.16}
+  \end{equation}
+\end{enumerate}
+\end{usecasebox}
+
+\end{document}

@@ -1,0 +1,573 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{NEET UG 2027: Rotational, Gravitation \& Fluids Master Theory}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Physics Theory Notes}}
+
+\begin{document}
+
+% --- Front Title \& Attribution Banner ---
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Chapter Theory}}\\[6pt]
+  {\Large \textbf{Rotational Dynamics, Universal Gravitation \& Fluid Mechanics: In-Depth Derivations \& High-Yield Archetypes}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Revised NMC Syllabus}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+% =========================================================================
+% SECTION 1: CENTRE OF MASS \& SYSTEM LINEAR MOMENTUM
+% =========================================================================
+\section{Centre of Mass, Continuous Mass Distributions \& System Dynamics}
+
+\begin{conceptbox}[Theoretical Postulates of Centre of Mass \& Invariant Trajectories]
+The Centre of Mass ($\mathrm{CM}$) of a system of particles represents a unique point where the entire mass of the system can be considered concentrated for translational dynamic analysis.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Discrete Particle Formulations:} For a collection of $N$ point masses $m_1, m_2, \dots, m_N$ with position vectors $\mathbf{r}_1, \mathbf{r}_2, \dots, \mathbf{r}_N$:
+  \begin{equation}
+    \mathbf{r}_{\text{cm}} = \frac{\sum_{i=1}^N m_i \mathbf{r}_i}{\sum_{i=1}^N m_i} = \frac{1}{M}\sum_{i=1}^N m_i \mathbf{r}_i
+  \end{equation}
+  \item \textbf{Continuous Mass Distributions (Calculus Formulation):}
+  \begin{equation}
+    \mathbf{r}_{\text{cm}} = \frac{1}{M}\int \mathbf{r}\,dm, \qquad x_{\text{cm}} = \frac{1}{M}\int x\,dm, \qquad y_{\text{cm}} = \frac{1}{M}\int y\,dm
+  \end{equation}
+  \item \textbf{System Equations of Motion \& Conservation of Linear Momentum:}
+  \begin{equation}
+    \mathbf{P}_{\text{total}} = M\mathbf{v}_{\text{cm}}, \qquad \mathbf{F}_{\text{ext}} = \frac{d\mathbf{P}_{\text{total}}}{dt} = M\mathbf{a}_{\text{cm}}
+  \end{equation}
+  Since internal mutual forces between system particles occur in collinear, equal and opposite action-reaction pairs by Newton's third law, they cancel identically in vector summation: $\sum \mathbf{F}_{\text{int}} = \mathbf{0}$. If $\mathbf{F}_{\text{ext}} = \mathbf{0}$, the centre of mass maintains constant velocity ($\mathbf{v}_{\text{cm}} = \text{constant}$), irrespective of internal explosions or collisions.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Master Coordinates of Centre of Mass for Continuous Rigid Bodies]
+Coordinates are defined from the geometric center or vertex as reference origin:
+\begin{align}
+  \text{Uniform Thin Rod of Length } L &: x_{\text{cm}} = \frac{L}{2} \\
+  \text{Uniform Semicircular Ring of Radius } R &: y_{\text{cm}} = \frac{2R}{\pi} \approx 0.637 R \\
+  \text{Uniform Semicircular Disc of Radius } R &: y_{\text{cm}} = \frac{4R}{3\pi} \approx 0.424 R \\
+  \text{Uniform Hemispherical Shell of Radius } R &: y_{\text{cm}} = \frac{R}{2} = 0.500 R \\
+  \text{Uniform Solid Hemisphere of Radius } R &: y_{\text{cm}} = \frac{3R}{8} = 0.375 R \\
+  \text{Uniform Solid Cone of Height } h &: y_{\text{cm}} = \frac{h}{4} \quad (\text{from base}) \\
+  \text{Uniform Hollow Cone of Height } h &: y_{\text{cm}} = \frac{h}{3} \quad (\text{from base})
+\end{align}
+\end{formulabox}
+
+\begin{usecasebox}[Cavity Problems \& Mid-Air Projectile Explosions]
+\begin{itemize}
+  \item \textbf{Negative Mass Technique for Cavities:} When a circular or spherical cavity of mass $m_2$ with centroid $\mathbf{r}_2$ is excised from an intact parent body of mass $m_1$ with centroid $\mathbf{r}_1$:
+  \begin{equation}
+    \mathbf{r}_{\text{cm, remaining}} = \frac{m_1 \mathbf{r}_1 - m_2 \mathbf{r}_2}{m_1 - m_2} = \frac{A_1 \mathbf{r}_1 - A_2 \mathbf{r}_2}{A_1 - A_2} \quad (\text{for laminar 2D bodies})
+  \end{equation}
+  \item \textbf{Projectile Explosion Invariance:} If a projectile explodes in flight due to internal chemical forces, $\mathbf{F}_{\text{ext}} = M\mathbf{g}$ remains unchanged. Hence, the centre of mass of all fragments continues along the identical parabolic trajectory until the first fragment strikes the ground.
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Shift of Centre of Mass on Frictionless Floors]
+Consider a man of mass $m$ walking a distance $x$ relative to a boat of mass $M$ floating on calm, frictionless water.
+\begin{itemize}
+  \item Since no external horizontal force acts on the (man + boat) system, the centre of mass cannot shift horizontally: $\Delta x_{\text{cm}} = 0$.
+  \item If the boat displaces by distance $X_{\text{boat}}$ in the opposite direction:
+  \begin{equation}
+    m(x - X_{\text{boat}}) - M X_{\text{boat}} = 0 \implies X_{\text{boat}} = \left(\frac{m}{M + m}\right)x
+  \end{equation}
+  Assuming the boat moves distance $x$ is a common pitfall. The boat displacement is strictly proportional to reduced system fractions!
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 2: RIGID BODY ROTATION \& MOMENT OF INERTIA DERIVATIONS
+% =========================================================================
+\section{Rigid Body Rotation, Moment of Inertia \& Parallel/Perpendicular Theorems}
+
+\begin{conceptbox}[Rotational Kinematics \& Physical Meaning of Moment of Inertia]
+A rigid body maintains constant mutual distances between all constituent particles.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Rotational Kinematics (Constant Angular Acceleration $\alpha$):}
+  \begin{equation}
+    \omega = \omega_0 + \alpha t, \qquad \theta = \omega_0 t + \frac{1}{2}\alpha t^2, \qquad \omega^2 = \omega_0^2 + 2\alpha\theta, \qquad \theta_n = \omega_0 + \frac{\alpha}{2}(2n - 1)
+  \end{equation}
+  \item \textbf{Moment of Inertia ($I$) \& Radius of Gyration ($k$):} The quantitative measure of rotational inertia about a specified axis of rotation:
+  \begin{equation}
+    I = \sum_{i=1}^N m_i r_i^2 = \int r^2\,dm, \qquad I = M k^2 \implies k = \sqrt{\frac{I}{M}}
+  \end{equation}
+  The radius of gyration $k$ represents the effective radial distance from the rotational axis at which the total mass $M$ could be concentrated without altering its moment of inertia.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Proofs of Fundamental Moment of Inertia Theorems]
+\textbf{1. Parallel Axis Theorem (Steiner's Theorem):}
+Let $I_{\text{cm}}$ be the moment of inertia about an axis passing through the centre of mass, and $I$ be the moment of inertia about a parallel axis located at perpendicular distance $d$.
+Let the origin be at the centre of mass ($\int x\,dm = 0, \int y\,dm = 0$). Then:
+\begin{align}
+  I &= \int r^2\,dm = \int \left[(x + d)^2 + y^2\right] dm = \int (x^2 + y^2)dm + 2d\int x\,dm + d^2\int dm \nonumber \\
+  &= I_{\text{cm}} + 0 + M d^2 \implies I = I_{\text{cm}} + M d^2
+\end{align}
+\textit{Domain of Validity:} Applies to any rigid body of arbitrary three-dimensional shape.
+
+\textbf{2. Perpendicular Axis Theorem:}
+For a flat two-dimensional planar lamina situated in the $x-y$ plane ($z = 0$):
+\begin{equation}
+  I_x = \int y^2\,dm, \qquad I_y = \int x^2\,dm, \qquad I_z = \int (x^2 + y^2)dm = I_x + I_y
+\end{equation}
+\textit{Domain of Validity:} Strictly restricted to 2D laminar planar geometries. Never apply to 3D bodies!
+\end{formulabox}
+
+\begin{formulabox}[Calculus Derivations of Moment of Inertia for Standard Geometries]
+\textbf{1. Thin Uniform Rod of Mass $M$ and Length $L$:}
+Linear mass density $\lambda = M/L$. Elemental mass $dm = \lambda\,dx$:
+\begin{itemize}
+  \item \textbf{Transverse axis through center ($x = 0$):}
+  \begin{equation}
+    I_{\text{cm}} = \int_{-L/2}^{L/2} x^2 \left(\frac{M}{L}\right)dx = \frac{M}{L}\left[\frac{x^3}{3}\right]_{-L/2}^{L/2} = \frac{M}{3L}\left[\frac{L^3}{8} - \left(-\frac{L^3}{8}\right)\right] = \frac{1}{12}ML^2
+  \end{equation}
+  \item \textbf{Transverse axis through end ($x = 0$ to $L$):} By parallel axis theorem:
+  \begin{equation}
+    I_{\text{end}} = I_{\text{cm}} + M\left(\frac{L}{2}\right)^2 = \frac{1}{12}ML^2 + \frac{1}{4}ML^2 = \frac{1}{3}ML^2
+  \end{equation}
+\end{itemize}
+\textbf{2. Uniform Circular Disc of Mass $M$ and Radius $R$:}
+Surface mass density $\sigma = \frac{M}{\pi R^2}$. Consider a thin concentric elemental ring of radius $r$ and radial width $dr$, mass $dm = \sigma(2\pi r dr) = \frac{2M}{R^2}r\,dr$:
+\begin{equation}
+  I_z = \int_0^R r^2\,dm = \frac{2M}{R^2}\int_0^R r^3\,dr = \frac{2M}{R^2}\left[\frac{R^4}{4}\right] = \frac{1}{2}MR^2
+\end{equation}
+By symmetry and perpendicular axis theorem ($I_z = I_x + I_y = 2I_{\text{dia}}$):
+\begin{equation}
+  I_{\text{diameter}} = \frac{1}{2}I_z = \frac{1}{4}MR^2
+\end{equation}
+\textbf{3. Uniform Solid Sphere of Mass $M$ and Radius $R$:}
+Volume mass density $\rho = \frac{3M}{4\pi R^3}$. Slice the sphere into elemental discs perpendicular to the $x$-axis at position $x$, with radius $y = \sqrt{R^2 - x^2}$ and thickness $dx$.
+Mass of elemental disc $dm = \rho(\pi y^2 dx) = \frac{3M}{4R^3}(R^2 - x^2)dx$.
+The moment of inertia of this elemental disc about the $x$-axis is:
+\begin{equation}
+  dI = \frac{1}{2}y^2 dm = \frac{1}{2}(R^2 - x^2)\left[\frac{3M}{4R^3}(R^2 - x^2)dx\right] = \frac{3M}{8R^3}(R^2 - x^2)^2 dx
+\end{equation}
+Integrating from $x = -R$ to $+R$:
+\begin{equation}
+  I_{\text{dia}} = \frac{3M}{8R^3}\int_{-R}^{R} (R^4 - 2R^2 x^2 + x^4)dx = \frac{3M}{4R^3}\left[R^4 R - \frac{2R^2 R^3}{3} + \frac{R^5}{5}\right] = \frac{3M}{4R^3}\left[\frac{8}{15}R^5\right] = \frac{2}{5}MR^2
+\end{equation}
+About a tangential axis: $I_{\text{tangent}} = I_{\text{cm}} + MR^2 = \frac{2}{5}MR^2 + MR^2 = \frac{7}{5}MR^2$.
+
+\textbf{4. Uniform Hollow Spherical Shell of Mass $M$ and Radius $R$:}
+Surface mass density $\sigma = \frac{M}{4\pi R^2}$. Elemental ring at polar angle $\theta$ has radius $r = R\sin\theta$, width $R\,d\theta$, mass $dm = \frac{M}{4\pi R^2}(2\pi R\sin\theta \cdot R\,d\theta) = \frac{1}{2}M\sin\theta\,d\theta$:
+\begin{equation}
+  I_{\text{dia}} = \int_0^\pi (R\sin\theta)^2 dm = \frac{1}{2}MR^2\int_0^\pi \sin^3\theta\,d\theta = \frac{1}{2}MR^2\left(\frac{4}{3}\right) = \frac{2}{3}MR^2
+\end{equation}
+About a tangential axis: $I_{\text{tangent}} = \frac{2}{3}MR^2 + MR^2 = \frac{5}{3}MR^2$.
+\end{formulabox}
+
+\begin{usecasebox}[Moment of Inertia Master Reference Table]
+\begin{center}
+\begin{tabularx}{\linewidth}{|L|L|Y|Y|}
+\toprule
+\textbf{Rigid Body Geometry} & \textbf{Axis of Rotation} & \textbf{Moment of Inertia ($I$)} & \textbf{Radius of Gyration ($k^2/R^2$)} \\
+\midrule
+Thin Circular Ring & Central perpendicular & $MR^2$ & $1.0$ \\
+Thin Circular Ring & Diametrical axis & $\frac{1}{2}MR^2$ & $0.5$ \\
+Thin Circular Disc & Central perpendicular & $\frac{1}{2}MR^2$ & $0.5$ \\
+Thin Circular Disc & Diametrical axis & $\frac{1}{4}MR^2$ & $0.25$ \\
+Thin Hollow Cylinder & Longitudinal central & $MR^2$ & $1.0$ \\
+Solid Cylinder & Longitudinal central & $\frac{1}{2}MR^2$ & $0.5$ \\
+Solid Sphere & Diametrical axis & $\frac{2}{5}MR^2$ & $0.4$ \\
+Solid Sphere & Tangential axis & $\frac{7}{5}MR^2$ & $1.4$ \\
+Hollow Spherical Shell & Diametrical axis & $\frac{2}{3}MR^2$ & $0.67$ \\
+Hollow Spherical Shell & Tangential axis & $\frac{5}{3}MR^2$ & $1.67$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\end{usecasebox}
+
+% =========================================================================
+% SECTION 3: ROTATIONAL DYNAMICS \& PURE ROLLING MOTION ON INCLINES
+% =========================================================================
+\section{Rotational Dynamics, Angular Momentum \& Pure Rolling on Inclines}
+
+\begin{conceptbox}[Torque, Angular Momentum \& Rolling Kinematics]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Torque Vector \& Rotational Work:}
+  \begin{equation}
+    \boldsymbol{\tau} = \mathbf{r} \times \mathbf{F} = I\boldsymbol{\alpha}, \qquad W_{\text{rot}} = \int \tau\,d\theta, \qquad P_{\text{rot}} = \boldsymbol{\tau} \cdot \boldsymbol{\omega}
+  \end{equation}
+  \item \textbf{Angular Momentum Vector ($\mathbf{L}$):} For a particle $\mathbf{L} = \mathbf{r}\times\mathbf{p}$. For a rigid body rotating about a fixed principal symmetry axis:
+  \begin{equation}
+    \mathbf{L} = I\boldsymbol{\omega}, \qquad \boldsymbol{\tau}_{\text{ext}} = \frac{d\mathbf{L}}{dt} = I\frac{d\boldsymbol{\omega}}{dt} = I\boldsymbol{\alpha}
+  \end{equation}
+  If net external torque vanishes ($\sum \boldsymbol{\tau}_{\text{ext}} = \mathbf{0}$), total angular momentum is strictly conserved: $I_1 \omega_1 = I_2 \omega_2$.
+  \item \textbf{Kinematics of Pure Rolling (Rolling Without Slipping):}
+  A circular body of radius $R$ rolling on a stationary surface:
+  \begin{equation}
+    v_{\text{cm}} = \omega R, \qquad a_{\text{cm}} = \alpha R
+  \end{equation}
+  The contact point $P$ is instantaneously at rest: $\mathbf{v}_P = \mathbf{v}_{\text{cm}} - \omega R\hat{\mathbf{i}} = \mathbf{0}$. The highest point moves at $\mathbf{v}_{\text{top}} = 2\mathbf{v}_{\text{cm}}$.
+  \item \textbf{Total Kinetic Energy in Pure Rolling:}
+  \begin{equation}
+    K_{\text{total}} = K_{\text{trans}} + K_{\text{rot}} = \frac{1}{2}M v_{\text{cm}}^2 + \frac{1}{2}I_{\text{cm}}\omega^2 = \frac{1}{2}M v_{\text{cm}}^2\left(1 + \frac{k^2}{R^2}\right)
+  \end{equation}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Rigorous Derivation of Acceleration, Velocity \& Friction on an Incline]
+Consider a symmetrical rigid body of mass $M$, radius $R$, and radius of gyration $k$ rolling without slipping down an inclined plane of inclination angle $\theta$ and vertical height $h$:
+\begin{align}
+  \text{Translational Equation of Motion along Incline: } &Mg\sin\theta - f_s = M a_{\text{cm}} \\
+  \text{Rotational Equation about Centre of Mass: } &\tau = f_s R = I_{\text{cm}}\alpha = (M k^2)\left(\frac{a_{\text{cm}}}{R}\right) \implies f_s = M\left(\frac{k^2}{R^2}\right)a_{\text{cm}}
+\end{align}
+Substituting the friction expression into the translational equation:
+\begin{equation}
+  Mg\sin\theta = M a_{\text{cm}} + M\left(\frac{k^2}{R^2}\right)a_{\text{cm}} = M a_{\text{cm}}\left(1 + \frac{k^2}{R^2}\right)
+\end{equation}
+This yields the foundational rolling acceleration formula:
+\begin{equation}
+  a_{\text{cm}} = \frac{g\sin\theta}{1 + \frac{k^2}{R^2}}
+\end{equation}
+\textbf{1. Linear Velocity at the Base of the Incline ($v$):} Applying conservation of mechanical energy ($Mgh = K_{\text{total}}$):
+\begin{equation}
+  Mgh = \frac{1}{2}M v^2\left(1 + \frac{k^2}{R^2}\right) \implies v = \sqrt{\frac{2gh}{1 + \frac{k^2}{R^2}}}
+\end{equation}
+\textbf{2. Necessary Static Friction Force ($f_s$):}
+\begin{equation}
+  f_s = M\left(\frac{k^2}{R^2}\right)\left[\frac{g\sin\theta}{1 + \frac{k^2}{R^2}}\right] = \frac{Mg\sin\theta}{1 + \frac{R^2}{k^2}}
+\end{equation}
+\textbf{3. Minimum Friction Coefficient to Prevent Slipping ($\mu_{\min}$):}
+To sustain pure rolling without sliding: $f_s \le \mu_s N = \mu_s Mg\cos\theta$:
+\begin{equation}
+  \frac{Mg\sin\theta}{1 + \frac{R^2}{k^2}} \le \mu_s Mg\cos\theta \implies \mu_s \ge \frac{\tan\theta}{1 + \frac{R^2}{k^2}}
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Race Down an Incline: Comparison of Standard Bodies]
+From the acceleration formula $a \propto \frac{1}{1 + k^2/R^2}$, bodies with \textbf{smaller} $k^2/R^2$ possess greater acceleration and reach the bottom first:
+\begin{equation}
+  \left(\frac{k^2}{R^2}\right)_{\text{Solid Sphere}} (0.4) < \left(\frac{k^2}{R^2}\right)_{\text{Disc}} (0.5) < \left(\frac{k^2}{R^2}\right)_{\text{Hollow Sphere}} (0.67) < \left(\frac{k^2}{R^2}\right)_{\text{Ring}} (1.0)
+\end{equation}
+\begin{itemize}
+  \item \textbf{Order of Acceleration and Striking Velocity:}
+  \begin{equation}
+    a_{\text{Solid Sphere}} > a_{\text{Disc/Cylinder}} > a_{\text{Hollow Sphere}} > a_{\text{Ring/Hollow Cylinder}}
+  \end{equation}
+  \item \textbf{Order of Time of Descent ($t = \sqrt{2L/a}$):}
+  \begin{equation}
+    t_{\text{Solid Sphere}} < t_{\text{Disc/Cylinder}} < t_{\text{Hollow Sphere}} < t_{\text{Ring/Hollow Cylinder}}
+  \end{equation}
+  The solid sphere always wins the race, irrespective of mass or radius!
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Work Done by Static Friction in Pure Rolling]
+In pure rolling motion on a stationary surface:
+\begin{itemize}
+  \item The instantaneous velocity of the contact point is zero ($\mathbf{v}_{\text{contact}} = \mathbf{0}$).
+  \item Consequently, the power delivered by static friction is $P = \mathbf{f}_s \cdot \mathbf{v}_{\text{contact}} = 0$.
+  \item \textbf{Static friction does zero net work} ($W_{f_s} = 0$) during pure rolling. It acts purely as a kinematic constraint that transfers energy reversibly between translational and rotational modes without dissipating mechanical energy as thermal heat.
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 4: UNIVERSAL GRAVITATION \& KEPLER'S LAWS
+% =========================================================================
+\section{Universal Gravitation, Kepler's Laws \& Field/Potential Calculus}
+
+\begin{conceptbox}[Newton's Law of Gravitation \& Kepler's Three Planetary Laws]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Newton's Universal Gravitation Law:} Between two point masses $M$ and $m$ separated by distance $r$:
+  \begin{equation}
+    \mathbf{F}_{12} = -\frac{G M m}{r^2}\hat{\mathbf{r}}_{12}, \qquad G = 6.674\times 10^{-11}\,\si{N.m^2.kg^{-2}}
+  \end{equation}
+  \item \textbf{Kepler's First Law (Law of Orbits):} All planets move in elliptical orbits with the Sun located at one of the two foci.
+  \item \textbf{Kepler's Second Law (Law of Areas):} The radius vector connecting the Sun to a planet sweeps out equal areas in equal intervals of time.
+  \item \textbf{Kepler's Third Law (Law of Periods):} The square of the orbital period $T$ is proportional to the cube of the semi-major axis $a$: $T^2 \propto a^3$.
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Proofs of Kepler's Second and Third Laws]
+\textbf{1. Proof of Kepler's Second Law from Angular Momentum Conservation:}
+Gravitational force is purely central: $\mathbf{F} = F(r)\hat{\mathbf{r}}$.
+Net external torque on the planet about the Sun:
+\begin{equation}
+  \boldsymbol{\tau} = \mathbf{r} \times \mathbf{F} = \mathbf{r} \times [F(r)\hat{\mathbf{r}}] = \mathbf{0} \implies \frac{d\mathbf{L}}{dt} = \mathbf{0} \implies \mathbf{L} = m(\mathbf{r}\times\mathbf{v}) = \text{constant}
+\end{equation}
+In time $dt$, the radius vector sweeps out triangular area $d\mathbf{A} = \frac{1}{2}(\mathbf{r}\times d\mathbf{r})$:
+\begin{equation}
+  \frac{d\mathbf{A}}{dt} = \frac{1}{2}\left(\mathbf{r}\times\frac{d\mathbf{r}}{dt}\right) = \frac{1}{2}(\mathbf{r}\times\mathbf{v}) = \frac{\mathbf{L}}{2m} = \text{constant}
+\end{equation}
+Areal velocity is constant because gravity produces zero torque!
+
+\textbf{2. Proof of Kepler's Third Law for Circular Orbit of Radius $r$:}
+Gravitational force provides the necessary centripetal acceleration:
+\begin{equation}
+  \frac{G M m}{r^2} = m\omega^2 r = m\left(\frac{2\pi}{T}\right)^2 r \implies T^2 = \left(\frac{4\pi^2}{G M}\right)r^3
+\end{equation}
+\end{formulabox}
+
+\begin{formulabox}[Gravitational Field \& Potential Formulations (Solid Sphere vs Spherical Shell)]
+Gravitational field $\mathbf{E} = -\boldsymbol{\nabla}V$. The potential $V(\mathbf{r}) = -\int_\infty^{\mathbf{r}} \mathbf{E}\cdot d\mathbf{r}'$.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Uniform Solid Sphere of Mass $M$ and Radius $R$:}
+  \begin{align}
+    \text{Outside ($r \ge R$): } &E_{\text{out}}(r) = \frac{GM}{r^2}, \qquad V_{\text{out}}(r) = -\frac{GM}{r} \\
+    \text{Inside ($r < R$): } &E_{\text{in}}(r) = \frac{GM r}{R^3}, \qquad V_{\text{in}}(r) = -\frac{GM}{2R^3}\left(3R^2 - r^2\right)
+  \end{align}
+  At the center of the sphere ($r = 0$):
+  \begin{equation}
+    V_{\text{center}} = -\frac{3GM}{2R} = \frac{3}{2}V_{\text{surface}}
+  \end{equation}
+  \item \textbf{Uniform Spherical Shell of Mass $M$ and Radius $R$:}
+  \begin{align}
+    \text{Outside ($r \ge R$): } &E_{\text{out}}(r) = \frac{GM}{r^2}, \qquad V_{\text{out}}(r) = -\frac{GM}{r} \\
+    \text{Inside ($r < R$): } &E_{\text{in}}(r) = 0, \qquad V_{\text{in}}(r) = -\frac{GM}{R} = \text{constant}
+  \end{align}
+  The interior of a spherical shell is an equipotential field-free cavity.
+\end{enumerate}
+\end{formulabox}
+
+\begin{usecasebox}[Variation of $g$, Escape Speed \& Satellite Orbital Dynamics]
+\begin{itemize}
+  \item \textbf{Altitude Variation:} At height $h$ above Earth's surface:
+  \begin{equation}
+    g_h = g\left(1 + \frac{h}{R}\right)^{-2} \approx g\left(1 - \frac{2h}{R}\right) \quad (\text{for } h \ll R)
+  \end{equation}
+  \item \textbf{Depth Variation:} At depth $d$ below Earth's surface:
+  \begin{equation}
+    g_d = g\left(1 - \frac{d}{R}\right) \quad (\text{Linear decrease to zero at Earth's center})
+  \end{equation}
+  \item \textbf{Latitude Variation Due to Earth's Rotation ($\omega = 7.29\times 10^{-5}\,\si{rad.s^{-1}}$):}
+  \begin{equation}
+    g' = g - \omega^2 R\cos^2\lambda \implies g_{\text{equator}} = g - \omega^2 R, \qquad g_{\text{pole}} = g
+  \end{equation}
+  \item \textbf{Escape Velocity ($v_e$):} Minimum projection speed required to escape Earth's gravitational well:
+  \begin{equation}
+    \frac{1}{2}m v_e^2 - \frac{GMm}{R} = 0 \implies v_e = \sqrt{\frac{2GM}{R}} = \sqrt{2gR} \approx 11.2\,\si{km.s^{-1}}
+  \end{equation}
+  \item \textbf{Satellite Dynamics \& Energy Partition:} For orbit radius $r = R + h$:
+  \begin{align}
+    \text{Orbital Velocity: } &v_o = \sqrt{\frac{GM}{r}} = \frac{v_e}{\sqrt{2}} \\
+    \text{Total Mechanical Energy: } &E = K + U = \frac{GMm}{2r} - \frac{GMm}{r} = -\frac{GMm}{2r} = -K = \frac{U}{2}
+  \end{align}
+\end{itemize}
+\end{usecasebox}
+
+\begin{trapbox}[NEET Trap: Independence of Escape Velocity from Angle \& Drag Paradox]
+\begin{itemize}
+  \item \textbf{Projection Angle Independence:} Escape speed depends solely on gravitational potential at the launch site: $v_e = \sqrt{-2V_{\text{launch}}} = \sqrt{2GM/R}$. It is completely independent of launch direction $\theta$ (as long as it does not intercept Earth's surface) and independent of projectile mass $m$.
+  \item \textbf{Satellite Atmospheric Drag Paradox:} When satellite orbits encounter atmospheric resistance, total energy decreases ($E$ becomes more negative $\implies r$ decreases). Because $v_o = \sqrt{GM/r}$, orbital velocity \textbf{increases} as the orbit spirals downward!
+\end{itemize}
+\end{trapbox}
+
+% =========================================================================
+% SECTION 5: MECHANICAL PROPERTIES OF SOLIDS (ELASTICITY)
+% =========================================================================
+\section{Mechanical Properties of Solids: Stress, Strain \& Elastic Moduli}
+
+\begin{conceptbox}[Foundations of Elasticity \& Stress-Strain Curve]
+Elasticity is the property by virtue of which a material body regains its original shape and dimensions when deforming external forces are removed.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Stress ($\sigma = F_{\text{int}}/A$):} Internal restoring force per unit area. SI Unit: $\si{N.m^{-2}}$ or $\si{Pa}$.
+  \item \textbf{Strain ($\epsilon = \Delta L/L$):} Fractional deformation. Strictly dimensionless.
+  \item \textbf{Hooke's Law:} Within the proportional limit, stress is directly proportional to strain: $\sigma = E \cdot \epsilon$, where $E$ is the modulus of elasticity.
+  \item \textbf{Characteristic Points on the Tensile Stress-Strain Diagram:}
+  \begin{itemize}
+    \item \textbf{Proportional Limit:} Region of linear Hookean behavior ($\sigma \propto \epsilon$).
+    \item \textbf{Elastic Limit (Yield Point $\sigma_y$):} Maximum stress beyond which permanent plastic deformation (permanent set) occurs.
+    \item \textbf{Ultimate Tensile Strength ($\sigma_u$):} Maximum stress the material can sustain before necking.
+    \item \textbf{Fracture Point:} Separation point. If fracture occurs immediately past yield, material is \textbf{brittle} (e.g., glass, cast iron). If wide plastic region exists, material is \textbf{ductile} (e.g., copper, aluminium).
+  \end{itemize}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Elastic Moduli Formulations \& Potential Energy Density]
+\begin{align}
+  \text{Young's Modulus: } &Y = \frac{\text{Tensile Stress}}{\text{Longitudinal Strain}} = \frac{F/A}{\Delta L/L} = \frac{F L}{A \Delta L} \\
+  \text{Bulk Modulus: } &B = -\frac{\Delta P}{\Delta V / V} = -V\frac{\Delta P}{\Delta V}, \qquad \text{Compressibility } K = \frac{1}{B} \\
+  \text{Shear Modulus (Rigidity): } &\eta = \frac{\text{Shearing Stress}}{\text{Shear Strain}} = \frac{F/A}{\theta} \\
+  \text{Poisson's Ratio: } &\sigma_p = -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta d/d}{\Delta L/L} \quad (-1 \le \sigma_p \le 0.5)
+\end{align}
+\textbf{Elastic Potential Energy Stored in Stretched Wire:}
+\begin{equation}
+  W = \int_0^{\Delta L} F(x)\,dx = \int_0^{\Delta L} \left(\frac{YA}{L}x\right)dx = \frac{1}{2}\left(\frac{YA}{L}\right)(\Delta L)^2 = \frac{1}{2}F\Delta L
+\end{equation}
+Energy density (energy per unit volume $u$):
+\begin{equation}
+  u = \frac{W}{A L} = \frac{1}{2}\left(\frac{F}{A}\right)\left(\frac{\Delta L}{L}\right) = \frac{1}{2}\times\text{Stress}\times\text{Strain} = \frac{1}{2}Y\epsilon^2 = \frac{\sigma^2}{2Y}
+\end{equation}
+\end{formulabox}
+
+% =========================================================================
+% SECTION 6: FLUID STATICS \& SURFACE TENSION PHENOMENA
+% =========================================================================
+\section{Fluid Statics, Pascal's Principle, Surface Tension \& Capillary Rise}
+
+\begin{conceptbox}[Hydrostatic Pressure, Pascal's Law \& Archimedes' Principle]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Hydrostatic Pressure Variation with Depth:} In an incompressible fluid of uniform density $\rho$:
+  \begin{equation}
+    \frac{dP}{dz} = -\rho g \implies P(h) = P_0 + \rho g h
+  \end{equation}
+  \item \textbf{Pascal's Law:} Pressure exerted anywhere upon a confined incompressible fluid is transmitted undiminished equally in all directions throughout the fluid:
+  \begin{equation}
+    \frac{F_1}{A_1} = \frac{F_2}{A_2} \implies F_2 = F_1\left(\frac{A_2}{A_1}\right) \quad (\text{Hydraulic Lift Principle})
+  \end{equation}
+  \item \textbf{Archimedes' Principle \& Law of Floatation:} Upward buoyant force equals the weight of displaced fluid:
+  \begin{equation}
+    F_B = \rho_{\text{fluid}} V_{\text{submerged}} g, \qquad \frac{V_{\text{submerged}}}{V_{\text{total}}} = \frac{\rho_{\text{body}}}{\rho_{\text{fluid}}}
+  \end{equation}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Surface Tension \& Young-Laplace Excess Pressure Derivations]
+Surface tension $T = \frac{F}{L} = \frac{dW}{dA}$ represents surface free energy per unit area.
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Excess Pressure Inside a Spherical Liquid Drop of Radius $R$:}
+  A drop has a \textbf{single} liquid-gas interface. Increasing radius from $R$ to $R+dR$:
+  \begin{equation}
+    dW_{\text{surface}} = T \cdot d(4\pi R^2) = T(8\pi R\,dR)
+  \end{equation}
+  Work done by excess pressure $\Delta P$:
+  \begin{equation}
+    dW_{\text{pressure}} = \Delta P(4\pi R^2)dR = T(8\pi R\,dR) \implies \Delta P_{\text{drop}} = \frac{2T}{R}
+  \end{equation}
+  \item \textbf{Excess Pressure Inside a Spherical Soap Bubble of Radius $R$:}
+  A bubble possesses \textbf{two} liquid-gas interfaces (interior and exterior surfaces):
+  \begin{equation}
+    dW_{\text{surface}} = 2 \times T(8\pi R\,dR) = 16\pi R T\,dR \implies \Delta P_{\text{bubble}} = \frac{4T}{R}
+  \end{equation}
+\end{enumerate}
+\end{formulabox}
+
+\begin{formulabox}[Rigorous Calculus Derivation of Capillary Rise (Jurin's Law)]
+Consider a narrow capillary tube of radius $r$ dipped vertically into a wetting liquid of density $\rho$ and contact angle $\theta_c$.
+The curved meniscus forms a spherical cap of radius of curvature $R_{\text{meniscus}} = \frac{r}{\cos\theta_c}$.
+By the Young-Laplace relation, the pressure just below the concave meniscus is reduced relative to atmospheric pressure $P_0$ by:
+\begin{equation}
+  \Delta P = \frac{2T}{R_{\text{meniscus}}} = \frac{2T\cos\theta_c}{r}
+\end{equation}
+To equilibrate with hydrostatic pressure at the flat external liquid surface at depth $h$:
+\begin{equation}
+  \rho g h = \frac{2T\cos\theta_c}{r} \implies h = \frac{2T\cos\theta_c}{r\rho g}
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Insufficient Capillary Length \& Droplet Coalescence Thermics]
+\begin{itemize}
+  \item \textbf{Capillary Tube of Insufficient Length $l < h$:} Liquid rises to the top lip but \textbf{never overflows}. The meniscus flattens, increasing its radius of curvature $R'$ such that:
+  \begin{equation}
+    h r = l R' \cos\theta_c \implies h R = l R' = \text{constant}
+  \end{equation}
+  \item \textbf{Coalescence of $n$ Identical Droplets:}
+  Volume conservation: $n\left(\frac{4}{3}\pi r^3\right) = \frac{4}{3}\pi R^3 \implies R = n^{1/3}r$.
+  Change in surface area: $\Delta A = 4\pi R^2 - n(4\pi r^2) = 4\pi R^2(1 - n^{1/3}) < 0$.
+  Surface energy released as heat:
+  \begin{equation}
+    \Delta E = T|\Delta A| = 4\pi T R^3\left(\frac{1}{r} - \frac{1}{R}\right) = 3 V T\left(\frac{1}{r} - \frac{1}{R}\right)
+  \end{equation}
+  Resultant temperature increase: $\Delta T = \frac{3T}{\rho s}\left(\frac{1}{r} - \frac{1}{R}\right)$, where $s$ is specific heat.
+\end{itemize}
+\end{usecasebox}
+
+% =========================================================================
+% SECTION 7: HYDRODYNAMICS, BERNOULLI'S PRINCIPLE \& VISCOSITY
+% =========================================================================
+\section{Fluid Dynamics, Bernoulli's Theorem, Viscosity \& Stokes' Drag}
+
+\begin{conceptbox}[Continuity, Bernoulli Theorem \& Viscous Shear Dynamics]
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Equation of Continuity:} For steady, incompressible, irrotational fluid flow:
+  \begin{equation}
+    A_1 v_1 = A_2 v_2 \implies A v = \text{constant}
+  \end{equation}
+  \item \textbf{Bernoulli's Principle:} In streamline flow of an ideal (incompressible, non-viscous) fluid, total mechanical energy per unit volume is constant along any streamline:
+  \begin{equation}
+    P + \frac{1}{2}\rho v^2 + \rho g y = \text{constant}
+  \end{equation}
+  \item \textbf{Newton's Law of Viscosity:} Viscous drag force between adjacent fluid layers undergoing laminar shear:
+  \begin{equation}
+    F = -\eta A \left(\frac{dv}{dz}\right)
+  \end{equation}
+  where $\eta$ is coefficient of viscosity (SI Unit: $\si{Pa.s} = \si{N.s.m^{-2}} = 10\,\text{Poise}$).
+  \item \textbf{Reynolds Number ($Re$):} Dimensionless criterion for flow turbulence:
+  \begin{equation}
+    Re = \frac{\rho v d}{\eta} \quad (Re < 1000 \implies \text{Laminar}; \quad Re > 2000 \implies \text{Turbulent})
+  \end{equation}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Work-Energy Derivation of Bernoulli's Theorem]
+Consider a fluid element of volume $\Delta V$ and mass $\Delta m = \rho\Delta V$ moving along a streamline pipe between stations 1 and 2:
+\begin{align}
+  \text{Work Done by Pressure Forces: } &W_P = P_1 A_1 \Delta x_1 - P_2 A_2 \Delta x_2 = (P_1 - P_2)\Delta V \\
+  \text{Change in Kinetic Energy: } &\Delta K = \frac{1}{2}\Delta m(v_2^2 - v_1^2) = \frac{1}{2}\rho\Delta V(v_2^2 - v_1^2) \\
+  \text{Change in Gravitational Potential Energy: } &\Delta U = \Delta m g(y_2 - y_1) = \rho\Delta V g(y_2 - y_1)
+\end{align}
+Applying the Work-Energy Theorem ($W_P = \Delta K + \Delta U$):
+\begin{equation}
+  (P_1 - P_2)\Delta V = \frac{1}{2}\rho\Delta V(v_2^2 - v_1^2) + \rho\Delta V g(y_2 - y_1)
+\end{equation}
+Dividing by $\Delta V$ and rearranging terms:
+\begin{equation}
+  P_1 + \frac{1}{2}\rho v_1^2 + \rho g y_1 = P_2 + \frac{1}{2}\rho v_2^2 + \rho g y_2 \implies P + \frac{1}{2}\rho v^2 + \rho g y = \text{constant}
+\end{equation}
+\end{formulabox}
+
+\begin{formulabox}[Venturimeter Flow Rate \& Torricelli's Law of Efflux]
+\textbf{1. Venturimeter Flow Rate Derivation:}
+A horizontal pipe ($y_1 = y_2$) with inlet area $A_1$ and throat area $A_2$. By continuity $v_2 = (A_1/A_2)v_1$:
+\begin{equation}
+  P_1 - P_2 = \frac{1}{2}\rho(v_2^2 - v_1^2) = \frac{1}{2}\rho v_1^2\left(\frac{A_1^2}{A_2^2} - 1\right) = \rho_m g h
+\end{equation}
+The volume flow rate $Q$ is given by:
+\begin{equation}
+  Q = A_1 v_1 = A_1 A_2 \sqrt{\frac{2(P_1 - P_2)}{\rho(A_1^2 - A_2^2)}} = A_1 A_2 \sqrt{\frac{2\rho_m g h}{\rho(A_1^2 - A_2^2)}}
+\end{equation}
+\textbf{2. Torricelli's Law of Efflux:}
+For an open tank filled to total depth $H$ with an orifice at depth $h$ below the liquid surface:
+\begin{align}
+  \text{Velocity of Efflux: } &v = \sqrt{2gh} \\
+  \text{Horizontal Range of Jet: } &R = v \cdot t = \sqrt{2gh}\sqrt{\frac{2(H-h)}{g}} = 2\sqrt{h(H-h)} \\
+  \text{Maximum Horizontal Range: } &R_{\max} = H \quad \text{when orifice is at depth } h = \frac{H}{2}
+\end{align}
+Orifices at complementary depths $h$ and $(H-h)$ produce identical horizontal ranges $R$.
+\end{formulabox}
+
+\begin{formulabox}[Stokes' Law, Terminal Velocity \& Poiseuille's Pipe Flow Equation]
+\textbf{1. Stokes' Law for Spherical Particle of Radius $r$:}
+\begin{equation}
+  F_v = 6\pi\eta r v
+\end{equation}
+\textbf{2. Rigorous Derivation of Terminal Velocity ($v_t$):}
+For a sphere of density $\rho$ falling in fluid of density $\sigma$. At terminal equilibrium:
+\begin{equation}
+  \text{Gravity } F_g = \text{Buoyant Force } F_B + \text{Viscous Drag } F_v
+\end{equation}
+\begin{equation}
+  \frac{4}{3}\pi r^3 \rho g = \frac{4}{3}\pi r^3 \sigma g + 6\pi\eta r v_t \implies 6\pi\eta r v_t = \frac{4}{3}\pi r^3(\rho - \sigma)g
+\end{equation}
+Solving for terminal velocity $v_t$:
+\begin{equation}
+  v_t = \frac{2}{9}\frac{r^2(\rho - \sigma)g}{\eta}
+\end{equation}
+\textbf{3. Poiseuille's Volume Flow Rate Equation for Cylindrical Pipe:}
+For laminar flow of fluid through a capillary tube of internal radius $r$ and length $L$ under pressure differential $\Delta P$:
+\begin{equation}
+  Q = \frac{\pi \Delta P r^4}{8\eta L}, \qquad \text{Fluid Resistance } R_f = \frac{\Delta P}{Q} = \frac{8\eta L}{\pi r^4}
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[NEET Trap: Terminal Velocity Sign for Bubbles \& Poiseuille Radius Scaling]
+\begin{itemize}
+  \item \textbf{Air Bubble Rising in Liquid:} Since $\rho_{\text{air}} < \sigma_{\text{liquid}}$, the factor $(\rho - \sigma)$ is \textbf{negative}. Terminal velocity is negative, meaning the bubble ascends upward at $v_t = \frac{2}{9}\frac{r^2(\sigma - \rho)g}{\eta}$.
+  \item \textbf{Sensitivity of Flow Rate to Radius (Poiseuille $r^4$ Law):} Flow rate scales as $Q \propto r^4$. If a blood vessel or pipe radius is reduced by a mere $10\%$ ($r' = 0.9r$), the flow rate drops by $1 - (0.9)^4 \approx 34.4\%$. To maintain the original flow rate, pressure gradient must increase by $(1/0.9)^4 \approx 1.52$ ($52\%$ increase)!
+\end{itemize}
+\end{trapbox}
+
+\begin{ncertbox}[NCERT Critical Extraction: Dynamic Aerodynamic Lift \& Magnus Effect]
+\textbf{NCERT Highlight:}
+\begin{itemize}
+  \item \textbf{Magnus Effect:} When a spinning cylinder or tennis ball travels through air, the boundary layer drags air around it. On the side where surface motion coincides with flow velocity, air speed is higher, resulting in lower pressure by Bernoulli's principle. On the opposite side, air speed is retarded, producing higher pressure. The resulting net transverse pressure differential generates dynamic curve deflection.
+  \item \textbf{Aerofoil Design:} The upper surface of an airplane wing is contoured with greater curvature than the lower surface. Streamlines bunch together above the wing, increasing velocity ($v_{\text{top}} > v_{\text{bottom}}$), creating a vertical upward pressure gradient that generates the aerodynamic lift required for flight.
+\end{itemize}
+\end{ncertbox}
+
+\end{document}

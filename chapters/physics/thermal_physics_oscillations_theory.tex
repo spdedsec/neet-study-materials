@@ -1,0 +1,784 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{NEET UG 2027: Thermal Physics \& Oscillations Master Theory}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Physics Chapter Notes}}
+
+\begin{document}
+
+% Title Header Banner
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Chapter Theory}}\\[6pt]
+  {\Large \textbf{Thermal Physics, Kinetic Theory, Thermodynamics \& Oscillations}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Revised NMC Syllabus}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+\section{Thermal Properties of Matter, Thermal Expansion \& Calorimetry}
+
+\begin{conceptbox}[Foundations of Heat, Temperature \& Thermometry]
+\textbf{1. Heat vs. Temperature:}
+\begin{itemize}
+  \item \textbf{Heat ($Q$):} Energy in transit across a boundary solely driven by a macroscopic temperature gradient. Heat is a path-dependent boundary phenomenon, not an intrinsic property stored within a system ($[Q] = \mathrm{J}$ or $\mathrm{cal}$, where $1\,\mathrm{cal} = 4.186\,\mathrm{J}$).
+  \item \textbf{Temperature ($T$):} Macroscopic measure of the average translational kinetic energy per molecule of a substance. It dictates the direction of spontaneous thermal energy transfer (from higher $T$ to lower $T$).
+\end{itemize}
+\textbf{2. Thermometric Scales \& Interconversions:}
+Any linear thermometric property $X(T)$ (e.g., liquid column length, platinum wire resistance, gas pressure at constant volume) satisfies:
+\begin{equation}
+  \frac{T - \mathrm{LFP}}{\mathrm{UFP} - \mathrm{LFP}} = \text{constant} \implies \frac{C - 0}{100} = \frac{F - 32}{180} = \frac{K - 273.15}{100} = \frac{R - 0}{80}
+\end{equation}
+where $\mathrm{LFP}$ is the Lower Fixed Point (ice point at $1\,\mathrm{atm}$) and $\mathrm{UFP}$ is the Upper Fixed Point (steam point at $1\,\mathrm{atm}$).
+\begin{equation}
+  \frac{C}{5} = \frac{F - 32}{9} = \frac{K - 273.15}{5}
+\end{equation}
+\textit{Key Coincidence Points:}
+\begin{itemize}
+  \item $C = F = -40^\circ \implies -40^\circ\mathrm{C} = -40^\circ\mathrm{F}$.
+  \item $F = K = 574.25 \implies 574.25^\circ\mathrm{F} = 574.25\,\mathrm{K}$.
+  \item Incremental temperature step equivalence: $\Delta T = 1\,\mathrm{K} \equiv 1^\circ\mathrm{C} \equiv 1.8^\circ\mathrm{F}$.
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Thermal Expansion in Solids \& Liquids: Master Governing Equations]
+\textbf{1. Anisotropic and Isotropic Thermal Expansion in Solids:}
+\begin{itemize}
+  \item \textbf{Linear Expansion:}
+  \begin{equation}
+    L(T) = L_0 (1 + \alpha \Delta T) \implies \Delta L = L_0 \alpha \Delta T, \quad \text{where } \alpha = \frac{1}{L_0}\frac{dL}{dT} \quad [\mathrm{K}^{-1} \text{ or } ^\circ\mathrm{C}^{-1}]
+  \end{equation}
+  \item \textbf{Superficial (Areal) Expansion:}
+  \begin{equation}
+    A(T) = A_0 (1 + \beta \Delta T) \implies \Delta A = A_0 \beta \Delta T, \quad \text{where } \beta \approx 2\alpha
+  \end{equation}
+  \item \textbf{Volumetric (Cubical) Expansion:}
+  \begin{equation}
+    V(T) = V_0 (1 + \gamma \Delta T) \implies \Delta V = V_0 \gamma \Delta T, \quad \text{where } \gamma \approx 3\alpha
+  \end{equation}
+  \item \textbf{Isotropic Ratio:} $\alpha : \beta : \gamma = 1 : 2 : 3 \iff \alpha = \frac{\beta}{2} = \frac{\gamma}{3}$.
+\end{itemize}
+\textbf{2. Proof of $\gamma = 3\alpha$ for Isotropic Solids:}
+Consider a cube of initial edge length $L_0$ and initial volume $V_0 = L_0^3$. When temperature rises by $\Delta T$:
+\begin{equation}
+  V = L^3 = [L_0(1 + \alpha\Delta T)]^3 = L_0^3(1 + 3\alpha\Delta T + 3\alpha^2\Delta T^2 + \alpha^3\Delta T^3)
+\end{equation}
+Since $\alpha \sim 10^{-5}\,\mathrm{K}^{-1}$, higher-order terms $\alpha^2\Delta T^2 \ll 1$ and $\alpha^3\Delta T^3 \ll 1$:
+\begin{equation}
+  V \approx V_0(1 + 3\alpha\Delta T) \equiv V_0(1 + \gamma\Delta T) \implies \mathbf{\gamma = 3\alpha}
+\end{equation}
+\textbf{3. Apparent vs. Real Expansion of Liquids in Vessels:}
+\begin{equation}
+  \gamma_{\text{real}} = \gamma_{\text{apparent}} + \gamma_{\text{vessel}}
+\end{equation}
+\begin{itemize}
+  \item If $\gamma_{\text{real}} > \gamma_{\text{vessel}}$, liquid level rises upon heating.
+  \item If $\gamma_{\text{real}} < \gamma_{\text{vessel}}$, liquid level falls upon heating.
+  \item If $\gamma_{\text{real}} = \gamma_{\text{vessel}}$, liquid level remains invariant regardless of temperature.
+\end{itemize}
+\textbf{4. Density Variation with Temperature:}
+Let mass $M$ occupy volume $V_0$ at $T_0$ ($\rho_0 = M/V_0$). At temperature $T_0 + \Delta T$:
+\begin{equation}
+  \rho(T) = \frac{M}{V(T)} = \frac{M}{V_0(1 + \gamma\Delta T)} = \rho_0(1 + \gamma\Delta T)^{-1} \approx \mathbf{\rho_0(1 - \gamma\Delta T)}
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Thermal Stress in Rigidly Clamped Rods \& Bimetallic Strips]
+\textbf{1. Thermal Stress Formulation:}
+When a rod of length $L_0$, cross-sectional area $A$, and Young's modulus $Y$ is clamped rigidly between two immovable walls and heated by $\Delta T$:
+\begin{itemize}
+  \item Free thermal expansion prevented: $\Delta L = L_0 \alpha \Delta T$.
+  \item Compressive thermal strain induced: $\varepsilon_{\text{thermal}} = \frac{\Delta L}{L_0} = \alpha \Delta T$.
+  \item Compressive stress developed:
+  \begin{equation}
+    \mathbf{\sigma_{\text{th}} = \frac{F}{A} = Y \varepsilon_{\text{thermal}} = Y \alpha \Delta T}
+  \end{equation}
+  \item Thermal force exerted on clamps: $\mathbf{F = Y A \alpha \Delta T}$. Note that $\sigma_{\text{th}}$ is completely independent of the rod length $L_0$.
+\end{itemize}
+\textbf{2. Bimetallic Strip Curvature:}
+Two strips of equal thickness $d$, made of metals with expansion coefficients $\alpha_1 > \alpha_2$, are riveted together. Upon heating, metal 1 expands more than metal 2, forcing the composite strip into an arc of radius $R$:
+\begin{equation}
+  R \approx \frac{d}{(\alpha_1 - \alpha_2)\Delta T}
+\end{equation}
+The strip bends with the higher-$\alpha$ metal on the convex outer side. Upon cooling ($\Delta T < 0$), it bends in the reverse direction (higher-$\alpha$ metal on the concave inner side).
+\end{usecasebox}
+
+\begin{formulabox}[Calorimetry, Specific Heat Capacity \& Latent Heat]
+\textbf{1. Heat Capacities:}
+\begin{itemize}
+  \item \textbf{Specific Heat Capacity ($s$ or $c$):} Heat required per unit mass to raise temperature by $1\,\mathrm{K}$:
+  \begin{equation}
+    dQ = m s dT \implies Q = m \int_{T_1}^{T_2} s(T) dT = m s \Delta T \quad (\text{if } s = \text{const})
+  \end{equation}
+  For water: $s_w = 1.0\,\mathrm{cal}/(\mathrm{g}\cdot^\circ\mathrm{C}) = 4186\,\mathrm{J}/(\mathrm{kg}\cdot\mathrm{K})$. For ice: $s_{\text{ice}} \approx 0.5\,\mathrm{cal}/(\mathrm{g}\cdot^\circ\mathrm{C}) = 2100\,\mathrm{J}/(\mathrm{kg}\cdot\mathrm{K})$.
+  \item \textbf{Molar Heat Capacity ($C$):} $C = \frac{1}{n}\frac{dQ}{dT} = M_{\text{molar}} s$.
+  \item \textbf{Water Equivalent of Calorimeter ($W$):} Mass of water that absorbs/releases the same heat as the calorimeter for an identical temperature change:
+  \begin{equation}
+    W = m_{\text{cal}} \frac{s_{\text{cal}}}{s_w} \implies Q = (m_w + W) s_w \Delta T
+  \end{equation}
+\end{itemize}
+\textbf{2. Latent Heat \& Phase Changes (Isothermal Heat Addition):}
+\begin{equation}
+  Q = m L
+\end{equation}
+\begin{itemize}
+  \item \textbf{Latent Heat of Fusion of Ice ($L_f$):} $L_f \approx 80\,\mathrm{cal}/\mathrm{g} = 3.33 \times 10^5\,\mathrm{J}/\mathrm{kg}$ at $0^\circ\mathrm{C}$.
+  \item \textbf{Latent Heat of Vaporization of Water ($L_v$):} $L_v \approx 540\,\mathrm{cal}/\mathrm{g} = 2.26 \times 10^6\,\mathrm{J}/\mathrm{kg}$ at $100^\circ\mathrm{C}$.
+\end{itemize}
+\textbf{3. Principle of Calorimetry (Conservation of Energy):}
+In a thermally isolated calorimeter:
+\begin{equation}
+  \mathbf{\sum Q_{\text{lost by hot bodies}} = \sum Q_{\text{gained by cold bodies}}}
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[Calorimetry Pitfalls: Ice-Water-Steam Equilibrium Traps]
+\textbf{Common Error:} Blindly applying $m_1 s_1 (T_1 - T_f) = m_2 s_2 (T_f - T_2)$ without verifying whether sufficient heat exists to melt all ice or condense all steam.
+\begin{itemize}
+  \item \textbf{Ice + Water Scenario:} Always calculate $Q_{\text{available}}$ from water cooling to $0^\circ\mathrm{C}$ vs. $Q_{\text{melt}}$ required to melt all ice at $0^\circ\mathrm{C}$. If $Q_{\text{available}} < m_{\text{ice}} L_f$, the final mixture temperature is \textbf{strictly $0^\circ\mathrm{C}$}, and only a fraction $m' = Q_{\text{available}}/L_f$ of ice melts.
+  \item \textbf{Steam + Water Scenario:} Always verify if water can absorb all latent heat of steam ($540\,\mathrm{cal}/\mathrm{g}$) before heating to $100^\circ\mathrm{C}$. If not, final equilibrium temperature remains \textbf{strictly $100^\circ\mathrm{C}$}.
+\end{itemize}
+\end{trapbox}
+
+\section{Modes of Heat Transfer \& Radiation Laws}
+
+\begin{conceptbox}[Thermal Conduction: Fourier's Law \& Composite Slabs]
+\textbf{1. Fourier's Law of Steady-State Conduction:}
+Thermal energy flowing per unit time through a cross-sectional area $A$ normal to a temperature gradient $dT/dx$:
+\begin{equation}
+  \mathbf{H = \frac{dQ}{dt} = -k A \frac{dT}{dx}}
+\end{equation}
+where $k$ is thermal conductivity ($\mathrm{W}\cdot\mathrm{m}^{-1}\cdot\mathrm{K}^{-1}$). For a uniform rod of length $L$ with ends maintained at $T_H$ and $T_C$:
+\begin{equation}
+  H = \frac{k A (T_H - T_C)}{L} = \frac{T_H - T_C}{R_{\text{th}}}, \quad \text{where } \mathbf{R_{\text{th}} = \frac{L}{k A}} \quad [\mathrm{K}\cdot\mathrm{W}^{-1}]
+\end{equation}
+$R_{\text{th}}$ is the \textbf{thermal resistance}, directly analogous to electrical resistance $R_{\text{elec}} = \frac{L}{\sigma A}$.
+\end{conceptbox}
+
+\begin{formulabox}[Series \& Parallel Thermal Conductors: Derivations]
+\textbf{1. Series Combination of Two Conducting Slabs:}
+Consider two slabs of lengths $L_1, L_2$, areas $A$, and conductivities $k_1, k_2$ placed in end-to-end contact between temperatures $T_1$ and $T_2$ ($T_1 > T_2$). Let $T_0$ be the interface temperature. Under steady state, the heat current $H$ is identical through both:
+\begin{equation}
+  H = \frac{k_1 A (T_1 - T_0)}{L_1} = \frac{k_2 A (T_0 - T_2)}{L_2} \implies R_{\text{eq}} = R_1 + R_2 = \frac{L_1}{k_1 A} + \frac{L_2}{k_2 A}
+\end{equation}
+Equating expressions to solve for the interface temperature $T_0$:
+\begin{equation}
+  \mathbf{T_0 = \frac{\frac{k_1}{L_1} T_1 + \frac{k_2}{L_2} T_2}{\frac{k_1}{L_1} + \frac{k_2}{L_2}} = \frac{k_1 L_2 T_1 + k_2 L_1 T_2}{k_1 L_2 + k_2 L_1}}
+\end{equation}
+Equivalent thermal conductivity $k_{\text{eq}}$ for total length $L_1 + L_2$:
+\begin{equation}
+  \frac{L_1 + L_2}{k_{\text{eq}} A} = \frac{L_1}{k_1 A} + \frac{L_2}{k_2 A} \implies \mathbf{k_{\text{eq}} = \frac{L_1 + L_2}{\frac{L_1}{k_1} + \frac{L_2}{k_2}}} \quad \left(\text{If } L_1 = L_2: \; k_{\text{eq}} = \frac{2k_1 k_2}{k_1 + k_2}\right)
+\end{equation}
+\textbf{2. Parallel Combination of Two Conducting Slabs:}
+Plates of areas $A_1, A_2$ and common length $L$ connected between reservoirs at $T_1$ and $T_2$:
+\begin{equation}
+  H_{\text{net}} = H_1 + H_2 \implies \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} \implies \mathbf{k_{\text{eq}} = \frac{k_1 A_1 + k_2 A_2}{A_1 + A_2}}
+\end{equation}
+\end{formulabox}
+
+\begin{conceptbox}[Thermal Radiation: Stefan-Boltzmann \& Wien's Laws]
+\textbf{1. Blackbody Radiation \& Prevost's Theory:}
+Prevost's theory asserts that all bodies at temperatures $T > 0\,\mathrm{K}$ emit thermal radiation continuously to, and absorb radiation from, their surroundings. Thermal equilibrium represents dynamic parity between emission and absorption.
+\begin{itemize}
+  \item \textbf{Stefan-Boltzmann Law:} Total radiant energy emitted per unit surface area per second by a blackbody:
+  \begin{equation}
+    E_b = \sigma T^4
+  \end{equation}
+  where $\sigma = 5.670 \times 10^{-8}\,\mathrm{W}\cdot\mathrm{m}^{-2}\cdot\mathrm{K}^{-4}$ is the Stefan-Boltzmann constant.
+  \item For a non-blackbody of surface area $A$ and emissivity $e$ ($0 < e < 1$):
+  \begin{equation}
+    P_{\text{emit}} = e \sigma A T^4
+  \end{equation}
+  \item \textbf{Net Radiative Heat Transfer with Surroundings at $T_0$:}
+  \begin{equation}
+    \mathbf{P_{\text{net}} = \frac{dQ}{dt} = e \sigma A (T^4 - T_0^4)}
+  \end{equation}
+  \item \textbf{Wien's Displacement Law:} The wavelength $\lambda_m$ corresponding to maximum spectral emissive power is inversely proportional to absolute temperature:
+  \begin{equation}
+    \mathbf{\lambda_m T = b = 2.898 \times 10^{-3}\,\mathrm{m}\cdot\mathrm{K}}
+  \end{equation}
+  As temperature increases, peak emission shifts towards shorter wavelengths (higher frequencies).
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Newton's Law of Cooling: Derivation \& Analytical Form]
+\textbf{1. Calculus Derivation from Stefan-Boltzmann Law:}
+Consider a body of mass $m$, specific heat capacity $s$, and surface area $A$ at temperature $T$ cooling in surroundings at temperature $T_0$, where $\Delta T = T - T_0 \ll T_0$.
+\begin{equation}
+  T^4 - T_0^4 = (T_0 + \Delta T)^4 - T_0^4 = T_0^4 \left[\left(1 + \frac{\Delta T}{T_0}\right)^4 - 1\right]
+\end{equation}
+Using the binomial expansion $(1 + x)^4 \approx 1 + 4x$ for $x = \Delta T / T_0 \ll 1$:
+\begin{equation}
+  T^4 - T_0^4 \approx T_0^4 \left(1 + 4\frac{\Delta T}{T_0} - 1\right) = 4 T_0^3 (T - T_0)
+\end{equation}
+Substituting this into the net radiant heat loss rate:
+\begin{equation}
+  \frac{dQ}{dt} = -m s \frac{dT}{dt} = e \sigma A \cdot 4 T_0^3 (T - T_0) \implies \mathbf{\frac{dT}{dt} = -k (T - T_0)}
+\end{equation}
+where cooling constant $k = \frac{4 e \sigma A T_0^3}{m s}$.
+\textbf{2. Exact Exponential Solution:}
+\begin{equation}
+  \int_{T_i}^{T(t)} \frac{dT}{T - T_0} = -k \int_0^t dt \implies \mathbf{T(t) - T_0 = (T_i - T_0) e^{-k t}}
+\end{equation}
+\textbf{3. Practical Average Approximation Formula for Problems:}
+If a body cools from $T_1$ to $T_2$ in time $t$:
+\begin{equation}
+  \mathbf{\frac{T_1 - T_2}{t} = K \left(\frac{T_1 + T_2}{2} - T_0\right)}
+\end{equation}
+\end{formulabox}
+
+\begin{ncertbox}[NCERT Extraction: Anomalous Expansion of Water]
+Water exhibits anomalous expansion between $0^\circ\mathrm{C}$ and $4^\circ\mathrm{C}$. When water is heated from $0^\circ\mathrm{C}$, its volume \textbf{decreases} and its density \textbf{increases}, reaching a maximum density of $\rho_{\max} \approx 1.000\,\mathrm{g/cm}^3$ at $3.98^\circ\mathrm{C} \approx 4^\circ\mathrm{C}$. Above $4^\circ\mathrm{C}$, water expands normally with temperature.
+\begin{itemize}
+  \item \textit{Ecological Consequence:} In freezing winters, surface water cools to $4^\circ\mathrm{C}$ and sinks. Once the entire body reaches $4^\circ\mathrm{C}$, further cooling drops surface water to $0^\circ\mathrm{C}$ where it freezes into ice ($\rho_{\text{ice}} < \rho_{\text{water}}$). The ice layer floats on top, acting as a thermal insulator ($k_{\text{ice}} \approx 2.2\,\mathrm{W/m\cdot K}$), preserving liquid water at $4^\circ\mathrm{C}$ beneath and sustaining aquatic life.
+\end{itemize}
+\end{ncertbox}
+
+\section{Thermodynamics: First Law, Processes \& Mayer's Relation}
+
+\begin{conceptbox}[Thermodynamic Systems, State Functions \& First Law]
+\textbf{1. Thermodynamic Equilibrium \& Zeroth Law:}
+Two systems in mutual thermal equilibrium with a third system are in thermal equilibrium with each other. This establishes temperature as the unique scalar state property governing thermal equilibrium.
+\textbf{2. Internal Energy ($U$):}
+Internal energy is a unique thermodynamic \textbf{state function} reflecting the sum of molecular kinetic and intermolecular potential energies. For an ideal gas (zero intermolecular potential):
+\begin{equation}
+  U = U(T) = n C_v T \implies \mathbf{dU = n C_v dT}
+\end{equation}
+Across any cyclic process, $\Delta U_{\text{cycle}} = \oint dU = 0$.
+\textbf{3. First Law of Thermodynamics (Energy Conservation):}
+\begin{equation}
+  \mathbf{\Delta Q = \Delta U + W} \iff \mathbf{dQ = dU + dW} = n C_v dT + P dV
+\end{equation}
+\textit{Physics Sign Conventions:}
+\begin{itemize}
+  \item $Q > 0$ when heat is absorbed by the system; $Q < 0$ when heat is released.
+  \item $W = \int P dV > 0$ when work is done \textbf{by} the system (expansion, $dV > 0$); $W < 0$ when work is done \textbf{on} the system (compression, $dV < 0$).
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Work Done in Master Thermodynamic Processes: Step-by-Step Derivations]
+\textbf{1. Isochoric Process (Constant Volume, $V = \text{const}$):}
+\begin{equation}
+  dV = 0 \implies \mathbf{W = 0}, \quad \mathbf{\Delta Q = \Delta U = n C_v \Delta T}
+\end{equation}
+\textbf{2. Isobaric Process (Constant Pressure, $P = \text{const}$):}
+\begin{equation}
+  \mathbf{W = P \Delta V = P(V_2 - V_1) = n R (T_2 - T_1)}
+\end{equation}
+\begin{equation}
+  \Delta Q = n C_p \Delta T, \quad \Delta U = n C_v \Delta T \implies \mathbf{\Delta U : W : \Delta Q = C_v : R : C_p = 1 : (\gamma - 1) : \gamma}
+\end{equation}
+\textbf{3. Isothermal Process (Constant Temperature, $T = \text{const}$):}
+Since $T = \text{const}$, $\Delta U = 0 \implies \Delta Q = W$. Using $P = \frac{nRT}{V}$:
+\begin{equation}
+  \mathbf{W = \int_{V_1}^{V_2} P dV = n R T \int_{V_1}^{V_2} \frac{dV}{V} = n R T \ln\left(\frac{V_2}{V_1}\right) = n R T \ln\left(\frac{P_1}{P_2}\right) = 2.303 n R T \log_{10}\left(\frac{V_2}{V_1}\right)}
+\end{equation}
+\textbf{4. Adiabatic Process (Zero Heat Exchange, $\Delta Q = 0$):}
+Governing equations: $P V^\gamma = \text{const}$, $T V^{\gamma-1} = \text{const}$, $P^{1-\gamma} T^\gamma = \text{const}$.
+From First Law: $dQ = 0 \implies dW = -dU = -n C_v dT$.
+\begin{equation}
+  W = -\int_{T_1}^{T_2} n C_v dT = -n C_v (T_2 - T_1) = n \left(\frac{R}{\gamma - 1}\right)(T_1 - T_2)
+\end{equation}
+Using $nRT_1 = P_1 V_1$ and $nRT_2 = P_2 V_2$:
+\begin{equation}
+  \mathbf{W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} = \frac{n R (T_1 - T_2)}{\gamma - 1} = -\Delta U}
+\end{equation}
+\textbf{5. General Polytropic Process ($P V^m = \text{const}$):}
+\begin{equation}
+  W = \frac{P_1 V_1 - P_2 V_2}{m - 1}, \qquad \mathbf{C = C_v + \frac{R}{1 - m} = \frac{R}{\gamma - 1} + \frac{R}{1 - m}}
+\end{equation}
+\end{formulabox}
+
+\begin{formulabox}[Mayer's Relation Derivation: $C_p - C_v = R$]
+Consider 1 mole of an ideal gas ($n=1$).
+\begin{enumerate}
+  \item Heat added at constant volume: $dQ_v = C_v dT$. Since $dV = 0$, $dW = 0$, so by First Law:
+  \begin{equation}
+    dU = dQ_v = C_v dT
+  \end{equation}
+  Because internal energy of an ideal gas depends solely on temperature, $dU = C_v dT$ holds across \textbf{any} process.
+  \item Heat added at constant pressure: $dQ_p = C_p dT$. By First Law:
+  \begin{equation}
+    dQ_p = dU + dW = C_v dT + P dV
+  \end{equation}
+  \item Differentiating the ideal gas equation of state $P V = R T$ at constant pressure $P$:
+  \begin{equation}
+    P dV = R dT
+  \end{equation}
+  \item Substituting $P dV = R dT$ into the First Law expression:
+  \begin{equation}
+    C_p dT = C_v dT + R dT \implies (C_p - C_v) dT = R dT \implies \mathbf{C_p - C_v = R}
+  \end{equation}
+\end{enumerate}
+\textit{In terms of specific heats (per unit mass):} $c_p - c_v = \frac{R}{M_{\text{molar}}}$.
+\end{formulabox}
+
+\begin{usecasebox}[P-V Indicator Diagram Slopes \& Cyclic Process Work]
+\textbf{1. Comparison of Adiabatic vs. Isothermal Slopes:}
+\begin{itemize}
+  \item Isothermal curve: $P V = \text{const} \implies P dV + V dP = 0 \implies \mathbf{\left(\frac{dP}{dV}\right)_{\text{iso}} = -\frac{P}{V}}$.
+  \item Adiabatic curve: $P V^\gamma = \text{const} \implies V^\gamma dP + \gamma P V^{\gamma-1} dV = 0 \implies \mathbf{\left(\frac{dP}{dV}\right)_{\text{ad}} = -\gamma \frac{P}{V}}$.
+  \item \textbf{Fundamental Slope Theorem:}
+  \begin{equation}
+    \mathbf{\left(\frac{dP}{dV}\right)_{\text{adiabatic}} = \gamma \left(\frac{dP}{dV}\right)_{\text{isothermal}}}
+  \end{equation}
+  Since $\gamma > 1$, the adiabatic curve is \textbf{$\gamma$ times steeper} than the isothermal curve at any point of intersection.
+\end{itemize}
+\textbf{2. Expansion from Common Initial State $(P_0, V_0)$ to Final Volume $V_f > V_0$:}
+\begin{equation}
+  P_{\text{isobaric}} > P_{\text{isothermal}} > P_{\text{adiabatic}} \implies \mathbf{W_{\text{isobaric}} > W_{\text{isothermal}} > W_{\text{adiabatic}}}
+\end{equation}
+\textbf{3. Compression from Common Initial State $(P_0, V_0)$ to Final Volume $V_f < V_0$:}
+Work done \textbf{on} the gas is largest for adiabatic compression:
+\begin{equation}
+  |W_{\text{adiabatic}}| > |W_{\text{isothermal}}| > |W_{\text{isobaric}}|
+\end{equation}
+\textbf{4. Net Work in Cyclic Processes:}
+The net work in any closed cycle on a $P-V$ diagram equals the enclosed loop area:
+\begin{equation}
+  W_{\text{net}} = \oint P dV = \begin{cases} > 0 & \text{Clockwise cycle (heat engine, net work output)} \\ < 0 & \text{Counter-clockwise cycle (work absorbed)} \end{cases}
+\end{equation}
+\end{usecasebox}
+
+\section{Second Law of Thermodynamics \& Syllabus Boundaries}
+
+\begin{conceptbox}[Second Law of Thermodynamics: Clausius \& Kelvin-Planck Formulations]
+The First Law dictates energy conservation but fails to predict the spontaneous direction of natural processes. The Second Law establishes irreversibility:
+\begin{itemize}
+  \item \textbf{Kelvin-Planck Statement:} It is impossible to construct a heat engine operating in a thermodynamic cycle that absorbs thermal energy from a single thermal reservoir and converts $100\%$ of this energy into mechanical work without rejecting any heat to a colder reservoir. (No engine can operate at $100\%$ thermal efficiency; perpetual motion machines of the second kind are impossible).
+  \item \textbf{Clausius Statement:} It is impossible to construct a cyclic device that transfers heat spontaneously from a cooler body to a hotter body without requiring external mechanical work input.
+  \item \textbf{Equivalence:} A violation of the Kelvin-Planck statement directly entails a violation of the Clausius statement, and vice versa.
+\end{itemize}
+\end{conceptbox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Carnot Engine \& Refrigerator Deletion]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the updated NEET UG syllabus issued by the National Medical Commission (NMC):
+\begin{itemize}
+  \item \textbf{DELETED TOPICS:} The theoretical formulation of the \textbf{Carnot Engine}, Carnot cycle efficiency ($\eta = 1 - T_C/T_H$), Carnot theorem proofs, and \textbf{Refrigerators / Heat Pumps} (coefficient of performance $\beta = Q_C/W = T_C/(T_H - T_C)$) have been \textbf{formally removed}.
+  \item \textbf{EXAM ORIENTATION:} Questions will \textbf{not} test Carnot cycle calculations. Candidates must focus strictly on General Thermodynamic Cycles (triangular, rectangular $P-V$ loops), First Law applications ($\Delta Q = \Delta U + W$), work in isothermal/adiabatic/isobaric expansions, and the conceptual statements of the Second Law.
+\end{itemize}
+\end{trapbox}
+
+\section{Kinetic Theory of Gases (KTG): Molecular Pressure \& Equipartition}
+
+\begin{conceptbox}[Postulates of the Kinetic Theory of an Ideal Gas]
+An ideal gas is modeled micro-mechanically under the following foundational postulates:
+\begin{enumerate}
+  \item The gas comprises an enormous number of identical, tiny, hard spherical molecules in ceaseless, chaotic random motion across all directions with all possible speeds.
+  \item The physical volume occupied by the gas molecules themselves is negligibly small compared to the total macroscopic volume of the container ($V_{\text{molecules}} \ll V_{\text{container}}$).
+  \item No intermolecular forces (attractive or repulsive) act between molecules except during collisions. Hence, potential energy is strictly zero; all internal energy is purely translational/rotational kinetic energy.
+  \item All intermolecular collisions and collisions with container walls are perfectly elastic ($\Delta K = 0$). Collision durations are negligible compared to transit times between collisions.
+  \item Gravity has negligible effect on molecular trajectory between collisions due to high speeds ($\sim 10^2 - 10^3\,\mathrm{m/s}$).
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[First-Principles Derivation of Ideal Gas Pressure: $P = \frac{1}{3}\rho v_{\text{rms}}^2$]
+Consider $N$ identical gas molecules, each of mass $m$, enclosed in a cubical box of side $L$ and volume $V = L^3$.
+\begin{enumerate}
+  \item Let a molecule possess velocity vector $\mathbf{v} = v_x \hat{\mathbf{i}} + v_y \hat{\mathbf{j}} + v_z \hat{\mathbf{k}}$ with speed squared $v^2 = v_x^2 + v_y^2 + v_z^2$.
+  \item When this molecule collides elastically with the wall perpendicular to the $x$-axis at $x = L$:
+  \begin{equation}
+    p_{x,\text{initial}} = m v_x, \qquad p_{x,\text{final}} = -m v_x \implies \Delta p_x = -2 m v_x
+  \end{equation}
+  Momentum imparted to the wall per collision is $+2 m v_x$.
+  \item Time elapsed between consecutive collisions of this molecule with the same wall:
+  \begin{equation}
+    \Delta t = \frac{2 L}{v_x}
+  \end{equation}
+  \item Average force exerted by this single molecule on the wall:
+  \begin{equation}
+    F_1 = \frac{\Delta p_{\text{wall}}}{\Delta t} = \frac{2 m v_x}{2 L / v_x} = \frac{m v_x^2}{L}
+  \end{equation}
+  \item Total force exerted by all $N$ molecules on the wall of area $A = L^2$:
+  \begin{equation}
+    F_{\text{total}} = \sum_{i=1}^N \frac{m v_{xi}^2}{L} = \frac{m}{L} N \overline{v_x^2}
+  \end{equation}
+  \item Since molecular motion is isotropic, $\overline{v_x^2} = \overline{v_y^2} = \overline{v_z^2} = \frac{1}{3}\overline{v^2} = \frac{1}{3} v_{\text{rms}}^2$.
+  \item Pressure $P = \frac{F_{\text{total}}}{A} = \frac{m N \overline{v_x^2}}{L \cdot L^2} = \frac{1}{3}\frac{N m}{V} v_{\text{rms}}^2$:
+  \begin{equation}
+    \mathbf{P = \frac{1}{3}\rho v_{\text{rms}}^2 = \frac{1}{3}\frac{M_{\text{total}}}{V} v_{\text{rms}}^2}
+  \end{equation}
+\end{enumerate}
+\end{formulabox}
+
+\begin{formulabox}[Kinetic Interpretation of Temperature \& Molecular Speed Spectrum]
+\textbf{1. Average Kinetic Energy per Molecule:}
+Rewriting the pressure equation as $P V = \frac{2}{3} \left(N \cdot \frac{1}{2}m v_{\text{rms}}^2\right) = \frac{2}{3} E_{\text{trans}}$.
+Equating to the ideal gas law $P V = N k_B T$ (where $k_B = R/N_A = 1.381 \times 10^{-23}\,\mathrm{J/K}$):
+\begin{equation}
+  \frac{2}{3} E_{\text{trans}} = N k_B T \implies \mathbf{\overline{K}_{\text{trans}} = \frac{1}{2}m v_{\text{rms}}^2 = \frac{3}{2}k_B T}
+\end{equation}
+Average translational kinetic energy depends \textbf{solely on absolute temperature $T$}, invariant of molecular mass or gas species!
+\textbf{2. Molecular Speed Hierarchy:}
+\begin{itemize}
+  \item \textbf{Root-Mean-Square Speed ($v_{\text{rms}}$):}
+  \begin{equation}
+    \mathbf{v_{\text{rms}} = \sqrt{\frac{3 k_B T}{m}} = \sqrt{\frac{3 R T}{M_{\text{molar}}}} = \sqrt{\frac{3 P}{\rho}}}
+  \end{equation}
+  \item \textbf{Average Speed ($v_{\text{avg}}$):}
+  \begin{equation}
+    \mathbf{v_{\text{avg}} = \sqrt{\frac{8 k_B T}{\pi m}} = \sqrt{\frac{8 R T}{\pi M_{\text{molar}}}}} \approx 0.921 v_{\text{rms}}
+  \end{equation}
+  \item \textbf{Most Probable Speed ($v_{\text{mp}}$):}
+  \begin{equation}
+    \mathbf{v_{\text{mp}} = \sqrt{\frac{2 k_B T}{m}} = \sqrt{\frac{2 R T}{M_{\text{molar}}}}} \approx 0.816 v_{\text{rms}}
+  \end{equation}
+  \item \textbf{Golden Speed Ratio:}
+  \begin{equation}
+    \mathbf{v_{\text{mp}} : v_{\text{avg}} : v_{\text{rms}} = \sqrt{2} : \sqrt{\frac{8}{\pi}} : \sqrt{3} \approx 1 : 1.128 : 1.224}
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Law of Equipartition of Energy, Degrees of Freedom \& Specific Heat Ratios]
+\textbf{1. Equipartition Principle:}
+In thermal equilibrium at temperature $T$, the total internal energy is partitioned equally among all quadratic independent degrees of freedom ($f$), each contributing an average energy of $\mathbf{\frac{1}{2}k_B T}$ per molecule:
+\begin{equation}
+  \overline{E}_{\text{molecule}} = \frac{f}{2}k_B T, \quad U_{\text{molar}} = \frac{f}{2} R T \implies \mathbf{C_v = \frac{f}{2}R}, \quad \mathbf{C_p = C_v + R = \left(\frac{f}{2} + 1\right)R}, \quad \mathbf{\gamma = \frac{C_p}{C_v} = 1 + \frac{2}{f}}
+\end{equation}
+\textbf{2. Comprehensive Gas Classification Table:}
+\begin{center}
+\begin{tabularx}{\linewidth}{|l|c|c|c|c|Y|}
+\hline
+\textbf{Molecular Atomicity} & \textbf{DoF ($f$)} & $C_v$ & $C_p$ & $\gamma = C_p / C_v$ & \textbf{Representative Gases} \\
+\hline
+\textbf{Monoatomic} & $3$ trans & $\frac{3}{2}R$ & $\frac{5}{2}R$ & $\frac{5}{3} \approx 1.67$ & $\mathrm{He, Ne, Ar, Kr}$ \\
+\hline
+\textbf{Diatomic (Rigid, Room $T$)} & $3\text{ trans} + 2\text{ rot} = 5$ & $\frac{5}{2}R$ & $\frac{7}{2}R$ & $\frac{7}{5} = 1.40$ & $\mathrm{H_2, N_2, O_2, CO}$ \\
+\hline
+\textbf{Diatomic (Vibrating, High $T$)} & $5 + 2\text{ vib} = 7$ & $\frac{7}{2}R$ & $\frac{9}{2}R$ & $\frac{9}{7} \approx 1.29$ & $\mathrm{Cl_2, Br_2}$ at high $T$ \\
+\hline
+\textbf{Non-linear Polyatomic} & $3\text{ trans} + 3\text{ rot} = 6$ & $3R$ & $4R$ & $\frac{4}{3} \approx 1.33$ & $\mathrm{H_2O, NH_3, CH_4}$ \\
+\hline
+\end{tabularx}
+\end{center}
+\textbf{3. Non-Reacting Mixtures of Gases:}
+For a mixture of $n_1$ moles of gas 1 ($C_{v1}, \gamma_1$) and $n_2$ moles of gas 2 ($C_{v2}, \gamma_2$):
+\begin{equation}
+  \mathbf{C_{v,\text{mix}} = \frac{n_1 C_{v1} + n_2 C_{v2}}{n_1 + n_2}}, \qquad \mathbf{C_{p,\text{mix}} = \frac{n_1 C_{p1} + n_2 C_{p2}}{n_1 + n_2}}, \qquad \mathbf{\gamma_{\text{mix}} = \frac{C_{p,\text{mix}}}{C_{v,\text{mix}}} = \frac{n_1 C_{p1} + n_2 C_{p2}}{n_1 C_{v1} + n_2 C_{v2}}}
+\end{equation}
+\textbf{4. Mean Free Path ($\lambda$):}
+Average distance traversed by a gas molecule between successive collisions:
+\begin{equation}
+  \mathbf{\lambda = \frac{1}{\sqrt{2} \pi n_v d^2} = \frac{k_B T}{\sqrt{2} \pi d^2 P}}
+\end{equation}
+where $n_v = N/V$ is number density, $d$ is molecular diameter. Notice that $\lambda \propto T$ at constant pressure, and $\lambda \propto \frac{1}{P}$ at constant temperature.
+\end{formulabox}
+
+\section{Simple Harmonic Motion (SHM): Kinematics, Energy \& Oscillators}
+
+\begin{conceptbox}[Mathematical Foundations of Simple Harmonic Motion]
+SHM is bounded periodic motion wherein the restoring force/torque is directly proportional to displacement from the stable equilibrium position and directed towards that equilibrium:
+\begin{equation}
+  F(x) = -k x \implies m \frac{d^2 x}{dt^2} + k x = 0 \implies \mathbf{\frac{d^2 x}{dt^2} + \omega^2 x = 0} \quad \left(\text{where } \omega = \sqrt{\frac{k}{m}}\right)
+\end{equation}
+\textbf{General Solution \& Kinematic Equations:}
+\begin{itemize}
+  \item \textbf{Displacement:} $x(t) = A \sin(\omega t + \phi_0)$, where $A$ is amplitude, $\omega = 2\pi/T = 2\pi\nu$ is angular frequency, and $\phi_0$ is initial epoch.
+  \item \textbf{Velocity:}
+  \begin{equation}
+    v(t) = \frac{dx}{dt} = A\omega \cos(\omega t + \phi_0) = \mathbf{\pm \omega \sqrt{A^2 - x^2}}
+  \end{equation}
+  $v_{\max} = \omega A$ occurs at mean position ($x=0$); $v=0$ at extreme positions ($x = \pm A$).
+  \item \textbf{Acceleration:}
+  \begin{equation}
+    a(t) = \frac{dv}{dt} = -\omega^2 A \sin(\omega t + \phi_0) = \mathbf{-\omega^2 x}
+  \end{equation}
+  $a_{\max} = \omega^2 A$ occurs at extremes ($x = \pm A$); $a=0$ at mean position ($x=0$).
+  \item \textbf{Phase Relationships:} Velocity leads displacement by $\pi/2$ radians ($90^\circ$); acceleration leads displacement by $\pi$ radians ($180^\circ$).
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Energy Conservation in SHM: Space \& Time Averages]
+\textbf{1. Instantaneous Energies as Functions of Position ($x$):}
+\begin{itemize}
+  \item \textbf{Potential Energy ($U$):} $U(x) = \int_0^x kx dx = \mathbf{\frac{1}{2} k x^2 = \frac{1}{2} m \omega^2 x^2}$ (assuming $U(0) = 0$).
+  \item \textbf{Kinetic Energy ($K$):} $K(x) = \frac{1}{2} m v^2 = \mathbf{\frac{1}{2} m \omega^2 (A^2 - x^2)}$.
+  \item \textbf{Total Mechanical Energy ($E$):}
+  \begin{equation}
+    \mathbf{E = K(x) + U(x) = \frac{1}{2} m \omega^2 A^2 = 2 \pi^2 m \nu^2 A^2 = \text{constant}}
+  \end{equation}
+  Total energy is completely independent of time $t$ and position $x$.
+\end{itemize}
+\textbf{2. Position where $K = U$:}
+\begin{equation}
+  \frac{1}{2}m\omega^2(A^2 - x^2) = \frac{1}{2}m\omega^2 x^2 \implies 2x^2 = A^2 \implies \mathbf{x = \pm \frac{A}{\sqrt{2}}}
+\end{equation}
+\textbf{3. Space Averages vs. Time Averages over One Cycle:}
+\begin{itemize}
+  \item \textbf{Time Averages ($\langle \dots \rangle_t = \frac{1}{T}\int_0^T \dots dt$):}
+  \begin{equation}
+    \mathbf{\langle K \rangle_t = \frac{1}{4} m \omega^2 A^2 = \frac{1}{2}E}, \qquad \mathbf{\langle U \rangle_t = \frac{1}{4} m \omega^2 A^2 = \frac{1}{2}E}
+  \end{equation}
+  \item \textbf{Space Averages ($\langle \dots \rangle_x = \frac{1}{2A}\int_{-A}^A \dots dx$):}
+  \begin{equation}
+    \mathbf{\langle K \rangle_x = \frac{2}{3}E}, \qquad \mathbf{\langle U \rangle_x = \frac{1}{3}E}
+  \end{equation}
+  \item \textbf{Frequency of Oscillations:} If displacement oscillates with frequency $\nu$, both kinetic energy $K(t)$ and potential energy $U(t)$ oscillate with \textbf{double frequency $2\nu$}.
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Mechanical Oscillators: Spring-Mass Systems \& Simple Pendulums]
+\textbf{1. Spring-Block Oscillators:}
+\begin{equation}
+  T = 2\pi \sqrt{\frac{m}{k}}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Series Combination:} $\frac{1}{k_{\text{eq}}} = \frac{1}{k_1} + \frac{1}{k_2} \implies k_{\text{eq}} = \frac{k_1 k_2}{k_1 + k_2} \implies T = 2\pi\sqrt{\frac{m(k_1+k_2)}{k_1 k_2}}$.
+  \item \textbf{Parallel Combination:} $k_{\text{eq}} = k_1 + k_2 \implies T = 2\pi\sqrt{\frac{m}{k_1 + k_2}}$.
+  \item \textbf{Spring Cutting:} Spring constant is inversely proportional to length: $k \cdot L = \text{const}$. If cut into length ratio $m : n$, spring constants become $k_1 = \frac{m+n}{m}k$ and $k_2 = \frac{m+n}{n}k$.
+  \item \textbf{Two-Body Oscillator Connected by Spring:} Reduced mass $\mu = \frac{m_1 m_2}{m_1 + m_2} \implies \mathbf{T = 2\pi\sqrt{\frac{\mu}{k}}}$.
+\end{itemize}
+\textbf{2. Simple Pendulum Derivation:}
+A bob of mass $m$ suspended by a light string of length $L$. For angular displacement $\theta$:
+\begin{equation}
+  \tau_{\text{restoring}} = -m g L \sin\theta \approx -m g L \theta \quad (\text{for paraxial small angles } \theta \ll 1)
+\end{equation}
+Using $\tau = I \alpha = (m L^2) \frac{d^2\theta}{dt^2}$:
+\begin{equation}
+  m L^2 \frac{d^2\theta}{dt^2} + m g L \theta = 0 \implies \frac{d^2\theta}{dt^2} + \frac{g}{L}\theta = 0 \implies \mathbf{\omega = \sqrt{\frac{g}{L}}}, \quad \mathbf{T = 2\pi\sqrt{\frac{L}{g}}}
+\end{equation}
+\textit{Accelerating Frames \& Effective Gravity:}
+\begin{itemize}
+  \item Elevator accelerating upwards with $a$: $g_{\text{eff}} = g + a \implies T = 2\pi\sqrt{\frac{L}{g+a}}$ (period decreases).
+  \item Elevator accelerating downwards with $a$: $g_{\text{eff}} = g - a \implies T = 2\pi\sqrt{\frac{L}{g-a}}$ (period increases; free fall $a=g \implies T \to \infty$).
+  \item Horizontally accelerating vehicle: $g_{\text{eff}} = \sqrt{g^2 + a^2} \implies T = 2\pi\sqrt{\frac{L}{\sqrt{g^2 + a^2}}}$.
+  \item Pendulum in liquid of density $\sigma$ (bob density $\rho$): $g_{\text{eff}} = g\left(1 - \frac{\sigma}{\rho}\right) \implies T = 2\pi\sqrt{\frac{L}{g(1 - \sigma/\rho)}}$.
+\end{itemize}
+\textbf{3. Seconds Pendulum:} A pendulum whose time period is exactly $T = 2.0\,\mathrm{s}$ ($1\,\mathrm{s}$ tick each half-swing):
+\begin{equation}
+  L = \frac{g T^2}{4\pi^2} = \frac{9.8 \times 4}{4\pi^2} \approx \mathbf{0.993\,\mathrm{m} \approx 1.0\,\mathrm{m}}
+\end{equation}
+\end{formulabox}
+
+\begin{usecasebox}[Phase Circle (Phasor) Technique for Instantaneous Transit Times]
+To compute the transit time between any two positions $x_1$ and $x_2$ in SHM, project the motion onto a reference circle of radius $A$ rotating counterclockwise at angular velocity $\omega$:
+\begin{equation}
+  x = A \sin\theta, \quad \theta = \omega t \implies t = \frac{\Delta\theta}{\omega} = \frac{\Delta\theta}{2\pi} T
+\end{equation}
+\textit{High-Yield Benchmarks (Starting from Mean Position $x=0$):}
+\begin{itemize}
+  \item From $x = 0$ to $x = \frac{A}{2}$: $\theta_1 = 0 \to \theta_2 = 30^\circ = \frac{\pi}{6} \implies \mathbf{t = \frac{T}{12}}$.
+  \item From $x = \frac{A}{2}$ to $x = A$: $\Delta\theta = 90^\circ - 30^\circ = 60^\circ = \frac{\pi}{3} \implies \mathbf{t = \frac{T}{6}}$.
+  \item Notice: Traveling the outer half of amplitude takes \textbf{twice as long} as the inner half ($T/6$ vs $T/12$) due to deceleration.
+  \item From $x = 0$ to $x = \frac{A}{\sqrt{2}}$: $\theta = 45^\circ = \frac{\pi}{4} \implies \mathbf{t = \frac{T}{8}}$.
+\end{itemize}
+\end{usecasebox}
+
+\section{Wave Motion, Stretched Strings \& Organ Pipes}
+
+\begin{conceptbox}[Kinematics of 1D Harmonic Progressive Waves]
+A 1D transverse or longitudinal sinusoidal traveling wave propagating along the $+x$ direction:
+\begin{equation}
+  \mathbf{y(x,t) = A \sin(k x - \omega t + \phi) = A \sin\left[2\pi\left(\frac{x}{\lambda} - \nu t\right) + \phi\right]}
+\end{equation}
+where $k = \frac{2\pi}{\lambda}$ is the angular wave number, $\omega = 2\pi\nu$ is angular frequency.
+\begin{itemize}
+  \item \textbf{Wave Speed ($v$):} Speed of propagation of constant phase profile:
+  \begin{equation}
+    k x - \omega t = \text{const} \implies k \frac{dx}{dt} - \omega = 0 \implies \mathbf{v = \frac{\omega}{k} = \nu \lambda}
+  \end{equation}
+  \item \textbf{Particle Velocity ($v_p$) vs. Wave Velocity ($v$):}
+  \begin{equation}
+    v_p = \frac{\partial y}{\partial t} = -\omega A \cos(k x - \omega t), \qquad \frac{\partial y}{\partial x} = k A \cos(k x - \omega t)
+  \end{equation}
+  \begin{equation}
+    \mathbf{v_p = -v \left(\frac{\partial y}{\partial x}\right) = -v \times (\text{Wave profile slope})}
+  \end{equation}
+  If wave moves right ($v>0$) and slope is positive ($\partial y/\partial x > 0$), particle moves downwards ($v_p < 0$).
+  \item \textbf{Particle Acceleration:} $a_p = \frac{\partial^2 y}{\partial t^2} = -\omega^2 y$.
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Speeds of Transverse Waves on Strings \& Sound in Gases]
+\textbf{1. Transverse Wave on Stretched String:}
+\begin{equation}
+  \mathbf{v = \sqrt{\frac{T}{\mu}}}
+\end{equation}
+where $T$ is tension ($\mathrm{N}$), and $\mu = \frac{M}{L} = \rho A$ is linear mass density ($\mathrm{kg/m}$).
+\textit{Derivation via Centripetal Equilibrium of Arc Element:}
+Consider a small curved element of string of length $\Delta l = R \Delta\theta$ moving with wave speed $v$ along a circular crest of radius $R$. Mass of element $\Delta m = \mu \Delta l = \mu R \Delta\theta$.
+The inward restoring component of tension:
+\begin{equation}
+  F_{\text{inward}} = 2 T \sin\left(\frac{\Delta\theta}{2}\right) \approx T \Delta\theta
+\end{equation}
+Equating to centripetal force:
+\begin{equation}
+  T \Delta\theta = \frac{\Delta m \cdot v^2}{R} = \frac{(\mu R \Delta\theta) v^2}{R} = \mu v^2 \Delta\theta \implies \mathbf{v = \sqrt{\frac{T}{\mu}}}
+\end{equation}
+\textbf{2. Speed of Longitudinal Waves (Sound) in Fluids \& Gases:}
+\begin{itemize}
+  \item General relation: $v = \sqrt{\frac{B}{\rho}}$, where $B$ is bulk modulus of elasticity.
+  \item \textbf{Newton's Isothermal Formula (Erroneous):} Newton assumed sound compressions/rarefactions occur isothermally ($B = P$).
+  \begin{equation}
+    v_{\text{Newton}} = \sqrt{\frac{P}{\rho}} \approx \sqrt{\frac{1.013 \times 10^5}{1.293}} \approx 280\,\mathrm{m/s} \quad (\approx 15\% \text{ below experimental } 332\,\mathrm{m/s})
+  \end{equation}
+  \item \textbf{Laplace's Adiabatic Correction (Accurate):} Compressions and rarefactions occur so rapidly that heat exchange is zero ($dQ=0 \implies B_{\text{adiabatic}} = \gamma P$):
+  \begin{equation}
+    \mathbf{v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M_{\text{molar}}}}}
+  \end{equation}
+  For air ($\gamma \approx 1.4, M \approx 28.8 \times 10^{-3}\,\mathrm{kg/mol}$ at $273\,\mathrm{K}$): $v = 332\,\mathrm{m/s}$ (perfect agreement).
+  \item \textbf{Dependence on Environmental Factors:}
+  \begin{itemize}
+    \item \textit{Pressure:} Invariant of pressure at constant temperature (since $P/\rho = RT/M = \text{const}$).
+    \item \textit{Temperature:} $v \propto \sqrt{T} \implies v_t \approx v_0 + 0.61 t$ (for small temperatures $t^\circ\mathrm{C}$).
+    \item \textit{Humidity:} Moist air is less dense than dry air ($\rho_{\text{moist}} < \rho_{\text{dry}}$), so speed of sound \textbf{increases} with humidity.
+  \end{itemize}
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Standing Waves: Strings \& Organ Pipes with End Corrections]
+\textbf{1. Superposition \& Standing Wave Equation on String Fixed at Both Ends:}
+Two identical waves traveling in opposite directions: $y_1 = A\sin(kx - \omega t)$ and $y_2 = A\sin(kx + \omega t)$.
+\begin{equation}
+  y_{\text{net}} = y_1 + y_2 = \mathbf{[2A \sin(kx)] \cos(\omega t)}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Nodes ($y=0$):} $\sin(kx) = 0 \implies kx = n\pi \implies \mathbf{x = \frac{n\lambda}{2}}$ ($n = 0, 1, 2, \dots$).
+  \item \textbf{Antinodes ($|y|=2A$):} $|\sin(kx)| = 1 \implies \mathbf{x = (2n-1)\frac{\lambda}{4}}$.
+  \item Boundary condition: nodes at $x = 0$ and $x = L \implies L = n\frac{\lambda}{2} \implies \mathbf{\nu_n = n \left(\frac{v}{2L}\right) = n \nu_1}$ (\textbf{All harmonics present}: $1 : 2 : 3 : \dots$).
+\end{itemize}
+\textbf{2. Closed Organ Pipe (One End Closed, One End Open):}
+Boundary condition: Node at closed end, Antinode at open end. Length $L = (2n-1)\frac{\lambda}{4}$:
+\begin{equation}
+  \mathbf{\nu_n = (2n-1)\frac{v}{4L} = (2n-1)\nu_1} \qquad \text{where fundamental } \nu_1 = \frac{v}{4L}
+\end{equation}
+\textbf{Only odd harmonics exist} in a closed organ pipe ($\nu_1 : \nu_3 : \nu_5 = 1 : 3 : 5 : \dots$). No even harmonics.
+\textbf{3. Open Organ Pipe (Both Ends Open):}
+Boundary condition: Antinodes at both open ends. Length $L = n\frac{\lambda}{2}$:
+\begin{equation}
+  \mathbf{\nu_n = n \frac{v}{2L} = n \nu_1} \qquad \text{where fundamental } \nu_1 = \frac{v}{2L}
+\end{equation}
+\textbf{All harmonics exist} ($\nu_1 : \nu_2 : \nu_3 = 1 : 2 : 3 : \dots$). Tone is richer/sweeter than closed pipe.
+\textbf{4. End Correction ($e$):}
+Antinode forms slightly outside the physical open tube boundary due to finite acoustic inertia of moving air:
+\begin{equation}
+  e \approx 0.6 r \quad (\text{where } r \text{ is tube inner radius})
+\end{equation}
+\begin{itemize}
+  \item For Closed Pipe: $L_{\text{eff}} = L + e = L + 0.6r$.
+  \item For Open Pipe: $L_{\text{eff}} = L + 2e = L + 1.2r$.
+  \item \textbf{Resonance Tube Method to eliminate $e$:}
+  Using 1st resonance length $l_1$ and 2nd resonance length $l_2$ for a tuning fork of frequency $\nu$:
+  \begin{equation}
+    l_1 + e = \frac{\lambda}{4}, \qquad l_2 + e = \frac{3\lambda}{4} \implies l_2 - l_1 = \frac{\lambda}{2} \implies \mathbf{\lambda = 2(l_2 - l_1)}
+  \end{equation}
+  \begin{equation}
+    \mathbf{v = 2\nu(l_2 - l_1)}, \qquad \mathbf{e = \frac{l_2 - 3l_1}{2}}
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Acoustic Beats: Analytical Derivation]
+Consider superposition of two harmonic sound waves of equal amplitude $A$ and slightly differing frequencies $\nu_1, \nu_2$ ($\omega_1 \approx \omega_2$):
+\begin{equation}
+  y_1 = A\sin(\omega_1 t), \qquad y_2 = A\sin(\omega_2 t)
+\end{equation}
+\begin{equation}
+  y_{\text{net}} = y_1 + y_2 = 2A \cos\left(\frac{\omega_1 - \omega_2}{2}t\right) \sin\left(\frac{\omega_1 + \omega_2}{2}t\right) = A_{\text{mod}}(t) \sin(\omega_{\text{avg}} t)
+\end{equation}
+The modulated amplitude is $A_{\text{mod}}(t) = 2A \cos(\pi(\nu_1 - \nu_2)t)$.
+Intensity $I \propto A_{\text{mod}}^2 \propto \cos^2(\pi(\nu_1 - \nu_2)t) = \frac{1 + \cos(2\pi(\nu_1 - \nu_2)t)}{2}$.
+Maximum intensity occurs whenever $2\pi(\nu_1 - \nu_2)t = n\pi \implies t = \frac{n}{|\nu_1 - \nu_2|}$.
+Time interval between consecutive waxing/waning: $\Delta t = \frac{1}{|\nu_1 - \nu_2|}$.
+\begin{equation}
+  \mathbf{\nu_{\text{beat}} = |\nu_1 - \nu_2|}
+\end{equation}
+\textit{Tuning Fork Rules:}
+\begin{itemize}
+  \item Loading fork with wax increases inertia $\implies \nu$ decreases.
+  \item Filing fork prongs decreases mass $\implies \nu$ increases.
+\end{itemize}
+\end{formulabox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Complete Deletion of Doppler Effect]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NMC curriculum for NEET UG 2027:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The \textbf{Doppler Effect in Sound Waves} (apparent frequency shifts $f' = f\frac{v \pm v_0}{v \mp v_s}$, moving observers, moving sources, echo reflection from cliffs, acoustic shockwaves) has been \textbf{completely eliminated} from the syllabus.
+  \item \textbf{EXAM ORIENTATION:} Candidates must not solve Doppler frequency formulas. Instead, master Standing Waves, Harmonics in Organ Pipes, Resonance Tube end corrections, and Beats.
+\end{itemize}
+\end{trapbox}
+
+\section{Master High-Yield Problem Archetypes \& Worked Solutions}
+
+\begin{usecasebox}[Archetype 1: Ice-Water-Steam Calorimetry Mixing Equilibrium]
+\textbf{Problem:} $10\,\mathrm{g}$ of ice at $-10^\circ\mathrm{C}$ is mixed with $10\,\mathrm{g}$ of steam at $100^\circ\mathrm{C}$ in an insulated calorimeter of negligible heat capacity. Determine the final equilibrium temperature and the constitution of the mixture.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}
+  \item Heat required to bring ice from $-10^\circ\mathrm{C}$ to liquid water at $100^\circ\mathrm{C}$:
+  \begin{itemize}
+    \item Warm ice to $0^\circ\mathrm{C}$: $Q_1 = m_{\text{ice}} s_{\text{ice}} \Delta T = 10 \times 0.5 \times 10 = 50\,\mathrm{cal}$.
+    \item Melt ice at $0^\circ\mathrm{C}$: $Q_2 = m_{\text{ice}} L_f = 10 \times 80 = 800\,\mathrm{cal}$.
+    \item Warm water to $100^\circ\mathrm{C}$: $Q_3 = m_{\text{ice}} s_w \Delta T = 10 \times 1.0 \times 100 = 1000\,\mathrm{cal}$.
+    \item Total heat absorbed to reach $100^\circ\mathrm{C}$ water: $Q_{\text{absorb}} = 50 + 800 + 1000 = \mathbf{1850\,\mathrm{cal}}$.
+  \end{itemize}
+  \item Total latent heat available from steam condensing at $100^\circ\mathrm{C}$:
+  \begin{equation}
+    Q_{\text{condense, total}} = m_{\text{steam}} L_v = 10 \times 540 = \mathbf{5400\,\mathrm{cal}}
+  \end{equation}
+  \item Notice that $Q_{\text{condense, total}} = 5400\,\mathrm{cal} > Q_{\text{absorb}} = 1850\,\mathrm{cal}$.
+  Therefore, not all steam condenses! The mixture reaches dynamic equilibrium at \textbf{$T_{\text{eq}} = 100^\circ\mathrm{C}$}.
+  \item Mass of steam condensed to supply $1850\,\mathrm{cal}$:
+  \begin{equation}
+    m_{\text{condensed}} = \frac{1850\,\mathrm{cal}}{540\,\mathrm{cal/g}} \approx 3.43\,\mathrm{g}
+  \end{equation}
+  \item Surviving steam: $m_{\text{steam, remaining}} = 10 - 3.43 = \mathbf{6.57\,\mathrm{g}}$.
+  \item Total water at $100^\circ\mathrm{C}$: $m_{\text{water}} = 10 + 3.43 = \mathbf{13.43\,\mathrm{g}}$.
+\end{enumerate}
+\end{usecasebox}
+
+\begin{usecasebox}[Archetype 2: Mixture of Distinct Polyatomic \& Monoatomic Gases]
+\textbf{Problem:} $2$ moles of Helium (monoatomic, $\gamma_1 = 5/3$) are mixed with $3$ moles of Oxygen (diatomic, rigid, $\gamma_2 = 7/5$). Calculate $C_{v,\text{mix}}$, $C_{p,\text{mix}}$, and the adiabatic exponent $\gamma_{\text{mix}}$.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}
+  \item Molar heat capacities of individual gases:
+  \begin{itemize}
+    \item Helium (monoatomic): $C_{v1} = \frac{3}{2}R$, $C_{p1} = \frac{5}{2}R$.
+    \item Oxygen (diatomic): $C_{v2} = \frac{5}{2}R$, $C_{p2} = \frac{7}{2}R$.
+  \end{itemize}
+  \item Total moles: $n_{\text{total}} = 2 + 3 = 5\,\mathrm{mol}$.
+  \item Equivalent $C_{v,\text{mix}}$:
+  \begin{equation}
+    C_{v,\text{mix}} = \frac{n_1 C_{v1} + n_2 C_{v2}}{n_1 + n_2} = \frac{2 \left(\frac{3}{2}R\right) + 3 \left(\frac{5}{2}R\right)}{5} = \frac{3R + 7.5R}{5} = \frac{10.5R}{5} = \mathbf{2.1 R} = \frac{21}{10}R
+  \end{equation}
+  \item Equivalent $C_{p,\text{mix}}$:
+  \begin{equation}
+    C_{p,\text{mix}} = C_{v,\text{mix}} + R = 2.1 R + R = \mathbf{3.1 R} = \frac{31}{10}R
+  \end{equation}
+  \item Equivalent adiabatic index $\gamma_{\text{mix}}$:
+  \begin{equation}
+    \gamma_{\text{mix}} = \frac{C_{p,\text{mix}}}{C_{v,\text{mix}}} = \frac{3.1 R}{2.1 R} = \frac{31}{21} \approx \mathbf{1.476}
+  \end{equation}
+\end{enumerate}
+\end{usecasebox}
+
+\begin{usecasebox}[Archetype 3: Resonance Tube End Correction \& Speed of Sound]
+\textbf{Problem:} A tuning fork of frequency $\nu = 512\,\mathrm{Hz}$ excites the first two resonances in a resonance water tube at lengths $l_1 = 15.2\,\mathrm{cm}$ and $l_2 = 48.0\,\mathrm{cm}$. Compute the speed of sound in air and the inner pipe radius $r$.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}
+  \item The fundamental difference between resonances isolates the half-wavelength:
+  \begin{equation}
+    \frac{\lambda}{2} = l_2 - l_1 = 48.0\,\mathrm{cm} - 15.2\,\mathrm{cm} = 32.8\,\mathrm{cm} \implies \lambda = 65.6\,\mathrm{cm} = 0.656\,\mathrm{m}
+  \end{equation}
+  \item Speed of sound in air:
+  \begin{equation}
+    v = \nu \lambda = 512\,\mathrm{s}^{-1} \times 0.656\,\mathrm{m} = \mathbf{335.87\,\mathrm{m/s}}
+  \end{equation}
+  \item End correction $e$:
+  \begin{equation}
+    e = \frac{l_2 - 3l_1}{2} = \frac{48.0 - 3(15.2)}{2} = \frac{48.0 - 45.6}{2} = \frac{2.4}{2} = \mathbf{1.2\,\mathrm{cm}}
+  \end{equation}
+  \item Inner radius $r$ of the tube using $e \approx 0.6 r$:
+  \begin{equation}
+    r = \frac{e}{0.6} = \frac{1.2\,\mathrm{cm}}{0.6} = \mathbf{2.0\,\mathrm{cm}}
+  \end{equation}
+\end{enumerate}
+\end{usecasebox}
+
+\end{document}

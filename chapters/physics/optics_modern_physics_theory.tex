@@ -1,0 +1,716 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{../../styles/neet_style}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \textbf{NEET UG 2027: Optics \& Modern Physics Master Theory}}
+\fancyhead[R]{\small Satya Prakash}
+\fancyfoot[L]{\small \textbf{NEET UG 2027 Prep Series}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textbf{Physics Chapter Notes}}
+
+\begin{document}
+
+% Title Header Banner
+\begin{center}
+  {\Huge \textbf{NEET UG 2027: Master Chapter Theory}}\\[6pt]
+  {\Large \textbf{Ray Optics, Wave Optics, Quantum Radiation, Atomic \& Nuclear Physics, Semiconductors}}\\[4pt]
+  {\small \textbf{Prepared, Compiled \& Authored by Satya Prakash} $\cdot$ Strictly Calibrated to Revised NMC Syllabus}
+  \vspace{4pt}
+  \hrule height 1.5pt
+\end{center}
+
+\section{Ray Optics, Reflection, Refraction \& Total Internal Reflection}
+
+\begin{conceptbox}[Foundations of Geometric Optics \& Sign Conventions]
+\textbf{1. Cartesian Sign Convention (Strict Standard):}
+\begin{itemize}
+  \item All optical distances are measured along the principal axis starting from the optical pole ($P$) or optical centre ($O$).
+  \item Distances measured in the direction of incident light are \textbf{positive} ($+$); distances opposite to incident light are \textbf{negative} ($-$).
+  \item Heights measured perpendicularly upwards above the principal axis are \textbf{positive} ($+$); heights downwards are \textbf{negative} ($-$).
+\end{itemize}
+\textbf{2. Reflection at Spherical Mirrors:}
+\begin{equation}
+  \mathbf{\frac{1}{v} + \frac{1}{u} = \frac{1}{f} = \frac{2}{R}}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Concave Mirror:} $f < 0, R < 0$ (converging). Produces real inverted images for $u > |f|$, and virtual erect magnified image for $u < |f|$.
+  \item \textbf{Convex Mirror:} $f > 0, R > 0$ (diverging). Produces virtual, erect, diminished images for all real object locations.
+  \item \textbf{Transverse (Linear) Magnification:}
+  \begin{equation}
+    \mathbf{m = \frac{h_i}{h_o} = -\frac{v}{u} = \frac{f}{f - u} = \frac{f - v}{f}}
+  \end{equation}
+  $m < 0 \implies$ real, inverted; $m > 0 \implies$ virtual, erect.
+  \item \textbf{Longitudinal Magnification for Small Objects ($du$):} $m_L = \frac{dv}{du} = -m^2 = -\left(\frac{v}{u}\right)^2$.
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Refraction at Plane Interfaces, Apparent Depth \& Total Internal Reflection]
+\textbf{1. Snell's Law of Refraction:}
+\begin{equation}
+  \mathbf{n_1 \sin i = n_2 \sin r \implies \frac{\sin i}{\sin r} = \frac{n_2}{n_1} = \,^1n_2 = \frac{v_1}{v_2} = \frac{\lambda_1}{\lambda_2}}
+\end{equation}
+Frequency $\nu$ remains invariant across any refractive boundary: $\nu_1 = \nu_2 = \nu$.
+\textbf{2. Apparent Depth \& Normal Shift in Dense Media:}
+An object placed at real depth $d$ in a medium of refractive index $\mu$ viewed normally from air:
+\begin{equation}
+  \mathbf{d_{\text{apparent}} = \frac{d}{\mu}}, \qquad \mathbf{\text{Normal Shift } \Delta t = d - d_{\text{app}} = d\left(1 - \frac{1}{\mu}\right)}
+\end{equation}
+For composite multiple horizontal layers: $d_{\text{apparent, total}} = \sum_{i=1}^n \frac{d_i}{\mu_i}$.
+\textbf{3. Total Internal Reflection (TIR):}
+When light propagates from an optically denser medium ($n_1$) toward a rarer medium ($n_2 < n_1$):
+\begin{itemize}
+  \item Critical angle $i_c$: angle of incidence where angle of refraction $r = 90^\circ$:
+  \begin{equation}
+    n_1 \sin i_c = n_2 \sin 90^\circ \implies \mathbf{\sin i_c = \frac{n_2}{n_1} = \frac{1}{\mu}} \quad (\text{if rarer medium is air, } n_2 = 1)
+  \end{equation}
+  \item For $i > i_c$, $100\%$ of incident light energy reflects back into the denser medium with zero transmission loss.
+  \item \textbf{Optical Fibres:} Comprise a central cylindrical core ($\mu_1$) surrounded by a cladding ($\mu_2 < \mu_1$). Light admitted within the cone of acceptance undergoes repeated total internal reflections.
+  \begin{equation}
+    \mathbf{\text{Numerical Aperture (NA)} = \sin\theta_a = \sqrt{\mu_1^2 - \mu_2^2}}
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Refraction at a Single Spherical Surface: First-Principles Derivation]
+Consider a convex spherical refracting interface of radius of curvature $R$ separating medium 1 ($\mu_1$) from medium 2 ($\mu_2$). A point object $O$ lies on the principal axis in medium 1 at distance $-u$. Light refracts to form an image $I$ at $+v$ in medium 2.
+\begin{enumerate}
+  \item Let ray from $O$ strike surface at $M$ near pole $P$. Let angles with principal axis be $\alpha$ (at $O$), $\beta$ (at $I$), and $\theta$ (at center of curvature $C$).
+  \item In triangle $OMC$, exterior angle is incidence angle: $i = \alpha + \theta$.
+  \item In triangle $IMC$, exterior angle is $\theta$: $\theta = r + \beta \implies r = \theta - \beta$.
+  \item Under paraxial approximations ($\tan\phi \approx \phi \approx \sin\phi$ and $M \approx P$):
+  \begin{equation}
+    \alpha \approx \frac{PM}{u} = -\frac{h}{u}, \qquad \beta \approx \frac{PM}{v} = \frac{h}{v}, \qquad \theta \approx \frac{PM}{R} = \frac{h}{R}
+  \end{equation}
+  \item By Snell's Law for small angles: $\mu_1 i = \mu_2 r$.
+  \begin{equation}
+    \mu_1 (\alpha + \theta) = \mu_2 (\theta - \beta) \implies \mu_1 \alpha + \mu_2 \beta = (\mu_2 - \mu_1)\theta
+  \end{equation}
+  \item Substituting the paraxial arc angles:
+  \begin{equation}
+    \mu_1 \left(-\frac{h}{u}\right) + \mu_2 \left(\frac{h}{v}\right) = (\mu_2 - \mu_1)\frac{h}{R}
+  \end{equation}
+  Cancelling $h$:
+  \begin{equation}
+    \mathbf{\frac{\mu_2}{v} - \frac{\mu_1}{u} = \frac{\mu_2 - \mu_1}{R}}
+  \end{equation}
+\end{enumerate}
+This master governing formula holds universally for both convex and concave surfaces, whether light travels from rarer to denser or denser to rarer, provided proper Cartesian signs are used for $u, v, R$.
+\end{formulabox}
+
+\section{Thin Lenses, Lens-Maker's Formula, Prisms \& Optical Instruments}
+
+\begin{formulabox}[Lens-Maker's Formula \& Thin Lens Equation: Step-by-Step Proof]
+Consider a thin lens of refractive index $\mu_2$ bounded by spherical surfaces of radii $R_1$ and $R_2$ immersed in a surrounding medium of refractive index $\mu_1$.
+\begin{enumerate}
+  \item \textbf{Refraction at First Surface ($R_1$):} Object at $u$, forms intermediate image at $v'$:
+  \begin{equation}
+    \frac{\mu_2}{v'} - \frac{\mu_1}{u} = \frac{\mu_2 - \mu_1}{R_1} \tag{Eq. 1}
+  \end{equation}
+  \item \textbf{Refraction at Second Surface ($R_2$):} The intermediate image $v'$ serves as a virtual object for the second interface, forming final image at $v$:
+  \begin{equation}
+    \frac{\mu_1}{v} - \frac{\mu_2}{v'} = \frac{\mu_1 - \mu_2}{R_2} = -\frac{\mu_2 - \mu_1}{R_2} \tag{Eq. 2}
+  \end{equation}
+  \item \textbf{Adding Equations (1) and (2):} The intermediate term $\frac{\mu_2}{v'}$ cancels completely:
+  \begin{equation}
+    \mu_1 \left(\frac{1}{v} - \frac{1}{u}\right) = (\mu_2 - \mu_1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)
+  \end{equation}
+  Dividing through by $\mu_1$:
+  \begin{equation}
+    \frac{1}{v} - \frac{1}{u} = \left(\frac{\mu_2}{\mu_1} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)
+  \end{equation}
+  \item Setting $u \to -\infty \implies v = f$:
+  \begin{equation}
+    \mathbf{\frac{1}{f} = \left(\frac{\mu_{\text{lens}}}{\mu_{\text{medium}}} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)} \quad (\text{Lens-Maker's Formula})
+  \end{equation}
+  \begin{equation}
+    \mathbf{\frac{1}{v} - \frac{1}{u} = \frac{1}{f}} \quad (\text{Gaussian Thin Lens Formula})
+  \end{equation}
+\end{enumerate}
+\textbf{3. Optical Power ($P$):}
+\begin{equation}
+  \mathbf{P = \frac{1}{f\,[\mathrm{m}]}} \quad [\mathrm{Dioptres}, \mathrm{D} = \mathrm{m}^{-1}]
+\end{equation}
+\textbf{4. Combination of Thin Lenses:}
+\begin{itemize}
+  \item \textbf{Lenses in Contact:} $\mathbf{P_{\text{eq}} = P_1 + P_2 \implies \frac{1}{F_{\text{eq}}} = \frac{1}{f_1} + \frac{1}{f_2}}$, magnification $m = m_1 \times m_2$.
+  \item \textbf{Separated by Distance $d$:} $\mathbf{P_{\text{eq}} = P_1 + P_2 - d P_1 P_2 \implies \frac{1}{F_{\text{eq}}} = \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2}}$.
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Refraction Through Prisms, Minimum Deviation \& Dispersion]
+A triangular prism of refracting angle $A$ and refractive index $\mu$:
+\begin{enumerate}
+  \item \textbf{Geometric Relations:}
+  \begin{equation}
+    r_1 + r_2 = A, \qquad \mathbf{\delta = i + e - A}
+  \end{equation}
+  where $i$ is incidence angle, $e$ is emergence angle, and $\delta$ is angular deviation.
+  \item \textbf{Condition for Minimum Deviation ($\delta = \delta_m$):}
+  By symmetry and reversibility of light paths: $i = e$ and $r_1 = r_2 = \frac{A}{2}$.
+  \begin{equation}
+    \delta_m = 2i - A \implies i = \frac{A + \delta_m}{2}
+  \end{equation}
+  Applying Snell's law at first refracting surface ($\sin i = \mu \sin r_1$):
+  \begin{equation}
+    \mathbf{\mu = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)}} \quad (\text{Prism Formula})
+  \end{equation}
+  \item \textbf{Thin Prism Approximation ($A \le 10^\circ$):}
+  \begin{equation}
+    \sin\theta \approx \theta \implies \frac{A + \delta}{2} \approx \mu \frac{A}{2} \implies \mathbf{\delta = (\mu - 1) A}
+  \end{equation}
+  \item \textbf{Dispersion \& Dispersive Power ($\omega$):}
+  \begin{itemize}
+    \item Angular Dispersion: $\mathbf{\theta = \delta_V - \delta_R = (\mu_V - \mu_R) A}$.
+    \item Mean Deviation (Yellow light): $\delta_Y = (\mu_Y - 1) A$.
+    \item Dispersive Power: $\mathbf{\omega = \frac{\delta_V - \delta_R}{\delta_Y} = \frac{\mu_V - \mu_R}{\mu_Y - 1}}$ (Independent of prism angle $A$).
+  \end{itemize}
+\end{enumerate}
+\end{formulabox}
+
+\begin{formulabox}[Magnifying Power of Optical Instruments: Microscopes \& Telescopes]
+\textbf{1. Simple Microscope (Magnifying Glass):}
+\begin{itemize}
+  \item Image formed at Near Point ($D = 25\,\mathrm{cm}$): $\mathbf{m = 1 + \frac{D}{f}}$ (Maximum magnification, strained eye).
+  \item Image formed at Infinity (Normal Adjustment): $\mathbf{m = \frac{D}{f}}$ (Relaxed eye).
+\end{itemize}
+\textbf{2. Compound Microscope:}
+Objective lens ($f_o$, small aperture) + Eyepiece ($f_e$, larger aperture).
+\begin{itemize}
+  \item Total Magnifying Power: $m = m_o \times m_e = \left(-\frac{v_o}{u_o}\right) m_e$.
+  \item \textbf{Near Point Adjustment ($D$):} $\mathbf{m = -\frac{v_o}{u_o}\left(1 + \frac{D}{f_e}\right)}$, Tube length $L = v_o + |u_e|$.
+  \item \textbf{Normal Adjustment (Infinity):} $\mathbf{m \approx -\frac{L}{f_o}\frac{D}{f_e}}$, Tube length $L = v_o + f_e$.
+\end{itemize}
+\textbf{3. Astronomical Refracting Telescope:}
+Objective ($f_o$, large aperture) + Eyepiece ($f_e$, small aperture).
+\begin{itemize}
+  \item \textbf{Normal Adjustment (Image at Infinity):} $\mathbf{m = -\frac{f_o}{f_e}}$, Tube length $\mathbf{L = f_o + f_e}$.
+  \item \textbf{Near Point Adjustment ($D$):} $\mathbf{m = -\frac{f_o}{f_e}\left(1 + \frac{f_e}{D}\right)}$, Tube length $L = f_o + \frac{f_e D}{f_e + D}$.
+\end{itemize}
+\end{formulabox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Deletion of Resolving Power of Optical Instruments]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NEET UG curriculum:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The theoretical formulas for \textbf{Resolving Power of a Microscope} ($\text{RP} = \frac{2\mu\sin\theta}{1.22\lambda}$) and \textbf{Resolving Power of an Astronomical Telescope} ($\text{RP} = \frac{D}{1.22\lambda}$), along with Rayleigh's criterion angular limit $\theta = \frac{1.22\lambda}{D}$, have been \textbf{completely deleted}.
+  \item \textbf{EXAM ORIENTATION:} Candidates must focus on Magnifying Power derivations, tube lengths, and ray diagrams of microscopes/telescopes without computing resolving powers.
+\end{itemize}
+\end{trapbox}
+
+\section{Wave Optics: Huygens' Principle, Interference \& Diffraction}
+
+\begin{conceptbox}[Wavefronts, Huygens' Secondary Wavelets \& Interference Physics]
+\textbf{1. Wavefront Classification:}
+A wavefront is the locus of all adjacent points in a medium vibrating with identical instantaneous phase:
+\begin{itemize}
+  \item \textbf{Spherical Wavefront:} Emitted by an isotropic point source; intensity falls as $I \propto \frac{1}{r^2}$, amplitude $A \propto \frac{1}{r}$.
+  \item \textbf{Cylindrical Wavefront:} Emitted by a linear slit source; intensity $I \propto \frac{1}{r}$, amplitude $A \propto \frac{1}{\sqrt{r}}$.
+  \item \textbf{Plane Wavefront:} Formed at infinite distance from any source; intensity and amplitude remain constant.
+  \item Light rays are everywhere perpendicular (normal) to the advancing wavefront.
+\end{itemize}
+\textbf{2. Huygens' Principle:}
+\begin{enumerate}
+  \item Every point on a primary wavefront acts as a source of secondary spherical wavelets spreading in all forward directions at the speed of the wave.
+  \item The forward envelope (tangential surface) touching all these secondary wavelets at any subsequent instant defines the new position of the wavefront.
+\end{enumerate}
+\textbf{3. Superposition of Two Coherent Waves:}
+Let two waves of identical frequency have amplitudes $a_1, a_2$ and relative phase difference $\phi$:
+\begin{equation}
+  y_1 = a_1 \sin(\omega t), \qquad y_2 = a_2 \sin(\omega t + \phi)
+\end{equation}
+Resultant amplitude $A_R$ and resultant intensity $I_R$:
+\begin{equation}
+  \mathbf{A_R = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 \cos\phi}}, \qquad \mathbf{I_R = I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\phi}
+\end{equation}
+If two sources are identical ($I_1 = I_2 = I_0$):
+\begin{equation}
+  \mathbf{I_R = 2I_0(1 + \cos\phi) = 4I_0 \cos^2\left(\frac{\phi}{2}\right)}
+\end{equation}
+\begin{itemize}
+  \item \textbf{Constructive Interference (Bright Fringes):} $\phi = 2n\pi \iff \Delta x = n\lambda \implies \mathbf{I_{\max} = (\sqrt{I_1} + \sqrt{I_2})^2 = 4I_0}$.
+  \item \textbf{Destructive Interference (Dark Fringes):} $\phi = (2n-1)\pi \iff \Delta x = (2n-1)\frac{\lambda}{2} \implies \mathbf{I_{\min} = (\sqrt{I_1} - \sqrt{I_2})^2 = 0}$.
+  \item \textbf{Fringe Contrast / Visibility:} $V = \frac{I_{\max} - I_{\min}}{I_{\max} + I_{\min}} = \frac{2\sqrt{I_1 I_2}}{I_1 + I_2}$.
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Young's Double Slit Experiment (YDSE): Path Difference \& Fringe Width]
+Two narrow slits $S_1, S_2$ separated by distance $d$ illuminate a screen at distance $D \gg d$. Let $P$ be a point at height $y$ from the central line.
+\begin{enumerate}
+  \item Path difference $\Delta x = S_2 P - S_1 P$:
+  \begin{equation}
+    S_2 P^2 - S_1 P^2 = \left[D^2 + \left(y + \frac{d}{2}\right)^2\right] - \left[D^2 + \left(y - \frac{d}{2}\right)^2\right] = 2yd
+  \end{equation}
+  \begin{equation}
+    (S_2 P - S_1 P)(S_2 P + S_1 P) = 2yd \implies \Delta x \approx \frac{2yd}{2D} \implies \mathbf{\Delta x = \frac{yd}{D} = d\sin\theta}
+  \end{equation}
+  \item \textbf{Bright Fringe Positions (Maxima):}
+  \begin{equation}
+    \Delta x = n\lambda \implies \frac{y_n d}{D} = n\lambda \implies \mathbf{y_n = \frac{n\lambda D}{d}} \quad (n = 0, \pm 1, \pm 2, \dots)
+  \end{equation}
+  \item \textbf{Dark Fringe Positions (Minima):}
+  \begin{equation}
+    \Delta x = (2n-1)\frac{\lambda}{2} \implies \mathbf{y_n' = (2n-1)\frac{\lambda D}{2d}} \quad (n = 1, 2, 3, \dots)
+  \end{equation}
+  \item \textbf{Fringe Width ($\beta$):} Distance separating any two consecutive bright or dark fringes:
+  \begin{equation}
+    \mathbf{\beta = y_{n+1} - y_n = \frac{\lambda D}{d}}
+  \end{equation}
+  $\beta$ is completely uniform across all fringe orders on the screen.
+  \item \textbf{Angular Fringe Width ($\theta_0$):}
+  \begin{equation}
+    \mathbf{\theta_0 = \frac{\beta}{D} = \frac{\lambda}{d}} \quad (\text{Independent of screen distance } D)
+  \end{equation}
+  \item \textbf{Fringe Shift due to Transparent Thin Sheet of Thickness $t$ and Index $\mu$:}
+  Introducing the sheet in front of one slit introduces additional optical path $(\mu - 1)t$:
+  \begin{equation}
+    \mathbf{\Delta y_0 = \frac{(\mu - 1)t D}{d} = \frac{(\mu - 1)t}{\lambda}\beta}
+  \end{equation}
+  The entire fringe pattern shifts toward the covered slit without changing fringe width $\beta$.
+\end{enumerate}
+\end{formulabox}
+
+\begin{formulabox}[Single-Slit Fraunhofer Diffraction: Minima \& Central Maximum Width]
+Light of wavelength $\lambda$ illuminates a single rectangular slit of width $a$.
+\begin{enumerate}
+  \item \textbf{Diffraction Minima Condition:}
+  The slit aperture is divided into $2n$ equal zones that cancel pairwise:
+  \begin{equation}
+    \mathbf{a \sin\theta = n \lambda} \quad (n = \pm 1, \pm 2, \pm 3, \dots)
+  \end{equation}
+  For small angles: $\theta_n \approx \frac{n\lambda}{a}$.
+  \item \textbf{Secondary Maxima Condition:}
+  \begin{equation}
+    \mathbf{a \sin\theta \approx (2n+1)\frac{\lambda}{2}} \quad (n = 1, 2, 3, \dots)
+  \end{equation}
+  Peak intensities drop precipitously: $I_0 : \frac{I_0}{22} : \frac{I_0}{61} : \dots$
+  \item \textbf{Angular Width of Central Maximum ($2\theta_0$):}
+  Bounded by the first diffraction minima on either side ($n = \pm 1$):
+  \begin{equation}
+    \mathbf{2\theta_0 = \frac{2\lambda}{a}}
+  \end{equation}
+  \item \textbf{Linear Width of Central Diffraction Maximum ($W$):}
+  \begin{equation}
+    \mathbf{W = 2 y_1 = 2 \left(\frac{\lambda D}{a}\right) = \frac{2\lambda D}{a}}
+  \end{equation}
+  Notice: The central diffraction peak is \textbf{twice as wide} as secondary maxima ($W = 2\beta_{\text{diff}}$).
+\end{enumerate}
+\end{formulabox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Complete Deletion of Light Polarisation]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NEET UG syllabus issued by the National Medical Commission:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The entire topic of \textbf{Polarisation of Light} has been \textbf{completely eliminated}.
+  \item Deleted concepts include: Brewster's Law of polarisation by reflection ($\tan i_p = \mu$), Brewster's angle, Malus' Law of transmitted intensity ($I = I_0 \cos^2\theta$), Polaroid sheets, polarisation by scattering, and optical activity.
+  \item \textbf{EXAM ORIENTATION:} Candidates must focus solely on Wavefronts, Huygens' Principle, YDSE Interference, and Single-Slit Fraunhofer Diffraction.
+\end{itemize}
+\end{trapbox}
+
+\section{Dual Nature of Matter \& Radiation: Photoelectric Effect \& de Broglie Waves}
+
+\begin{conceptbox}[Photoelectric Effect: Experimental Laws \& Einstein's Quantum Derivation]
+\textbf{1. Key Experimental Observations (Hertz, Hallwachs, Lenard):}
+\begin{itemize}
+  \item \textbf{Instantaneous Emission:} Electron emission occurs without any measurable time lag ($< 10^{-9}\,\mathrm{s}$), contradicting classical wave continuous energy buildup.
+  \item \textbf{Threshold Frequency ($\nu_0$):} For each photosensitive metal, there exists a minimum characteristic threshold frequency $\nu_0$ below which \textbf{no photoelectrons are emitted}, regardless of incident light intensity or duration.
+  \item \textbf{Kinetic Energy vs. Frequency:} Maximum kinetic energy $K_{\max}$ is strictly linear with incident frequency $\nu$ and completely independent of light intensity.
+  \item \textbf{Saturation Current vs. Intensity:} Photoelectric saturation current is strictly proportional to incident light intensity (photon flux).
+\end{itemize}
+\textbf{2. Einstein's Photoelectric Equation Derivation:}
+Light consists of discrete energy quanta called \textbf{photons}, each carrying energy $E = h\nu$.
+When a photon of energy $h\nu$ collides with a conduction electron, its entire energy is transferred to that single electron. A portion equal to the metal's \textbf{work function} ($\Phi_0 = h\nu_0$) is consumed to overcome surface binding; the remainder appears as maximum electron kinetic energy:
+\begin{equation}
+  h\nu = \Phi_0 + K_{\max} \implies \mathbf{K_{\max} = h\nu - \Phi_0 = h(\nu - \nu_0) = \frac{hc}{\lambda} - \frac{hc}{\lambda_0}}
+\end{equation}
+where $h = 6.626 \times 10^{-34}\,\mathrm{J}\cdot\mathrm{s}$ is Planck's constant ($hc \approx 12400\,\mathrm{eV}\cdot\text{\AA} \approx 1240\,\mathrm{eV}\cdot\mathrm{nm}$).
+\textbf{3. Stopping Potential ($V_0$):}
+The negative retarding collector potential required to halt the most energetic photoelectrons:
+\begin{equation}
+  K_{\max} = e V_0 \implies \mathbf{V_0 = \left(\frac{h}{e}\right)\nu - \frac{\Phi_0}{e} = \left(\frac{h}{e}\right)(\nu - \nu_0)}
+\end{equation}
+\textit{Universal Graph Property:} In the $V_0$ vs. $\nu$ straight-line graph, the slope is a universal constant:
+\begin{equation}
+  \mathbf{\text{Slope} = \frac{h}{e} \approx 4.14 \times 10^{-15}\,\mathrm{V}\cdot\mathrm{s}}
+\end{equation}
+The horizontal axis intercept is threshold frequency $\nu_0$; vertical axis intercept is $-\Phi_0/e$.
+\end{conceptbox}
+
+\begin{formulabox}[de Broglie Matter Waves: Particle-Wave Duality Expressions]
+Louis de Broglie postulated that any moving material particle of mass $m$ and velocity $v$ possesses an associated matter wave:
+\begin{equation}
+  \mathbf{\lambda = \frac{h}{p} = \frac{h}{m v} = \frac{h}{\sqrt{2 m K}}}
+\end{equation}
+where $K$ is kinetic energy.
+\textbf{1. De Broglie Wavelength of Charged Particles Accelerated through Potential $V$:}
+$K = q V \implies \lambda = \frac{h}{\sqrt{2 m q V}}$.
+\begin{itemize}
+  \item \textbf{Electron ($m = 9.109 \times 10^{-31}\,\mathrm{kg}, q = e$):}
+  \begin{equation}
+    \mathbf{\lambda_e = \frac{1.227}{\sqrt{V}}\,\mathrm{nm} = \frac{12.27}{\sqrt{V}}\,\text{\AA} = \sqrt{\frac{150}{V}}\,\text{\AA}}
+  \end{equation}
+  \item \textbf{Proton ($m_p = 1.673 \times 10^{-27}\,\mathrm{kg}, q = e$):}
+  \begin{equation}
+    \mathbf{\lambda_p = \frac{0.286}{\sqrt{V}}\,\text{\AA}}
+  \end{equation}
+  \item \textbf{Deuteron ($m_d = 2m_p, q = e$):}
+  \begin{equation}
+    \mathbf{\lambda_d = \frac{0.202}{\sqrt{V}}\,\text{\AA}}
+  \end{equation}
+  \item \textbf{Alpha Particle ($m_\alpha = 4m_p, q = 2e$):}
+  \begin{equation}
+    \mathbf{\lambda_\alpha = \frac{0.101}{\sqrt{V}}\,\text{\AA}}
+  \end{equation}
+\end{itemize}
+\textbf{2. Thermal Neutrons in Equilibrium at Temperature $T$:}
+Mean translational kinetic energy $K = \frac{3}{2}k_B T$:
+\begin{equation}
+  \mathbf{\lambda_{\text{thermal}} = \frac{h}{\sqrt{3 m k_B T}}}
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Deletion of Davisson-Germer Experiment]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NEET UG curriculum:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The \textbf{Davisson-Germer Experiment} (nickel crystal electron diffraction, Bragg peak at $54\,\mathrm{V}$ and $\theta = 50^\circ$, accelerating electron gun details) has been \textbf{formally removed}.
+  \item \textbf{EXAM ORIENTATION:} Candidates must be proficient in Einstein's photoelectric equation, photon momentum calculations, and de Broglie wavelength formulas for accelerated particles without studying the experimental apparatus of Davisson and Germer.
+\end{itemize}
+\end{trapbox}
+
+\section{Atomic Physics: Bohr's Postulates, Spectral Series \& Energy Levels}
+
+\begin{conceptbox}[Rutherford Scattering \& Bohr's Atomic Postulates]
+\textbf{1. Rutherford Scattering (Geiger-Marsden Experiment):}
+Distance of closest approach $r_0$ for an $\alpha$-particle ($q_\alpha = 2e$) directed head-on with kinetic energy $K$ toward a nucleus of atomic number $Z$:
+\begin{equation}
+  K = \frac{1}{4\pi\varepsilon_0}\frac{(2e)(Ze)}{r_0} \implies \mathbf{r_0 = \frac{1}{4\pi\varepsilon_0}\frac{2 Z e^2}{K}}
+\end{equation}
+Impact parameter: $b = \frac{1}{4\pi\varepsilon_0}\frac{Z e^2 \cot(\theta/2)}{K}$.
+\textbf{2. Bohr's Foundational Postulates for Hydrogen-Like Species:}
+\begin{enumerate}
+  \item \textbf{Stable Stationary Orbits:} An orbital electron circles the positive nucleus solely under the Coulomb attraction without radiating electromagnetic energy, despite continuous centripetal acceleration.
+  \item \textbf{Quantization of Orbital Angular Momentum:} Stable orbits are restricted strictly to those where orbital angular momentum is an integer multiple of $\hbar = h / 2\pi$:
+  \begin{equation}
+    \mathbf{L = m_e v r = \frac{n h}{2\pi}} \quad (n = 1, 2, 3, \dots)
+  \end{equation}
+  \item \textbf{Frequency Condition (Radiative Transitions):} Photons are emitted or absorbed exclusively when an electron undergoes a discrete transition between stationary energy levels $E_i$ and $E_f$:
+  \begin{equation}
+    \mathbf{\Delta E = E_i - E_f = h\nu = \frac{hc}{\lambda}}
+  \end{equation}
+\end{enumerate}
+\end{conceptbox}
+
+\begin{formulabox}[Bohr Atom Formulas: Rigorous Analytical Derivations for Hydrogen-Like Species]
+For a hydrogen-like atom of nuclear charge $+Ze$ and electron mass $m$:
+\begin{enumerate}
+  \item \textbf{Electrostatic Centripetal Equilibrium:}
+  \begin{equation}
+    \frac{m v^2}{r} = \frac{1}{4\pi\varepsilon_0} \frac{Z e^2}{r^2} \implies m v^2 r = \frac{Z e^2}{4\pi\varepsilon_0} \tag{Eq. 1}
+  \end{equation}
+  \item \textbf{Angular Momentum Quantization:}
+  \begin{equation}
+    m v r = \frac{n h}{2\pi} \implies v = \frac{n h}{2\pi m r} \tag{Eq. 2}
+  \end{equation}
+  \item \textbf{Orbital Radius Derivation:} Substituting Eq. 2 into Eq. 1:
+  \begin{equation}
+    m \left(\frac{n^2 h^2}{4\pi^2 m^2 r^2}\right) r = \frac{Z e^2}{4\pi\varepsilon_0} \implies \mathbf{r_n = \frac{\varepsilon_0 n^2 h^2}{\pi m Z e^2} = r_0 \frac{n^2}{Z} = 0.529 \frac{n^2}{Z}\,\text{\AA}}
+  \end{equation}
+  where $r_0 = 0.529177\,\text{\AA}$ is the first Bohr radius of hydrogen ($n=1, Z=1$).
+  \item \textbf{Orbital Velocity Derivation:}
+  \begin{equation}
+    \mathbf{v_n = \frac{Z e^2}{2\varepsilon_0 n h} = v_0 \frac{Z}{n} = \left(2.18 \times 10^6\,\mathrm{m/s}\right)\frac{Z}{n} = c \alpha \frac{Z}{n}}
+  \end{equation}
+  where $\alpha = \frac{e^2}{2\varepsilon_0 h c} \approx \frac{1}{137}$ is the fine-structure constant.
+  \item \textbf{Energies in the $n$-th Stationary Orbit:}
+  \begin{itemize}
+    \item \textbf{Kinetic Energy:} $\mathbf{K_n = \frac{1}{2}m v_n^2 = \frac{m Z^2 e^4}{8\varepsilon_0^2 n^2 h^2} = +13.6 \frac{Z^2}{n^2}\,\mathrm{eV}}$.
+    \item \textbf{Potential Energy:} $\mathbf{U_n = -\frac{1}{4\pi\varepsilon_0}\frac{Z e^2}{r_n} = -\frac{m Z^2 e^4}{4\varepsilon_0^2 n^2 h^2} = -27.2 \frac{Z^2}{n^2}\,\mathrm{eV}}$.
+    \item \textbf{Total Mechanical Energy:}
+    \begin{equation}
+      \mathbf{E_n = K_n + U_n = -\frac{m Z^2 e^4}{8\varepsilon_0^2 n^2 h^2} = -13.6 \frac{Z^2}{n^2}\,\mathrm{eV}}
+    \end{equation}
+    \item \textbf{Golden Energy Ratios:}
+    \begin{equation}
+      \mathbf{E_n = -K_n = \frac{U_n}{2}}
+    \end{equation}
+  \end{itemize}
+\end{enumerate}
+\end{formulabox}
+
+\begin{formulabox}[Hydrogen Spectral Emission Series \& Rydberg Equation]
+When an electron drops from an upper stationary orbit $n_2$ to a lower orbit $n_1$ ($n_2 > n_1$):
+\begin{equation}
+  \Delta E = E_{n_2} - E_{n_1} = 13.6 Z^2 \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)\,\mathrm{eV}
+\end{equation}
+\begin{equation}
+  \mathbf{\frac{1}{\lambda} = \overline{\nu} = R_\infty Z^2 \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)}
+\end{equation}
+where $R_\infty = \frac{m e^4}{8\varepsilon_0^2 c h^3} \approx 1.09737 \times 10^7\,\mathrm{m}^{-1}$ is the Rydberg constant ($\frac{1}{R_\infty} \approx 912\,\text{\AA}$).
+\begin{center}
+\begin{tabularx}{\linewidth}{|l|c|c|c|Y|}
+\hline
+\textbf{Spectral Series} & \textbf{Lower Level ($n_1$)} & \textbf{Upper Level ($n_2$)} & \textbf{Spectral Domain} & \textbf{Wavelength Range} \\
+\hline
+\textbf{Lyman} & $1$ & $2, 3, 4, \dots$ & \textbf{Ultraviolet (UV)} & $\lambda_{\min} = 91.2\,\mathrm{nm}, \lambda_{\max} = 121.6\,\mathrm{nm}$ \\
+\hline
+\textbf{Balmer} & $2$ & $3, 4, 5, \dots$ & \textbf{Visible} (part UV) & $\lambda_{\min} = 364.6\,\mathrm{nm}, \lambda_{\max} = 656.3\,\mathrm{nm}$ \\
+\hline
+\textbf{Paschen} & $3$ & $4, 5, 6, \dots$ & \textbf{Near Infrared} & $\lambda_{\min} = 820.4\,\mathrm{nm}, \lambda_{\max} = 1875\,\mathrm{nm}$ \\
+\hline
+\textbf{Brackett} & $4$ & $5, 6, 7, \dots$ & \textbf{Mid Infrared} & $\lambda_{\min} = 1458\,\mathrm{nm}, \lambda_{\max} = 4051\,\mathrm{nm}$ \\
+\hline
+\textbf{Pfund} & $5$ & $6, 7, 8, \dots$ & \textbf{Far Infrared} & $\lambda_{\min} = 2279\,\mathrm{nm}, \lambda_{\max} = 7458\,\mathrm{nm}$ \\
+\hline
+\end{tabularx}
+\end{center}
+\textbf{Total Spectral Lines Emitted from Excited Level $n$ to Ground State:}
+\begin{equation}
+  \mathbf{N = \frac{n(n - 1)}{2}}
+\end{equation}
+\end{formulabox}
+
+\section{Nuclear Physics: Composition, Density, Mass Defect \& Binding Energy}
+
+\begin{conceptbox}[Nuclear Dimensions, Universal Nuclear Density \& Strong Nuclear Force]
+\textbf{1. Nuclear Constituents:}
+Atomic nucleus contains $Z$ protons and $N = A - Z$ neutrons (nucleons).
+\textbf{2. Nuclear Radius Empirical Law:}
+\begin{equation}
+  \mathbf{R = R_0 A^{1/3}}
+\end{equation}
+where $R_0 \approx 1.2 \times 10^{-15}\,\mathrm{m} = 1.2\,\mathrm{fm}$.
+\textbf{3. Proof of Constant Nuclear Density ($\rho_{\text{nuc}}$):}
+Nuclear volume: $V = \frac{4}{3}\pi R^3 = \frac{4}{3}\pi (R_0 A^{1/3})^3 = \frac{4}{3}\pi R_0^3 A$.
+Nuclear mass: $M \approx A \cdot m_N$ (where nucleon mass $m_N \approx 1.66 \times 10^{-27}\,\mathrm{kg}$).
+\begin{equation}
+  \mathbf{\rho_{\text{nuc}} = \frac{M}{V} = \frac{A m_N}{\frac{4}{3}\pi R_0^3 A} = \frac{3 m_N}{4\pi R_0^3} \approx 2.3 \times 10^{17}\,\mathrm{kg/m}^3}
+\end{equation}
+Nuclear density is an \textbf{absolute universal constant}, completely independent of mass number $A$.
+\textbf{4. Properties of the Strong Nuclear Force:}
+\begin{itemize}
+  \item Strongest fundamental force in nature ($\sim 100$ times stronger than electrostatic repulsion).
+  \item Strictly short-ranged: active solely across $1 - 2\,\mathrm{fm}$. For $r < 0.8\,\mathrm{fm}$, it becomes strongly repulsive.
+  \item Charge-independent: $F_{p-p} = F_{p-n} = F_{n-n}$ under identical quantum states.
+  \item Saturated: each nucleon interacts exclusively with its immediate neighbouring nucleons.
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[Mass Defect, Nuclear Binding Energy Curve \& Energy Reactions]
+\textbf{1. Mass Defect ($\Delta m$):}
+The rest mass of any stable bound nucleus is strictly less than the combined rest masses of its constituent free protons and neutrons:
+\begin{equation}
+  \mathbf{\Delta m = [Z m_p + (A - Z) m_n] - M_{\text{nucleus}}(A, Z)}
+\end{equation}
+\textbf{2. Nuclear Binding Energy ($E_b$):}
+By Einstein's mass-energy equivalence ($E = \Delta m c^2$):
+\begin{equation}
+  \mathbf{E_b = \Delta m c^2 = \Delta m\,[\mathrm{u}] \times 931.5\,\mathrm{MeV}}
+\end{equation}
+where $1\,\mathrm{u} \equiv 931.494\,\mathrm{MeV}/c^2$.
+\textbf{3. Binding Energy per Nucleon ($E_b/A$ Curve):}
+The stability of a nucleus is dictated strictly by binding energy per nucleon ($E_b/A$):
+\begin{itemize}
+  \item Rapid increase from light nuclei ($^2\mathrm{H} \approx 1.1\,\mathrm{MeV/nucleon}$) with local peaks at tightly bound alpha-multiples ($^4\mathrm{He}, ^{12}\mathrm{C}, ^{16}\mathrm{O}$).
+  \item Broad flat maximum in intermediate mass range $30 < A < 120$ with peak at $\mathbf{^{56}\mathrm{Fe} \approx 8.75\,\mathrm{MeV/nucleon}}$.
+  \item Gradual drop toward heavy nuclei due to cumulative Coulomb repulsion between protons, dropping to $\approx 7.6\,\mathrm{MeV/nucleon}$ for $^{238}\mathrm{U}$.
+  \item \textbf{Nuclear Fission:} Heavy nucleus splitting ($A \sim 240 \to A_1 + A_2 \sim 120$) gains $\approx 0.9\,\mathrm{MeV/nucleon} \implies Q \approx 240 \times 0.9 \approx \mathbf{200\,\mathrm{MeV}}$ per fission.
+  \item \textbf{Nuclear Fusion:} Two very light nuclei fusing into a heavier nucleus ($^2\mathrm{H} + ^3\mathrm{H} \to ^4\mathrm{He} + n$) releases $\approx \mathbf{17.6\,\mathrm{MeV}}$ ($3.5\,\mathrm{MeV/nucleon}$).
+\end{itemize}
+\end{formulabox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Complete Deletion of Radioactivity]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NEET UG syllabus issued by the National Medical Commission:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The entire subtopic of \textbf{Radioactivity} has been \textbf{completely eliminated}.
+  \item Deleted topics include: $\alpha$-decay, $\beta$-decay ($\beta^-$ and $\beta^+$), $\gamma$-decay, Radioactive Decay Law ($N(t) = N_0 e^{-\lambda t}$), Half-life ($T_{1/2} = \frac{0.693}{\lambda}$), Mean Life ($\tau = \frac{1}{\lambda}$), and Activity ($A = \lambda N$).
+  \item \textbf{EXAM ORIENTATION:} Candidates must focus on Mass Defect, Binding Energy per Nucleon, Nuclear Density, and Fission/Fusion $Q$-values without solving radioactive decay kinematics.
+\end{itemize}
+\end{trapbox}
+
+\section{Semiconductor Physics, Diodes \& Digital Logic Gates}
+
+\begin{conceptbox}[Energy Bands, Intrinsic \& Extrinsic Semiconductors]
+\textbf{1. Energy Band Theory of Solids:}
+\begin{itemize}
+  \item \textbf{Conductors:} Conduction band and valence band overlap, or conduction band is partially filled ($E_g = 0$). High electron density $n \sim 10^{28}\,\mathrm{m}^{-3}$.
+  \item \textbf{Insulators:} Large forbidden energy gap: $\mathbf{E_g > 3.0\,\mathrm{eV}}$ (e.g., Diamond $E_g \approx 5.4\,\mathrm{eV}$).
+  \item \textbf{Semiconductors:} Narrow forbidden energy gap: $\mathbf{E_g \le 3.0\,\mathrm{eV}}$ ($\mathrm{Si}: E_g = 1.1\,\mathrm{eV}$; $\mathrm{Ge}: E_g = 0.72\,\mathrm{eV}$; $\mathrm{GaAs}: E_g = 1.42\,\mathrm{eV}$).
+\end{itemize}
+\textbf{2. Intrinsic Semiconductors (Pure Crystals):}
+Thermal energy excites valence electrons across $E_g$ into the conduction band, leaving equal numbers of vacant states (\textbf{holes}) in the valence band:
+\begin{equation}
+  \mathbf{n_e = n_h = n_i}
+\end{equation}
+Total electrical conductivity: $\mathbf{\sigma = e(n_e \mu_e + n_h \mu_h)}$.
+\textbf{3. Extrinsic Semiconductors (Doped Crystals):}
+\begin{itemize}
+  \item \textbf{n-Type:} Doped with pentavalent donor impurities (P, As, Sb). Introduces donor discrete energy level $E_d$ just below conduction band ($0.05\,\mathrm{eV}$ for Si).
+  \begin{equation}
+    \mathbf{n_e \approx N_D \gg n_h} \quad (\text{Electrons: majority carriers; Holes: minority carriers})
+  \end{equation}
+  \item \textbf{p-Type:} Doped with trivalent acceptor impurities (B, Al, In, Ga). Introduces acceptor discrete energy level $E_a$ just above valence band ($0.05\,\mathrm{eV}$ for Si).
+  \begin{equation}
+    \mathbf{n_h \approx N_A \gg n_e} \quad (\text{Holes: majority carriers; Electrons: minority carriers})
+  \end{equation}
+  \item \textbf{Law of Mass Action (Thermal Equilibrium):}
+  \begin{equation}
+    \mathbf{n_e \cdot n_h = n_i^2(T)}
+  \end{equation}
+  Both n-type and p-type semiconductors are strictly \textbf{electrically neutral} overall.
+\end{itemize}
+\end{conceptbox}
+
+\begin{formulabox}[p-n Junction Diode Physics, Biasing \& Rectifiers]
+\textbf{1. p-n Junction Formation:}
+Majority holes from p-side diffuse into n-side, and majority electrons from n-side diffuse into p-side.
+Uncompensated immobile donor ions ($+$) on n-side and acceptor ions ($-$) on p-side form a \textbf{depletion layer} and built-in \textbf{barrier potential} ($V_0 \approx 0.7\,\mathrm{V}$ for Si, $0.3\,\mathrm{V}$ for Ge) pointing from n to p.
+\textbf{2. Biasing Modes:}
+\begin{itemize}
+  \item \textbf{Forward Bias (p to $+$, n to $-$):} External field opposes barrier field $\implies$ barrier potential lowers to $(V_0 - V)$, depletion layer narrows, forward current rises exponentially: $I \approx I_0 (e^{eV/\eta k_B T} - 1)$.
+  \item \textbf{Reverse Bias (p to $-$, n to $+$):} External field aids barrier field $\implies$ barrier increases to $(V_0 + V)$, depletion layer widens, current is tiny minority saturation current $I_0 \sim \mu\mathrm{A}$ (Si: $\mathrm{nA}$).
+\end{itemize}
+\textbf{3. Diode Rectifiers:}
+\begin{itemize}
+  \item \textbf{Half-Wave Rectifier:} One diode conducting during positive AC half-cycles.
+  \begin{equation}
+    \mathbf{\eta_{\max} = \frac{0.406 R_L}{r_f + R_L} \approx 40.6\%}, \qquad \mathbf{\nu_{\text{ripple}} = \nu_{\text{AC}}}
+  \end{equation}
+  \item \textbf{Full-Wave Rectifier (Center-Tapped or Bridge):} Two or four diodes conducting alternately.
+  \begin{equation}
+    \mathbf{\eta_{\max} = \frac{0.812 R_L}{r_f + R_L} \approx 81.2\%}, \qquad \mathbf{\nu_{\text{ripple}} = 2\nu_{\text{AC}}}
+  \end{equation}
+\end{itemize}
+\end{formulabox}
+
+\begin{formulabox}[Special Purpose Diodes: Zener, Photodiode, LED \& Solar Cell]
+\textbf{1. Zener Diode as a Voltage Regulator:}
+Heavily doped p-n junction with an ultra-thin depletion layer ($\sim 10^{-6}\,\mathrm{m}$) that undergoes sharp reverse breakdown at a fixed Zener breakdown voltage $V_z$.
+Connected in \textbf{reverse bias} parallel with fluctuating load $R_L$:
+\begin{equation}
+  V_{\text{out}} = V_z = \text{constant}, \qquad I_{\text{supply}} = I_z + I_L
+\end{equation}
+Series current-limiting resistor $R_s$:
+\begin{equation}
+  \mathbf{R_s = \frac{V_{\text{unregulated}} - V_z}{I_z + I_L}}
+\end{equation}
+\textbf{2. Photodiode:} Operates in \textbf{reverse bias}. Incident photons ($h\nu > E_g$) generate electron-hole pairs in the depletion region. Fractional change in minority reverse current is much larger than in forward current, making reverse bias ideal for optical detection.
+\textbf{3. Light Emitting Diode (LED):} Operates in \textbf{forward bias}. Electrons recombine with holes at junction, releasing recombination energy as spontaneous photons across direct bandgap: $\mathbf{\lambda = \frac{hc}{E_g}}$.
+\textbf{4. Solar Cell:} Unbiased p-n junction operating in the \textbf{fourth quadrant} of $I-V$ characteristic, converting optical solar flux into electrical power.
+\end{formulabox}
+
+\begin{formulabox}[Digital Logic Gates: Truth Tables \& De Morgan's Theorems]
+\textbf{1. Fundamental Logic Gates:}
+\begin{itemize}
+  \item \textbf{AND Gate:} $Y = A \cdot B$ (Output is 1 strictly when both inputs are 1).
+  \item \textbf{OR Gate:} $Y = A + B$ (Output is 1 when at least one input is 1).
+  \item \textbf{NOT Gate (Inverter):} $Y = \overline{A}$ ($0 \to 1, 1 \to 0$).
+\end{itemize}
+\textbf{2. Universal Logic Gates (Can Synthesize Any Boolean Function):}
+\begin{itemize}
+  \item \textbf{NAND Gate:} $Y = \overline{A \cdot B}$.
+  \item \textbf{NOR Gate:} $Y = \overline{A + B}$.
+\end{itemize}
+\textbf{3. De Morgan's Master Theorems:}
+\begin{equation}
+  \mathbf{\overline{A + B} = \overline{A} \cdot \overline{B}}, \qquad \mathbf{\overline{A \cdot B} = \overline{A} + \overline{B}}
+\end{equation}
+\end{formulabox}
+
+\begin{trapbox}[Syllabus Boundary Alert: Complete Deletion of Transistors]
+\textbf{NMC REVISION WARNING FOR NEET UG:}
+Under the revised NEET UG syllabus issued by the National Medical Commission:
+\begin{itemize}
+  \item \textbf{STRICTLY DELETED:} The entire topic of \textbf{Transistors} (bipolar junction transistors npn and pnp, emitter, base, collector actions) has been \textbf{completely eliminated}.
+  \item Deleted subtopics include: Common Emitter (CE) input and output characteristics, current gain factors ($\alpha = I_c/I_e, \beta = I_c/I_b, \beta = \frac{\alpha}{1-\alpha}$), transistor as a CE amplifier (voltage gain $A_v = -\beta \frac{R_L}{R_i}$), transistor as a digital switch, and transistor as an oscillator.
+  \item \textbf{EXAM ORIENTATION:} Candidates must focus exclusively on Semiconductors, p-n junction diodes, rectifiers, Zener diode regulators, optoelectronic diodes (LED, photodiode, solar cell), and Digital Logic Gates.
+\end{itemize}
+\end{trapbox}
+
+\begin{ncertbox}[NCERT High-Yield Extraction: Optoelectronic Materials \& Eye Sensitivity]
+The semiconductor bandgap for visible LEDs must exceed $1.8\,\mathrm{eV}$ ($hc/\lambda_{\max} \approx 1240 / 700\,\mathrm{nm} \approx 1.8\,\mathrm{eV}$).
+\begin{itemize}
+  \item \textbf{Gallium Arsenide Phosphide ($\mathrm{GaAs}_{1-x}\mathrm{P}_x$):} Used for red, amber, and yellow LEDs ($E_g \approx 1.9\,\mathrm{eV}$).
+  \item \textbf{Gallium Nitride ($\mathrm{GaN}$):} Direct bandgap of $3.4\,\mathrm{eV}$ enables bright blue and ultraviolet LEDs.
+  \item \textbf{Photodiode Detection Limit:} To detect an optical signal of wavelength $\lambda$, the semiconductor bandgap must satisfy $\mathbf{E_g \le \frac{hc}{\lambda}}$.
+\end{itemize}
+\end{ncertbox}
+
+\section{Master High-Yield Problem Archetypes \& Worked Solutions}
+
+\begin{usecasebox}[Archetype 1: Silvered Plano-Convex Lens Equivalent Mirror Focal Length]
+\textbf{Problem:} A plano-convex lens of refractive index $\mu = 1.5$ has a curved surface of radius of curvature $R = 20\,\mathrm{cm}$. Compute the equivalent focal length when: (i) the flat plane surface is silvered, and (ii) the curved surface is silvered.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}
+  \item Power of the plano-convex lens in air:
+  \begin{equation}
+    P_L = \frac{1}{f_L} = (\mu - 1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) = (1.5 - 1)\left(\frac{1}{20} - 0\right) = \frac{0.5}{20} = \frac{1}{40}\,\mathrm{cm}^{-1}
+  \end{equation}
+  \item Any silvered lens system acts as an equivalent mirror of power:
+  \begin{equation}
+    P_{\text{eq}} = 2 P_L + P_M \implies \mathbf{F_{\text{eq}} = -\frac{1}{P_{\text{eq}}}}
+  \end{equation}
+  \item \textbf{Case (i): Flat Plane Surface is Silvered:}
+  Plane mirror has $R_M = \infty \implies P_M = -\frac{1}{f_M} = 0$.
+  \begin{equation}
+    P_{\text{eq}} = 2 P_L + 0 = 2 \left(\frac{1}{40}\right) = \frac{1}{20}\,\mathrm{cm}^{-1} \implies \mathbf{F_{\text{eq}} = -20\,\mathrm{cm}}
+  \end{equation}
+  Acts as a \textbf{concave mirror of focal length $20\,\mathrm{cm}$}.
+  \item \textbf{Case (ii): Curved Surface is Silvered:}
+  Concave mirror formed by silvered curved face has $R_M = 20\,\mathrm{cm} \implies f_M = -10\,\mathrm{cm} \implies P_M = -\frac{1}{f_M} = +\frac{1}{10}\,\mathrm{cm}^{-1}$.
+  \begin{equation}
+    P_{\text{eq}} = 2 P_L + P_M = 2 \left(\frac{1}{40}\right) + \frac{1}{10} = \frac{1}{20} + \frac{1}{10} = \frac{3}{20}\,\mathrm{cm}^{-1} \implies \mathbf{F_{\text{eq}} = -\frac{20}{3}\,\mathrm{cm} \approx -6.67\,\mathrm{cm}}
+  \end{equation}
+  Acts as a \textbf{concave mirror of focal length $6.67\,\mathrm{cm}$}.
+\end{enumerate}
+\end{usecasebox}
+
+\begin{usecasebox}[Archetype 2: Multi-Wavelength Bright Fringe Coincidence in YDSE]
+\textbf{Problem:} In a YDSE setup with slit separation $d = 1.0\,\mathrm{mm}$ and screen distance $D = 1.0\,\mathrm{m}$, light containing two wavelengths $\lambda_1 = 600\,\mathrm{nm}$ and $\lambda_2 = 480\,\mathrm{nm}$ is used. Determine the minimum non-zero distance from the central maximum where bright fringes of both wavelengths coincide.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}
+  \item For bright fringes to coincide at position $y$:
+  \begin{equation}
+    y = \frac{n_1 \lambda_1 D}{d} = \frac{n_2 \lambda_2 D}{d} \implies n_1 \lambda_1 = n_2 \lambda_2
+  \end{equation}
+  \item Taking the ratio of integers:
+  \begin{equation}
+    \frac{n_1}{n_2} = \frac{\lambda_2}{\lambda_1} = \frac{480\,\mathrm{nm}}{600\,\mathrm{nm}} = \frac{4}{5}
+  \end{equation}
+  \item Smallest non-zero integers satisfying this condition: $n_1 = 4$ and $n_2 = 5$.
+  \item Minimum distance $y_{\min}$:
+  \begin{equation}
+    y_{\min} = \frac{4 \times (600 \times 10^{-9}\,\mathrm{m}) \times 1.0\,\mathrm{m}}{1.0 \times 10^{-3}\,\mathrm{m}} = 2.4 \times 10^{-3}\,\mathrm{m} = \mathbf{2.4\,\mathrm{mm}}
+  \end{equation}
+  The 4th bright fringe of $\lambda_1$ coincides with the 5th bright fringe of $\lambda_2$ at $y = 2.4\,\mathrm{mm}$.
+\end{enumerate}
+\end{usecasebox}
+
+\begin{usecasebox}[Archetype 3: Zener Diode Voltage Regulator Design Calculations]
+\textbf{Problem:} A Zener diode with breakdown voltage $V_z = 10\,\mathrm{V}$ and maximum power dissipation $P_{z,\max} = 1.0\,\mathrm{W}$ is used to regulate a DC supply that fluctuates between $15\,\mathrm{V}$ and $25\,\mathrm{V}$. The load resistance is $R_L = 1.0\,\mathrm{k}\Omega$. Calculate: (i) the load current $I_L$, and (ii) the suitable series resistance $R_s$ to ensure the Zener current remains within safe limits.
+\textbf{Step-by-Step Solution:}
+\begin{enumerate}
+  \item The regulated voltage across the load is fixed at $V_L = V_z = 10\,\mathrm{V}$.
+  \item Constant load current:
+  \begin{equation}
+    I_L = \frac{V_z}{R_L} = \frac{10\,\mathrm{V}}{1000\,\Omega} = 10\,\mathrm{mA} = 0.01\,\mathrm{A}
+  \end{equation}
+  \item Maximum safe Zener diode current:
+  \begin{equation}
+    I_{z,\max} = \frac{P_{z,\max}}{V_z} = \frac{1.0\,\mathrm{W}}{10\,\mathrm{V}} = 100\,\mathrm{mA} = 0.10\,\mathrm{A}
+  \end{equation}
+  \item Total maximum supply current: $I_{\text{total},\max} = I_{z,\max} + I_L = 100\,\mathrm{mA} + 10\,\mathrm{mA} = 110\,\mathrm{mA}$.
+  \item At maximum input voltage $V_{\text{in}} = 25\,\mathrm{V}$:
+  \begin{equation}
+    R_{s,\min} = \frac{V_{\text{in},\max} - V_z}{I_{\text{total},\max}} = \frac{25 - 10}{0.11} = \frac{15}{0.11} \approx \mathbf{136.4\,\Omega}
+  \end{equation}
+  \item At minimum input voltage $V_{\text{in}} = 15\,\mathrm{V}$ with minimum holding current $I_{z,\min} \approx 5\,\mathrm{mA}$:
+  \begin{equation}
+    R_{s,\max} = \frac{V_{\text{in},\min} - V_z}{I_{z,\min} + I_L} = \frac{15 - 10}{0.005 + 0.010} = \frac{5}{0.015} \approx \mathbf{333.3\,\Omega}
+  \end{equation}
+  A standard resistance of $R_s \approx 200\,\Omega$ provides robust regulation across the entire input range.
+\end{enumerate}
+\end{usecasebox}
+
+\end{document}

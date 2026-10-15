@@ -71,12 +71,12 @@ The system is organized into a Dual Track structure:
 ## Milestones
 | # | Name | Scope & Deliverables | Dependencies | Status |
 |---|---|---|---|---|
-| M0 | E2E Testing & Quality Track | Create automated test harness `scripts/validate_modules.py` covering syntax, brace matching, header verification, attribution checks, and deleted topic regex scanner. Publish `TEST_READY.md`. | None | IN_PROGRESS (`5dc5320c-6214-456b-a91e-b4347965a902`) |
-| M1 | Physics Core Mechanics & Dynamics | Author `chapters/physics/mechanics_master_theory.tex` and `chapters/physics/rotational_gravitation_fluids_theory.tex` with complete step-by-step derivations and problem archetypes. Compile to PDF. | M0 | IN_PROGRESS (`e16eddce-07e9-4bd5-9b55-a6d17bbd26cc`) |
-| M2 | Physics Fields, Waves & Modern Physics | Author `chapters/physics/thermal_physics_oscillations_theory.tex`, `chapters/physics/electrodynamics_master_theory.tex`, and `chapters/physics/optics_modern_physics_theory.tex`. Compile to PDF. | M0 | IN_PROGRESS (`09f3b1a2-05f5-46cc-a7e6-49bf15a8796b`) |
-| M3 | Physical & Inorganic Chemistry Compendium | Author `chapters/chemistry/physical_chemistry_master_theory.tex` and `chapters/chemistry/inorganic_chemistry_master_compendium.tex` with complete derivations, VSEPR geometries, MO diagrams, and CFT splitting. Compile to PDF. | M0 | IN_PROGRESS (`af252f5c-91b2-4a81-904c-0e642c8c1d07`) |
-| M4 | Organic Chemistry Master Theory & Synthesis | Author `chapters/chemistry/organic_chemistry_master_theory.tex` (GOC, reaction intermediates, all named mechanisms, aliphatic/aromatic conversions, and biomolecules). Compile to PDF. | M0 | IN_PROGRESS (`1067bcf7-e4ff-4ef4-af3a-093ad92bd030`) |
-| M5 | Final E2E Verification, README Index & Git Push | Run full E2E test suite (100% pass across all 8 modules), update `README.md`, commit and push to remote repository `origin main`. | M1, M2, M3, M4 | PLANNED |
+| M0 | E2E Testing & Quality Track | Create automated test harness `scripts/validate_modules.py` covering syntax, brace matching, header verification, attribution checks, and deleted topic regex scanner. Publish `TEST_READY.md`. | None | DONE (`scripts/validate_modules.py`, `TEST_INFRA.md`, `TEST_READY.md`) |
+| M1 | Physics Core Mechanics & Dynamics | Author `chapters/physics/mechanics_master_theory.tex` and `chapters/physics/rotational_gravitation_fluids_theory.tex` with complete step-by-step derivations and problem archetypes. Compile to PDF. | M0 | DONE (13pp + 11pp PDFs compiled, verified) |
+| M2 | Physics Fields, Waves & Modern Physics | Author `chapters/physics/thermal_physics_oscillations_theory.tex`, `chapters/physics/electrodynamics_master_theory.tex`, and `chapters/physics/optics_modern_physics_theory.tex`. Compile to PDF. | M0 | DONE (14pp + 12pp + 12pp PDFs compiled, verified) |
+| M3 | Physical & Inorganic Chemistry Compendium | Author `chapters/chemistry/physical_chemistry_master_theory.tex` and `chapters/chemistry/inorganic_chemistry_master_compendium.tex` with complete derivations, VSEPR geometries, MO diagrams, and CFT splitting. Compile to PDF. | M0 | DONE (24pp + 18pp PDFs compiled, verified) |
+| M4 | Organic Chemistry Master Theory & Synthesis | Author `chapters/chemistry/organic_chemistry_master_theory.tex` (GOC, reaction intermediates, all named mechanisms, aliphatic/aromatic conversions, and biomolecules). Compile to PDF. | M0 | DONE (28pp PDF compiled, verified) |
+| M5 | Final E2E Verification, README Index & Git Push | Run full E2E test suite (100% pass across all 8 modules), update `README.md`, commit and push to remote repository `origin main`. | M1, M2, M3, M4 | DONE (Commit `6818f7b` pushed to `origin main`) |
 
 ---
 

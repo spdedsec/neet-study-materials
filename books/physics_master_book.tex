@@ -284,11 +284,20 @@ Let a derived quantity $Z$ depend on independently measured physical variables $
   dZ = \left(\frac{\partial f}{\partial A}\right) dA + \left(\frac{\partial f}{\partial B}\right) dB + \left(\frac{\partial f}{\partial C}\right) dC
 \end{equation}
 For experimental uncertainty analysis, maximum absolute error $\Delta Z$ is determined by summing the absolute magnitudes of the partial deviations:
-\begin{align}
-  \text{Sum / Difference: } Z = A \pm B &\implies \Delta Z = \Delta A + \Delta B \\
-  \text{Product / Quotient: } Z = \frac{A \cdot B}{C} &\implies \frac{\Delta Z}{Z} = \frac{\Delta A}{A} + \frac{\Delta B}{B} + \frac{\Delta C}{C} \\
-  \text{Generalized Power Formulation: } Z = \frac{A^p B^q}{C^r} &\implies \frac{\Delta Z}{Z} = p\left(\frac{\Delta A}{A}\right) + q\left(\frac{\Delta B}{B}\right) + r\left(\frac{\Delta C}{C}\right)
-\end{align}
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+  \item \textbf{Sum / Difference ($Z = A \pm B$):}
+  \[
+    \Delta Z = \Delta A + \Delta B
+  \]
+  \item \textbf{Product / Quotient ($Z = \dfrac{A \cdot B}{C}$):}
+  \[
+    \frac{\Delta Z}{Z} = \frac{\Delta A}{A} + \frac{\Delta B}{B} + \frac{\Delta C}{C}
+  \]
+  \item \textbf{Generalized Power Formulation ($Z = \dfrac{A^p B^q}{C^r}$):}
+  \[
+    \frac{\Delta Z}{Z} = p\left(\frac{\Delta A}{A}\right) + q\left(\frac{\Delta B}{B}\right) + r\left(\frac{\Delta C}{C}\right)
+  \]
+\end{itemize}
 The percentage fractional uncertainty is given by:
 \begin{equation}
   \% \Delta Z = \left[ p\left(\frac{\Delta A}{A}\right) + q\left(\frac{\Delta B}{B}\right) + r\left(\frac{\Delta C}{C}\right) \right] \times 100\%
@@ -302,9 +311,10 @@ The percentage fractional uncertainty is given by:
     \mathrm{LC} = 1\,\mathrm{MSD} - 1\,\mathrm{VSD} = \frac{1\,\mathrm{MSD}}{n}
   \end{equation}
   \item \textbf{Screw Gauge Least Count:} For pitch $p$ and total circular scale divisions $N$:
-  \begin{equation}
-    \mathrm{LC} = \frac{\text{Pitch } p}{N}, \qquad \text{True Reading} = \text{MSR} + (\text{CSR} \times \mathrm{LC}) - (\pm \text{Zero Error})
-  \end{equation}
+  \begin{align}
+    \mathrm{LC} &= \frac{\text{Pitch } p}{N} \\
+    \text{True Reading} &= \text{MSR} + (\text{CSR} \times \mathrm{LC}) - (\pm \text{Zero Error})
+  \end{align}
   \item \textbf{Rule for Significant Figures in Calculus:} For multiplication and division, the final computed value retains the same number of significant figures as the least precise factor. For addition and subtraction, the result retains the least number of decimal places.
 \end{itemize}
 \end{usecasebox}
@@ -432,9 +442,10 @@ Consider a projectile launched with speed $u$ at angle $\theta$ to the horizonta
   R = x(T) = (u\cos\theta)\left(\frac{2u\sin\theta}{g}\right) = \frac{u^2(2\sin\theta\cos\theta)}{g} = \frac{u^2\sin 2\theta}{g}
 \end{equation}
 \textbf{4. Cartesian Equation of Trajectory:} Eliminating $t = \frac{x}{u\cos\theta}$:
-\begin{equation}
-  y(x) = u\sin\theta\left(\frac{x}{u\cos\theta}\right) - \frac{g}{2}\left(\frac{x}{u\cos\theta}\right)^2 = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta} = x\tan\theta\left(1 - \frac{x}{R}\right)
-\end{equation}
+\begin{align}
+  y(x) &= u\sin\theta\left(\frac{x}{u\cos\theta}\right) - \frac{g}{2}\left(\frac{x}{u\cos\theta}\right)^2 \nonumber \\
+  &= x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta} = x\tan\theta\left(1 - \frac{x}{R}\right)
+\end{align}
 \end{formulabox}
 
 \begin{usecasebox}[High-Yield Projectile Properties \& Incline Formulas]
@@ -535,13 +546,15 @@ where $\alpha, \beta, \gamma$ are the angles opposite to forces $\mathbf{F}_1, \
 \begin{usecasebox}[Atwood Machine Derivations \& High-Yield Accelerations]
 \begin{itemize}
   \item \textbf{Standard Simple Atwood Machine:} Masses $m_1 > m_2$ connected over an ideal pulley:
-  \begin{equation}
-    a = \left(\frac{m_1 - m_2}{m_1 + m_2}\right)g, \qquad T = \left(\frac{2m_1 m_2}{m_1 + m_2}\right)g, \qquad \text{Force on Pulley Support } F_p = 2T = \frac{4m_1 m_2 g}{m_1 + m_2}
-  \end{equation}
+  \begin{align}
+    a &= \left(\frac{m_1 - m_2}{m_1 + m_2}\right)g, \qquad T = \left(\frac{2m_1 m_2}{m_1 + m_2}\right)g \\
+    F_p &= 2T = \frac{4m_1 m_2 g}{m_1 + m_2} \quad \text{[Force on Pulley Support]}
+  \end{align}
   \item \textbf{Movable Pulley System (Mechanical Advantage):} Mass $m_1$ on smooth horizontal table connected to movable pulley holding hanging mass $m_2$. Since $x_2 = x_1/2$, constraint yields $a_1 = 2a_2$:
-  \begin{equation}
-    a_2 = \frac{m_2 g}{4m_1 + m_2}, \qquad a_1 = \frac{2m_2 g}{4m_1 + m_2}, \qquad T = \frac{2m_1 m_2 g}{4m_1 + m_2}
-  \end{equation}
+  \begin{align}
+    a_2 &= \frac{m_2 g}{4m_1 + m_2}, \qquad a_1 = \frac{2m_2 g}{4m_1 + m_2} \\
+    T &= \frac{2m_1 m_2 g}{4m_1 + m_2}
+  \end{align}
   \item \textbf{Apparent Weight in an Accelerating Elevator:}
   \begin{align}
     \text{Accelerating upward with } a &: N = m(g + a) \\
@@ -758,16 +771,17 @@ In a cylindrical rotor (death well) of radius $R$, a person rests against the ve
   \end{equation}
   \item \textbf{Conservative Force Criterion:} A force is conservative if the work done around any closed loop vanishes identically: $\oint \mathbf{F}\cdot d\mathbf{r} = 0 \iff \boldsymbol{\nabla}\times\mathbf{F} = \mathbf{0}$.
   \item \textbf{Potential Energy Field ($U$):} For conservative forces, potential energy is defined such that:
-  \begin{equation}
-    \Delta U = U_f - U_i = -W_{\text{int}} = -\int_{\mathbf{r}_i}^{\mathbf{r}_f} \mathbf{F}\cdot d\mathbf{r} \implies \mathbf{F} = -\boldsymbol{\nabla}U = -\left(\frac{\partial U}{\partial x}\hat{\mathbf{i}} + \frac{\partial U}{\partial y}\hat{\mathbf{j}} + \frac{\partial U}{\partial z}\hat{\mathbf{k}}\right)
-  \end{equation}
-  \item \textbf{Equilibrium States \& Stability Calculus:}
   \begin{align}
-    \text{Equilibrium Condition: } &\frac{dU}{dx} = 0 \implies F = 0 \\
-    \text{Stable Equilibrium: } &\frac{d^2 U}{dx^2} > 0 \quad (\text{Local Potential Minimum, restoring force}) \\
-    \text{Unstable Equilibrium: } &\frac{d^2 U}{dx^2} < 0 \quad (\text{Local Potential Maximum, destabilizing}) \\
-    \text{Neutral Equilibrium: } &\frac{d^2 U}{dx^2} = 0 \quad (\text{Flat potential valley})
+    \Delta U &= U_f - U_i = -W_{\text{int}} = -\int_{\mathbf{r}_i}^{\mathbf{r}_f} \mathbf{F}\cdot d\mathbf{r} \\
+    \implies \mathbf{F} &= -\boldsymbol{\nabla}U = -\left(\frac{\partial U}{\partial x}\hat{\mathbf{i}} + \frac{\partial U}{\partial y}\hat{\mathbf{j}} + \frac{\partial U}{\partial z}\hat{\mathbf{k}}\right)
   \end{align}
+  \item \textbf{Equilibrium States \& Stability Calculus:}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+    \item \textbf{Equilibrium Condition:} $\dfrac{dU}{dx} = 0 \implies F = 0$
+    \item \textbf{Stable Equilibrium:} $\dfrac{d^2 U}{dx^2} > 0$ (Local potential minimum, restoring force)
+    \item \textbf{Unstable Equilibrium:} $\dfrac{d^2 U}{dx^2} < 0$ (Local potential maximum, destabilizing)
+    \item \textbf{Neutral Equilibrium:} $\dfrac{d^2 U}{dx^2} = 0$ (Flat potential valley)
+  \end{itemize}
 \end{enumerate}
 \end{conceptbox}
 
@@ -880,8 +894,9 @@ Consider two masses $m_1, m_2$ moving with initial velocities $u_1, u_2$ undergo
 \end{align}
 Substituting $v_2$ into the momentum equation:
 \begin{align}
-  m_1 u_1 + m_2 u_2 &= m_1 v_1 + m_2[v_1 + e(u_1 - u_2)] = (m_1 + m_2)v_1 + e m_2(u_1 - u_2) \nonumber \\
-  \implies (m_1 + m_2)v_1 &= m_1 u_1 + m_2 u_2 - e m_2 u_1 + e m_2 u_2 = (m_1 - e m_2)u_1 + (1+e)m_2 u_2
+  m_1 u_1 + m_2 u_2 &= m_1 v_1 + m_2[v_1 + e(u_1 - u_2)] \nonumber \\
+  &= (m_1 + m_2)v_1 + e m_2(u_1 - u_2) \nonumber \\
+  \implies (m_1 + m_2)v_1 &= (m_1 - e m_2)u_1 + (1+e)m_2 u_2
 \end{align}
 This yields the universal post-collision velocity formulas:
 \begin{align}
@@ -910,11 +925,17 @@ where $\mu = \frac{m_1 m_2}{m_1 + m_2}$ is the reduced mass of the two-body coll
     v_1 \approx u_1, \qquad v_2 \approx 2u_1 \quad (\text{Target kicked at double projectile velocity})
   \end{equation}
   \item \textbf{Successive Bounces of Ball Dropped from Height $h_0$:}
-  \begin{align}
-    \text{Height after } n^{\text{th}}\text{ bounce: } h_n &= e^{2n}h_0 \\
-    \text{Total distance traveled until rest: } H_{\text{total}} &= h_0 + 2\sum_{n=1}^\infty h_n = h_0\left(\frac{1+e^2}{1-e^2}\right) \\
-    \text{Total time elapsed until rest: } T_{\text{total}} &= \sqrt{\frac{2h_0}{g}} + 2\sum_{n=1}^\infty \sqrt{\frac{2h_n}{g}} = \sqrt{\frac{2h_0}{g}}\left(\frac{1+e}{1-e}\right)
-  \end{align}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+    \item \textbf{Height after $n^{\text{th}}$ bounce:} $h_n = e^{2n}h_0$
+    \item \textbf{Total distance traveled until rest:}
+    \[
+      H_{\text{total}} = h_0 + 2\sum_{n=1}^\infty h_n = h_0\left(\frac{1+e^2}{1-e^2}\right)
+    \]
+    \item \textbf{Total time elapsed until rest:}
+    \[
+      T_{\text{total}} = \sqrt{\frac{2h_0}{g}} + 2\sum_{n=1}^\infty \sqrt{\frac{2h_n}{g}} = \sqrt{\frac{2h_0}{g}}\left(\frac{1+e}{1-e}\right)
+    \]
+  \end{itemize}
   \item \textbf{Rocket Propulsion (Tsiolkovsky Equation):} For variable mass system with exhaust velocity $u_{\text{rel}}$:
   \begin{equation}
     v(t) = v_0 + u_{\text{rel}}\ln\left(\frac{m_0}{m(t)}\right) - gt
@@ -1017,9 +1038,10 @@ Consider a man of mass $m$ walking a distance $x$ relative to a boat of mass $M$
 A rigid body maintains constant mutual distances between all constituent particles.
 \begin{enumerate}[leftmargin=*]
   \item \textbf{Rotational Kinematics (Constant Angular Acceleration $\alpha$):}
-  \begin{equation}
-    \omega = \omega_0 + \alpha t, \qquad \theta = \omega_0 t + \frac{1}{2}\alpha t^2, \qquad \omega^2 = \omega_0^2 + 2\alpha\theta, \qquad \theta_n = \omega_0 + \frac{\alpha}{2}(2n - 1)
-  \end{equation}
+  \begin{align}
+    \omega &= \omega_0 + \alpha t, \qquad \theta = \omega_0 t + \frac{1}{2}\alpha t^2 \\
+    \omega^2 &= \omega_0^2 + 2\alpha\theta, \qquad \theta_n = \omega_0 + \frac{\alpha}{2}(2n - 1)
+  \end{align}
   \item \textbf{Moment of Inertia ($I$) \& Radius of Gyration ($k$):} The quantitative measure of rotational inertia about a specified axis of rotation:
   \begin{equation}
     I = \sum_{i=1}^N m_i r_i^2 = \int r^2\,dm, \qquad I = M k^2 \implies k = \sqrt{\frac{I}{M}}
@@ -1033,7 +1055,8 @@ A rigid body maintains constant mutual distances between all constituent particl
 Let $I_{\text{cm}}$ be the moment of inertia about an axis passing through the centre of mass, and $I$ be the moment of inertia about a parallel axis located at perpendicular distance $d$.
 Let the origin be at the centre of mass ($\int x\,dm = 0, \int y\,dm = 0$). Then:
 \begin{align}
-  I &= \int r^2\,dm = \int \left[(x + d)^2 + y^2\right] dm = \int (x^2 + y^2)dm + 2d\int x\,dm + d^2\int dm \nonumber \\
+  I &= \int r^2\,dm = \int \left[(x + d)^2 + y^2\right] dm \nonumber \\
+  &= \int (x^2 + y^2)dm + 2d\int x\,dm + d^2\int dm \nonumber \\
   &= I_{\text{cm}} + 0 + M d^2 \implies I = I_{\text{cm}} + M d^2
 \end{align}
 \textit{Domain of Validity:} Applies to any rigid body of arbitrary three-dimensional shape.
@@ -1051,9 +1074,10 @@ For a flat two-dimensional planar lamina situated in the $x-y$ plane ($z = 0$):
 Linear mass density $\lambda = M/L$. Elemental mass $dm = \lambda\,dx$:
 \begin{itemize}
   \item \textbf{Transverse axis through center ($x = 0$):}
-  \begin{equation}
-    I_{\text{cm}} = \int_{-L/2}^{L/2} x^2 \left(\frac{M}{L}\right)dx = \frac{M}{L}\left[\frac{x^3}{3}\right]_{-L/2}^{L/2} = \frac{M}{3L}\left[\frac{L^3}{8} - \left(-\frac{L^3}{8}\right)\right] = \frac{1}{12}ML^2
-  \end{equation}
+  \begin{align}
+    I_{\text{cm}} &= \int_{-L/2}^{L/2} x^2 \left(\frac{M}{L}\right)dx = \frac{M}{L}\left[\frac{x^3}{3}\right]_{-L/2}^{L/2} \nonumber \\
+    &= \frac{M}{3L}\left[\frac{L^3}{8} - \left(-\frac{L^3}{8}\right)\right] = \frac{1}{12}ML^2
+  \end{align}
   \item \textbf{Transverse axis through end ($x = 0$ to $L$):} By parallel axis theorem:
   \begin{equation}
     I_{\text{end}} = I_{\text{cm}} + M\left(\frac{L}{2}\right)^2 = \frac{1}{12}ML^2 + \frac{1}{4}ML^2 = \frac{1}{3}ML^2
@@ -1076,9 +1100,10 @@ The moment of inertia of this elemental disc about the $x$-axis is:
   dI = \frac{1}{2}y^2 dm = \frac{1}{2}(R^2 - x^2)\left[\frac{3M}{4R^3}(R^2 - x^2)dx\right] = \frac{3M}{8R^3}(R^2 - x^2)^2 dx
 \end{equation}
 Integrating from $x = -R$ to $+R$:
-\begin{equation}
-  I_{\text{dia}} = \frac{3M}{8R^3}\int_{-R}^{R} (R^4 - 2R^2 x^2 + x^4)dx = \frac{3M}{4R^3}\left[R^4 R - \frac{2R^2 R^3}{3} + \frac{R^5}{5}\right] = \frac{3M}{4R^3}\left[\frac{8}{15}R^5\right] = \frac{2}{5}MR^2
-\end{equation}
+\begin{align}
+  I_{\text{dia}} &= \frac{3M}{8R^3}\int_{-R}^{R} (R^4 - 2R^2 x^2 + x^4)\,dx \nonumber \\
+  &= \frac{3M}{4R^3}\left[R^5 - \frac{2R^5}{3} + \frac{R^5}{5}\right] = \frac{3M}{4R^3}\left[\frac{8}{15}R^5\right] = \frac{2}{5}MR^2
+\end{align}
 About a tangential axis: $I_{\text{tangent}} = I_{\text{cm}} + MR^2 = \frac{2}{5}MR^2 + MR^2 = \frac{7}{5}MR^2$.
 
 \textbf{4. Uniform Hollow Spherical Shell of Mass $M$ and Radius $R$:}
@@ -1141,10 +1166,16 @@ Hollow Spherical Shell & Tangential axis & $\frac{5}{3}MR^2$ & $1.67$ \\
 
 \begin{formulabox}[Rigorous Derivation of Acceleration, Velocity \& Friction on an Incline]
 Consider a symmetrical rigid body of mass $M$, radius $R$, and radius of gyration $k$ rolling without slipping down an inclined plane of inclination angle $\theta$ and vertical height $h$:
-\begin{align}
-  \text{Translational Equation of Motion along Incline: } &Mg\sin\theta - f_s = M a_{\text{cm}} \\
-  \text{Rotational Equation about Centre of Mass: } &\tau = f_s R = I_{\text{cm}}\alpha = (M k^2)\left(\frac{a_{\text{cm}}}{R}\right) \implies f_s = M\left(\frac{k^2}{R^2}\right)a_{\text{cm}}
-\end{align}
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+  \item \textbf{Translational Equation along Incline:}
+  \[
+    Mg\sin\theta - f_s = M a_{\text{cm}}
+  \]
+  \item \textbf{Rotational Equation about Centre of Mass:}
+  \[
+    \tau = f_s R = I_{\text{cm}}\alpha = (M k^2)\left(\frac{a_{\text{cm}}}{R}\right) \implies f_s = M\left(\frac{k^2}{R^2}\right)a_{\text{cm}}
+  \]
+\end{itemize}
 Substituting the friction expression into the translational equation:
 \begin{equation}
   Mg\sin\theta = M a_{\text{cm}} + M\left(\frac{k^2}{R^2}\right)a_{\text{cm}} = M a_{\text{cm}}\left(1 + \frac{k^2}{R^2}\right)
@@ -1170,9 +1201,10 @@ To sustain pure rolling without sliding: $f_s \le \mu_s N = \mu_s Mg\cos\theta$:
 
 \begin{usecasebox}[Race Down an Incline: Comparison of Standard Bodies]
 From the acceleration formula $a \propto \frac{1}{1 + k^2/R^2}$, bodies with \textbf{smaller} $k^2/R^2$ possess greater acceleration and reach the bottom first:
-\begin{equation}
-  \left(\frac{k^2}{R^2}\right)_{\text{Solid Sphere}} (0.4) < \left(\frac{k^2}{R^2}\right)_{\text{Disc}} (0.5) < \left(\frac{k^2}{R^2}\right)_{\text{Hollow Sphere}} (0.67) < \left(\frac{k^2}{R^2}\right)_{\text{Ring}} (1.0)
-\end{equation}
+\begin{align}
+  \left(\frac{k^2}{R^2}\right)_{\text{Solid Sphere}} (0.4) &< \left(\frac{k^2}{R^2}\right)_{\text{Disc}} (0.5) \nonumber \\
+  &< \left(\frac{k^2}{R^2}\right)_{\text{Hollow Sphere}} (0.67) < \left(\frac{k^2}{R^2}\right)_{\text{Ring}} (1.0)
+\end{align}
 \begin{itemize}
   \item \textbf{Order of Acceleration and Striking Velocity:}
   \begin{equation}
@@ -1198,7 +1230,7 @@ In pure rolling motion on a stationary surface:
 % =========================================================================
 % SECTION 4: UNIVERSAL GRAVITATION \& KEPLER'S LAWS
 % =========================================================================
-\section{Universal Gravitation, Kepler's Laws \& Field/Potential Calculus}
+\section[Universal Gravitation \& Kepler's Laws]{Universal Gravitation, Kepler's Laws \\ \& Field\,/\,Potential Calculus}
 
 \begin{conceptbox}[Newton's Law of Gravitation \& Kepler's Three Planetary Laws]
 \begin{enumerate}[leftmargin=*]
@@ -1272,10 +1304,13 @@ Gravitational field $\mathbf{E} = -\boldsymbol{\nabla}V$. The potential $V(\math
     \frac{1}{2}m v_e^2 - \frac{GMm}{R} = 0 \implies v_e = \sqrt{\frac{2GM}{R}} = \sqrt{2gR} \approx 11.2\,\si{km.s^{-1}}
   \end{equation}
   \item \textbf{Satellite Dynamics \& Energy Partition:} For orbit radius $r = R + h$:
-  \begin{align}
-    \text{Orbital Velocity: } &v_o = \sqrt{\frac{GM}{r}} = \frac{v_e}{\sqrt{2}} \\
-    \text{Total Mechanical Energy: } &E = K + U = \frac{GMm}{2r} - \frac{GMm}{r} = -\frac{GMm}{2r} = -K = \frac{U}{2}
-  \end{align}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+    \item \textbf{Orbital Velocity:} $v_o = \sqrt{\dfrac{GM}{r}} = \dfrac{v_e}{\sqrt{2}}$
+    \item \textbf{Total Mechanical Energy:}
+    \[
+      E = K + U = \frac{GMm}{2r} - \frac{GMm}{r} = -\frac{GMm}{2r} = -K = \frac{U}{2}
+    \]
+  \end{itemize}
 \end{itemize}
 \end{usecasebox}
 
@@ -1308,12 +1343,18 @@ Elasticity is the property by virtue of which a material body regains its origin
 \end{conceptbox}
 
 \begin{formulabox}[Elastic Moduli Formulations \& Potential Energy Density]
-\begin{align}
-  \text{Young's Modulus: } &Y = \frac{\text{Tensile Stress}}{\text{Longitudinal Strain}} = \frac{F/A}{\Delta L/L} = \frac{F L}{A \Delta L} \\
-  \text{Bulk Modulus: } &B = -\frac{\Delta P}{\Delta V / V} = -V\frac{\Delta P}{\Delta V}, \qquad \text{Compressibility } K = \frac{1}{B} \\
-  \text{Shear Modulus (Rigidity): } &\eta = \frac{\text{Shearing Stress}}{\text{Shear Strain}} = \frac{F/A}{\theta} \\
-  \text{Poisson's Ratio: } &\sigma_p = -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta d/d}{\Delta L/L} \quad (-1 \le \sigma_p \le 0.5)
-\end{align}
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+  \item \textbf{Young's Modulus:}
+  \[
+    Y = \frac{\text{Tensile Stress}}{\text{Longitudinal Strain}} = \frac{F/A}{\Delta L/L} = \frac{F L}{A \Delta L}
+  \]
+  \item \textbf{Bulk Modulus \& Compressibility:}
+  \[
+    B = -\frac{\Delta P}{\Delta V / V} = -V\frac{\Delta P}{\Delta V}, \qquad K = \frac{1}{B}
+  \]
+  \item \textbf{Shear Modulus (Rigidity):} $\eta = \dfrac{\text{Shearing Stress}}{\text{Shear Strain}} = \dfrac{F/A}{\theta}$
+  \item \textbf{Poisson's Ratio:} $\sigma_p = -\dfrac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\dfrac{\Delta d/d}{\Delta L/L} \quad (-1 \le \sigma_p \le 0.5)$
+\end{itemize}
 \textbf{Elastic Potential Energy Stored in Stretched Wire:}
 \begin{equation}
   W = \int_0^{\Delta L} F(x)\,dx = \int_0^{\Delta L} \left(\frac{YA}{L}x\right)dx = \frac{1}{2}\left(\frac{YA}{L}\right)(\Delta L)^2 = \frac{1}{2}F\Delta L
@@ -1425,11 +1466,20 @@ To equilibrate with hydrostatic pressure at the flat external liquid surface at 
 
 \begin{formulabox}[Work-Energy Derivation of Bernoulli's Theorem]
 Consider a fluid element of volume $\Delta V$ and mass $\Delta m = \rho\Delta V$ moving along a streamline pipe between stations 1 and 2:
-\begin{align}
-  \text{Work Done by Pressure Forces: } &W_P = P_1 A_1 \Delta x_1 - P_2 A_2 \Delta x_2 = (P_1 - P_2)\Delta V \\
-  \text{Change in Kinetic Energy: } &\Delta K = \frac{1}{2}\Delta m(v_2^2 - v_1^2) = \frac{1}{2}\rho\Delta V(v_2^2 - v_1^2) \\
-  \text{Change in Gravitational Potential Energy: } &\Delta U = \Delta m g(y_2 - y_1) = \rho\Delta V g(y_2 - y_1)
-\end{align}
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+  \item \textbf{Work Done by Pressure Forces:}
+  \[
+    W_P = P_1 A_1 \Delta x_1 - P_2 A_2 \Delta x_2 = (P_1 - P_2)\Delta V
+  \]
+  \item \textbf{Change in Kinetic Energy:}
+  \[
+    \Delta K = \frac{1}{2}\Delta m(v_2^2 - v_1^2) = \frac{1}{2}\rho\Delta V(v_2^2 - v_1^2)
+  \]
+  \item \textbf{Change in Gravitational Potential Energy:}
+  \[
+    \Delta U = \Delta m g(y_2 - y_1) = \rho\Delta V g(y_2 - y_1)
+  \]
+\end{itemize}
 Applying the Work-Energy Theorem ($W_P = \Delta K + \Delta U$):
 \begin{equation}
   (P_1 - P_2)\Delta V = \frac{1}{2}\rho\Delta V(v_2^2 - v_1^2) + \rho\Delta V g(y_2 - y_1)
@@ -1553,9 +1603,10 @@ where $\mathrm{LFP}$ is the Lower Fixed Point (ice point at $1\,\mathrm{atm}$) a
 \textbf{1. Anisotropic and Isotropic Thermal Expansion in Solids:}
 \begin{itemize}
   \item \textbf{Linear Expansion:}
-  \begin{equation}
-    L(T) = L_0 (1 + \alpha \Delta T) \implies \Delta L = L_0 \alpha \Delta T, \quad \text{where } \alpha = \frac{1}{L_0}\frac{dL}{dT} \quad [\mathrm{K}^{-1} \text{ or } ^\circ\mathrm{C}^{-1}]
-  \end{equation}
+  \begin{align}
+    L(T) &= L_0 (1 + \alpha \Delta T) \implies \Delta L = L_0 \alpha \Delta T \\
+    \alpha &= \frac{1}{L_0}\frac{dL}{dT} \quad [\si{K^{-1}} \text{ or } ^\circ\mathrm{C}^{-1}] \nonumber
+  \end{align}
   \item \textbf{Superficial (Areal) Expansion:}
   \begin{equation}
     A(T) = A_0 (1 + \beta \Delta T) \implies \Delta A = A_0 \beta \Delta T, \quad \text{where } \beta \approx 2\alpha
@@ -1773,14 +1824,16 @@ Across any cyclic process, $\Delta U_{\text{cycle}} = \oint dU = 0$.
 \begin{equation}
   \mathbf{W = P \Delta V = P(V_2 - V_1) = n R (T_2 - T_1)}
 \end{equation}
-\begin{equation}
-  \Delta Q = n C_p \Delta T, \quad \Delta U = n C_v \Delta T \implies \mathbf{\Delta U : W : \Delta Q = C_v : R : C_p = 1 : (\gamma - 1) : \gamma}
-\end{equation}
+\begin{align}
+  \Delta Q &= n C_p \Delta T, \quad \Delta U = n C_v \Delta T \\
+  \implies \mathbf{\Delta U : W : \Delta Q} &= \mathbf{C_v : R : C_p = 1 : (\gamma - 1) : \gamma}
+\end{align}
 \textbf{3. Isothermal Process (Constant Temperature, $T = \text{const}$):}
 Since $T = \text{const}$, $\Delta U = 0 \implies \Delta Q = W$. Using $P = \frac{nRT}{V}$:
-\begin{equation}
-  \mathbf{W = \int_{V_1}^{V_2} P dV = n R T \int_{V_1}^{V_2} \frac{dV}{V} = n R T \ln\left(\frac{V_2}{V_1}\right) = n R T \ln\left(\frac{P_1}{P_2}\right) = 2.303 n R T \log_{10}\left(\frac{V_2}{V_1}\right)}
-\end{equation}
+\begin{align}
+  W &= \int_{V_1}^{V_2} P\,dV = n R T \int_{V_1}^{V_2} \frac{dV}{V} = n R T \ln\left(\frac{V_2}{V_1}\right) \\
+  &= n R T \ln\left(\frac{P_1}{P_2}\right) = 2.303\,n R T \log_{10}\left(\frac{V_2}{V_1}\right)
+\end{align}
 \textbf{4. Adiabatic Process (Zero Heat Exchange, $\Delta Q = 0$):}
 Governing equations: $P V^\gamma = \text{const}$, $T V^{\gamma-1} = \text{const}$, $P^{1-\gamma} T^\gamma = \text{const}$.
 From First Law: $dQ = 0 \implies dW = -dU = -n C_v dT$.
@@ -1891,7 +1944,7 @@ Work done \textbf{on} the gas is largest for adiabatic compression:
 \textbf{3. Net Work in Closed Cycles:}
 The net work executed over any closed cycle on a $P-V$ plane equals the area enclosed by the cyclic trajectory:
 \begin{equation}
-  W_{\text{net}} = \oint P\,dV = \begin{cases} > 0 & \text{Clockwise trajectory (Heat engine, net work done by gas)} \\ < 0 & \text{Counter-clockwise trajectory (Work done on system)} \end{cases}
+  W_{\text{net}} = \oint P\,dV = \begin{cases} > 0 & \text{Clockwise: net work by gas} \\ < 0 & \text{Counter-clockwise: work on system} \end{cases}
 \end{equation}
 \end{formulabox}
 
@@ -1989,30 +2042,34 @@ Average translational kinetic energy depends \textbf{solely on absolute temperat
 \begin{formulabox}[Law of Equipartition of Energy, Degrees of Freedom \& Specific Heat Ratios]
 \textbf{1. Equipartition Principle:}
 In thermal equilibrium at temperature $T$, the total internal energy is partitioned equally among all quadratic independent degrees of freedom ($f$), each contributing an average energy of $\mathbf{\frac{1}{2}k_B T}$ per molecule:
-\begin{equation}
-  \overline{E}_{\text{molecule}} = \frac{f}{2}k_B T, \quad U_{\text{molar}} = \frac{f}{2} R T \implies \mathbf{C_v = \frac{f}{2}R}, \quad \mathbf{C_p = C_v + R = \left(\frac{f}{2} + 1\right)R}, \quad \mathbf{\gamma = \frac{C_p}{C_v} = 1 + \frac{2}{f}}
-\end{equation}
+\begin{align}
+  \overline{E}_{\text{molecule}} &= \frac{f}{2}k_B T, \qquad U_{\text{molar}} = \frac{f}{2} R T \\
+  \implies \mathbf{C_v} &= \mathbf{\frac{f}{2}R}, \qquad \mathbf{C_p} = \mathbf{\left(\frac{f}{2} + 1\right)R}, \qquad \mathbf{\gamma} = \mathbf{1 + \frac{2}{f}}
+\end{align}
 \textbf{2. Comprehensive Gas Classification Table:}
 \begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \begin{tabularx}{\linewidth}{|l|c|c|c|c|Y|}
 \hline
-\textbf{Molecular Atomicity} & \textbf{DoF ($f$)} & $C_v$ & $C_p$ & $\gamma = C_p / C_v$ & \textbf{Representative Gases} \\
+\textbf{Atomicity} & \textbf{DoF ($f$)} & $C_v$ & $C_p$ & $\gamma$ & \textbf{Examples} \\
 \hline
-\textbf{Monoatomic} & $3$ trans & $\frac{3}{2}R$ & $\frac{5}{2}R$ & $\frac{5}{3} \approx 1.67$ & $\mathrm{He, Ne, Ar, Kr}$ \\
+\textbf{Monoatomic} & $3$ & $\frac{3}{2}R$ & $\frac{5}{2}R$ & $\frac{5}{3} \approx 1.67$ & $\mathrm{He, Ne, Ar}$ \\
 \hline
-\textbf{Diatomic (Rigid, Room $T$)} & $3\text{ trans} + 2\text{ rot} = 5$ & $\frac{5}{2}R$ & $\frac{7}{2}R$ & $\frac{7}{5} = 1.40$ & $\mathrm{H_2, N_2, O_2, CO}$ \\
+\textbf{Diatomic (Rigid)} & $5$ & $\frac{5}{2}R$ & $\frac{7}{2}R$ & $\frac{7}{5} = 1.40$ & $\mathrm{H_2, N_2, O_2}$ \\
 \hline
-\textbf{Diatomic (Vibrating, High $T$)} & $5 + 2\text{ vib} = 7$ & $\frac{7}{2}R$ & $\frac{9}{2}R$ & $\frac{9}{7} \approx 1.29$ & $\mathrm{Cl_2, Br_2}$ at high $T$ \\
+\textbf{Diatomic (Vibrating)} & $7$ & $\frac{7}{2}R$ & $\frac{9}{2}R$ & $\frac{9}{7} \approx 1.29$ & $\mathrm{Cl_2, Br_2}$ \\
 \hline
-\textbf{Non-linear Polyatomic} & $3\text{ trans} + 3\text{ rot} = 6$ & $3R$ & $4R$ & $\frac{4}{3} \approx 1.33$ & $\mathrm{H_2O, NH_3, CH_4}$ \\
+\textbf{Polyatomic (Non-linear)} & $6$ & $3R$ & $4R$ & $\frac{4}{3} \approx 1.33$ & $\mathrm{H_2O, NH_3}$ \\
 \hline
 \end{tabularx}
 \end{center}
 \textbf{3. Non-Reacting Mixtures of Gases:}
 For a mixture of $n_1$ moles of gas 1 ($C_{v1}, \gamma_1$) and $n_2$ moles of gas 2 ($C_{v2}, \gamma_2$):
-\begin{equation}
-  \mathbf{C_{v,\text{mix}} = \frac{n_1 C_{v1} + n_2 C_{v2}}{n_1 + n_2}}, \qquad \mathbf{C_{p,\text{mix}} = \frac{n_1 C_{p1} + n_2 C_{p2}}{n_1 + n_2}}, \qquad \mathbf{\gamma_{\text{mix}} = \frac{C_{p,\text{mix}}}{C_{v,\text{mix}}} = \frac{n_1 C_{p1} + n_2 C_{p2}}{n_1 C_{v1} + n_2 C_{v2}}}
-\end{equation}
+\begin{align}
+  \mathbf{C_{v,\text{mix}}} &= \frac{n_1 C_{v1} + n_2 C_{v2}}{n_1 + n_2}, \qquad \mathbf{C_{p,\text{mix}}} = \frac{n_1 C_{p1} + n_2 C_{p2}}{n_1 + n_2} \\
+  \mathbf{\gamma_{\text{mix}}} &= \frac{C_{p,\text{mix}}}{C_{v,\text{mix}}} = \frac{n_1 C_{p1} + n_2 C_{p2}}{n_1 C_{v1} + n_2 C_{v2}}
+\end{align}
 \textbf{4. Mean Free Path ($\lambda$):}
 Average distance traversed by a gas molecule between successive collisions:
 \begin{equation}
@@ -2166,9 +2223,10 @@ Equating to centripetal force:
 \begin{itemize}
   \item General relation: $v = \sqrt{\frac{B}{\rho}}$, where $B$ is bulk modulus of elasticity.
   \item \textbf{Newton's Isothermal Formula (Erroneous):} Newton assumed sound compressions/rarefactions occur isothermally ($B = P$).
-  \begin{equation}
-    v_{\text{Newton}} = \sqrt{\frac{P}{\rho}} \approx \sqrt{\frac{1.013 \times 10^5}{1.293}} \approx 280\,\mathrm{m/s} \quad (\approx 15\% \text{ below experimental } 332\,\mathrm{m/s})
-  \end{equation}
+  \begin{align}
+    v_{\text{Newton}} &= \sqrt{\frac{P}{\rho}} \approx \sqrt{\frac{1.013 \times 10^5}{1.293}} \approx 280\,\mathrm{m/s} \\
+    &\approx 15\% \text{ below experimental value } (332\,\mathrm{m/s}) \nonumber
+  \end{align}
   \item \textbf{Laplace's Adiabatic Correction (Accurate):} Compressions and rarefactions occur so rapidly that heat exchange is zero ($dQ=0 \implies B_{\text{adiabatic}} = \gamma P$):
   \begin{equation}
     \mathbf{v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M_{\text{molar}}}}}
@@ -2295,9 +2353,10 @@ Under the revised NMC curriculum for NEET UG 2027:
   \end{itemize}
   \item Total moles: $n_{\text{total}} = 2 + 3 = 5\,\mathrm{mol}$.
   \item Equivalent $C_{v,\text{mix}}$:
-  \begin{equation}
-    C_{v,\text{mix}} = \frac{n_1 C_{v1} + n_2 C_{v2}}{n_1 + n_2} = \frac{2 \left(\frac{3}{2}R\right) + 3 \left(\frac{5}{2}R\right)}{5} = \frac{3R + 7.5R}{5} = \frac{10.5R}{5} = \mathbf{2.1 R} = \frac{21}{10}R
-  \end{equation}
+  \begin{align}
+    C_{v,\text{mix}} &= \frac{n_1 C_{v1} + n_2 C_{v2}}{n_1 + n_2} = \frac{2 \left(\frac{3}{2}R\right) + 3 \left(\frac{5}{2}R\right)}{5} \\
+    &= \frac{10.5R}{5} = \mathbf{2.1 R} = \frac{21}{10}R
+  \end{align}
   \item Equivalent $C_{p,\text{mix}}$:
   \begin{equation}
     C_{p,\text{mix}} = C_{v,\text{mix}} + R = 2.1 R + R = \mathbf{3.1 R} = \frac{31}{10}R
@@ -2404,9 +2463,10 @@ Consider a ring of total charge $Q$ and radius $R$ positioned in the $y-z$ plane
   \item \textbf{At Ring Center ($x=0$):} $E(0) = 0$.
   \item \textbf{Far-Field Regime ($x \gg R$):} $E(x) \approx \frac{1}{4\pi\varepsilon_0}\frac{Q}{x^2}$ (acts as point charge).
   \item \textbf{Location of Maximum Electric Field:}
-  \begin{equation}
-    \frac{dE}{dx} = \frac{Q}{4\pi\varepsilon_0} \frac{(x^2 + R^2)^{3/2} - x \cdot \frac{3}{2}(x^2 + R^2)^{1/2}(2x)}{(x^2 + R^2)^3} = 0 \implies x^2 + R^2 - 3x^2 = 0 \implies \mathbf{x = \pm \frac{R}{\sqrt{2}}}
-  \end{equation}
+  \begin{align}
+    \frac{dE}{dx} &= \frac{Q}{4\pi\varepsilon_0} \frac{(x^2 + R^2)^{3/2} - 3x^2(x^2 + R^2)^{1/2}}{(x^2 + R^2)^3} = 0 \nonumber \\
+    &\implies x^2 + R^2 - 3x^2 = 0 \implies \mathbf{x = \pm \frac{R}{\sqrt{2}}}
+  \end{align}
   \begin{equation}
     \mathbf{E_{\max} = \frac{1}{4\pi\varepsilon_0} \frac{2 Q}{3\sqrt{3} R^2}}
   \end{equation}
@@ -2856,9 +2916,10 @@ Total flux linkage is proportional to circulating current: $N \Phi_B = L I$.
   \mathbf{\mathcal{E}_L = -L \frac{dI}{dt}} \quad [\mathrm{Henry}, \mathrm{H} = \mathrm{V}\cdot\mathrm{s}\cdot\mathrm{A}^{-1}]
 \end{equation}
 For a long air-core solenoid of length $l$, area $A$, and turn density $n$:
-\begin{equation}
-  \Phi = B A = (\mu_0 n I) A \implies N \Phi = (n l)(\mu_0 n I A) = \mu_0 n^2 A l I \implies \mathbf{L = \mu_0 n^2 A l = \mu_0 \frac{N^2}{l} A}
-\end{equation}
+\begin{align}
+  N \Phi &= (n l)(\mu_0 n I A) = \mu_0 n^2 A l I \nonumber \\
+  \implies \mathbf{L} &= \mathbf{\mu_0 n^2 A l = \mu_0 \frac{N^2}{l} A}
+\end{align}
 \textbf{2. Mutual Inductance ($M$):}
 $N_2 \Phi_2 = M_{21} I_1 \implies \mathcal{E}_2 = -M \frac{dI_1}{dt}$. For coaxial solenoids:
 \begin{equation}
@@ -2974,23 +3035,25 @@ Energy flux vector: $\mathbf{S = \frac{1}{\mu_0}(\mathbf{E} \times \mathbf{B})}$
 
 \begin{formulabox}[The Electromagnetic Spectrum: Master Classification]
 \begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \begin{tabularx}{\linewidth}{|l|c|c|Y|}
 \hline
-\textbf{Wave Type} & \textbf{Wavelength ($\lambda$)} & \textbf{Frequency ($\nu$)} & \textbf{Production Mechanism \& Major Use} \\
+\textbf{Wave} & $\lambda$ & $\nu$ & \textbf{Source \& Application} \\
 \hline
-\textbf{Radio Waves} & $> 0.1\,\mathrm{m}$ & $< 3 \times 10^9\,\mathrm{Hz}$ & Rapid charge acceleration in LC antennas; Radio/TV communication \\
+\textbf{Radio} & $> 0.1\,\mathrm{m}$ & $< 3 \times 10^9\,\mathrm{Hz}$ & LC antennas; Radio/TV communication \\
 \hline
-\textbf{Microwaves} & $1\,\mathrm{mm} - 0.1\,\mathrm{m}$ & $10^9 - 10^{11}\,\mathrm{Hz}$ & Klystron/Magnetron tubes; Radar navigation, Microwave ovens \\
+\textbf{Micro} & $1\,\mathrm{mm}\text{--}0.1\,\mathrm{m}$ & $10^9\text{--}10^{11}\,\mathrm{Hz}$ & Klystrons; Radar, Microwave ovens \\
 \hline
-\textbf{Infrared} & $700\,\mathrm{nm} - 1\,\mathrm{mm}$ & $10^{11} - 4 \times 10^{14}\,\mathrm{Hz}$ & Thermal molecular vibrations; Greenhouse effect, Remote controls \\
+\textbf{Infrared} & $700\,\mathrm{nm}\text{--}1\,\mathrm{mm}$ & $10^{11}\text{--}4 \times 10^{14}\,\mathrm{Hz}$ & Molecular vibration; Remote controls \\
 \hline
-\textbf{Visible Light} & $400\,\mathrm{nm} - 700\,\mathrm{nm}$ & $4 - 7.5 \times 10^{14}\,\mathrm{Hz}$ & Electron transitions in outer atomic shells; Human vision \\
+\textbf{Visible} & $400\text{--}700\,\mathrm{nm}$ & $4\text{--}7.5 \times 10^{14}\,\mathrm{Hz}$ & Outer shell transitions; Vision \\
 \hline
-\textbf{Ultraviolet} & $1\,\mathrm{nm} - 400\,\mathrm{nm}$ & $10^{15} - 10^{17}\,\mathrm{Hz}$ & High-temperature inner shell transitions, sun; Sterilization, LASIK \\
+\textbf{UV} & $1\text{--}400\,\mathrm{nm}$ & $10^{15}\text{--}10^{17}\,\mathrm{Hz}$ & Inner shell transitions; Sterilization \\
 \hline
-\textbf{X-Rays} & $0.01\,\mathrm{nm} - 10\,\mathrm{nm}$ & $10^{16} - 10^{20}\,\mathrm{Hz}$ & Fast electrons decelerated on heavy metal target; Medical radiography \\
+\textbf{X-Rays} & $0.01\text{--}10\,\mathrm{nm}$ & $10^{16}\text{--}10^{20}\,\mathrm{Hz}$ & Decelerated electrons; Radiography \\
 \hline
-\textbf{Gamma Rays} & $< 10^{-3}\,\mathrm{nm}$ & $> 10^{19}\,\mathrm{Hz}$ & Nuclear de-excitation / nuclear isomeric transitions; Cancer radiotherapy \\
+\textbf{$\gamma$-Rays} & $< 10^{-3}\,\mathrm{nm}$ & $> 10^{19}\,\mathrm{Hz}$ & Nuclear transitions; Radiotherapy \\
 \hline
 \end{tabularx}
 \end{center}
@@ -3122,9 +3185,9 @@ For composite multiple horizontal layers: $d_{\text{apparent, total}} = \sum_{i=
 \textbf{3. Total Internal Reflection (TIR):}
 When light propagates from an optically denser medium ($n_1$) toward a rarer medium ($n_2 < n_1$):
 \begin{itemize}
-  \item Critical angle $i_c$: angle of incidence where angle of refraction $r = 90^\circ$:
+  \item Critical angle $i_c$: angle of incidence where angle of refraction $r = 90^\circ$ (for air, $n_2 = 1$):
   \begin{equation}
-    n_1 \sin i_c = n_2 \sin 90^\circ \implies \mathbf{\sin i_c = \frac{n_2}{n_1} = \frac{1}{\mu}} \quad (\text{if rarer medium is air, } n_2 = 1)
+    n_1 \sin i_c = n_2 \sin 90^\circ \implies \mathbf{\sin i_c = \frac{n_2}{n_1} = \frac{1}{\mu}}
   \end{equation}
   \item For $i > i_c$, $100\%$ of incident light energy reflects back into the denser medium with zero transmission loss.
   \item \textbf{Optical Fibres:} Comprise a central cylindrical core ($\mu_1$) surrounded by a cladding ($\mu_2 < \mu_1$). Light admitted within the cone of acceptance undergoes repeated total internal reflections.
@@ -3194,9 +3257,15 @@ Consider a thin lens of refractive index $\mu_2$ bounded by spherical surfaces o
   \mathbf{P = \frac{1}{f\,[\mathrm{m}]}} \quad [\mathrm{Dioptres}, \mathrm{D} = \mathrm{m}^{-1}]
 \end{equation}
 \textbf{4. Combination of Thin Lenses:}
-\begin{itemize}
-  \item \textbf{Lenses in Contact:} $\mathbf{P_{\text{eq}} = P_1 + P_2 \implies \frac{1}{F_{\text{eq}}} = \frac{1}{f_1} + \frac{1}{f_2}}$, magnification $m = m_1 \times m_2$.
-  \item \textbf{Separated by Distance $d$:} $\mathbf{P_{\text{eq}} = P_1 + P_2 - d P_1 P_2 \implies \frac{1}{F_{\text{eq}}} = \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2}}$.
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+  \item \textbf{Lenses in Contact:}
+  \[
+    P_{\text{eq}} = P_1 + P_2 \implies \frac{1}{F_{\text{eq}}} = \frac{1}{f_1} + \frac{1}{f_2}, \qquad m = m_1 \times m_2
+  \]
+  \item \textbf{Separated by Distance $d$:}
+  \[
+    P_{\text{eq}} = P_1 + P_2 - d P_1 P_2 \implies \frac{1}{F_{\text{eq}}} = \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2}
+  \]
 \end{itemize}
 \end{formulabox}
 
@@ -3217,7 +3286,7 @@ The total angular deviation $\delta$ suffered by the ray is the sum of the devia
 
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[scale=1.1, >=Stealth]
+\begin{tikzpicture}[scale=0.8, >=Stealth]
   \coordinate (A) at (3, 4.5);
   \coordinate (B) at (0, 0);
   \coordinate (C) at (6, 0);
@@ -3558,19 +3627,21 @@ When an electron drops from an upper stationary orbit $n_2$ to a lower orbit $n_
 \end{equation}
 where $R_\infty = \frac{m e^4}{8\varepsilon_0^2 c h^3} \approx 1.09737 \times 10^7\,\mathrm{m}^{-1}$ is the Rydberg constant ($\frac{1}{R_\infty} \approx 912\,\text{\AA}$).
 \begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \begin{tabularx}{\linewidth}{|l|c|c|c|Y|}
 \hline
-\textbf{Spectral Series} & \textbf{Lower Level ($n_1$)} & \textbf{Upper Level ($n_2$)} & \textbf{Spectral Domain} & \textbf{Wavelength Range} \\
+\textbf{Series} & $n_1$ & $n_2$ & \textbf{Domain} & \textbf{Range ($\lambda$)} \\
 \hline
-\textbf{Lyman} & $1$ & $2, 3, 4, \dots$ & \textbf{Ultraviolet (UV)} & $\lambda_{\min} = 91.2\,\mathrm{nm}, \lambda_{\max} = 121.6\,\mathrm{nm}$ \\
+\textbf{Lyman} & $1$ & $2, 3, \dots$ & \textbf{UV} & $91.2\text{--}121.6\,\mathrm{nm}$ \\
 \hline
-\textbf{Balmer} & $2$ & $3, 4, 5, \dots$ & \textbf{Visible} (part UV) & $\lambda_{\min} = 364.6\,\mathrm{nm}, \lambda_{\max} = 656.3\,\mathrm{nm}$ \\
+\textbf{Balmer} & $2$ & $3, 4, \dots$ & \textbf{Visible} & $364.6\text{--}656.3\,\mathrm{nm}$ \\
 \hline
-\textbf{Paschen} & $3$ & $4, 5, 6, \dots$ & \textbf{Near Infrared} & $\lambda_{\min} = 820.4\,\mathrm{nm}, \lambda_{\max} = 1875\,\mathrm{nm}$ \\
+\textbf{Paschen} & $3$ & $4, 5, \dots$ & \textbf{Near IR} & $820.4\text{--}1875\,\mathrm{nm}$ \\
 \hline
-\textbf{Brackett} & $4$ & $5, 6, 7, \dots$ & \textbf{Mid Infrared} & $\lambda_{\min} = 1458\,\mathrm{nm}, \lambda_{\max} = 4051\,\mathrm{nm}$ \\
+\textbf{Brackett} & $4$ & $5, 6, \dots$ & \textbf{Mid IR} & $1458\text{--}4051\,\mathrm{nm}$ \\
 \hline
-\textbf{Pfund} & $5$ & $6, 7, 8, \dots$ & \textbf{Far Infrared} & $\lambda_{\min} = 2279\,\mathrm{nm}, \lambda_{\max} = 7458\,\mathrm{nm}$ \\
+\textbf{Pfund} & $5$ & $6, 7, \dots$ & \textbf{Far IR} & $2279\text{--}7458\,\mathrm{nm}$ \\
 \hline
 \end{tabularx}
 \end{center}
@@ -3769,9 +3840,10 @@ The semiconductor bandgap for visible LEDs must exceed $1.8\,\mathrm{eV}$ ($hc/\
   Acts as a \textbf{concave mirror of focal length $20\,\mathrm{cm}$}.
   \item \textbf{Case (ii): Curved Surface is Silvered:}
   Concave mirror formed by silvered curved face has $R_M = 20\,\mathrm{cm} \implies f_M = -10\,\mathrm{cm} \implies P_M = -\frac{1}{f_M} = +\frac{1}{10}\,\mathrm{cm}^{-1}$.
-  \begin{equation}
-    P_{\text{eq}} = 2 P_L + P_M = 2 \left(\frac{1}{40}\right) + \frac{1}{10} = \frac{1}{20} + \frac{1}{10} = \frac{3}{20}\,\mathrm{cm}^{-1} \implies \mathbf{F_{\text{eq}} = -\frac{20}{3}\,\mathrm{cm} \approx -6.67\,\mathrm{cm}}
-  \end{equation}
+  \begin{align}
+    P_{\text{eq}} &= 2 P_L + P_M = 2 \left(\frac{1}{40}\right) + \frac{1}{10} = \frac{3}{20}\,\mathrm{cm}^{-1} \\
+    \implies \mathbf{F_{\text{eq}}} &= \mathbf{-\frac{20}{3}\,\mathrm{cm} \approx -6.67\,\mathrm{cm}}
+  \end{align}
   Acts as a \textbf{concave mirror of focal length $6.67\,\mathrm{cm}$}.
 \end{enumerate}
 \end{usecasebox}
@@ -3877,12 +3949,10 @@ Where $\mathrm{MSR}$ is the main scale reading just preceding the vernier zero m
 \begin{formulabox}[Screw Gauge (Micrometer): Pitch, Backlash Error \& Measurements]
 \textbf{1. Pitch \& Least Count Formulations:}
 A screw gauge utilizes the principle of translating circular rotary motion into precision linear axial displacement:
-\begin{equation}
-  \mathbf{\text{Pitch}} = \frac{\text{Linear distance advanced on pitch scale}}{\text{Total number of complete revolutions of circular cap}} \quad (\text{Typically } 1.0\,\mathrm{mm} \text{ or } 0.5\,\mathrm{mm})
-\end{equation}
-\begin{equation}
-  \mathbf{\mathrm{LC}} = \frac{\text{Pitch}}{\text{Number of circular scale divisions } (N)} = \frac{1\,\mathrm{mm}}{100} = \mathbf{0.01\,\mathrm{mm} = 0.001\,\mathrm{cm} = 10\,\mu\mathrm{m}}
-\end{equation}
+\begin{align}
+  \mathbf{\text{Pitch}} &= \frac{\text{Distance advanced on pitch scale}}{\text{Complete revolutions of circular cap}} \quad (\text{Typ. } 1.0\text{ or } 0.5\,\mathrm{mm}) \\
+  \mathbf{\mathrm{LC}} &= \frac{\text{Pitch}}{N} = \frac{1\,\mathrm{mm}}{100} = \mathbf{0.01\,\mathrm{mm} = 10\,\mu\mathrm{m}}
+\end{align}
 \textbf{2. True Diameter and Thickness Measurement:}
 \begin{equation}
   \mathbf{\text{True Reading} = \mathrm{PSR} + (\mathrm{CSR} \times \mathrm{LC}) - (\text{Zero Error})}
@@ -3900,9 +3970,10 @@ A screw gauge utilizes the principle of translating circular rotary motion into 
 \begin{conceptbox}[Simple Pendulum: Oscillation Dynamics \& Exponential Energy Dissipation]
 \textbf{1. Acceleration Due to Gravity ($g$) Formulation:}
 For small angular displacements ($\theta \le 4^\circ$, ensuring $\sin\theta \approx \theta$):
-\begin{equation}
-  T = 2\pi\sqrt{\frac{L}{g}} \implies T^2 = \left(\frac{4\pi^2}{g}\right)L \implies \mathbf{g = 4\pi^2 \left(\frac{L}{T^2}\right) = \frac{4\pi^2}{\text{Slope of } T^2 \text{ vs } L \text{ graph}}}
-\end{equation}
+\begin{align}
+  T &= 2\pi\sqrt{\frac{L}{g}} \implies T^2 = \left(\frac{4\pi^2}{g}\right)L \\
+  \implies \mathbf{g} &= \mathbf{4\pi^2 \left(\frac{L}{T^2}\right) = \frac{4\pi^2}{\text{Slope of } T^2 \text{ vs } L \text{ graph}}}
+\end{align}
 Where effective length $L = l + h + r$ ($l$ = length of suspension thread, $h$ = hook length, $r$ = radius of spherical bob).
 \begin{itemize}
   \item The graph of $L$ versus $T^2$ is a \textbf{straight line passing through the origin}.
@@ -4055,9 +4126,10 @@ In an isolated thermodynamic calorimeter with negligible heat exchange with the 
   Q_{\text{lost}} = Q_{\text{gained}} \implies m_s s_s (T_s - T) = (m_w s_w + m_c s_c)(T - T_0)
 \end{equation}
 Where $m_s$ is the mass of the solid specimen heated in a hypsometer to boiling temperature $T_s$, $s_s$ is its specific heat capacity, $m_w$ is the initial mass of water at ambient temperature $T_0$, $m_c$ and $s_c$ are the mass and specific heat of the copper calorimeter, and $T$ is the steady final equilibrium temperature.
-\begin{equation}
-  \mathbf{s_s = \frac{(m_w s_w + W)(T - T_0)}{m_s (T_s - T)}} \qquad (\text{Where } W = m_c s_c \text{ is the Water Equivalent of the calorimeter})
-\end{equation}
+\begin{align}
+  \mathbf{s_s} &= \mathbf{\frac{(m_w s_w + W)(T - T_0)}{m_s (T_s - T)}} \\
+  &\text{[where } W = m_c s_c \text{ is the Water Equivalent]} \nonumber
+\end{align}
 \textbf{2. Determination of Specific Heat of an Unknown Liquid ($s_l$):}
 Replace water with a known mass of liquid $m_l$ and drop in a calibrated metal cylinder of known specific heat capacity $s_s$:
 \begin{equation}
@@ -4145,9 +4217,10 @@ Non-zero contact resistance and imperfect solder joints at the thick copper term
   When $R \gg G$, this simplifies to $G \approx S$.
 \end{itemize}
 \textbf{2. Figure of Merit ($k$) and Full-Scale Current ($I_g$):}
-\begin{equation}
-  \mathbf{k = \frac{I_1}{\theta} = \frac{E}{(R + G)\theta}} \implies \mathbf{I_g = n \cdot k} \quad (n = \text{total number of scale divisions on one side})
-\end{equation}
+\begin{align}
+  \mathbf{k} &= \mathbf{\frac{I_1}{\theta} = \frac{E}{(R + G)\theta}} \\
+  \implies \mathbf{I_g} &= \mathbf{n \cdot k} \quad (n = \text{total scale divisions on one side}) \nonumber
+\end{align}
 \textbf{3. Conversion of Galvanometer into Ammeter and Voltmeter:}
 \begin{itemize}
   \item \textbf{Conversion to Ammeter (Range $0 \to I$):} Connect a small \textbf{Shunt Resistance ($S$)} in \textbf{parallel} with the galvanometer coil:
@@ -4415,10 +4488,10 @@ This chapter brings together every governing equation, parameter definition, val
 
 \begin{formulabox}[Static, Limiting \& Kinetic Friction Laws]
 \begin{align}
-  f_s &\le f_{s,\max} = \mu_s N && \text{[Static Friction: Self-Adjusting, $0 \le f_s \le \mu_s N$]} \\
-  f_k &= \mu_k N && \text{[Kinetic Friction: Constant for given surfaces, $\mu_k \le \mu_s$]} \\
-  \tan\lambda &= \mu_s && \text{[Angle of Friction $\lambda$]} \\
-  \theta_r &= \lambda = \tan^{-1}(\mu_s) && \text{[Angle of Repose $\theta_r$]}
+  f_s &\le f_{s,\max} = \mu_s N \quad [\text{Static: } 0 \le f_s \le \mu_s N] \\
+  f_k &= \mu_k N \quad [\text{Kinetic: } \mu_k \le \mu_s] \\
+  \tan\lambda &= \mu_s \quad [\text{Angle of Friction } \lambda] \\
+  \theta_r &= \lambda = \tan^{-1}(\mu_s) \quad [\text{Angle of Repose } \theta_r]
 \end{align}
 \end{formulabox}
 
@@ -4450,12 +4523,18 @@ This chapter brings together every governing equation, parameter definition, val
 \subsection{Circular Dynamics \& Highway Banking}
 
 \begin{formulabox}[Vehicle Dynamics on Circular Tracks]
-\begin{align}
-  v_{\max,\text{flat}} &= \sqrt{\mu_s g R} && \text{[Unbanked Flat Road]} \\
-  v_{\text{opt}} &= \sqrt{g R \tan\theta} && \text{[Banked Road, Zero Friction Needed]} \\
-  v_{\max,\text{banked}} &= \sqrt{g R \left(\frac{\mu_s + \tan\theta}{1 - \mu_s\tan\theta}\right)} && \text{[Banked Road with Friction, Upper Speed Limit]} \\
-  v_{\min,\text{banked}} &= \sqrt{g R \left(\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}\right)} && \text{[Banked Road with Friction, Lower Speed Limit]}
-\end{align}
+\begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+  \item \textbf{Unbanked Flat Road:} $v_{\max,\text{flat}} = \sqrt{\mu_s g R}$
+  \item \textbf{Banked Road (Zero Friction):} $v_{\text{opt}} = \sqrt{g R \tan\theta}$
+  \item \textbf{Banked Road (Upper Limit):}
+  \[
+    v_{\max,\text{banked}} = \sqrt{g R \left(\frac{\mu_s + \tan\theta}{1 - \mu_s\tan\theta}\right)}
+  \]
+  \item \textbf{Banked Road (Lower Limit):}
+  \[
+    v_{\min,\text{banked}} = \sqrt{g R \left(\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}\right)}
+  \]
+\end{itemize}
 \end{formulabox}
 
 \newpage
@@ -4469,9 +4548,9 @@ This chapter brings together every governing equation, parameter definition, val
 
 \begin{formulabox}[Fundamental Work \& Potential Relations]
 \begin{align}
-  W_{\text{net}} &= \Delta K = K_f - K_i = \frac{1}{2}m v_f^2 - \frac{1}{2}m v_i^2 && \text{[Universal Work-Energy Theorem]} \\
-  W_{\text{cons}} &= -\Delta U = -(U_f - U_i) && \text{[Conservative Force Definition]} \\
-  \mathbf{F} &= -\boldsymbol{\nabla} U = -\left(\frac{\partial U}{\partial x}\hat{\mathbf{i}} + \frac{\partial U}{\partial y}\hat{\mathbf{j}} + \frac{\partial U}{\partial z}\hat{\mathbf{k}}\right) && \text{[Force-Potential Gradient Relation]}
+  W_{\text{net}} &= \Delta K = \frac{1}{2}m v_f^2 - \frac{1}{2}m v_i^2 \quad [\text{Work-Energy Theorem}] \\
+  W_{\text{cons}} &= -\Delta U = -(U_f - U_i) \quad [\text{Conservative Force}] \\
+  \mathbf{F} &= -\boldsymbol{\nabla} U = -\left(\frac{\partial U}{\partial x}\hat{\mathbf{i}} + \frac{\partial U}{\partial y}\hat{\mathbf{j}} + \frac{\partial U}{\partial z}\hat{\mathbf{k}}\right)
 \end{align}
 \textbf{Spring Elastic Potential Energy:}
 \begin{equation}
@@ -4536,9 +4615,10 @@ This chapter brings together every governing equation, parameter definition, val
   \item \textbf{Heavy Target at Rest ($m_2 \gg m_1, u_2 = 0$):} $v_1 \approx -u_1$ (rebounds with same speed), $v_2 \approx 0$.
   \item \textbf{Heavy Projectile against Light Target ($m_1 \gg m_2, u_2 = 0$):} $v_1 \approx u_1$, $v_2 \approx 2u_1$ (target launched at twice projectile speed).
   \item \textbf{Rebound from Floor (Floor $m_2 \to \infty, u_2 = 0$):}
-  \begin{equation*}
-    v_n = e^n v_0, \qquad h_n = e^{2n} h_0, \qquad t_{\text{total}} = t_0\left(\frac{1 + e}{1 - e}\right), \qquad H_{\text{total}} = h_0\left(\frac{1 + e^2}{1 - e^2}\right)
-  \end{equation*}
+  \begin{align*}
+    v_n &= e^n v_0, \qquad h_n = e^{2n} h_0 \\
+    t_{\text{total}} &= t_0\left(\frac{1 + e}{1 - e}\right), \qquad H_{\text{total}} = h_0\left(\frac{1 + e^2}{1 - e^2}\right)
+  \end{align*}
 \end{itemize}
 \end{usecasebox}
 
@@ -4547,26 +4627,24 @@ This chapter brings together every governing equation, parameter definition, val
 \subsection{Centre of Mass (CM) Formulations}
 
 \begin{formulabox}[Discrete and Continuous Centre of Mass Coordinates]
-\begin{equation}
-  \mathbf{r}_{\text{cm}} = \frac{\sum_{i=1}^n m_i \mathbf{r}_i}{\sum_{i=1}^n m_i} = \frac{1}{M}\sum m_i \mathbf{r}_i, \qquad \mathbf{r}_{\text{cm}} = \frac{\int \mathbf{r}\,dm}{\int dm} = \frac{1}{M}\int \mathbf{r}\,dm
-\end{equation}
-\textbf{Centre of Mass Velocity, Acceleration \& Truncated Body Relation:}
-\begin{equation}
-  \mathbf{v}_{\text{cm}} = \frac{\sum m_i \mathbf{v}_i}{M}, \quad \mathbf{a}_{\text{cm}} = \frac{\mathbf{F}_{\text{ext}}}{M}, \quad \mathbf{r}_{\text{rem}} = \frac{M\mathbf{r}_{\text{orig}} - m\mathbf{r}_{\text{cut}}}{M - m}
-\end{equation}
+\begin{align}
+  \mathbf{r}_{\text{cm}} &= \frac{\sum m_i \mathbf{r}_i}{M} = \frac{1}{M}\int \mathbf{r}\,dm \\
+  \mathbf{v}_{\text{cm}} &= \frac{\sum m_i \mathbf{v}_i}{M}, \qquad \mathbf{a}_{\text{cm}} = \frac{\mathbf{F}_{\text{ext}}}{M}, \qquad \mathbf{r}_{\text{rem}} = \frac{M\mathbf{r}_{\text{orig}} - m\mathbf{r}_{\text{cut}}}{M - m}
+\end{align}
 \end{formulabox}
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\textwidth}{L c L c}
 \toprule
-\textbf{Geometry / Symmetric Body} & \textbf{CM Location ($y_{\text{cm}}$)} & \textbf{Geometry / Symmetric Body} & \textbf{CM Location ($y_{\text{cm}}$)} \\
+\textbf{Body} & \textbf{CM ($y_{\text{cm}}$)} & \textbf{Body} & \textbf{CM ($y_{\text{cm}}$)} \\
 \midrule
-Uniform Semicircular Ring & $\frac{2R}{\pi}$ from base & Uniform Semicircular Disc & $\frac{4R}{3\pi}$ from base \\
-Hemispherical Shell (Hollow) & $\frac{R}{2}$ from center & Solid Hemisphere & $\frac{3R}{8}$ from center \\
-Hollow Cone (without base) & $\frac{h}{3}$ from base & Solid Cone & $\frac{h}{4}$ from base \\
+Semicircular Ring & $\frac{2R}{\pi}$ (base) & Semicircular Disc & $\frac{4R}{3\pi}$ (base) \\
+Hollow Hemisphere & $\frac{R}{2}$ (center) & Solid Hemisphere & $\frac{3R}{8}$ (center) \\
+Hollow Cone & $\frac{h}{3}$ (base) & Solid Cone & $\frac{h}{4}$ (base) \\
 \bottomrule
 \end{tabularx}
 \caption{Exact Centre of Mass Coordinates from Base / Symmetric Center along Axis.}
@@ -4576,9 +4654,9 @@ Hollow Cone (without base) & $\frac{h}{3}$ from base & Solid Cone & $\frac{h}{4}
 
 \begin{formulabox}[Governing Torque and Angular Momentum Relations]
 \begin{align}
-  \boldsymbol{\tau} &= \mathbf{r} \times \mathbf{F} = I\boldsymbol{\alpha} = \frac{d\mathbf{L}}{dt} && \text{[Torque Equation; $\tau = r F \sin\theta$]} \\
-  \mathbf{L} &= \mathbf{r} \times \mathbf{p} = I\boldsymbol{\omega} && \text{[Angular Momentum of Rigid Body]} \\
-  W_{\text{rot}} &= \int \tau\,d\theta = \frac{1}{2}I\omega_f^2 - \frac{1}{2}I\omega_i^2 && \text{[Rotational Work-Energy Theorem]}
+  \boldsymbol{\tau} &= \mathbf{r} \times \mathbf{F} = I\boldsymbol{\alpha} = \frac{d\mathbf{L}}{dt} && \text{[Torque Equation]} \\
+  \mathbf{L} &= \mathbf{r} \times \mathbf{p} = I\boldsymbol{\omega} && \text{[Angular Momentum]} \\
+  W_{\text{rot}} &= \int \tau\,d\theta = \frac{1}{2}I\omega_f^2 - \frac{1}{2}I\omega_i^2 && \text{[Rotational Work-Energy]}
 \end{align}
 \textbf{Conservation of Angular Momentum (When $\boldsymbol{\tau}_{\text{ext}} = \mathbf{0}$):}
 \begin{equation}
@@ -4591,29 +4669,30 @@ Hollow Cone (without base) & $\frac{h}{3}$ from base & Solid Cone & $\frac{h}{4}
 \begin{formulabox}[Moment of Inertia (MI) Fundamental Theorems]
 \begin{align}
   I &= \sum m_i r_i^2 = \int r^2\,dm = M k^2 && \text{[$k$ = Radius of Gyration]} \\
-  I &= I_{\text{cm}} + M d^2 && \text{[Parallel Axis Theorem: valid for ANY rigid body]} \\
-  I_z &= I_x + I_y && \text{[Perpendicular Axis Theorem: strictly PLANAR laminar bodies only]}
+  I &= I_{\text{cm}} + M d^2 && \text{[Parallel Axis Theorem]} \\
+  I_z &= I_x + I_y && \text{[Perpendicular Axis Theorem]}
 \end{align}
 \end{formulabox}
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{L c c c}
+\begin{tabularx}{\textwidth}{L L c c}
 \toprule
-\textbf{Body (Mass $M$, Radius $R$)} & \textbf{Axis of Rotation} & \textbf{Moment of Inertia ($I$)} & $k^2/R^2$ \\
+\textbf{Body} & \textbf{Axis of Rotation} & \textbf{MI ($I$)} & $k^2/R^2$ \\
 \midrule
-Thin Rod (Length $L$) & Perpendicular through center & $\frac{1}{12} M L^2$ & $L^2 / (12 R^2)$ \\
-Thin Rod (Length $L$) & Perpendicular through one end & $\frac{1}{3} M L^2$ & $L^2 / (3 R^2)$ \\
-Thin Circular Ring & Central perpendicular axis & $M R^2$ & $1$ \\
-Thin Circular Ring & Across diameter & $\frac{1}{2} M R^2$ & $1/2$ \\
-Uniform Circular Disc & Central perpendicular axis & $\frac{1}{2} M R^2$ & $1/2$ \\
-Uniform Circular Disc & Across diameter & $\frac{1}{4} M R^2$ & $1/4$ \\
-Solid Cylinder & Longitudinal central axis & $\frac{1}{2} M R^2$ & $1/2$ \\
-Hollow Cylinder (Thin Pipe) & Longitudinal central axis & $M R^2$ & $1$ \\
-Solid Sphere & Through any diameter & $\frac{2}{5} M R^2$ & $2/5 = 0.40$ \\
-Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $2/3 \approx 0.67$ \\
+Thin Rod ($L$) & Perpendicular (center) & $\frac{1}{12} M L^2$ & $L^2 / (12 R^2)$ \\
+Thin Rod ($L$) & Perpendicular (end) & $\frac{1}{3} M L^2$ & $L^2 / (3 R^2)$ \\
+Thin Ring & Central $\perp$ axis & $M R^2$ & $1$ \\
+Thin Ring & Across diameter & $\frac{1}{2} M R^2$ & $1/2$ \\
+Circular Disc & Central $\perp$ axis & $\frac{1}{2} M R^2$ & $1/2$ \\
+Circular Disc & Across diameter & $\frac{1}{4} M R^2$ & $1/4$ \\
+Solid Cylinder & Longitudinal axis & $\frac{1}{2} M R^2$ & $1/2$ \\
+Hollow Cylinder & Longitudinal axis & $M R^2$ & $1$ \\
+Solid Sphere & Any diameter & $\frac{2}{5} M R^2$ & $0.40$ \\
+Hollow Sphere & Any diameter & $\frac{2}{3} M R^2$ & $\approx 0.67$ \\
 \bottomrule
 \end{tabularx}
 \caption{Standard Moments of Inertia and Dimensionless Gyration Factor $k^2/R^2$.}
@@ -4628,9 +4707,10 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
   \frac{K_{\text{trans}}}{K_{\text{total}}} &= \frac{1}{1 + k^2/R^2}, \qquad \frac{K_{\text{rot}}}{K_{\text{total}}} = \frac{k^2/R^2}{1 + k^2/R^2}
 \end{align}
 \textbf{Rolling Down an Incline of Angle $\theta$ and Height $h$:}
-\begin{equation}
-  a = \frac{g\sin\theta}{1 + \frac{k^2}{R^2}}, \qquad v_{\text{bottom}} = \sqrt{\frac{2gh}{1 + \frac{k^2}{R^2}}}, \qquad \mu_{\min} = \frac{\tan\theta}{1 + \frac{R^2}{k^2}}
-\end{equation}
+\begin{align}
+  a &= \frac{g\sin\theta}{1 + \frac{k^2}{R^2}}, \qquad v_{\text{bottom}} = \sqrt{\frac{2gh}{1 + \frac{k^2}{R^2}}} \\
+  \mu_{\min} &= \frac{\tan\theta}{1 + \frac{R^2}{k^2}}
+\end{align}
 \end{formulabox}
 
 \begin{usecasebox}[Race Down an Incline (Identical $M, R, \theta, h$)]
@@ -4661,13 +4741,13 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
 \begin{formulabox}[Newton's Law \& Surface Acceleration $g$]
 \begin{align}
   F &= \frac{G M_1 M_2}{r^2} && [G = 6.674\times 10^{-11}\si{N.m^2.kg^{-2}}] \\
-  g &= \frac{GM}{R^2} = \frac{4}{3}\pi G \rho R && [\text{Surface acceleration, Earth } g \approx 9.8\si{m.s^{-2}}]
+  g &= \frac{GM}{R^2} = \frac{4}{3}\pi G \rho R && [\text{Earth: } g \approx 9.8\si{m.s^{-2}}]
 \end{align}
 \textbf{Variations of $g$ (Altitude, Depth \& Latitude):}
 \begin{align}
-  g_h &= g\left(\frac{R}{R+h}\right)^2 = g\left(1 + \frac{h}{R}\right)^{-2} \approx g\left(1 - \frac{2h}{R}\right) && [\text{Approximation valid strictly for } h \ll R] \\
-  g_d &= g\left(1 - \frac{d}{R}\right) && [\text{Exact at all depths } 0 \le d \le R] \\
-  g' &= g - \omega^2 R \cos^2\lambda && [\lambda = \text{latitude; Equator } \lambda=0, \text{Pole } \lambda=90^\circ]
+  g_h &= g\left(1 + \frac{h}{R}\right)^{-2} \approx g\left(1 - \frac{2h}{R}\right) && [h \ll R] \\
+  g_d &= g\left(1 - \frac{d}{R}\right) && [0 \le d \le R] \\
+  g' &= g - \omega^2 R \cos^2\lambda && [\lambda = \text{latitude}]
 \end{align}
 \end{formulabox}
 
@@ -4687,16 +4767,17 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
 
 \begin{formulabox}[Potential, Escape Speed, Orbital Speed \& Satellite Energies]
 \begin{align}
-  V(r) &= -\frac{GM}{r}, \qquad U(r) = -\frac{GMm}{r} && [E_g = -\frac{dV}{dr} = -\frac{GM}{r^2}] \\
-  v_e &= \sqrt{\frac{2GM}{R}} = \sqrt{2gR} \approx 11.2\si{km.s^{-1}} && [\text{Escape Velocity from Earth Surface}] \\
-  v_o &= \sqrt{\frac{GM}{r}} = \sqrt{\frac{g R^2}{R+h}} && [\text{Orbital Velocity at orbit radius } r = R+h] \\
-  v_e &= \sqrt{2} v_o \approx 1.414 v_o && [\text{Near-Earth orbit } h \ll R: v_o \approx 7.92\si{km.s^{-1}}] \\
-  T^2 &= \left(\frac{4\pi^2}{GM}\right)r^3 \implies T = 2\pi\sqrt{\frac{r^3}{GM}} && [\text{Kepler's Third Law of Periods}]
+  V(r) &= -\frac{GM}{r}, \qquad U(r) = -\frac{GMm}{r} \\
+  v_e &= \sqrt{\frac{2GM}{R}} = \sqrt{2gR} \approx 11.2\si{km.s^{-1}} && [\text{Escape Speed}] \\
+  v_o &= \sqrt{\frac{GM}{r}} = \sqrt{\frac{g R^2}{R+h}} && [\text{Orbital Speed}] \\
+  v_e &= \sqrt{2} v_o \approx 1.414 v_o && [\text{Near-Earth orbit}] \\
+  T &= 2\pi\sqrt{\frac{r^3}{GM}} \implies T^2 \propto r^3 && [\text{Kepler's Third Law}]
 \end{align}
 \textbf{Satellite Energy Spectrum (Orbit radius $r = R+h$):}
-\begin{equation}
-  K = \frac{GMm}{2r}, \quad U = -\frac{GMm}{r}, \quad E_{\text{total}} = -\frac{GMm}{2r} = -K = \frac{U}{2}, \quad \text{B.E.} = -E_{\text{total}} = \frac{GMm}{2r}
-\end{equation}
+\begin{align}
+  K &= \frac{GMm}{2r}, \qquad U = -\frac{GMm}{r} \\
+  E_{\text{total}} &= -\frac{GMm}{2r} = -K = \frac{U}{2}, \qquad \text{B.E.} = \frac{GMm}{2r}
+\end{align}
 \end{formulabox}
 
 \begin{trapbox}[Gravitation Traps: Launch Angle \& Solid Sphere Potential]
@@ -4721,15 +4802,16 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
 
 \begin{formulabox}[Hooke's Law, Elastic Moduli \& Energy Density]
 \begin{align}
-  Y &= \frac{\text{Longitudinal Stress}}{\text{Longitudinal Strain}} = \frac{F/A}{\Delta L/L} = \frac{F L}{A \Delta L} && \text{[Young's Modulus, $\Delta L = \frac{F L}{A Y}$]} \\
-  B &= -\frac{\Delta P}{\Delta V / V} = -V\frac{\Delta P}{\Delta V}, \qquad K = \frac{1}{B} && \text{[Bulk Modulus $B$ \& Compressibility $K$]} \\
-  \eta &= \frac{\text{Shear Stress}}{\text{Shear Strain}} = \frac{F/A}{\theta} && \text{[Shear Modulus / Modulus of Rigidity]} \\
-  \sigma &= -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta d / d}{\Delta L / L} && \text{[Poisson's Ratio; Actual: $0 < \sigma < 0.5$]}
+  Y &= \frac{F L}{A \Delta L} && \text{[Young's Modulus]} \\
+  B &= -V\frac{\Delta P}{\Delta V}, \qquad K = \frac{1}{B} && \text{[Bulk Modulus \& Compressibility]} \\
+  \eta &= \frac{F/A}{\theta} && \text{[Modulus of Rigidity]} \\
+  \sigma &= -\frac{\Delta d / d}{\Delta L / L} && \text{[Poisson's Ratio; } 0 < \sigma < 0.5\text{]}
 \end{align}
 \textbf{Elastic Potential Energy Stored in Stretched Wire:}
-\begin{equation}
-  U = \frac{1}{2} F \Delta L = \frac{1}{2} k (\Delta L)^2, \qquad u = \frac{U}{V} = \frac{1}{2}\times\text{stress}\times\text{strain} = \frac{(\text{stress})^2}{2Y} = \frac{1}{2}Y(\text{strain})^2
-\end{equation}
+\begin{align}
+  U &= \frac{1}{2} F \Delta L = \frac{1}{2} k (\Delta L)^2 \\
+  u &= \frac{U}{V} = \frac{1}{2}\times\text{stress}\times\text{strain} = \frac{(\text{stress})^2}{2Y}
+\end{align}
 \textbf{Thermal Stress Developed in Clamped Rod:}
 \begin{equation}
   \text{Stress} = Y\alpha\Delta T, \qquad F_{\text{tension}} = Y A \alpha \Delta T
@@ -4740,10 +4822,10 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
 
 \begin{formulabox}[Pressure, Pascal's Law \& Archimedes' Principle]
 \begin{align}
-  P &= P_0 + \rho g h && \text{[Gauge Pressure } P_{\text{gauge}} = \rho g h\text{]} \\
-  \frac{F_1}{A_1} &= \frac{F_2}{A_2} \implies F_2 = F_1\left(\frac{A_2}{A_1}\right) && \text{[Hydraulic Lift Principle]} \\
-  F_B &= V_{\text{submerged}}\,\rho_{\text{liquid}}\,g && \text{[Archimedes' Buoyant Force]} \\
-  \frac{V_{\text{submerged}}}{V_{\text{total}}} &= \frac{\rho_{\text{body}}}{\rho_{\text{liquid}}}, \qquad W_{\text{apparent}} = W_{\text{actual}}\left(1 - \frac{\rho_{\text{liquid}}}{\rho_{\text{body}}}\right)
+  P &= P_0 + \rho g h && [P_{\text{gauge}} = \rho g h] \\
+  F_2 &= F_1\left(\frac{A_2}{A_1}\right) && \text{[Hydraulic Lift]} \\
+  F_B &= V_{\text{sub}}\,\rho_{\text{liq}}\,g && \text{[Buoyant Force]} \\
+  \frac{V_{\text{sub}}}{V} &= \frac{\rho_{\text{body}}}{\rho_{\text{liq}}}, \qquad W_{\text{app}} = W\left(1 - \frac{\rho_{\text{liq}}}{\rho_{\text{body}}}\right)
 \end{align}
 \end{formulabox}
 
@@ -4751,18 +4833,18 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
 
 \begin{formulabox}[Continuity, Bernoulli, Viscosity \& Capillarity]
 \begin{align}
-  A_1 v_1 &= A_2 v_2 = \text{constant} && \text{[Equation of Continuity for Incompressible Fluid]} \\
+  A_1 v_1 &= A_2 v_2 = \text{constant} && \text{[Continuity Equation]} \\
   P + \frac{1}{2}\rho v^2 + \rho g h &= \text{constant} && \text{[Bernoulli's Theorem]} \\
-  v_{\text{efflux}} &= \sqrt{2gh}, \quad R_{\text{horizontal}} = 2\sqrt{h(H-h)} && \text{[Torricelli's Law; $R_{\max} = H$ at $h = H/2$]} \\
-  F_v &= 6\pi \eta r v && \text{[Stokes' Viscous Drag Law]} \\
-  v_t &= \frac{2 r^2(\rho - \sigma)g}{9\eta} \implies v_t \propto r^2 && \text{[Terminal Velocity; } \rho=\text{solid, } \sigma=\text{fluid]} \\
-  R_e &= \frac{\rho v d}{\eta} && \text{[Reynolds Number; Laminar } < 2000\text{]}
+  v_{\text{efflux}} &= \sqrt{2gh}, \quad R_{\text{horiz}} = 2\sqrt{h(H-h)} && \text{[Torricelli's Law]} \\
+  F_v &= 6\pi \eta r v && \text{[Stokes' Viscous Drag]} \\
+  v_t &= \frac{2 r^2(\rho - \sigma)g}{9\eta} \implies v_t \propto r^2 && \text{[Terminal Velocity]} \\
+  R_e &= \frac{\rho v d}{\eta} && \text{[Reynolds Number]}
 \end{align}
 \textbf{Surface Tension, Excess Pressure \& Capillary Rise:}
 \begin{align}
-  T &= \frac{F}{L} = \frac{\Delta W}{\Delta A}, \quad W_{\text{split}} = 4\pi R^2 T(n^{1/3} - 1) && [1\text{ drop } \to n\text{ droplets}] \\
-  \Delta P_{\text{liquid drop}} &= \frac{2T}{R}, \qquad \Delta P_{\text{soap bubble}} = \frac{4T}{R} && \text{[Soap bubble has TWO free interfaces]} \\
-  h &= \frac{2T\cos\theta}{r\rho g} = \frac{2T}{R_c \rho g} && \text{[Jurin's Law: } h r = \text{const; } R_c = r/\cos\theta\text{]}
+  T &= \frac{F}{L} = \frac{\Delta W}{\Delta A}, \quad W_{\text{split}} = 4\pi R^2 T(n^{1/3} - 1) \\
+  \Delta P_{\text{drop}} &= \frac{2T}{R}, \qquad \Delta P_{\text{bubble}} = \frac{4T}{R} \\
+  h &= \frac{2T\cos\theta}{r\rho g} = \frac{2T}{R_c \rho g} && \text{[Jurin's Law]}
 \end{align}
 \end{formulabox}
 
@@ -4784,12 +4866,12 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
 
 \begin{formulabox}[Expansion, Calorimetry, Conduction \& Radiation]
 \begin{align}
-  \Delta L &= L_0 \alpha \Delta T, \quad \Delta A = A_0 \beta \Delta T, \quad \Delta V = V_0 \gamma \Delta T && [\alpha : \beta : \gamma = 1 : 2 : 3] \\
-  Q &= m c \Delta T, \qquad Q = m L && [c = \text{sp. heat capacity}, L = \text{latent heat}] \\
-  \frac{dQ}{dt} &= \frac{kA(T_1 - T_2)}{L} = \frac{\Delta T}{R_{\text{th}}} && [R_{\text{th}} = \frac{L}{kA} = \text{Thermal Resistance}] \\
-  E &= \sigma e A T^4, \qquad P_{\text{net}} = \sigma e A(T^4 - T_0^4) && [\text{Stefan-Boltzmann Law, } \sigma = 5.67\times 10^{-8}\si{W.m^{-2}.K^{-4}}] \\
-  \lambda_m T &= b = 2.898\times 10^{-3}\si{m.K} && [\text{Wien's Displacement Law}] \\
-  \frac{T_1 - T_2}{t} &= K\left(\frac{T_1 + T_2}{2} - T_0\right) && [\text{Newton's Law of Cooling (Average Form)}]
+  \Delta L &= L_0 \alpha \Delta T, \quad \Delta A = A_0 \beta \Delta T, \quad \Delta V = V_0 \gamma \Delta T \\
+  Q &= m c \Delta T, \qquad Q = m L \\
+  \frac{dQ}{dt} &= \frac{kA(T_1 - T_2)}{L} = \frac{\Delta T}{R_{\text{th}}} && [R_{\text{th}} = L/(kA)] \\
+  E &= \sigma e A T^4, \qquad P_{\text{net}} = \sigma e A(T^4 - T_0^4) \\
+  \lambda_m T &= b = 2.898\times 10^{-3}\si{m.K} && [\text{Wien's Law}] \\
+  \frac{T_1 - T_2}{t} &= K\left(\frac{T_1 + T_2}{2} - T_0\right) && [\text{Cooling Law}]
 \end{align}
 \end{formulabox}
 
@@ -4797,28 +4879,29 @@ Spherical Shell (Hollow Sphere) & Through any diameter & $\frac{2}{3} M R^2$ & $
 
 \begin{formulabox}[First Law \& Thermodynamic Processes]
 \begin{equation}
-  \Delta Q = \Delta U + \Delta W \quad [\text{Ideal Gas: } \Delta U = n C_v \Delta T = \frac{P_2V_2 - P_1V_1}{\gamma - 1} \text{ for ANY process}]
+  \Delta Q = \Delta U + \Delta W \quad [\text{Ideal Gas: } \Delta U = n C_v \Delta T]
 \end{equation}
 \textbf{Work Done in Standard Thermodynamic Processes:}
 \begin{align}
-  W_{\text{isochoric}} &= 0, \qquad \Delta Q = \Delta U = n C_v \Delta T && [V = \text{constant}] \\
-  W_{\text{isobaric}} &= P(V_2 - V_1) = n R(T_2 - T_1), \quad \Delta Q = n C_p \Delta T && [P = \text{constant}] \\
-  W_{\text{isothermal}} &= n R T \ln\left(\frac{V_2}{V_1}\right) = 2.303 n R T \log_{10}\left(\frac{P_1}{P_2}\right) && [T = \text{const}, \Delta U = 0, \Delta Q = W] \\
-  W_{\text{adiabatic}} &= \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} = \frac{n R(T_1 - T_2)}{\gamma - 1} = -\Delta U && [\Delta Q = 0, P V^\gamma = \text{const}]
+  W_{\text{isochoric}} &= 0, \qquad \Delta Q = \Delta U = n C_v \Delta T \\
+  W_{\text{isobaric}} &= P(V_2 - V_1) = n R(T_2 - T_1), \quad \Delta Q = n C_p \Delta T \\
+  W_{\text{isothermal}} &= n R T \ln\left(\frac{V_2}{V_1}\right) = 2.303\,n R T \log_{10}\left(\frac{P_1}{P_2}\right) \\
+  W_{\text{adiabatic}} &= \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} = \frac{n R(T_1 - T_2)}{\gamma - 1} = -\Delta U
 \end{align}
 \end{formulabox}
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\textwidth}{L c c c c}
 \toprule
-\textbf{Gas Atomicity} & \textbf{Deg. of Freedom ($f$)} & $C_v = \frac{f}{2}R$ & $C_p = C_v + R$ & $\gamma = C_p/C_v = 1 + \frac{2}{f}$ \\
+\textbf{Gas Atomicity} & \textbf{DoF ($f$)} & $C_v = \frac{f}{2}R$ & $C_p = C_v + R$ & $\gamma = C_p/C_v$ \\
 \midrule
-Monoatomic ($\text{He}, \text{Ne}, \text{Ar}$) & $3$ (translational) & $\frac{3}{2}R$ & $\frac{5}{2}R$ & $\frac{5}{3} \approx 1.67$ \\
-Diatomic (Rigid: $\text{O}_2, \text{N}_2$) & $3\text{ trans} + 2\text{ rot} = 5$ & $\frac{5}{2}R$ & $\frac{7}{2}R$ & $\frac{7}{5} = 1.40$ \\
-Non-Linear Polyatomic ($\text{H}_2\text{O}, \text{NH}_3$) & $3\text{ trans} + 3\text{ rot} = 6$ & $3R$ & $4R$ & $\frac{4}{3} \approx 1.33$ \\
+Monoatomic ($\text{He}, \text{Ne}$) & $3$ & $\frac{3}{2}R$ & $\frac{5}{2}R$ & $\frac{5}{3} \approx 1.67$ \\
+Diatomic (Rigid: $\text{O}_2, \text{N}_2$) & $5$ & $\frac{5}{2}R$ & $\frac{7}{2}R$ & $\frac{7}{5} = 1.40$ \\
+Polyatomic ($\text{H}_2\text{O}, \text{NH}_3$) & $6$ & $3R$ & $4R$ & $\frac{4}{3} \approx 1.33$ \\
 \bottomrule
 \end{tabularx}
 \caption{Molar Heat Capacities and Adiabatic Exponents for Standard Gases.}
@@ -4843,9 +4926,10 @@ Non-Linear Polyatomic ($\text{H}_2\text{O}, \text{NH}_3$) & $3\text{ trans} + 3\
 
 \begin{formulabox}[Pressure, Speeds \& Mean Free Path]
 \begin{align}
-  P &= \frac{1}{3}\rho v_{\text{rms}}^2 = \frac{1}{3}\frac{M}{V}v_{\text{rms}}^2, \qquad E_{\text{total, translation}} = \frac{3}{2}n R T = \frac{3}{2}N k_B T \\
-  v_{\text{rms}} &= \sqrt{\frac{3RT}{M}}, \quad v_{\text{avg}} = \sqrt{\frac{8RT}{\pi M}}, \quad v_{\text{mp}} = \sqrt{\frac{2RT}{M}} \implies v_{\text{mp}} : v_{\text{avg}} : v_{\text{rms}} = 1 : 1.128 : 1.224 \\
-  \lambda &= \frac{1}{\sqrt{2}\pi n d^2} = \frac{k_B T}{\sqrt{2}\pi d^2 P} \quad [\lambda \propto \frac{T}{P}; \text{if } V=\text{const}, \lambda = \text{constant}]
+  P &= \frac{1}{3}\rho v_{\text{rms}}^2 = \frac{1}{3}\frac{M}{V}v_{\text{rms}}^2, \qquad E_{\text{trans}} = \frac{3}{2}n R T = \frac{3}{2}N k_B T \\
+  v_{\text{rms}} &= \sqrt{\frac{3RT}{M}}, \quad v_{\text{avg}} = \sqrt{\frac{8RT}{\pi M}}, \quad v_{\text{mp}} = \sqrt{\frac{2RT}{M}} \\
+  v_{\text{mp}} &: v_{\text{avg}} : v_{\text{rms}} = 1 : 1.128 : 1.224 \\
+  \lambda &= \frac{1}{\sqrt{2}\pi n d^2} = \frac{k_B T}{\sqrt{2}\pi d^2 P} \quad [\lambda \propto T/P]
 \end{align}
 \end{formulabox}
 
@@ -4867,8 +4951,9 @@ Non-Linear Polyatomic ($\text{H}_2\text{O}, \text{NH}_3$) & $3\text{ trans} + 3\
 \textbf{Energy Spectrum of Particle Executing SHM:}
 \begin{align}
   K &= \frac{1}{2}m v^2 = \frac{1}{2}m\omega^2(A^2 - x^2), \qquad U = \frac{1}{2}m\omega^2 x^2 \\
-  E_{\text{total}} &= K + U = \frac{1}{2}m\omega^2 A^2 = \text{constant for undamped SHM} \\
-  \langle K \rangle_{\text{time}} &= \langle U \rangle_{\text{time}} = \frac{1}{4}m\omega^2 A^2 = \frac{1}{2}E_{\text{total}}, \qquad \langle K \rangle_{\text{position}} = \frac{2}{3}E_{\text{total}}, \quad \langle U \rangle_{\text{position}} = \frac{1}{3}E_{\text{total}}
+  E_{\text{total}} &= K + U = \frac{1}{2}m\omega^2 A^2 \\
+  \langle K \rangle_{\text{time}} &= \langle U \rangle_{\text{time}} = \frac{1}{4}m\omega^2 A^2 = \frac{1}{2}E_{\text{total}} \\
+  \langle K \rangle_{\text{pos}} &= \frac{2}{3}E_{\text{total}}, \qquad \langle U \rangle_{\text{pos}} = \frac{1}{3}E_{\text{total}}
 \end{align}
 \end{formulabox}
 
@@ -4876,11 +4961,11 @@ Non-Linear Polyatomic ($\text{H}_2\text{O}, \text{NH}_3$) & $3\text{ trans} + 3\
 
 \begin{formulabox}[Time Period of Springs, Pendulums \& Liquid Columns]
 \begin{align}
-  T_{\text{spring}} &= 2\pi\sqrt{\frac{m}{k}}, \quad k_s = \frac{k_1 k_2}{k_1 + k_2} \text{ [Series]}, \quad k_p = k_1 + k_2 \text{ [Parallel]} \\
-  T_{\text{cut spring}} &\implies k' = n k \implies T' = \frac{T}{\sqrt{n}} \quad [\text{Spring cut into } n \text{ equal pieces}] \\
-  T_{\text{simple pendulum}} &= 2\pi\sqrt{\frac{L}{g_{\text{eff}}}}, \qquad g_{\text{eff}} = |\mathbf{g} - \mathbf{a}| \quad [\text{Lift accelerating upward: } g_{\text{eff}} = g+a] \\
-  T_{\text{two block}} &= 2\pi\sqrt{\frac{\mu}{k}}, \qquad \mu = \frac{m_1 m_2}{m_1 + m_2} \quad [\text{Reduced Mass Formulation}] \\
-  T_{\text{U-tube liquid}} &= 2\pi\sqrt{\frac{h}{g}} = 2\pi\sqrt{\frac{L}{2g}} \quad [h = \text{equilibrium column height}, L = \text{total liquid length}]
+  T_{\text{spring}} &= 2\pi\sqrt{\frac{m}{k}}, \quad k_s = \frac{k_1 k_2}{k_1 + k_2}, \quad k_p = k_1 + k_2 \\
+  T_{\text{cut}} &\implies k' = n k \implies T' = \frac{T}{\sqrt{n}} \quad [\text{Cut into } n \text{ pieces}] \\
+  T_{\text{pendulum}} &= 2\pi\sqrt{\frac{L}{g_{\text{eff}}}}, \qquad g_{\text{eff}} = |\mathbf{g} - \mathbf{a}| \\
+  T_{\text{two block}} &= 2\pi\sqrt{\frac{\mu}{k}}, \qquad \mu = \frac{m_1 m_2}{m_1 + m_2} \\
+  T_{\text{U-tube}} &= 2\pi\sqrt{\frac{h}{g}} = 2\pi\sqrt{\frac{L}{2g}}
 \end{align}
 \end{formulabox}
 
@@ -4888,16 +4973,16 @@ Non-Linear Polyatomic ($\text{H}_2\text{O}, \text{NH}_3$) & $3\text{ trans} + 3\
 
 \begin{formulabox}[Wave Speed, Harmonics in Strings \& Pipes]
 \begin{align}
-  v &= \frac{\omega}{k} = \nu\lambda, \qquad y(x,t) = A\sin(kx \mp \omega t + \phi) \quad [-\text{ for } +x\text{ direction}] \\
-  v_{\text{string}} &= \sqrt{\frac{T}{\mu}}, \qquad v_{\text{gas}} = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}} \quad [\text{Newton-Laplace Correction}] \\
-  \nu_{\text{string, } n} &= \frac{n v}{2L} = \frac{n}{2L}\sqrt{\frac{T}{\mu}} \quad (n = 1, 2, 3, \dots) \quad [\text{All Harmonics Present}] \\
-  \nu_{\text{closed pipe, } n} &= (2n - 1)\frac{v}{4L} \quad (n = 1, 2, 3, \dots) \implies \nu_1 : \nu_2 : \nu_3 = 1 : 3 : 5 \quad [\text{ODD Harmonics ONLY}] \\
-  \nu_{\text{open pipe, } n} &= \frac{n v}{2L} \quad (n = 1, 2, 3, \dots) \implies \nu_1 : \nu_2 : \nu_3 = 1 : 2 : 3 \quad [\text{ALL Harmonics Present}]
+  v &= \frac{\omega}{k} = \nu\lambda, \qquad y(x,t) = A\sin(kx \mp \omega t + \phi) \\
+  v_{\text{string}} &= \sqrt{\frac{T}{\mu}}, \qquad v_{\text{gas}} = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}} \\
+  \nu_{\text{string, } n} &= \frac{n v}{2L} = \frac{n}{2L}\sqrt{\frac{T}{\mu}} \quad (n = 1, 2, 3, \dots) \\
+  \nu_{\text{closed, } n} &= (2n - 1)\frac{v}{4L} \implies \nu_1 : \nu_2 : \nu_3 = 1 : 3 : 5 \\
+  \nu_{\text{open, } n} &= \frac{n v}{2L} \implies \nu_1 : \nu_2 : \nu_3 = 1 : 2 : 3
 \end{align}
 \textbf{Resonance Tube Experiment \& Beat Frequency:}
 \begin{align}
-  \lambda &= 2(l_2 - l_1), \qquad e = \frac{l_2 - 3l_1}{2} \approx 0.6 r, \qquad v = 2\nu(l_2 - l_1) \\
-  \nu_{\text{beat}} &= |\nu_1 - \nu_2| \quad [\text{Waxing decreases frequency: } \nu\downarrow; \text{Filing increases frequency: } \nu\uparrow]
+  \lambda &= 2(l_2 - l_1), \quad e = \frac{l_2 - 3l_1}{2} \approx 0.6 r, \quad v = 2\nu(l_2 - l_1) \\
+  \nu_{\text{beat}} &= |\nu_1 - \nu_2| \quad [\text{Waxing: } \nu\downarrow;\; \text{Filing: } \nu\uparrow]
 \end{align}
 \end{formulabox}
 
@@ -4918,16 +5003,17 @@ This chapter compiles all core formulas, vector relations, circuit equations, op
 
 \begin{formulabox}[Coulomb's Law, Medium Effect \& Dipole Dynamics]
 \begin{align}
-  \mathbf{F}_{12} &= \frac{1}{4\pi\varepsilon_0}\frac{q_1 q_2}{r^2}\hat{\mathbf{r}}_{12}, \qquad F_{\text{medium}} = \frac{F_{\text{vacuum}}}{\kappa} = \frac{F_0}{\varepsilon_r} && \left[\frac{1}{4\pi\varepsilon_0} = 8.988\times 10^9\,\si{N.m^2.C^{-2}}\right] \\
-  \mathbf{p} &= q(2\mathbf{a}), \qquad \boldsymbol{\tau} = \mathbf{p}\times\mathbf{E}, \qquad U = -\mathbf{p}\cdot\mathbf{E} && [\mathbf{p} \text{ directed from } -q \text{ to } +q] \\
-  E_{\text{axial}} &= \frac{1}{4\pi\varepsilon_0}\frac{2pr}{(r^2-a^2)^2} \approx \frac{2kp}{r^3} && [r \gg a; \text{ direction parallel to } \mathbf{p}] \\
-  E_{\text{equatorial}} &= \frac{1}{4\pi\varepsilon_0}\frac{p}{(r^2+a^2)^{3/2}} \approx \frac{kp}{r^3} && [r \gg a; \text{ direction antiparallel to } \mathbf{p}] \\
-  E(r,\theta) &= \frac{kp}{r^3}\sqrt{1 + 3\cos^2\theta}, \qquad \tan\alpha = \frac{1}{2}\tan\theta && [\theta = \text{angle with dipole axis}]
+  \mathbf{F}_{12} &= \frac{1}{4\pi\varepsilon_0}\frac{q_1 q_2}{r^2}\hat{\mathbf{r}}_{12}, \qquad F_{\text{med}} = \frac{F_0}{\kappa} \\
+  \mathbf{p} &= q(2\mathbf{a}), \qquad \boldsymbol{\tau} = \mathbf{p}\times\mathbf{E}, \qquad U = -\mathbf{p}\cdot\mathbf{E} \\
+  E_{\text{axial}} &= \frac{1}{4\pi\varepsilon_0}\frac{2pr}{(r^2-a^2)^2} \approx \frac{2kp}{r^3} && [r \gg a] \\
+  E_{\text{equat}} &= \frac{1}{4\pi\varepsilon_0}\frac{p}{(r^2+a^2)^{3/2}} \approx \frac{kp}{r^3} && [r \gg a] \\
+  E(r,\theta) &= \frac{kp}{r^3}\sqrt{1 + 3\cos^2\theta}, \qquad \tan\alpha = \frac{1}{2}\tan\theta
 \end{align}
 \textbf{Work Done in Rotating an Electric Dipole from $\theta_1$ to $\theta_2$:}
-\begin{equation}
-  W = U_f - U_i = pE(\cos\theta_1 - \cos\theta_2) \implies W_{0 \to 180^\circ} = 2pE \quad \text{[Max work; unstable equilibrium]}
-\end{equation}
+\begin{align}
+  W &= U_f - U_i = pE(\cos\theta_1 - \cos\theta_2) \\
+  \implies W_{0 \to 180^\circ} &= 2pE \quad \text{[Maximum work]}
+\end{align}
 \end{formulabox}
 
 \subsection{Gauss's Law \& Symmetrical Charge Distributions}
@@ -4938,16 +5024,17 @@ This chapter compiles all core formulas, vector relations, circuit equations, op
 \end{equation}
 \textbf{Symmetrical Electric Field Solutions:}
 \begin{align}
-  E_{\text{line}} &= \frac{\lambda}{2\pi\varepsilon_0 r} = \frac{2k\lambda}{r} && \text{[Infinitely Long Uniform Line Charge]} \\
-  E_{\text{sheet}} &= \frac{\sigma}{2\varepsilon_0} && \text{[Infinite Non-Conducting Plane Sheet (independent of $r$)]} \\
-  E_{\text{conductor}} &= \frac{\sigma}{\varepsilon_0} && \text{[Just outside any charged conducting surface]} \\
-  E_{\text{shell}}(r) &= \begin{cases} 0 & (r < R) \\ \frac{kq}{R^2} & (r = R) \\ \frac{kq}{r^2} & (r > R) \end{cases} && \text{[Field: Spherical Shell Radius } R\text{]} \\
-  V_{\text{shell}}(r) &= \begin{cases} \frac{kq}{R} & (r \le R) \\ \frac{kq}{r} & (r > R) \end{cases} && \text{[Potential: Spherical Shell Radius } R\text{]}
+  E_{\text{line}} &= \frac{\lambda}{2\pi\varepsilon_0 r} = \frac{2k\lambda}{r} && \text{[Line Charge]} \\
+  E_{\text{sheet}} &= \frac{\sigma}{2\varepsilon_0} && \text{[Infinite Sheet]} \\
+  E_{\text{conductor}} &= \frac{\sigma}{\varepsilon_0} && \text{[Conductor Surface]} \\
+  E_{\text{shell}}(r) &= \begin{cases} 0 & (r < R) \\ \frac{kq}{R^2} & (r \ge R) \end{cases} && \text{[Shell Field]} \\
+  V_{\text{shell}}(r) &= \begin{cases} \frac{kq}{R} & (r \le R) \\ \frac{kq}{r} & (r > R) \end{cases} && \text{[Shell Potential]}
 \end{align}
-\textbf{Uniformly Charged Solid Non-Conducting Sphere (Total Charge $q$, Radius $R$):}
-\begin{equation}
-  E_{\text{inside}}(r) = \frac{k q r}{R^3} = \frac{\rho r}{3\varepsilon_0}, \qquad V_{\text{inside}}(r) = \frac{kq}{2R^3}(3R^2 - r^2) \implies V_{\text{center}} = \frac{3}{2}\frac{kq}{R} = 1.5\,V_{\text{surface}}
-\end{equation}
+\textbf{Uniformly Charged Solid Non-Conducting Sphere ($q, R$):}
+\begin{align}
+  E_{\text{in}}(r) &= \frac{k q r}{R^3} = \frac{\rho r}{3\varepsilon_0} \\
+  V_{\text{in}}(r) &= \frac{kq}{2R^3}(3R^2 - r^2) \implies V_{\text{center}} = 1.5\,V_{\text{surface}}
+\end{align}
 \end{formulabox}
 
 \subsection{Capacitance, Dielectric Insertion \& Stored Energy}
@@ -4966,17 +5053,18 @@ This chapter compiles all core formulas, vector relations, circuit equations, op
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{L c c}
+\begin{tabularx}{\textwidth}{L Y Y}
 \toprule
-\textbf{Physical Parameter} & \textbf{Case A: Battery REMAINING CONNECTED} & \textbf{Case B: Battery DISCONNECTED} \\
+\textbf{Parameter} & \textbf{Battery CONNECTED} & \textbf{Battery DISCONNECTED} \\
 \midrule
-Capacitance ($C$) & Increases by $\kappa$ ($C = \kappa C_0$) & Increases by $\kappa$ ($C = \kappa C_0$) \\
-Potential Difference ($V$) & Remains Constant ($V = V_0$) & Decreases by $\kappa$ ($V = V_0/\kappa$) \\
-Electric Field ($E = V/d$) & Remains Constant ($E = E_0$) & Decreases by $\kappa$ ($E = E_0/\kappa$) \\
-Stored Charge ($Q$) & Increases by $\kappa$ ($Q = \kappa Q_0$) & Remains Constant ($Q = Q_0$) \\
-Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\kappa$ ($U = U_0/\kappa$) \\
+Capacitance ($C$) & Increases ($\kappa C_0$) & Increases ($\kappa C_0$) \\
+Voltage ($V$) & Constant ($V_0$) & Decreases ($V_0/\kappa$) \\
+Electric Field ($E$) & Constant ($E_0$) & Decreases ($E_0/\kappa$) \\
+Charge ($Q$) & Increases ($\kappa Q_0$) & Constant ($Q_0$) \\
+Stored Energy ($U$) & Increases ($\kappa U_0$) & Decreases ($U_0/\kappa$) \\
 \bottomrule
 \end{tabularx}
 \caption{Effect of Inserting a Dielectric Slab ($\kappa$) into a Parallel Plate Capacitor.}
@@ -5000,27 +5088,29 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[Microscopic Drift, Ohm's Law \& Temperature Dependence]
 \begin{align}
-  I &= n e A v_d, \qquad v_d = \frac{e E \tau}{m} = \frac{e V \tau}{m L}, \qquad J = \frac{I}{A} = n e v_d = \sigma E = \frac{E}{\rho} \\
-  \mu &= \frac{v_d}{E} = \frac{e\tau}{m} \quad [\si{m^2.V^{-1}.s^{-1}}], \qquad \rho = \frac{m}{n e^2 \tau}, \qquad R = \rho\frac{L}{A} \\
-  R_T &= R_0(1 + \alpha\Delta T), \qquad \rho_T = \rho_0(1 + \alpha\Delta T) \quad [\alpha > 0 \text{ metals; } \alpha < 0 \text{ semiconductors}]
+  I &= n e A v_d, \qquad v_d = \frac{e E \tau}{m} = \frac{e V \tau}{m L} \\
+  J &= \frac{I}{A} = n e v_d = \sigma E = \frac{E}{\rho} \\
+  \mu &= \frac{v_d}{E} = \frac{e\tau}{m}, \qquad \rho = \frac{m}{n e^2 \tau}, \qquad R = \rho\frac{L}{A} \\
+  R_T &= R_0(1 + \alpha\Delta T), \qquad \rho_T = \rho_0(1 + \alpha\Delta T)
 \end{align}
 \textbf{Stretching of Wires (Constant Volume $V = A\cdot L = \text{const}$):}
-\begin{equation}
-  R \propto L^2 \propto \frac{1}{A^2} \propto \frac{1}{r^4} \implies \text{If } L \to nL, \quad R' = n^2 R; \quad \text{For small } \%\Delta L < 5\%, \quad \frac{\Delta R}{R} \approx 2\frac{\Delta L}{L}
-\end{equation}
+\begin{align}
+  R &\propto L^2 \propto \frac{1}{A^2} \propto \frac{1}{r^4} \implies \text{If } L \to nL, \quad R' = n^2 R \\
+  \frac{\Delta R}{R} &\approx 2\frac{\Delta L}{L} \quad (\text{for small } \%\Delta L < 5\%)
+\end{align}
 \end{formulabox}
 
 \subsection{Cells, Internal Resistance \& Power Transfer}
 
 \begin{formulabox}[Terminal EMF, Cell Combinations \& Max Power Theorem]
 \begin{align}
-  V &= \mathcal{E} - Ir \quad \text{[Discharging; } V < \mathcal{E}\text{]}, \qquad V = \mathcal{E} + Ir \quad \text{[Charging; } V > \mathcal{E}\text{]} \\
-  r &= R\left(\frac{\mathcal{E}}{V} - 1\right) = R\left(\frac{l_1 - l_2}{l_2}\right) && \text{[Internal Resistance Formulation]} \\
-  \mathcal{E}_{\text{eq, parallel}} &= \frac{\frac{\mathcal{E}_1}{r_1} + \frac{\mathcal{E}_2}{r_2}}{\frac{1}{r_1} + \frac{1}{r_2}} = \frac{\mathcal{E}_1 r_2 + \mathcal{E}_2 r_1}{r_1 + r_2}, \qquad r_{\text{eq, parallel}} = \frac{r_1 r_2}{r_1 + r_2}
+  V &= \mathcal{E} - Ir \quad \text{[Discharging]}, \qquad V = \mathcal{E} + Ir \quad \text{[Charging]} \\
+  r &= R\left(\frac{\mathcal{E}}{V} - 1\right) = R\left(\frac{l_1 - l_2}{l_2}\right) \\
+  \mathcal{E}_{\text{eq}} &= \frac{\mathcal{E}_1 r_2 + \mathcal{E}_2 r_1}{r_1 + r_2}, \qquad r_{\text{eq}} = \frac{r_1 r_2}{r_1 + r_2} \quad \text{[Parallel Cells]}
 \end{align}
 \textbf{Maximum Power Transfer Theorem (Load $R$ connected to cell $\mathcal{E}, r$):}
 \begin{equation}
-  P_{\text{load}} = I^2 R = \frac{\mathcal{E}^2 R}{(R + r)^2} \implies P = P_{\max} \iff R = r \implies P_{\max} = \frac{\mathcal{E}^2}{4r}
+  P_{\text{load}} = \frac{\mathcal{E}^2 R}{(R + r)^2} \implies P = P_{\max} \iff R = r \implies P_{\max} = \frac{\mathcal{E}^2}{4r}
 \end{equation}
 \end{formulabox}
 
@@ -5028,7 +5118,7 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[Wheatstone Bridge \& Metre Bridge Balance Equations]
 \begin{equation}
-  \frac{P}{Q} = \frac{R}{S} \iff I_G = 0 \quad \text{[Wheatstone Balance Condition: Galv. current is null]}
+  \frac{P}{Q} = \frac{R}{S} \iff I_G = 0 \quad [\text{Wheatstone Balance Condition: } I_G = 0]
 \end{equation}
 \textbf{Metre Bridge Unknown Resistance $S$ (Balance length $l$ from left):}
 \begin{equation}
@@ -5057,11 +5147,11 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[Biot-Savart Law \& Symmetrical Field Equations]
 \begin{align}
-  d\mathbf{B} &= \frac{\mu_0}{4\pi}\frac{I d\mathbf{l}\times\hat{\mathbf{r}}}{r^2} && \left[\frac{\mu_0}{4\pi} = 10^{-7}\,\si{T.m.A^{-1}}\right] \\
-  B_{\text{straight, finite}} &= \frac{\mu_0 I}{4\pi d}(\sin\phi_1 + \sin\phi_2) \implies B_{\text{infinite}} = \frac{\mu_0 I}{2\pi d}, \quad B_{\text{semi-infinite}} = \frac{\mu_0 I}{4\pi d} \\
-  B_{\text{circular coil, axis}} &= \frac{\mu_0 N I R^2}{2(R^2 + x^2)^{3/2}} \implies B_{\text{center}} = \frac{\mu_0 N I}{2R} \quad (x = 0) \\
-  B_{\text{arc}} &= \frac{\mu_0 I \theta}{4\pi R} \quad [\theta \text{ in radians}], \qquad B_{\text{solenoid}} = \mu_0 n I = \mu_0 \left(\frac{N}{L}\right)I \\
-  \oint \mathbf{B}\cdot d\mathbf{l} &= \mu_0 I_{\text{enclosed}} && \text{[Ampere's Circuital Law]}
+  d\mathbf{B} &= \frac{\mu_0}{4\pi}\frac{I d\mathbf{l}\times\hat{\mathbf{r}}}{r^2} && [\mu_0/(4\pi) = 10^{-7}] \\
+  B_{\text{inf}} &= \frac{\mu_0 I}{2\pi d}, \qquad B_{\text{semi}} = \frac{\mu_0 I}{4\pi d} \\
+  B_{\text{axis}} &= \frac{\mu_0 N I R^2}{2(R^2 + x^2)^{3/2}} \implies B_{\text{center}} = \frac{\mu_0 N I}{2R} \\
+  B_{\text{arc}} &= \frac{\mu_0 I \theta}{4\pi R}, \qquad B_{\text{solenoid}} = \mu_0 n I = \frac{\mu_0 N I}{L} \\
+  \oint \mathbf{B}\cdot d\mathbf{l} &= \mu_0 I_{\text{enclosed}} && \text{[Ampere's Law]}
 \end{align}
 \end{formulabox}
 
@@ -5069,11 +5159,11 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[Lorentz Equation \& Charged Particle Dynamics in Magnetic Fields]
 \begin{align}
-  \mathbf{F}_B &= q(\mathbf{v}\times\mathbf{B}) \implies W_B = 0 \quad [\text{Speed } v = \text{constant}] \\
-  r &= \frac{mv}{qB} = \frac{p}{qB} = \frac{\sqrt{2mK}}{qB} = \frac{\sqrt{2mqV}}{qB} && [\mathbf{v}\perp\mathbf{B}] \\
-  T &= \frac{2\pi m}{qB}, \qquad \nu = \frac{qB}{2\pi m} && [\text{Period independent of } v] \\
-  p_{\text{pitch}} &= v_{\parallel} T = \frac{2\pi m v\cos\theta}{qB} && [\text{Helical Pitch}] \\
-  \mathbf{F} &= I(\mathbf{L}\times\mathbf{B}), \qquad \frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d} && [\text{Force between currents}]
+  \mathbf{F}_B &= q(\mathbf{v}\times\mathbf{B}) \implies W_B = 0 \quad [v = \text{const}] \\
+  r &= \frac{mv}{qB} = \frac{\sqrt{2mK}}{qB} = \frac{\sqrt{2mqV}}{qB} && [\mathbf{v}\perp\mathbf{B}] \\
+  T &= \frac{2\pi m}{qB}, \qquad \nu = \frac{qB}{2\pi m} \\
+  p_{\text{pitch}} &= v_{\parallel} T = \frac{2\pi m v\cos\theta}{qB} && [\text{Pitch}] \\
+  \mathbf{F} &= I(\mathbf{L}\times\mathbf{B}), \qquad \frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}
 \end{align}
 \end{formulabox}
 
@@ -5081,9 +5171,9 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[Moving Coil Galvanometer, Ammeter, Voltmeter \& Magnetic Matter]
 \begin{align}
-  \tau &= N I A B = C\theta \implies I = \left(\frac{C}{NAB}\right)\theta, \quad I_s = \frac{\theta}{I} = \frac{NAB}{C}, \quad V_s = \frac{\theta}{V} = \frac{I_s}{R_G} \\
-  S &= \frac{I_g R_g}{I - I_g} \quad \text{[Ammeter Shunt in Parallel]}, \qquad R_s = \frac{V}{I_g} - R_g \quad \text{[Voltmeter Multiplier in Series]} \\
-  \mathbf{B} &= \mu_0(\mathbf{H} + \mathbf{M}) = \mu H, \qquad \chi = \frac{M}{H}, \qquad \mu_r = 1 + \chi = \frac{\mu}{\mu_0}
+  \tau &= N I A B = C\theta \implies I = \left(\frac{C}{NAB}\right)\theta, \quad I_s = \frac{NAB}{C} \\
+  S &= \frac{I_g R_g}{I - I_g} \quad \text{[Shunt]}, \qquad R_s = \frac{V}{I_g} - R_g \quad \text{[Multiplier]} \\
+  \mathbf{B} &= \mu_0(\mathbf{H} + \mathbf{M}) = \mu H, \qquad \chi = \frac{M}{H}, \qquad \mu_r = 1 + \chi
 \end{align}
 \textbf{Curie's Law for Paramagnetic Materials \& Curie-Weiss Law for Ferromagnets:}
 \begin{equation}
@@ -5109,9 +5199,9 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[Faraday-Lenz Law, Motional EMF \& Self/Mutual Inductance]
 \begin{align}
-  \mathcal{E} &= -\frac{d\Phi_B}{dt} = -N\frac{d}{dt}(B A\cos\theta), \qquad q_{\text{induced}} = \frac{\Delta\Phi_B}{R} \quad [\text{Independent of time!}] \\
-  \mathcal{E}_{\text{motional}} &= B v l \quad [\text{Translational Rod}], \qquad \mathcal{E}_{\text{rotational}} = \frac{1}{2}B\omega L^2 \quad [\text{Rotating Rod about one end}] \\
-  \mathcal{E} &= -L\frac{dI}{dt}, \qquad U = \frac{1}{2}L I^2, \qquad L_{\text{solenoid}} = \mu_0 n^2 A l = \frac{\mu_0 N^2 A}{l} \\
+  \mathcal{E} &= -\frac{d\Phi_B}{dt}, \qquad q_{\text{induced}} = \frac{\Delta\Phi_B}{R} \\
+  \mathcal{E}_{\text{mot}} &= B v l, \qquad \mathcal{E}_{\text{rot}} = \frac{1}{2}B\omega L^2 \\
+  \mathcal{E} &= -L\frac{dI}{dt}, \qquad U = \frac{1}{2}L I^2, \qquad L = \frac{\mu_0 N^2 A}{l} \\
   \mathcal{E}_2 &= -M\frac{dI_1}{dt}, \qquad M = k\sqrt{L_1 L_2} \quad (0 \le k \le 1)
 \end{align}
 \end{formulabox}
@@ -5120,15 +5210,15 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[AC Values, Reactance, Series LCR Circuit \& Resonance]
 \begin{align}
-  I_{\text{rms}} &= \frac{I_0}{\sqrt{2}} \approx 0.707 I_0, \qquad V_{\text{rms}} = \frac{V_0}{\sqrt{2}} \approx 0.707 V_0, \qquad I_{\text{avg, half}} = \frac{2I_0}{\pi} \approx 0.637 I_0 \\
-  X_L &= \omega L = 2\pi\nu L, \qquad X_C = \frac{1}{\omega C} = \frac{1}{2\pi\nu C} \quad [X_L \text{ leads by } \pi/2; X_C \text{ lags by } \pi/2] \\
-  Z &= \sqrt{R^2 + (X_L - X_C)^2}, \qquad \tan\phi = \frac{X_L - X_C}{R}, \qquad V_0 = \sqrt{V_R^2 + (V_L - V_C)^2} \\
-  \omega_0 &= \frac{1}{\sqrt{LC}} \iff \nu_0 = \frac{1}{2\pi\sqrt{LC}} \quad [\text{Series Resonance Condition: } X_L = X_C] \\
-  Z_{\min} &= R, \quad I_{\max} = \frac{V_{\text{rms}}}{R}, \quad \phi = 0, \quad Q = \frac{\omega_0 L}{R} = \frac{1}{\omega_0 C R} = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{\nu_0}{\Delta\nu}
+  I_{\text{rms}} &= \frac{I_0}{\sqrt{2}} \approx 0.707 I_0, \qquad V_{\text{rms}} = \frac{V_0}{\sqrt{2}} \approx 0.707 V_0 \\
+  X_L &= \omega L = 2\pi\nu L, \qquad X_C = \frac{1}{\omega C} = \frac{1}{2\pi\nu C} \\
+  Z &= \sqrt{R^2 + (X_L - X_C)^2}, \qquad \tan\phi = \frac{X_L - X_C}{R} \\
+  \omega_0 &= \frac{1}{\sqrt{LC}} \iff \nu_0 = \frac{1}{2\pi\sqrt{LC}} \quad [X_L = X_C] \\
+  Z_{\min} &= R, \quad I_{\max} = \frac{V_{\text{rms}}}{R}, \quad Q = \frac{1}{R}\sqrt{\frac{L}{C}} = \frac{\nu_0}{\Delta\nu}
 \end{align}
 \textbf{Average Power, Power Factor \& Ideal Transformer:}
 \begin{align}
-  P_{\text{avg}} &= V_{\text{rms}} I_{\text{rms}} \cos\phi = I_{\text{rms}}^2 R, \qquad \cos\phi = \frac{R}{Z} \quad [\text{Wattless Current } I_w = I_{\text{rms}}\sin\phi] \\
+  P_{\text{avg}} &= V_{\text{rms}} I_{\text{rms}} \cos\phi = I_{\text{rms}}^2 R, \qquad \cos\phi = \frac{R}{Z} \quad [I_w = I_{\text{rms}}\sin\phi] \\
   \frac{V_s}{V_p} &= \frac{N_s}{N_p} = \frac{I_p}{I_s} = K, \qquad \eta = \frac{P_{\text{out}}}{P_{\text{in}}} = \frac{V_s I_s}{V_p I_p}
 \end{align}
 \end{formulabox}
@@ -5142,10 +5232,10 @@ Stored Energy ($U$) & Increases by $\kappa$ ($U = \kappa U_0$) & Decreases by $\
 
 \begin{formulabox}[Displacement Current, Wave Speed, Energy \& Radiation Pressure]
 \begin{align}
-  I_d &= \varepsilon_0 \frac{d\Phi_E}{dt}, \qquad \oint \mathbf{B}\cdot d\mathbf{l} = \mu_0\left(I_c + \varepsilon_0\frac{d\Phi_E}{dt}\right) && \text{[Ampere-Maxwell Law]} \\
-  c &= \frac{1}{\sqrt{\mu_0\varepsilon_0}} = \frac{E_0}{B_0} \approx 3\times 10^8\,\si{m.s^{-1}}, \qquad v_{\text{medium}} = \frac{1}{\sqrt{\mu\varepsilon}} = \frac{c}{\sqrt{\mu_r \varepsilon_r}} \\
-  u_{\text{total}} &= u_E + u_B = \frac{1}{2}\varepsilon_0 E_{\text{rms}}^2 + \frac{B_{\text{rms}}^2}{2\mu_0} = \varepsilon_0 E_{\text{rms}}^2 = \frac{B_{\text{rms}}^2}{\mu_0} && \text{[Equal Electric \& Magnetic Energy]} \\
-  I &= \langle S \rangle = \frac{1}{2}\varepsilon_0 c E_0^2 = \varepsilon_0 c E_{\text{rms}}^2, \qquad P_{\text{rad}} = \begin{cases} \frac{I}{c} & \text{(Total Absorption)} \\ \frac{2I}{c} & \text{(Total Reflection)} \end{cases}
+  I_d &= \varepsilon_0 \frac{d\Phi_E}{dt}, \qquad \oint \mathbf{B}\cdot d\mathbf{l} = \mu_0\left(I_c + I_d\right) \\
+  c &= \frac{1}{\sqrt{\mu_0\varepsilon_0}} = \frac{E_0}{B_0} \approx 3\times 10^8\,\si{m.s^{-1}}, \qquad v = \frac{c}{\sqrt{\mu_r \varepsilon_r}} \\
+  u_{\text{total}} &= \frac{1}{2}\varepsilon_0 E_{\text{rms}}^2 + \frac{B_{\text{rms}}^2}{2\mu_0} = \varepsilon_0 E_{\text{rms}}^2 = \frac{B_{\text{rms}}^2}{\mu_0} \\
+  I &= \varepsilon_0 c E_{\text{rms}}^2, \qquad P_{\text{rad}} = \begin{cases} \frac{I}{c} & \text{(Absorption)} \\ \frac{2I}{c} & \text{(Reflection)} \end{cases}
 \end{align}
 \end{formulabox}
 
@@ -5182,19 +5272,20 @@ Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in anten
   d_{\text{app}} &= \frac{d}{\mu_{\text{rel}}}, \qquad \Delta t = t\left(1 - \frac{1}{\mu}\right) && [\text{Apparent Depth \& Normal Shift}]
 \end{align}
 \textbf{Total Internal Reflection (TIR) \& Underwater Illuminance Cone:}
-\begin{equation}
-  \sin i_c = \frac{\mu_{\text{rarer}}}{\mu_{\text{denser}}} = \frac{1}{\mu}, \qquad r_{\text{circle}} = \frac{h}{\sqrt{\mu^2 - 1}}, \qquad \text{Area} = \frac{\pi h^2}{\mu^2 - 1} \quad [\text{Point source at depth } h]
-\end{equation}
+\begin{align}
+  \sin i_c &= \frac{\mu_{\text{rarer}}}{\mu_{\text{denser}}} = \frac{1}{\mu} \quad [\text{Critical Angle Condition}] \\
+  r_{\text{circle}} &= \frac{h}{\sqrt{\mu^2 - 1}}, \qquad \text{Area} = \frac{\pi h^2}{\mu^2 - 1} \quad [\text{Depth } h]
+\end{align}
 \end{formulabox}
 
 \subsection{Prisms, Dispersion \& Spherical Refracting Surfaces}
 
 \begin{formulabox}[Prism Deviation, Dispersive Power \& Curved Surface Refraction]
 \begin{align}
-  \delta &= (i_1 + i_2) - A, \qquad r_1 + r_2 = A && [\text{Triangular Prism of Angle } A] \\
-  \mu &= \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)} \quad (i = \frac{A+\delta_m}{2},\ r = \frac{A}{2}) && [\text{Minimum Deviation Condition}] \\
-  \delta_{\text{thin}} &= (\mu - 1)A, \qquad \omega = \frac{\mu_V - \mu_R}{\mu_Y - 1} && [\text{Thin Prism ($A \le 10^\circ$) \& Dispersion}] \\
-  \frac{\mu_2}{v} - \frac{\mu_1}{u} &= \frac{\mu_2 - \mu_1}{R}, \qquad m = \frac{\mu_1 v}{\mu_2 u} && [\text{Single Spherical Interface}]
+  \delta &= (i_1 + i_2) - A, \quad r_1 + r_2 = A \quad [\text{Prism Angle } A] \\
+  \mu &= \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)} \quad [\text{Min.\ Dev.; } i = \tfrac{A+\delta_m}{2},\; r = \tfrac{A}{2}] \\
+  \delta_{\text{thin}} &= (\mu - 1)A, \quad \omega = \frac{\mu_V - \mu_R}{\mu_Y - 1} \quad [\text{Thin Prism } A \le 10^\circ] \\
+  \frac{\mu_2}{v} - \frac{\mu_1}{u} &= \frac{\mu_2 - \mu_1}{R}, \quad m = \frac{\mu_1 v}{\mu_2 u} \quad [\text{Spherical Interface}]
 \end{align}
 \end{formulabox}
 
@@ -5202,15 +5293,16 @@ Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in anten
 
 \begin{formulabox}[Lens Maker's Equation, Power \& Silvering Formulations]
 \begin{align}
-  \frac{1}{f} &= \left(\frac{\mu_{\text{lens}}}{\mu_{\text{medium}}} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) && [\text{Lens Maker's Formula}] \\
-  \frac{1}{v} - \frac{1}{u} &= \frac{1}{f}, \qquad m = \frac{v}{u} = \frac{f}{f + u} && [\text{Thin Lens Equation}] \\
-  P &= \frac{1}{f\text{ (in m)}} = \frac{100}{f\text{ (in cm)}} \quad [\si{D}], \qquad P_{\text{contact}} = P_1 + P_2 \\
-  \frac{1}{F} &= \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2} && [\text{Lenses Separated by Distance } d]
+  \frac{1}{f} &= \left(\frac{\mu_{\text{lens}}}{\mu_{\text{med}}} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) \quad [\text{Lens-Maker's Formula}] \\
+  \frac{1}{v} - \frac{1}{u} &= \frac{1}{f}, \quad m = \frac{v}{u} = \frac{f}{f + u} \quad [\text{Thin Lens Equation}] \\
+  P &= \frac{1}{f\text{ [m]}} = \frac{100}{f\text{ [cm]}}\text{ [D]}, \quad P_{\text{contact}} = P_1 + P_2 \\
+  \frac{1}{F} &= \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2} \quad [\text{Separation } d]
 \end{align}
 \textbf{Silvering of a Lens Surface (Acts as an Equivalent Spherical Mirror):}
-\begin{equation}
-  P_{\text{eq}} = 2P_{\text{lens}} + P_{\text{mirror}} = \frac{2}{f_L} + \frac{1}{f_M} \implies F_{\text{eq}} = -\frac{1}{P_{\text{eq}}} \quad [\text{System always acts as a mirror}]
-\end{equation}
+\begin{align}
+  P_{\text{eq}} &= 2P_{\text{lens}} + P_{\text{mirror}} = \frac{2}{f_L} + \frac{1}{f_M} \\
+  F_{\text{eq}} &= -\frac{1}{P_{\text{eq}}} \quad [\text{Always acts as equivalent mirror}] \nonumber
+\end{align}
 \end{formulabox}
 
 \begin{usecasebox}[Lens Cutting Rules \& Medium Immersion Effects]
@@ -5218,9 +5310,10 @@ Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in anten
   \item \textbf{Vertical Cut (Perpendicular to Principal Axis):} Cutting a convex lens of focal length $f$ into two halves produces two plano-convex lenses: $f' = 2f, P' = P/2$. Intensity remains \textbf{unchanged}.
   \item \textbf{Horizontal Cut (Along Principal Axis):} Each half retains identical curvature: $f' = f, P' = P$. Intensity is halved because light-gathering aperture area is reduced by $50\%$.
   \item \textbf{Immersion in Liquid ($\mu_{\text{med}}$):}
-  \begin{equation*}
-    \frac{f_{\text{liquid}}}{f_{\text{air}}} = \frac{(\mu_g - 1)}{\left(\frac{\mu_g}{\mu_l} - 1\right)} \implies \text{For glass } (\mu=1.5) \text{ in water } (\mu=4/3): \quad f_{\text{water}} = 4 f_{\text{air}}
-  \end{equation*}
+  \begin{align*}
+    \frac{f_{\text{liquid}}}{f_{\text{air}}} &= \frac{\mu_g - 1}{\frac{\mu_g}{\mu_l} - 1} \\
+    \text{For glass } (\mu_g=1.5) &\text{ in water } (\mu_l=4/3): \quad f_{\text{water}} = 4 f_{\text{air}}
+  \end{align*}
   If $\mu_l > \mu_g$, focal length reverses sign: a converging convex lens behaves as a diverging concave lens!
 \end{itemize}
 \end{usecasebox}
@@ -5230,6 +5323,7 @@ Radio Waves & $> 0.1\,\si{m}$ & $< 10^9\,\si{Hz}$ & Accelerated charges in anten
 \begin{table}[htbp]
 \centering
 \footnotesize
+\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\textwidth}{>{\hsize=0.65\hsize}L >{\hsize=1.05\hsize}Y >{\hsize=1.2\hsize}Y >{\hsize=1.1\hsize}Y}
 \toprule
@@ -5254,11 +5348,11 @@ Astronomical Telescope & $m = -\frac{f_o}{f_e}$ & $m = -\frac{f_o}{f_e}\left(1 +
 
 \begin{formulabox}[Interference Intensity, Fringe Position \& Fringe Width]
 \begin{align}
-  I &= I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\phi \implies I = 4I_0 \cos^2\left(\frac{\phi}{2}\right) \quad (\text{when } I_1 = I_2 = I_0) \\
-  \frac{I_{\max}}{I_{\min}} &= \left(\frac{\sqrt{I_1} + \sqrt{I_2}}{\sqrt{I_1} - \sqrt{I_2}}\right)^2 = \left(\frac{a_1 + a_2}{a_1 - a_2}\right)^2, \qquad \Delta\phi = \frac{2\pi}{\lambda}\Delta x \\
-  y_n &= n\frac{\lambda D}{d} \quad (n = 0, 1, 2, \dots) && \text{[$n$-th Bright Fringe; } \Delta x = n\lambda\text{]} \\
-  y_n' &= (2n - 1)\frac{\lambda D}{2d} \quad (n = 1, 2, \dots) && \text{[$n$-th Dark Fringe; } \Delta x = (2n-1)\frac{\lambda}{2}\text{]} \\
-  \beta &= \frac{\lambda D}{d}, \qquad \theta = \frac{\beta}{D} = \frac{\lambda}{d} \quad [\si{rad}] && \text{[Fringe Width } \beta \text{ \& Angular Width } \theta\text{]}
+  I &= I_1 + I_2 + 2\sqrt{I_1 I_2}\cos\phi = 4I_0 \cos^2(\phi/2) \quad [I_1=I_2=I_0] \\
+  \frac{I_{\max}}{I_{\min}} &= \left(\frac{\sqrt{I_1} + \sqrt{I_2}}{\sqrt{I_1} - \sqrt{I_2}}\right)^2 = \left(\frac{a_1 + a_2}{a_1 - a_2}\right)^2, \quad \Delta\phi = \frac{2\pi}{\lambda}\Delta x \\
+  y_n &= n\frac{\lambda D}{d} \quad [\text{Bright: } \Delta x = n\lambda,\; n = 0, 1, 2, \dots] \\
+  y_n' &= (2n - 1)\frac{\lambda D}{2d} \quad [\text{Dark: } \Delta x = (2n-1)\tfrac{\lambda}{2}] \\
+  \beta &= \frac{\lambda D}{d}, \quad \theta = \frac{\beta}{D} = \frac{\lambda}{d} \quad [\text{Fringe Width } \beta;\; \text{Angular } \theta]
 \end{align}
 \textbf{Shift Produced by Thin Dielectric Slab of Thickness $t$ and Refractive Index $\mu$:}
 \begin{equation}
@@ -5270,10 +5364,10 @@ Astronomical Telescope & $m = -\frac{f_o}{f_e}$ & $m = -\frac{f_o}{f_e}\left(1 +
 
 \begin{formulabox}[Single Slit Diffraction Maxima, Minima \& Fresnel Distance]
 \begin{align}
-  a\sin\theta &= n\lambda \implies y_n = n\frac{\lambda D}{a} \quad (n = 1, 2, 3, \dots) && \text{[Diffraction Minima Condition]} \\
-  a\sin\theta &\approx (2n + 1)\frac{\lambda}{2} \implies y_n' = (2n + 1)\frac{\lambda D}{2a} && \text{[Secondary Maxima Condition ($n \ge 1$)]} \\
-  2\theta_0 &= \frac{2\lambda}{a}, \qquad W_{\text{central}} = 2y_1 = \frac{2\lambda D}{a} = 2\beta_{\text{diffraction}} && \text{[Width of Central Diffraction Maximum]} \\
-  Z_F &= \frac{a^2}{\lambda} && \text{[Fresnel Distance: Ray optics valid for } z \ll Z_F\text{]}
+  a\sin\theta &= n\lambda \implies y_n = n\frac{\lambda D}{a} \quad [\text{Minima: } n = 1, 2, \dots] \\
+  a\sin\theta &\approx (2n + 1)\frac{\lambda}{2} \implies y_n' = (2n + 1)\frac{\lambda D}{2a} \quad [\text{Maxima: } n \ge 1] \\
+  2\theta_0 &= \frac{2\lambda}{a}, \quad W_{\text{central}} = \frac{2\lambda D}{a} = 2\beta_{\text{diff}} \quad [\text{Central Width}] \\
+  Z_F &= \frac{a^2}{\lambda} \quad [\text{Fresnel Distance; Ray optics for } z \ll Z_F]
 \end{align}
 \end{formulabox}
 
@@ -5295,25 +5389,26 @@ Astronomical Telescope & $m = -\frac{f_o}{f_e}$ & $m = -\frac{f_o}{f_e}\left(1 +
 
 \begin{formulabox}[Einstein's Photoelectric Governing Equations]
 \begin{align}
-  E &= h\nu = \Phi_0 + K_{\max} = \Phi_0 + e V_0 && \text{[Einstein's Photoelectric Law]} \\
-  \Phi_0 &= h\nu_0 = \frac{hc}{\lambda_0} \approx \frac{1240}{\lambda_0\text{ (in nm)}}\,\si{eV} && \text{[Work Function $\Phi_0$; Cutoff wavelength $\lambda_0$]} \\
-  e V_0 &= h\nu - \Phi_0 \implies V_0 = \left(\frac{h}{e}\right)\nu - \frac{\Phi_0}{e} && \text{[Slope of $V_0-\nu$ graph is universal: $\text{Slope} = h/e$]} \\
+  E &= h\nu = \Phi_0 + K_{\max} = \Phi_0 + e V_0 \quad [\text{Photoelectric Law}] \\
+  \Phi_0 &= h\nu_0 = \frac{hc}{\lambda_0} \approx \frac{1240}{\lambda_0\text{ [nm]}}\,\si{eV} \quad [\text{Work Function } \Phi_0] \\
+  e V_0 &= h\nu - \Phi_0 \implies V_0 = \left(\frac{h}{e}\right)\nu - \frac{\Phi_0}{e} \quad [\text{Slope } = h/e] \\
   K_{\max} &= hc\left(\frac{1}{\lambda} - \frac{1}{\lambda_0}\right) = 1240\left(\frac{1}{\lambda\text{ [nm]}} - \frac{1}{\lambda_0\text{ [nm]}}\right)\,\si{eV}
 \end{align}
 \textbf{Photon Dynamics (Rest Mass $m_0 = 0$):}
-\begin{equation}
-  E = h\nu = \frac{hc}{\lambda}, \qquad p = \frac{E}{c} = \frac{h}{\lambda}, \qquad m_{\text{effective}} = \frac{h\nu}{c^2}, \qquad N_{\text{photons/sec}} = \frac{P}{h\nu} = \frac{P\lambda}{hc}
-\end{equation}
+\begin{align}
+  E &= h\nu = \frac{hc}{\lambda}, \qquad p = \frac{E}{c} = \frac{h}{\lambda} \\
+  m_{\text{eff}} &= \frac{h\nu}{c^2}, \qquad N_{\text{photons/sec}} = \frac{P}{h\nu} = \frac{P\lambda}{hc}
+\end{align}
 \end{formulabox}
 
 \subsection{de Broglie Matter Wave Formulations}
 
 \begin{formulabox}[de Broglie Wavelength of Particles \& Accelerating Potentials]
 \begin{align}
-  \lambda &= \frac{h}{p} = \frac{h}{mv} = \frac{h}{\sqrt{2mK}} = \frac{h}{\sqrt{2mqV}} && \text{[Fundamental Matter Wave Equation]} \\
-  \lambda_{\text{electron}} &= \frac{h}{\sqrt{2m_e e V}} = \sqrt{\frac{150}{V}}\,\text{\AA} = \frac{1.227}{\sqrt{V\text{ [Volts]}}}\,\si{nm} && [V = \text{accelerating potential in Volts}] \\
-  \lambda_{\text{proton}} &= \frac{0.286}{\sqrt{V}}\,\text{\AA}, \qquad \lambda_{\alpha} = \frac{0.101}{\sqrt{V}}\,\text{\AA}, \qquad \lambda_{\text{deuteron}} = \frac{0.202}{\sqrt{V}}\,\text{\AA} \\
-  \lambda_{\text{gas molecule}} &= \frac{h}{\sqrt{3m k_B T}} = \frac{h}{\sqrt{2m\left(\frac{3}{2}k_B T\right)}} && \text{[Thermal de Broglie Wavelength at Temp } T\text{]}
+  \lambda &= \frac{h}{p} = \frac{h}{mv} = \frac{h}{\sqrt{2mK}} = \frac{h}{\sqrt{2mqV}} \quad [\text{Matter Wave}] \\
+  \lambda_{e} &= \frac{h}{\sqrt{2m_e e V}} = \sqrt{\frac{150}{V}}\,\text{\AA} = \frac{1.227}{\sqrt{V}}\,\si{nm} \quad [V\text{ in Volts}] \\
+  \lambda_{p} &= \frac{0.286}{\sqrt{V}}\,\text{\AA}, \quad \lambda_{d} = \frac{0.202}{\sqrt{V}}\,\text{\AA}, \quad \lambda_{\alpha} = \frac{0.101}{\sqrt{V}}\,\text{\AA} \\
+  \lambda_{\text{gas}} &= \frac{h}{\sqrt{3m k_B T}} = \frac{h}{\sqrt{2m(\frac{3}{2}k_B T)}} \quad [\text{Thermal Wave at } T]
 \end{align}
 \end{formulabox}
 
@@ -5335,11 +5430,11 @@ Astronomical Telescope & $m = -\frac{f_o}{f_e}$ & $m = -\frac{f_o}{f_e}\left(1 +
 
 \begin{formulabox}[Bohr Postulates, Radius, Velocity, Energy \& Rydberg Formula]
 \begin{align}
-  L &= m v_n r_n = \frac{n h}{2\pi} \quad (n = 1, 2, 3, \dots) && \text{[Bohr Angular Momentum Quantization]} \\
-  r_n &= \frac{n^2 h^2 \varepsilon_0}{\pi m Z e^2} = 0.529\left(\frac{n^2}{Z}\right)\,\text{\AA} = r_1\left(\frac{n^2}{Z}\right) && \text{[Orbital Radius: } r \propto \frac{n^2}{Z}\text{]} \\
-  v_n &= \frac{Z e^2}{2\varepsilon_0 n h} = \left(\frac{c}{137}\right)\frac{Z}{n} \approx 2.18\times 10^6\left(\frac{Z}{n}\right)\,\si{m.s^{-1}} && \text{[Orbital Velocity: } v \propto \frac{Z}{n}\text{]} \\
-  E_n &= -\frac{m Z^2 e^4}{8\varepsilon_0^2 n^2 h^2} = -13.6\left(\frac{Z^2}{n^2}\right)\,\si{eV} && \text{[Total Energy: } K = -E_n, \quad U = 2E_n\text{]} \\
-  \frac{1}{\lambda} &= R Z^2\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right) && \left[R = 1.097\times 10^7\,\si{m^{-1}}, \quad \frac{1}{R} \approx 912\,\text{\AA}\right]
+  L &= m v_n r_n = \frac{n h}{2\pi} \quad [\text{Quantization: } n = 1, 2, \dots] \\
+  r_n &= \frac{n^2 h^2 \varepsilon_0}{\pi m Z e^2} = 0.529\left(\frac{n^2}{Z}\right)\,\text{\AA} = r_1\left(\frac{n^2}{Z}\right) \\
+  v_n &= \frac{Z e^2}{2\varepsilon_0 n h} = \left(\frac{c}{137}\right)\frac{Z}{n} \approx 2.18\times 10^6\left(\frac{Z}{n}\right)\,\si{m.s^{-1}} \\
+  E_n &= -13.6\left(\frac{Z^2}{n^2}\right)\,\si{eV} \quad [K = -E_n,\; U = 2E_n] \\
+  \frac{1}{\lambda} &= R Z^2\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right) \quad [R \approx 1.097\times 10^7\,\si{m^{-1}},\; 1/R \approx 912\,\text{\AA}]
 \end{align}
 \textbf{Total Number of Emission Lines from Excited State $n$ to Ground State ($n=1$):}
 \begin{equation}
@@ -5349,17 +5444,18 @@ Astronomical Telescope & $m = -\frac{f_o}{f_e}$ & $m = -\frac{f_o}{f_e}\left(1 +
 
 \begin{table}[htbp]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{L c c c c}
+\begin{tabularx}{\textwidth}{>{\hsize=0.85\hsize}L c c >{\hsize=1.0\hsize}Y >{\hsize=1.15\hsize}Y}
 \toprule
-\textbf{Spectral Series} & \textbf{Lower Level ($n_1$)} & \textbf{Upper Level ($n_2$)} & \textbf{Spectral Region} & \textbf{Shortest Wavelength ($\lambda_{\min}$)} \\
+\textbf{Series} & \textbf{$n_1$} & \textbf{$n_2$} & \textbf{Region} & \textbf{$\lambda_{\min}$ (Series Limit)} \\
 \midrule
-Lyman Series & $n_1 = 1$ & $2, 3, 4, \dots$ & Ultraviolet (UV) & $1/R \approx 912\,\text{\AA}$ \\
-Balmer Series & $n_1 = 2$ & $3, 4, 5, \dots$ & Visible \& Near UV & $4/R \approx 3646\,\text{\AA}$ \\
-Paschen Series & $n_1 = 3$ & $4, 5, 6, \dots$ & Infrared (IR) & $9/R \approx 8205\,\text{\AA}$ \\
-Brackett Series & $n_1 = 4$ & $5, 6, 7, \dots$ & Infrared (IR) & $16/R \approx 14586\,\text{\AA}$ \\
-Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790\,\text{\AA}$ \\
+Lyman & $1$ & $2, 3, \dots$ & UV & $1/R \approx 912\,\text{\AA}$ \\
+Balmer & $2$ & $3, 4, \dots$ & Visible / Near UV & $4/R \approx 3646\,\text{\AA}$ \\
+Paschen & $3$ & $4, 5, \dots$ & IR & $9/R \approx 8205\,\text{\AA}$ \\
+Brackett & $4$ & $5, 6, \dots$ & IR & $16/R \approx 14586\,\text{\AA}$ \\
+Pfund & $5$ & $6, 7, \dots$ & Far IR & $25/R \approx 22790\,\text{\AA}$ \\
 \bottomrule
 \end{tabularx}
 \caption{Hydrogen Spectral Series Classifications and Spectral Regimes.}
@@ -5369,10 +5465,11 @@ Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790
 
 \begin{formulabox}[Nuclear Radius, Density, Mass Defect \& Fission/Fusion Energies]
 \begin{align}
-  R &= R_0 A^{1/3} \quad [R_0 \approx 1.2\,\si{fm} = 1.2\times 10^{-15}\,\si{m}], \qquad \rho_{\text{nuclear}} = \frac{M}{\frac{4}{3}\pi R^3} \approx 2.3\times 10^{17}\,\si{kg.m^{-3}} \\
-  \Delta m &= [Z m_p + (A - Z)m_n] - M_{\text{nucleus}} && \text{[Mass Defect]} \\
-  E_b &= \Delta m\,c^2 = \Delta m\text{ (in u)}\times 931.5\,\si{MeV} && \text{[Total Binding Energy]} \\
-  \Delta E_{\text{reaction}} &= Q = [m_{\text{reactants}} - m_{\text{products}}]c^2 = [BE_{\text{products}} - BE_{\text{reactants}}]
+  R &= R_0 A^{1/3} \quad [R_0 \approx 1.2\,\si{fm} = 1.2\times 10^{-15}\,\si{m}] \\
+  \rho_{\text{nuc}} &= \frac{M}{\frac{4}{3}\pi R^3} \approx 2.3\times 10^{17}\,\si{kg.m^{-3}} \quad [\text{Constant for all } A] \\
+  \Delta m &= [Z m_p + (A - Z)m_n] - M_{\text{nucleus}} \quad [\text{Mass Defect}] \\
+  E_b &= \Delta m\,c^2 = \Delta m\text{ [u]}\times 931.5\,\si{MeV} \quad [\text{Binding Energy}] \\
+  Q &= [m_{\text{reactants}} - m_{\text{products}}]c^2 = [BE_{\text{products}} - BE_{\text{reactants}}]
 \end{align}
 \end{formulabox}
 
@@ -5406,9 +5503,9 @@ Pfund Series & $n_1 = 5$ & $6, 7, 8, \dots$ & Far Infrared & $25/R \approx 22790
 
 \begin{formulabox}[Diode Dynamic Resistance \& Rectifier Efficiencies]
 \begin{align}
-  r_d &= \frac{\Delta V}{\Delta I} && [\text{Dynamic: } r_f \sim 10\text{--}100\,\Omega,\ r_r > 1\,\mathrm{M}\Omega] \\
-  \eta_{\text{HW}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.406 R_L}{r_f + R_L} \implies \eta_{\max} = 40.6\%, \quad \nu_{\text{rip}} = \nu_{\text{in}} \\
-  \eta_{\text{FW}} &= \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.812 R_L}{r_f + R_L} \implies \eta_{\max} = 81.2\%, \quad \nu_{\text{rip}} = 2\nu_{\text{in}}
+  r_d &= \frac{\Delta V}{\Delta I} \quad [r_f \sim 10\text{--}100\,\Omega,\; r_r > 1\,\si{M\ohm}] \\
+  \eta_{\text{HW}} &= \frac{0.406 R_L}{r_f + R_L} \implies \eta_{\max} = 40.6\%, \quad \nu_{\text{rip}} = \nu_{\text{in}} \\
+  \eta_{\text{FW}} &= \frac{0.812 R_L}{r_f + R_L} \implies \eta_{\max} = 81.2\%, \quad \nu_{\text{rip}} = 2\nu_{\text{in}}
 \end{align}
 \end{formulabox}
 
@@ -5463,8 +5560,8 @@ Science education thrives on continuous scrutiny and collective refinement. If y
 
 \begin{itemize}
   \item \textbf{Direct Author Email:} \href{mailto:spdedsec@hotmail.com}{spdedsec@hotmail.com}
-  \item \textbf{GitHub Open-Source Repository:} \url{https://github.com/spdedsec/neet-study-materials}
-  \item \textbf{Errata Tracker:} Verified corrections and updates are posted directly to the project repository.
+  \item \textbf{GitHub Open-Source Repository:}\\ \url{https://github.com/spdedsec/neet-study-materials}
+  \item \textbf{Errata Tracker:} Verified errata and updates are posted directly to the repository.
 \end{itemize}
 
 \vspace{1.5cm}

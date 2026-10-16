@@ -50,33 +50,44 @@ The system is organized into a Dual Track structure:
 ## Feature Inventory
 | # | Feature Code | Feature Description | Milestone | Source |
 |---|---|---|---|---|
-| 1 | F-E2E-TEST | Comprehensive E2E test harness (`validate_modules.py`) verifying syntax, braces, headers, boxes, and deleted topics | M0 (Test Track) | Survey 3 & Request R4 |
-| 2 | F-PHY-MECH | Mechanics Master Theory: 1D/2D Kinematics, Newton's Laws, Friction, Circular Motion, WEP, Momentum & Collisions | M1 | Survey 1 & Request R1 |
-| 3 | F-PHY-ROT-GRAV | Rotational Dynamics, Gravitation & Fluids: Rigid Body, MOI proofs, Rolling on inclines, Kepler, Fluids (Bernoulli, Poiseuille, Stokes) | M1 | Survey 1 & Request R1 |
-| 4 | F-PHY-THERM-OSC | Thermal Physics & Oscillations: First & Second Laws (no Carnot), KTG derivations, SHM phase diagrams, Wave kinematics (no Doppler) | M2 | Survey 1 & Request R1 |
-| 5 | F-PHY-ELECTRO | Electrodynamics Master Theory: Electrostatics, Gauss boundary, Dielectrics, Current networks (no Potentiometer/Cyclotron), Biot-Savart, Ampere, AC resonance | M2 | Survey 1 & Request R1 |
-| 6 | F-PHY-OPT-MOD | Optics & Modern Physics: Lens-maker, Prism deviation, Wave optics (Fresnel/Fraunhofer, YDSE), Photoelectric, Bohr atom, Mass defect (no Radioactivity/Transistors) | M2 | Survey 1 & Request R1 |
-| 7 | F-CHM-PHYSICAL | Physical Chemistry Master Theory: Mole concept, Wave mechanics, Thermodynamics & Thermochemistry, Equilibrium (Buffer, Ksp), Solutions, Electrochemistry, Kinetics | M3 | Survey 2 & Request R2 |
-| 8 | F-CHM-INORGANIC | Inorganic Chemistry Compendium: Periodic trends, VSEPR geometries, MO diagrams (B2-O2-), Coordination (CFT splitting, CFSE, Jahn-Teller), p-block, d/f-block | M3 | Survey 2 & Request R2 |
-| 9 | F-CHM-ORGANIC | Organic Chemistry Master Theory: Electronic effects, intermediates, full reaction pathways (EAS, SN1/SN2, E1/E2, Aldol, Cannizzaro), Biomolecules (Carbs, Proteins, Nucleic) | M4 | Survey 2 & Request R2 |
-| 10 | F-STYLE-CALLOUTS | Full implementation of `styles/neet_style.sty` with 5 semantic callouts: `conceptbox`, `formulabox`, `usecasebox`, `trapbox`, `ncertbox` | All Modules | Survey 3 & Request R3 |
-| 11 | F-AUTH-ATTRIB | Front banner attribution `Prepared, Compiled \& Authored by Satya Prakash` & upper-right running header `Satya Prakash` | All Modules | Survey 3 & Request R3 |
-| 12 | F-NMC-EXCLUSION | Strict exclusion of deleted NMC topics (Carnot, Doppler, Potentiometer, Cyclotron, Transistors, Radioactivity; Solid state, Hydrogen, s-block, Metallurgy, Surface chem, Polymers) | All Modules | Surveys 1, 2 & Request R3 |
-| 13 | F-COMPILATION | Error-free compilation of all 8 `.tex` modules into publication-grade `.pdf` using `/home/spdedsec/.local/bin/tectonic` | M5 | Survey 3 & Request R4 |
-| 14 | F-README-SYNC | Complete indexing of all newly generated LaTeX sources and compiled PDFs with verified markdown links | M5 | Request R4 |
-| 15 | F-GIT-PUSH | Commit all new `.tex` sources, `.pdf` files, and documentation, and push to GitHub `origin main` | M5 | Request R4 |
+| 1 | F-E2E-TEST | Comprehensive E2E test harness (`validate_modules.py`) verifying syntax, braces, headers, boxes, and deleted topics | M0 (Done) | Survey 3 & Request R4 |
+| 2 | F-PHY-MECH | Mechanics Master Theory: 1D/2D Kinematics, Newton's Laws, Friction, Circular Motion, WEP, Momentum & Collisions | M1 (Done) | Survey 1 & Request R1 |
+| 3 | F-PHY-ROT-GRAV | Rotational Dynamics, Gravitation & Fluids: Rigid Body, MOI proofs, Rolling on inclines, Kepler, Fluids | M1 (Done) | Survey 1 & Request R1 |
+| 4 | F-PHY-THERM-OSC | Thermal Physics & Oscillations: First & Second Laws (no Carnot), KTG derivations, SHM, Waves | M2 (Done) | Survey 1 & Request R1 |
+| 5 | F-PHY-ELECTRO | Electrodynamics Master Theory: Electrostatics, Gauss, Dielectrics, Current networks, Biot-Savart, AC | M2 (Done) | Survey 1 & Request R1 |
+| 6 | F-PHY-OPT-MOD | Optics & Modern Physics: Lens-maker, Prism deviation, Wave optics, Photoelectric, Bohr atom, Semiconductors | M2 (Done) | Survey 1 & Request R1 |
+| 7 | F-CHM-PHYSICAL | Physical Chemistry Master Theory: Mole concept, Wave mechanics, Thermodynamics, Equilibrium, Solutions, Kinetics | M3 (Done) | Survey 2 & Request R2 |
+| 8 | F-CHM-INORGANIC | Inorganic Chemistry Compendium: Periodic trends, VSEPR, MO diagrams, Coordination, p-block, d/f-block | M3 (Done) | Survey 2 & Request R2 |
+| 9 | F-CHM-ORGANIC | Organic Chemistry Master Theory: Electronic effects, intermediates, full reaction pathways, Biomolecules | M4 (Done) | Survey 2 & Request R2 |
+| 10 | F-STYLE-CALLOUTS | Full implementation of `styles/neet_book.sty` with 5 semantic callouts for 6" x 9" trade paperback | All Modules | Survey 3 & Request R3 |
+| 11 | F-AUTH-ATTRIB | Author attribution `Satya Prakash`, email `spdedsec@hotmail.com`, front matter, verso/recto headers | All Modules | Survey 3 & Request R3 |
+| 12 | F-NMC-EXCLUSION | Strict exclusion of deleted NMC topics | All Modules | Surveys 1, 2 & Request R3 |
+| 13 | F-COMPILATION | Error-free compilation of all 3 master books into publication-grade `.pdf` using Tectonic | All Milestones | Request R4 |
+| 14 | F-BOX-PHYSICS | Refactor all boxed display equations, annotations, and tables in `books/physics_master_book.tex` to $\le 310$ pt usable width | M-PHYS | Request R1 (2026-10-16) |
+| 15 | F-BOX-CHEMISTRY | Refactor all 216 overwide equations, reaction mechanisms, and tables in `books/chemistry_master_book.tex` to $\le 310$ pt usable width | M-CHEM | Request R2 (2026-10-16) |
+| 16 | F-BOX-BIOLOGY | Refactor all 17 overwide elements in `books/biology_master_book.tex` (TikZ, tables, math strings) to $\le 310$ pt usable width | M-BIO | Request R4 & Acceptance Criteria |
+| 17 | F-KDP-STRESS-TEST | Pass `python3 scripts/verify_books_kdp.py` with verdict APPROVE and total page count > 400 pages | M-FINAL | Request R4 & Acceptance Criteria |
+| 18 | F-FORENSIC-AUDIT | Independent forensic integrity audit verifying zero cheating, zero facades, zero syllabus stripping | M-FINAL | Request R3 & Integrity Forensics |
 
 ---
 
 ## Milestones
 | # | Name | Scope & Deliverables | Dependencies | Status |
 |---|---|---|---|---|
-| M0 | E2E Testing & Quality Track | Create automated test harness `scripts/validate_modules.py` covering syntax, brace matching, header verification, attribution checks, and deleted topic regex scanner. Publish `TEST_READY.md`. | None | DONE (`scripts/validate_modules.py`, `TEST_INFRA.md`, `TEST_READY.md`) |
-| M1 | Physics Core Mechanics & Dynamics | Author `chapters/physics/mechanics_master_theory.tex` and `chapters/physics/rotational_gravitation_fluids_theory.tex` with complete step-by-step derivations and problem archetypes. Compile to PDF. | M0 | DONE (13pp + 11pp PDFs compiled, verified) |
-| M2 | Physics Fields, Waves & Modern Physics | Author `chapters/physics/thermal_physics_oscillations_theory.tex`, `chapters/physics/electrodynamics_master_theory.tex`, and `chapters/physics/optics_modern_physics_theory.tex`. Compile to PDF. | M0 | DONE (14pp + 12pp + 12pp PDFs compiled, verified) |
-| M3 | Physical & Inorganic Chemistry Compendium | Author `chapters/chemistry/physical_chemistry_master_theory.tex` and `chapters/chemistry/inorganic_chemistry_master_compendium.tex` with complete derivations, VSEPR geometries, MO diagrams, and CFT splitting. Compile to PDF. | M0 | DONE (24pp + 18pp PDFs compiled, verified) |
-| M4 | Organic Chemistry Master Theory & Synthesis | Author `chapters/chemistry/organic_chemistry_master_theory.tex` (GOC, reaction intermediates, all named mechanisms, aliphatic/aromatic conversions, and biomolecules). Compile to PDF. | M0 | DONE (28pp PDF compiled, verified) |
-| M5 | Final E2E Verification, README Index & Git Push | Run full E2E test suite (100% pass across all 8 modules), update `README.md`, commit and push to remote repository `origin main`. | M1, M2, M3, M4 | DONE (Commit `6818f7b` pushed to `origin main`) |
+| M0 | Survey & Scope Audit | Live audit of all 3 master books; catalog all overfull lines $\ge 10.0$ pt, verify KDP baseline | None | DONE (`survey_physics.md`, `survey_chemistry.md`, `survey_biology_kdp.md`) |
+| M-PHYS | Physics 6" x 9" Margin Compliance | Refactor all overwide equations, annotations, and tables in `books/physics_master_book.tex` so `audit_book.py physics_master_book 10.0` reports 0 overfull instances. | M0 | DONE |
+| M-CHEM | Chemistry 6" x 9" Margin Compliance | Refactor all overwide equations, mechanisms, and tables in `books/chemistry_master_book.tex` so `audit_book.py chemistry_master_book 10.0` reports 0 overfull instances. | M0 | DONE |
+| M-BIO | Biology 6" x 9" Margin Compliance | Refactor all overwide lines in `books/biology_master_book.tex` so `audit_book.py biology_master_book 10.0` reports 0 overfull instances. | M0 | DONE |
+| M-FINAL | Automated Verification & KDP Gate Validation | Run full audit across all 3 books (all report 0 overfull $\ge 10.0$ pt), pass `verify_books_kdp.py` (verdict APPROVE, > 400 pages), pass Forensic Integrity Audit. | M-PHYS, M-CHEM, M-BIO | DONE |
+
+---
+
+## Code Layout & Write Boundaries
+- `books/physics_master_book.tex` — Exclusively owned by Worker Physics (`worker_physics_refactor`).
+- `books/chemistry_master_book.tex` — Exclusively owned by Worker Chemistry (`worker_chemistry_refactor`).
+- `books/biology_master_book.tex` — Exclusively owned by Worker Biology (`worker_biology_refactor`).
+- Concurrent workers MUST NOT write outside their assigned manuscript file.
+- All agent metadata and reports are stored in `.agents/teamwork/<agent_id>/`.
 
 ---
 

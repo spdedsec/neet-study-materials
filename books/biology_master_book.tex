@@ -118,7 +118,7 @@ However, empirical examination trends over recent testing cycles demonstrate tha
 Furthermore, the National Medical Commission (NMC) has significantly rationalized the curriculum:
 \begin{itemize}
   \item \textbf{Curriculum Exclusions:} Entire legacy topics have been formally removed, including \textit{Digestion and Absorption}, \textit{Transport in Plants}, \textit{Mineral Nutrition}, \textit{Strategies for Enhancement in Food Production}, \textit{Environmental Issues}, and legacy secondary growth sections. Focusing finite preparation hours on deleted topics is counter-productive.
-  \item \textbf{Explicit Additions \& Emphases:} The NMC has explicitly mandated comprehensive study of \textbf{seven distinct angiosperm families} (Malvaceae, Cruciferae/Brassicaceae, Fabaceae/Leguminosae, Asteraceae/Compositae, Poaceae/Gramineae, Solanaceae, and Liliaceae) and reinstated detailed animal morphology for both \textbf{Frog} (\textit{Rana tigrina}) and \textbf{Cockroach} (\textit{Periplaneta americana}).
+  \item \textbf{Explicit Additions \& Emphases:} The NMC has explicitly mandated comprehensive study of \textbf{seven distinct angiosperm families} (Malvaceae, Cruciferae\slash Brassicaceae, Fabaceae\slash Leguminosae, Asteraceae\slash Compositae, Poaceae\slash Gramineae, Solanaceae, and Liliaceae) and reinstated detailed animal morphology for both \textbf{Frog} (\textit{Rana tigrina}) and \textbf{Cockroach} (\textit{Periplaneta americana}).
 \end{itemize}
 
 This master textbook is constructed around an uncompromising, seven-part architectural framework strictly aligned with the revised NMC syllabus:
@@ -156,7 +156,7 @@ This section details the official NEET UG 2027 Biology curriculum prescribed by 
 \begin{table}[htbp]
 \centering
 \footnotesize
-\setlength{\tabcolsep}{3.5pt}
+\setlength{\tabcolsep}{2.5pt}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabularx}{\textwidth}{l c c c Y}
 \toprule
@@ -265,9 +265,10 @@ The cell represents the fundamental structural and functional unit of all living
     \item \textbf{Theodore Schwann (1839):} British zoologist; studied diverse animal cells and reported that animal cells have a thin outer layer (plasma membrane). He also concluded that the presence of a \textbf{cell wall is a unique diagnostic feature of plant cells}.
   \end{itemize}
   \item \textbf{Rudolf Virchow (1855):} Resolved the origin of new cells with his famous aphorism:
-  \begin{equation}
-    \mathbf{\textit{Omnis cellula-e cellula}} \quad (\text{All living cells arise from pre-existing cells via division})
-  \end{equation}
+  \[
+    \mathbf{\textit{Omnis cellula-e cellula}}
+  \]
+  (All living cells arise from pre-existing cells via division).
 \end{itemize}
 
 \textbf{2. Prokaryotic Diagnostic Architecture ($1-2\,\mu\mathrm{m}$):}
@@ -385,25 +386,27 @@ An enzyme with a low $K_m$ achieves half-maximal saturation at low substrate con
 
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[scale=0.88, >=Stealth]
-  \draw[->, thick] (0,0) -- (7.5,0) node[right] {$[S]$ (Substrate Concentration)};
-  \draw[->, thick] (0,0) -- (0,5.0) node[above] {$v$ (Reaction Velocity)};
+\begin{tikzpicture}[scale=0.76, >=Stealth]
+  \draw[->, thick] (0,0) -- (6.6,0) node[right] {$[S]$};
+  \node[below] at (3.3, -0.4) {\small Substrate Concentration $[S]$};
+  \draw[->, thick] (0,0) -- (0,4.8) node[above] {$v$ (Velocity)};
   
-  \draw[dashed, gray] (0, 4.0) -- (7.0, 4.0) node[right] {$V_{\max}$};
-  \draw[dashed, gray] (0, 2.0) -- (1.5, 2.0);
-  \draw[dashed, gray] (1.5, 0) node[below] {$K_m$} -- (1.5, 2.0);
+  \draw[dashed, gray] (0, 3.8) -- (5.8, 3.8) node[right] {$V_{\max}$};
+  \draw[dashed, gray] (0, 1.9) -- (1.5, 1.9);
+  \draw[dashed, gray] (1.5, 0) node[below] {$K_m$} -- (1.5, 1.9);
   
-  \draw[very thick, accentblue, domain=0:7.0, samples=60]
-    plot (\x, {4.0 * \x / (1.5 + \x)}) node[right] {Normal Enzyme};
+  \draw[very thick, accentblue, domain=0:5.8, samples=60]
+    plot (\x, {3.8 * \x / (1.5 + \x)}) node[above right=-3pt] {\footnotesize Normal};
     
-  \draw[very thick, traprange, dashed, domain=0:7.0, samples=60]
-    plot (\x, {4.0 * \x / (3.5 + \x)}) node[right] {$+$ Competitive Inhibitor};
-  \draw[dashed, traprange] (3.5, 0) node[below] {$K_m'$} -- (3.5, 2.0);
-  \draw[dashed, traprange] (0, 2.0) -- (3.5, 2.0);
+  \draw[very thick, traprange, dashed, domain=0:5.8, samples=60]
+    plot (\x, {3.8 * \x / (3.2 + \x)}) node[below right=-3pt] {\footnotesize $+$ Comp.\ Inh.};
+  \draw[dashed, traprange] (3.2, 0) node[below] {$K_m'$} -- (3.2, 1.9);
+  \draw[dashed, traprange] (0, 1.9) -- (3.2, 1.9);
   
-  \node[left] at (0, 2.0) {$\frac{1}{2}V_{\max}$};
-  \node[left] at (0, 4.0) {$V_{\max}$};
+  \node[left] at (0, 1.9) {$\frac{1}{2}V_{\max}$};
+  \node[left] at (0, 3.8) {$V_{\max}$};
 \end{tikzpicture}
+
 \caption{Michaelis-Menten Enzyme Kinetics: Hyperbolic Saturation Curve and the Modulating Effect of a Competitive Inhibitor.}
 \label{fig:michaelis_menten}
 \end{figure}
@@ -422,16 +425,16 @@ Taking the algebraic reciprocal of the Michaelis-Menten equation yields a linear
 
 \begin{center}
 \footnotesize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{2.5pt}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{|l|c|c|X|}
-\hline
+\begin{tabularx}{\linewidth}{l c c >{\RaggedRight}X}
+\toprule
 \textbf{Inhibition} & \textbf{$K_m$} & \textbf{$V_{\max}$} & \textbf{Mechanism \& Canonical NCERT Examples} \\
-\hline
-\textbf{Competitive} & \textbf{Increases} ($K_m' > K_m$) & \textbf{Unchanged} & Inhibitor competes directly for active catalytic site. Excess $[S]$ overcomes inhibition. \newline \textit{Example:} \textbf{succinate dehydrogenase} inhibited by \textbf{malonate}. \\
-\hline
-\textbf{Non-Competitive} & \textbf{Unchanged} & \textbf{Decreases} ($V_{\max}' < V_{\max}$) & Inhibitor binds allosteric site, altering enzyme conformation. Excess $[S]$ cannot overcome. \newline \textit{Example:} Cyanide inhibiting \textbf{cytochrome $c$ oxidase}. \\
-\hline
+\midrule
+\textbf{Competitive} & \textbf{Increases} \newline ($K_m' > K_m$) & \textbf{Unchanged} & Inhibitor competes directly for active catalytic site. Excess $[S]$ overcomes inhibition. \newline \textit{Example:} \textbf{succinate dehydrogenase} inhibited by \textbf{malonate}. \\
+\midrule
+\textbf{Non-Competitive} & \textbf{Unchanged} & \textbf{Decreases} \newline ($V_{\max}' < V_{\max}$) & Inhibitor binds allosteric site, altering enzyme conformation. Excess $[S]$ cannot overcome. \newline \textit{Example:} Cyanide inhibiting \textbf{cytochrome $c$ oxidase}. \\
+\bottomrule
 \end{tabularx}
 \end{center}
 
@@ -469,9 +472,10 @@ The continuity of life depends fundamentally upon cell division. This chapter an
 
 \begin{formulabox}[The Eukaryotic Cell Cycle: Phase Duration \& Quantitative Dynamics]
 A typical human cell in culture divides once every $\approx 24\,\mathrm{hours}$ (yeast completes division in only $90\,\mathrm{minutes}$). The cell cycle is partitioned into two core phases:
-\begin{equation}
-  \textbf{Cell Cycle} = \textbf{Interphase ($>95\%$ of cycle duration)} + \textbf{M-Phase / Mitosis ($<5\%$)}
-\end{equation}
+\begin{align*}
+  \text{Cell Cycle} &= \text{Interphase } (>95\% \text{ duration}) \\
+                    &\quad + \text{M-Phase / Mitosis } (<5\% \text{ duration})
+\end{align*}
 
 \textbf{1. Interphase Sub-Phases:}
 \begin{itemize}
@@ -701,9 +705,10 @@ The National Medical Commission (NMC) explicitly mandates comprehensive comparat
 \subsection{4. Family Asteraceae / Compositae (Sunflower Family)}
 \begin{itemize}
   \item \textbf{Floral Formula:} 
-  \begin{equation}
-    \text{Ray Florets: } \mathbf{\%\:\text{K}_{\text{pappus}}\:\text{C}_{(5)}\:\text{A}_0\:\overline{\text{G}}_{(2)}} \qquad \text{Disc Florets: } \mathbf{\oplus\:\text{K}_{\text{pappus}}\:\overbrace{\text{C}_{(5)}\:\text{A}_{(5)}}\:\overline{\text{G}}_{(2)}}
-  \end{equation}
+  \begin{align*}
+    \text{Ray Florets: } & \mathbf{\%\:\text{K}_{\text{pappus}}\:\text{C}_{(5)}\:\text{A}_0\:\overline{\text{G}}_{(2)}} \\
+    \text{Disc Florets: } & \mathbf{\oplus\:\text{K}_{\text{pappus}}\:\overbrace{\text{C}_{(5)}\:\text{A}_{(5)}}\:\overline{\text{G}}_{(2)}}
+  \end{align*}
   \item \textbf{Inflorescence Architecture:} Dense pseudanthium inflorescence known as a \textbf{Capitulum (Head)}, surrounded at its base by a protective involucre of green bracts. Central actinomorphic, bisexual tubular disc florets are flanked peripherally by zygomorphic, pistillate or sterile ligulate ray florets.
   \item \textbf{Diagnostic Hallmarks:} Calyx is modified into a persistent hairy or bristly tuft called the \textbf{Pappus}, which serves as a parachute for wind dispersal (anemochory). Androecium is \textbf{syngenesious} (anthers are fused into a cylinder around the style, while filaments remain free); epipetalous.
   \item \textbf{Gynoecium \& Fruit:} Bicarpellary, syncarpous, \textbf{inferior unilocular ovary with a single basal ovule}; fruit is a dry indehiscent \textbf{cypsela} crowned with pappus.
@@ -739,20 +744,20 @@ The National Medical Commission (NMC) explicitly mandates comprehensive comparat
 \begin{landscape}
 \begin{table}[p]
 \centering
-\scriptsize
+\fontsize{6.5pt}{8pt}\selectfont
 \setlength{\tabcolsep}{2pt}
-\renewcommand{\arraystretch}{1.08}
-\begin{tabularx}{\linewidth}{l c p{2.2cm} p{2.2cm} p{2.4cm} p{1.9cm} X}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\linewidth}{l >{\RaggedRight}p{3.5cm} >{\RaggedRight}p{2.3cm} >{\RaggedRight}p{2.3cm} >{\RaggedRight}p{2.4cm} >{\RaggedRight}p{2.1cm} >{\RaggedRight}X}
 \toprule
-\textbf{Family} & \textbf{Floral Formula} & \textbf{Inflorescence \& Perianth} & \textbf{Androecium Details} & \textbf{Gynoecium \& Placentation} & \textbf{Fruit \& Seed} & \textbf{Diagnostic Economic \& Medicinal Species} \\
+\textbf{Family} & \textbf{Floral Formula} & \textbf{Inflorescence \& Perianth} & \textbf{Androecium Details} & \textbf{Gynoecium \& Placentation} & \textbf{Fruit \& Seed} & \textbf{Key Economic \& Medicinal Species} \\
 \midrule
-\textbf{Malvaceae} & $\oplus\:\text{Epi}_{3-8}\:\text{K}_{(5)}\:\text{C}_5\:\text{A}_{(\infty)}\:\underline{\text{G}}_{(5-\infty)}$ & Solitary/axillary; Epicalyx ($3-8$); Twisted corolla & \textbf{Monadelphous} staminal tube; \textbf{Monothecous reniform anthers} & Multicarpellary syncarpous; \textbf{Axile placentation} & Capsule or schizocarp; hairy seeds & Cotton (\textit{Gossypium}), Lady finger (\textit{Abelmoschus}), China rose (\textit{Hibiscus}). \\
-\textbf{Cruciferae} & $\oplus\:\text{K}_{2+2}\:\text{C}_{4}\:\text{A}_{2+4}\:\underline{\text{G}}_{(2)}$ & Racemose raceme; Cruciform corolla (clawed petals) & \textbf{Tetradynamous} ($2\text{ short outer} + 4\text{ long inner}$) & Bicarpellary syncarpous; \textbf{Replum (false septum)}; Parietal & \textbf{Siliqua} or silicula; non-endospermic & Mustard (\textit{Brassica campestris}), Radish (\textit{Raphanus}), Turnip, Cabbage. \\
-\textbf{Fabaceae} & $\%\:\text{K}_{(5)}\:\text{C}_{1+2+(2)}\:\text{A}_{(9)+1}\:\underline{\text{G}}_1$ & Racemose; \textbf{Vexillary aestivation} ($1\text{ standard} + 2\text{ wings} + 2\text{ keel}$) & \textbf{Diadelphous} $[(9)+1]$, dithecous anthers & Monocarpellary; unilocular with \textbf{Marginal placentation} & \textbf{Legume} (pod); non-endospermic; root nodules & Gram, Arhar, Moong, Soybean, Groundnut, \textit{Indigofera}, Sunnhemp, \textit{Sesbania}, \textit{Muliathi}. \\
-\textbf{Asteraceae} & $\text{Ray: }\%\:\text{K}_{\text{pappus}}\:\text{C}_{(5)}\:\text{A}_0\:\overline{\text{G}}_{(2)}$ \newline $\text{Disc: }\oplus\:\text{K}_{\text{pappus}}\:\overbrace{\text{C}_{(5)}\:\text{A}_{(5)}}\:\overline{\text{G}}_{(2)}$ & \textbf{Capitulum (Head)} with involucre; Calyx modified to \textbf{Pappus} & \textbf{Syngenesious} (anthers fused, filaments free), epipetalous & Bicarpellary syncarpous; \textbf{Inferior ovary}, \textbf{Basal placentation} & \textbf{Cypsela} with pappus; non-endospermic & Sunflower (\textit{Helianthus}), Marigold (\textit{Tagetes}), \textit{Chrysanthemum}, Pyrethrum. \\
-\textbf{Poaceae} & $\%\:\text{P}_{2}\:\text{A}_{3 \text{ or } 6}\:\underline{\text{G}}_1$ & \textbf{Spikelet} with sterile glumes, lemma and palea; 2 scale-like \textbf{Lodicules} & Versatile pendulous stamens ($3$ or $6$) & Monocarpellary; unilocular with \textbf{Feathery bifid stigmas}; Basal & \textbf{Caryopsis} (pericarp fused with testa); Endospermic with scutellum & Wheat (\textit{Triticum}), Rice (\textit{Oryza}), Maize (\textit{Zea mays}), Sugarcane, Bamboo. \\
-\textbf{Solanaceae} & $\oplus\:\text{K}_{(5)}\:\overbrace{\text{C}_{(5)}\:\text{A}_5}\:\underline{\text{G}}_{(2)}$ & Solitary/axillary/cymose; Persistent accrescent calyx & Epipetalous stamens ($5$), alternipetalous & Bicarpellary syncarpous; \textbf{Obliquely placed ovary}; \textbf{Swollen axile placenta} & Berry or capsule; numerous endospermic seeds & Potato, Tomato, Brinjal, Chilli, \textit{Belladonna}, \textit{Ashwagandha}, Tobacco, \textit{Petunia}. \\
-\textbf{Liliaceae} & $\oplus\:\overbrace{\text{P}_{(3+3)}\:\text{A}_{3+3}}\:\underline{\text{G}}_{(3)}$ & Scapigerous umbellate clusters; Perianth $3+3$ tepals & \textbf{Epiphyllous} stamens ($3+3$) in two whorls & Tricarpellary syncarpous; Trilocular with \textbf{Axile placentation} & Capsule or berry; endospermic seeds & Onion, Garlic (\textit{Allium}), \textit{Aloe}, \textit{Asparagus}, Tulip, \textit{Gloriosa}, Colchicine (\textit{Colchicum}). \\
+\textbf{Malvaceae} & $\oplus\,\text{Epi}_{3-8}\,\text{K}_{(5)}\,\text{C}_5\,\text{A}_{(\infty)}\,\underline{\text{G}}_{(5-\infty)}$ & Solitary or axillary;\\epicalyx ($3-8$);\\twisted corolla & \textbf{Monadelphous} staminal tube;\\\textbf{monothecous reniform anthers} & Multicarpellary syncarpous;\\\textbf{axile placentation} & Capsule or schizocarp;\\hairy seeds & Cotton (\textit{Gossypium}), Lady finger (\textit{Abelmoschus}), China rose (\textit{Hibiscus}). \\
+\textbf{Cruciferae} & $\oplus\,\text{K}_{2+2}\,\text{C}_{4}\,\text{A}_{2+4}\,\underline{\text{G}}_{(2)}$ & Racemose raceme;\\cruciform corolla (clawed petals) & \textbf{Tetradynamous}\\($2\text{ outer short} + 4\text{ inner long}$) & Bicarpellary syncarpous;\\\textbf{replum (false septum)};\\parietal placentation & \textbf{Siliqua} or silicula;\\non-endospermic & Mustard (\textit{Brassica campestris}), Radish (\textit{Raphanus}), Turnip, Cabbage. \\
+\textbf{Fabaceae} & $\%\,\text{K}_{(5)}\,\text{C}_{1+2+(2)}\,\text{A}_{(9)+1}\,\underline{\text{G}}_1$ & Racemose; \textbf{vexillary aestivation}\\($1\text{ standard} + 2\text{ wings} + 2\text{ keel}$) & \textbf{Diadelphous} $[(9)+1]$,\\dithecous anthers & Monocarpellary unilocular;\\\textbf{marginal placentation} & \textbf{Legume} (pod);\\non-endospermic; root nodules & Gram, Arhar, Moong, Soybean, Groundnut, \textit{Indigofera}, Sunnhemp, \textit{Sesbania}, \textit{Muliathi}. \\
+\textbf{Asteraceae} & $\text{Ray: }\%\,\text{K}_{\text{pappus}}\,\text{C}_{(5)}\,\text{A}_0\,\overline{\text{G}}_{(2)}$ \newline $\text{Disc: }\oplus\,\text{K}_{\text{pappus}}\,\overbrace{\text{C}_{(5)}\,\text{A}_{(5)}}\,\overline{\text{G}}_{(2)}$ & \textbf{Capitulum (Head)} with involucre;\\calyx modified to \textbf{Pappus} & \textbf{Syngenesious} (anthers fused,\\filaments free), epipetalous & Bicarpellary syncarpous;\\\textbf{inferior ovary}, \textbf{basal placentation} & \textbf{Cypsela} with pappus;\\non-endospermic & Sunflower (\textit{Helianthus}), Marigold (\textit{Tagetes}), \textit{Chrysanthemum}, Pyrethrum. \\
+\textbf{Poaceae} & $\%\,\text{P}_{2}\,\text{A}_{3 \text{ or } 6}\,\underline{\text{G}}_1$ & \textbf{Spikelet} with sterile glumes,\\lemma, palea; 2 \textbf{Lodicules} & Versatile pendulous stamens\\($3$ or $6$) & Monocarpellary unilocular;\\\textbf{feathery bifid stigmas};\\basal placentation & \textbf{Caryopsis} (pericarp fused\\with testa); endospermic & Wheat (\textit{Triticum}), Rice (\textit{Oryza}), Maize (\textit{Zea mays}), Sugarcane, Bamboo. \\
+\textbf{Solanaceae} & $\oplus\,\text{K}_{(5)}\,\overbrace{\text{C}_{(5)}\,\text{A}_5}\,\underline{\text{G}}_{(2)}$ & Solitary, axillary or cymose;\\persistent accrescent calyx & Epipetalous stamens ($5$),\\alternipetalous & Bicarpellary syncarpous;\\\textbf{obliquely placed ovary};\\\textbf{swollen axile placenta} & Berry or capsule;\\numerous endospermic seeds & Potato, Tomato, Brinjal, Chilli, \textit{Belladonna}, \textit{Ashwagandha}, Tobacco, \textit{Petunia}. \\
+\textbf{Liliaceae} & $\oplus\,\overbrace{\text{P}_{(3+3)}\,\text{A}_{3+3}}\,\underline{\text{G}}_{(3)}$ & Scapigerous umbellate clusters;\\perianth $3+3$ tepals & \textbf{Epiphyllous} stamens ($3+3$)\\in two whorls & Tricarpellary syncarpous;\\trilocular, \textbf{axile placentation} & Capsule or berry;\\endospermic seeds & Onion, Garlic (\textit{Allium}), \textit{Aloe}, \textit{Asparagus}, Tulip, \textit{Gloriosa}, Colchicine (\textit{Colchicum}). \\
 \bottomrule
 \end{tabularx}
 \caption{Definitive Diagnostic Matrix for All Seven Angiosperm Families Prescribed by the NMC for NEET UG.}
@@ -771,9 +776,9 @@ The Animal Kingdom comprises multicellular, heterotrophic eukaryotes lacking cel
 \begin{table}[htbp]
 \centering
 \scriptsize
-\setlength{\tabcolsep}{2.5pt}
+\setlength{\tabcolsep}{2pt}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\textwidth}{l p{1.8cm} p{1.7cm} X}
+\begin{tabularx}{\textwidth}{l >{\RaggedRight}p{1.9cm} >{\RaggedRight}p{2.6cm} >{\RaggedRight}X}
 \toprule
 \textbf{Phylum} & \textbf{Level / Symmetry} & \textbf{Coelom / Germ} & \textbf{Diagnostic Hallmarks \& NCERT Examples} \\
 \midrule
@@ -781,7 +786,7 @@ The Animal Kingdom comprises multicellular, heterotrophic eukaryotes lacking cel
 \textbf{Cnidaria} & Tissue; Radial & Acoelomate; Diploblastic & \textbf{Cnidoblasts/Nematocysts} for anchorage/defense; Polyp (sessile) and Medusa (free-swimming); \textbf{Metagenesis} in \textit{Obelia}. \textit{Hydra, Physalia, Adamsia}. \\
 \textbf{Ctenophora} & Tissue; Radial & Acoelomate; Diploblastic & Eight external ciliated \textbf{comb plates} for locomotion; \textbf{Bioluminescence}; Strictly marine. \textit{Pleurobrachia, Ctenoplana}. \\
 \textbf{Platyhelminthes} & Organ/System; Bilateral & \textbf{Acoelomate}; Triploblastic & Dorso-ventrally flattened; \textbf{Flame cells (Protonephridia)} for osmoregulation; Parasitic hooks/suckers. \textit{Taenia, Fasciola, Planaria} (high regeneration). \\
-\textbf{Aschelminthes} & Organ-system; Bilateral & \textbf{Pseudocoelomate}; Triploblastic & Syncytial epidermis, muscular pharynx, sexual dimorphism (females longer). \textit{Ascaris, Wuchereria, Ancylostoma}. \\
+\textbf{Aschelminthes} & Organ-system; Bilateral & \textbf{Pseudo\-coelomate}; Triploblastic & Syncytial epidermis, muscular pharynx, sexual dimorphism (females longer). \textit{Ascaris, Wuchereria, Ancylostoma}. \\
 \textbf{Annelida} & Organ-system; Bilateral & Coelomate; Triploblastic & \textbf{Metameric segmentation}; Longitudinal/circular muscles; \textbf{Nephridia} for excretion; Closed circulation. \textit{Nereis, Pheretima, Hirudinaria}. \\
 \textbf{Arthropoda} & Organ-system; Bilateral & Coelomate; Triploblastic & \textbf{Largest phylum} ($>2/3$ animal species); Chitinous exoskeleton; \textbf{Malpighian tubules}; Open circulation; Statocysts. \textit{Apis, Bombyx, Periplaneta, Limulus}. \\
 \textbf{Mollusca} & Organ-system; Bilateral & Coelomate; Triploblastic & \textbf{Second largest phylum}; Calcareous shell; Visceral hump with mantle cavity; Rasping \textbf{Radula}. \textit{Pila, Pinctada, Sepia, Octopus}. \\
@@ -897,12 +902,14 @@ Photosynthesis occurs within the chloroplasts of chlorenchyma (mesophyll) cells:
 
 \begin{formulabox}[Photochemical Reactions, Z-Scheme \& Photophosphorylation Dynamics]
 Photosynthetic units comprise antenna complexes bound to reaction centers in the thylakoid membrane:
-\begin{align*}
-  \textbf{Photosystem I (PS I): } & \text{Reaction center Chl } a \text{ absorbs maximally at } \mathbf{700\,\mathrm{nm}} \ (\mathrm{P_{700}}).\\
-  \textbf{Photosystem II (PS II): } & \text{Reaction center Chl } a \text{ absorbs maximally at } \mathbf{680\,\mathrm{nm}} \ (\mathrm{P_{680}}).\\
-  \textbf{Photolysis of Water: } & 2\mathrm{H_2O} \xrightarrow[\mathrm{Mn^{2+}, Cl^-}]{\text{Oxygen-Evolving Complex (OEC)}} 4\mathrm{H}^+ + \mathrm{O}_2 \uparrow + 4e^-\\
-  & (\text{Located on the inner lumenal surface of the thylakoid membrane, linked to PS II}).
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Photosystem I (PS I):} Reaction center Chl $a$ absorbs maximally at $\mathbf{700\,\mathrm{nm}}$ ($\mathrm{P_{700}}$).
+  \item \textbf{Photosystem II (PS II):} Reaction center Chl $a$ absorbs maximally at $\mathbf{680\,\mathrm{nm}}$ ($\mathrm{P_{680}}$).
+  \item \textbf{Photolysis of Water (OEC on inner lumenal thylakoid surface):}
+  \[
+    2\mathrm{H_2O} \xrightarrow[\mathrm{Mn^{2+}, Cl^-}]{\text{OEC}} 4\mathrm{H}^+ + \mathrm{O}_2 \uparrow + 4e^-
+  \]
+\end{itemize}
 
 \textbf{Comparative Matrix: Non-Cyclic vs Cyclic Photophosphorylation:}
 \begin{center}
@@ -944,17 +951,24 @@ Protons exit the thylakoid lumen along the concentration gradient through the tr
 
 \begin{formulabox}[The Calvin $C_3$ Cycle (Melvin Calvin, 1954)]
 Occurs within the stroma matrix. Deciphered using radioactive $^{14}\mathrm{C}$ in algal photosynthesis (\textit{Chlorella}):
-\begin{align*}
-  \textbf{1. Carboxylation: } & \mathrm{RuBP}\ (5\mathrm{C}) + \mathrm{CO_2} + \mathrm{H_2O} \xrightarrow{\mathbf{RuBisCO}} 2 \times 3\text{-PGA}\ (3\mathrm{C})\\
-  \textbf{2. Reduction: } & 2 \times 3\text{-PGA} + 2\,\mathrm{ATP} + 2\,\mathrm{NADPH} \longrightarrow 2 \times \text{Triose-P} + 2\,\mathrm{ADP} + 2\,\mathrm{NADP}^+\\
-  \textbf{3. Regeneration: } & \text{Triose Phosphate} + 1\,\mathrm{ATP} \longrightarrow \mathrm{RuBP}\ (5\mathrm{C}) + 1\,\mathrm{ADP} + \mathrm{P_i}
-\end{align*}
-\begin{equation}
-  \textbf{Per Single } \mathrm{CO_2} \textbf{ Molecule Fixed: } \quad \mathbf{3\,\mathrm{ATP}} + \mathbf{2\,\mathrm{NADPH}}
-\end{equation}
-\begin{equation}
-  \textbf{Synthesis of 1 Net Hexose Glucose (6 } \mathrm{CO_2}\textbf{): } \quad \mathbf{18\,\mathrm{ATP}} + \mathbf{12\,\mathrm{NADPH}}
-\end{equation}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Carboxylation:}
+  \[
+    \mathrm{RuBP}\ (5\mathrm{C}) + \mathrm{CO_2} + \mathrm{H_2O} \xrightarrow{\mathbf{RuBisCO}} 2 \times 3\text{-PGA}\ (3\mathrm{C})
+  \]
+  \item \textbf{Reduction (per 2 PGA):}
+  \[
+    2 \times 3\text{-PGA} + 2\mathrm{ATP} + 2\mathrm{NADPH} \longrightarrow 2\times\text{Triose-P} + 2\mathrm{ADP} + 2\mathrm{NADP}^+
+  \]
+  \item \textbf{Regeneration:}
+  \[
+    \text{Triose Phosphate} + 1\,\mathrm{ATP} \longrightarrow \mathrm{RuBP}\ (5\mathrm{C}) + 1\,\mathrm{ADP} + \mathrm{P_i}
+  \]
+\end{enumerate}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Per Single $\mathrm{CO_2}$ Fixed:} $\mathbf{3\,\mathrm{ATP} + 2\,\mathrm{NADPH}}$
+  \item \textbf{Per Net Hexose Glucose ($6\,\mathrm{CO_2}$):} $\mathbf{18\,\mathrm{ATP} + 12\,\mathrm{NADPH}}$
+\end{itemize}
 \end{formulabox}
 
 \section{Hatch-Slack $C_4$ Pathway \& Kranz Anatomy}
@@ -1018,39 +1032,55 @@ Cellular respiration is the catabolic release of metabolic energy stored in the 
 
 \begin{formulabox}[Glycolysis (EMP Pathway) Stoichiometry \& Link Reaction]
 Discovered by Gustav Embden, Otto Meyerhof, and J. Parnas. Occurs in the \textbf{cytoplasm} of all living cells; independent of $\mathrm{O}_2$.
-\begin{align*}
-  \textbf{Phase 1: Preparatory (Invests 2 ATP): } & \text{Glucose} \xrightarrow{\text{HK, 1 ATP}} \text{G-6-P} \to \text{F-6-P} \xrightarrow{\text{PFK, 1 ATP}} \text{F-1,6-BP}\\
-  \textbf{Phase 2: Cleavage: } & \text{F-1,6-BP}\ (6\mathrm{C}) \xrightarrow{\text{Aldolase}} \text{PGAL}\ (3\mathrm{C}) + \text{DHAP}\ (3\mathrm{C})\\
-  \textbf{Phase 3: Payoff Phase ($\times 2$): } & 2\,\text{PGAL} + 2\,\mathrm{NAD}^+ \to 2 \times 1,3\text{-BPGA} + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+}\\
-  & 2 \times 1,3\text{-BPGA} + 2\,\mathrm{ADP} \xrightarrow{\text{PGK}} 2 \times 3\text{-PGA} + \mathbf{2\,\mathrm{ATP}} \ (\text{SLP})\\
-  & 2\,\text{PEP} + 2\,\mathrm{ADP} \xrightarrow{\text{PK}} 2\,\text{Pyruvate} + \mathbf{2\,\mathrm{ATP}} \ (\text{SLP})
-\end{align*}
-\begin{equation}
-  \textbf{Net Glycolytic Yield:} \quad \mathbf{2\,\text{Pyruvate}} + \mathbf{2\,\mathrm{ATP}} + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+} \quad (\text{Zero } \mathrm{CO}_2 \text{ or } \mathrm{O}_2 \text{ involved})
-\end{equation}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Preparatory Phase (Invests $2\,\mathrm{ATP}$):}
+  \[
+    \text{Glucose} \xrightarrow{\text{HK, 1 ATP}} \text{G-6-P} \longrightarrow \text{F-6-P} \xrightarrow{\text{PFK, 1 ATP}} \text{F-1,6-BP}
+  \]
+  \item \textbf{Cleavage Phase:}
+  \[
+    \text{F-1,6-BP}\ (6\mathrm{C}) \xrightarrow{\text{Aldolase}} \text{PGAL}\ (3\mathrm{C}) + \text{DHAP}\ (3\mathrm{C})
+  \]
+  \item \textbf{Payoff Phase ($\times 2$ per glucose):}
+  \begin{align*}
+    2\,\text{PGAL} + 2\,\mathrm{NAD}^+ &\longrightarrow 2 \times 1,3\text{-BPGA} + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+} \\
+    2 \times 1,3\text{-BPGA} + 2\,\mathrm{ADP} &\xrightarrow{\text{PGK}} 2 \times 3\text{-PGA} + \mathbf{2\,\mathrm{ATP}} \ (\text{SLP}) \\
+    2\,\text{PEP} + 2\,\mathrm{ADP} &\xrightarrow{\text{PK}} 2\,\text{Pyruvate} + \mathbf{2\,\mathrm{ATP}} \ (\text{SLP})
+  \end{align*}
+  \item \textbf{Net Glycolytic Yield:} $\mathbf{2\,\text{Pyruvate}} + \mathbf{2\,\mathrm{ATP}} + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+}$ (zero $\mathrm{CO}_2$ or $\mathrm{O}_2$).
+\end{itemize}
 
 \textbf{The Link Reaction (Oxidative Decarboxylation of Pyruvate):}
 Occurs in the \textbf{mitochondrial matrix}, catalyzed by the \textit{pyruvate dehydrogenase} multienzyme complex (requires $\mathrm{Mg}^{2+}, \text{TPP}, \text{Lipoamide}, \mathrm{NAD}^+, \text{CoA}$):
-\begin{equation}
-  2\,\text{Pyruvate}\ (3\mathrm{C}) + 2\,\mathrm{CoA} + 2\,\mathrm{NAD}^+ \longrightarrow \mathbf{2\,\text{Acetyl-CoA}}\ (2\mathrm{C}) + \mathbf{2\,\mathrm{CO_2}} \uparrow + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+}
-\end{equation}
+\begin{align*}
+  2\,\text{Pyruvate}\ (3\mathrm{C}) + 2\,\mathrm{CoA} + 2\,\mathrm{NAD}^+ 
+  &\longrightarrow \mathbf{2\,\text{Acetyl-CoA}}\ (2\mathrm{C}) \\
+  &\quad + \mathbf{2\,\mathrm{CO_2}}\uparrow + \mathbf{2\,\mathrm{NADH} + 2\,\mathrm{H}^+}
+\end{align*}
 \end{formulabox}
 
 \section{Tricarboxylic Acid (TCA) Cycle \& Amphibolic Intermediates}
 
 \begin{formulabox}[The Tricarboxylic Acid (TCA / Krebs) Cycle (Hans Krebs, 1937)]
 Occurs within the \textbf{mitochondrial matrix}:
-\begin{align*}
-  \text{Per Acetyl-CoA (2C): } & \mathrm{Acetyl\text{-}CoA} + \mathrm{OAA}\ (4\mathrm{C}) + \mathrm{H_2O} \xrightarrow{\text{Citrate Synthase}} \text{Citrate}\ (6\mathrm{C}) + \mathrm{CoA}\\
-  \text{Decarboxylations: } & \text{Isocitrate} \to \alpha\text{-ketoglutarate}\ (5\mathrm{C}) + \mathrm{CO_2} + \mathrm{NADH}\\
-  & \alpha\text{-ketoglutarate} \to \text{Succinyl-CoA}\ (4\mathrm{C}) + \mathrm{CO_2} + \mathrm{NADH}\\
-  \text{Substrate-Level: } & \text{Succinyl-CoA} + \mathrm{GDP} + \mathrm{P_i} \to \text{Succinate} + \mathbf{1\,\mathrm{GTP / ATP}} + \mathrm{CoA}\\
-  \text{Oxidations: } & \text{Succinate} \to \text{Fumarate} + \mathbf{1\,\mathrm{FADH_2}} \quad (\text{Succinate dehydrogenase in inner membrane})\\
-  & \text{Malate} + \mathrm{NAD}^+ \to \mathrm{OAA} + \mathbf{1\,\mathrm{NADH} + \mathrm{H}^+}
-\end{align*}
-\begin{equation}
-  \textbf{Yield per Glucose (2 Cycles): } \quad \mathbf{4\,\mathrm{CO_2}} + \mathbf{6\,\mathrm{NADH}} + \mathbf{2\,\mathrm{FADH_2}} + \mathbf{2\,\mathrm{ATP / GTP}}
-\end{equation}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Condensation \& Decarboxylations (per Acetyl-CoA):}
+  \begin{align*}
+    \text{Acetyl-CoA} + \text{OAA} + \mathrm{H_2O} &\xrightarrow{\text{Citrate Synthase}} \text{Citrate}\ (6\mathrm{C}) + \mathrm{CoA} \\
+    \text{Isocitrate} &\longrightarrow \alpha\text{-ketoglutarate}\ (5\mathrm{C}) + \mathrm{CO_2} + \mathrm{NADH} \\
+    \alpha\text{-ketoglutarate} &\longrightarrow \text{Succinyl-CoA}\ (4\mathrm{C}) + \mathrm{CO_2} + \mathrm{NADH}
+  \end{align*}
+  \item \textbf{Substrate-Level Phosphorylation \& Oxidations:}
+  \begin{align*}
+    \text{Succinyl-CoA} + \mathrm{GDP} + \mathrm{P_i} &\longrightarrow \text{Succinate} + \mathbf{1\,\mathrm{GTP/ATP}} + \mathrm{CoA} \\
+    \text{Succinate} &\longrightarrow \text{Fumarate} + \mathbf{1\,\mathrm{FADH_2}} \\
+    \text{Malate} + \mathrm{NAD}^+ &\longrightarrow \mathrm{OAA} + \mathbf{1\,\mathrm{NADH} + \mathrm{H}^+}
+  \end{align*}
+  \item \textbf{Yield per Glucose ($2$ Cycles):}
+  \[
+    \mathbf{4\,\mathrm{CO_2}} + \mathbf{6\,\mathrm{NADH}} + \mathbf{2\,\mathrm{FADH_2}} + \mathbf{2\,\mathrm{ATP/GTP}}
+  \]
+\end{itemize}
 \end{formulabox}
 
 \section{Mitochondrial Electron Transport System (ETS) \& ATP Synthase}
@@ -1075,13 +1105,19 @@ Occurs within the \textbf{mitochondrial matrix}:
 \begin{equation}
   \mathrm{RQ} = \frac{\text{Volume of } \mathrm{CO_2} \text{ evolved}}{\text{Volume of } \mathrm{O_2} \text{ consumed}}
 \end{equation}
-\begin{align*}
-  \textbf{Carbohydrates (Glucose): } & \mathrm{C_6H_{12}O_6} + 6\mathrm{O_2} \to 6\mathrm{CO_2} + 6\mathrm{H_2O} \implies \mathbf{\mathrm{RQ} = \frac{6}{6} = 1.0}\\
-  \textbf{Fats (Tripalmitin): } & 2\mathrm{C_{51}H_{98}O_6} + 145\mathrm{O_2} \to 102\mathrm{CO_2} + 98\mathrm{H_2O} \implies \mathbf{\mathrm{RQ} = \frac{102}{145} \approx 0.7}\\
-  \textbf{Proteins: } & \mathbf{\mathrm{RQ} \approx 0.9}\\
-  \textbf{Organic Acids (Malic Acid): } & \mathrm{C_4H_6O_5} + 3\mathrm{O_2} \to 4\mathrm{CO_2} + 3\mathrm{H_2O} \implies \mathbf{\mathrm{RQ} = \frac{4}{3} = 1.33 > 1.0}\\
-  \textbf{Anaerobic Respiration: } & \mathrm{C_6H_{12}O_6} \to 2\mathrm{C_2H_5OH} + 2\mathrm{CO_2} \implies \mathbf{\mathrm{RQ} = \frac{2}{0} = \infty}
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Carbohydrates (Glucose):} $\mathrm{RQ} = \frac{6\,\mathrm{CO_2}}{6\,\mathrm{O_2}} = \mathbf{1.0}$
+  \item \textbf{Fats (Tripalmitin):}
+  \[
+    2\mathrm{C_{51}H_{98}O_6} + 145\mathrm{O_2} \longrightarrow 102\mathrm{CO_2} + 98\mathrm{H_2O} \implies \mathrm{RQ} = \frac{102}{145} \approx \mathbf{0.7}
+  \]
+  \item \textbf{Proteins:} $\mathbf{\mathrm{RQ} \approx 0.9}$
+  \item \textbf{Organic Acids (Malic Acid):}
+  \[
+    \mathrm{C_4H_6O_5} + 3\mathrm{O_2} \longrightarrow 4\mathrm{CO_2} + 3\mathrm{H_2O} \implies \mathrm{RQ} = \frac{4}{3} = \mathbf{1.33} > 1.0
+  \]
+  \item \textbf{Anaerobic Respiration:} $\mathrm{RQ} = \frac{2\,\mathrm{CO_2}}{0\,\mathrm{O_2}} = \mathbf{\infty}$
+\end{itemize}
 \end{formulabox}
 
 \section{Phytohormones: Plant Growth Regulators \& Morphogenesis}
@@ -1091,20 +1127,20 @@ Occurs within the \textbf{mitochondrial matrix}:
 \scriptsize
 \setlength{\tabcolsep}{2.5pt}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\linewidth}{|>{\bfseries\raggedright\arraybackslash}p{1.4cm}|>{\raggedright\arraybackslash}p{2.2cm}|X|}
-\hline
+\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight}p{1.8cm} >{\RaggedRight}p{2.4cm} >{\RaggedRight}X}
+\toprule
 \textbf{Hormone} & \textbf{Discovery / Chemistry} & \textbf{Key Physiological Functions \& Applications} \\
-\hline
+\midrule
 Auxins & Darwin; isolated by F.W. Went from \textit{Avena} tip. Natural: IAA, IBA; Synth: NAA, 2,4-D. & \begin{itemize}[leftmargin=*,nosep] \item Promotes \textbf{apical dominance}; decapitation induces bushy hedge. \item Initiates root formation in stem cuttings; promotes flowering in pineapples. \item \textbf{2,4-D} is selective weedicide for dicots. \item Induces parthenocarpy in tomatoes. \end{itemize} \\
-\hline
+\midrule
 Gibberellins & E. Kurosawa from \textit{Gibberella fujikuroi} (\textit{bakanae} disease). $>100$ known ($\mathrm{GA}_3$ common). Terpenes. & \begin{itemize}[leftmargin=*,nosep] \item Internode elongation; grape stalks and apples. \item \textbf{Bolting} in rosette plants (cabbage, beet). \item Lengthens sugarcane stem ($+20\text{ tons/acre}$). \item Accelerates malting in brewing. \end{itemize} \\
-\hline
+\midrule
 Cytokinins & Skoog discovered kinetin from herring sperm; Letham isolated \textbf{Zeatin} from corn. Aminopurines. & \begin{itemize}[leftmargin=*,nosep] \item Rapid cell division; high cytokinin:auxin ratio induces shoots. \item Overcomes apical dominance; delays leaf senescence (\textbf{Richmond-Lang effect}). \end{itemize} \\
-\hline
+\midrule
 Ethylene & H.H. Cousins from oranges. Only \textbf{gaseous hormone}; source: \textbf{Ethephon}. & \begin{itemize}[leftmargin=*,nosep] \item Fruit ripening with \textbf{Respiratory Climacteric}. \item Promotes senescence and abscission of organs. \item Promotes root growth and root hair formation. \item Breaks seed/bud dormancy; female flowers in cucumbers. \end{itemize} \\
-\hline
+\midrule
 ABA & Inhibitor-$\beta$, Abscission II, Dormin. Sesquiterpene; growth inhibitor. & \begin{itemize}[leftmargin=*,nosep] \item \textbf{Stress Hormone}: rapid stomatal closure in drought. \item Induces/maintains \textbf{seed dormancy}; anti-GA antagonist. \end{itemize} \\
-\hline
+\bottomrule
 \end{tabularx}
 \end{center}
 \end{conceptbox}
@@ -1130,17 +1166,17 @@ Human physiology represents the essential clinical foundation for medical traini
 
 \begin{formulabox}[Respiratory Volumes \& Pulmonary Capacities Matrix]
 All values represent healthy young adult averages measured by spirometry (residual volume cannot be measured by spirometry):
-\begin{align*}
-  \textbf{Tidal Volume (TV): } & 500\,\mathrm{mL} \quad (\approx 6000-8000\,\mathrm{mL/min} \text{ total ventilation})\\
-  \textbf{Inspiratory Reserve Volume (IRV): } & 2500 - 3000\,\mathrm{mL} \quad (\text{extra forced inspiration})\\
-  \textbf{Expiratory Reserve Volume (ERV): } & 1000 - 1100\,\mathrm{mL} \quad (\text{extra forced expiration})\\
-  \textbf{Residual Volume (RV): } & 1100 - 1200\,\mathrm{mL} \quad (\text{volume remaining after maximal expiration})\\
-  \textbf{Inspiratory Capacity (IC): } & \mathrm{TV} + \mathrm{IRV} = 3000 - 3500\,\mathrm{mL}\\
-  \textbf{Expiratory Capacity (EC): } & \mathrm{TV} + \mathrm{ERV} = 1500 - 1600\,\mathrm{mL}\\
-  \textbf{Functional Residual Capacity (FRC): } & \mathrm{ERV} + \mathrm{RV} = 2100 - 2300\,\mathrm{mL}\\
-  \textbf{Vital Capacity (VC): } & \mathrm{ERV} + \mathrm{TV} + \mathrm{IRV} = 3500 - 4500\,\mathrm{mL}\\
-  \textbf{Total Lung Capacity (TLC): } & \mathrm{RV} + \mathrm{ERV} + \mathrm{TV} + \mathrm{IRV} = \mathrm{VC} + \mathrm{RV} = 5000 - 6000\,\mathrm{mL}
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Tidal Volume (TV):} $500\,\mathrm{mL}$ ($\approx 6000-8000\,\mathrm{mL/min}$ total ventilation).
+  \item \textbf{Inspiratory Reserve Volume (IRV):} $2500-3000\,\mathrm{mL}$ (extra forced inspiration).
+  \item \textbf{Expiratory Reserve Volume (ERV):} $1000-1100\,\mathrm{mL}$ (extra forced expiration).
+  \item \textbf{Residual Volume (RV):} $1100-1200\,\mathrm{mL}$ (cannot be measured by spirometry).
+  \item \textbf{Inspiratory Capacity (IC):} $\mathrm{TV} + \mathrm{IRV} = 3000-3500\,\mathrm{mL}$.
+  \item \textbf{Expiratory Capacity (EC):} $\mathrm{TV} + \mathrm{ERV} = 1500-1600\,\mathrm{mL}$.
+  \item \textbf{Functional Residual Capacity (FRC):} $\mathrm{ERV} + \mathrm{RV} = 2100-2300\,\mathrm{mL}$.
+  \item \textbf{Vital Capacity (VC):} $\mathrm{ERV} + \mathrm{TV} + \mathrm{IRV} = 3500-4500\,\mathrm{mL}$.
+  \item \textbf{Total Lung Capacity (TLC):} $\mathrm{VC} + \mathrm{RV} = 5000-6000\,\mathrm{mL}$.
+\end{itemize}
 \end{formulabox}
 
 \subsection{Alveolar Diffusion Gradients \& Respiratory Membrane Dynamics}
@@ -1172,9 +1208,9 @@ A plot of the percentage saturation of hemoglobin against the partial pressure o
 
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[scale=0.07, >=Stealth]
-  \draw[->, thick] (0,0) -- (115,0) node[right] {$\mathrm{pO_2}$ ($\si{mmHg}$)};
-  \draw[->, thick] (0,0) -- (0,115) node[above] {$\% \mathrm{HbO_2}$ Saturation};
+\begin{tikzpicture}[scale=0.065, >=Stealth]
+  \draw[->, thick] (0,0) -- (105,0) node[below right=-2pt] {$\mathrm{pO_2}$ ($\si{mmHg}$)};
+  \draw[->, thick] (0,0) -- (0,110) node[above] {$\% \mathrm{HbO_2}$ Saturation};
   
   \draw[very thick, primarydark, domain=0:100, samples=60]
     plot (\x, {100 * (\x/27)^2.8 / (1 + (\x/27)^2.8)});
@@ -1191,7 +1227,8 @@ A plot of the percentage saturation of hemoglobin against the partial pressure o
   \draw[dashed, gray] (0, 50) node[left] {$50\%$} -- (38, 50);
   \draw[dashed, gray] (27, 0) node[below] {$27$} -- (27, 50);
 \end{tikzpicture}
-\caption{The Oxygen-Hemoglobin Dissociation Curve: Normal Sigmoidal Binding Curve, Right Shift (Bohr Effect in Respiring Tissues), and Left Shift (Alveolar Loading).}
+
+\caption{Oxygen-Hemoglobin Dissociation Curve: Normal Sigmoid Curve, Right Shift (Bohr Effect), and Left Shift.}
 \label{fig:o2_hb_dissociation}
 \end{figure}
 
@@ -1250,24 +1287,20 @@ Plasma ($55\%$, contains fibrinogen, globulins, albumins) and formed elements ($
 \end{itemize}
 
 \textbf{2. Blood Coagulation Cascade (Enzyme Cascade Theory):}
-\begin{equation}
-  \text{Injured Tissue / Platelets} \longrightarrow \text{Thromboplastin} \xrightarrow{\mathbf{\mathrm{Ca}^{2+}}} \text{Thrombokinase / Prothrombinase}
-\end{equation}
-\begin{equation}
-  \text{Prothrombin (Inactive Plasma Protein)} \xrightarrow[\mathbf{\mathrm{Ca}^{2+}}]{\text{Thrombokinase}} \text{Thrombin (Active Protease)}
-\end{equation}
-\begin{equation}
-  \text{Fibrinogen (Soluble Monomer)} \xrightarrow{\text{Thrombin}} \text{Fibrin (Insoluble Polymeric Mesh)} \xrightarrow{\text{Traps Formed Elements}} \textbf{Clot}
-\end{equation}
+\begin{enumerate}[leftmargin=*]
+  \item $\text{Injured Tissue/Platelets} \longrightarrow \text{Thromboplastin} \xrightarrow{\mathbf{\mathrm{Ca}^{2+}}} \text{Thrombokinase}$
+  \item $\text{Prothrombin (Inactive)} \xrightarrow[\mathbf{\mathrm{Ca}^{2+}}]{\text{Thrombokinase}} \text{Thrombin (Active Protease)}$
+  \item $\text{Fibrinogen (Soluble)} \xrightarrow{\text{Thrombin}} \text{Fibrin (Mesh)} \xrightarrow{\text{Traps Cells}} \textbf{Clot}$
+\end{enumerate}
 
 \textbf{3. Cardiac Cycle ($0.8\,\mathrm{sec}$ at $72\,\mathrm{bpm}$) \& Hemodynamics:}
-\begin{align*}
-  \text{Atrial Systole: } & 0.1\,\mathrm{sec} \quad (\text{increases ventricular filling by } 30\%)\\
-  \text{Ventricular Systole: } & 0.3\,\mathrm{sec} \quad (\text{isovolumetric contraction followed by ventricular ejection})\\
-  \text{Joint Diastole: } & 0.4\,\mathrm{sec} \quad (\text{passive filling of atria and ventricles})\\
-  \textbf{Stroke Volume (SV): } & \mathrm{EDV} - \mathrm{ESV} = 120\,\mathrm{mL} - 50\,\mathrm{mL} = \mathbf{70\,\mathrm{mL}}\\
-  \textbf{Cardiac Output (CO): } & \text{Stroke Volume} \times \text{Heart Rate} = 70\,\mathrm{mL} \times 72/\mathrm{min} \approx \mathbf{5040\,\mathrm{mL/min} \approx 5\,\mathrm{L/min}}
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Atrial Systole:} $0.1\,\mathrm{sec}$ (increases ventricular filling by $30\%$).
+  \item \textbf{Ventricular Systole:} $0.3\,\mathrm{sec}$ (isovolumetric contraction and ejection).
+  \item \textbf{Joint Diastole:} $0.4\,\mathrm{sec}$ (passive filling of atria and ventricles).
+  \item \textbf{Stroke Volume (SV):} $\mathrm{EDV} - \mathrm{ESV} = 120\,\mathrm{mL} - 50\,\mathrm{mL} = \mathbf{70\,\mathrm{mL}}$.
+  \item \textbf{Cardiac Output (CO):} $\text{SV} \times \text{HR} = 70\,\mathrm{mL} \times 72/\mathrm{min} \approx \mathbf{5040\,\mathrm{mL/min}}$ ($\approx \mathbf{5\,\mathrm{L/min}}$).
+\end{itemize}
 \textbf{Heart Sounds:} First sound (\textbf{LUBB}) produced by closure of atrioventricular (bicuspid/tricuspid) valves; second sound (\textbf{DUBB}) by closure of semilunar valves.
 
 \textbf{4. Electrocardiogram (ECG) Deflections:}
@@ -1290,9 +1323,10 @@ Plasma ($55\%$, contains fibrinogen, globulins, albumins) and formed elements ($
   \item \textbf{Juxtamedullary Nephrons ($15\%$):} Long Loop of Henle running deep into inner medulla; well-developed vasa recta; \textbf{essential for producing concentrated urine}.
   \item \textbf{Glomerular Filtration Rate (GFR):} $\mathbf{125\,\mathrm{mL/min} = 180\,\mathrm{L/day}}$. Daily urine output is $\approx 1.5\,\mathrm{L}$, meaning $>99\%$ of filtrate is obligatorily and facultatively reabsorbed.
   \item \textbf{Net Filtration Pressure (NFP):}
-  \begin{equation}
-    \mathrm{NFP = GBHP - (BCOP + CHP)} = 60\,\mathrm{mmHg} - (32 + 18)\,\mathrm{mmHg} = \mathbf{10\,\mathrm{mmHg}}
-  \end{equation}
+  \begin{align*}
+    \mathrm{NFP} &= \mathrm{GBHP - (BCOP + CHP)} \\
+                 &= 60\,\mathrm{mmHg} - (32 + 18)\,\mathrm{mmHg} = \mathbf{10\,\mathrm{mmHg}}
+  \end{align*}
 \end{itemize}
 
 \textbf{3. Counter-Current Multiplier (Henle's Loop) \& Exchanger (Vasa Recta):}
@@ -1366,13 +1400,16 @@ The \textbf{Sarcomere} is the fundamental contractile unit of striated muscle, b
 \section{Neural Control \& Action Potential Propagation}
 
 \begin{formulabox}[Neurophysiology: Membrane Potentials \& Synaptic Transmission]
-\begin{align*}
-  \textbf{Resting Membrane Potential (RMP): } & \mathbf{-70\,\mathrm{mV}} \quad (\text{Inside negative; membrane highly permeable to } \mathrm{K}^+, \text{ impermeable to } \mathrm{Na}^+)\\
-  \textbf{Sodium-Potassium ATPase Pump: } & \text{Actively transports } \mathbf{3\,\mathrm{Na}^+} \text{ outward for every } \mathbf{2\,\mathrm{K}^+} \text{ inward} \ (\text{Consumes 1 ATP})\\
-  \textbf{Depolarization (Action Potential): } & \mathbf{+30\,\mathrm{mV}} \quad (\text{Threshold stimulus opens voltage-gated } \mathrm{Na}^+ \text{ channels} \implies \mathrm{Na}^+ \text{ influx})\\
-  \textbf{Repolarization Phase: } & \mathrm{Na}^+ \text{ channels close, voltage-gated } \mathrm{K}^+ \text{ channels open} \implies \mathrm{K}^+ \text{ efflux}\\
-  \textbf{Chemical Synaptic Transmission: } & \text{AP at terminal} \to \mathrm{Ca}^{2+} \text{ influx} \to \text{ACh exocytosis} \to \text{Postsynaptic receptors}
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Resting Membrane Potential (RMP):} $\mathbf{-70\,\mathrm{mV}}$ (inside negative; permeable to $\mathrm{K}^+$, impermeable to $\mathrm{Na}^+$).
+  \item \textbf{$\mathrm{Na}^+/\mathrm{K}^+$ ATPase Pump:} Actively pumps $\mathbf{3\,\mathrm{Na}^+}$ out for every $\mathbf{2\,\mathrm{K}^+}$ in ($1\,\mathrm{ATP}$).
+  \item \textbf{Depolarization (Action Potential):} $\mathbf{+30\,\mathrm{mV}}$ ($\mathrm{Na}^+$ influx via voltage-gated channels).
+  \item \textbf{Repolarization Phase:} $\mathrm{Na}^+$ channels close, voltage-gated $\mathrm{K}^+$ channels open $\implies \mathrm{K}^+$ efflux.
+  \item \textbf{Chemical Synaptic Transmission:}
+  \[
+    \text{AP at terminal} \longrightarrow \mathrm{Ca}^{2+}\text{ influx} \longrightarrow \text{ACh exocytosis} \longrightarrow \text{Receptors}
+  \]
+\end{itemize}
 \end{formulabox}
 
 \section{Endocrine Integration \& Hormone Action Mechanisms}
@@ -1430,9 +1467,9 @@ Typically bilobed, dithecous (two thecae per lobe), and tetrasporangiate (four m
     \item \textbf{Tapetum:} Innermost nutritive layer; cells possess dense cytoplasm and are characteristically \textbf{multinucleate / polyploid}; synthesizes and secretes \textbf{sporopollenin}, \textbf{callase}, and pollenkitt.
   \end{enumerate}
   \item \textbf{Microsporogenesis:} Sporogenous tissue in microsporangia undergoes meiosis:
-  \begin{equation}
-    \text{1 Microspore Mother Cell (MMC, } 2n) \xrightarrow{\text{Meiosis}} \text{Microspore Tetrad (4 Haploid Microspores, } n)
-  \end{equation}
+  \[
+    \text{1 MMC }(2n) \xrightarrow{\text{Meiosis}} \text{Microspore Tetrad }(4\text{ Haploid Microspores, } n)
+  \]
   \item \textbf{Pollen Grain Wall (Sporoderm):}
   \begin{itemize}
     \item \textbf{Exine:} Hard outer layer composed of \textbf{Sporopollenin} (the most chemically resistant biological polymer known; withstands high temperatures, concentrated acids, and strong alkalis; no known enzyme degrades sporopollenin). Possesses prominent apertures called \textbf{Germ Pores} where sporopollenin is absent.
@@ -1484,11 +1521,17 @@ Attached to placenta by \textbf{funicle}; junction between funicle and ovule bod
 
 \begin{formulabox}[Double Fertilization Dynamics (S.G. Nawaschin, 1898)]
 Unique to angiosperms; involves two distinct syngamic fusion events:
-\begin{align*}
-  \textbf{Syngamy (Generative Fertilization): } & \text{Male Gamete } (n) + \text{Egg Cell } (n) \longrightarrow \mathbf{\text{Zygote } (2n)} \longrightarrow \text{Embryo}\\
-  \textbf{Triple Fusion (Vegetative Fertilization): } & \text{Male Gamete } (n) + \text{Secondary Nucleus } (2n) \longrightarrow \mathbf{\text{PEN } (3n)} \longrightarrow \text{Endosperm}\\
-  \textbf{Total Nuclei Involved: } & 1\text{ (sperm)} + 1\text{ (egg)} + 1\text{ (sperm)} + 2\text{ (polar nuclei)} = \mathbf{5\,\text{Nuclei}}
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Syngamy (Generative Fertilization):}
+  \[
+    \text{Male Gamete }(n) + \text{Egg Cell }(n) \longrightarrow \mathbf{\text{Zygote }(2n)} \longrightarrow \text{Embryo}
+  \]
+  \item \textbf{Triple Fusion (Vegetative Fertilization):}
+  \[
+    \text{Male Gamete }(n) + \text{Secondary Nucleus }(2n) \longrightarrow \mathbf{\text{PEN }(3n)} \longrightarrow \text{Endosperm}
+  \]
+  \item \textbf{Total Nuclei Involved:} $1\text{ (egg)} + 2\text{ (sperm)} + 2\text{ (polar nuclei)} = \mathbf{5\text{ Nuclei}}$.
+\end{itemize}
 \textbf{Endosperm Bioenergetics:} Primary Endosperm Nucleus (PEN, $3n$) divides repeatedly prior to zygotic cleavage to establish nutrient reserves:
 \begin{itemize}
   \item \textbf{Free-Nuclear Endosperm:} PEN undergoes repeated karyokineses without cell wall synthesis (e.g., coconut water is free-nuclear endosperm containing thousands of free nuclei; surrounding white meat is cellular endosperm).
@@ -1537,15 +1580,17 @@ Human reproduction involves internal fertilization, viviparous embryonic develop
 \begin{formulabox}[Comparative Gametogenic Sequences \& Nuclear Timing]
 \textbf{1. Spermatogenesis (Continuous from Puberty through Old Age):}
 \begin{align*}
-  \text{Spermatogonia } (2n) & \xrightarrow{\text{Mitosis}} \text{Primary Spermatocyte } (2n) \xrightarrow{\text{Meiosis I}} 2 \times \text{Secondary Spermatocytes } (n)\\
-  & \xrightarrow{\text{Meiosis II}} 4 \times \text{Spermatids } (n) \xrightarrow{\mathbf{Spermiogenesis}} 4 \times \mathbf{\text{Spermatozoa } (n)}
+  \text{Spermatogonia }(2n) &\xrightarrow{\text{Mitosis}} \text{Primary Spermatocyte }(2n) \\
+  &\xrightarrow{\text{Meiosis I}} 2 \times \text{Secondary Spermatocytes }(n) \\
+  &\xrightarrow{\text{Meiosis II}} 4 \times \text{Spermatids }(n) \\
+  &\xrightarrow{\text{Spermiogenesis}} 4 \times \mathbf{\text{Spermatozoa }(n)}
 \end{align*}
-\textbf{2. Oogenesis (Initiated during Embryonic Fetal Life, Suspended until Puberty):}
+\textbf{2. Oogenesis (Initiated during Fetal Life, Suspended until Puberty):}
 \begin{align*}
-  \text{Oogonia } (2n) & \xrightarrow{\text{Mitosis}} \text{Primary Oocyte } (2n) \xrightarrow{\textbf{Arrested at Prophase I (Diplotene)}} \text{At Birth}\\
-  \text{At Puberty: } & \text{Completes Meiosis I} \longrightarrow \mathbf{\text{Secondary Oocyte } (n)} + \mathbf{1^{\mathrm{st}} \text{ Polar Body } (n)}\\
-  & (\text{Arrested at Metaphase II; released at ovulation})\\
-  \text{At Fertilization: } & \text{Completes Meiosis II} \longrightarrow \mathbf{\text{Ootid / Ovum } (n)} + \mathbf{2^{\mathrm{nd}} \text{ Polar Body } (n)}
+  \text{Oogonia }(2n) &\xrightarrow{\text{Mitosis}} \text{Primary Oocyte }(2n) \quad [\text{Prophase I}] \\
+  \text{At Puberty:} &\longrightarrow \mathbf{\text{Secondary Oocyte }(n)} + \mathbf{1^{\mathrm{st}}\text{ Polar Body }(n)} \\
+  &\quad [\text{Arrested at Metaphase II; released at ovulation}] \\
+  \text{At Fertilization:} &\longrightarrow \mathbf{\text{Ootid / Ovum }(n)} + \mathbf{2^{\mathrm{nd}}\text{ Polar Body }(n)}
 \end{align*}
 \end{formulabox}
 
@@ -1640,16 +1685,17 @@ Seed Color & Yellow ($Y$) & Green ($y$) & 1 \\
 
 \begin{formulabox}[Mendelian Ratios \& Combinatorial Cross Calculus]
 For parents heterozygous at $n$ independently assorting gene loci:
-\begin{align*}
-  \textbf{Monohybrid Cross ($Aa \times Aa$): } & \text{Phenotypic: } 3 : 1 \qquad \text{Genotypic: } 1 : 2 : 1\\
-  \textbf{Dihybrid Cross ($AaBb \times AaBb$): } & \text{Phenotypic: } 9 : 3 : 3 : 1 \qquad \text{Genotypic: } (1:2:1)^2\\
-  \textbf{Trihybrid Cross: } & \text{Phenotypic: } (3+1)^3 = 27 : 9 : 9 : 9 : 3 : 3 : 3 : 1\\
-  \textbf{Number of Phenotypic Classes: } & 2^n \quad (n = \text{number of heterozygous pairs})\\
-  \textbf{Number of Genotypic Classes: } & 3^n\\
-  \textbf{Number of Unique Gametes Formed: } & 2^n\\
-  \textbf{Number of Punnett Grid Squares: } & 4^n\\
-  \textbf{Test Cross Ratios: } & \text{Monohybrid } (Aa \times aa) = 1 : 1 \quad \text{Dihybrid } (AaBb \times aabb) = 1 : 1 : 1 : 1
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Monohybrid Cross ($Aa \times Aa$):} Phenotypic $3:1$; Genotypic $1:2:1$.
+  \item \textbf{Dihybrid Cross ($AaBb \times AaBb$):} Phenotypic $9:3:3:1$; Genotypic $(1:2:1)^2$.
+  \item \textbf{Trihybrid Phenotypic Ratio:} $(3+1)^3 = 27:9:9:9:3:3:3:1$.
+  \item \textbf{Combinatorics for $n$ Heterozygous Loci:}
+  \begin{itemize}
+    \item Unique gametes $= 2^n$ \qquad Phenotypic classes $= 2^n$
+    \item Genotypic classes $= 3^n$ \qquad Punnett squares $= 4^n$
+  \end{itemize}
+  \item \textbf{Test Cross Ratios:} Monohybrid $= 1:1$; Dihybrid $= 1:1:1:1$.
+\end{itemize}
 \end{formulabox}
 
 \section{Non-Mendelian Extensions: Dominance, Allelism \& Pleiotropy}
@@ -1662,9 +1708,10 @@ For parents heterozygous at $n$ independently assorting gene loci:
   \begin{itemize}
     \item Human ABO blood locus ($I$) on Chromosome 9 has 3 alleles: $I^A, I^B, i$.
     \item Total number of genotypes for $n$ alleles:
-    \begin{equation}
-      \text{Total Genotypes} = \frac{n(n+1)}{2} = \frac{3(3+1)}{2} = \mathbf{6\,\text{Genotypes}} \implies \mathbf{4\,\text{Phenotypes (A, B, AB, O)}}
-    \end{equation}
+    \[
+      \text{Genotypes} = \frac{n(n+1)}{2} = \frac{3(3+1)}{2} = \mathbf{6\text{ Genotypes}}
+    \]
+    Yielding $\mathbf{4\text{ Phenotypes}}$ (Blood groups A, B, AB, and O).
   \end{itemize}
   \item \textbf{Pleiotropy:} A single gene exerts multiple, seemingly unrelated phenotypic effects:
   \begin{itemize}
@@ -1691,7 +1738,7 @@ Morgan chose the fruit fly because of: (i) simple synthetic culture medium, (ii)
 \textbf{3. Chromosome Mapping Formulation (Alfred Sturtevant):}
 Recombination frequency is directly proportional to physical distance between genes on a chromosome:
 \begin{equation}
-  \mathbf{\text{Distance in centimorgans (cM)}} = \mathbf{\left(\frac{\text{Total Recombinant Progeny}}{\text{Total Progeny}}\right) \times 100\%}
+  \text{Distance (cM)} = \left(\frac{\text{Total Recombinant Progeny}}{\text{Total Progeny}}\right) \times 100\%
 \end{equation}
 \begin{equation}
   1\,\text{cM} = 1\,\text{Map Unit (m.u.)} = 1\%\text{ Recombination Frequency}
@@ -1734,16 +1781,17 @@ Molecular genetics deciphers the chemical basis of heredity and cellular informa
 
 \begin{formulabox}[Watson-Crick B-DNA Double Helix Dimensions (1953)]
 Constructed from X-ray diffraction data of Rosalind Franklin and Maurice Wilkins:
-\begin{align*}
-  \textbf{Helical Symmetry: } & \text{Right-handed antiparallel double helix } (5'\to 3' \text{ paired with } 3'\to 5')\\
-  \textbf{Helical Pitch } (P): & \mathbf{3.4\,\mathrm{nm} = 34\,\text{\AA}} \quad (\text{one complete } 360^\circ \text{ turn})\\
-  \textbf{Base Pairs per Turn: } & \mathbf{10\,\mathrm{bp/turn}}\\
-  \textbf{Distance between Base Pairs: } & \mathbf{0.34\,\mathrm{nm} = 3.4\,\text{\AA}}\\
-  \textbf{Helix Diameter: } & \mathbf{2.0\,\mathrm{nm} = 20\,\text{\AA}}\\
-  \textbf{Hydrogen Bonding: } & \mathrm{A = T} \ (2\text{ H-bonds}), \quad \mathrm{G \equiv C} \ (3\text{ H-bonds})\\
-  \textbf{Chargaff's Rules (Erwin Chargaff): } & \mathbf{[\mathrm{A}] = [\mathrm{T}]}, \quad \mathbf{[\mathrm{G}] = [\mathrm{C}]}, \quad \mathbf{\frac{[\mathrm{A}] + [\mathrm{G}]}{[\mathrm{T}] + [\mathrm{C}]} = 1.0}\\
-  \textbf{Length of Human Diploid DNA: } & 6.6 \times 10^9\,\mathrm{bp} \times 0.34 \times 10^{-9}\,\mathrm{m/bp} \approx \mathbf{2.2\,\mathrm{meters}}
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Helical Symmetry:} Right-handed antiparallel double helix ($5'\to 3'$ paired with $3'\to 5'$).
+  \item \textbf{Pitch ($P$):} $\mathbf{3.4\,\mathrm{nm} = 34\,\text{\AA}}$ (one complete $360^\circ$ turn, $10\,\mathrm{bp/turn}$).
+  \item \textbf{Distance between Base Pairs:} $\mathbf{0.34\,\mathrm{nm} = 3.4\,\text{\AA}}$;\quad \textbf{Diameter:} $\mathbf{2.0\,\mathrm{nm} = 20\,\text{\AA}}$.
+  \item \textbf{Hydrogen Bonding:} $\mathrm{A = T}$ ($2$ H-bonds), \quad $\mathrm{G \equiv C}$ ($3$ H-bonds).
+  \item \textbf{Chargaff's Rules:} $[\mathrm{A}] = [\mathrm{T}]$, \quad $[\mathrm{G}] = [\mathrm{C}]$, \quad $\frac{[\mathrm{A}] + [\mathrm{G}]}{[\mathrm{T}] + [\mathrm{C}]} = 1.0$.
+  \item \textbf{Length of Human Diploid DNA:}
+  \[
+    6.6 \times 10^9\,\mathrm{bp} \times 0.34 \times 10^{-9}\,\mathrm{m/bp} \approx \mathbf{2.2\,\mathrm{meters}}
+  \]
+\end{itemize}
 
 \textbf{Nucleosome Packaging Architecture:}
 To package a $2.2\,\mathrm{m}$ DNA strand inside a $\sim 10\,\mu\mathrm{m}$ nucleus, DNA wraps around basic proteins called \textbf{Histones}:
@@ -1842,15 +1890,15 @@ Single RNA polymerase catalyzes all phases: binds promoter with transient assist
 
 \begin{formulabox}[The Universal Genetic Code \& Translation Mechanisms]
 Deciphered by George Gamow, Har Gobind Khorana, Marshall Nirenberg, and Severo Ochoa:
-\begin{align*}
-  \textbf{Triplet Nature: } & \text{64 codons } (4^3); \quad \text{61 sense codons}; \quad \text{3 stop codons.}\\
-  \textbf{Stop Codons: } & \mathbf{UAA} \text{ (Ochre)}, \quad \mathbf{UAG} \text{ (Amber)}, \quad \mathbf{UGA} \text{ (Opal)}.\\
-  \textbf{Dual Function: } & \mathbf{AUG} \text{ codes for Met AND acts as initiator codon.}\\
-  \textbf{Degeneracy: } & \text{Amino acids coded by } >1 \text{ codon (Leu, Ser, Arg have 6 codons).}\\
-  \textbf{Exceptions: } & \text{AUG (Met) and UGG (Trp) have only 1 codon each.}\\
-  \textbf{Unambiguous: } & \text{One specific codon codes for strictly one specific amino acid.}\\
-  \textbf{Universal: } & \text{From bacteria to humans, UUU codes for Phenylalanine.}
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Triplet Nature:} $64$ codons ($4^3$): $61$ sense codons, $3$ stop codons.
+  \item \textbf{Stop Codons:} $\mathbf{UAA}$ (Ochre), $\mathbf{UAG}$ (Amber), $\mathbf{UGA}$ (Opal).
+  \item \textbf{Dual Function:} $\mathbf{AUG}$ codes for Met AND acts as initiator codon.
+  \item \textbf{Degeneracy:} Amino acids coded by $>1$ codon (Leu, Ser, Arg have 6 codons).
+  \item \textbf{Exceptions:} AUG (Met) and UGG (Trp) have only 1 codon each.
+  \item \textbf{Unambiguous:} One specific codon codes for strictly one specific amino acid.
+  \item \textbf{Universal:} From bacteria to humans, UUU codes for Phenylalanine.
+\end{itemize}
 
 \textbf{Wobble Hypothesis (Francis Crick, 1966):}
 Base-pairing between the $3'$ base of the mRNA codon and the $5'$ base of the tRNA anticodon is flexible (non-standard Watson-Crick pairing). Allows a single tRNA species to recognize multiple synonymous codons.
@@ -1859,10 +1907,14 @@ Base-pairing between the $3'$ base of the mRNA codon and the $5'$ base of the tR
 \begin{enumerate}
   \item \textbf{Aminoacylation (Charging) of tRNA:} $\text{Amino Acid} + \text{ATP} \to \text{Aminoacyl-AMP} + \mathrm{PP_i} \xrightarrow{\text{tRNA}} \text{Aminoacyl-tRNA} + \text{AMP}$.
   \item \textbf{Initiation:} Small ribosomal subunit ($30S/40S$) binds mRNA $5'$-end; initiator tRNA binds P-site.
-  \item \textbf{Elongation:} Incoming aminoacyl-tRNA enters A-site. Peptide bond formation catalyzed by the ribozyme:
-  \begin{equation}
-    \text{Peptidyl Transferase} = \mathbf{23S\text{ rRNA (Prokaryotes)}} \quad \text{or} \quad \mathbf{28S\text{ rRNA (Eukaryotes)}}
-  \end{equation}
+  \item \textbf{Elongation:} Incoming aminoacyl-tRNA enters A-site. Peptide bond formation is catalyzed by the ribozyme \textbf{Peptidyl Transferase}:
+  \begin{equation*}
+    \text{Peptidyl Transferase} = 
+    \begin{cases}
+      \mathbf{23S\text{ rRNA}} & \text{(Prokaryotes)} \\
+      \mathbf{28S\text{ rRNA}} & \text{(Eukaryotes)}
+    \end{cases}
+  \end{equation*}
   \item \textbf{Translocation \& Termination:} Ribosome translocates $5'\to 3'$ along mRNA. Release factors bind stop codon in A-site, releasing the completed polypeptide.
 \end{enumerate}
 \end{formulabox}
@@ -1908,7 +1960,7 @@ The Human Genome Project (1990--2003) was an international mega-project coordina
     \item Total estimated protein-coding genes: \textbf{$\approx 30,000$}.
     \item Less than \textbf{2\% of the human genome} codes for proteins.
     \item Chromosome 1 has the most genes (\textbf{2968}); the Y-chromosome has the fewest (\textbf{231}).
-    \item Scientists have mapped $\approx \mathbf{1.4\,\text{million single nucleotide polymorphisms (SNPs)}}$.
+    \item Scientists have mapped $\approx \mathbf{1.4}$ \textbf{million single nucleotide polymorphisms} (SNPs).
   \end{itemize}
 \end{itemize}
 \end{ncertbox}
@@ -1950,9 +2002,12 @@ Discovered by Werner Arber, Hamilton Smith, and Daniel Nathans (1970):
   \item \textbf{First Discovered Restriction Endonuclease:} \textit{Hind II} (isolated from \textit{Haemophilus influenzae}; cleaves DNA at specific 6-bp recognition sites).
   \item \textbf{Nomenclature ($Eco\mathrm{RI}$):} $E$ = genus \textit{Escherichia}, $co$ = species \textit{coli}, $\mathrm{R}$ = strain RY13, $\mathrm{I}$ = first enzyme isolated from this strain.
   \item \textbf{Palindromic Recognition Sequence:} A sequence of base pairs that reads identical on both strands in the $5'\to 3'$ direction:
-  \begin{equation}
-    5'-\mathrm{G \downarrow A \ A \ T \ T \ C}-3' \qquad 3'-\mathrm{C \ T \ T \ A \ A \uparrow G}-5'
-  \end{equation}
+  \begin{equation*}
+    \begin{aligned}
+      5' &-\mathrm{G \downarrow A \ A \ T \ T \ C}-3' \\
+      3' &-\mathrm{C \ T \ T \ A \ A \uparrow G}-5'
+    \end{aligned}
+  \end{equation*}
   \item \textbf{Sticky vs Blunt Ends:} $Eco\mathrm{RI}$ cleaves between $\mathrm{G}$ and $\mathrm{A}$, leaving single-stranded staggered overhangs called \textbf{Sticky Ends} that facilitate hydrogen-bonding with complementary vector overhangs.
   \item \textbf{Enzymatic Ligation:} \textbf{DNA Ligase} catalyzes formation of phosphodiester bonds, joining insert and vector.
 \end{itemize}
@@ -1983,11 +2038,11 @@ Discovered by Werner Arber, Hamilton Smith, and Daniel Nathans (1970):
 
 \begin{formulabox}[Polymerase Chain Reaction (PCR) \& Bioreactor Operations]
 Invented by Kary Mullis (1983). Generates over a billion-fold ($2^n$) amplification of DNA in vitro:
-\begin{align*}
-  \textbf{Step 1: Denaturation: } & 94-96^\circ\mathrm{C} \quad (\text{Thermal separation of dsDNA strands by breaking H-bonds})\\
-  \textbf{Step 2: Annealing: } & 50-60^\circ\mathrm{C} \quad (\text{Hybridization of two oligonucleotide primers to flanking } 3'\text{-ends})\\
-  \textbf{Step 3: Extension: } & 72^\circ\mathrm{C} \quad (\text{Polymerization by thermostable } \mathbf{\text{Taq Polymerase}} \text{ from } \textit{Thermus aquaticus})
-\end{align*}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Denaturation ($94-96^\circ\mathrm{C}$):} Thermal separation of dsDNA strands by breaking hydrogen bonds.
+  \item \textbf{Annealing ($50-60^\circ\mathrm{C}$):} Hybridization of two oligonucleotide primers to flanking $3'$-ends.
+  \item \textbf{Extension ($72^\circ\mathrm{C}$):} Polymerization by thermostable $\mathbf{\text{Taq Polymerase}}$ from \textit{Thermus aquaticus}.
+\end{enumerate}
 
 \textbf{Bioreactors \& Downstream Processing:}
 \begin{itemize}
@@ -2006,9 +2061,10 @@ Invented by Kary Mullis (1983). Generates over a billion-fold ($2^n$) amplificat
 \begin{enumerate}[leftmargin=*]
   \item \textbf{Bt Cotton (Pest-Resistant Transgenic Crop):}
   Soil bacterium \textit{Bacillus thuringiensis} produces crystal endotoxin proteins (\textbf{Cry proteins}). The inactive protoxin is solubilized into active toxin in the \textbf{alkaline pH of the insect midgut}, binding to midgut epithelial cells, creating pores, causing cell lysis and insect death:
-  \begin{equation}
-    \mathbf{CryIAc \text{ and } CryIIAb} \text{ control Cotton Bollworms} \qquad \mathbf{CryIAb} \text{ controls Corn Borer}
-  \end{equation}
+  \begin{itemize}
+    \item $\mathbf{CryIAc}$ and $\mathbf{CryIIAb}$ control Cotton Bollworms.
+    \item $\mathbf{CryIAb}$ controls Corn Borer.
+  \end{itemize}
   \item \textbf{RNA Interference (RNAi):}
   Cellular defense against mobile genetic elements. Root-knot nematode \textit{Meloidogyne incognita} infects roots of tobacco plants. Using \textit{Agrobacterium} vectors, nematode-specific genes are introduced producing both sense and anti-sense RNA $\implies$ form \textbf{double-stranded RNA (dsRNA)} $\implies$ silences target mRNA of nematode.
   \item \textbf{Genetically Engineered Insulin (Humulin):}
@@ -2070,26 +2126,26 @@ Each antibody comprises two identical Heavy ($\mathrm{H}$) chains ($\approx 50\,
 \textbf{1. Major Infectious Diseases:}
 \begin{center}
 \scriptsize
-\setlength{\tabcolsep}{2.5pt}
+\setlength{\tabcolsep}{1.5pt}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\linewidth}{|>{\bfseries\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{2.0cm}|p{1.7cm}|X|}
-\hline
+\begin{tabularx}{\linewidth}{>{\bfseries\RaggedRight}p{1.7cm} >{\RaggedRight}p{2.2cm} >{\RaggedRight}p{1.6cm} >{\RaggedRight}X}
+\toprule
 \textbf{Disease} & \textbf{Pathogen} & \textbf{Transmission} & \textbf{Diagnostic Pathology \& Hallmarks} \\
-\hline
-Typhoid & \textit{S. typhi} & Food/water; Mary Mallon. & High sustained fever ($39-40^\circ\mathrm{C}$), intestinal perforation. Test: \textbf{Widal Test}. \\
-\hline
-Pneumonia & \textit{S. pneumoniae}, \textit{H. influenzae} & Droplets / aerosols. & \textbf{Infects pulmonary alveoli}; fluid accumulation, gray-blue fingernails. \\
-\hline
-Common Cold & \textbf{Rhino viruses} & Droplets / fomites. & \textbf{Infects nose/nasal passage, NOT lungs!} Lasts $3-7$ days. \\
-\hline
-Amoebiasis & \textit{E. histolytica} & Houseflies vector. & Large intestine; \textbf{excess mucous and blood clots in stools}. \\
-\hline
-Ascariasis & \textit{A. lumbricoides} & Fecal-oral water/veg. & Internal bleeding, fever, mechanical \textbf{intestinal obstruction}. \\
-\hline
-Filariasis & \textit{W. bancrofti, W. malayi} & Female \textit{Culex}. & Chronic inflammation of \textbf{lymphatic vessels of lower limbs} (\textbf{Elephantiasis}). \\
-\hline
-Ringworm & \textit{Microsporum, Trichophyton} & Direct contact. & Dry, scaly, intensely itchy lesions on skin, scalp, groin. \\
-\hline
+\midrule
+Typhoid & \textit{S. typhi} & Food / water;\\Mary Mallon. & High sustained fever ($39-40^\circ\mathrm{C}$), intestinal perforation. Test: \textbf{Widal Test}. \\
+\midrule
+Pneumonia & \textit{S. pneumoniae},\\ \textit{H. influenzae} & Droplets /\\aerosols. & \textbf{Infects pulmonary alveoli}; fluid accumulation, gray-blue fingernails. \\
+\midrule
+Common Cold & \textbf{Rhino viruses} & Droplets /\\fomites. & \textbf{Infects nose/nasal passage, NOT lungs!} Lasts $3-7$ days. \\
+\midrule
+Amoebiasis & \textit{E. histolytica} & Houseflies\\vector. & Large intestine; \textbf{excess mucous and blood clots in stools}. \\
+\midrule
+Ascariasis & \textit{A. lumbricoides} & Fecal-oral;\\food / water. & Internal bleeding, fever, mechanical \textbf{intestinal obstruction}. \\
+\midrule
+Filariasis & \textit{W. bancrofti},\\ \textit{W. malayi} & Female\\\textit{Culex}. & Chronic inflammation of \textbf{lymphatic vessels of lower limbs} (Elephantiasis). \\
+\midrule
+Ringworm & \textit{Microsporum},\\ \textit{Trichophyton} & Direct contact. & Dry, scaly, intensely itchy lesions on skin, scalp, groin. \\
+\bottomrule
 \end{tabularx}
 \end{center}
 
@@ -2141,31 +2197,24 @@ Prebiotic Earth had a reducing atmosphere lacking free $\mathrm{O}_2$, rich in $
   \item \textbf{Analogous Organs (Convergent Evolution):} Different anatomical origin, modified for similar functions due to similar selective pressures (e.g., wings of Butterfly vs Bird; eye of Octopus vs Mammal; flippers of Penguin vs Dolphin; Sweet potato [root] vs Potato [stem]).
 \end{itemize}
 
-\textbf{3. Chronological Timeline of Human Evolution:}
-\begin{center}
+\textbf{3. Chronological Timeline of Human Evolution:}\par
+\vspace{4pt}
 \scriptsize
-\setlength{\tabcolsep}{2pt}
+\setlength{\tabcolsep}{1.2pt}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.3cm}|c|c|X|}
-\hline
+\begin{tabularx}{\linewidth}{>{\RaggedRight}p{2.0cm} >{\RaggedRight}p{1.1cm} >{\RaggedRight}p{1.3cm} c >{\RaggedRight}X}
+\toprule
 \textbf{Hominid} & \textbf{Era} & \textbf{Origin} & \textbf{Cranial} & \textbf{Key Anatomical Traits} \\
-\hline
-\textit{Dryopithecus} & $\approx 15\,\mathrm{mya}$ & Africa/Eurasia & $400\,\mathrm{cc}$ & Arboreal, hairy, walked like apes. \\
-\hline
-\textit{Ramapithecus} & $\approx 15\,\mathrm{mya}$ & Shivalik hills & $450\,\mathrm{cc}$ & More man-like; upright tendency. \\
-\hline
-\textit{Australopithecus} & $2-3\,\mathrm{mya}$ & East Africa & $500\,\mathrm{cc}$ & \textbf{Bipedal}; stone weapons; \textbf{ate fruit}. \\
-\hline
-\textit{Homo habilis} & $1.7-2\,\mathrm{mya}$ & Olduvai Gorge & $\mathbf{700\,\mathrm{cc}}$ & \textbf{First tool maker}; \textbf{no meat}. \\
-\hline
-\textit{Homo erectus} & $\approx 1.5\,\mathrm{mya}$ & Java fossils & $\mathbf{900\,\mathrm{cc}}$ & Erect posture; \textbf{fire}; \textbf{ate meat}. \\
-\hline
-\textit{Neanderthal} & $100\text{k}-40\text{k}$ ya & Neander Valley & $\mathbf{1400\,\mathrm{cc}}$ & Used hides; \textbf{buried dead with rituals}. \\
-\hline
+\midrule
+\textit{Dryopithecus} & $\approx 15\,\mathrm{mya}$ & Africa /\\Eurasia & $400\,\mathrm{cc}$ & Arboreal, hairy, walked like apes. \\
+\textit{Ramapithecus} & $\approx 15\,\mathrm{mya}$ & Shivalik\\hills & $450\,\mathrm{cc}$ & More man-like; upright tendency. \\
+\textit{Aus\-tralo\-pi\-the\-cus} & $2-3\,\mathrm{mya}$ & East\\Africa & $500\,\mathrm{cc}$ & \textbf{Bipedal}; stone weapons; \textbf{ate fruit}. \\
+\textit{Homo habilis} & $1.7-2\,\mathrm{mya}$ & Olduvai\\Gorge & $\mathbf{700\,\mathrm{cc}}$ & \textbf{First tool maker}; \textbf{no meat}. \\
+\textit{Homo erectus} & $\approx 1.5\,\mathrm{mya}$ & Java\\fossils & $\mathbf{900\,\mathrm{cc}}$ & Erect posture; \textbf{fire}; \textbf{ate meat}. \\
+\textit{Neanderthal} & $100\text{k}-40\text{k}$ ya & Neander\\Valley & $\mathbf{1400\,\mathrm{cc}}$ & Used hides; \textbf{buried dead with rituals}. \\
 \textit{Homo sapiens} & $75\text{k}-10\text{k}$ ya & Africa & $\mathbf{1400\,\mathrm{cc}}$ & Modern man; cave art; agriculture. \\
-\hline
+\bottomrule
 \end{tabularx}
-\end{center}
 \end{conceptbox}
 
 \chapter{Ecology, Ecosystems \& Biodiversity Conservation}
@@ -2241,12 +2290,12 @@ where $K$ is the \textbf{Carrying Capacity} (maximum population density the habi
 
 \begin{formulabox}[Productivity Equations, Decomposition Stages \& Trophic Pyramids]
 \textbf{1. Primary Productivity Formulations:}
-\begin{align*}
-  \textbf{Gross Primary Productivity (GPP): } & \text{Total rate of organic matter synthesis in photosynthesis.}\\
-  \textbf{Net Primary Productivity (NPP): } & \mathrm{GPP} - R \quad (R = \text{respiratory loss})\\
-  \textbf{Global Annual Biosphere NPP: } & \approx \mathbf{170\,\text{billion tons}} \ (\text{dry organic matter})\\
-  \textbf{Oceans Productivity: } & \mathbf{55\,\text{billion tons}} \quad (\text{Oceans cover } 70\% \text{ area but yield only } 32\% \text{ NPP})
-\end{align*}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Gross Primary Productivity (GPP):} Total rate of organic matter synthesis during photosynthesis.
+  \item \textbf{Net Primary Productivity (NPP):} $\mathrm{NPP} = \mathrm{GPP} - R$ (where $R$ is respiratory loss).
+  \item \textbf{Global Annual Biosphere NPP:} $\approx \mathbf{170\,\text{billion tons}}$ (dry organic matter).
+  \item \textbf{Oceans Productivity:} $\mathbf{55\,\text{billion tons}}$ (oceans cover $70\%$ area but yield only $32\%$ NPP).
+\end{itemize}
 
 \textbf{2. Five Stages of Decomposition:}
 Detritus undergoes simultaneous physical and biochemical processing:
@@ -2338,15 +2387,15 @@ Mendelian inheritance patterns obey the fundamental laws of probability:
 
 \begin{formulabox}[Master Combinatorial Formulas for Multi-Gene Crosses]
 For a cross involving $n$ independently assorting heterozygous gene pairs ($AaBbCc\dots$):
-\begin{align}
-  \text{Number of Genetically Distinct Gametes: } & N_{\text{gametes}} = 2^n \\
-  \text{Total Number of Offspring Genotypes: } & N_{\text{genotypes}} = 3^n \\
-  \text{Total Number of Offspring Phenotypes: } & N_{\text{phenotypes}} = 2^n \quad (\text{assuming complete dominance}) \\
-  \text{Number of Squares in Punnett Grid: } & N_{\text{grid}} = 2^n \times 2^n = 4^n \\
-  \text{Fraction of Completely Homozygous Recessive: } & F_{\text{recessive}} = \left(\frac{1}{4}\right)^n \\
-  \text{Fraction of Completely Homozygous Dominant: } & F_{\text{dominant}} = \left(\frac{1}{4}\right)^n \\
-  \text{Fraction of Completely Heterozygous Individuals: } & F_{\text{hetero}} = \left(\frac{1}{2}\right)^n
-\end{align}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Genetically Distinct Gametes:} $N_{\text{gametes}} = 2^n$
+  \item \textbf{Total Offspring Genotypes:} $N_{\text{genotypes}} = 3^n$
+  \item \textbf{Total Offspring Phenotypes:} $N_{\text{phenotypes}} = 2^n$ (assuming complete dominance)
+  \item \textbf{Squares in Punnett Grid:} $N_{\text{grid}} = 2^n \times 2^n = 4^n$
+  \item \textbf{Fraction Completely Recessive:} $F_{\text{recessive}} = (1/4)^n$
+  \item \textbf{Fraction Completely Dominant:} $F_{\text{dominant}} = (1/4)^n$
+  \item \textbf{Fraction Completely Heterozygous:} $F_{\text{hetero}} = (1/2)^n$
+\end{itemize}
 \end{formulabox}
 
 \begin{usecasebox}[Chi-Square ($\chi^2$) Goodness-of-Fit Test in Genetic Analysis]
@@ -2369,10 +2418,9 @@ The recombination frequency ($RF$) between two linked genes on a chromosome is d
   \item $1\%$ Recombination Frequency $= 1\,\text{Map Unit (m.u.)} = 1\,\text{centimorgan (cM)}$.
   \item Maximum observable recombination frequency for two genes on the same chromosome is $\mathbf{50\%}$ (at which point they assort independently, indistinguishable from unlinked genes on different chromosomes).
 \end{itemize}
-\textbf{Three-Point Test Cross \& Interference Formulations:}
 \begin{align}
-  \text{Coefficient of Coincidence } (C) &= \frac{\text{Observed Frequency of Double Crossovers}}{\text{Expected Frequency of Double Crossovers}} \\
-  \text{Interference } (I) &= 1 - C
+  C &= \frac{\text{Observed Double Crossovers}}{\text{Expected Double Crossovers}} \\
+  I &= 1 - C \quad (\text{Interference})
 \end{align}
 \textit{Interpretation:} If $I > 0$ (positive interference), a crossover in one interval suppresses crossover formation in an adjacent chromosomal region. If $I = 1$, double crossovers are completely suppressed.
 \end{formulabox}
@@ -2382,8 +2430,8 @@ The recombination frequency ($RF$) between two linked genes on a chromosome is d
 \begin{formulabox}[Hardy-Weinberg Equilibrium Equations]
 For a diploid population with two alleles ($A$ and $a$) at a single locus with frequencies $p$ and $q$:
 \begin{align}
-  \text{Allelic Frequency Identity: } & p + q = 1 \\
-  \text{Genotypic Frequency Expansion: } & (p + q)^2 = p^2 + 2pq + q^2 = 1
+  p + q &= 1 \quad (\text{Allelic Frequencies}) \\
+  p^2 + 2pq + q^2 &= 1 \quad (\text{Genotypic Frequencies})
 \end{align}
 where:
 \begin{itemize}
@@ -2477,8 +2525,8 @@ Science education thrives on continuous scrutiny and collective refinement. If y
 
 \begin{itemize}
   \item \textbf{Direct Author Email:} \href{mailto:spdedsec@hotmail.com}{spdedsec@hotmail.com}
-  \item \textbf{GitHub Open-Source Repository:} \url{https://github.com/spdedsec/neet-study-materials}
-  \item \textbf{Errata Tracker:} Verified corrections and updates are posted directly to the project repository.
+  \item \textbf{GitHub Open-Source Repository:}\\ \url{https://github.com/spdedsec/neet-study-materials}
+  \item \textbf{Errata Tracker:} Verified errata and updates are posted directly to the repository.
 \end{itemize}
 
 \vspace{1.5cm}

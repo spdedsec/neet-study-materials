@@ -8,15 +8,15 @@
 \RequirePackage[
   paperwidth=6in,
   paperheight=9in,
-  top=0.7in,
-  bottom=0.7in,
-  inner=0.75in,
+  top=0.75in,
+  bottom=0.70in,
+  inner=0.625in,
   outer=0.55in,
-  headheight=14pt,
+  headheight=20pt,
   headsep=12pt,
-  footskip=18pt,
+  footskip=16pt,
   twoside,
-  bindingoffset=0.15in
+  bindingoffset=0.075in
 ]{geometry}
 
 % --- Math & Physics Symbols ---
@@ -170,7 +170,7 @@
 \fancyhead[LO]{\small\textbf{\color{accentblue}\truncate{0.70\headwidth}{\nouppercase{\leftmark}}}}
 \fancyhead[RO]{\small\textbf{\color{primarydark}\thepage}}
 
-\fancyfoot[LE]{\scriptsize\color{gray}Authored by Satya Prakash $\cdot$ \href{mailto:spdedsec@hotmail.com}{spdedsec@hotmail.com}}
+\fancyfoot[LE]{\scriptsize\color{gray}Authored by Satya Prakash $\cdot$ spdedsec@hotmail.com}
 \fancyfoot[RO]{\scriptsize\color{gray}Master Reference Series $\cdot$ Strictly NMC Calibrated}
 
 \renewcommand{\headrulewidth}{0.5pt}
@@ -215,6 +215,24 @@
   {\color{primarydark}\titlerule[1.5pt]\vspace{1.5ex}}
   [\vspace{1.5ex}{\color{primarydark}\titlerule[1.5pt]}]
 
+% TOC Part Formatting for 6x9 Trade Trim
+\makeatletter
+\renewcommand*\l@part[2]{%
+  \ifnum \c@tocdepth >-2\relax
+    \addpenalty{-\@highpenalty}%
+    \addvspace{1.2em \@plus\p@}%
+    \begingroup
+      \parindent \z@ \rightskip 2em
+      \parfillskip -2em
+      {\leavevmode
+       \normalsize\bfseries\color{primarydark}#1\nobreak\hfill\hb@xt@ 2em{\hss #2}\par}%
+       \nobreak
+         \global\@nobreaktrue
+         \everypar{\global\@nobreakfalse\everypar{}}%
+    \endgroup
+  \fi}
+\makeatother
+
 % Chapter Formatting
 \titleformat{\chapter}[display]
   {\normalfont\Large\bfseries\color{primarydark}\RaggedRight}
@@ -240,6 +258,6 @@
   {\thesubsubsection}{0.5em}{}
 
 % --- Hyperref Setup ---
-\RequirePackage[hidelinks,colorlinks=true,linkcolor=accentblue,urlcolor=accentblue,citecolor=accentblue]{hyperref}
+\RequirePackage[implicit=false,bookmarks=false,hidelinks,linktoc=none,pdfborder={0 0 0}]{hyperref}
 
 \endinput
